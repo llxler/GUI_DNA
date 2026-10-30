@@ -6,4 +6,28 @@ __pycache__/
 .env.*
 .DS_Store
 .browser-deps/
-artifacts/
+
+# 实验产物默认不入库（数百 MB：候选页面、截图、原始响应、账本）。
+# 只保留每轮的小体积报告与冻结协议，供 实验结果.md 的链接在仓库内可达。
+artifacts/*
+!artifacts/live/
+artifacts/live/*
+!artifacts/live/report.md
+!artifacts/followup/
+artifacts/followup/*
+!artifacts/followup/report.md
+!artifacts/followup/combined-report.md
+!artifacts/followup/protocol.md
+!artifacts/linked-plan-posthoc/
+artifacts/linked-plan-posthoc/*
+!artifacts/linked-plan-posthoc/report.md
+!artifacts/linked-plan-posthoc/protocol.md
+!artifacts/scale-study/
+artifacts/scale-study/*
+!artifacts/scale-study/report.md
+!artifacts/scale-study/protocol.md
+!artifacts/scale-study/pause-deviation.md
+!artifacts/benchmark-probe/
+artifacts/benchmark-probe/*
+!artifacts/benchmark-probe/summary.md
+!artifacts/benchmark-probe/summary.json

@@ -1,0 +1,860 @@
+{
+  "date_utc": "2026-10-30T11:02:23Z",
+  "models": [
+    {
+      "model": "deepseek/deepseek-v4-pro-0813",
+      "singles": {
+        "n": 15,
+        "passed": 14
+      },
+      "duos": {
+        "n": 10,
+        "passed": 9,
+        "both_atoms_pass_alone": 9,
+        "composition_failures": 0,
+        "assertions_passed": 38,
+        "assertions": 40
+      },
+      "generation_errors": 0,
+      "duo_rows": [
+        {
+          "category": "blogging",
+          "name": "addAltTextToImage_postPerformanceReport",
+          "passed": 2,
+          "tests": 4,
+          "all_passed": false,
+          "timed_out": false,
+          "per_atom": {
+            "addAltTextToImage": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            },
+            "postPerformanceReport": {
+              "passed": 0,
+              "total": 2,
+              "single_passed": false
+            }
+          },
+          "both_atoms_pass_alone": false,
+          "composition_failure": false
+        },
+        {
+          "category": "blogging",
+          "name": "addCanonicalUrl_addComment",
+          "passed": 4,
+          "tests": 4,
+          "all_passed": true,
+          "timed_out": false,
+          "per_atom": {
+            "addCanonicalUrl": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            },
+            "addComment": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            }
+          },
+          "both_atoms_pass_alone": true,
+          "composition_failure": false
+        },
+        {
+          "category": "blogging",
+          "name": "addCanonicalUrl_assignPostToCategory",
+          "passed": 4,
+          "tests": 4,
+          "all_passed": true,
+          "timed_out": false,
+          "per_atom": {
+            "addCanonicalUrl": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            },
+            "assignPostToCategory": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            }
+          },
+          "both_atoms_pass_alone": true,
+          "composition_failure": false
+        },
+        {
+          "category": "blogging",
+          "name": "addCanonicalUrl_editComment",
+          "passed": 4,
+          "tests": 4,
+          "all_passed": true,
+          "timed_out": false,
+          "per_atom": {
+            "addCanonicalUrl": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            },
+            "editComment": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            }
+          },
+          "both_atoms_pass_alone": true,
+          "composition_failure": false
+        },
+        {
+          "category": "blogging",
+          "name": "addCanonicalUrl_editTag",
+          "passed": 4,
+          "tests": 4,
+          "all_passed": true,
+          "timed_out": false,
+          "per_atom": {
+            "addCanonicalUrl": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            },
+            "editTag": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            }
+          },
+          "both_atoms_pass_alone": true,
+          "composition_failure": false
+        },
+        {
+          "category": "taskmanagement",
+          "name": "addCommentToTask_setTaskDeadline",
+          "passed": 4,
+          "tests": 4,
+          "all_passed": true,
+          "timed_out": false,
+          "per_atom": {
+            "addCommentToTask": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            },
+            "setTaskDeadline": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            }
+          },
+          "both_atoms_pass_alone": true,
+          "composition_failure": false
+        },
+        {
+          "category": "taskmanagement",
+          "name": "approveOrRejectTaskReview_compareTime",
+          "passed": 4,
+          "tests": 4,
+          "all_passed": true,
+          "timed_out": false,
+          "per_atom": {
+            "approveOrRejectTaskReview": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            },
+            "compareTime": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            }
+          },
+          "both_atoms_pass_alone": true,
+          "composition_failure": false
+        },
+        {
+          "category": "taskmanagement",
+          "name": "approveOrRejectTaskReview_projectCustomWorkflows",
+          "passed": 4,
+          "tests": 4,
+          "all_passed": true,
+          "timed_out": false,
+          "per_atom": {
+            "approveOrRejectTaskReview": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            },
+            "projectCustomWorkflows": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            }
+          },
+          "both_atoms_pass_alone": true,
+          "composition_failure": false
+        },
+        {
+          "category": "taskmanagement",
+          "name": "approveOrRejectTaskReview_setTaskPriority",
+          "passed": 4,
+          "tests": 4,
+          "all_passed": true,
+          "timed_out": false,
+          "per_atom": {
+            "approveOrRejectTaskReview": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            },
+            "setTaskPriority": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            }
+          },
+          "both_atoms_pass_alone": true,
+          "composition_failure": false
+        },
+        {
+          "category": "taskmanagement",
+          "name": "assignTaskToProject_assignTaskToUser",
+          "passed": 4,
+          "tests": 4,
+          "all_passed": true,
+          "timed_out": false,
+          "per_atom": {
+            "assignTaskToProject": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            },
+            "assignTaskToUser": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            }
+          },
+          "both_atoms_pass_alone": true,
+          "composition_failure": false
+        }
+      ],
+      "single_rows": [
+        {
+          "category": "blogging",
+          "name": "addAltTextToImage",
+          "all_passed": true
+        },
+        {
+          "category": "blogging",
+          "name": "addCanonicalUrl",
+          "all_passed": true
+        },
+        {
+          "category": "blogging",
+          "name": "addComment",
+          "all_passed": true
+        },
+        {
+          "category": "blogging",
+          "name": "assignPostToCategory",
+          "all_passed": true
+        },
+        {
+          "category": "blogging",
+          "name": "editComment",
+          "all_passed": true
+        },
+        {
+          "category": "blogging",
+          "name": "editTag",
+          "all_passed": true
+        },
+        {
+          "category": "blogging",
+          "name": "postPerformanceReport",
+          "all_passed": false
+        },
+        {
+          "category": "taskmanagement",
+          "name": "addCommentToTask",
+          "all_passed": true
+        },
+        {
+          "category": "taskmanagement",
+          "name": "approveOrRejectTaskReview",
+          "all_passed": true
+        },
+        {
+          "category": "taskmanagement",
+          "name": "assignTaskToProject",
+          "all_passed": true
+        },
+        {
+          "category": "taskmanagement",
+          "name": "assignTaskToUser",
+          "all_passed": true
+        },
+        {
+          "category": "taskmanagement",
+          "name": "compareTime",
+          "all_passed": true
+        },
+        {
+          "category": "taskmanagement",
+          "name": "projectCustomWorkflows",
+          "all_passed": true
+        },
+        {
+          "category": "taskmanagement",
+          "name": "setTaskDeadline",
+          "all_passed": true
+        },
+        {
+          "category": "taskmanagement",
+          "name": "setTaskPriority",
+          "all_passed": true
+        }
+      ]
+    },
+    {
+      "model": "qwen/qwen3-coder",
+      "singles": {
+        "n": 15,
+        "passed": 14
+      },
+      "duos": {
+        "n": 10,
+        "passed": 7,
+        "both_atoms_pass_alone": 9,
+        "composition_failures": 2,
+        "assertions_passed": 33,
+        "assertions": 40
+      },
+      "generation_errors": 0,
+      "duo_rows": [
+        {
+          "category": "blogging",
+          "name": "addAltTextToImage_postPerformanceReport",
+          "passed": 2,
+          "tests": 4,
+          "all_passed": false,
+          "timed_out": false,
+          "per_atom": {
+            "addAltTextToImage": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            },
+            "postPerformanceReport": {
+              "passed": 0,
+              "total": 2,
+              "single_passed": false
+            }
+          },
+          "both_atoms_pass_alone": false,
+          "composition_failure": false
+        },
+        {
+          "category": "blogging",
+          "name": "addCanonicalUrl_addComment",
+          "passed": 4,
+          "tests": 4,
+          "all_passed": true,
+          "timed_out": false,
+          "per_atom": {
+            "addCanonicalUrl": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            },
+            "addComment": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            }
+          },
+          "both_atoms_pass_alone": true,
+          "composition_failure": false
+        },
+        {
+          "category": "blogging",
+          "name": "addCanonicalUrl_assignPostToCategory",
+          "passed": 4,
+          "tests": 4,
+          "all_passed": true,
+          "timed_out": false,
+          "per_atom": {
+            "addCanonicalUrl": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            },
+            "assignPostToCategory": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            }
+          },
+          "both_atoms_pass_alone": true,
+          "composition_failure": false
+        },
+        {
+          "category": "blogging",
+          "name": "addCanonicalUrl_editComment",
+          "passed": 2,
+          "tests": 4,
+          "all_passed": false,
+          "timed_out": false,
+          "per_atom": {
+            "addCanonicalUrl": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            },
+            "editComment": {
+              "passed": 0,
+              "total": 2,
+              "single_passed": true
+            }
+          },
+          "both_atoms_pass_alone": true,
+          "composition_failure": true
+        },
+        {
+          "category": "blogging",
+          "name": "addCanonicalUrl_editTag",
+          "passed": 4,
+          "tests": 4,
+          "all_passed": true,
+          "timed_out": false,
+          "per_atom": {
+            "addCanonicalUrl": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            },
+            "editTag": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            }
+          },
+          "both_atoms_pass_alone": true,
+          "composition_failure": false
+        },
+        {
+          "category": "taskmanagement",
+          "name": "addCommentToTask_setTaskDeadline",
+          "passed": 1,
+          "tests": 4,
+          "all_passed": false,
+          "timed_out": false,
+          "per_atom": {
+            "addCommentToTask": {
+              "passed": 0,
+              "total": 2,
+              "single_passed": true
+            },
+            "setTaskDeadline": {
+              "passed": 1,
+              "total": 2,
+              "single_passed": true
+            }
+          },
+          "both_atoms_pass_alone": true,
+          "composition_failure": true
+        },
+        {
+          "category": "taskmanagement",
+          "name": "approveOrRejectTaskReview_compareTime",
+          "passed": 4,
+          "tests": 4,
+          "all_passed": true,
+          "timed_out": false,
+          "per_atom": {
+            "approveOrRejectTaskReview": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            },
+            "compareTime": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            }
+          },
+          "both_atoms_pass_alone": true,
+          "composition_failure": false
+        },
+        {
+          "category": "taskmanagement",
+          "name": "approveOrRejectTaskReview_projectCustomWorkflows",
+          "passed": 4,
+          "tests": 4,
+          "all_passed": true,
+          "timed_out": false,
+          "per_atom": {
+            "approveOrRejectTaskReview": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            },
+            "projectCustomWorkflows": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            }
+          },
+          "both_atoms_pass_alone": true,
+          "composition_failure": false
+        },
+        {
+          "category": "taskmanagement",
+          "name": "approveOrRejectTaskReview_setTaskPriority",
+          "passed": 4,
+          "tests": 4,
+          "all_passed": true,
+          "timed_out": false,
+          "per_atom": {
+            "approveOrRejectTaskReview": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            },
+            "setTaskPriority": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            }
+          },
+          "both_atoms_pass_alone": true,
+          "composition_failure": false
+        },
+        {
+          "category": "taskmanagement",
+          "name": "assignTaskToProject_assignTaskToUser",
+          "passed": 4,
+          "tests": 4,
+          "all_passed": true,
+          "timed_out": false,
+          "per_atom": {
+            "assignTaskToProject": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            },
+            "assignTaskToUser": {
+              "passed": 2,
+              "total": 2,
+              "single_passed": true
+            }
+          },
+          "both_atoms_pass_alone": true,
+          "composition_failure": false
+        }
+      ],
+      "single_rows": [
+        {
+          "category": "blogging",
+          "name": "addAltTextToImage",
+          "all_passed": true
+        },
+        {
+          "category": "blogging",
+          "name": "addCanonicalUrl",
+          "all_passed": true
+        },
+        {
+          "category": "blogging",
+          "name": "addComment",
+          "all_passed": true
+        },
+        {
+          "category": "blogging",
+          "name": "assignPostToCategory",
+          "all_passed": true
+        },
+        {
+          "category": "blogging",
+          "name": "editComment",
+          "all_passed": true
+        },
+        {
+          "category": "blogging",
+          "name": "editTag",
+          "all_passed": true
+        },
+        {
+          "category": "blogging",
+          "name": "postPerformanceReport",
+          "all_passed": false
+        },
+        {
+          "category": "taskmanagement",
+          "name": "addCommentToTask",
+          "all_passed": true
+        },
+        {
+          "category": "taskmanagement",
+          "name": "approveOrRejectTaskReview",
+          "all_passed": true
+        },
+        {
+          "category": "taskmanagement",
+          "name": "assignTaskToProject",
+          "all_passed": true
+        },
+        {
+          "category": "taskmanagement",
+          "name": "assignTaskToUser",
+          "all_passed": true
+        },
+        {
+          "category": "taskmanagement",
+          "name": "compareTime",
+          "all_passed": true
+        },
+        {
+          "category": "taskmanagement",
+          "name": "projectCustomWorkflows",
+          "all_passed": true
+        },
+        {
+          "category": "taskmanagement",
+          "name": "setTaskDeadline",
+          "all_passed": true
+        },
+        {
+          "category": "taskmanagement",
+          "name": "setTaskPriority",
+          "all_passed": true
+        }
+      ]
+    }
+  ],
+  "accounting": {
+    "actual_usd": 0.040576,
+    "exposure_usd": 0.072442,
+    "library_usd": 0.0,
+    "unsettled_calls": 2,
+    "policy": {
+      "id": 1,
+      "cap": 1500000,
+      "stop": 1200000,
+      "halted": 0
+    }
+  },
+  "tasks": [
+    {
+      "kind": "duo",
+      "category": "blogging",
+      "name": "addAltTextToImage_postPerformanceReport",
+      "atoms": [
+        "addAltTextToImage",
+        "postPerformanceReport"
+      ]
+    },
+    {
+      "kind": "duo",
+      "category": "blogging",
+      "name": "addCanonicalUrl_addComment",
+      "atoms": [
+        "addCanonicalUrl",
+        "addComment"
+      ]
+    },
+    {
+      "kind": "duo",
+      "category": "blogging",
+      "name": "addCanonicalUrl_assignPostToCategory",
+      "atoms": [
+        "addCanonicalUrl",
+        "assignPostToCategory"
+      ]
+    },
+    {
+      "kind": "duo",
+      "category": "blogging",
+      "name": "addCanonicalUrl_editComment",
+      "atoms": [
+        "addCanonicalUrl",
+        "editComment"
+      ]
+    },
+    {
+      "kind": "duo",
+      "category": "blogging",
+      "name": "addCanonicalUrl_editTag",
+      "atoms": [
+        "addCanonicalUrl",
+        "editTag"
+      ]
+    },
+    {
+      "kind": "single",
+      "category": "blogging",
+      "name": "addAltTextToImage",
+      "atoms": [
+        "addAltTextToImage"
+      ]
+    },
+    {
+      "kind": "single",
+      "category": "blogging",
+      "name": "postPerformanceReport",
+      "atoms": [
+        "postPerformanceReport"
+      ]
+    },
+    {
+      "kind": "single",
+      "category": "blogging",
+      "name": "addCanonicalUrl",
+      "atoms": [
+        "addCanonicalUrl"
+      ]
+    },
+    {
+      "kind": "single",
+      "category": "blogging",
+      "name": "addComment",
+      "atoms": [
+        "addComment"
+      ]
+    },
+    {
+      "kind": "single",
+      "category": "blogging",
+      "name": "assignPostToCategory",
+      "atoms": [
+        "assignPostToCategory"
+      ]
+    },
+    {
+      "kind": "single",
+      "category": "blogging",
+      "name": "editComment",
+      "atoms": [
+        "editComment"
+      ]
+    },
+    {
+      "kind": "single",
+      "category": "blogging",
+      "name": "editTag",
+      "atoms": [
+        "editTag"
+      ]
+    },
+    {
+      "kind": "duo",
+      "category": "taskmanagement",
+      "name": "addCommentToTask_setTaskDeadline",
+      "atoms": [
+        "addCommentToTask",
+        "setTaskDeadline"
+      ]
+    },
+    {
+      "kind": "duo",
+      "category": "taskmanagement",
+      "name": "approveOrRejectTaskReview_compareTime",
+      "atoms": [
+        "approveOrRejectTaskReview",
+        "compareTime"
+      ]
+    },
+    {
+      "kind": "duo",
+      "category": "taskmanagement",
+      "name": "approveOrRejectTaskReview_projectCustomWorkflows",
+      "atoms": [
+        "approveOrRejectTaskReview",
+        "projectCustomWorkflows"
+      ]
+    },
+    {
+      "kind": "duo",
+      "category": "taskmanagement",
+      "name": "approveOrRejectTaskReview_setTaskPriority",
+      "atoms": [
+        "approveOrRejectTaskReview",
+        "setTaskPriority"
+      ]
+    },
+    {
+      "kind": "duo",
+      "category": "taskmanagement",
+      "name": "assignTaskToProject_assignTaskToUser",
+      "atoms": [
+        "assignTaskToProject",
+        "assignTaskToUser"
+      ]
+    },
+    {
+      "kind": "single",
+      "category": "taskmanagement",
+      "name": "addCommentToTask",
+      "atoms": [
+        "addCommentToTask"
+      ]
+    },
+    {
+      "kind": "single",
+      "category": "taskmanagement",
+      "name": "setTaskDeadline",
+      "atoms": [
+        "setTaskDeadline"
+      ]
+    },
+    {
+      "kind": "single",
+      "category": "taskmanagement",
+      "name": "approveOrRejectTaskReview",
+      "atoms": [
+        "approveOrRejectTaskReview"
+      ]
+    },
+    {
+      "kind": "single",
+      "category": "taskmanagement",
+      "name": "compareTime",
+      "atoms": [
+        "compareTime"
+      ]
+    },
+    {
+      "kind": "single",
+      "category": "taskmanagement",
+      "name": "projectCustomWorkflows",
+      "atoms": [
+        "projectCustomWorkflows"
+      ]
+    },
+    {
+      "kind": "single",
+      "category": "taskmanagement",
+      "name": "setTaskPriority",
+      "atoms": [
+        "setTaskPriority"
+      ]
+    },
+    {
+      "kind": "single",
+      "category": "taskmanagement",
+      "name": "assignTaskToProject",
+      "atoms": [
+        "assignTaskToProject"
+      ]
+    },
+    {
+      "kind": "single",
+      "category": "taskmanagement",
+      "name": "assignTaskToUser",
+      "atoms": [
+        "assignTaskToUser"
+      ]
+    }
+  ],
+  "stopped": null
+}

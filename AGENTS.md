@@ -1,0 +1,110 @@
+# AGENTS.md — GUI-DNA 操作手册
+
+给 AI 编码代理（Claude Code / Codex / Cursor 等）和人用的速查。研究内容看 [README.md](README.md)，结果看 [实验结果.md](实验结果.md)。本文件只讲**怎么跑、怎么改、什么不能动**。
+
+## 1. 项目现状（2026-10-30）
+
+- 这是投 ICML 2027 的 idea 验证仓库。主线是**第三轮**（`experiments/scale_study/`）：模型输出受检查的接线计划，编译器拼冻结函数。
+- 第三轮按用户要求**暂停**在 190/640 个候选；账本 `artifacts/budget.sqlite3` 的 `halted=1` 是人工暂停，不是超支。
+- `qwen/qwen3-coder-plus` 已在 OpenRouter 下线，续跑会在模型检查处停下（预期行为）。
+- 第三轮产物里的 `result.json` / `results.json` 记录的是**绝对路径** `/home/lxler/work/gui_test/...`（项目旧目录名）。目录已改名为 `GUI_DNA`，所以保留了符号链接 `/home/lxler/work/gui_test -> /home/lxler/work/GUI_DNA`；删掉它 `resume_scale`、`audit_scale`、`analyze` 都会 FileNotFoundError。换机器时把仓库放到同一路径或建同名链接。
+- OpenRouter 余额约 $5.5（2026-10-30），用户预算很紧，**任何付费调用先问清楚、先查余额**。
+- 中文为文档语言；代码注释与标识符为英文。
+
+## 2. 环境与常用命令
+
+```bash
+# 安装（Python 3.13 + uv）
+uv sync --extra dev
+uv run playwright install chromium            # 首次；浏览器放在 ~/.cache/ms-playwright
+# 项目目录改名后 .venv 里脚本的 shebang 会失效（Failed to spawn: pytest）：
+uv venv --clear && uv sync --extra dev
+
+# 测试（含真实 Chromium，约 1 分钟，40 项）
+uv run pytest -q
+uv run pytest tests/test_scale_study.py -q                     # 单文件
+uv run pytest tests/test_followup.py::test_ablation_context_boundaries -q   # 单测
+uv run pytest -q -k "compiler or linker"                       # 关键字
+
+# 不花钱的验证
+uv run gui-dna evaluate --self-check --out artifacts/selfcheck   # v1 评测器校准
+uv run gui-dna compare --offline                                 # v1 离线四方法流程
+uv run python -m experiments.scale_study.calibrate               # v3 参考实现 + 策略错误校准
+uv run python -m experiments.scale_rule_control                  # v3 零 API 规则控制
+uv run python -m experiments.scale_study.analyze                 # 从 results.json 重算 analysis.json / report.md
+uv run python -m experiments.audit_scale                         # 第三轮只读审计（哈希、账本、链接）
+uv run python experiments/summarize_followup.py                  # v2 汇总（无 API）
+uv run python experiments/replay_linked_plans.py                 # v2 连接器离线复验（无 API）
+
+# 付费（需要 export OPENROUTER_API_KEY=...；密钥只读环境变量）
+uv run python scripts/check_openrouter_credits.py --required-usd 1   # 查余额，退出码 2 = 不足
+uv run python -m experiments.resume_scale --check                     # 只读断点检查
+uv run python -m experiments.resume_scale --resume                    # 明确继续第三轮
+uv run gui-dna generate --method constrained --task test-delete-pagination --out artifacts/custom-run   # v1 单次生成
+
+# 外部 benchmark 探针（WebApp1K-Duo，官方 Jest 评分，独立小账本 artifacts/benchmark-probe/budget.sqlite3）
+#   首次：git clone --depth 1 https://github.com/onekq/WebApp1k.git artifacts/benchmark-probe/WebApp1k
+#         (cd artifacts/benchmark-probe/WebApp1k/staging && npm install && npm install react-router-dom@6 node-fetch@2)
+#         （fetch-mock 钉 9.11.0、react-router-dom 钉 6.x、node-fetch 2.x，否则官方测试在 CRA 5 / Jest 27 下无法加载）
+uv run python -m experiments.webapp1k_probe --models deepseek/deepseek-v4-pro-0813 --categories blogging taskmanagement --per-category 5
+uv run python -m experiments.webapp1k_probe --evaluate-only        # 只重新评分已保存的实现，不花钱
+```
+
+`.browser-deps/` 里是无 sudo 环境解包的 `libnspr4`/`libnss3`，评测子进程自动加到 `LD_LIBRARY_PATH`；没有也不影响有系统库的机器。
+
+## 3. 架构：三轮代码并存，第三轮是主线
+
+三轮实验的代码**叠加而不替换**，后一轮 import 前一轮：
+
+```
+v1  src/gui_dna/            tasks/prompts/generation/experiment  四方法 direct|retrieval|dna|constrained
+      ├─ render.py           shell.html 外壳 + reference.js（带 @function 契约注释的参考函数）
+      ├─ evaluation.py       Playwright 子进程评测器；perform()/check() 被 v2、v3 复用
+      ├─ oracle.py / suites.py   独立期望语义 + 隐藏用例（只被评测器 import）
+      ├─ provider.py         OpenRouter 单次请求：预留→POST→结算；重放已结算响应；只重试 429
+      └─ budget.py           SQLite 账本 Ledger(path, cap, stop)；只能收紧、不能放宽
+v2  src/gui_dna/followup/   atomic_library()（v1 库人工拆成原子函数）+ compile_plan v1 + 八方法 study
+v3  experiments/scale_study/ library()（v2 库人工扩成 20 个语义变体）+ 策略盲 compile_plan + 四方法 study
+      + experiments/resume_scale.py / audit_scale.py / scale_rule_control.py
+```
+
+一个候选的生命周期（三轮一致）：
+
+1. `tasks()` 给出 `{requirement, features, initial}`（v3 另有评测专用 `policy`，**不进 prompt**）。
+2. `messages_for(task, method, lib)` 按方法构造消息；plan 两组初始消息字节相同，三个预加载组用户数据字节相同（有测试保证）。
+3. `OpenRouter.call()`：`Ledger.reserve()` → POST → `settle()`；目录下已有 `request.json` 且账本已结算则直接重放 `response.json`，不再付费。
+4. 输出 → `parse_json` → 代码直接用 / `compile_plan(plan)` 拼装；失败则 `compile_error` 作为公开反馈。
+5. `write_app()` 把代码注入 `shell.html` → `evaluate()` 在子进程跑公开用例 → 失败反馈追加到消息，最多两轮修复。
+6. 写 `result.json`（含 fingerprint 与各版本 sha256）。目录已存在时校验哈希后复用，配置变了就报错，不覆盖。
+7. **全部生成结束后**才统一跑隐藏评测（首次与最终版本都评），再 `analyze` 做配对比较与家族聚类 bootstrap。
+
+上下文边界靠结构保证：`oracle.py`、`fixtures.py`、`suites.py` 只被评测器 import；`messages_for` 用字段白名单；`tests/test_protocol.py`、`tests/test_scale_study.py` 断言隐藏数据、策略字段不出现在 prompt 里。改 prompt 或库时先跑这些测试。
+
+## 4. 红线（改之前先看）
+
+- **不要修改** `experiments/scale_study/*.py`、`src/gui_dna/**`（含 assets）和 `configs/scale-study.json`：第三轮 manifest 冻结了它们的 SHA-256，`resume_scale --check` / `audit_scale` 会失败，第三轮结果也会失去可比性。要改方法就新建目录（如 `experiments/round4/`）和新配置，另立实验阶段。
+- **不要删除、替换、手改** `artifacts/budget.sqlite3`；不要手动把 `halted` 改回 0（只能通过 `resume_scale --resume` 的受控流程）。小预算探针请用**独立账本**：`Ledger(ROOT/'artifacts/<probe>/budget.sqlite3', cap, stop)` 传给 `OpenRouter(config, ledger)`。
+- 新的付费实验用**新的 `--out` 目录**；不要覆盖已有运行清单。
+- 不要把隐藏失败、`policy` 字段、oracle 逻辑放进任何模型消息。
+- 不要在同一模型组里静默换模型；模型下线就另立阶段并写进报告。
+- `artifacts/` 默认不入库（`.gitignore` 只放行各轮 `report.md` / `protocol.md`）；不要把截图、响应、账本提交上去。
+- 费用、通过率等数字一律从 `results.json` / `analysis.json` / 账本重算，不要凭记忆改文档。
+
+## 5. 文档约定
+
+- `README.md`：安装 + idea 介绍，不放逐轮细节。
+- `实验结果.md`：唯一的结果文档；新一轮实验追加一节，不再新建「第 N 轮研究报告.md」。
+- `AGENTS.md`：本文件；`CLAUDE.md` 只是指向这里的入口。
+- 报告风格沿用：先写结论，正负结果都保留，明确写出「不能说的话」。
+
+## 6. 关键文件速查
+
+| 想做什么 | 看哪里 |
+|---|---|
+| 改第三轮任务/语义变体/编译器（新阶段） | `experiments/scale_study/domain.py`：`tasks()`、`library()`、`compile_plan()`、`reference_plan()`、`messages_for()` |
+| 看隐藏用例怎么生成 | `experiments/scale_study/fixtures.py`（v3）、`src/gui_dna/followup/fixtures.py`（v2）、`src/gui_dna/suites.py`（v1） |
+| 看评测器怎么比对 DOM 与状态 | `experiments/scale_study/evaluator.py` 的 `check()`；`src/gui_dna/evaluation.py` 的 `perform()` |
+| 看统计口径 | `experiments/scale_study/analyze.py`：完整组筛选、`paired_interval()` |
+| 加新模型/改价格上限 | `configs/*.json` 的 `models`、`model_price_caps`、`provider_order`；`provider.py` 会校验模型在目录中 |
+| 渲染外壳与事件协议 | `src/gui_dna/assets/shell.html`（`window.__gui.{reset,dispatch,snapshot}`）、`src/gui_dna/prompts.py` 的 `INTERFACE` |
+| 外部 benchmark 候选与探针 | `实验结果.md` 第 8 节；`experiments/webapp1k_probe.py`；`artifacts/benchmark-probe/summary.md` |

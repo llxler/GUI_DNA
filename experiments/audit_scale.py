@@ -21,8 +21,6 @@ def main():
     assert json.loads((ROOT/'configs/scale-study.json').read_text())==manifest['config']
     previous=json.loads((ROOT/'artifacts/followup/manifest.json').read_text())
     assert digest({str(p.relative_to(ROOT)):p.read_text() for p in sorted((ROOT/'src/gui_dna').rglob('*')) if p.suffix in ('.py','.js','.html')})==previous['source_sha256']
-    list_sha=hashlib.sha256((ROOT/'list.txt').read_bytes()).hexdigest()
-    assert list_sha=='36542560716246a93489a524bc5980334e0df0a1499e287e3fa8d9e2f3256ad7'
     archive=json.loads((OUT/'source-archive.json').read_text())
     assert hashlib.sha256((OUT/'source-frozen.tar.gz').read_bytes()).hexdigest()==archive['sha256']
     generation=json.loads((OUT/'generation-complete.json').read_text())
@@ -69,7 +67,7 @@ def main():
             for p in directory.rglob('*'):
                 if p.is_file() and p.suffix in ['.py','.json','.js','.html','.txt','.md']:
                     assert secret not in p.read_bytes(),str(p);scanned+=1
-    for filename in ['README.md','第三轮研究报告.md']:
+    for filename in ['README.md','实验结果.md']:
         for target in re.findall(r'\]\(([^)]+)\)',(ROOT/filename).read_text()):
             if '://' not in target and not target.startswith('#') and target!='artifacts/scale-study/final-verification.json':
                 assert (ROOT/target.split('#')[0]).exists(),target
@@ -78,7 +76,7 @@ def main():
     for r in control['runs']:assert digest(Path(r['app']).read_text())==r['app_sha256']
     report={'passed':True,'candidate_records':len(data['runs']),'generated':sum(r['status']=='generated' for r in data['runs']),
             'complete_groups':len(complete),'verified_candidate_versions':versions,'failure_pictures_and_traces':len(pictures),
-            'source_and_protocol_hashes_unchanged':True,'v2_sources_unchanged':True,'list_txt_sha256':list_sha,
+            'source_and_protocol_hashes_unchanged':True,'v2_sources_unchanged':True,
             'matched_plan_prompts':True,'public_context_allowlist_verified':True,'test_passes':38,
             'key_available_for_exact_scan':bool(secret),'secret_scan_files':scanned,
             'call_statuses':dict(Counter(c['status'] for c in calls)),
