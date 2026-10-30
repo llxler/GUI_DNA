@@ -60,7 +60,7 @@
 需要 Python 3.13 与 [uv](https://docs.astral.sh/uv/)。
 
 ```bash
-git clone https://github.com/llxler/gui_test.git GUI_DNA
+git clone https://github.com/llxler/GUI_DNA.git
 cd GUI_DNA
 uv sync --extra dev
 uv run playwright install chromium
