@@ -1,0 +1,1890 @@
+{
+  "date_utc": "2026-11-01T13:29:24Z",
+  "max_repairs": 2,
+  "arms": [
+    "free",
+    "rule",
+    "dna"
+  ],
+  "duos": [
+    {
+      "category": "blogging",
+      "name": "addAltTextToImage_postPerformanceReport",
+      "atoms": [
+        "addAltTextToImage",
+        "postPerformanceReport"
+      ]
+    },
+    {
+      "category": "blogging",
+      "name": "addCanonicalUrl_addComment",
+      "atoms": [
+        "addCanonicalUrl",
+        "addComment"
+      ]
+    },
+    {
+      "category": "blogging",
+      "name": "addCanonicalUrl_assignPostToCategory",
+      "atoms": [
+        "addCanonicalUrl",
+        "assignPostToCategory"
+      ]
+    },
+    {
+      "category": "blogging",
+      "name": "addCanonicalUrl_editComment",
+      "atoms": [
+        "addCanonicalUrl",
+        "editComment"
+      ]
+    },
+    {
+      "category": "blogging",
+      "name": "addCanonicalUrl_editTag",
+      "atoms": [
+        "addCanonicalUrl",
+        "editTag"
+      ]
+    },
+    {
+      "category": "taskmanagement",
+      "name": "addCommentToTask_setTaskDeadline",
+      "atoms": [
+        "addCommentToTask",
+        "setTaskDeadline"
+      ]
+    },
+    {
+      "category": "taskmanagement",
+      "name": "approveOrRejectTaskReview_compareTime",
+      "atoms": [
+        "approveOrRejectTaskReview",
+        "compareTime"
+      ]
+    },
+    {
+      "category": "taskmanagement",
+      "name": "approveOrRejectTaskReview_projectCustomWorkflows",
+      "atoms": [
+        "approveOrRejectTaskReview",
+        "projectCustomWorkflows"
+      ]
+    },
+    {
+      "category": "taskmanagement",
+      "name": "approveOrRejectTaskReview_setTaskPriority",
+      "atoms": [
+        "approveOrRejectTaskReview",
+        "setTaskPriority"
+      ]
+    },
+    {
+      "category": "taskmanagement",
+      "name": "assignTaskToProject_assignTaskToUser",
+      "atoms": [
+        "assignTaskToProject",
+        "assignTaskToUser"
+      ]
+    }
+  ],
+  "models": [
+    {
+      "model": "deepseek/deepseek-v4-pro-0813",
+      "arms": {
+        "free": {
+          "n": 10,
+          "first_pass": 9,
+          "final_pass": 9,
+          "first_assertions": 38,
+          "final_assertions": 38,
+          "assertions": 40,
+          "calls": 12,
+          "compile_errors": 0,
+          "cost_usd": 0.0
+        },
+        "rule": {
+          "n": 10,
+          "first_pass": 9,
+          "final_pass": 9,
+          "first_assertions": 38,
+          "final_assertions": 38,
+          "assertions": 40,
+          "calls": 0,
+          "compile_errors": 0,
+          "cost_usd": 0.0
+        },
+        "dna": {
+          "n": 10,
+          "first_pass": 9,
+          "final_pass": 9,
+          "first_assertions": 38,
+          "final_assertions": 38,
+          "assertions": 40,
+          "calls": 12,
+          "compile_errors": 0,
+          "cost_usd": 0.0
+        }
+      },
+      "rows": [
+        {
+          "category": "blogging",
+          "name": "addAltTextToImage_postPerformanceReport",
+          "atoms": [
+            "addAltTextToImage",
+            "postPerformanceReport"
+          ],
+          "atoms_verified": {
+            "addAltTextToImage": [
+              "v1",
+              "v2"
+            ],
+            "postPerformanceReport": []
+          },
+          "free": {
+            "first_pass": false,
+            "final_pass": false,
+            "first_assertions": 2,
+            "final_assertions": 2,
+            "tests": 4,
+            "attempts": 3,
+            "compile_errors": 0,
+            "timed_out": false
+          },
+          "rule": {
+            "first_pass": false,
+            "final_pass": false,
+            "first_assertions": 2,
+            "final_assertions": 2,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addAltTextToImage": "v1",
+                "postPerformanceReport": "v1"
+              },
+              "order": [
+                "addAltTextToImage",
+                "postPerformanceReport"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          },
+          "dna": {
+            "first_pass": false,
+            "final_pass": false,
+            "first_assertions": 2,
+            "final_assertions": 2,
+            "tests": 4,
+            "attempts": 3,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addAltTextToImage": "v2",
+                "postPerformanceReport": "v2"
+              },
+              "order": [
+                "postPerformanceReport",
+                "addAltTextToImage"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          }
+        },
+        {
+          "category": "blogging",
+          "name": "addCanonicalUrl_addComment",
+          "atoms": [
+            "addCanonicalUrl",
+            "addComment"
+          ],
+          "atoms_verified": {
+            "addCanonicalUrl": [
+              "v1",
+              "v2"
+            ],
+            "addComment": [
+              "v1",
+              "v2"
+            ]
+          },
+          "free": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false
+          },
+          "rule": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addCanonicalUrl": "v1",
+                "addComment": "v1"
+              },
+              "order": [
+                "addCanonicalUrl",
+                "addComment"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          },
+          "dna": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addCanonicalUrl": "v2",
+                "addComment": "v1"
+              },
+              "order": [
+                "addCanonicalUrl",
+                "addComment"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          }
+        },
+        {
+          "category": "blogging",
+          "name": "addCanonicalUrl_assignPostToCategory",
+          "atoms": [
+            "addCanonicalUrl",
+            "assignPostToCategory"
+          ],
+          "atoms_verified": {
+            "addCanonicalUrl": [
+              "v1",
+              "v2"
+            ],
+            "assignPostToCategory": [
+              "v1",
+              "v2"
+            ]
+          },
+          "free": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false
+          },
+          "rule": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addCanonicalUrl": "v1",
+                "assignPostToCategory": "v1"
+              },
+              "order": [
+                "addCanonicalUrl",
+                "assignPostToCategory"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          },
+          "dna": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addCanonicalUrl": "v2",
+                "assignPostToCategory": "v1"
+              },
+              "order": [
+                "addCanonicalUrl",
+                "assignPostToCategory"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          }
+        },
+        {
+          "category": "blogging",
+          "name": "addCanonicalUrl_editComment",
+          "atoms": [
+            "addCanonicalUrl",
+            "editComment"
+          ],
+          "atoms_verified": {
+            "addCanonicalUrl": [
+              "v1",
+              "v2"
+            ],
+            "editComment": [
+              "v1",
+              "v2"
+            ]
+          },
+          "free": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false
+          },
+          "rule": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addCanonicalUrl": "v1",
+                "editComment": "v1"
+              },
+              "order": [
+                "addCanonicalUrl",
+                "editComment"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          },
+          "dna": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addCanonicalUrl": "v1",
+                "editComment": "v1"
+              },
+              "order": [
+                "addCanonicalUrl",
+                "editComment"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          }
+        },
+        {
+          "category": "blogging",
+          "name": "addCanonicalUrl_editTag",
+          "atoms": [
+            "addCanonicalUrl",
+            "editTag"
+          ],
+          "atoms_verified": {
+            "addCanonicalUrl": [
+              "v1",
+              "v2"
+            ],
+            "editTag": [
+              "v1",
+              "v2"
+            ]
+          },
+          "free": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false
+          },
+          "rule": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addCanonicalUrl": "v1",
+                "editTag": "v1"
+              },
+              "order": [
+                "addCanonicalUrl",
+                "editTag"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          },
+          "dna": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addCanonicalUrl": "v1",
+                "editTag": "v1"
+              },
+              "order": [
+                "editTag",
+                "addCanonicalUrl"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          }
+        },
+        {
+          "category": "taskmanagement",
+          "name": "addCommentToTask_setTaskDeadline",
+          "atoms": [
+            "addCommentToTask",
+            "setTaskDeadline"
+          ],
+          "atoms_verified": {
+            "addCommentToTask": [
+              "v1",
+              "v2"
+            ],
+            "setTaskDeadline": [
+              "v1",
+              "v2"
+            ]
+          },
+          "free": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false
+          },
+          "rule": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addCommentToTask": "v1",
+                "setTaskDeadline": "v1"
+              },
+              "order": [
+                "addCommentToTask",
+                "setTaskDeadline"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          },
+          "dna": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addCommentToTask": "v1",
+                "setTaskDeadline": "v1"
+              },
+              "order": [
+                "addCommentToTask",
+                "setTaskDeadline"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          }
+        },
+        {
+          "category": "taskmanagement",
+          "name": "approveOrRejectTaskReview_compareTime",
+          "atoms": [
+            "approveOrRejectTaskReview",
+            "compareTime"
+          ],
+          "atoms_verified": {
+            "approveOrRejectTaskReview": [
+              "v1",
+              "v2"
+            ],
+            "compareTime": [
+              "v1",
+              "v2"
+            ]
+          },
+          "free": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false
+          },
+          "rule": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "approveOrRejectTaskReview": "v1",
+                "compareTime": "v1"
+              },
+              "order": [
+                "approveOrRejectTaskReview",
+                "compareTime"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          },
+          "dna": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "approveOrRejectTaskReview": "v1",
+                "compareTime": "v1"
+              },
+              "order": [
+                "approveOrRejectTaskReview",
+                "compareTime"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          }
+        },
+        {
+          "category": "taskmanagement",
+          "name": "approveOrRejectTaskReview_projectCustomWorkflows",
+          "atoms": [
+            "approveOrRejectTaskReview",
+            "projectCustomWorkflows"
+          ],
+          "atoms_verified": {
+            "approveOrRejectTaskReview": [
+              "v1",
+              "v2"
+            ],
+            "projectCustomWorkflows": [
+              "v1",
+              "v2"
+            ]
+          },
+          "free": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false
+          },
+          "rule": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "approveOrRejectTaskReview": "v1",
+                "projectCustomWorkflows": "v1"
+              },
+              "order": [
+                "approveOrRejectTaskReview",
+                "projectCustomWorkflows"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          },
+          "dna": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "approveOrRejectTaskReview": "v1",
+                "projectCustomWorkflows": "v1"
+              },
+              "order": [
+                "approveOrRejectTaskReview",
+                "projectCustomWorkflows"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          }
+        },
+        {
+          "category": "taskmanagement",
+          "name": "approveOrRejectTaskReview_setTaskPriority",
+          "atoms": [
+            "approveOrRejectTaskReview",
+            "setTaskPriority"
+          ],
+          "atoms_verified": {
+            "approveOrRejectTaskReview": [
+              "v1",
+              "v2"
+            ],
+            "setTaskPriority": [
+              "v1",
+              "v2"
+            ]
+          },
+          "free": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false
+          },
+          "rule": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "approveOrRejectTaskReview": "v1",
+                "setTaskPriority": "v1"
+              },
+              "order": [
+                "approveOrRejectTaskReview",
+                "setTaskPriority"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          },
+          "dna": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "approveOrRejectTaskReview": "v1",
+                "setTaskPriority": "v1"
+              },
+              "order": [
+                "approveOrRejectTaskReview",
+                "setTaskPriority"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          }
+        },
+        {
+          "category": "taskmanagement",
+          "name": "assignTaskToProject_assignTaskToUser",
+          "atoms": [
+            "assignTaskToProject",
+            "assignTaskToUser"
+          ],
+          "atoms_verified": {
+            "assignTaskToProject": [
+              "v1",
+              "v2"
+            ],
+            "assignTaskToUser": [
+              "v1",
+              "v2"
+            ]
+          },
+          "free": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false
+          },
+          "rule": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "assignTaskToProject": "v1",
+                "assignTaskToUser": "v1"
+              },
+              "order": [
+                "assignTaskToProject",
+                "assignTaskToUser"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          },
+          "dna": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "assignTaskToProject": "v1",
+                "assignTaskToUser": "v1"
+              },
+              "order": [
+                "assignTaskToProject",
+                "assignTaskToUser"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          }
+        }
+      ],
+      "paired": {
+        "dna_only": 0,
+        "free_only": 0,
+        "both": 9,
+        "neither": 1
+      }
+    },
+    {
+      "model": "qwen/qwen3-coder",
+      "arms": {
+        "free": {
+          "n": 10,
+          "first_pass": 8,
+          "final_pass": 9,
+          "first_assertions": 36,
+          "final_assertions": 38,
+          "assertions": 40,
+          "calls": 13,
+          "compile_errors": 0,
+          "cost_usd": 0.0
+        },
+        "rule": {
+          "n": 10,
+          "first_pass": 9,
+          "final_pass": 9,
+          "first_assertions": 38,
+          "final_assertions": 38,
+          "assertions": 40,
+          "calls": 0,
+          "compile_errors": 0,
+          "cost_usd": 0.0
+        },
+        "dna": {
+          "n": 10,
+          "first_pass": 8,
+          "final_pass": 9,
+          "first_assertions": 34,
+          "final_assertions": 38,
+          "assertions": 40,
+          "calls": 13,
+          "compile_errors": 1,
+          "cost_usd": 0.0
+        }
+      },
+      "rows": [
+        {
+          "category": "blogging",
+          "name": "addAltTextToImage_postPerformanceReport",
+          "atoms": [
+            "addAltTextToImage",
+            "postPerformanceReport"
+          ],
+          "atoms_verified": {
+            "addAltTextToImage": [
+              "v1",
+              "v2"
+            ],
+            "postPerformanceReport": []
+          },
+          "free": {
+            "first_pass": false,
+            "final_pass": false,
+            "first_assertions": 2,
+            "final_assertions": 2,
+            "tests": 4,
+            "attempts": 3,
+            "compile_errors": 0,
+            "timed_out": false
+          },
+          "rule": {
+            "first_pass": false,
+            "final_pass": false,
+            "first_assertions": 2,
+            "final_assertions": 2,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addAltTextToImage": "v2",
+                "postPerformanceReport": "v2"
+              },
+              "order": [
+                "addAltTextToImage",
+                "postPerformanceReport"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          },
+          "dna": {
+            "first_pass": false,
+            "final_pass": false,
+            "first_assertions": 2,
+            "final_assertions": 2,
+            "tests": 4,
+            "attempts": 3,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addAltTextToImage": "v1",
+                "postPerformanceReport": "v2"
+              },
+              "order": [
+                "postPerformanceReport",
+                "addAltTextToImage"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          }
+        },
+        {
+          "category": "blogging",
+          "name": "addCanonicalUrl_addComment",
+          "atoms": [
+            "addCanonicalUrl",
+            "addComment"
+          ],
+          "atoms_verified": {
+            "addCanonicalUrl": [
+              "v1",
+              "v2"
+            ],
+            "addComment": [
+              "v1",
+              "v2"
+            ]
+          },
+          "free": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false
+          },
+          "rule": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addCanonicalUrl": "v2",
+                "addComment": "v2"
+              },
+              "order": [
+                "addCanonicalUrl",
+                "addComment"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          },
+          "dna": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addCanonicalUrl": "v1",
+                "addComment": "v1"
+              },
+              "order": [
+                "addCanonicalUrl",
+                "addComment"
+              ],
+              "relabel": [
+                {
+                  "atom": "addCanonicalUrl",
+                  "from": "Canonical URL",
+                  "to": "Canonical URL Input"
+                },
+                {
+                  "atom": "addCanonicalUrl",
+                  "from": "Save",
+                  "to": "Save URL"
+                },
+                {
+                  "atom": "addComment",
+                  "from": "Submit",
+                  "to": "Submit Comment"
+                }
+              ]
+            },
+            "compile_error": null
+          }
+        },
+        {
+          "category": "blogging",
+          "name": "addCanonicalUrl_assignPostToCategory",
+          "atoms": [
+            "addCanonicalUrl",
+            "assignPostToCategory"
+          ],
+          "atoms_verified": {
+            "addCanonicalUrl": [
+              "v1",
+              "v2"
+            ],
+            "assignPostToCategory": [
+              "v1",
+              "v2"
+            ]
+          },
+          "free": {
+            "first_pass": false,
+            "final_pass": true,
+            "first_assertions": 2,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 2,
+            "compile_errors": 0,
+            "timed_out": false
+          },
+          "rule": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addCanonicalUrl": "v2",
+                "assignPostToCategory": "v2"
+              },
+              "order": [
+                "addCanonicalUrl",
+                "assignPostToCategory"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          },
+          "dna": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addCanonicalUrl": "v2",
+                "assignPostToCategory": "v1"
+              },
+              "order": [
+                "addCanonicalUrl",
+                "assignPostToCategory"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          }
+        },
+        {
+          "category": "blogging",
+          "name": "addCanonicalUrl_editComment",
+          "atoms": [
+            "addCanonicalUrl",
+            "editComment"
+          ],
+          "atoms_verified": {
+            "addCanonicalUrl": [
+              "v1",
+              "v2"
+            ],
+            "editComment": [
+              "v1",
+              "v2"
+            ]
+          },
+          "free": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false
+          },
+          "rule": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addCanonicalUrl": "v2",
+                "editComment": "v2"
+              },
+              "order": [
+                "addCanonicalUrl",
+                "editComment"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          },
+          "dna": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addCanonicalUrl": "v1",
+                "editComment": "v1"
+              },
+              "order": [
+                "addCanonicalUrl",
+                "editComment"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          }
+        },
+        {
+          "category": "blogging",
+          "name": "addCanonicalUrl_editTag",
+          "atoms": [
+            "addCanonicalUrl",
+            "editTag"
+          ],
+          "atoms_verified": {
+            "addCanonicalUrl": [
+              "v1",
+              "v2"
+            ],
+            "editTag": [
+              "v1",
+              "v2"
+            ]
+          },
+          "free": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false
+          },
+          "rule": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addCanonicalUrl": "v2",
+                "editTag": "v2"
+              },
+              "order": [
+                "addCanonicalUrl",
+                "editTag"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          },
+          "dna": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addCanonicalUrl": "v2",
+                "editTag": "v1"
+              },
+              "order": [
+                "addCanonicalUrl",
+                "editTag"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          }
+        },
+        {
+          "category": "taskmanagement",
+          "name": "addCommentToTask_setTaskDeadline",
+          "atoms": [
+            "addCommentToTask",
+            "setTaskDeadline"
+          ],
+          "atoms_verified": {
+            "addCommentToTask": [
+              "v1",
+              "v2"
+            ],
+            "setTaskDeadline": [
+              "v1",
+              "v2"
+            ]
+          },
+          "free": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false
+          },
+          "rule": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addCommentToTask": "v2",
+                "setTaskDeadline": "v2"
+              },
+              "order": [
+                "addCommentToTask",
+                "setTaskDeadline"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          },
+          "dna": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "addCommentToTask": "v1",
+                "setTaskDeadline": "v1"
+              },
+              "order": [
+                "addCommentToTask",
+                "setTaskDeadline"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          }
+        },
+        {
+          "category": "taskmanagement",
+          "name": "approveOrRejectTaskReview_compareTime",
+          "atoms": [
+            "approveOrRejectTaskReview",
+            "compareTime"
+          ],
+          "atoms_verified": {
+            "approveOrRejectTaskReview": [
+              "v1",
+              "v2"
+            ],
+            "compareTime": [
+              "v1",
+              "v2"
+            ]
+          },
+          "free": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false
+          },
+          "rule": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "approveOrRejectTaskReview": "v2",
+                "compareTime": "v2"
+              },
+              "order": [
+                "approveOrRejectTaskReview",
+                "compareTime"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          },
+          "dna": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "approveOrRejectTaskReview": "v1",
+                "compareTime": "v1"
+              },
+              "order": [
+                "approveOrRejectTaskReview",
+                "compareTime"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          }
+        },
+        {
+          "category": "taskmanagement",
+          "name": "approveOrRejectTaskReview_projectCustomWorkflows",
+          "atoms": [
+            "approveOrRejectTaskReview",
+            "projectCustomWorkflows"
+          ],
+          "atoms_verified": {
+            "approveOrRejectTaskReview": [
+              "v1",
+              "v2"
+            ],
+            "projectCustomWorkflows": [
+              "v1",
+              "v2"
+            ]
+          },
+          "free": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false
+          },
+          "rule": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "approveOrRejectTaskReview": "v2",
+                "projectCustomWorkflows": "v2"
+              },
+              "order": [
+                "approveOrRejectTaskReview",
+                "projectCustomWorkflows"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          },
+          "dna": {
+            "first_pass": false,
+            "final_pass": true,
+            "first_assertions": 0,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 2,
+            "compile_errors": 1,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "approveOrRejectTaskReview": "v1",
+                "projectCustomWorkflows": "v1"
+              },
+              "order": [
+                "approveOrRejectTaskReview",
+                "projectCustomWorkflows"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          }
+        },
+        {
+          "category": "taskmanagement",
+          "name": "approveOrRejectTaskReview_setTaskPriority",
+          "atoms": [
+            "approveOrRejectTaskReview",
+            "setTaskPriority"
+          ],
+          "atoms_verified": {
+            "approveOrRejectTaskReview": [
+              "v1",
+              "v2"
+            ],
+            "setTaskPriority": [
+              "v1",
+              "v2"
+            ]
+          },
+          "free": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false
+          },
+          "rule": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "approveOrRejectTaskReview": "v2",
+                "setTaskPriority": "v2"
+              },
+              "order": [
+                "approveOrRejectTaskReview",
+                "setTaskPriority"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          },
+          "dna": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "approveOrRejectTaskReview": "v1",
+                "setTaskPriority": "v1"
+              },
+              "order": [
+                "approveOrRejectTaskReview",
+                "setTaskPriority"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          }
+        },
+        {
+          "category": "taskmanagement",
+          "name": "assignTaskToProject_assignTaskToUser",
+          "atoms": [
+            "assignTaskToProject",
+            "assignTaskToUser"
+          ],
+          "atoms_verified": {
+            "assignTaskToProject": [
+              "v1",
+              "v2"
+            ],
+            "assignTaskToUser": [
+              "v1",
+              "v2"
+            ]
+          },
+          "free": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false
+          },
+          "rule": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "assignTaskToProject": "v2",
+                "assignTaskToUser": "v2"
+              },
+              "order": [
+                "assignTaskToProject",
+                "assignTaskToUser"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          },
+          "dna": {
+            "first_pass": true,
+            "final_pass": true,
+            "first_assertions": 4,
+            "final_assertions": 4,
+            "tests": 4,
+            "attempts": 1,
+            "compile_errors": 0,
+            "timed_out": false,
+            "plan": {
+              "select": {
+                "assignTaskToProject": "v1",
+                "assignTaskToUser": "v1"
+              },
+              "order": [
+                "assignTaskToProject",
+                "assignTaskToUser"
+              ],
+              "relabel": []
+            },
+            "compile_error": null
+          }
+        }
+      ],
+      "paired": {
+        "dna_only": 0,
+        "free_only": 0,
+        "both": 9,
+        "neither": 1
+      }
+    }
+  ],
+  "library": {
+    "addAltTextToImage": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "sha256": "99fdb7f26608d3a670404c2937d91dc6d49c7fc36769c8ce7cbc51d83d132580",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "sha256": "a6edcec1f5311b97bb2ad56601bb30746faffb771c6e70657f3a4bcae11b4812",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ],
+    "postPerformanceReport": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "sha256": "e07d344f3b112065d40dee9b71b80ea3f538288372a2d22b28f2c863d135692c",
+        "verified": false,
+        "single_tests": "0/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "sha256": "376d5a0542dc15aa4e04126d31ee940d03af3838b98e153f0754a41dff355db9",
+        "verified": false,
+        "single_tests": "0/2"
+      }
+    ],
+    "addCanonicalUrl": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "sha256": "e1774ab0bfa4b7b7d39c35092febf3aaa36a43a41385de8da3f90548d42985cf",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "sha256": "642606a509588ac3a1f72e89d35208f382207b07bba0d10dd90413fb559cfa6b",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ],
+    "addComment": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "sha256": "850f842e6ec32ffd7e3946d878500061d5e12c6d458af89e1b4046480befd436",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "sha256": "8bf4c5437b6e1fbd90b2b7c68265effedbe640adcb34e176df5abe2d25baa596",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ],
+    "assignPostToCategory": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "sha256": "15ecc5349fde477297b2125305eecb1c5f9206ae22c7870c52b93eb8a8763e52",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "sha256": "91d6d3b9b9c468645e47da907538a8ddf838de0ac04f6c873f145de755789da6",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ],
+    "editComment": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "sha256": "622f6a8acea68d2f66eb7f7bb1ad336ea5f97995ff7ae57a7c9779f26d3c96cb",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "sha256": "ed08b1551c9d505dc7d1e60b1c976adab65654858bc27138010692015a46e4a2",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ],
+    "editTag": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "sha256": "f9bae8154fba45b00ce27e80876c6b2439c0ae7f6446ccb01c54b19e743ff76b",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "sha256": "650feeb4f6435f5c3849da832183ceeaf98264dd37ea3b1a5f53657f7776b442",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ],
+    "addCommentToTask": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "sha256": "5b9ee6a8193c0cbf41db566a4561f4740061a9cf7c7dbd3748e3d3662c85a3ea",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "sha256": "ecc047b91e01b08a1ea697e181577ed0878f5b7a4ab7dcb69739c2b1290cb434",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ],
+    "setTaskDeadline": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "sha256": "b4ca4d73111c011646ee91f0e4faa6c3888667d2766db7fe46011ce8adacbc01",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "sha256": "b48c975d5237b172a07cabb0576478b15d06239a043e8c97c07b925d183e9789",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ],
+    "approveOrRejectTaskReview": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "sha256": "36df01edb7c51383442f1e089228da87f7c9d47a1517875f379b536c010d027f",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "sha256": "14cf50b50de9934f541875da180d40fcfbead89b0723296e63237a949573ccb8",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ],
+    "compareTime": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "sha256": "a61c795522fdce91c1faeed3eebe1fc4b26d1e0aa0d159bea2067f1c3de29bff",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "sha256": "8f3d7ad277a87b6801665dd866c207b21652d011d1700da639b26ebcf9845a9e",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ],
+    "projectCustomWorkflows": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "sha256": "07901377c396ed3ff13ea13ccde90ee7e72ea018b5d8be595ffc7b3213b1bf35",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "sha256": "9c44a3e1a1afc2f5b723d548144c0191f3dc273b9b16024c7d48b71140208588",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ],
+    "setTaskPriority": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "sha256": "e5ba479def083d8a2c4b3caf5e99ad0c1d692595b8568c335bc40baa42b54572",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "sha256": "965fcc3ab3113c482ff029afff59ee73e2d437d2375626c0fa5961357cf2920d",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ],
+    "assignTaskToProject": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "sha256": "b08e5d52d5e5343cd61c8c652660d52045471688afd3c878ba76a5977a7eca20",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "sha256": "e159d2548c9c9af022b2ee68d346890043feb81b9cde5b30511077447ec568b0",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ],
+    "assignTaskToUser": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "sha256": "0ca01a5cbe65392aeada858ff7ce15d643f9672c42ec6cc89ca1bcc2e87c339f",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "sha256": "ee3272a4f33d87be985a699f9d40eadca19f1421cbec3e75323bf23c866c30ac",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ]
+  },
+  "accounting": {
+    "actual_usd": 0.0,
+    "exposure_usd": 0.0,
+    "library_usd": 0.0,
+    "unsettled_calls": 0,
+    "policy": {
+      "id": 1,
+      "cap": 1000000,
+      "stop": 800000,
+      "halted": 0
+    }
+  },
+  "stopped": null
+}

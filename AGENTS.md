@@ -9,6 +9,7 @@
 - `qwen/qwen3-coder-plus` 已在 OpenRouter 下线，续跑会在模型检查处停下（预期行为）。
 - 第三轮产物里的 `result.json` / `results.json` 记录的是**绝对路径** `/home/lxler/work/gui_test/...`（项目旧目录名）。目录已改名为 `GUI_DNA`，所以保留了符号链接 `/home/lxler/work/gui_test -> /home/lxler/work/GUI_DNA`；删掉它 `resume_scale`、`audit_scale`、`analyze` 都会 FileNotFoundError。换机器时把仓库放到同一路径或建同名链接。
 - OpenRouter 余额约 $5.5（2026-10-30），用户预算很紧，**任何付费调用先问清楚、先查余额**。
+- 2026-11-01 新增 `test/webapp1k_dna/`：在公开 benchmark WebApp1K-Duo 上对比自由代码与 GUI-DNA 接线（10 个样本，独立账本）。`test/` 是实验目录，`tests/` 才是主代码的 pytest。
 - 中文为文档语言；代码注释与标识符为英文。
 
 ## 2. 环境与常用命令
@@ -48,6 +49,11 @@ uv run gui-dna generate --method constrained --task test-delete-pagination --out
 #         （fetch-mock 钉 9.11.0、react-router-dom 钉 6.x、node-fetch 2.x，否则官方测试在 CRA 5 / Jest 27 下无法加载）
 uv run python -m experiments.webapp1k_probe --models deepseek/deepseek-v4-pro-0813 --categories blogging taskmanagement --per-category 5
 uv run python -m experiments.webapp1k_probe --evaluate-only        # 只重新评分已保存的实现，不花钱
+
+# WebApp1K-Duo 上的方法对比（test/webapp1k_dna/，独立账本 artifacts/webapp1k-dna/budget.sqlite3，上限 $1）
+uv run pytest test/webapp1k_dna -q                                  # 计划编译器离线测试
+uv run python -m test.webapp1k_dna.run --arms rule                  # 零 API：建冻结原子库 + 规则接线 + Jest
+uv run python -m test.webapp1k_dna.run --arms free rule dna         # 付费：自由代码 vs GUI-DNA 计划（默认 10 个 Duo）
 ```
 
 `.browser-deps/` 里是无 sudo 环境解包的 `libnspr4`/`libnss3`，评测子进程自动加到 `LD_LIBRARY_PATH`；没有也不影响有系统库的机器。
@@ -108,3 +114,4 @@ v3  experiments/scale_study/ library()（v2 库人工扩成 20 个语义变体�
 | 加新模型/改价格上限 | `configs/*.json` 的 `models`、`model_price_caps`、`provider_order`；`provider.py` 会校验模型在目录中 |
 | 渲染外壳与事件协议 | `src/gui_dna/assets/shell.html`（`window.__gui.{reset,dispatch,snapshot}`）、`src/gui_dna/prompts.py` 的 `INTERFACE` |
 | 外部 benchmark 候选与探针 | `实验结果.md` 第 8 节；`experiments/webapp1k_probe.py`；`artifacts/benchmark-probe/summary.md` |
+| 在 WebApp1K-Duo 上跑 GUI-DNA（扩大实验入口） | `test/webapp1k_dna/README.md`；`run.py`（三条臂）、`compiler.py`（计划检查 + 拼装）、`analyze.js`（babel 静态字符串）；结果 `test/webapp1k_dna/results/`；结论在 `实验结果.md` 第 9 节 |

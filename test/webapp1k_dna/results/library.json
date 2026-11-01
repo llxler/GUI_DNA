@@ -1,0 +1,362 @@
+{
+  "addAltTextToImage": {
+    "category": "blogging",
+    "module": "AddAltTextToImage",
+    "variants": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "source_path": "artifacts/benchmark-probe/runs/deepseek__deepseek-v4-pro-0813/single/blogging/addAltTextToImage/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst AddAltTextToImage = () => {\n  const [altText, setAltText] = useState('');\n  const [message, setMessage] = useState('');\n\n  const handleSave = async () => {\n    try {\n      const response = await fetch('/api/alt-text', {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ altText }),\n      });\n\n      if (response.ok) {\n        setMessage('Alt text updated successfully');\n      } else {\n        setMessage('Failed to update alt text');\n      }\n    } catch (error) {\n      setMessage('Failed to update alt text');\n    }\n  };\n\n  return (\n    <div>\n      <label htmlFor=\"alt-text\">Alt Text</label>\n      <input\n        id=\"alt-text\"\n        type=\"text\"\n        value={altText}\n        onChange={(e) => setAltText(e.target.value)}\n      />\n      <button onClick={handleSave}>Save</button>\n      {message && <p>{message}</p>}\n    </div>\n  );\n};\n\nexport default AddAltTextToImage;\n",
+        "sha256": "99fdb7f26608d3a670404c2937d91dc6d49c7fc36769c8ce7cbc51d83d132580",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "source_path": "artifacts/benchmark-probe/runs/qwen__qwen3-coder/single/blogging/addAltTextToImage/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst AddAltTextToImage = () => {\n  const [altText, setAltText] = useState('');\n  const [message, setMessage] = useState('');\n  const [isSuccess, setIsSuccess] = useState(null);\n\n  const handleSubmit = async (e) => {\n    e.preventDefault();\n    try {\n      const response = await fetch('/api/alt-text', {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ altText }),\n      });\n\n      if (response.ok) {\n        setMessage('Alt text updated successfully');\n        setIsSuccess(true);\n      } else {\n        setMessage('Failed to update alt text');\n        setIsSuccess(false);\n      }\n    } catch (error) {\n      setMessage('Failed to update alt text');\n      setIsSuccess(false);\n    }\n  };\n\n  return (\n    <div>\n      <h2>Add Alt Text to Image</h2>\n      <form onSubmit={handleSubmit}>\n        <label htmlFor=\"altText\">Alt Text:</label>\n        <input\n          id=\"altText\"\n          type=\"text\"\n          value={altText}\n          onChange={(e) => setAltText(e.target.value)}\n        />\n        <button type=\"submit\">Save</button>\n      </form>\n      {message && (\n        <div>\n          {isSuccess !== null && (\n            <span className={isSuccess ? 'success' : 'error'}>\n              {message}\n            </span>\n          )}\n        </div>\n      )}\n    </div>\n  );\n};\n\nexport default AddAltTextToImage;",
+        "sha256": "a6edcec1f5311b97bb2ad56601bb30746faffb771c6e70657f3a4bcae11b4812",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ]
+  },
+  "postPerformanceReport": {
+    "category": "blogging",
+    "module": "postPerformanceReport",
+    "variants": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "source_path": "artifacts/benchmark-probe/runs/deepseek__deepseek-v4-pro-0813/single/blogging/postPerformanceReport/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst GeneratePostPerformanceReport = ({ postId }) => {\n  const [performance, setPerformance] = useState(null);\n  const [error, setError] = useState(null);\n\n  const generateReport = async () => {\n    setError(null);\n    setPerformance(null);\n    try {\n      const response = await fetch(`/api/generatePostPerformanceReport?postId=${postId}`);\n      if (!response.ok) {\n        throw new Error('Error generating report');\n      }\n      const data = await response.json();\n      setPerformance(data.performance);\n    } catch (err) {\n      setError('Error generating report');\n    }\n  };\n\n  return (\n    <div>\n      <button onClick={generateReport}>Generate Report</button>\n      {performance && <div>Performance: {performance}</div>}\n      {error && <div>{error}</div>}\n    </div>\n  );\n};\n\nexport default GeneratePostPerformanceReport;\n",
+        "sha256": "e07d344f3b112065d40dee9b71b80ea3f538288372a2d22b28f2c863d135692c",
+        "verified": false,
+        "single_tests": "0/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "source_path": "artifacts/benchmark-probe/runs/qwen__qwen3-coder/single/blogging/postPerformanceReport/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst GeneratePostPerformanceReport = ({ postId }) => {\n  const [report, setReport] = useState(null);\n  const [error, setError] = useState(null);\n  const [loading, setLoading] = useState(false);\n\n  const generateReport = async () => {\n    setLoading(true);\n    setError(null);\n    setReport(null);\n    \n    try {\n      const response = await fetch(`/api/generatePostPerformanceReport?postId=${postId}`);\n      const data = await response.json();\n      \n      if (response.ok) {\n        setReport(data);\n      } else {\n        throw new Error(data.message || 'Failed to generate report');\n      }\n    } catch (err) {\n      setError('Error generating report');\n    } finally {\n      setLoading(false);\n    }\n  };\n\n  return (\n    <div>\n      <button onClick={generateReport} disabled={loading}>\n        {loading ? 'Generating...' : 'Generate Report'}\n      </button>\n      \n      {report && (\n        <div>\n          <p>Performance: {report.performance}</p>\n        </div>\n      )}\n      \n      {error && (\n        <div>\n          <p>{error}</p>\n        </div>\n      )}\n    </div>\n  );\n};\n\nexport default GeneratePostPerformanceReport;",
+        "sha256": "376d5a0542dc15aa4e04126d31ee940d03af3838b98e153f0754a41dff355db9",
+        "verified": false,
+        "single_tests": "0/2"
+      }
+    ]
+  },
+  "addCanonicalUrl": {
+    "category": "blogging",
+    "module": "addCanonicalUrl",
+    "variants": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "source_path": "artifacts/benchmark-probe/runs/deepseek__deepseek-v4-pro-0813/single/blogging/addCanonicalUrl/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst CMS = () => {\n  const [canonicalUrl, setCanonicalUrl] = useState('');\n  const [message, setMessage] = useState('');\n\n  const handleSave = async () => {\n    try {\n      const response = await fetch('/api/canonical-url', {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ canonicalUrl }),\n      });\n\n      if (response.ok) {\n        setMessage('Canonical URL updated successfully');\n      } else {\n        setMessage('Failed to update canonical URL');\n      }\n    } catch (error) {\n      setMessage('Failed to update canonical URL');\n    }\n  };\n\n  return (\n    <div>\n      <label htmlFor=\"canonical-url\">Canonical URL</label>\n      <input\n        id=\"canonical-url\"\n        type=\"text\"\n        value={canonicalUrl}\n        onChange={(e) => setCanonicalUrl(e.target.value)}\n      />\n      <button onClick={handleSave}>Save</button>\n      {message && <p>{message}</p>}\n    </div>\n  );\n};\n\nexport default CMS;\n",
+        "sha256": "e1774ab0bfa4b7b7d39c35092febf3aaa36a43a41385de8da3f90548d42985cf",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "source_path": "artifacts/benchmark-probe/runs/qwen__qwen3-coder/single/blogging/addCanonicalUrl/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst CMS = () => {\n  const [canonicalUrl, setCanonicalUrl] = useState('');\n  const [message, setMessage] = useState('');\n  const [error, setError] = useState('');\n\n  const handleSubmit = async (e) => {\n    e.preventDefault();\n    setMessage('');\n    setError('');\n    \n    try {\n      const response = await fetch('/api/canonical-url', {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ canonicalUrl }),\n      });\n\n      if (response.ok) {\n        setMessage('Canonical URL updated successfully');\n      } else {\n        setError('Failed to update canonical URL');\n      }\n    } catch (err) {\n      setError('Failed to update canonical URL');\n    }\n  };\n\n  return (\n    <div>\n      <h2>Add Canonical URL</h2>\n      <form onSubmit={handleSubmit}>\n        <label htmlFor=\"canonicalUrl\">Canonical URL</label>\n        <input\n          id=\"canonicalUrl\"\n          type=\"url\"\n          value={canonicalUrl}\n          onChange={(e) => setCanonicalUrl(e.target.value)}\n        />\n        <button type=\"submit\">Save</button>\n      </form>\n      {message && <p>{message}</p>}\n      {error && <p>{error}</p>}\n    </div>\n  );\n};\n\nexport default CMS;",
+        "sha256": "642606a509588ac3a1f72e89d35208f382207b07bba0d10dd90413fb559cfa6b",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ]
+  },
+  "addComment": {
+    "category": "blogging",
+    "module": "addComment",
+    "variants": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "source_path": "artifacts/benchmark-probe/runs/deepseek__deepseek-v4-pro-0813/single/blogging/addComment/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst App = () => {\n  const [comment, setComment] = useState('');\n  const [message, setMessage] = useState('');\n\n  const handleSubmit = async (e) => {\n    e.preventDefault();\n    try {\n      const response = await fetch('/api/comments', {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ comment }),\n      });\n\n      if (response.ok) {\n        setMessage('Comment added successfully');\n      } else {\n        setMessage('Failed to add comment');\n      }\n    } catch (error) {\n      setMessage('Failed to add comment');\n    }\n  };\n\n  return (\n    <div>\n      <form onSubmit={handleSubmit}>\n        <input\n          type=\"text\"\n          placeholder=\"Add a comment\"\n          value={comment}\n          onChange={(e) => setComment(e.target.value)}\n        />\n        <button type=\"submit\">Submit</button>\n      </form>\n      {message && <p>{message}</p>}\n    </div>\n  );\n};\n\nexport default App;\n",
+        "sha256": "850f842e6ec32ffd7e3946d878500061d5e12c6d458af89e1b4046480befd436",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "source_path": "artifacts/benchmark-probe/runs/qwen__qwen3-coder/single/blogging/addComment/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst AddComment = () => {\n  const [comment, setComment] = useState('');\n  const [message, setMessage] = useState('');\n\n  const handleSubmit = async (e) => {\n    e.preventDefault();\n    \n    try {\n      const response = await fetch('/api/comments', {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ text: comment }),\n      });\n\n      if (response.ok) {\n        setMessage('Comment added successfully');\n        setComment('');\n      } else {\n        setMessage('Failed to add comment');\n      }\n    } catch (error) {\n      setMessage('Failed to add comment');\n    }\n  };\n\n  return (\n    <div>\n      <form onSubmit={handleSubmit}>\n        <textarea\n          placeholder=\"Add a comment\"\n          value={comment}\n          onChange={(e) => setComment(e.target.value)}\n        />\n        <button type=\"submit\">Submit</button>\n      </form>\n      {message && <p>{message}</p>}\n    </div>\n  );\n};\n\nexport default AddComment;",
+        "sha256": "8bf4c5437b6e1fbd90b2b7c68265effedbe640adcb34e176df5abe2d25baa596",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ]
+  },
+  "assignPostToCategory": {
+    "category": "blogging",
+    "module": "assignPostToCategory",
+    "variants": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "source_path": "artifacts/benchmark-probe/runs/deepseek__deepseek-v4-pro-0813/single/blogging/assignPostToCategory/implementation.js",
+        "code": "import React, { useState } from 'react';\nimport { useParams } from 'react-router-dom';\n\nconst AssignPostToCategory = () => {\n  const { postId } = useParams();\n  const [categoryId, setCategoryId] = useState('');\n  const [message, setMessage] = useState('');\n  const [error, setError] = useState('');\n\n  const handleAssign = async () => {\n    setMessage('');\n    setError('');\n    try {\n      const response = await fetch(`/posts/${postId || 1}/categories`, {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ categoryId: parseInt(categoryId, 10) }),\n      });\n\n      if (response.ok) {\n        setMessage('Post assigned to category successfully');\n      } else {\n        const data = await response.json();\n        setError(`Error: ${data.error || 'Unable to assign category'}`);\n      }\n    } catch (err) {\n      setError('Error: Unable to assign category');\n    }\n  };\n\n  return (\n    <div>\n      <label htmlFor=\"category-select\">Category Select</label>\n      <select\n        id=\"category-select\"\n        value={categoryId}\n        onChange={(e) => setCategoryId(e.target.value)}\n      >\n        <option value=\"\">Select a category</option>\n        <option value=\"1\">Category 1</option>\n        <option value=\"2\">Category 2</option>\n      </select>\n      <button onClick={handleAssign}>Assign Category</button>\n      {message && <div>{message}</div>}\n      {error && <div>{error}</div>}\n    </div>\n  );\n};\n\nexport default AssignPostToCategory;\n",
+        "sha256": "15ecc5349fde477297b2125305eecb1c5f9206ae22c7870c52b93eb8a8763e52",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "source_path": "artifacts/benchmark-probe/runs/qwen__qwen3-coder/single/blogging/assignPostToCategory/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst AssignPostToCategory = () => {\n  const [categoryId, setCategoryId] = useState('');\n  const [message, setMessage] = useState('');\n  const [error, setError] = useState('');\n\n  const handleAssign = async () => {\n    try {\n      const response = await fetch('/posts/1/categories', {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json'\n        },\n        body: JSON.stringify({ categoryId: parseInt(categoryId) })\n      });\n\n      if (response.ok) {\n        setMessage('Post assigned to category successfully');\n        setError('');\n      } else {\n        const data = await response.json();\n        setError(`Error: ${data.error}`);\n        setMessage('');\n      }\n    } catch (err) {\n      setError('Error: Network request failed');\n      setMessage('');\n    }\n  };\n\n  return (\n    <div>\n      <label htmlFor=\"category-select\">Category Select</label>\n      <select \n        id=\"category-select\"\n        value={categoryId} \n        onChange={(e) => setCategoryId(e.target.value)}\n      >\n        <option value=\"\">Select a category</option>\n        <option value=\"1\">Category 1</option>\n        <option value=\"2\">Category 2</option>\n      </select>\n      <button onClick={handleAssign}>Assign Category</button>\n      {message && <p>{message}</p>}\n      {error && <p>{error}</p>}\n    </div>\n  );\n};\n\nexport default AssignPostToCategory;",
+        "sha256": "91d6d3b9b9c468645e47da907538a8ddf838de0ac04f6c873f145de755789da6",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ]
+  },
+  "editComment": {
+    "category": "blogging",
+    "module": "editComment",
+    "variants": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "source_path": "artifacts/benchmark-probe/runs/deepseek__deepseek-v4-pro-0813/single/blogging/editComment/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst App = () => {\n  const [comment, setComment] = useState('');\n  const [message, setMessage] = useState('');\n\n  const handleSubmit = async (e) => {\n    e.preventDefault();\n    try {\n      const response = await fetch('/api/comments/1', {\n        method: 'PUT',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ comment }),\n      });\n      if (!response.ok) {\n        throw new Error('Failed');\n      }\n      setMessage('Comment updated successfully');\n    } catch (error) {\n      setMessage('Failed to update comment');\n    }\n  };\n\n  return (\n    <form onSubmit={handleSubmit}>\n      <input\n        type=\"text\"\n        placeholder=\"Edit your comment\"\n        value={comment}\n        onChange={(e) => setComment(e.target.value)}\n      />\n      <button type=\"submit\">Edit</button>\n      {message && <p>{message}</p>}\n    </form>\n  );\n};\n\nexport default App;\n",
+        "sha256": "622f6a8acea68d2f66eb7f7bb1ad336ea5f97995ff7ae57a7c9779f26d3c96cb",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "source_path": "artifacts/benchmark-probe/runs/qwen__qwen3-coder/single/blogging/editComment/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst EditComment = () => {\n  const [comment, setComment] = useState('');\n  const [message, setMessage] = useState('');\n\n  const handleSubmit = async (e) => {\n    e.preventDefault();\n    try {\n      const response = await fetch('/api/comments/1', {\n        method: 'PUT',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ text: comment }),\n      });\n\n      if (response.ok) {\n        setMessage('Comment updated successfully');\n      } else {\n        setMessage('Failed to update comment');\n      }\n    } catch (error) {\n      setMessage('Failed to update comment');\n    }\n  };\n\n  return (\n    <div>\n      <form onSubmit={handleSubmit}>\n        <textarea\n          placeholder=\"Edit your comment\"\n          value={comment}\n          onChange={(e) => setComment(e.target.value)}\n        />\n        <button type=\"submit\">Edit</button>\n      </form>\n      {message && <p>{message}</p>}\n    </div>\n  );\n};\n\nexport default EditComment;",
+        "sha256": "ed08b1551c9d505dc7d1e60b1c976adab65654858bc27138010692015a46e4a2",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ]
+  },
+  "editTag": {
+    "category": "blogging",
+    "module": "editTag",
+    "variants": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "source_path": "artifacts/benchmark-probe/runs/deepseek__deepseek-v4-pro-0813/single/blogging/editTag/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst EditTag = () => {\n  const [name, setName] = useState('');\n  const [message, setMessage] = useState('');\n  const [error, setError] = useState('');\n\n  const handleSubmit = async (e) => {\n    e.preventDefault();\n    setMessage('');\n    setError('');\n\n    try {\n      const response = await fetch('/tags/1', {\n        method: 'PUT',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ name }),\n      });\n\n      const data = await response.json();\n\n      if (response.ok) {\n        setMessage('Tag updated successfully');\n      } else {\n        setError(`Error: ${data.error}`);\n      }\n    } catch (err) {\n      setError('Error: Unable to update tag');\n    }\n  };\n\n  return (\n    <div>\n      <h2>Edit Tag</h2>\n      <form onSubmit={handleSubmit}>\n        <div>\n          <label htmlFor=\"tagName\">Tag Name</label>\n          <input\n            id=\"tagName\"\n            type=\"text\"\n            value={name}\n            onChange={(e) => setName(e.target.value)}\n          />\n        </div>\n        <button type=\"submit\">Update Tag</button>\n      </form>\n      {message && <div>{message}</div>}\n      {error && <div>{error}</div>}\n    </div>\n  );\n};\n\nexport default EditTag;\n",
+        "sha256": "f9bae8154fba45b00ce27e80876c6b2439c0ae7f6446ccb01c54b19e743ff76b",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "source_path": "artifacts/benchmark-probe/runs/qwen__qwen3-coder/single/blogging/editTag/implementation.js",
+        "code": "import React, { useState, useEffect } from 'react';\n\nconst MyComponent = () => {\n  const [tagName, setTagName] = useState('');\n  const [message, setMessage] = useState('');\n  const [error, setError] = useState('');\n\n  // Simulate loading existing tag data\n  useEffect(() => {\n    // In a real app, this would fetch the current tag data based on route params\n    setTagName('Initial Tag Name');\n  }, []);\n\n  const handleSubmit = async (e) => {\n    e.preventDefault();\n    setMessage('');\n    setError('');\n    \n    try {\n      const response = await fetch('/tags/1', {\n        method: 'PUT',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ name: tagName }),\n      });\n\n      if (!response.ok) {\n        const errorData = await response.json();\n        throw new Error(errorData.error || 'Failed to update tag');\n      }\n\n      const data = await response.json();\n      setMessage('Tag updated successfully');\n    } catch (err) {\n      setError(err.message);\n    }\n  };\n\n  return (\n    <div>\n      <h1>Edit Tag</h1>\n      <form onSubmit={handleSubmit}>\n        <label htmlFor=\"tag-name\">Tag Name</label>\n        <input\n          id=\"tag-name\"\n          type=\"text\"\n          value={tagName}\n          onChange={(e) => setTagName(e.target.value)}\n        />\n        <button type=\"submit\">Update Tag</button>\n      </form>\n      {message && <div>{message}</div>}\n      {error && <div>Error: {error}</div>}\n    </div>\n  );\n};\n\nexport default MyComponent;",
+        "sha256": "650feeb4f6435f5c3849da832183ceeaf98264dd37ea3b1a5f53657f7776b442",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ]
+  },
+  "addCommentToTask": {
+    "category": "taskmanagement",
+    "module": "addCommentToTask",
+    "variants": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "source_path": "artifacts/benchmark-probe/runs/deepseek__deepseek-v4-pro-0813/single/taskmanagement/addCommentToTask/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst App = () => {\n  const [comment, setComment] = useState('');\n  const [message, setMessage] = useState('');\n  const [error, setError] = useState('');\n\n  const handleAddComment = async () => {\n    setMessage('');\n    setError('');\n    try {\n      const response = await fetch('/api/addComment', {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ comment }),\n      });\n\n      if (response.ok) {\n        setMessage('Comment added!');\n      } else {\n        setError('Failed to add comment.');\n      }\n    } catch (err) {\n      setError('Failed to add comment.');\n    }\n  };\n\n  return (\n    <div>\n      <input\n        type=\"text\"\n        data-testid=\"comment-input\"\n        value={comment}\n        onChange={(e) => setComment(e.target.value)}\n      />\n      <button onClick={handleAddComment}>Add Comment</button>\n      {message && <p>{message}</p>}\n      {error && <p>{error}</p>}\n    </div>\n  );\n};\n\nexport default App;\n",
+        "sha256": "5b9ee6a8193c0cbf41db566a4561f4740061a9cf7c7dbd3748e3d3662c85a3ea",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "source_path": "artifacts/benchmark-probe/runs/qwen__qwen3-coder/single/taskmanagement/addCommentToTask/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst AddCommentToTask = () => {\n  const [comment, setComment] = useState('');\n  const [message, setMessage] = useState('');\n  const [error, setError] = useState('');\n\n  const handleSubmit = async (e) => {\n    e.preventDefault();\n    \n    try {\n      const response = await fetch('/api/addComment', {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ comment }),\n      });\n\n      if (response.ok) {\n        setMessage('Comment added!');\n        setError('');\n        setComment('');\n      } else {\n        throw new Error('Failed to add comment');\n      }\n    } catch (err) {\n      setError('Failed to add comment.');\n      setMessage('');\n    }\n  };\n\n  return (\n    <div>\n      <form onSubmit={handleSubmit}>\n        <input\n          data-testid=\"comment-input\"\n          type=\"text\"\n          value={comment}\n          onChange={(e) => setComment(e.target.value)}\n          placeholder=\"Enter your comment\"\n        />\n        <button type=\"submit\">Add Comment</button>\n      </form>\n      \n      {message && <p>{message}</p>}\n      {error && <p>{error}</p>}\n    </div>\n  );\n};\n\nexport default AddCommentToTask;",
+        "sha256": "ecc047b91e01b08a1ea697e181577ed0878f5b7a4ab7dcb69739c2b1290cb434",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ]
+  },
+  "setTaskDeadline": {
+    "category": "taskmanagement",
+    "module": "setTaskDeadline",
+    "variants": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "source_path": "artifacts/benchmark-probe/runs/deepseek__deepseek-v4-pro-0813/single/taskmanagement/setTaskDeadline/implementation.js",
+        "code": "import React, { useState, useEffect } from 'react';\n\nconst TaskDetail = ({ taskId }) => {\n  const [deadline, setDeadline] = useState('');\n  const [dueDate, setDueDate] = useState(null);\n  const [error, setError] = useState('');\n\n  const handleSaveDeadline = async () => {\n    try {\n      const response = await fetch(`/api/tasks/${taskId}/deadline`, {\n        method: 'POST',\n        headers: { 'Content-Type': 'application/json' },\n        body: JSON.stringify({ deadline }),\n      });\n\n      if (!response.ok) {\n        throw new Error('Failed to set deadline.');\n      }\n\n      const data = await response.json();\n      setDueDate(data.task.dueDate);\n      setError('');\n    } catch (err) {\n      setError('Failed to set deadline.');\n    }\n  };\n\n  return (\n    <div>\n      <input\n        type=\"date\"\n        placeholder=\"Set deadline\"\n        value={deadline}\n        onChange={(e) => setDeadline(e.target.value)}\n      />\n      <button onClick={handleSaveDeadline}>Save Deadline</button>\n      {dueDate && <p>{dueDate}</p>}\n      {error && <p>{error}</p>}\n    </div>\n  );\n};\n\nexport default TaskDetail;\n",
+        "sha256": "b4ca4d73111c011646ee91f0e4faa6c3888667d2766db7fe46011ce8adacbc01",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "source_path": "artifacts/benchmark-probe/runs/qwen__qwen3-coder/single/taskmanagement/setTaskDeadline/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst TaskDetail = ({ taskId }) => {\n  const [dueDate, setDueDate] = useState('');\n  const [task, setTask] = useState(null);\n  const [error, setError] = useState('');\n\n  const handleSetDeadline = async () => {\n    try {\n      const response = await fetch(`/api/tasks/${taskId}/deadline`, {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ dueDate }),\n      });\n\n      if (response.ok) {\n        const data = await response.json();\n        setTask(data.task);\n        setError('');\n      } else {\n        setError('Failed to set deadline.');\n      }\n    } catch (err) {\n      setError('Failed to set deadline.');\n    }\n  };\n\n  return (\n    <div>\n      <input \n        placeholder=\"Set deadline\" \n        type=\"date\" \n        value={dueDate} \n        onChange={(e) => setDueDate(e.target.value)} \n      />\n      <button onClick={handleSetDeadline}>Save Deadline</button>\n      {task && <div>{task.dueDate}</div>}\n      {error && <div>{error}</div>}\n    </div>\n  );\n};\n\nexport default TaskDetail;",
+        "sha256": "b48c975d5237b172a07cabb0576478b15d06239a043e8c97c07b925d183e9789",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ]
+  },
+  "approveOrRejectTaskReview": {
+    "category": "taskmanagement",
+    "module": "approveOrRejectTaskReview",
+    "variants": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "source_path": "artifacts/benchmark-probe/runs/deepseek__deepseek-v4-pro-0813/single/taskmanagement/approveOrRejectTaskReview/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst TaskApp = () => {\n  const [selectedTask, setSelectedTask] = useState('');\n  const [message, setMessage] = useState('');\n\n  const handleApprove = async () => {\n    try {\n      const response = await fetch('/approve-review', {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ task: selectedTask }),\n      });\n\n      if (response.ok) {\n        setMessage('Review approved successfully');\n      } else {\n        setMessage('Error approving review');\n      }\n    } catch (error) {\n      setMessage('Error approving review');\n    }\n  };\n\n  return (\n    <div>\n      <select\n        data-testid=\"task-select\"\n        value={selectedTask}\n        onChange={(e) => setSelectedTask(e.target.value)}\n      >\n        <option value=\"\">Select a task</option>\n        <option value=\"Task1\">Task1</option>\n        <option value=\"Task2\">Task2</option>\n      </select>\n      <button\n        data-testid=\"approve-review-button\"\n        onClick={handleApprove}\n      >\n        Approve Review\n      </button>\n      {message && <p>{message}</p>}\n    </div>\n  );\n};\n\nexport default TaskApp;\n",
+        "sha256": "36df01edb7c51383442f1e089228da87f7c9d47a1517875f379b536c010d027f",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "source_path": "artifacts/benchmark-probe/runs/qwen__qwen3-coder/single/taskmanagement/approveOrRejectTaskReview/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst TaskApp = () => {\n  const [task, setTask] = useState('');\n  const [message, setMessage] = useState('');\n\n  const handleApprove = async () => {\n    try {\n      const response = await fetch('/approve-review', {\n        method: 'POST',\n        headers: { 'Content-Type': 'application/json' },\n        body: JSON.stringify({ task })\n      });\n\n      if (response.ok) {\n        setMessage('Review approved successfully');\n      } else {\n        setMessage('Error approving review');\n      }\n    } catch (error) {\n      setMessage('Error approving review');\n    }\n  };\n\n  return (\n    <div>\n      <select \n        data-testid=\"task-select\" \n        value={task} \n        onChange={(e) => setTask(e.target.value)}\n      >\n        <option value=\"\">Select Task</option>\n        <option value=\"Task1\">Task 1</option>\n        <option value=\"Task2\">Task 2</option>\n      </select>\n      <button \n        data-testid=\"approve-review-button\" \n        onClick={handleApprove}\n      >\n        Approve Review\n      </button>\n      {message && <p>{message}</p>}\n    </div>\n  );\n};\n\nexport default TaskApp;",
+        "sha256": "14cf50b50de9934f541875da180d40fcfbead89b0723296e63237a949573ccb8",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ]
+  },
+  "compareTime": {
+    "category": "taskmanagement",
+    "module": "compareTime",
+    "variants": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "source_path": "artifacts/benchmark-probe/runs/deepseek__deepseek-v4-pro-0813/single/taskmanagement/compareTime/implementation.js",
+        "code": "import React, { useState, useEffect } from 'react';\n\nconst TaskDetail = ({ taskId }) => {\n  const [comparison, setComparison] = useState(null);\n  const [error, setError] = useState(null);\n\n  useEffect(() => {\n    const fetchComparison = async () => {\n      try {\n        const response = await fetch(`/api/tasks/${taskId}/time-comparison`);\n        if (!response.ok) {\n          throw new Error('Failed to fetch');\n        }\n        const data = await response.json();\n        setComparison(data.comparison);\n        setError(null);\n      } catch (err) {\n        setError('Failed to load time comparison.');\n        setComparison(null);\n      }\n    };\n\n    fetchComparison();\n  }, [taskId]);\n\n  return (\n    <div>\n      {error && <p>{error}</p>}\n      {comparison && (\n        <div>\n          <p>Estimated: {comparison.estimated} hours</p>\n          <p>Actual: {comparison.actual} hours</p>\n        </div>\n      )}\n    </div>\n  );\n};\n\nexport default TaskDetail;\n",
+        "sha256": "a61c795522fdce91c1faeed3eebe1fc4b26d1e0aa0d159bea2067f1c3de29bff",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "source_path": "artifacts/benchmark-probe/runs/qwen__qwen3-coder/single/taskmanagement/compareTime/implementation.js",
+        "code": "import React, { useEffect, useState } from 'react';\n\nconst TaskDetail = ({ taskId }) => {\n  const [comparison, setComparison] = useState(null);\n  const [error, setError] = useState(false);\n\n  useEffect(() => {\n    const fetchComparison = async () => {\n      try {\n        const response = await fetch(`/api/tasks/${taskId}/time-comparison`);\n        if (!response.ok) throw new Error('Failed to fetch');\n        const data = await response.json();\n        setComparison(data.comparison);\n      } catch (err) {\n        setError(true);\n      }\n    };\n\n    fetchComparison();\n  }, [taskId]);\n\n  if (error) return <div>Failed to load time comparison.</div>;\n  if (!comparison) return <div>Loading...</div>;\n\n  return (\n    <div>\n      <p>Estimated: {comparison.estimated} hours</p>\n      <p>Actual: {comparison.actual} hours</p>\n    </div>\n  );\n};\n\nexport default TaskDetail;",
+        "sha256": "8f3d7ad277a87b6801665dd866c207b21652d011d1700da639b26ebcf9845a9e",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ]
+  },
+  "projectCustomWorkflows": {
+    "category": "taskmanagement",
+    "module": "projectCustomWorkflows",
+    "variants": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "source_path": "artifacts/benchmark-probe/runs/deepseek__deepseek-v4-pro-0813/single/taskmanagement/projectCustomWorkflows/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst ProjectManagementApp = () => {\n  const [workflowName, setWorkflowName] = useState('');\n  const [message, setMessage] = useState('');\n  const [error, setError] = useState('');\n\n  const handleWorkflowNameChange = (e) => {\n    setWorkflowName(e.target.value);\n  };\n\n  const handleDefineWorkflow = async () => {\n    setMessage('');\n    setError('');\n\n    try {\n      const response = await fetch('/api/projects/workflows', {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ name: workflowName }),\n      });\n\n      if (response.ok) {\n        setMessage('Workflow defined successfully');\n      } else {\n        setError('Failed to define workflow');\n      }\n    } catch (err) {\n      setError('Failed to define workflow');\n    }\n  };\n\n  return (\n    <div>\n      <h1>Project Management</h1>\n      <div>\n        <label htmlFor=\"workflow-name\">Workflow Name</label>\n        <input\n          id=\"workflow-name\"\n          type=\"text\"\n          value={workflowName}\n          onChange={handleWorkflowNameChange}\n        />\n      </div>\n      <button onClick={handleDefineWorkflow}>Define Workflow</button>\n      {message && <p>{message}</p>}\n      {error && <p>{error}</p>}\n    </div>\n  );\n};\n\nexport default ProjectManagementApp;\n",
+        "sha256": "07901377c396ed3ff13ea13ccde90ee7e72ea018b5d8be595ffc7b3213b1bf35",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "source_path": "artifacts/benchmark-probe/runs/qwen__qwen3-coder/single/taskmanagement/projectCustomWorkflows/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst ProjectManagementApp = () => {\n  const [workflowName, setWorkflowName] = useState('');\n  const [message, setMessage] = useState('');\n\n  const handleDefineWorkflow = async (e) => {\n    e.preventDefault();\n    \n    try {\n      const response = await fetch('/api/projects/workflows', {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ name: workflowName }),\n      });\n\n      if (response.ok) {\n        setMessage('Workflow defined successfully');\n      } else {\n        setMessage('Failed to define workflow');\n      }\n    } catch (error) {\n      setMessage('Failed to define workflow');\n    }\n  };\n\n  return (\n    <div>\n      <h2>Define Custom Workflow</h2>\n      <form onSubmit={handleDefineWorkflow}>\n        <label htmlFor=\"workflow-name\">Workflow Name</label>\n        <input\n          id=\"workflow-name\"\n          type=\"text\"\n          value={workflowName}\n          onChange={(e) => setWorkflowName(e.target.value)}\n        />\n        <button type=\"submit\">Define Workflow</button>\n      </form>\n      {message && <p>{message}</p>}\n    </div>\n  );\n};\n\nexport default ProjectManagementApp;",
+        "sha256": "9c44a3e1a1afc2f5b723d548144c0191f3dc273b9b16024c7d48b71140208588",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ]
+  },
+  "setTaskPriority": {
+    "category": "taskmanagement",
+    "module": "setTaskPriority",
+    "variants": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "source_path": "artifacts/benchmark-probe/runs/deepseek__deepseek-v4-pro-0813/single/taskmanagement/setTaskPriority/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst SetTaskPriority = () => {\n  const [priority, setPriority] = useState('');\n  const [message, setMessage] = useState('');\n  const [error, setError] = useState('');\n\n  const handleSubmit = async (e) => {\n    e.preventDefault();\n    setMessage('');\n    setError('');\n\n    try {\n      const response = await fetch('/api/setPriority', {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ taskId: 1, priority }),\n      });\n\n      if (!response.ok) {\n        throw new Error('Failed');\n      }\n\n      setMessage('Task priority updated!');\n    } catch (err) {\n      setError('Failed to set task priority.');\n    }\n  };\n\n  return (\n    <form onSubmit={handleSubmit}>\n      <select\n        data-testid=\"priority-select\"\n        value={priority}\n        onChange={(e) => setPriority(e.target.value)}\n      >\n        <option value=\"\">Select priority</option>\n        <option value=\"Low\">Low</option>\n        <option value=\"Medium\">Medium</option>\n        <option value=\"High\">High</option>\n      </select>\n      <button type=\"submit\">Set Priority</button>\n      {message && <div>{message}</div>}\n      {error && <div>{error}</div>}\n    </form>\n  );\n};\n\nexport default SetTaskPriority;\n",
+        "sha256": "e5ba479def083d8a2c4b3caf5e99ad0c1d692595b8568c335bc40baa42b54572",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "source_path": "artifacts/benchmark-probe/runs/qwen__qwen3-coder/single/taskmanagement/setTaskPriority/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst SetTaskPriority = () => {\n  const [priority, setPriority] = useState('');\n  const [message, setMessage] = useState('');\n\n  const handleSubmit = async (e) => {\n    e.preventDefault();\n    try {\n      const response = await fetch('/api/setPriority', {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ priority }),\n      });\n\n      if (response.ok) {\n        const data = await response.json();\n        setMessage('Task priority updated!');\n      } else {\n        setMessage('Failed to set task priority.');\n      }\n    } catch (error) {\n      setMessage('Failed to set task priority.');\n    }\n  };\n\n  return (\n    <div>\n      <form onSubmit={handleSubmit}>\n        <select \n          data-testid=\"priority-select\" \n          value={priority} \n          onChange={(e) => setPriority(e.target.value)}\n        >\n          <option value=\"\">Select Priority</option>\n          <option value=\"Low\">Low</option>\n          <option value=\"Medium\">Medium</option>\n          <option value=\"High\">High</option>\n        </select>\n        <button type=\"submit\">Set Priority</button>\n      </form>\n      {message && <p>{message}</p>}\n    </div>\n  );\n};\n\nexport default SetTaskPriority;",
+        "sha256": "965fcc3ab3113c482ff029afff59ee73e2d437d2375626c0fa5961357cf2920d",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ]
+  },
+  "assignTaskToProject": {
+    "category": "taskmanagement",
+    "module": "assignTaskToProject",
+    "variants": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "source_path": "artifacts/benchmark-probe/runs/deepseek__deepseek-v4-pro-0813/single/taskmanagement/assignTaskToProject/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst App = () => {\n  const [taskId, setTaskId] = useState('');\n  const [projectId, setProjectId] = useState('');\n  const [message, setMessage] = useState('');\n  const [error, setError] = useState('');\n\n  const handleAssign = async () => {\n    setMessage('');\n    setError('');\n    try {\n      const response = await fetch('/api/assignTask', {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ taskId, projectId }),\n      });\n      if (response.ok) {\n        setMessage('Task assigned successfully!');\n      } else {\n        setError('Failed to assign task.');\n      }\n    } catch (err) {\n      setError('Failed to assign task.');\n    }\n  };\n\n  return (\n    <div>\n      <select\n        data-testid=\"task-select\"\n        value={taskId}\n        onChange={(e) => setTaskId(e.target.value)}\n      >\n        <option value=\"\">Select Task</option>\n        <option value=\"1\">Task 1</option>\n        <option value=\"2\">Task 2</option>\n      </select>\n      <select\n        data-testid=\"project-select\"\n        value={projectId}\n        onChange={(e) => setProjectId(e.target.value)}\n      >\n        <option value=\"\">Select Project</option>\n        <option value=\"1\">Project 1</option>\n        <option value=\"2\">Project 2</option>\n      </select>\n      <button onClick={handleAssign}>Assign</button>\n      {message && <div>{message}</div>}\n      {error && <div>{error}</div>}\n    </div>\n  );\n};\n\nexport default App;\n",
+        "sha256": "b08e5d52d5e5343cd61c8c652660d52045471688afd3c878ba76a5977a7eca20",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "source_path": "artifacts/benchmark-probe/runs/qwen__qwen3-coder/single/taskmanagement/assignTaskToProject/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst AssignTaskToProject = () => {\n  const [taskId, setTaskId] = useState('');\n  const [projectId, setProjectId] = useState('');\n  const [message, setMessage] = useState('');\n\n  const handleSubmit = async (e) => {\n    e.preventDefault();\n    try {\n      const response = await fetch('/api/assignTask', {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ taskId, projectId }),\n      });\n\n      if (response.ok) {\n        setMessage('Task assigned successfully!');\n      } else {\n        setMessage('Failed to assign task.');\n      }\n    } catch (error) {\n      setMessage('Failed to assign task.');\n    }\n  };\n\n  return (\n    <div>\n      <h2>Assign Task to Project</h2>\n      <form onSubmit={handleSubmit}>\n        <div>\n          <label htmlFor=\"task-select\">Select Task:</label>\n          <select \n            id=\"task-select\" \n            data-testid=\"task-select\"\n            value={taskId} \n            onChange={(e) => setTaskId(e.target.value)}\n          >\n            <option value=\"\">-- Select a Task --</option>\n            <option value=\"1\">Task 1</option>\n            <option value=\"2\">Task 2</option>\n          </select>\n        </div>\n        <div>\n          <label htmlFor=\"project-select\">Select Project:</label>\n          <select \n            id=\"project-select\" \n            data-testid=\"project-select\"\n            value={projectId} \n            onChange={(e) => setProjectId(e.target.value)}\n          >\n            <option value=\"\">-- Select a Project --</option>\n            <option value=\"1\">Project 1</option>\n            <option value=\"2\">Project 2</option>\n          </select>\n        </div>\n        <button type=\"submit\">Assign</button>\n      </form>\n      {message && <p>{message}</p>}\n    </div>\n  );\n};\n\nexport default AssignTaskToProject;",
+        "sha256": "e159d2548c9c9af022b2ee68d346890043feb81b9cde5b30511077447ec568b0",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ]
+  },
+  "assignTaskToUser": {
+    "category": "taskmanagement",
+    "module": "assignTaskToUser",
+    "variants": [
+      {
+        "variant": "v1",
+        "origin": "deepseek/deepseek-v4-pro-0813",
+        "source_path": "artifacts/benchmark-probe/runs/deepseek__deepseek-v4-pro-0813/single/taskmanagement/assignTaskToUser/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst TaskApp = () => {\n  const [task, setTask] = useState('');\n  const [user, setUser] = useState('');\n  const [message, setMessage] = useState('');\n\n  const handleAssign = async () => {\n    try {\n      const response = await fetch('/assign-task', {\n        method: 'POST',\n        headers: { 'Content-Type': 'application/json' },\n        body: JSON.stringify({ task, user }),\n      });\n      const data = await response.json();\n      if (response.ok && data.success) {\n        setMessage('Task assigned successfully');\n      } else {\n        setMessage('Error assigning task');\n      }\n    } catch (error) {\n      setMessage('Error assigning task');\n    }\n  };\n\n  return (\n    <div>\n      <input\n        data-testid=\"task-input\"\n        type=\"text\"\n        value={task}\n        onChange={(e) => setTask(e.target.value)}\n      />\n      <select\n        data-testid=\"user-select\"\n        value={user}\n        onChange={(e) => setUser(e.target.value)}\n      >\n        <option value=\"\">Select user</option>\n        <option value=\"User1\">User1</option>\n      </select>\n      <button data-testid=\"assign-task-button\" onClick={handleAssign}>\n        Assign Task\n      </button>\n      {message && <p>{message}</p>}\n    </div>\n  );\n};\n\nexport default TaskApp;\n",
+        "sha256": "0ca01a5cbe65392aeada858ff7ce15d643f9672c42ec6cc89ca1bcc2e87c339f",
+        "verified": true,
+        "single_tests": "2/2"
+      },
+      {
+        "variant": "v2",
+        "origin": "qwen/qwen3-coder",
+        "source_path": "artifacts/benchmark-probe/runs/qwen__qwen3-coder/single/taskmanagement/assignTaskToUser/implementation.js",
+        "code": "import React, { useState } from 'react';\n\nconst TaskApp = () => {\n  const [task, setTask] = useState('');\n  const [user, setUser] = useState('');\n  const [message, setMessage] = useState('');\n\n  const handleAssignTask = async () => {\n    try {\n      const response = await fetch('/assign-task', {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({ task, user }),\n      });\n\n      if (response.ok) {\n        setMessage('Task assigned successfully');\n      } else {\n        setMessage('Error assigning task');\n      }\n    } catch (error) {\n      setMessage('Error assigning task');\n    }\n  };\n\n  return (\n    <div>\n      <input \n        data-testid=\"task-input\" \n        value={task} \n        onChange={(e) => setTask(e.target.value)} \n        placeholder=\"Enter task\" \n      />\n      <select \n        data-testid=\"user-select\" \n        value={user} \n        onChange={(e) => setUser(e.target.value)}\n      >\n        <option value=\"\">Select User</option>\n        <option value=\"User1\">User 1</option>\n        <option value=\"User2\">User 2</option>\n      </select>\n      <button data-testid=\"assign-task-button\" onClick={handleAssignTask}>\n        Assign Task\n      </button>\n      {message && <p>{message}</p>}\n    </div>\n  );\n};\n\nexport default TaskApp;",
+        "sha256": "ee3272a4f33d87be985a699f9d40eadca19f1421cbec3e75323bf23c866c30ac",
+        "verified": true,
+        "single_tests": "2/2"
+      }
+    ]
+  }
+}
