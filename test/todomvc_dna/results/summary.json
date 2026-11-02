@@ -1,0 +1,6030 @@
+{
+  "date_utc": "2026-11-02T04:07:29Z",
+  "max_repairs": 2,
+  "samples": 2,
+  "arms": [
+    "free",
+    "rule",
+    "dna"
+  ],
+  "tasks": [
+    {
+      "id": "todo-01",
+      "features": [
+        "counter"
+      ],
+      "hidden_tests": 4
+    },
+    {
+      "id": "todo-02",
+      "features": [
+        "toggle"
+      ],
+      "hidden_tests": 5
+    },
+    {
+      "id": "todo-03",
+      "features": [
+        "edit"
+      ],
+      "hidden_tests": 8
+    },
+    {
+      "id": "todo-04",
+      "features": [
+        "toggle",
+        "toggleAll"
+      ],
+      "hidden_tests": 8
+    },
+    {
+      "id": "todo-05",
+      "features": [
+        "toggle",
+        "clearCompleted"
+      ],
+      "hidden_tests": 8
+    },
+    {
+      "id": "todo-06",
+      "features": [
+        "toggle",
+        "routing"
+      ],
+      "hidden_tests": 10
+    },
+    {
+      "id": "todo-07",
+      "features": [
+        "toggle",
+        "edit",
+        "counter",
+        "clearCompleted"
+      ],
+      "hidden_tests": 16
+    },
+    {
+      "id": "todo-08",
+      "features": [
+        "toggle",
+        "toggleAll",
+        "edit",
+        "counter",
+        "clearCompleted",
+        "routing"
+      ],
+      "hidden_tests": 24
+    }
+  ],
+  "accounting": {
+    "actual_usd": 0.109084,
+    "exposure_usd": 0.118009,
+    "library_usd": 0.0,
+    "unsettled_calls": 4,
+    "policy": {
+      "id": 1,
+      "cap": 1000000,
+      "stop": 800000,
+      "halted": 0
+    }
+  },
+  "models": [
+    {
+      "model": "deepseek/deepseek-v4-pro-0813",
+      "arms": {
+        "free": {
+          "n": 16,
+          "first_all": 16,
+          "final_all": 16,
+          "first_tests": 166,
+          "final_tests": 166,
+          "tests": 166,
+          "calls": 16,
+          "compile_errors": 0,
+          "cost_usd": 0.054664
+        },
+        "rule": {
+          "n": 16,
+          "first_all": 2,
+          "final_all": 2,
+          "first_tests": 120,
+          "final_tests": 120,
+          "tests": 166,
+          "calls": 0,
+          "compile_errors": 0,
+          "cost_usd": 0.0
+        },
+        "dna": {
+          "n": 16,
+          "first_all": 16,
+          "final_all": 16,
+          "first_tests": 166,
+          "final_tests": 166,
+          "tests": 166,
+          "calls": 16,
+          "compile_errors": 0,
+          "cost_usd": 0.013398
+        }
+      },
+      "rows": [
+        {
+          "task": "todo-01",
+          "features": [
+            "counter"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "dna": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPluralized",
+                "hasTodos": "hasTodos",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-01",
+          "features": [
+            "counter"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "dna": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPluralized",
+                "hasTodos": "hasTodos",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-02",
+          "features": [
+            "toggle"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 5,
+            "final_passed": 5,
+            "total": 5,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 5,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 5,
+            "final_passed": 5,
+            "total": 5,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "hasTodos": "hasTodos",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-02",
+          "features": [
+            "toggle"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 5,
+            "final_passed": 5,
+            "total": 5,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 5,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 5,
+            "final_passed": 5,
+            "total": 5,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-03",
+          "features": [
+            "edit"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "edit": "editStart",
+                "save": "saveTrimDelete",
+                "cancel": "cancelEdit"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "hasTodos": "hasTodos",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-03",
+          "features": [
+            "edit"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "edit": "editStart",
+                "save": "saveTrimDelete",
+                "cancel": "cancelEdit"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "hasTodos": "hasTodos",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-04",
+          "features": [
+            "toggle",
+            "toggleAll"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllComplete"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "allCompleted": "allCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllMatch"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "allCompleted": "allCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-04",
+          "features": [
+            "toggle",
+            "toggleAll"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllComplete"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "allCompleted": "allCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllMatch"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "allCompleted": "allCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-05",
+          "features": [
+            "toggle",
+            "clearCompleted"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "clearCompleted": "clearAll"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "clearCompleted": "clearCompleted"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "hasCompleted": "hasCompleted",
+                "hasTodos": "hasTodos",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-05",
+          "features": [
+            "toggle",
+            "clearCompleted"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "clearCompleted": "clearAll"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "clearCompleted": "clearCompleted"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-06",
+          "features": [
+            "toggle",
+            "routing"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 10,
+            "final_passed": 10,
+            "total": 10,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 10,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Persistence › should persist its data",
+              "Routing › should allow me to display active items",
+              "Routing › should allow me to display completed items",
+              "Routing › should respect the back button"
+            ]
+          },
+          "dna": {
+            "first_passed": 10,
+            "final_passed": 10,
+            "total": 10,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-06",
+          "features": [
+            "toggle",
+            "routing"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 10,
+            "final_passed": 10,
+            "total": 10,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 10,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Persistence › should persist its data",
+              "Routing › should allow me to display active items",
+              "Routing › should allow me to display completed items",
+              "Routing › should respect the back button"
+            ]
+          },
+          "dna": {
+            "first_passed": 10,
+            "final_passed": 10,
+            "total": 10,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-07",
+          "features": [
+            "toggle",
+            "edit",
+            "counter",
+            "clearCompleted"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 16,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 12,
+            "final_passed": 12,
+            "total": 16,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearAll"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 16,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "edit": "editStart",
+                "save": "saveTrimDelete",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearCompleted"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "countText": "countPluralized",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-07",
+          "features": [
+            "toggle",
+            "edit",
+            "counter",
+            "clearCompleted"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 16,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 12,
+            "final_passed": 12,
+            "total": 16,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearAll"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 16,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "edit": "editStart",
+                "save": "saveTrimDelete",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearCompleted"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPluralized",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-08",
+          "features": [
+            "toggle",
+            "toggleAll",
+            "edit",
+            "counter",
+            "clearCompleted",
+            "routing"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 24,
+            "final_passed": 24,
+            "total": 24,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 24,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllComplete",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearAll",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain",
+                "allCompleted": "allCompleted",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text",
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Persistence › should persist its data",
+              "Routing › should allow me to display active items",
+              "Routing › should allow me to display completed items",
+              "Routing › should respect the back button"
+            ]
+          },
+          "dna": {
+            "first_passed": 24,
+            "final_passed": 24,
+            "total": 24,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllMatch",
+                "edit": "editStart",
+                "save": "saveTrimDelete",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearCompleted",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "countText": "countPluralized",
+                "allCompleted": "allCompleted",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-08",
+          "features": [
+            "toggle",
+            "toggleAll",
+            "edit",
+            "counter",
+            "clearCompleted",
+            "routing"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 24,
+            "final_passed": 24,
+            "total": 24,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 24,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllComplete",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearAll",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain",
+                "allCompleted": "allCompleted",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text",
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Persistence › should persist its data",
+              "Routing › should allow me to display active items",
+              "Routing › should allow me to display completed items",
+              "Routing › should respect the back button"
+            ]
+          },
+          "dna": {
+            "first_passed": 24,
+            "final_passed": 24,
+            "total": 24,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllMatch",
+                "edit": "editStart",
+                "save": "saveTrimDelete",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearCompleted",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "countText": "countPluralized",
+                "allCompleted": "allCompleted",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        }
+      ],
+      "paired": {
+        "dna_only": 0,
+        "free_only": 0,
+        "both": 16,
+        "neither": 0,
+        "test_delta": 0
+      }
+    },
+    {
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "arms": {
+        "free": {
+          "n": 16,
+          "first_all": 13,
+          "final_all": 15,
+          "first_tests": 150,
+          "final_tests": 163,
+          "tests": 166,
+          "calls": 18,
+          "compile_errors": 0,
+          "cost_usd": 0.00522
+        },
+        "rule": {
+          "n": 16,
+          "first_all": 2,
+          "final_all": 2,
+          "first_tests": 120,
+          "final_tests": 120,
+          "tests": 166,
+          "calls": 0,
+          "compile_errors": 0,
+          "cost_usd": 0.0
+        },
+        "dna": {
+          "n": 16,
+          "first_all": 16,
+          "final_all": 16,
+          "first_tests": 166,
+          "final_tests": 166,
+          "tests": 166,
+          "calls": 16,
+          "compile_errors": 0,
+          "cost_usd": 0.006413
+        }
+      },
+      "rows": [
+        {
+          "task": "todo-01",
+          "features": [
+            "counter"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "dna": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "countText": "countPluralized",
+                "hasTodos": "visibleByFilter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-01",
+          "features": [
+            "counter"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "dna": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "countText": "countPluralized",
+                "hasTodos": "visibleByFilter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-02",
+          "features": [
+            "toggle"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 5,
+            "total": 5,
+            "first_all": false,
+            "final_all": true,
+            "calls": 2,
+            "compile_errors": 0,
+            "public_failures": 1,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 5,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 5,
+            "final_passed": 5,
+            "total": 5,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "hasTodos": "hasTodos",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-02",
+          "features": [
+            "toggle"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 5,
+            "final_passed": 5,
+            "total": 5,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 5,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 5,
+            "final_passed": 5,
+            "total": 5,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "hasTodos": "hasTodos",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-03",
+          "features": [
+            "edit"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "edit": "editStart",
+                "save": "saveTrimDelete",
+                "cancel": "cancelEdit"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "hasTodos": "hasTodos",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-03",
+          "features": [
+            "edit"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "edit": "editStart",
+                "save": "saveTrimDelete",
+                "cancel": "cancelEdit"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "hasTodos": "hasTodos",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-04",
+          "features": [
+            "toggle",
+            "toggleAll"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 5,
+            "final_passed": 5,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": [
+              "Mark all as completed › complete all checkbox should update state when items are completed / cleared",
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Mark all as completed › should allow me to mark all items as completed"
+            ]
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllComplete"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "allCompleted": "allCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllMatch"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "allCompleted": "allCompleted",
+                "hasTodos": "visibleByFilter",
+                "editing": "visibleByFilter",
+                "filter": "visibleByFilter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-04",
+          "features": [
+            "toggle",
+            "toggleAll"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllComplete"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "allCompleted": "allCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllMatch"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "allCompleted": "allCompleted",
+                "hasTodos": "hasCompleted",
+                "editing": "hasCompleted",
+                "filter": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-05",
+          "features": [
+            "toggle",
+            "clearCompleted"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": false,
+            "final_all": true,
+            "calls": 2,
+            "compile_errors": 0,
+            "public_failures": 1,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "clearCompleted": "clearAll"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "clearCompleted": "clearCompleted"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "hasCompleted": "hasCompleted",
+                "hasTodos": "hasTodos",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-05",
+          "features": [
+            "toggle",
+            "clearCompleted"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "clearCompleted": "clearAll"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "clearCompleted": "clearCompleted"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "hasCompleted": "hasCompleted",
+                "hasTodos": "hasTodos",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-06",
+          "features": [
+            "toggle",
+            "routing"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 10,
+            "final_passed": 10,
+            "total": 10,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 10,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Persistence › should persist its data",
+              "Routing › should allow me to display active items",
+              "Routing › should allow me to display completed items",
+              "Routing › should respect the back button"
+            ]
+          },
+          "dna": {
+            "first_passed": 10,
+            "final_passed": 10,
+            "total": 10,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "countText": "countPluralized",
+                "allCompleted": "allCompleted",
+                "hasCompleted": "hasCompleted",
+                "hasTodos": "hasTodos"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-06",
+          "features": [
+            "toggle",
+            "routing"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 10,
+            "final_passed": 10,
+            "total": 10,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 10,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Persistence › should persist its data",
+              "Routing › should allow me to display active items",
+              "Routing › should allow me to display completed items",
+              "Routing › should respect the back button"
+            ]
+          },
+          "dna": {
+            "first_passed": 10,
+            "final_passed": 10,
+            "total": 10,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "countText": "countPluralized",
+                "allCompleted": "allCompleted",
+                "hasCompleted": "hasCompleted",
+                "hasTodos": "visibleByFilter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-07",
+          "features": [
+            "toggle",
+            "edit",
+            "counter",
+            "clearCompleted"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 16,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 12,
+            "final_passed": 12,
+            "total": 16,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearAll"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 16,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "edit": "editStart",
+                "save": "saveTrimDelete",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearCompleted"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "countText": "countPluralized",
+                "hasCompleted": "hasCompleted",
+                "hasTodos": "hasTodos",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-07",
+          "features": [
+            "toggle",
+            "edit",
+            "counter",
+            "clearCompleted"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 16,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 12,
+            "final_passed": 12,
+            "total": 16,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearAll"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 16,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "edit": "editStart",
+                "save": "saveTrimDelete",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearCompleted"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "countText": "countPluralized",
+                "hasCompleted": "hasCompleted",
+                "hasTodos": "hasTodos",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-08",
+          "features": [
+            "toggle",
+            "toggleAll",
+            "edit",
+            "counter",
+            "clearCompleted",
+            "routing"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 24,
+            "final_passed": 24,
+            "total": 24,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 24,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllComplete",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearAll",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain",
+                "allCompleted": "allCompleted",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text",
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Persistence › should persist its data",
+              "Routing › should allow me to display active items",
+              "Routing › should allow me to display completed items",
+              "Routing › should respect the back button"
+            ]
+          },
+          "dna": {
+            "first_passed": 24,
+            "final_passed": 24,
+            "total": 24,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllMatch",
+                "edit": "editStart",
+                "save": "saveTrimDelete",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearCompleted",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "countText": "countPluralized",
+                "allCompleted": "allCompleted",
+                "hasCompleted": "hasCompleted",
+                "hasTodos": "visibleByFilter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-08",
+          "features": [
+            "toggle",
+            "toggleAll",
+            "edit",
+            "counter",
+            "clearCompleted",
+            "routing"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 24,
+            "final_passed": 24,
+            "total": 24,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 24,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllComplete",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearAll",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain",
+                "allCompleted": "allCompleted",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text",
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Persistence › should persist its data",
+              "Routing › should allow me to display active items",
+              "Routing › should allow me to display completed items",
+              "Routing › should respect the back button"
+            ]
+          },
+          "dna": {
+            "first_passed": 24,
+            "final_passed": 24,
+            "total": 24,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllMatch",
+                "edit": "editStart",
+                "save": "saveTrimDelete",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearCompleted",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "countText": "countPluralized",
+                "allCompleted": "allCompleted",
+                "hasCompleted": "hasCompleted",
+                "hasTodos": "visibleByFilter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        }
+      ],
+      "paired": {
+        "dna_only": 1,
+        "free_only": 0,
+        "both": 15,
+        "neither": 0,
+        "test_delta": 3
+      }
+    },
+    {
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "arms": {
+        "free": {
+          "n": 16,
+          "first_all": 9,
+          "final_all": 12,
+          "first_tests": 97,
+          "final_tests": 149,
+          "tests": 166,
+          "calls": 23,
+          "compile_errors": 0,
+          "cost_usd": 0.005211
+        },
+        "rule": {
+          "n": 16,
+          "first_all": 2,
+          "final_all": 2,
+          "first_tests": 120,
+          "final_tests": 120,
+          "tests": 166,
+          "calls": 0,
+          "compile_errors": 0,
+          "cost_usd": 0.0
+        },
+        "dna": {
+          "n": 16,
+          "first_all": 16,
+          "final_all": 16,
+          "first_tests": 166,
+          "final_tests": 166,
+          "tests": 166,
+          "calls": 16,
+          "compile_errors": 0,
+          "cost_usd": 0.003309
+        }
+      },
+      "rows": [
+        {
+          "task": "todo-01",
+          "features": [
+            "counter"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "dna": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "countText": "countPluralized",
+                "allCompleted": "allCompleted",
+                "hasCompleted": "hasCompleted",
+                "hasTodos": "hasTodos",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-01",
+          "features": [
+            "counter"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "dna": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "countText": "countPluralized",
+                "hasTodos": "visibleByFilter",
+                "editing": "visibleByFilter",
+                "filter": "visibleByFilter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-02",
+          "features": [
+            "toggle"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 0,
+            "total": 5,
+            "first_all": false,
+            "final_all": false,
+            "calls": 3,
+            "compile_errors": 0,
+            "public_failures": 3,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": [
+              "Item › should allow me to mark items as complete",
+              "Item › should allow me to un-mark items as complete",
+              "New Todo › should allow me to add todo items",
+              "New Todo › should clear text input field when an item is added",
+              "Persistence › should persist its data"
+            ]
+          },
+          "rule": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 5,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 5,
+            "final_passed": 5,
+            "total": 5,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "hasTodos": "hasCompleted",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-02",
+          "features": [
+            "toggle"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 5,
+            "final_passed": 5,
+            "total": 5,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 5,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 5,
+            "final_passed": 5,
+            "total": 5,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "countText": "countPluralized",
+                "allCompleted": "allCompleted",
+                "hasCompleted": "hasCompleted",
+                "hasTodos": "visibleAll",
+                "editing": "visibleAll",
+                "filter": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-03",
+          "features": [
+            "edit"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": false,
+            "final_all": true,
+            "calls": 2,
+            "compile_errors": 0,
+            "public_failures": 1,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "edit": "editStart",
+                "save": "saveTrimDelete",
+                "cancel": "cancelEdit"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "hasTodos": "hasCompleted",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-03",
+          "features": [
+            "edit"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "edit": "editStart",
+                "save": "saveTrimDelete",
+                "cancel": "cancelEdit"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "hasTodos": "visibleByFilter",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-04",
+          "features": [
+            "toggle",
+            "toggleAll"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 5,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 2,
+            "compile_errors": 0,
+            "public_failures": 1,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": [
+              "Mark all as completed › complete all checkbox should update state when items are completed / cleared",
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Mark all as completed › should allow me to mark all items as completed"
+            ]
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllComplete"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "allCompleted": "allCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllMatch"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "allCompleted": "allCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-04",
+          "features": [
+            "toggle",
+            "toggleAll"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllComplete"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "allCompleted": "allCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllMatch"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "allCompleted": "allCompleted",
+                "hasTodos": "visibleByFilter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-05",
+          "features": [
+            "toggle",
+            "clearCompleted"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": false,
+            "final_all": true,
+            "calls": 2,
+            "compile_errors": 0,
+            "public_failures": 1,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "clearCompleted": "clearAll"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "clearCompleted": "clearCompleted"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "hasCompleted": "hasCompleted",
+                "hasTodos": "visibleAll",
+                "editing": "initFromStorage",
+                "filter": "initFromStorage"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-05",
+          "features": [
+            "toggle",
+            "clearCompleted"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "clearCompleted": "clearAll"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "clearCompleted": "clearCompleted"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "hasCompleted": "hasCompleted",
+                "hasTodos": "visibleAll",
+                "editing": "visibleByFilter",
+                "filter": "visibleByFilter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-06",
+          "features": [
+            "toggle",
+            "routing"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 10,
+            "total": 10,
+            "first_all": false,
+            "final_all": true,
+            "calls": 2,
+            "compile_errors": 0,
+            "public_failures": 1,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 10,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Persistence › should persist its data",
+              "Routing › should allow me to display active items",
+              "Routing › should allow me to display completed items",
+              "Routing › should respect the back button"
+            ]
+          },
+          "dna": {
+            "first_passed": 10,
+            "final_passed": 10,
+            "total": 10,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "hasTodos": "hasCompleted",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-06",
+          "features": [
+            "toggle",
+            "routing"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 10,
+            "final_passed": 10,
+            "total": 10,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 10,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Persistence › should persist its data",
+              "Routing › should allow me to display active items",
+              "Routing › should allow me to display completed items",
+              "Routing › should respect the back button"
+            ]
+          },
+          "dna": {
+            "first_passed": 10,
+            "final_passed": 10,
+            "total": 10,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "hasTodos": "visibleByFilter",
+                "editing": "visibleByFilter",
+                "filter": "visibleByFilter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-07",
+          "features": [
+            "toggle",
+            "edit",
+            "counter",
+            "clearCompleted"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 16,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 12,
+            "final_passed": 12,
+            "total": 16,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearAll"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 16,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "edit": "editStart",
+                "save": "saveTrimDelete",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearCompleted"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "countText": "countPluralized",
+                "hasCompleted": "hasCompleted",
+                "hasTodos": "visibleAll",
+                "editing": "visibleAll",
+                "filter": "routeFilter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-07",
+          "features": [
+            "toggle",
+            "edit",
+            "counter",
+            "clearCompleted"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 16,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 12,
+            "final_passed": 12,
+            "total": 16,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearAll"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 16,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "edit": "editStart",
+                "save": "saveTrimDelete",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearCompleted"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "countText": "countPluralized",
+                "hasCompleted": "hasCompleted",
+                "hasTodos": "visibleAll",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-08",
+          "features": [
+            "toggle",
+            "toggleAll",
+            "edit",
+            "counter",
+            "clearCompleted",
+            "routing"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 21,
+            "total": 24,
+            "first_all": false,
+            "final_all": false,
+            "calls": 2,
+            "compile_errors": 0,
+            "public_failures": 1,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": [
+              "Mark all as completed › complete all checkbox should update state when items are completed / cleared",
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Mark all as completed › should allow me to mark all items as completed"
+            ]
+          },
+          "rule": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 24,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllComplete",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearAll",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain",
+                "allCompleted": "allCompleted",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text",
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Persistence › should persist its data",
+              "Routing › should allow me to display active items",
+              "Routing › should allow me to display completed items",
+              "Routing › should respect the back button"
+            ]
+          },
+          "dna": {
+            "first_passed": 24,
+            "final_passed": 24,
+            "total": 24,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllMatch",
+                "edit": "editStart",
+                "save": "saveTrimDelete",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearCompleted",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "countText": "countPluralized",
+                "allCompleted": "allCompleted",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-08",
+          "features": [
+            "toggle",
+            "toggleAll",
+            "edit",
+            "counter",
+            "clearCompleted",
+            "routing"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 18,
+            "final_passed": 18,
+            "total": 24,
+            "first_all": false,
+            "final_all": false,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": [
+              "Editing › should cancel edits on escape",
+              "Editing › should hide other controls when editing",
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should save edits on blur",
+              "Editing › should trim entered text",
+              "Item › should allow me to edit an item"
+            ]
+          },
+          "rule": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 24,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllComplete",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearAll",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain",
+                "allCompleted": "allCompleted",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text",
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Persistence › should persist its data",
+              "Routing › should allow me to display active items",
+              "Routing › should allow me to display completed items",
+              "Routing › should respect the back button"
+            ]
+          },
+          "dna": {
+            "first_passed": 24,
+            "final_passed": 24,
+            "total": 24,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllMatch",
+                "edit": "editStart",
+                "save": "saveTrimDelete",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearCompleted",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "countText": "countPluralized",
+                "allCompleted": "allCompleted",
+                "hasCompleted": "hasCompleted",
+                "hasTodos": "hasTodos",
+                "editing": "editing",
+                "filter": "filter"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        }
+      ],
+      "paired": {
+        "dna_only": 4,
+        "free_only": 0,
+        "both": 12,
+        "neither": 0,
+        "test_delta": 17
+      }
+    },
+    {
+      "model": "google/gemma-3-12b-it",
+      "arms": {
+        "free": {
+          "n": 16,
+          "first_all": 0,
+          "final_all": 9,
+          "first_tests": 0,
+          "final_tests": 128,
+          "tests": 166,
+          "calls": 35,
+          "compile_errors": 0,
+          "cost_usd": 0.010319
+        },
+        "rule": {
+          "n": 16,
+          "first_all": 2,
+          "final_all": 2,
+          "first_tests": 120,
+          "final_tests": 120,
+          "tests": 166,
+          "calls": 0,
+          "compile_errors": 0,
+          "cost_usd": 0.0
+        },
+        "dna": {
+          "n": 16,
+          "first_all": 16,
+          "final_all": 16,
+          "first_tests": 166,
+          "final_tests": 166,
+          "tests": 166,
+          "calls": 16,
+          "compile_errors": 0,
+          "cost_usd": 0.01055
+        }
+      },
+      "rows": [
+        {
+          "task": "todo-01",
+          "features": [
+            "counter"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": false,
+            "final_all": true,
+            "calls": 3,
+            "compile_errors": 0,
+            "public_failures": 2,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "dna": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": {
+                "name": "initFromStorage"
+              },
+              "handlers": {
+                "add": {
+                  "name": "addTrimmed"
+                }
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": {
+                  "name": "visibleByFilter"
+                },
+                "countText": {
+                  "name": "countPluralized"
+                },
+                "hasTodos": {
+                  "name": "visibleAll"
+                },
+                "editing": {
+                  "name": "visibleAll"
+                },
+                "filter": {
+                  "name": "visibleAll"
+                },
+                "allCompleted": {
+                  "name": "allCompleted"
+                },
+                "hasCompleted": {
+                  "name": "hasCompleted"
+                }
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-01",
+          "features": [
+            "counter"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": false,
+            "final_all": true,
+            "calls": 2,
+            "compile_errors": 0,
+            "public_failures": 1,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "dna": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 4,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": {
+                "name": "initFromStorage"
+              },
+              "handlers": {
+                "add": {
+                  "name": "addTrimmed"
+                }
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": {
+                  "name": "visibleByFilter"
+                },
+                "countText": {
+                  "name": "countPluralized"
+                },
+                "hasTodos": {
+                  "name": "visibleAll"
+                },
+                "editing": {
+                  "name": "visibleAll"
+                },
+                "filter": {
+                  "name": "visibleAll"
+                },
+                "allCompleted": {
+                  "name": "allCompleted"
+                },
+                "hasCompleted": {
+                  "name": "hasCompleted"
+                }
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-02",
+          "features": [
+            "toggle"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 5,
+            "total": 5,
+            "first_all": false,
+            "final_all": true,
+            "calls": 2,
+            "compile_errors": 0,
+            "public_failures": 1,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 5,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 5,
+            "final_passed": 5,
+            "total": 5,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": {
+                "name": "initFromStorage"
+              },
+              "handlers": {
+                "add": {
+                  "name": "addTrimmed"
+                },
+                "toggle": {
+                  "name": "toggle"
+                },
+                "route": {
+                  "name": "routeFilter"
+                }
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": {
+                  "name": "visibleByFilter"
+                },
+                "hasTodos": {
+                  "name": "visibleByFilter"
+                },
+                "editing": {
+                  "name": "visibleByFilter"
+                },
+                "filter": {
+                  "name": "visibleByFilter"
+                }
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-02",
+          "features": [
+            "toggle"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 5,
+            "total": 5,
+            "first_all": false,
+            "final_all": true,
+            "calls": 2,
+            "compile_errors": 0,
+            "public_failures": 1,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 4,
+            "final_passed": 4,
+            "total": 5,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 5,
+            "final_passed": 5,
+            "total": 5,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": {
+                "name": "initFromStorage"
+              },
+              "handlers": {
+                "add": {
+                  "name": "addTrimmed"
+                },
+                "toggle": {
+                  "name": "toggle"
+                }
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": {
+                  "name": "visibleByFilter"
+                },
+                "hasTodos": {
+                  "name": "visibleByFilter"
+                },
+                "editing": {
+                  "name": "visibleByFilter"
+                },
+                "filter": {
+                  "name": "visibleByFilter"
+                }
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-03",
+          "features": [
+            "edit"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": false,
+            "final_all": true,
+            "calls": 2,
+            "compile_errors": 0,
+            "public_failures": 1,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": {
+                "name": "initFromStorage"
+              },
+              "handlers": {
+                "add": {
+                  "name": "addTrimmed"
+                },
+                "edit": {
+                  "name": "editStart"
+                },
+                "save": {
+                  "name": "saveTrimDelete"
+                },
+                "cancel": {
+                  "name": "cancelEdit"
+                }
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": {
+                  "name": "visibleByFilter"
+                },
+                "hasTodos": {
+                  "name": "visibleAll"
+                },
+                "editing": {
+                  "name": "visibleAll"
+                },
+                "filter": {
+                  "name": "visibleAll"
+                }
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-03",
+          "features": [
+            "edit"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 2,
+            "compile_errors": 0,
+            "public_failures": 1,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": [
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text"
+            ]
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": {
+                "name": "initFromStorage"
+              },
+              "handlers": {
+                "add": {
+                  "name": "addTrimmed"
+                },
+                "edit": {
+                  "name": "editStart"
+                },
+                "save": {
+                  "name": "saveTrimDelete"
+                },
+                "cancel": {
+                  "name": "cancelEdit"
+                }
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": {
+                  "name": "visibleByFilter"
+                },
+                "hasTodos": {
+                  "name": "visibleAll"
+                },
+                "editing": {
+                  "name": "visibleAll"
+                },
+                "filter": {
+                  "name": "visibleAll"
+                }
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-04",
+          "features": [
+            "toggle",
+            "toggleAll"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 2,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 2,
+            "compile_errors": 0,
+            "public_failures": 1,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": [
+              "Item › should allow me to mark items as complete",
+              "Item › should allow me to un-mark items as complete",
+              "Mark all as completed › complete all checkbox should update state when items are completed / cleared",
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Mark all as completed › should allow me to mark all items as completed",
+              "Persistence › should persist its data"
+            ]
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllComplete"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "allCompleted": "allCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": {
+                "name": "initFromStorage"
+              },
+              "handlers": {
+                "add": {
+                  "name": "addTrimmed"
+                },
+                "toggle": {
+                  "name": "toggle"
+                },
+                "toggleAll": {
+                  "name": "toggleAllMatch"
+                }
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": {
+                  "name": "visibleByFilter"
+                },
+                "allCompleted": {
+                  "name": "allCompleted"
+                },
+                "hasTodos": {
+                  "name": "visibleAll"
+                },
+                "editing": {
+                  "name": "visibleAll"
+                },
+                "filter": {
+                  "name": "visibleAll"
+                }
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-04",
+          "features": [
+            "toggle",
+            "toggleAll"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 5,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 2,
+            "compile_errors": 0,
+            "public_failures": 1,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": [
+              "Mark all as completed › complete all checkbox should update state when items are completed / cleared",
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Mark all as completed › should allow me to mark all items as completed"
+            ]
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllComplete"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "allCompleted": "allCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": {
+                "name": "initFromStorage"
+              },
+              "handlers": {
+                "add": {
+                  "name": "addTrimmed"
+                },
+                "toggle": {
+                  "name": "toggle"
+                },
+                "toggleAll": {
+                  "name": "toggleAllMatch"
+                }
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": {
+                  "name": "visibleByFilter"
+                },
+                "allCompleted": {
+                  "name": "allCompleted"
+                },
+                "hasTodos": {
+                  "name": "visibleAll"
+                },
+                "editing": {
+                  "name": "visibleAll"
+                },
+                "filter": {
+                  "name": "visibleAll"
+                }
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-05",
+          "features": [
+            "toggle",
+            "clearCompleted"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": false,
+            "final_all": true,
+            "calls": 2,
+            "compile_errors": 0,
+            "public_failures": 1,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "clearCompleted": "clearAll"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initFromStorage",
+              "handlers": {
+                "add": "addTrimmed",
+                "toggle": "toggle",
+                "clearCompleted": "clearCompleted"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleByFilter",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-05",
+          "features": [
+            "toggle",
+            "clearCompleted"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 2,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 2,
+            "compile_errors": 0,
+            "public_failures": 1,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should be hidden when there are no items that are completed",
+              "Clear completed button › should display the correct text",
+              "Clear completed button › should remove completed items when clicked",
+              "Item › should allow me to mark items as complete",
+              "Item › should allow me to un-mark items as complete",
+              "Persistence › should persist its data"
+            ]
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 8,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "clearCompleted": "clearAll"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 8,
+            "final_passed": 8,
+            "total": 8,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": {
+                "name": "initFromStorage"
+              },
+              "handlers": {
+                "add": {
+                  "name": "addTrimmed"
+                },
+                "toggle": {
+                  "name": "toggle"
+                },
+                "clearCompleted": {
+                  "name": "clearCompleted"
+                }
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": {
+                  "name": "visibleByFilter"
+                },
+                "hasCompleted": {
+                  "name": "hasCompleted"
+                }
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-06",
+          "features": [
+            "toggle",
+            "routing"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 8,
+            "total": 10,
+            "first_all": false,
+            "final_all": false,
+            "calls": 3,
+            "compile_errors": 0,
+            "public_failures": 2,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": [
+              "Persistence › should persist its data",
+              "Routing › should highlight the currently applied filter"
+            ]
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 10,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Persistence › should persist its data",
+              "Routing › should allow me to display active items",
+              "Routing › should allow me to display completed items",
+              "Routing › should respect the back button"
+            ]
+          },
+          "dna": {
+            "first_passed": 10,
+            "final_passed": 10,
+            "total": 10,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": {
+                "name": "initFromStorage"
+              },
+              "handlers": {
+                "add": {
+                  "name": "addTrimmed"
+                },
+                "toggle": {
+                  "name": "toggle"
+                },
+                "route": {
+                  "name": "routeFilter"
+                }
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": {
+                  "name": "visibleByFilter"
+                },
+                "hasTodos": {
+                  "name": "visibleAll"
+                },
+                "editing": {
+                  "name": "visibleAll"
+                },
+                "filter": {
+                  "name": "visibleAll"
+                }
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-06",
+          "features": [
+            "toggle",
+            "routing"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 10,
+            "total": 10,
+            "first_all": false,
+            "final_all": true,
+            "calls": 2,
+            "compile_errors": 0,
+            "public_failures": 1,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 6,
+            "final_passed": 6,
+            "total": 10,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos"
+              ],
+              "view": {
+                "visible": "visibleAll"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Persistence › should persist its data",
+              "Routing › should allow me to display active items",
+              "Routing › should allow me to display completed items",
+              "Routing › should respect the back button"
+            ]
+          },
+          "dna": {
+            "first_passed": 10,
+            "final_passed": 10,
+            "total": 10,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": {
+                "name": "initFromStorage"
+              },
+              "handlers": {
+                "add": {
+                  "name": "addTrimmed"
+                },
+                "toggle": {
+                  "name": "toggle"
+                },
+                "route": {
+                  "name": "routeFilter"
+                }
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": {
+                  "name": "visibleByFilter"
+                },
+                "hasTodos": {
+                  "name": "visibleAll"
+                },
+                "editing": {
+                  "name": "visibleAll"
+                },
+                "filter": {
+                  "name": "visibleAll"
+                }
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-07",
+          "features": [
+            "toggle",
+            "edit",
+            "counter",
+            "clearCompleted"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 16,
+            "total": 16,
+            "first_all": false,
+            "final_all": true,
+            "calls": 2,
+            "compile_errors": 0,
+            "public_failures": 1,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 12,
+            "final_passed": 12,
+            "total": 16,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearAll"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 16,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": {
+                "name": "initFromStorage"
+              },
+              "handlers": {
+                "add": {
+                  "name": "addTrimmed"
+                },
+                "toggle": {
+                  "name": "toggle"
+                },
+                "edit": {
+                  "name": "editStart"
+                },
+                "save": {
+                  "name": "saveTrimDelete"
+                },
+                "cancel": {
+                  "name": "cancelEdit"
+                },
+                "clearCompleted": {
+                  "name": "clearCompleted"
+                },
+                "route": {
+                  "name": "routeFilter"
+                }
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": {
+                  "name": "visibleByFilter"
+                },
+                "countText": {
+                  "name": "countPluralized"
+                },
+                "hasCompleted": {
+                  "name": "hasCompleted"
+                },
+                "hasTodos": {
+                  "name": "visibleAll"
+                },
+                "editing": {
+                  "name": "visibleAll"
+                },
+                "filter": {
+                  "name": "visibleAll"
+                }
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-07",
+          "features": [
+            "toggle",
+            "edit",
+            "counter",
+            "clearCompleted"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 0,
+            "total": 16,
+            "first_all": false,
+            "final_all": false,
+            "calls": 3,
+            "compile_errors": 0,
+            "public_failures": 3,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should be hidden when there are no items that are completed",
+              "Clear completed button › should display the correct text",
+              "Clear completed button › should remove completed items when clicked",
+              "Counter › should display the current number of todo items",
+              "Editing › should cancel edits on escape",
+              "Editing › should hide other controls when editing",
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should save edits on blur",
+              "Editing › should trim entered text",
+              "Item › should allow me to edit an item",
+              "Item › should allow me to mark items as complete",
+              "Item › should allow me to un-mark items as complete",
+              "New Todo › should allow me to add todo items",
+              "New Todo › should append new items to the bottom of the list",
+              "New Todo › should clear text input field when an item is added",
+              "Persistence › should persist its data"
+            ]
+          },
+          "rule": {
+            "first_passed": 12,
+            "final_passed": 12,
+            "total": 16,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearAll"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text",
+              "Persistence › should persist its data"
+            ]
+          },
+          "dna": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 16,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": {
+                "name": "initFromStorage"
+              },
+              "handlers": {
+                "add": {
+                  "name": "addTrimmed"
+                },
+                "toggle": {
+                  "name": "toggle"
+                },
+                "edit": {
+                  "name": "editStart"
+                },
+                "save": {
+                  "name": "saveTrimDelete"
+                },
+                "cancel": {
+                  "name": "cancelEdit"
+                },
+                "clearCompleted": {
+                  "name": "clearCompleted"
+                },
+                "route": {
+                  "name": "routeFilter"
+                }
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": {
+                  "name": "visibleByFilter"
+                },
+                "countText": {
+                  "name": "countPluralized"
+                },
+                "hasCompleted": {
+                  "name": "hasCompleted"
+                },
+                "hasTodos": {
+                  "name": "visibleAll"
+                },
+                "editing": {
+                  "name": "visibleAll"
+                },
+                "filter": {
+                  "name": "visibleAll"
+                }
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-08",
+          "features": [
+            "toggle",
+            "toggleAll",
+            "edit",
+            "counter",
+            "clearCompleted",
+            "routing"
+          ],
+          "sample": 0,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 21,
+            "total": 24,
+            "first_all": false,
+            "final_all": false,
+            "calls": 2,
+            "compile_errors": 0,
+            "public_failures": 1,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": [
+              "Mark all as completed › complete all checkbox should update state when items are completed / cleared",
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Mark all as completed › should allow me to mark all items as completed"
+            ]
+          },
+          "rule": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 24,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllComplete",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearAll",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain",
+                "allCompleted": "allCompleted",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text",
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Persistence › should persist its data",
+              "Routing › should allow me to display active items",
+              "Routing › should allow me to display completed items",
+              "Routing › should respect the back button"
+            ]
+          },
+          "dna": {
+            "first_passed": 24,
+            "final_passed": 24,
+            "total": 24,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": {
+                "name": "initFromStorage"
+              },
+              "handlers": {
+                "add": {
+                  "name": "addTrimmed"
+                },
+                "toggle": {
+                  "name": "toggle"
+                },
+                "toggleAll": {
+                  "name": "toggleAllMatch"
+                },
+                "edit": {
+                  "name": "editStart"
+                },
+                "save": {
+                  "name": "saveTrimDelete"
+                },
+                "cancel": {
+                  "name": "cancelEdit"
+                },
+                "clearCompleted": {
+                  "name": "clearCompleted"
+                },
+                "route": {
+                  "name": "routeFilter"
+                }
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": {
+                  "name": "visibleByFilter"
+                },
+                "countText": {
+                  "name": "countPluralized"
+                },
+                "allCompleted": {
+                  "name": "allCompleted"
+                },
+                "hasCompleted": {
+                  "name": "hasCompleted"
+                },
+                "hasTodos": {
+                  "name": "visibleAll"
+                },
+                "editing": {
+                  "name": "visibleAll"
+                },
+                "filter": {
+                  "name": "visibleAll"
+                }
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        },
+        {
+          "task": "todo-08",
+          "features": [
+            "toggle",
+            "toggleAll",
+            "edit",
+            "counter",
+            "clearCompleted",
+            "routing"
+          ],
+          "sample": 1,
+          "free": {
+            "first_passed": 0,
+            "final_passed": 24,
+            "total": 24,
+            "first_all": false,
+            "final_all": true,
+            "calls": 2,
+            "compile_errors": 0,
+            "public_failures": 1,
+            "plan": null,
+            "compile_error": null,
+            "failed_tests": []
+          },
+          "rule": {
+            "first_passed": 16,
+            "final_passed": 16,
+            "total": 24,
+            "first_all": false,
+            "final_all": false,
+            "calls": 0,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": "initEmpty",
+              "handlers": {
+                "add": "addRaw",
+                "toggle": "toggle",
+                "toggleAll": "toggleAllComplete",
+                "edit": "editStart",
+                "save": "saveRaw",
+                "cancel": "cancelEdit",
+                "clearCompleted": "clearAll",
+                "route": "routeFilter"
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": "visibleAll",
+                "countText": "countPlain",
+                "allCompleted": "allCompleted",
+                "hasCompleted": "hasCompleted"
+              }
+            },
+            "compile_error": null,
+            "failed_tests": [
+              "Clear completed button › should remove completed items when clicked",
+              "Editing › should remove the item if an empty text string was entered",
+              "Editing › should trim entered text",
+              "Mark all as completed › should allow me to clear the complete state of all items",
+              "Persistence › should persist its data",
+              "Routing › should allow me to display active items",
+              "Routing › should allow me to display completed items",
+              "Routing › should respect the back button"
+            ]
+          },
+          "dna": {
+            "first_passed": 24,
+            "final_passed": 24,
+            "total": 24,
+            "first_all": true,
+            "final_all": true,
+            "calls": 1,
+            "compile_errors": 0,
+            "public_failures": 0,
+            "plan": {
+              "init": {
+                "name": "initFromStorage"
+              },
+              "handlers": {
+                "add": {
+                  "name": "addTrimmed"
+                },
+                "toggle": {
+                  "name": "toggle"
+                },
+                "toggleAll": {
+                  "name": "toggleAllMatch"
+                },
+                "edit": {
+                  "name": "editStart"
+                },
+                "save": {
+                  "name": "saveTrimDelete"
+                },
+                "cancel": {
+                  "name": "cancelEdit"
+                },
+                "clearCompleted": {
+                  "name": "clearCompleted"
+                },
+                "route": {
+                  "name": "routeFilter"
+                }
+              },
+              "after": [
+                "persistTodos",
+                "closeEditorOnRoute"
+              ],
+              "view": {
+                "visible": {
+                  "name": "visibleByFilter"
+                },
+                "countText": {
+                  "name": "countPluralized"
+                },
+                "allCompleted": {
+                  "name": "allCompleted"
+                },
+                "hasCompleted": {
+                  "name": "hasCompleted"
+                },
+                "hasTodos": {
+                  "name": "visibleAll"
+                },
+                "editing": {
+                  "name": "visibleAll"
+                },
+                "filter": {
+                  "name": "visibleAll"
+                }
+              }
+            },
+            "compile_error": null,
+            "failed_tests": []
+          }
+        }
+      ],
+      "paired": {
+        "dna_only": 7,
+        "free_only": 0,
+        "both": 9,
+        "neither": 0,
+        "test_delta": 38
+      }
+    }
+  ],
+  "labels": {
+    "free": "自由代码（基线）",
+    "rule": "规则接线（零 API 控制）",
+    "dna": "GUI-DNA 计划 + 检查编译"
+  },
+  "stopped": null
+}

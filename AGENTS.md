@@ -10,6 +10,7 @@
 - 第三轮产物里的 `result.json` / `results.json` 记录的是**绝对路径** `/home/lxler/work/gui_test/...`（项目旧目录名）。目录已改名为 `GUI_DNA`，所以保留了符号链接 `/home/lxler/work/gui_test -> /home/lxler/work/GUI_DNA`；删掉它 `resume_scale`、`audit_scale`、`analyze` 都会 FileNotFoundError。换机器时把仓库放到同一路径或建同名链接。
 - OpenRouter 余额约 $5.5（2026-10-30），用户预算很紧，**任何付费调用先问清楚、先查余额**。
 - 2026-11-01 新增 `test/webapp1k_dna/`：在公开 benchmark WebApp1K-Duo 上对比自由代码与 GUI-DNA 接线（10 个样本，独立账本）。`test/` 是实验目录，`tests/` 才是主代码的 pytest。
+- 2026-11-02 新增 `test/todomvc_dna/`：TodoMVC 规范 + Playwright 官方 TodoMVC 测试集（24 项，隐藏）上的三臂对比；功能通过共享状态互相影响，与 `data/dev/` 同构。Node 侧运行器在 `test/todomvc_dna/harness/`（需 `npm install`）。
 - 中文为文档语言；代码注释与标识符为英文。
 
 ## 2. 环境与常用命令
@@ -54,6 +55,12 @@ uv run python -m experiments.webapp1k_probe --evaluate-only        # 只重新�
 uv run pytest test/webapp1k_dna -q                                  # 计划编译器离线测试
 uv run python -m test.webapp1k_dna.run --arms rule                  # 零 API：建冻结原子库 + 规则接线 + Jest
 uv run python -m test.webapp1k_dna.run --arms free rule dna         # 付费：自由代码 vs GUI-DNA 计划（默认 10 个 Duo）
+
+# TodoMVC 规范 + 官方 Playwright 测试集（test/todomvc_dna/，独立账本 artifacts/todomvc-dna/budget.sqlite3，上限 $1）
+(cd test/todomvc_dna/harness && npm install)                        # 首次：@playwright/test 钉 1.63.0，复用已装浏览器
+uv run pytest test/todomvc_dna -q                                   # 离线检查
+uv run python -m test.todomvc_dna.run --arms rule                   # 零 API：规则接线 + 官方测试评分
+uv run python -m test.todomvc_dna.run --arms free rule dna --samples 2   # 付费三臂对比
 ```
 
 `.browser-deps/` 里是无 sudo 环境解包的 `libnspr4`/`libnss3`，评测子进程自动加到 `LD_LIBRARY_PATH`；没有也不影响有系统库的机器。
@@ -114,4 +121,5 @@ v3  experiments/scale_study/ library()（v2 库人工扩成 20 个语义变体�
 | 加新模型/改价格上限 | `configs/*.json` 的 `models`、`model_price_caps`、`provider_order`；`provider.py` 会校验模型在目录中 |
 | 渲染外壳与事件协议 | `src/gui_dna/assets/shell.html`（`window.__gui.{reset,dispatch,snapshot}`）、`src/gui_dna/prompts.py` 的 `INTERFACE` |
 | 外部 benchmark 候选与探针 | `实验结果.md` 第 8 节；`experiments/webapp1k_probe.py`；`artifacts/benchmark-probe/summary.md` |
+| 在 TodoMVC 官方测试集上跑 GUI-DNA | `test/todomvc_dna/README.md`；`shell.html`（公开外壳与协议）、`library.py`（冻结原子，含语义变体）、`domain.py`（任务族、需求、`compile_plan`、提示词）、`evaluate.py`（公开冒烟 + 官方隐藏评测）、`run.py`；结果 `test/todomvc_dna/results/`；结论在 `实验结果.md` 第 10 节 |
 | 在 WebApp1K-Duo 上跑 GUI-DNA（扩大实验入口） | `test/webapp1k_dna/README.md`；`run.py`（三条臂）、`compiler.py`（计划检查 + 拼装）、`analyze.js`（babel 静态字符串）；结果 `test/webapp1k_dna/results/`；结论在 `实验结果.md` 第 9 节 |

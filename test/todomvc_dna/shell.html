@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TodoMVC · candidate</title>
+<style>
+/* Minimal TodoMVC look. The structure (selectors, labels, placeholder, test ids) is the public interface shared by every arm. */
+:root { font: 16px/1.4 system-ui, sans-serif; color: #4d4d4d; background: #f5f5f5; }
+body { margin: 0; } [hidden] { display: none !important; }
+.todoapp { max-width: 550px; margin: 60px auto; background: #fff; box-shadow: 0 2px 4px #0003; }
+.todoapp h1 { margin: 0; padding: 16px; text-align: center; font-weight: 200; color: #b83f45; }
+.new-todo, .edit { width: 100%; font: inherit; font-size: 20px; padding: 14px 16px 14px 56px; border: none; box-sizing: border-box; }
+.edit { padding: 10px; border: 1px solid #999; }
+.main { position: relative; border-top: 1px solid #e6e6e6; }
+.toggle-row { height: 40px; display: flex; align-items: center; padding-left: 12px; border-bottom: 1px solid #ededed; }
+.toggle-all-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.todo-list { list-style: none; margin: 0; padding: 0; }
+.todo-list li { position: relative; border-bottom: 1px solid #ededed; font-size: 20px; }
+.todo-list li .view { display: flex; align-items: center; gap: 12px; padding: 12px 16px; }
+.todo-list li.editing .view { display: none; }
+.todo-list li.completed label { color: #949494; text-decoration: line-through; }
+.todo-list li label { flex: 1; word-break: break-all; }
+.todo-list li .destroy { background: none; border: none; color: #949494; font-size: 20px; cursor: pointer; }
+.todo-list li .destroy::after { content: '\00d7'; }
+.footer { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; border-top: 1px solid #e6e6e6; font-size: 14px; }
+.filters { display: flex; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.filters a { color: inherit; text-decoration: none; padding: 3px 7px; border: 1px solid transparent; border-radius: 3px; }
+.filters a.selected { border-color: #ce4646; }
+.clear-completed { background: none; border: none; font: inherit; cursor: pointer; }
+#error { color: #a52f2f; white-space: pre-wrap; max-width: 550px; margin: 0 auto; font-size: 13px; }
+</style></head><body>
+<section class="todoapp">
+  <header class="header">
+    <h1>todos</h1>
+    <input class="new-todo" id="new-todo" placeholder="What needs to be done?" autofocus>
+  </header>
+  <section class="main" id="main" hidden>
+    <div class="toggle-row"><input id="toggle-all" class="toggle-all" type="checkbox">
+    <label class="toggle-all-label" for="toggle-all">Mark all as complete</label></div>
+    <ul class="todo-list" id="todo-list"></ul>
+  </section>
+  <footer class="footer" id="footer" hidden>
+    <span class="todo-count" id="todo-count" data-testid="todo-count"></span>
+    <ul class="filters">
+      <li><a id="filter-all" href="#/">All</a></li>
+      <li><a id="filter-active" href="#/active">Active</a></li>
+      <li><a id="filter-completed" href="#/completed">Completed</a></li>
+    </ul>
+    <button class="clear-completed" id="clear-completed" hidden>Clear completed</button>
+  </footer>
+</section>
+<pre id="error" role="alert"></pre>
+<script>/*__CANDIDATE__*/</script>
+<script>
+// Shell: translates DOM interactions into candidate events and renders the candidate's view.
+// Protocol (public, identical for every arm):
+//   window.candidate = { init(): state, reduce(state, event): state, select(state): view }
+//   state = { todos: [{id, title, completed}], filter: 'all'|'active'|'completed', editing: id|null, nextId }
+//   events: {type:'add', title} {type:'toggle', id} {type:'toggleAll'} {type:'edit', id} {type:'save', id, title}
+//           {type:'cancel', id, title} {type:'clearCompleted'} {type:'route', filter} {type:'destroy', id}
+//   view = { visible: [{id, title, completed}], countText, allCompleted, hasCompleted, hasTodos, editing, filter }
+(() => {
+  const $ = id => document.getElementById(id);
+  let state = null, editDone = false;
+  function fail(where, error) {
+    const text = where + ': ' + (error && error.stack || error);
+    $('error').textContent = text;
+    console.error('[candidate] ' + text);
+  }
+  function hashFilter() {
+    const h = location.hash.replace(/^#!?\/?/, '');
+    return h === 'active' || h === 'completed' ? h : 'all';
+  }
+  function dispatch(event) {
+    try {
+      const next = window.candidate.reduce(state, event);
+      if (next && typeof next === 'object') state = next;
+    } catch (error) { fail('reduce(' + event.type + ')', error); }
+    render();
+  }
+  function render() {
+    let view;
+    try { view = window.candidate.select(state) || {}; } catch (error) { fail('select', error); return; }
+    const todos = Array.isArray(view.visible) ? view.visible : [];
+    $('main').hidden = !view.hasTodos;
+    $('footer').hidden = !view.hasTodos;
+    $('toggle-all').checked = !!view.allCompleted;
+    $('todo-count').textContent = view.countText == null ? '' : String(view.countText);
+    $('clear-completed').hidden = !view.hasCompleted;
+    for (const name of ['all', 'active', 'completed']) $('filter-' + name).classList.toggle('selected', (view.filter || 'all') === name);
+    const list = $('todo-list');
+    list.textContent = '';
+    for (const todo of todos) {
+      const li = document.createElement('li');
+      li.dataset.testid = 'todo-item';
+      li.dataset.id = todo.id;
+      li.className = [todo.completed && 'completed', view.editing === todo.id && 'editing'].filter(Boolean).join(' ');
+      const div = document.createElement('div'); div.className = 'view';
+      const toggle = document.createElement('input'); toggle.className = 'toggle'; toggle.type = 'checkbox'; toggle.checked = !!todo.completed;
+      toggle.addEventListener('change', () => dispatch({ type: 'toggle', id: todo.id }));
+      const label = document.createElement('label'); label.dataset.testid = 'todo-title'; label.textContent = todo.title;
+      const destroy = document.createElement('button'); destroy.className = 'destroy'; destroy.setAttribute('aria-label', 'Delete');
+      destroy.addEventListener('click', () => dispatch({ type: 'destroy', id: todo.id }));
+      div.append(toggle, label, destroy);
+      li.append(div);
+      li.addEventListener('dblclick', () => { if (view.editing !== todo.id) { editDone = false; dispatch({ type: 'edit', id: todo.id }); } });
+      if (view.editing === todo.id) {
+        const edit = document.createElement('input'); edit.className = 'edit'; edit.setAttribute('aria-label', 'Edit'); edit.value = todo.title;
+        edit.addEventListener('keydown', e => {
+          if (e.key === 'Enter') { editDone = true; dispatch({ type: 'save', id: todo.id, title: edit.value }); }
+          else if (e.key === 'Escape') { editDone = true; dispatch({ type: 'cancel', id: todo.id, title: edit.value }); }
+        });
+        edit.addEventListener('blur', () => { if (!editDone) { editDone = true; dispatch({ type: 'save', id: todo.id, title: edit.value }); } });
+        li.append(edit);
+        setTimeout(() => edit.focus(), 0);
+      }
+      list.append(li);
+    }
+  }
+  $('new-todo').addEventListener('keydown', e => {
+    if (e.key !== 'Enter') return;
+    const title = e.target.value;
+    e.target.value = '';
+    dispatch({ type: 'add', title });
+  });
+  $('toggle-all').addEventListener('change', () => dispatch({ type: 'toggleAll' }));
+  $('clear-completed').addEventListener('click', () => dispatch({ type: 'clearCompleted' }));
+  window.addEventListener('hashchange', () => dispatch({ type: 'route', filter: hashFilter() }));
+  try {
+    if (!window.candidate || typeof window.candidate.reduce !== 'function' || typeof window.candidate.select !== 'function') throw new Error('window.candidate must define init, reduce and select');
+    state = typeof window.candidate.init === 'function' ? window.candidate.init() : null;
+    if (!state || typeof state !== 'object') throw new Error('init() must return the state object');
+  } catch (error) { fail('init', error); state = { todos: [], filter: 'all', editing: null, nextId: 1 }; }
+  dispatch({ type: 'route', filter: hashFilter() });
+})();
+</script>
+</body></html>
