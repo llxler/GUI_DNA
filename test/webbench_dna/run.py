@@ -150,7 +150,7 @@ def summarize(models, arms, tasks, records, hidden, ledger_summary, max_repairs)
     calls = ledger_summary.get('calls', [])
     def cost(prefix):
         return sum((c['actual'] or 0) for c in calls if c['purpose'].startswith(prefix)) / 1e6
-    label = {'free': '自由增量代码（基准协议）', 'rule': '规则接线（零 API 控制）', 'dna': 'GUI-DNA 计划 + 检查编译'}
+    label = {'free': '自由增量代码（基准协议）', 'rule': '规则组装（零 API 控制）', 'dna': 'GUI-DNA 组装方案 + 编译检查'}
     summary = {'date_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'max_repairs': max_repairs, 'arms': arms, 'labels': label,
                'tasks': [{'id': t['id'], 'level': t['level'], 'features': t['features']} for t in tasks],
                'accounting': {k: v for k, v in ledger_summary.items() if k != 'calls'}, 'models': []}
@@ -192,9 +192,9 @@ def summarize(models, arms, tasks, records, hidden, ledger_summary, max_repairs)
 
 def markdown(summary):
     arms, label = summary['arms'], summary['labels']
-    lines = ['# Web-Bench dom1（官方 Playwright 测试）：自由增量代码 vs 冻结原子接线（GUI-DNA）', '',
+    lines = ['# Web-Bench dom1（官方 Playwright 测试）：自由增量代码 vs 冻结原子函数组装（GUI-DNA）', '',
              f"生成时间 {summary['date_utc']}。20 个顺序任务，隐藏评测 = 官方 `task-k.spec.js`（共 85 项断言测试）；自由代码按基准协议从官方初始页面逐任务增量修改，"
-             f"GUI-DNA 每个任务独立写计划；两者同种子、同公开反馈（页面/控制台错误、工具按钮可点击），最多 {summary['max_repairs']} 轮修复。"
+             f"GUI-DNA 每个任务独立写组装方案；两者同种子、同公开反馈（页面/控制台错误、工具按钮可点击），最多 {summary['max_repairs']} 轮修复。"
              '「顺序分」= 基准口径：按任务顺序累计通过数，连续两次失败即停止。', '',
              '| 模型 | 方法 | 任务通过（首次） | 任务通过（最终） | 顺序分（最终） | 测试通过（最终） | 调用 | 编译/解析拒绝 | 费用 |', '|---|---|---:|---:|---:|---:|---:|---:|---:|']
     for m in summary['models']:

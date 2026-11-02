@@ -1,21 +1,21 @@
-# WebApp1K-Duo：自由代码 vs 冻结原子接线（GUI-DNA）
+# WebApp1K-Duo：自由代码 vs 冻结原子函数组装（GUI-DNA）
 
-生成时间 2026-11-01T13:29:46Z。10 个 Duo 任务，官方 CRA/Jest 评分，每任务 4 项断言；三条臂同种子、同反馈协议（公开 Jest 失败回传，最多 2 轮修复）。
+生成时间 2026-11-01T13:29:46Z。10 个 Duo 任务，官方 CRA/Jest 评分，每任务 4 项断言；三种做法同种子、同反馈协议（公开 Jest 失败回传，最多 2 轮修复）。
 
 | 模型 | 方法 | 首次通过 | 最终通过 | 首次断言 | 最终断言 | 调用次数 | 编译/解析拒绝 | 费用 |
 |---|---|---:|---:|---:|---:|---:|---:|---:|
 | deepseek/deepseek-v4-pro-0813 | 自由代码（基线） | 9/10 | **9/10** | 38/40 | 38/40 | 12 | 0 | $0.0162 |
-| deepseek/deepseek-v4-pro-0813 | 规则接线（零 API 控制） | 9/10 | **9/10** | 38/40 | 38/40 | 0 | 0 | $0.0000 |
-| deepseek/deepseek-v4-pro-0813 | GUI-DNA 计划 + 检查编译 | 9/10 | **9/10** | 38/40 | 38/40 | 12 | 0 | $0.0170 |
+| deepseek/deepseek-v4-pro-0813 | 规则组装（零 API 控制） | 9/10 | **9/10** | 38/40 | 38/40 | 0 | 0 | $0.0000 |
+| deepseek/deepseek-v4-pro-0813 | GUI-DNA 组装方案 + 编译检查 | 9/10 | **9/10** | 38/40 | 38/40 | 12 | 0 | $0.0170 |
 | deepseek/deepseek-v4-pro-0813 | 配对（最终） | 仅 DNA 过 0 | 仅自由过 0 | 都过 9 | 都败 1 | | | |
 | qwen/qwen3-coder | 自由代码（基线） | 8/10 | **9/10** | 36/40 | 38/40 | 13 | 0 | $0.0117 |
-| qwen/qwen3-coder | 规则接线（零 API 控制） | 9/10 | **9/10** | 38/40 | 38/40 | 0 | 0 | $0.0000 |
-| qwen/qwen3-coder | GUI-DNA 计划 + 检查编译 | 7/10 | **8/10** | 30/40 | 34/40 | 15 | 4 | $0.0097 |
+| qwen/qwen3-coder | 规则组装（零 API 控制） | 9/10 | **9/10** | 38/40 | 38/40 | 0 | 0 | $0.0000 |
+| qwen/qwen3-coder | GUI-DNA 组装方案 + 编译检查 | 7/10 | **8/10** | 30/40 | 34/40 | 15 | 4 | $0.0097 |
 | qwen/qwen3-coder | 配对（最终） | 仅 DNA 过 0 | 仅自由过 1 | 都过 8 | 都败 1 | | | |
 
 ## deepseek/deepseek-v4-pro-0813：逐任务（最终断言 / 4）
 
-| 类别 | 组合任务 | 自由代码（基线） | 规则接线（零 API 控制） | GUI-DNA 计划 + 检查编译 | 原子单测通过的变体 | DNA 计划 |
+| 类别 | 组合任务 | 自由代码（基线） | 规则组装（零 API 控制） | GUI-DNA 组装方案 + 编译检查 | 原子单测通过的变体 | DNA 计划 |
 |---|---|---:|---:|---:|---|---|
 | blogging | addAltTextToImage_postPerformanceReport | 2/4 败（首次 2） | 2/4 败 | 2/4 败（首次 2） | addAltTextToImage:v1,v2; postPerformanceReport:无 | addAltTextToImage=v2 postPerformanceReport=v2 |
 | blogging | addCanonicalUrl_addComment | 4/4 过 | 4/4 过 | 4/4 过 | addCanonicalUrl:v1,v2; addComment:v1,v2 | addCanonicalUrl=v2 addComment=v1 |
@@ -30,7 +30,7 @@
 
 ## qwen/qwen3-coder：逐任务（最终断言 / 4）
 
-| 类别 | 组合任务 | 自由代码（基线） | 规则接线（零 API 控制） | GUI-DNA 计划 + 检查编译 | 原子单测通过的变体 | DNA 计划 |
+| 类别 | 组合任务 | 自由代码（基线） | 规则组装（零 API 控制） | GUI-DNA 组装方案 + 编译检查 | 原子单测通过的变体 | DNA 计划 |
 |---|---|---:|---:|---:|---|---|
 | blogging | addAltTextToImage_postPerformanceReport | 2/4 败（首次 2） | 2/4 败 | 2/4 败（首次 2） | addAltTextToImage:v1,v2; postPerformanceReport:无 | addAltTextToImage=v1 postPerformanceReport=v2 |
 | blogging | addCanonicalUrl_addComment | 4/4 过 | 4/4 过 | 0/4 败（首次 0） | addCanonicalUrl:v1,v2; addComment:v1,v2 | addCanonicalUrl=v1 addComment=v1 relabel ⟂拒绝 |

@@ -151,7 +151,7 @@ def summarize(models, arms, tasks, samples, records, hidden, ledger_summary, max
     calls = ledger_summary.get('calls', [])
     def cost(prefix):
         return sum((c['actual'] or 0) for c in calls if c['purpose'].startswith(prefix)) / 1e6
-    label = {'free': '自由代码（基线）', 'rule': '规则接线（零 API 控制）', 'dna': 'GUI-DNA 计划 + 检查编译'}
+    label = {'free': '自由代码（基线）', 'rule': '规则组装（零 API 控制）', 'dna': 'GUI-DNA 组装方案 + 编译检查'}
     summary = {'date_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'max_repairs': max_repairs, 'samples': samples, 'arms': arms,
                'tasks': [{k: t[k] for k in ['id', 'features']} | {'hidden_tests': len(domain.hidden_subset(t['features']))} for t in tasks],
                'accounting': {k: v for k, v in ledger_summary.items() if k != 'calls'}, 'models': []}
@@ -196,9 +196,9 @@ def summarize(models, arms, tasks, samples, records, hidden, ledger_summary, max
 def markdown(summary):
     arms, label = summary['arms'], summary['labels']
     n_tasks = len(summary['tasks'])
-    lines = ['# TodoMVC（官方 Playwright 测试集）：自由代码 vs 冻结原子接线（GUI-DNA）', '',
+    lines = ['# TodoMVC（官方 Playwright 测试集）：自由代码 vs 冻结原子函数组装（GUI-DNA）', '',
              f"生成时间 {summary['date_utc']}。{n_tasks} 个功能族任务 × {summary['samples']} 个样本；隐藏评测 = 官方 Playwright TodoMVC 示例测试集（24 项）中该任务启用功能覆盖的子集；"
-             f"三条臂同种子、同公开反馈（页面错误 + 一次添加的冒烟检查），最多 {summary['max_repairs']} 轮修复；隐藏测试从不进入提示词。", '',
+             f"三种做法同种子、同公开反馈（页面错误 + 一次添加的冒烟检查），最多 {summary['max_repairs']} 轮修复；隐藏测试从不进入提示词。", '',
              '| 模型 | 方法 | 任务全过（首次） | 任务全过（最终） | 隐藏测试通过（首次） | 隐藏测试通过（最终） | 调用 | 编译/解析拒绝 | 费用 |', '|---|---|---:|---:|---:|---:|---:|---:|---:|']
     for m in summary['models']:
         for arm in arms:

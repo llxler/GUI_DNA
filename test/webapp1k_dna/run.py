@@ -282,10 +282,10 @@ def summarize(models, arms, duos, records, library, ledger_summary, max_repairs)
 
 def markdown(summary):
     arms = summary['arms']
-    label = {'free': '自由代码（基线）', 'rule': '规则接线（零 API 控制）', 'dna': 'GUI-DNA 计划 + 检查编译'}
-    lines = ['# WebApp1K-Duo：自由代码 vs 冻结原子接线（GUI-DNA）', '',
+    label = {'free': '自由代码（基线）', 'rule': '规则组装（零 API 控制）', 'dna': 'GUI-DNA 组装方案 + 编译检查'}
+    lines = ['# WebApp1K-Duo：自由代码 vs 冻结原子函数组装（GUI-DNA）', '',
              f"生成时间 {summary['date_utc']}。{len(summary['duos'])} 个 Duo 任务，官方 CRA/Jest 评分，每任务 4 项断言；"
-             f"三条臂同种子、同反馈协议（公开 Jest 失败回传，最多 {summary['max_repairs']} 轮修复）。", '',
+             f"三种做法同种子、同反馈协议（公开 Jest 失败回传，最多 {summary['max_repairs']} 轮修复）。", '',
              '| 模型 | 方法 | 首次通过 | 最终通过 | 首次断言 | 最终断言 | 调用次数 | 编译/解析拒绝 | 费用 |', '|---|---|---:|---:|---:|---:|---:|---:|---:|']
     for m in summary['models']:
         for arm in arms:

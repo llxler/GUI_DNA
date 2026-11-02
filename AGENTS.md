@@ -4,14 +4,14 @@
 
 ## 1. 项目现状（2026-10-30）
 
-- 这是投 ICML 2027 的 idea 验证仓库。主线是**第三轮**（`experiments/scale_study/`）：模型输出受检查的接线计划，编译器拼冻结函数。
+- 这是投 ICML 2027 的 idea 验证仓库。主线是**第三轮**（`experiments/scale_study/`）：模型输出受检查的组装方案，编译器拼冻结函数。
 - 第三轮按用户要求**暂停**在 190/640 个候选；账本 `artifacts/budget.sqlite3` 的 `halted=1` 是人工暂停，不是超支。
 - `qwen/qwen3-coder-plus` 已在 OpenRouter 下线，续跑会在模型检查处停下（预期行为）。
 - 第三轮产物里的 `result.json` / `results.json` 记录的是**绝对路径** `/home/lxler/work/gui_test/...`（项目旧目录名）。目录已改名为 `GUI_DNA`，所以保留了符号链接 `/home/lxler/work/gui_test -> /home/lxler/work/GUI_DNA`；删掉它 `resume_scale`、`audit_scale`、`analyze` 都会 FileNotFoundError。换机器时把仓库放到同一路径或建同名链接。
 - OpenRouter 余额约 $5.5（2026-10-30），用户预算很紧，**任何付费调用先问清楚、先查余额**。
-- 2026-11-01 新增 `test/webapp1k_dna/`：在公开 benchmark WebApp1K-Duo 上对比自由代码与 GUI-DNA 接线（10 个样本，独立账本）。`test/` 是实验目录，`tests/` 才是主代码的 pytest。
-- 2026-11-02 新增 `test/todomvc_dna/`：TodoMVC 规范 + Playwright 官方 TodoMVC 测试集（24 项，隐藏）上的三臂对比；功能通过共享状态互相影响，与 `data/dev/` 同构。Node 侧运行器在 `test/todomvc_dna/harness/`（需 `npm install`）。
-- 2026-11-02 新增 `test/webbench_dna/`：Web-Bench（字节）dom1 项目上的三臂对比，官方测试逐字、参考实现拆成原子库；弱模型自由代码 2–12/20，GUI-DNA 6–18/20。Node 运行器在 `test/webbench_dna/harness/`（需 `npm install`）；上游仓库克隆在 `artifacts/web-bench/`（只读）。
+- 2026-11-01 新增 `test/webapp1k_dna/`：在公开 benchmark WebApp1K-Duo 上对比自由代码与 GUI-DNA 组装（10 个样本，独立账本）。`test/` 是实验目录，`tests/` 才是主代码的 pytest。
+- 2026-11-02 新增 `test/todomvc_dna/`：TodoMVC 规范 + Playwright 官方 TodoMVC 测试集（24 项，隐藏）上的三种做法对比；功能通过共享状态互相影响，与 `data/dev/` 同构。Node 侧运行器在 `test/todomvc_dna/harness/`（需 `npm install`）。
+- 2026-11-02 新增 `test/webbench_dna/`：Web-Bench（字节）dom1 项目上的三种做法对比，官方测试逐字、参考实现拆成原子函数库；弱模型自由代码 2–12/20，GUI-DNA 6–18/20。Node 运行器在 `test/webbench_dna/harness/`（需 `npm install`）；上游仓库克隆在 `artifacts/web-bench/`（只读）。
 - 中文为文档语言；代码注释与标识符为英文。
 
 ## 2. 环境与常用命令
@@ -53,20 +53,20 @@ uv run python -m experiments.webapp1k_probe --models deepseek/deepseek-v4-pro-08
 uv run python -m experiments.webapp1k_probe --evaluate-only        # 只重新评分已保存的实现，不花钱
 
 # WebApp1K-Duo 上的方法对比（test/webapp1k_dna/，独立账本 artifacts/webapp1k-dna/budget.sqlite3，上限 $1）
-uv run pytest test/webapp1k_dna -q                                  # 计划编译器离线测试
-uv run python -m test.webapp1k_dna.run --arms rule                  # 零 API：建冻结原子库 + 规则接线 + Jest
-uv run python -m test.webapp1k_dna.run --arms free rule dna         # 付费：自由代码 vs GUI-DNA 计划（默认 10 个 Duo）
+uv run pytest test/webapp1k_dna -q                                  # 方案编译器离线测试
+uv run python -m test.webapp1k_dna.run --arms rule                  # 零 API：建冻结原子函数库 + 规则组装 + Jest
+uv run python -m test.webapp1k_dna.run --arms free rule dna         # 付费：自由代码 vs GUI-DNA 组装方案（默认 10 个 Duo）
 
 # TodoMVC 规范 + 官方 Playwright 测试集（test/todomvc_dna/，独立账本 artifacts/todomvc-dna/budget.sqlite3，上限 $1）
 (cd test/todomvc_dna/harness && npm install)                        # 首次：@playwright/test 钉 1.63.0，复用已装浏览器
 uv run pytest test/todomvc_dna -q                                   # 离线检查
-uv run python -m test.todomvc_dna.run --arms rule                   # 零 API：规则接线 + 官方测试评分
-uv run python -m test.todomvc_dna.run --arms free rule dna --samples 2   # 付费三臂对比
+uv run python -m test.todomvc_dna.run --arms rule                   # 零 API：规则组装 + 官方测试评分
+uv run python -m test.todomvc_dna.run --arms free rule dna --samples 2   # 付费三种做法对比
 
 # Web-Bench dom1（test/webbench_dna/，独立账本 artifacts/webbench-dna/budget.sqlite3，上限 $1.5）
 #   首次：git clone --depth 1 https://github.com/bytedance/web-bench.git artifacts/web-bench ；(cd test/webbench_dna/harness && npm install)
 uv run pytest test/webbench_dna -q
-uv run python -m test.webbench_dna.run --arms rule                                  # 零 API：规则接线 + 官方测试
+uv run python -m test.webbench_dna.run --arms rule                                  # 零 API：规则组装 + 官方测试
 uv run python -m test.webbench_dna.run --arms free rule dna --models <...>           # 付费；--evaluate-only 只重评，--grade-workers 并行评分
 ```
 
@@ -113,9 +113,11 @@ v3  experiments/scale_study/ library()（v2 库人工扩成 20 个语义变体�
 ## 5. 文档约定
 
 - `README.md`：安装 + idea 介绍，不放逐轮细节。
+- `代码逻辑.md`：给新读者的流水线讲解（数据、两种做法逐步对照、指标、术语表），改方法或加数据集时同步更新。
+- 用词：说「做法/对照组」不说「臂」，说「组装方案 / 组装」不说「接线」，结论段用「目前明确的是 / 还不能确认的是」。
 - `实验结果.md`：唯一的结果文档；新一轮实验追加一节，不再新建「第 N 轮研究报告.md」。
 - `AGENTS.md`：本文件；`CLAUDE.md` 只是指向这里的入口。
-- 报告风格沿用：先写结论，正负结果都保留，明确写出「不能说的话」。
+- 报告风格沿用：先写结论，正负结果都保留，明确写出「还不能确认的是」。
 
 ## 6. 关键文件速查
 
@@ -130,4 +132,4 @@ v3  experiments/scale_study/ library()（v2 库人工扩成 20 个语义变体�
 | 外部 benchmark 候选与探针 | `实验结果.md` 第 8 节；`experiments/webapp1k_probe.py`；`artifacts/benchmark-probe/summary.md` |
 | 在 Web-Bench dom1 上跑 GUI-DNA | `test/webbench_dna/README.md`；`shell.html`、`library.py`（参考实现拆成的原子 + 变体）、`domain.py`（任务阶梯、`compile_plan`、提示词）、`evaluate.py`、`run.py`；官方测试在 `harness/dom1-tests/`；结论在 `实验结果.md` 第 11 节 |
 | 在 TodoMVC 官方测试集上跑 GUI-DNA | `test/todomvc_dna/README.md`；`shell.html`（公开外壳与协议）、`library.py`（冻结原子，含语义变体）、`domain.py`（任务族、需求、`compile_plan`、提示词）、`evaluate.py`（公开冒烟 + 官方隐藏评测）、`run.py`；结果 `test/todomvc_dna/results/`；结论在 `实验结果.md` 第 10 节 |
-| 在 WebApp1K-Duo 上跑 GUI-DNA（扩大实验入口） | `test/webapp1k_dna/README.md`；`run.py`（三条臂）、`compiler.py`（计划检查 + 拼装）、`analyze.js`（babel 静态字符串）；结果 `test/webapp1k_dna/results/`；结论在 `实验结果.md` 第 9 节 |
+| 在 WebApp1K-Duo 上跑 GUI-DNA（扩大实验入口） | `test/webapp1k_dna/README.md`；`run.py`（三种做法）、`compiler.py`（计划检查 + 拼装）、`analyze.js`（babel 静态字符串）；结果 `test/webapp1k_dna/results/`；结论在 `实验结果.md` 第 9 节 |
