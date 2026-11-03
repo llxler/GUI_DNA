@@ -14,7 +14,7 @@ from .library import COMMANDS, FEATURES, SHORTCUT_KEYS, SLOT_FEATURE, SLOTS, TOO
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 TASKS_FILE = HERE / 'harness' / 'tasks.jsonl'
-METHODS = ['free', 'rule', 'dna']
+METHODS = ['free', 'rule', 'dna', 'free_lib', 'dna_unchecked']
 MENU_KINDS = ['file', 'dir', 'entries']
 # Commands a kind must offer when the feature is enabled (task descriptions 7, 8, 9, 10, 20).
 REQUIRED_MENU = {
@@ -278,8 +278,13 @@ FREE_SYSTEM = ('You are a web developer working on a single-file web page. You r
                'no external resources.')
 
 
-def free_messages(task, current_html):
+def free_messages(task, current_html, lib=None):
     rows = official_tasks()
+    extra = ''
+    if lib is not None:   # free_lib: the same frozen functions as the plan method, usable in any way
+        extra = ('\n\nA library of verified functions for this file explorer is available; you may paste any of them verbatim into the page, '
+                 'adapt them, or ignore them:\n' + '\n'.join(f"- `{f['signature']}` — {f['description']}\n  ```js\n  {f['code']}\n  ```"
+                                                                 for f in lib['functions']))
     return [{'role': 'system', 'content': FREE_SYSTEM},
-            {'role': 'user', 'content': f"Current index.html:\n```html\n{current_html}\n```\n\nTask {task['id']}: {rows[task['id']]['description']}\n\n"
+            {'role': 'user', 'content': f"Current index.html:\n```html\n{current_html}\n```\n\nTask {task['id']}: {rows[task['id']]['description']}{extra}\n\n"
                                         'Return the complete updated index.html as JSON.'}]

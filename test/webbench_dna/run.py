@@ -20,7 +20,8 @@ import time
 from pathlib import Path
 
 from gui_dna.budget import BudgetStop, Ledger
-from gui_dna.provider import OpenRouter, ProviderError, parse_json
+from gui_dna.provider import ProviderError, parse_json
+from test.provider_ext import ReasoningAwareOpenRouter as OpenRouter
 from gui_dna.tasks import dump
 
 from . import domain, evaluate
@@ -43,7 +44,7 @@ def attempt_loop(arm, model, task, lib, folder, provider, seed, max_repairs, mes
         attempt = {'attempt': attempt_no, 'compile_error': None, 'public': None}
         try:
             raw = provider.call(model, messages, folder / f'call-{attempt_no}', f'webbench:{model}:{arm}:{task["id"]}:a{attempt_no}', seed=seed,
-                                max_tokens=12000 if arm == 'free' else 3000)
+                                max_tokens=12000 if arm in ('free', 'free_lib') else 3000)
         except BudgetStop:
             raise
         except ProviderError as error:
@@ -53,18 +54,19 @@ def attempt_loop(arm, model, task, lib, folder, provider, seed, max_repairs, mes
         artefact = None
         try:
             parsed = parse_json(raw)
-            if arm == 'free':
+            if arm in ('free', 'free_lib'):
                 artefact = parsed['html']
                 if not isinstance(artefact, str) or '<html' not in artefact.lower():
                     raise ValueError('"html" must be the complete index.html document')
             else:
                 attempt['plan'] = parsed
-                artefact = domain.compile_plan(parsed, task['features'], lib)
+                artefact = domain.compile_plan(parsed, task['features'], lib, checked=(arm == 'dna'))
         except (ValueError, KeyError, TypeError) as error:
             attempt['compile_error'] = f'{type(error).__name__}: {error}'
         if artefact is not None:
             version = f'v{attempt_no}'
-            vf = evaluate.write_candidate(folder / version, html=artefact if arm == 'free' else None, script=None if arm == 'free' else artefact)
+            is_html = arm in ('free', 'free_lib')
+            vf = evaluate.write_candidate(folder / version, html=artefact if is_html else None, script=None if is_html else artefact)
             attempt['public'] = evaluate.public_check(vf)
             record['versions'].append(version)
             final = artefact
@@ -73,11 +75,12 @@ def attempt_loop(arm, model, task, lib, folder, provider, seed, max_repairs, mes
             break
         if attempt_no > max_repairs:
             break
+        is_plan = arm in ('dna', 'dna_unchecked')
         if attempt['compile_error']:
-            feedback = ('The plan was rejected by the compiler:\n' if arm == 'dna' else 'Your output could not be used:\n') + attempt['compile_error']
+            feedback = ('The plan was rejected by the compiler:\n' if is_plan else 'Your output could not be used:\n') + attempt['compile_error']
         else:
             feedback = 'Public smoke check failed:\n- ' + '\n- '.join(attempt['public'])
-        feedback += '\nReturn a corrected ' + ('plan' if arm == 'dna' else 'complete index.html') + ' as JSON only.'
+        feedback += '\nReturn a corrected ' + ('plan' if is_plan else 'complete index.html') + ' as JSON only.'
         messages = messages + [{'role': 'assistant', 'content': raw}, {'role': 'user', 'content': feedback}]
     return final
 
@@ -91,7 +94,7 @@ def run_model(arm, model, tasks, lib, out, provider, seed, max_repairs, server_u
         record_path = folder / 'record.json'
         if record_path.exists():
             rec = json.loads(record_path.read_text())
-            if arm == 'free' and rec['versions']:
+            if arm in ('free', 'free_lib') and rec['versions']:
                 current_html = (folder / rec['versions'][-1] / 'index.html').read_text()
             records[task['id']] = rec
             continue
@@ -102,10 +105,11 @@ def run_model(arm, model, tasks, lib, out, provider, seed, max_repairs, server_u
             vf = evaluate.write_candidate(folder / 'v1', script=script)
             rec['attempts'].append({'attempt': 1, 'plan': plan, 'compile_error': None, 'public': evaluate.public_check(vf)})
             rec['versions'].append('v1')
-        elif arm == 'dna':
+        elif arm in ('dna', 'dna_unchecked'):
             attempt_loop(arm, model, task, lib, folder, provider, seed, max_repairs, domain.messages_for(task, 'dna', lib), rec)
         else:
-            final = attempt_loop(arm, model, task, lib, folder, provider, seed, max_repairs, domain.free_messages(task, current_html), rec)
+            final = attempt_loop(arm, model, task, lib, folder, provider, seed, max_repairs,
+                                 domain.free_messages(task, current_html, lib if arm == 'free_lib' else None), rec)
             if final is not None:
                 current_html = final   # the benchmark's sequential dependency: next task starts from this output
         dump(record_path, rec)
@@ -117,7 +121,9 @@ def run_model(arm, model, tasks, lib, out, provider, seed, max_repairs, server_u
 def grade_record(rec, folder, task, evaluate_only):
     hidden_path = folder / 'hidden.json'
     if hidden_path.exists() and not evaluate_only:
-        return json.loads(hidden_path.read_text())
+        saved = json.loads(hidden_path.read_text())
+        if all(v.get('total', 0) > 0 or not rec['versions'] for v in saved.values()):
+            return saved   # a 0-test result means the harness itself failed (e.g. overloaded); grade again
     out = {}
     if rec['versions']:
         for label, version in [('first', rec['versions'][0]), ('final', rec['versions'][-1])]:
@@ -146,11 +152,12 @@ def sequential_score(passes):
     return score
 
 
-def summarize(models, arms, tasks, records, hidden, ledger_summary, max_repairs):
-    calls = ledger_summary.get('calls', [])
+def summarize(models, arms, tasks, records, hidden, ledger_summary, max_repairs, extra_calls=()):
+    calls = list(ledger_summary.get('calls', [])) + list(extra_calls)
     def cost(prefix):
         return sum((c['actual'] or 0) for c in calls if c['purpose'].startswith(prefix)) / 1e6
-    label = {'free': '自由增量代码（基准协议）', 'rule': '规则组装（零 API 控制）', 'dna': 'GUI-DNA 组装方案 + 编译检查'}
+    label = {'free': '自由增量代码（基准协议）', 'rule': '规则组装（零 API 控制）', 'dna': 'GUI-DNA 组装方案 + 编译检查',
+             'free_lib': '自由增量代码 + 同一函数库（对照）', 'dna_unchecked': '组装方案，不做覆盖检查（消融）'}
     summary = {'date_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'max_repairs': max_repairs, 'arms': arms, 'labels': label,
                'tasks': [{'id': t['id'], 'level': t['level'], 'features': t['features']} for t in tasks],
                'accounting': {k: v for k, v in ledger_summary.items() if k != 'calls'}, 'models': []}
@@ -232,8 +239,10 @@ def main():
     parser.add_argument('--cap-usd', type=float, default=1.5)
     parser.add_argument('--stop-usd', type=float, default=1.3)
     parser.add_argument('--evaluate-only', action='store_true')
+    parser.add_argument('--no-generate', action='store_true', help='only load saved records; grade what is missing; no API calls')
     parser.add_argument('--label', default='')
-    parser.add_argument('--grade-workers', type=int, default=4, help='concurrent official spec runs during hidden grading')
+    parser.add_argument('--grade-workers', type=int, default=3, help='concurrent official spec runs during hidden grading')
+    parser.add_argument('--extra-ledgers', nargs='*', default=[], help='older ledgers whose settled calls count in the cost columns')
     args = parser.parse_args()
     out = args.out.resolve()
     out.mkdir(parents=True, exist_ok=True)
@@ -242,13 +251,17 @@ def main():
     config = {'models': args.models, 'temperature': 0.6, 'max_tokens': 12000, 'max_repairs': args.max_repairs, 'seed': args.seed,
               'budget_usd': args.cap_usd, 'stop_new_requests_usd': args.stop_usd,
               'price_caps_per_million': {'prompt': 3.0, 'completion': 15.0},
+              'reasoning_effort': {'openai/gpt-5-mini': 'low', 'openai/gpt-oss-120b': 'low'},
+              'omit_params': {'openai/gpt-5-mini': ['temperature', 'seed']},
               'model_price_caps': {'deepseek/deepseek-v4-pro-0813': {'prompt': 1.3, 'completion': 4.1},
                                    'deepseek/deepseek-v4-flash': {'prompt': 0.2, 'completion': 0.4},
                                    'qwen/qwen3-coder-30b-a3b-instruct': {'prompt': 0.1, 'completion': 0.4},
                                    'google/gemma-3-12b-it': {'prompt': 0.1, 'completion': 0.3},
-                                   'mistralai/mistral-small-3.2-24b-instruct': {'prompt': 0.1, 'completion': 0.3}}}
+                                   'mistralai/mistral-small-3.2-24b-instruct': {'prompt': 0.1, 'completion': 0.3},
+                                   'openai/gpt-5-mini': {'prompt': 0.3, 'completion': 2.1}, 'openai/gpt-oss-120b': {'prompt': 0.2, 'completion': 0.7},
+                                   'google/gemini-2.5-flash': {'prompt': 0.35, 'completion': 2.6}, 'anthropic/claude-haiku-4.5': {'prompt': 1.1, 'completion': 5.1}}}
     ledger = Ledger(out / 'budget.sqlite3', args.cap_usd, args.stop_usd)
-    paid = (not args.evaluate_only) and any(a in args.arms for a in ['free', 'dna'])
+    paid = (not args.evaluate_only) and (not args.no_generate) and any(a in args.arms for a in ['free', 'dna', 'free_lib', 'dna_unchecked'])
     provider = OpenRouter(config, ledger) if paid else None
     dump(out / 'manifest.json', {'config': config, 'arms': args.arms, 'tasks': tasks, 'library_sha256': lib['sha256'],
                                  'domain_sha256': evaluate.sha256((HERE / 'domain.py').read_text()),
@@ -258,7 +271,7 @@ def main():
     records, hidden, stopped = {}, {}, None
     for model in args.models:
         for arm in args.arms:
-            if args.evaluate_only:
+            if args.evaluate_only or args.no_generate:
                 for task in tasks:
                     p = out / 'runs' / slug(model) / arm / task['id'] / 'record.json'
                     if p.exists():
@@ -286,7 +299,8 @@ def main():
         for key, h in pool.map(grade_one, list(records)):
             hidden[key] = h
             print(f"hidden {key[0]} {key[1]:4} {key[2]:8}: {h['first']['passed']} -> {h['final']['passed']} / {h['final']['total']}", flush=True)
-    summary = summarize(args.models, args.arms, tasks, records, hidden, ledger.summary(), args.max_repairs)
+    extra = [c for path in args.extra_ledgers for c in Ledger(path, 0.000001, 0.000001).summary()['calls']]
+    summary = summarize(args.models, args.arms, tasks, records, hidden, ledger.summary(), args.max_repairs, extra)
     summary['stopped'] = stopped
     dump(out / 'summary.json', summary)
     (out / 'summary.md').write_text(markdown(summary))

@@ -25,6 +25,7 @@
   `compile_plan` 做特征感知链接（禁用功能的项静默丢弃）+ 覆盖检查（启用功能必须接上）后逐字拼接冻结原子，注入公开外壳 `shell.html`（只有布局 CSS 与空的 tools/entries/editor）。
 - 语义变体（需求句子决定正确项）：选中是否切换目录展开、点击文件是否打开到编辑器、新建插入位置（选中文件之后/目录内 vs 一律追加）、
   删除后选中下一个/上一个/父目录 vs 不选中、拖放左半/右半规则 vs 一律追加、菜单项是否显示快捷键。
+- 两个对照（2026-11-03）：`free_lib` 自由增量代码 + 同一函数库（40 个函数原样放进提示词）；`dna_unchecked` 方案不做覆盖检查。只在四个便宜模型上跑。
 - 公开反馈：页面/控制台错误 + 每个工具按钮点一次不报错；最多 2 轮修复。隐藏测试在全部生成结束后对首次与最终版本各评一次。
 - 报告两种口径：独立任务通过数 /20；基准顺序分（按顺序累计、连续两次失败即停）。
 
@@ -39,7 +40,7 @@ uv run python -m test.webbench_dna.run --arms free rule dna --models qwen/qwen3-
 uv run python -m test.webbench_dna.run --evaluate-only
 ```
 
-账本 `artifacts/webbench-dna/budget.sqlite3`（上限 $1.5）。结果 [results/summary.md](results/summary.md)；结论在 实验结果.md 第 11 节。
+账本只能收紧不能放宽，每次扩展用新的 `--out` 目录（`artifacts/webbench-dna-2/3/4`），拷入上一轮 `runs/` 即可复用记录；`--extra-ledgers` 把旧账本计入费用列，`--no-generate` 只汇总与补评、不调模型，`--grade-workers` 控制并行评分数（超过 3 路时官方测试偶尔会被压垮、报 0 项，程序会自动重评这类记录）。OpenAI 模型要经 `test/provider_ext.py`。结果 [results/summary.md](results/summary.md)（8 个模型）；结论在 实验结果.md 第 11 节。
 
 ## 4. 还不能确认的是
 

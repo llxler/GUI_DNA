@@ -17,7 +17,8 @@ import time
 from pathlib import Path
 
 from gui_dna.budget import BudgetStop, Ledger
-from gui_dna.provider import OpenRouter, ProviderError, parse_json
+from gui_dna.provider import ProviderError, parse_json
+from test.provider_ext import ReasoningAwareOpenRouter as OpenRouter
 from gui_dna.tasks import dump
 
 from . import domain, evaluate
@@ -45,7 +46,7 @@ def generate(arm, model, task, lib, folder, provider, seed, max_repairs, server)
         record['versions'].append('v1')
         dump(record_path, record)
         return record
-    messages = domain.messages_for(task, arm, lib)
+    messages = domain.messages_for(task, 'free_lib' if arm == 'free_lib' else ('free' if arm == 'free' else 'dna'), lib)
     for attempt_no in range(1, max_repairs + 2):
         attempt = {'attempt': attempt_no, 'compile_error': None, 'public': None}
         try:
@@ -60,13 +61,13 @@ def generate(arm, model, task, lib, folder, provider, seed, max_repairs, server)
         code = None
         try:
             parsed = parse_json(raw)
-            if arm == 'free':
+            if arm in ('free', 'free_lib'):
                 code = parsed['code']
                 if not isinstance(code, str) or not code.strip():
                     raise ValueError('code must be a non-empty string')
             else:
                 attempt['plan'] = parsed
-                code = domain.compile_plan(parsed, task['features'], lib)
+                code = domain.compile_plan(parsed, task['features'], lib, checked=(arm == 'dna'))
         except (ValueError, KeyError, TypeError) as error:
             attempt['compile_error'] = f'{type(error).__name__}: {error}'
         if code is not None:
@@ -79,11 +80,12 @@ def generate(arm, model, task, lib, folder, provider, seed, max_repairs, server)
             break
         if attempt_no > max_repairs:
             break
+        is_plan = arm in ('dna', 'dna_unchecked')
         if attempt['compile_error']:
-            feedback = ('The plan was rejected by the compiler:\n' if arm == 'dna' else 'Your output could not be used:\n') + attempt['compile_error']
+            feedback = ('The plan was rejected by the compiler:\n' if is_plan else 'Your output could not be used:\n') + attempt['compile_error']
         else:
             feedback = 'Public smoke check failed:\n- ' + '\n- '.join(attempt['public'])
-        feedback += '\nReturn a corrected ' + ('plan' if arm == 'dna' else 'complete JavaScript source') + ' as JSON only.'
+        feedback += '\nReturn a corrected ' + ('plan' if is_plan else 'complete JavaScript source') + ' as JSON only.'
         messages = messages + [{'role': 'assistant', 'content': raw}, {'role': 'user', 'content': feedback}]
     dump(record_path, record)
     return record
@@ -147,11 +149,12 @@ def grade_record(record, folder, task, server, evaluate_only):
     return out
 
 
-def summarize(models, arms, tasks, samples, records, hidden, ledger_summary, max_repairs):
-    calls = ledger_summary.get('calls', [])
+def summarize(models, arms, tasks, samples, records, hidden, ledger_summary, max_repairs, extra_calls=()):
+    calls = list(ledger_summary.get('calls', [])) + list(extra_calls)
     def cost(prefix):
         return sum((c['actual'] or 0) for c in calls if c['purpose'].startswith(prefix)) / 1e6
-    label = {'free': '自由代码（基线）', 'rule': '规则组装（零 API 控制）', 'dna': 'GUI-DNA 组装方案 + 编译检查'}
+    label = {'free': '自由代码（基线）', 'rule': '规则组装（零 API 控制）', 'dna': 'GUI-DNA 组装方案 + 编译检查',
+             'free_lib': '自由代码 + 同一函数库（对照）', 'dna_unchecked': '组装方案，不做覆盖检查（消融）'}
     summary = {'date_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'max_repairs': max_repairs, 'samples': samples, 'arms': arms,
                'tasks': [{k: t[k] for k in ['id', 'features']} | {'hidden_tests': len(domain.hidden_subset(t['features']))} for t in tasks],
                'accounting': {k: v for k, v in ledger_summary.items() if k != 'calls'}, 'models': []}
@@ -240,6 +243,7 @@ def main():
     parser.add_argument('--stop-usd', type=float, default=0.8)
     parser.add_argument('--evaluate-only', action='store_true', help='re-grade saved versions; no API calls')
     parser.add_argument('--label', default='')
+    parser.add_argument('--extra-ledgers', nargs='*', default=[], help='older ledgers whose settled calls count in the cost columns')
     parser.add_argument('--recompile', action='store_true', help='re-link saved dna responses with the current compiler (no API), then grade')
     args = parser.parse_args()
     out = args.out.resolve()
@@ -249,11 +253,15 @@ def main():
     config = {'models': args.models, 'temperature': 0.6, 'max_tokens': 4000, 'max_repairs': args.max_repairs, 'seed': args.seed,
               'budget_usd': args.cap_usd, 'stop_new_requests_usd': args.stop_usd,
               'price_caps_per_million': {'prompt': 3.0, 'completion': 15.0},
+              'reasoning_effort': {'openai/gpt-5-mini': 'low', 'openai/gpt-oss-120b': 'low'},
+              'omit_params': {'openai/gpt-5-mini': ['temperature', 'seed']},
               'model_price_caps': {'deepseek/deepseek-v4-pro-0813': {'prompt': 1.3, 'completion': 4.1},
                                    'qwen/qwen3-coder': {'prompt': 0.65, 'completion': 3.25},
                                    'qwen/qwen3-coder-30b-a3b-instruct': {'prompt': 0.1, 'completion': 0.4},
                                    'google/gemma-3-12b-it': {'prompt': 0.1, 'completion': 0.3},
-                                   'mistralai/mistral-small-3.2-24b-instruct': {'prompt': 0.1, 'completion': 0.3}}}
+                                   'mistralai/mistral-small-3.2-24b-instruct': {'prompt': 0.1, 'completion': 0.3},
+                                   'openai/gpt-5-mini': {'prompt': 0.3, 'completion': 2.1}, 'openai/gpt-oss-120b': {'prompt': 0.2, 'completion': 0.7},
+                                   'google/gemini-2.5-flash': {'prompt': 0.35, 'completion': 2.6}, 'anthropic/claude-haiku-4.5': {'prompt': 1.1, 'completion': 5.1}}}
     ledger = Ledger(out / 'budget.sqlite3', args.cap_usd, args.stop_usd)
     paid = (not args.evaluate_only) and (not args.recompile) and any(a in args.arms for a in ['free', 'dna'])
     provider = OpenRouter(config, ledger) if paid else None
@@ -300,7 +308,8 @@ def main():
             print(f"hidden {model} {arm:4} {task_id} s{s}: {h['first']['passed']} -> {h['final']['passed']} / {h['final']['total']}", flush=True)
     finally:
         server.close()
-    summary = summarize(args.models, args.arms, tasks, args.samples, records, hidden, ledger.summary(), args.max_repairs)
+    extra = [c for path in args.extra_ledgers for c in Ledger(path, 0.000001, 0.000001).summary()['calls']]
+    summary = summarize(args.models, args.arms, tasks, args.samples, records, hidden, ledger.summary(), args.max_repairs, extra)
     summary['stopped'] = stopped
     dump(out / 'summary.json', summary)
     (out / 'summary.md').write_text(markdown(summary))

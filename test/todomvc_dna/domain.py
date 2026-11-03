@@ -13,7 +13,7 @@ from .library import AFTERS, CORE_EVENTS, EVENTS, FEATURES, INITS, ROUTES, VIEWS
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-METHODS = ['free', 'rule', 'dna']
+METHODS = ['free', 'rule', 'dna', 'free_lib', 'dna_unchecked']
 # View fields the compiler always emits itself; a plan may list them (the interface text mentions them) without harm.
 FIXED_VIEW_FIELDS = {'hasTodos', 'editing', 'filter'}
 
@@ -205,11 +205,15 @@ def messages_for(task, method, lib):
     events, slots = enabled_events(features), enabled_slots(features)
     head = (f"Enabled features for this task: core (add, persistence) + {features}. Events the shell will dispatch: {events}. "
             f"View slots the shell reads: {slots} plus hasTodos, editing, filter.\n\nRequirement:\n{task['requirement']}\n\n{INTERFACE}")
-    if method == 'free':
+    if method in ('free', 'free_lib'):
         system = ('You implement the state logic of a small web app. Return JSON only: {"code": "<JavaScript source>"}. '
                   'The source must define window.candidate = { init, reduce, select } exactly as the shell protocol describes; '
                   'no DOM access, no imports, no frameworks.')
-        return [{'role': 'system', 'content': system}, {'role': 'user', 'content': head + '\n\nReturn the complete JavaScript source as JSON.'}]
+        extra = ''
+        if method == 'free_lib':   # same frozen library as the plan method, but the model may use it however it likes
+            extra = ('\n\nA library of verified functions is available; you may copy any of them verbatim into your source, adapt them, '
+                     'or ignore them:\n' + library_listing(lib, features))
+        return [{'role': 'system', 'content': system}, {'role': 'user', 'content': head + extra + '\n\nReturn the complete JavaScript source as JSON.'}]
     system = ('You wire frozen, verified functions into the state logic of a small web app. You cannot write code. Return JSON only: '
               '{"init": "<init function>", "handlers": {"<event>": "<event handler>"}, "after": ["<after hook>", ...], "view": {"<slot>": "<view function>"}}. '
               'Pick, for every enabled event and view slot, the library function whose documented behaviour matches the requirement. '

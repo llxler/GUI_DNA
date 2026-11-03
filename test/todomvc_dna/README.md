@@ -27,6 +27,7 @@
 - 冻结原子函数库 `library.py`（人工编写，24 个函数）：对同一槽位故意保留语义不同的变体（如 `saveRaw` / `saveTrimDelete`、`toggleAllComplete` / `toggleAllMatch`、
   `initEmpty` / `initFromStorage`、`visibleAll` / `visibleByFilter`），需求文本决定哪个正确，所以方案必须读规范。
 - 任务：8 个功能族（`domain.FAMILIES`），核心 = 新建 + 持久化；隐藏评测取官方 24 项中「所需功能 ⊆ 启用功能」的子集（4–24 项）。
+- 两个对照（2026-11-03）：`free_lib` 自由代码 + 同一函数库（函数原样放进提示词，随便用）；`dna_unchecked` 方案不做覆盖检查（`compile_plan(..., checked=False)`）。
 - 反馈：公开冒烟检查（页面错误、添加一条后列表与 localStorage 是否正确）或编译拒绝回传，最多 2 轮修复；隐藏测试在全部生成结束后对首次与最终版本各评一次。
 - 校准：按规范写出的正确方案 24/24；规则控制 16/24（失败的正是需要读规范的槽位）。
 
@@ -42,7 +43,7 @@ uv run python -m test.todomvc_dna.run --arms free rule dna --samples 2     # 本
 uv run python -m test.todomvc_dna.run --evaluate-only                      # 只重新评分已保存版本
 ```
 
-默认模型 `deepseek/deepseek-v4-pro-0813`（强）与 `qwen/qwen3-coder-30b-a3b-instruct`（弱、便宜）；另跑了 `mistralai/mistral-small-3.2-24b-instruct`、`google/gemma-3-12b-it`；账本 `artifacts/todomvc-dna/budget.sqlite3`（上限 $1）。
+跑过的 8 个模型见 `results/summary.md`。OpenAI 模型要经 `test/provider_ext.py`（允许最低强度推理、去掉 GPT-5 不接受的温度/种子参数）。账本只能收紧不能放宽，所以每次扩展都用新的 `--out` 目录（`artifacts/todomvc-dna-2/3/4`），把上一轮的 `runs/` 拷进去（已有记录直接复用、不再付费），费用列用 `--extra-ledgers` 把旧账本加总；账本 `artifacts/todomvc-dna/budget.sqlite3`（上限 $1）。
 结果：[results/summary.md](results/summary.md)（四个模型，编译器含两处格式放宽后的零成本重放）、[results/summary-strict-compiler.md](results/summary-strict-compiler.md)
 （DeepSeek/Qwen 的严格版实跑）；结论写在 实验结果.md 第 10 节。`--recompile` 会把 dna 组已保存的响应用当前编译器重新链接并重评，不花钱；
 实跑记录保留为 `record.live.json`。
