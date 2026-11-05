@@ -12,7 +12,8 @@
 - 2026-11-01 新增 `test/webapp1k_dna/`：在公开 benchmark WebApp1K-Duo 上对比自由代码与 GUI-DNA 组装（10 个样本，独立账本）。`test/` 是实验目录，`tests/` 才是主代码的 pytest。
 - 2026-11-02 新增 `test/todomvc_dna/`：TodoMVC 规范 + Playwright 官方 TodoMVC 测试集（24 项，隐藏）上的三种做法对比；功能通过共享状态互相影响，与 `data/dev/` 同构。Node 侧运行器在 `test/todomvc_dna/harness/`（需 `npm install`）。
 - 2026-11-02 新增 `test/webbench_dna/`：Web-Bench（字节）dom1 项目上的对比，官方测试逐字、参考实现拆成原子函数库。2026-11-03 TodoMVC 与 Web-Bench 都扩到 8 个模型并加了两个对照（自由代码 + 同一函数库、方案不做覆盖检查）；结果汇总在 `实验结果.md` 第 12 节。OpenAI 模型要经 `test/provider_ext.py`（冻结客户端的子类：允许低强度推理、去掉 GPT-5 不接受的参数）。账本不能放宽，扩展时用新的 `--out` 目录并拷入旧 `runs/`，费用用 `--extra-ledgers` 合并。余额约 $1.8（2026-11-03）。Node 运行器在 `test/webbench_dna/harness/`（需 `npm install`）；上游仓库克隆在 `artifacts/web-bench/`（只读）。
-- 中文为文档语言；代码注释与标识符为英文。
+- 2026-11-05 整理：第二轮辅助脚本归档到 `experiments/round2/`（模块方式运行）；事后连接器复验 `experiments/replay_linked_plans.py` + `plan_linker.py` 留在原处，因为 `artifacts/linked-plan-posthoc/manifest.json` 记录了它们的路径与哈希，挪动或格式化都会让复验断言失败。新增 `DNA_latex/`（ICML 2027 论文源，英文；只在本地，`.gitignore` 忽略，不入库），旧论文模板目录已删。
+- 中文为文档语言；代码注释与标识符为英文；`DNA_latex/` 内为英文论文。
 
 ## 2. 环境与常用命令
 
@@ -36,8 +37,8 @@ uv run python -m experiments.scale_study.calibrate               # v3 参考实�
 uv run python -m experiments.scale_rule_control                  # v3 零 API 规则控制
 uv run python -m experiments.scale_study.analyze                 # 从 results.json 重算 analysis.json / report.md
 uv run python -m experiments.audit_scale                         # 第三轮只读审计（哈希、账本、链接）
-uv run python experiments/summarize_followup.py                  # v2 汇总（无 API）
-uv run python experiments/replay_linked_plans.py                 # v2 连接器离线复验（无 API）
+uv run python -m experiments.round2.summarize_followup          # v2 汇总（无 API）
+uv run python experiments/replay_linked_plans.py                 # v2 连接器离线复验（无 API；manifest 钉了路径，不要挪）
 
 # 付费（需要 export OPENROUTER_API_KEY=...；密钥只读环境变量）
 uv run python scripts/check_openrouter_credits.py --required-usd 1   # 查余额，退出码 2 = 不足
@@ -84,8 +85,12 @@ v1  src/gui_dna/            tasks/prompts/generation/experiment  四方法 direc
       ├─ provider.py         OpenRouter 单次请求：预留→POST→结算；重放已结算响应；只重试 429
       └─ budget.py           SQLite 账本 Ledger(path, cap, stop)；只能收紧、不能放宽
 v2  src/gui_dna/followup/   atomic_library()（v1 库人工拆成原子函数）+ compile_plan v1 + 八方法 study
+      + experiments/round2/   预加载强基线、同等接口配对、汇总（只复算 实验结果.md 第 3 节，不在冻结清单内）
+      + experiments/replay_linked_plans.py / plan_linker.py   事后连接器复验（路径被其 manifest 钉住）
 v3  experiments/scale_study/ library()（v2 库人工扩成 20 个语义变体）+ 策略盲 compile_plan + 四方法 study
       + experiments/resume_scale.py / audit_scale.py / scale_rule_control.py
+ext test/{webapp1k_dna,todomvc_dna,webbench_dna}/  三个外部数据集上的对比（各有 README）；experiments/webapp1k_probe.py 被 test/webapp1k_dna 复用
+paper DNA_latex/           ICML 2027 投稿 LaTeX（main.tex 正文，TODO 标记待补数字与图；本地目录，不入库）
 ```
 
 一个候选的生命周期（三轮一致）：
@@ -117,6 +122,7 @@ v3  experiments/scale_study/ library()（v2 库人工扩成 20 个语义变体�
 - 用词：说「做法/对照组」不说「臂」，说「组装方案 / 组装」不说「接线」，结论段用「目前明确的是 / 还不能确认的是」。
 - `实验结果.md`：唯一的结果文档；新一轮实验追加一节，不再新建「第 N 轮研究报告.md」。
 - `AGENTS.md`：本文件；`CLAUDE.md` 只是指向这里的入口。
+- `DNA_latex/`：英文论文，只在本地（`.gitignore` 忽略），不要提交。数字只从 `实验结果.md` 与各 `results/` 文件取，改了实验结论要同步改论文；未定内容用 `\TODO{...}`、缺数字用 `\TBD`、缺图用 `\figplaceholder{宽}{高}{说明}`（都在 `preamble.tex` 定义，红字显示），交稿前全部清掉。`icml2027.sty` / `icml2027.bst` 是由 2026 版改年份的草稿，官方 2027 样式发布后替换。`custom.bib` 每条都已对照出版方记录核实（2026-11-05），新加引用也要核实。正文必须 ≤ 8 页（影响声明、参考文献、附录不计）。
 - 报告风格沿用：先写结论，正负结果都保留，明确写出「还不能确认的是」。
 
 ## 6. 关键文件速查
@@ -132,4 +138,5 @@ v3  experiments/scale_study/ library()（v2 库人工扩成 20 个语义变体�
 | 外部 benchmark 候选与探针 | `实验结果.md` 第 8 节；`experiments/webapp1k_probe.py`；`artifacts/benchmark-probe/summary.md` |
 | 在 Web-Bench dom1 上跑 GUI-DNA | `test/webbench_dna/README.md`；`shell.html`、`library.py`（参考实现拆成的原子 + 变体）、`domain.py`（任务阶梯、`compile_plan`、提示词）、`evaluate.py`、`run.py`；官方测试在 `harness/dom1-tests/`；结论在 `实验结果.md` 第 11 节 |
 | 在 TodoMVC 官方测试集上跑 GUI-DNA | `test/todomvc_dna/README.md`；`shell.html`（公开外壳与协议）、`library.py`（冻结原子，含语义变体）、`domain.py`（任务族、需求、`compile_plan`、提示词）、`evaluate.py`（公开冒烟 + 官方隐藏评测）、`run.py`；结果 `test/todomvc_dna/results/`；结论在 `实验结果.md` 第 10 节 |
+| 改论文 | `DNA_latex/main.tex`（正文与附录）、`preamble.tex`（宏与标记）、`custom.bib`；表格数字对应 `实验结果.md` 第 4、10、11、12 节 |
 | 在 WebApp1K-Duo 上跑 GUI-DNA（扩大实验入口） | `test/webapp1k_dna/README.md`；`run.py`（三种做法）、`compiler.py`（计划检查 + 拼装）、`analyze.js`（babel 静态字符串）；结果 `test/webapp1k_dna/results/`；结论在 `实验结果.md` 第 9 节 |

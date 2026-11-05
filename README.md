@@ -1,7 +1,7 @@
 # GUI-DNA：面向 GUI 功能组合的「方案 → 编译 → 验证」免训练生成
 
 > 不让大模型直接写 GUI 代码，而是让它输出一份**组装方案**，由编译器静态检查、给出明确诊断、再把冻结的函数体拼成可运行代码。
-> 在受控的列表管理 GUI 上，受检查的组装方案把**未见功能组合**的最终正确率从自由代码基线的 14/20（Qwen）、13/27（DeepSeek）提到 20/20、27/27。详见 [实验结果.md](实验结果.md)。
+> 在功能通过共享状态互相影响的任务上，受检查的组装方案相对自由代码稳定提高最终正确率：自建列表任务 27/47 → 47/47、TodoMVC 官方测试 116/128 → 128/128、Web-Bench dom1 官方测试 54/160 → 132/160（最多 8 个模型）；功能互不相关时（WebApp1K-Duo）没有提升。详见 [实验结果.md](实验结果.md) 第 12 节。
 
 目标会议：ICML 2027（年底截稿）。本仓库是 idea 验证原型，不是通用网页生成器。第一次读代码请先看 [代码逻辑.md](代码逻辑.md)：数据长什么样、两种做法每一步做什么、结果怎么算。
 
@@ -116,7 +116,8 @@ uv run python -m experiments.resume_scale --resume                    # 明确�
 | `src/gui_dna/` | 第一轮：任务定义、固定渲染器、Playwright 评测器、独立 oracle、函数库学习、OpenRouter 客户端、预算账本 |
 | `src/gui_dna/followup/` | 第二轮：原子函数库、方案编译器 v1、行为/状态分离评测、八方法消融 |
 | `experiments/scale_study/` | 第三轮（当前主线）：语义变体函数库、策略盲编译器、新隐藏评测、家族聚类 bootstrap 分析 |
-| `experiments/*.py` | 预加载强基线、同等接口配对、离线连接器复验、第三轮续跑/审计/零 API 控制 |
+| `experiments/*.py` | 第三轮续跑 / 审计 / 零 API 规则控制；`webapp1k_probe.py` 是 WebApp1K 探针（被 `test/webapp1k_dna/` 复用）；`replay_linked_plans.py` + `plan_linker.py` 是第二轮事后连接器复验（manifest 钉了路径，留在原处） |
+| `experiments/round2/` | 第二轮辅助脚本（预加载强基线、同等接口配对、汇总），只用于复算 [实验结果.md](实验结果.md) 第 3 节 |
 | `configs/` | 三轮实验配置（模型、温度、预算、提供商路由） |
 | `data/dev/` | 16 个开发任务及参考实现、人工契约标注 |
 | `tests/` | 上下文边界、编译器拒绝规则、账本并发、评测器校准等测试 |
@@ -125,6 +126,7 @@ uv run python -m experiments.resume_scale --resume                    # 明确�
 | `代码逻辑.md` | 面向新读者的流水线说明：数据示例、普通做法与 GUI-DNA 做法逐步对照、指标含义、术语表 |
 | `test/` | 三个外部数据集上的对比实验（WebApp1K-Duo、TodoMVC、Web-Bench dom1），各有 README |
 | `AGENTS.md` | 给 AI 编码代理（以及人）的操作手册 |
+| `DNA_latex/` | ICML 2027 投稿的 LaTeX 源（`main.tex`、`custom.bib`、样式文件；未定数字与图以 TODO 占位）。**只在本地，已被 `.gitignore` 忽略，不入库** |
 | `artifacts/` | 本地实验产物（不入库；仅少数 report/protocol 入库） |
 
 ## 4. 来源与致谢
