@@ -118,13 +118,14 @@ uv run python -m experiments.resume_scale --resume                    # 明确�
 | `experiments/scale_study/` | 第三轮（当前主线）：语义变体函数库、策略盲编译器、新隐藏评测、家族聚类 bootstrap 分析 |
 | `experiments/*.py` | 第三轮续跑 / 审计 / 零 API 规则控制；`webapp1k_probe.py` 是 WebApp1K 探针（被 `test/webapp1k_dna/` 复用）；`replay_linked_plans.py` + `plan_linker.py` 是第二轮事后连接器复验（manifest 钉了路径，留在原处） |
 | `experiments/round2/` | 第二轮辅助脚本（预加载强基线、同等接口配对、汇总），只用于复算 [实验结果.md](实验结果.md) 第 3 节 |
+| `experiments/TODO.md` | 实验待做清单（按收益/成本排序，含费用估算与入口命令）；做完的项删掉，结果进 [实验结果.md](实验结果.md) |
 | `configs/` | 三轮实验配置（模型、温度、预算、提供商路由） |
 | `data/dev/` | 16 个开发任务及参考实现、人工契约标注 |
 | `tests/` | 上下文边界、编译器拒绝规则、账本并发、评测器校准等测试 |
 | `scripts/` | OpenRouter 余额检查 |
 | `实验结果.md` | 三轮实验全部结果、失败案例、费用、续跑说明与外部 benchmark 对比 |
 | `代码逻辑.md` | 面向新读者的流水线说明：数据示例、普通做法与 GUI-DNA 做法逐步对照、指标含义、术语表 |
-| `test/` | 三个外部数据集上的对比实验（WebApp1K-Duo、TodoMVC、Web-Bench dom1），各有 README |
+| `test/` | 三个外部数据集上的对比实验（WebApp1K-Duo、TodoMVC、Web-Bench dom1），各有 README；`paired_intervals.py` 算配对差的聚类 bootstrap 区间，`webbench_dna/taskmap_figure.py` 画逐任务通过图 |
 | `AGENTS.md` | 给 AI 编码代理（以及人）的操作手册 |
 | `DNA_latex/` | ICML 2027 投稿的 LaTeX 源（`main.tex`、`custom.bib`、样式文件；未定数字与图以 TODO 占位）。**只在本地，已被 `.gitignore` 忽略，不入库** |
 | `artifacts/` | 本地实验产物（不入库；仅少数 report/protocol 入库） |
