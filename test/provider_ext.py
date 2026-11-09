@@ -1,6 +1,6 @@
 """OpenRouter client for the external-benchmark stages: identical to the frozen gui_dna.provider.OpenRouter except
 that reasoning models are asked for low-effort reasoning instead of having reasoning disabled (which the OpenAI
-endpoints reject with HTTP 400/404).  `_single` is copied from the frozen file with that one change.
+endpoints reject with HTTP 400/404).  `_single` is copied from the frozen file with that one change; `call` is copied with a longer HTTP 429 retry schedule (see below).
 """
 from __future__ import annotations
 
@@ -17,6 +17,37 @@ from gui_dna.tasks import dump
 
 
 class ReasoningAwareOpenRouter(OpenRouter):
+    # Change 3 (2026-11-09): more patience with HTTP 429.  The frozen client gives up after three tries (30 s, 60 s);
+    # shared-pool models such as Gemma-3-12B stay rate-limited for minutes, and a call that never reached the model
+    # is not a model output.  Same replay rules and folder layout (`http-retry-<n>`), one reservation per POST.
+    RATE_LIMIT_TRIES = 6
+
+    def call(self, model, messages, out, purpose, max_tokens=None, seed=None):
+        for retry in range(self.RATE_LIMIT_TRIES):
+            folder = Path(out) if retry == 0 else Path(out) / f"http-retry-{retry}"
+            try:
+                request_path = folder / "request.json"
+                if request_path.exists():
+                    request = json.loads(request_path.read_text())
+                    if request["body"]["messages"] != messages or request["body"]["model"] != model:
+                        raise ProviderError("Interrupted request context changed; refusing to overwrite it")
+                    calls = self.ledger.summary()["calls"]
+                    settled = any(c["id"] == request["call_id"] and c["actual"] is not None for c in calls)
+                    response_path = folder / "response.json"
+                    if settled and response_path.exists():
+                        payload = json.loads(response_path.read_text())
+                        return payload["choices"][0]["message"]["content"] or ""
+                    error_path = folder / "error.json"
+                    error = json.loads(error_path.read_text()) if error_path.exists() else {}
+                    if "HTTP 429" in error.get("error", ""):
+                        raise RateLimited(error["error"], error.get("retry_after", 30))
+                    raise ProviderError("Unsettled interrupted request; reservation retained, no automatic retry")
+                return self._single(model, messages, folder, purpose, max_tokens, seed)
+            except RateLimited as error:
+                if retry == self.RATE_LIMIT_TRIES - 1:
+                    raise
+                time.sleep(min(300, max(error.retry_after, 30 * 2**retry)))
+
     def _single(self, model, messages, out, purpose, max_tokens=None, seed=None):
         out = Path(out)
         out.mkdir(parents=True, exist_ok=True)

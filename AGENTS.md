@@ -14,6 +14,7 @@
 - 2026-11-02 新增 `test/webbench_dna/`：Web-Bench（字节）dom1 项目上的对比，官方测试逐字、参考实现拆成原子函数库。2026-11-03 TodoMVC 与 Web-Bench 都扩到 8 个模型并加了两个对照（自由代码 + 同一函数库、方案不做覆盖检查）；结果汇总在 `实验结果.md` 第 12 节。OpenAI 模型要经 `test/provider_ext.py`（冻结客户端的子类：允许低强度推理、去掉 GPT-5 不接受的参数）。账本不能放宽，扩展时用新的 `--out` 目录并拷入旧 `runs/`，费用用 `--extra-ledgers` 合并。余额约 $1.8（2026-11-03）。Node 运行器在 `test/webbench_dna/harness/`（需 `npm install`）；上游仓库克隆在 `artifacts/web-bench/`（只读）。
 - 2026-11-05 整理：第二轮辅助脚本归档到 `experiments/round2/`（模块方式运行）；事后连接器复验 `experiments/replay_linked_plans.py` + `plan_linker.py` 留在原处，因为 `artifacts/linked-plan-posthoc/manifest.json` 记录了它们的路径与哈希，挪动或格式化都会让复验断言失败。新增 `DNA_latex/`（ICML 2027 论文源，英文；只在本地，`.gitignore` 忽略，不入库），旧论文模板目录已删。
 - 2026-11-08：新增 `experiments/TODO.md`（**实验待做清单**，开工先读，做完的项从清单删除、结果进 `实验结果.md`）；零成本脚本 `test/paired_intervals.py`（TodoMVC / Web-Bench 配对差的聚类 bootstrap 区间 → `test/results/paired-intervals.{json,md}`）与 `test/webbench_dna/taskmap_figure.py`（`uv run --with matplotlib`，输出 `DNA_latex/figures/webbench_taskmap.pdf`）；Web-Bench 第五阶段 `artifacts/webbench-dna-5/` 已完成（「自由 + 同一函数库」「方案不做覆盖检查」补到全部 8 个模型，已结算 $1.68；结论见 `实验结果.md` 第 13 节：强模型拿到函数库写自由代码 68/80 对方案 73/80，函数库本身是强模型收益的大头）。余额 2026-11-08 约 $21.4（用户已充值），本次用掉约 $1.7。
+- 2026-11-09：按 `experiments/TODO.md` 做完一批并写进 `实验结果.md` 第 14 节。零成本：`test/export_prompts.py`（→ `DNA_latex/prompts.tex`）、`test/repair_breakdown.py`、`test/ledger_costs.py`、`test/model_table.py`、`test/webbench_dna/seeds.py`、编译器放宽时间线。付费（四个新阶段、独立账本，合计 $6.9）：`artifacts/todomvc-dna-5/`（每族 5 采样，自由代码 288/315 对 GUI-DNA 317/317）、`artifacts/webbench-dna-seed1/`、`-seed2/`（7 模型 × 2 个新种子：方案在强模型上三个种子都是 73/80，「自由 + 同一函数库」68 / 48 / 68）、`artifacts/webbench-dna-frontier/`（GPT-5：自由 14/20 对方案 18/20）、`artifacts/webbench-dna-6/`（= 第五阶段 + Mistral「自由 + 函数库」任务 10–20 重做；**现在的 `test/webbench_dna/results/summary.json` 来自这里**，数字与第五阶段相同）。**传输失败规则**：HTTP 429 重试耗尽 / 连接中断不是模型输出，`test/rerun_failed.py` 把这类记录挪到 `<stage>/discarded-transport/<n>/` 后用同样参数重跑；Gemma 3 12B 当天在 OpenRouter 两个供应商都持续限流，重做失败，所以 Web-Bench 上它的自由代码数字是下界（论文与第 14.5 节已写明），新种子与新采样排除了它。配置改动：`test/provider_ext.py` 的 429 重试放宽到 6 次（最长等 5 分钟）；两个运行器把 Gemma 钉到 NextBit（`provider_order`，之前所有 Gemma 调用实际都走它）；`test/webbench_dna/run.py` 加了 `openai/gpt-5` 的推理强度 / 省略参数 / 价格上限；`test/todomvc_dna/run.py` 加 `--no-generate`。余额收工时约 $13.7，**用户要求之后不再花 API 费用**；论文 `DNA_latex/main.tex` 已同步（新附录 app:samples、app:transport、app:repair、prompts.tex；tab:cost 合计 $14.36）。本机没有 TeX，用 tectonic 静态二进制在临时目录编译检查过。
 - 中文为文档语言；代码注释与标识符为英文；`DNA_latex/` 内为英文论文。
 
 ## 2. 环境与常用命令
@@ -70,6 +71,17 @@ uv run python -m test.todomvc_dna.run --arms free rule dna --samples 2   # 付�
 uv run pytest test/webbench_dna -q
 uv run python -m test.webbench_dna.run --arms rule                                  # 零 API：规则组装 + 官方测试
 uv run python -m test.webbench_dna.run --arms free rule dna --models <...>           # 付费；--evaluate-only 只重评，--grade-workers 并行评分
+
+# 零成本的汇总 / 论文素材脚本（2026-11-08/09）
+uv run python -m test.paired_intervals [--todomvc <summary.json> --label <tag>]    # 配对差的聚类 bootstrap 区间 → test/results/paired-intervals*.md
+uv run python -m test.repair_breakdown                 # 首次即对 / 修复后才对 / 修复也不对 → test/results/repair-breakdown.md
+uv run python -m test.export_prompts                   # 四个数据集的提示词逐字导出 → DNA_latex/prompts.tex（本地论文目录）
+uv run python -m test.ledger_costs                     # 所有账本按阶段汇总已结算费用（只读）
+uv run python -m test.model_table --summary <summary.json> --arms free dna          # 逐模型小表（Markdown + LaTeX 行）
+uv run python -m test.webbench_dna.seeds               # Web-Bench 多种子汇总（读 artifacts/webbench-dna-seed*/summary.json）
+uv run --with matplotlib python -m test.webbench_dna.taskmap_figure                  # 逐任务通过图 → DNA_latex/figures/
+# 传输失败（HTTP 429 重试耗尽、连接中断）不是模型输出：先列出、再 --apply 把这些记录挪到 <stage>/discarded-transport/<n>/，然后用同样参数重跑该阶段（顺序做法从出错任务起全部重做）
+uv run python -m test.rerun_failed --stage artifacts/<stage> --suite webbench|todomvc [--apply]
 ```
 
 `.browser-deps/` 里是无 sudo 环境解包的 `libnspr4`/`libnss3`，评测子进程自动加到 `LD_LIBRARY_PATH`；没有也不影响有系统库的机器。

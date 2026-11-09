@@ -54,7 +54,7 @@
 | anthropic/claude-haiku-4.5 | vs Plan- | final | 16 | +0.0 | [0.0, 0.0] | — | 0/0/16 |
 | anthropic/claude-haiku-4.5 | vs Rule | final | 16 | +87.5 | [62.5, 100.0] | — | 14/0/2 |
 
-## Web-Bench dom1 (official tests)（summary 生成于 2026-11-08T01:27:00Z）
+## Web-Bench dom1 (official tests)（summary 生成于 2026-11-09T08:42:59Z）
 
 | 范围 | 对比 | 版本 | n 对 | 差值 | 95% 区间（任务簇） | 95% 区间（模型簇） | 胜/负/平 |
 |---|---|---|---:|---:|---:|---:|---:|

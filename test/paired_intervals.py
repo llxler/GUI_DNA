@@ -108,11 +108,19 @@ def markdown(results):
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument('--todomvc', type=Path, default=SUITES['todomvc']['summary'], help='alternative TodoMVC summary.json (e.g. the 5-sample stage)')
+    parser.add_argument('--webbench', type=Path, default=SUITES['webbench']['summary'])
+    parser.add_argument('--label', default='', help='suffix for the output files, e.g. samples5 -> paired-intervals-samples5.{json,md}')
+    args = parser.parse_args()
+    SUITES['todomvc']['summary'], SUITES['webbench']['summary'] = args.todomvc, args.webbench
     results = [analyse(name, spec) for name, spec in SUITES.items() if spec['summary'].exists()]
     out = ROOT / 'test/results'
     out.mkdir(exist_ok=True)
-    (out / 'paired-intervals.json').write_text(json.dumps(results, ensure_ascii=False, indent=1))
-    (out / 'paired-intervals.md').write_text(markdown(results))
+    suffix = f'-{args.label}' if args.label else ''
+    (out / f'paired-intervals{suffix}.json').write_text(json.dumps(results, ensure_ascii=False, indent=1))
+    (out / f'paired-intervals{suffix}.md').write_text(markdown(results))
     for r in results:
         print(r['label'])
         for key, c in r['pooled'].items():

@@ -251,10 +251,14 @@ def main():
     config = {'models': args.models, 'temperature': 0.6, 'max_tokens': 12000, 'max_repairs': args.max_repairs, 'seed': args.seed,
               'budget_usd': args.cap_usd, 'stop_new_requests_usd': args.stop_usd,
               'price_caps_per_million': {'prompt': 3.0, 'completion': 15.0},
-              'reasoning_effort': {'openai/gpt-5-mini': 'low', 'openai/gpt-oss-120b': 'low'},
-              'omit_params': {'openai/gpt-5-mini': ['temperature', 'seed']},
+              'reasoning_effort': {'openai/gpt-5-mini': 'low', 'openai/gpt-oss-120b': 'low', 'openai/gpt-5': 'low'},
+              # Gemma-3-12B: every call of the earlier stages was served by NextBit; since 2026-11-09 OpenRouter's cheapest route
+              # (DeepInfra shared pool) answers HTTP 429 for minutes, so the provider is pinned to keep the stages comparable.
+              'provider_order': {'google/gemma-3-12b-it': ['NextBit']},
+              'omit_params': {'openai/gpt-5-mini': ['temperature', 'seed'], 'openai/gpt-5': ['temperature', 'seed']},
               'model_price_caps': {'deepseek/deepseek-v4-pro-0813': {'prompt': 1.3, 'completion': 4.1},
                                    'deepseek/deepseek-v4-flash': {'prompt': 0.2, 'completion': 0.4},
+                                   'openai/gpt-5': {'prompt': 1.3, 'completion': 10.5},
                                    'qwen/qwen3-coder-30b-a3b-instruct': {'prompt': 0.1, 'completion': 0.4},
                                    'google/gemma-3-12b-it': {'prompt': 0.1, 'completion': 0.3},
                                    'mistralai/mistral-small-3.2-24b-instruct': {'prompt': 0.1, 'completion': 0.3},

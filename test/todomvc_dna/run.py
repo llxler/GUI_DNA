@@ -245,6 +245,7 @@ def main():
     parser.add_argument('--label', default='')
     parser.add_argument('--extra-ledgers', nargs='*', default=[], help='older ledgers whose settled calls count in the cost columns')
     parser.add_argument('--recompile', action='store_true', help='re-link saved dna responses with the current compiler (no API), then grade')
+    parser.add_argument('--no-generate', action='store_true', help='only load saved records; grade what is missing; no API calls')
     args = parser.parse_args()
     out = args.out.resolve()
     out.mkdir(parents=True, exist_ok=True)
@@ -254,6 +255,9 @@ def main():
               'budget_usd': args.cap_usd, 'stop_new_requests_usd': args.stop_usd,
               'price_caps_per_million': {'prompt': 3.0, 'completion': 15.0},
               'reasoning_effort': {'openai/gpt-5-mini': 'low', 'openai/gpt-oss-120b': 'low'},
+              # Gemma-3-12B: every call of the earlier stages was served by NextBit; since 2026-11-09 OpenRouter's cheapest route
+              # (DeepInfra shared pool) answers HTTP 429 for minutes, so the provider is pinned to keep the stages comparable.
+              'provider_order': {'google/gemma-3-12b-it': ['NextBit']},
               'omit_params': {'openai/gpt-5-mini': ['temperature', 'seed']},
               'model_price_caps': {'deepseek/deepseek-v4-pro-0813': {'prompt': 1.3, 'completion': 4.1},
                                    'qwen/qwen3-coder': {'prompt': 0.65, 'completion': 3.25},
@@ -263,7 +267,7 @@ def main():
                                    'openai/gpt-5-mini': {'prompt': 0.3, 'completion': 2.1}, 'openai/gpt-oss-120b': {'prompt': 0.2, 'completion': 0.7},
                                    'google/gemini-2.5-flash': {'prompt': 0.35, 'completion': 2.6}, 'anthropic/claude-haiku-4.5': {'prompt': 1.1, 'completion': 5.1}}}
     ledger = Ledger(out / 'budget.sqlite3', args.cap_usd, args.stop_usd)
-    paid = (not args.evaluate_only) and (not args.recompile) and any(a in args.arms for a in ['free', 'dna'])
+    paid = (not args.evaluate_only) and (not args.recompile) and (not args.no_generate) and any(a in args.arms for a in ['free', 'dna', 'free_lib', 'dna_unchecked'])
     provider = OpenRouter(config, ledger) if paid else None
     dump(out / 'manifest.json', {'config': config, 'arms': args.arms, 'samples': args.samples, 'tasks': tasks, 'library_sha256': lib['sha256'],
                                  'domain_sha256': evaluate.sha256((HERE / 'domain.py').read_text()),
@@ -279,7 +283,7 @@ def main():
                 for s in range(args.samples):
                     for arm in args.arms:
                         folder = out / 'runs' / slug(model) / arm / task['id'] / f's{s}'
-                        if args.evaluate_only or args.recompile:
+                        if args.evaluate_only or args.recompile or args.no_generate:
                             if not (folder / 'record.json').exists():
                                 continue
                             rec = json.loads((folder / 'record.json').read_text())
