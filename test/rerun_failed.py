@@ -7,8 +7,8 @@ connection, interrupted request), so that the stage runner regenerates them with
 Policy (applied uniformly to every model and method):
   * a record is affected when any attempt carries a `ProviderError` (the call never produced a model output);
   * affected records are moved to <stage>/discarded-transport/<n>/<model>/<arm>/<task...> together with their hidden grades;
-  * in the sequential Web-Bench arms (`free`, `free_lib`) every later task of the same model and arm is moved too, because
-    each task starts from the previous task's page; plan arms and TodoMVC samples are independent.
+  * in sequential Web-Bench methods (`free`, `free_lib`, `dna_inc`) every later task is moved too,
+    because it starts from the previous page or plan; `free_clean`, fresh plans and TodoMVC samples are independent.
 Without --apply the script only lists what would move.  After moving, run the stage runner again with the same
 arguments: it skips existing records and regenerates the missing ones (new ledger reservations, same seed), then
 grades.  Repeat until the listing is empty.  The discarded folders stay on disk for audit.
@@ -20,7 +20,7 @@ import json
 import shutil
 from pathlib import Path
 
-SEQUENTIAL = {'webbench': {'free', 'free_lib'}, 'todomvc': set()}
+SEQUENTIAL = {'webbench': {'free', 'free_lib', 'dna_inc'}, 'todomvc': set()}
 
 
 def task_number(name):

@@ -1,0 +1,265 @@
+{
+  "date_utc": "2026-11-11T13:57:36Z",
+  "builders": {
+    "openai/gpt-5": {
+      "library": {
+        "sha256": "14db25502e8da65dd2ffd2eff0c94168382b663bec30b9a889199bcb00de3cd2",
+        "atoms": 33,
+        "build_attempts": 2,
+        "variants_per_slot": {
+          "init": 3,
+          "add": 3,
+          "toggle": 2,
+          "toggleAll": 2,
+          "edit": 2,
+          "save": 2,
+          "cancel": 2,
+          "clearCompleted": 2,
+          "route": 2,
+          "visible": 2,
+          "countText": 2,
+          "allCompleted": 2,
+          "hasCompleted": 2
+        },
+        "after_hooks": 5,
+        "build_cost_usd": 0.2054
+      },
+      "models": {
+        "qwen/qwen3-coder-30b-a3b-instruct": {
+          "dna": {
+            "n": 16,
+            "first": 16,
+            "final": 16,
+            "rejections": 0,
+            "transport_failures": 0,
+            "wins_vs_free": 1,
+            "losses_vs_free": 0,
+            "cost_usd": 0.0065
+          },
+          "free_lib": {
+            "n": 16,
+            "first": 7,
+            "final": 16,
+            "rejections": 0,
+            "transport_failures": 0,
+            "wins_vs_free": 1,
+            "losses_vs_free": 0,
+            "cost_usd": 0.0187
+          },
+          "main_free": 15,
+          "main_dna": 16,
+          "main_free_lib": 15
+        },
+        "mistralai/mistral-small-3.2-24b-instruct": {
+          "dna": {
+            "n": 16,
+            "first": 16,
+            "final": 16,
+            "rejections": 0,
+            "transport_failures": 0,
+            "wins_vs_free": 4,
+            "losses_vs_free": 0,
+            "cost_usd": 0.0069
+          },
+          "free_lib": {
+            "n": 16,
+            "first": 5,
+            "final": 15,
+            "rejections": 0,
+            "transport_failures": 0,
+            "wins_vs_free": 3,
+            "losses_vs_free": 0,
+            "cost_usd": 0.0172
+          },
+          "main_free": 12,
+          "main_dna": 16,
+          "main_free_lib": 9
+        },
+        "deepseek/deepseek-v4-pro-0813": {
+          "dna": {
+            "n": 16,
+            "first": 16,
+            "final": 16,
+            "rejections": 0,
+            "transport_failures": 0,
+            "wins_vs_free": 0,
+            "losses_vs_free": 0,
+            "cost_usd": 0.0169
+          },
+          "free_lib": {
+            "n": 16,
+            "first": 16,
+            "final": 16,
+            "rejections": 0,
+            "transport_failures": 0,
+            "wins_vs_free": 0,
+            "losses_vs_free": 0,
+            "cost_usd": 0.1181
+          },
+          "main_free": 16,
+          "main_dna": 16,
+          "main_free_lib": 16
+        },
+        "openai/gpt-oss-120b": {
+          "dna": {
+            "n": 16,
+            "first": 16,
+            "final": 16,
+            "rejections": 2,
+            "transport_failures": 0,
+            "wins_vs_free": 0,
+            "losses_vs_free": 0,
+            "cost_usd": 0.0031
+          },
+          "free_lib": {
+            "n": 16,
+            "first": 14,
+            "final": 16,
+            "rejections": 0,
+            "transport_failures": 0,
+            "wins_vs_free": 0,
+            "losses_vs_free": 0,
+            "cost_usd": 0.0066
+          },
+          "main_free": 16,
+          "main_dna": 16,
+          "main_free_lib": 16
+        }
+      }
+    },
+    "anthropic/claude-sonnet-4.5": {
+      "library": {
+        "sha256": "6b4dc301748056a13321edd4ae9d02689551e46f4a3c7187251b342c4990628c",
+        "atoms": 38,
+        "build_attempts": 2,
+        "variants_per_slot": {
+          "init": 2,
+          "add": 3,
+          "toggle": 2,
+          "toggleAll": 3,
+          "edit": 2,
+          "save": 3,
+          "cancel": 2,
+          "clearCompleted": 3,
+          "route": 2,
+          "visible": 3,
+          "countText": 4,
+          "allCompleted": 3,
+          "hasCompleted": 3
+        },
+        "after_hooks": 3,
+        "build_cost_usd": 0.2501
+      },
+      "models": {
+        "qwen/qwen3-coder-30b-a3b-instruct": {
+          "dna": {
+            "n": 16,
+            "first": 16,
+            "final": 16,
+            "rejections": 0,
+            "transport_failures": 0,
+            "wins_vs_free": 1,
+            "losses_vs_free": 0,
+            "cost_usd": 0.0045
+          },
+          "free_lib": {
+            "n": 16,
+            "first": 12,
+            "final": 16,
+            "rejections": 0,
+            "transport_failures": 0,
+            "wins_vs_free": 1,
+            "losses_vs_free": 0,
+            "cost_usd": 0.0102
+          },
+          "main_free": 15,
+          "main_dna": 16,
+          "main_free_lib": 15
+        },
+        "mistralai/mistral-small-3.2-24b-instruct": {
+          "dna": {
+            "n": 16,
+            "first": 16,
+            "final": 16,
+            "rejections": 0,
+            "transport_failures": 0,
+            "wins_vs_free": 4,
+            "losses_vs_free": 0,
+            "cost_usd": 0.0048
+          },
+          "free_lib": {
+            "n": 16,
+            "first": 16,
+            "final": 16,
+            "rejections": 0,
+            "transport_failures": 0,
+            "wins_vs_free": 4,
+            "losses_vs_free": 0,
+            "cost_usd": 0.0064
+          },
+          "main_free": 12,
+          "main_dna": 16,
+          "main_free_lib": 9
+        },
+        "deepseek/deepseek-v4-pro-0813": {
+          "dna": {
+            "n": 16,
+            "first": 16,
+            "final": 16,
+            "rejections": 0,
+            "transport_failures": 0,
+            "wins_vs_free": 0,
+            "losses_vs_free": 0,
+            "cost_usd": 0.0123
+          },
+          "free_lib": {
+            "n": 16,
+            "first": 16,
+            "final": 16,
+            "rejections": 0,
+            "transport_failures": 0,
+            "wins_vs_free": 0,
+            "losses_vs_free": 0,
+            "cost_usd": 0.0597
+          },
+          "main_free": 16,
+          "main_dna": 16,
+          "main_free_lib": 16
+        },
+        "openai/gpt-oss-120b": {
+          "dna": {
+            "n": 16,
+            "first": 16,
+            "final": 16,
+            "rejections": 0,
+            "transport_failures": 0,
+            "wins_vs_free": 0,
+            "losses_vs_free": 0,
+            "cost_usd": 0.0021
+          },
+          "free_lib": {
+            "n": 16,
+            "first": 16,
+            "final": 16,
+            "rejections": 0,
+            "transport_failures": 0,
+            "wins_vs_free": 0,
+            "losses_vs_free": 0,
+            "cost_usd": 0.0036
+          },
+          "main_free": 16,
+          "main_dna": 16,
+          "main_free_lib": 16
+        }
+      }
+    }
+  },
+  "accounting": {
+    "actual_usd": 0.753344,
+    "unsettled_calls": 2,
+    "ledgers": [
+      "artifacts/todomvc-blind-2/budget.sqlite3",
+      "artifacts/todomvc-blind/budget.sqlite3"
+    ]
+  }
+}

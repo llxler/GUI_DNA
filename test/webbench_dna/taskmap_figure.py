@@ -34,10 +34,12 @@ LEVEL = {'easy': '#9fb7cf', 'moderate': '#6b8fb3', 'challenging': '#2f5d8a'}
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--out', type=Path, default=ROOT / 'DNA_latex/figures')
+    parser.add_argument('--include-gemma', action='store_true', help='include historical transport-impaired runs')
     args = parser.parse_args()
     summary = json.loads(SUMMARY.read_text())
     tasks = summary['tasks']
-    models = sorted(summary['models'], key=lambda m: (m['arms']['free']['final_all'], m['arms']['dna']['final_all']))
+    models = sorted([m for m in summary['models'] if args.include_gemma or m['model'] != 'google/gemma-3-12b-it'],
+                    key=lambda m: (m['arms']['free']['final_all'], m['arms']['dna']['final_all']))
     rows = []   # (label, passes list, group index, is_first_of_group)
     for gi, m in enumerate(models):
         for arm, label in (('free', 'Free'), ('dna', 'GUI-DNA')):

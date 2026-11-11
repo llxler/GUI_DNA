@@ -1,0 +1,308 @@
+{
+  "libraries": [
+    {
+      "suite": "List-16",
+      "atoms": 20,
+      "variant_slots": null,
+      "atom_source_bytes": 2623,
+      "atom_nonblank_lines": 34,
+      "library_file_nonblank_lines": 156,
+      "shell_bytes": 7558,
+      "source": "experiments/scale_study/domain.py",
+      "human_hours": null
+    },
+    {
+      "suite": "TodoMVC",
+      "atoms": 24,
+      "variant_slots": 9,
+      "atom_source_bytes": 2366,
+      "atom_nonblank_lines": 24,
+      "library_file_nonblank_lines": 96,
+      "shell_bytes": 8238,
+      "source": "test/todomvc_dna/library.py",
+      "human_hours": null
+    },
+    {
+      "suite": "Web-Bench dom1",
+      "atoms": 44,
+      "variant_slots": 6,
+      "atom_source_bytes": 13769,
+      "atom_nonblank_lines": 44,
+      "library_file_nonblank_lines": 144,
+      "shell_bytes": 1783,
+      "source": "test/webbench_dna/library.py",
+      "human_hours": null
+    },
+    {
+      "suite": "WebApp1K-Duo",
+      "atoms": 15,
+      "variant_slots": 15,
+      "implementations": 30,
+      "atom_source_bytes": 36464,
+      "atom_nonblank_lines": 1278,
+      "library_file_nonblank_lines": null,
+      "shell_bytes": null,
+      "source": "test/webapp1k_dna/results/library.json",
+      "human_hours": null
+    }
+  ],
+  "webbench_seven": {
+    "models": [
+      "qwen/qwen3-coder-30b-a3b-instruct",
+      "mistralai/mistral-small-3.2-24b-instruct",
+      "deepseek/deepseek-v4-flash",
+      "openai/gpt-oss-120b",
+      "google/gemini-2.5-flash",
+      "openai/gpt-5-mini",
+      "anthropic/claude-haiku-4.5"
+    ],
+    "totals": {
+      "free": {
+        "passed": 52,
+        "n": 140
+      },
+      "free_lib": {
+        "passed": 99,
+        "n": 140
+      },
+      "dna_unchecked": {
+        "passed": 125,
+        "n": 140
+      },
+      "dna": {
+        "passed": 126,
+        "n": 140
+      },
+      "rule": {
+        "passed": 56,
+        "n": 140
+      }
+    },
+    "comparisons": {
+      "free": {
+        "n": 140,
+        "diff": 52.9,
+        "ci95": [
+          39.3,
+          66.4
+        ],
+        "wins": 74,
+        "losses": 0,
+        "ties": 66,
+        "ci95_model_clusters": [
+          43.6,
+          60.0
+        ]
+      },
+      "free_lib": {
+        "n": 140,
+        "diff": 19.3,
+        "ci95": [
+          12.1,
+          27.1
+        ],
+        "wins": 29,
+        "losses": 2,
+        "ties": 109,
+        "ci95_model_clusters": [
+          5.7,
+          36.4
+        ]
+      },
+      "dna_unchecked": {
+        "n": 140,
+        "diff": 0.7,
+        "ci95": [
+          -1.4,
+          2.9
+        ],
+        "wins": 2,
+        "losses": 1,
+        "ties": 137,
+        "ci95_model_clusters": [
+          0.0,
+          2.1
+        ]
+      },
+      "rule": {
+        "n": 140,
+        "diff": 50.0,
+        "ci95": [
+          30.0,
+          70.0
+        ],
+        "wins": 70,
+        "losses": 0,
+        "ties": 70,
+        "ci95_model_clusters": [
+          47.1,
+          53.6
+        ]
+      }
+    },
+    "scope": "Seven observed models, one project. Task-cluster intervals do not account for sequential dependence; model clusters do not establish project generalization."
+  },
+  "budget": {
+    "limit_usd": 10,
+    "maximum_combined_exposure_usd": 9.90589,
+    "settled_usd": 2.838848,
+    "exposure_usd": 3.052179,
+    "stages": {
+      "todomvc-blind": {
+        "calls": 67,
+        "settled_usd": 0.539763,
+        "exposure_usd": 0.539763,
+        "unsettled_calls": 0,
+        "cap_usd": 1e-06,
+        "stop_usd": 1e-06,
+        "halted": 0
+      },
+      "name-sensitivity": {
+        "calls": 640,
+        "settled_usd": 0.140054,
+        "exposure_usd": 0.166127,
+        "unsettled_calls": 12,
+        "cap_usd": 1e-06,
+        "stop_usd": 1e-06,
+        "halted": 0
+      },
+      "todomvc-blind-2": {
+        "calls": 225,
+        "settled_usd": 0.213581,
+        "exposure_usd": 0.22356,
+        "unsettled_calls": 2,
+        "cap_usd": 2.8,
+        "stop_usd": 2.6,
+        "halted": 0
+      },
+      "name-sensitivity-2": {
+        "calls": 16,
+        "settled_usd": 0.004255,
+        "exposure_usd": 0.004255,
+        "unsettled_calls": 0,
+        "cap_usd": 0.35,
+        "stop_usd": 0.3,
+        "halted": 0
+      },
+      "webbench-dna-clean": {
+        "calls": 118,
+        "settled_usd": 0.271073,
+        "exposure_usd": 0.392826,
+        "unsettled_calls": 10,
+        "cap_usd": 2.4,
+        "stop_usd": 2.3,
+        "halted": 0
+      },
+      "webbench-dna-frontier-lib": {
+        "calls": 20,
+        "settled_usd": 1.301978,
+        "exposure_usd": 1.301978,
+        "unsettled_calls": 0,
+        "cap_usd": 2.8,
+        "stop_usd": 2.65,
+        "halted": 0
+      },
+      "webbench-dna-clean-2": {
+        "calls": 170,
+        "settled_usd": 0.368144,
+        "exposure_usd": 0.42367,
+        "unsettled_calls": 4,
+        "cap_usd": 0.85,
+        "stop_usd": 0.8,
+        "halted": 0
+      }
+    }
+  },
+  "frontier": {
+    "model": "openai/gpt-5",
+    "free": 14,
+    "free_lib": 17,
+    "dna": 18,
+    "n": 20,
+    "dna_vs_free_lib": {
+      "wins": 1,
+      "losses": 0,
+      "ties": 19
+    },
+    "failed_library_tasks": [
+      "task-8",
+      "task-9",
+      "task-20"
+    ],
+    "free_lib_cost_usd": 1.301978
+  },
+  "matched_protocol": {
+    "models": {
+      "qwen/qwen3-coder-30b-a3b-instruct": {
+        "n": 19,
+        "passed": {
+          "free": 4,
+          "free_clean": 10,
+          "dna_inc": 14,
+          "dna": 16
+        },
+        "excluded_task_numbers": [
+          16
+        ]
+      },
+      "mistralai/mistral-small-3.2-24b-instruct": {
+        "n": 20,
+        "passed": {
+          "free": 5,
+          "free_clean": 11,
+          "dna_inc": 15,
+          "dna": 18
+        },
+        "excluded_task_numbers": []
+      },
+      "deepseek/deepseek-v4-flash": {
+        "n": 20,
+        "passed": {
+          "free": 12,
+          "free_clean": 12,
+          "dna_inc": 16,
+          "dna": 18
+        },
+        "excluded_task_numbers": []
+      },
+      "openai/gpt-oss-120b": {
+        "n": 20,
+        "passed": {
+          "free": 7,
+          "free_clean": 13,
+          "dna_inc": 15,
+          "dna": 17
+        },
+        "excluded_task_numbers": []
+      },
+      "google/gemini-2.5-flash": {
+        "n": 20,
+        "passed": {
+          "free": 11,
+          "free_clean": 14,
+          "dna_inc": 16,
+          "dna": 20
+        },
+        "excluded_task_numbers": []
+      },
+      "openai/gpt-5-mini": {
+        "n": 20,
+        "passed": {
+          "free": 6,
+          "free_clean": 11,
+          "dna_inc": 15,
+          "dna": 18
+        },
+        "excluded_task_numbers": []
+      }
+    },
+    "n": 119,
+    "passed": {
+      "free": 45,
+      "free_clean": 71,
+      "dna_inc": 91,
+      "dna": 107
+    },
+    "scope": "Intersection of observed candidates across all four protocols; missing transport outputs excluded uniformly."
+  }
+}
