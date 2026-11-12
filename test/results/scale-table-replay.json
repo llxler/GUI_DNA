@@ -1,0 +1,267 @@
+{
+  "raw_evaluated_candidates_checked": 190,
+  "record_metadata_checked": 192,
+  "complete_groups": 47,
+  "summary": [
+    {
+      "model": "qwen/qwen3-coder-plus",
+      "method": "dna",
+      "n": 20,
+      "first_passed": 12,
+      "passed": 13,
+      "state_passed": 13,
+      "runnable": 20,
+      "base_passed": 80,
+      "base_total": 82
+    },
+    {
+      "model": "qwen/qwen3-coder-plus",
+      "method": "linked_js",
+      "n": 20,
+      "first_passed": 10,
+      "passed": 14,
+      "state_passed": 14,
+      "runnable": 20,
+      "base_passed": 80,
+      "base_total": 82
+    },
+    {
+      "model": "qwen/qwen3-coder-plus",
+      "method": "plan_unchecked",
+      "n": 20,
+      "first_passed": 18,
+      "passed": 20,
+      "state_passed": 20,
+      "runnable": 20,
+      "base_passed": 82,
+      "base_total": 82
+    },
+    {
+      "model": "qwen/qwen3-coder-plus",
+      "method": "plan_checked",
+      "n": 20,
+      "first_passed": 18,
+      "passed": 20,
+      "state_passed": 20,
+      "runnable": 20,
+      "base_passed": 82,
+      "base_total": 82
+    },
+    {
+      "model": "deepseek/deepseek-v4-pro-0813",
+      "method": "dna",
+      "n": 27,
+      "first_passed": 24,
+      "passed": 26,
+      "state_passed": 26,
+      "runnable": 27,
+      "base_passed": 112,
+      "base_total": 112
+    },
+    {
+      "model": "deepseek/deepseek-v4-pro-0813",
+      "method": "linked_js",
+      "n": 27,
+      "first_passed": 7,
+      "passed": 13,
+      "state_passed": 13,
+      "runnable": 21,
+      "base_passed": 76,
+      "base_total": 112
+    },
+    {
+      "model": "deepseek/deepseek-v4-pro-0813",
+      "method": "plan_unchecked",
+      "n": 27,
+      "first_passed": 17,
+      "passed": 20,
+      "state_passed": 20,
+      "runnable": 27,
+      "base_passed": 105,
+      "base_total": 112
+    },
+    {
+      "model": "deepseek/deepseek-v4-pro-0813",
+      "method": "plan_checked",
+      "n": 27,
+      "first_passed": 15,
+      "passed": 27,
+      "state_passed": 27,
+      "runnable": 27,
+      "base_passed": 112,
+      "base_total": 112
+    }
+  ],
+  "contrasts": [
+    {
+      "model": "qwen/qwen3-coder-plus",
+      "baseline": "linked_js",
+      "metric": "first_hidden",
+      "n": 20,
+      "wins": 9,
+      "losses": 1,
+      "ties": 10,
+      "delta": 0.4,
+      "family_cluster_ci95": [
+        -0.0625,
+        0.7272727272727273
+      ]
+    },
+    {
+      "model": "qwen/qwen3-coder-plus",
+      "baseline": "linked_js",
+      "metric": "hidden",
+      "n": 20,
+      "wins": 6,
+      "losses": 0,
+      "ties": 14,
+      "delta": 0.3,
+      "family_cluster_ci95": [
+        0.0625,
+        0.5
+      ]
+    },
+    {
+      "model": "qwen/qwen3-coder-plus",
+      "baseline": "dna",
+      "metric": "first_hidden",
+      "n": 20,
+      "wins": 7,
+      "losses": 1,
+      "ties": 12,
+      "delta": 0.3,
+      "family_cluster_ci95": [
+        0.0625,
+        0.46153846153846156
+      ]
+    },
+    {
+      "model": "qwen/qwen3-coder-plus",
+      "baseline": "dna",
+      "metric": "hidden",
+      "n": 20,
+      "wins": 7,
+      "losses": 0,
+      "ties": 13,
+      "delta": 0.35,
+      "family_cluster_ci95": [
+        0.15,
+        0.5555555555555556
+      ]
+    },
+    {
+      "model": "qwen/qwen3-coder-plus",
+      "baseline": "plan_unchecked",
+      "metric": "first_hidden",
+      "n": 20,
+      "wins": 0,
+      "losses": 0,
+      "ties": 20,
+      "delta": 0.0,
+      "family_cluster_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "model": "qwen/qwen3-coder-plus",
+      "baseline": "plan_unchecked",
+      "metric": "hidden",
+      "n": 20,
+      "wins": 0,
+      "losses": 0,
+      "ties": 20,
+      "delta": 0.0,
+      "family_cluster_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "model": "deepseek/deepseek-v4-pro-0813",
+      "baseline": "linked_js",
+      "metric": "first_hidden",
+      "n": 27,
+      "wins": 13,
+      "losses": 5,
+      "ties": 9,
+      "delta": 0.2962962962962963,
+      "family_cluster_ci95": [
+        -0.041666666666666664,
+        0.5806451612903226
+      ]
+    },
+    {
+      "model": "deepseek/deepseek-v4-pro-0813",
+      "baseline": "linked_js",
+      "metric": "hidden",
+      "n": 27,
+      "wins": 14,
+      "losses": 0,
+      "ties": 13,
+      "delta": 0.5185185185185185,
+      "family_cluster_ci95": [
+        0.3333333333333333,
+        0.7307692307692307
+      ]
+    },
+    {
+      "model": "deepseek/deepseek-v4-pro-0813",
+      "baseline": "dna",
+      "metric": "first_hidden",
+      "n": 27,
+      "wins": 1,
+      "losses": 10,
+      "ties": 16,
+      "delta": -0.3333333333333333,
+      "family_cluster_ci95": [
+        -0.5,
+        -0.16666666666666666
+      ]
+    },
+    {
+      "model": "deepseek/deepseek-v4-pro-0813",
+      "baseline": "dna",
+      "metric": "hidden",
+      "n": 27,
+      "wins": 1,
+      "losses": 0,
+      "ties": 26,
+      "delta": 0.037037037037037035,
+      "family_cluster_ci95": [
+        0.0,
+        0.1111111111111111
+      ]
+    },
+    {
+      "model": "deepseek/deepseek-v4-pro-0813",
+      "baseline": "plan_unchecked",
+      "metric": "first_hidden",
+      "n": 27,
+      "wins": 4,
+      "losses": 6,
+      "ties": 17,
+      "delta": -0.07407407407407407,
+      "family_cluster_ci95": [
+        -0.2916666666666667,
+        0.12
+      ]
+    },
+    {
+      "model": "deepseek/deepseek-v4-pro-0813",
+      "baseline": "plan_unchecked",
+      "metric": "hidden",
+      "n": 27,
+      "wins": 7,
+      "losses": 0,
+      "ties": 20,
+      "delta": 0.25925925925925924,
+      "family_cluster_ci95": [
+        0.07142857142857142,
+        0.5
+      ]
+    }
+  ],
+  "all_match": true,
+  "scope": "Saved List-16 evaluations, accuracy and paired intervals; no writable ledger, browser rerun, cost/token recomputation, or resumed generation."
+}

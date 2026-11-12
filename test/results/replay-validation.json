@@ -1,0 +1,51 @@
+{
+  "archive_sha256": "e8ee6d61e68b589698d622eab9e3a9c0f329c67182fd2ac47e01d3a4eeac0859",
+  "published": false,
+  "checks": [
+    {
+      "module": "test.replay_scale_table",
+      "output": "test/results/scale-table-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_primary_tables",
+      "output": "test/results/primary-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.review_metrics",
+      "output": "test/results/review-metrics.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.interface_blind.analyze",
+      "output": "test/results/interface-blind.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.behavior_feedback_analyze",
+      "output": "test/results/behavior-feedback.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.repair_breakdown",
+      "output": "test/results/repair-breakdown.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.paired_intervals",
+      "output": "test/results/paired-intervals.json",
+      "exit_code": 0,
+      "identical": true
+    }
+  ],
+  "scope": "Hash verification; three primary accuracy tables plus five sample/seed/frontier extensions from raw records; five further summary recomputations. External row checks reuse observations across tables; distinct file-path count reported separately. Not a replay of every historical browser test or every paper table.",
+  "hashes_verified": 118850,
+  "all_passed": true
+}

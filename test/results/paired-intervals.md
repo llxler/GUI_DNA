@@ -2,7 +2,7 @@
 
 零 API，`uv run python -m test.paired_intervals`。统计口径与第三轮 `paired_interval()` 相同：按簇（TodoMVC 为功能族 = 任务 id；Web-Bench 为任务 id）有放回重抽 10,000 次，取重抽均值的 2.5% / 97.5% 分位。合计行另给「以模型为簇」的区间。
 
-## TodoMVC (official Playwright tests)（summary 生成于 2026-11-03T07:08:33Z）
+## TodoMVC (official Playwright tests)（summary 生成于 2026-11-09T12:36:04Z）
 
 | 范围 | 对比 | 版本 | n 对 | 差值 | 95% 区间（任务簇） | 95% 区间（模型簇） | 胜/负/平 |
 |---|---|---|---:|---:|---:|---:|---:|

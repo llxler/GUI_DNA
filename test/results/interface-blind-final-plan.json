@@ -1,0 +1,1367 @@
+{
+  "protocol": "Post-hoc diagnostic designed after primary scores; no changes to primary candidates, libraries or generation. Always the final executed plan from task 20, irrespective of its score; reuse unchanged on all 20 prefixes. One model decision, not zero model construction.",
+  "groups": [
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "n": 20,
+      "constant": 10,
+      "per_task": 10,
+      "per_task_won": 0,
+      "per_task_lost": 0
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "n": 20,
+      "constant": 10,
+      "per_task": 10,
+      "per_task_won": 0,
+      "per_task_lost": 0
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "n": 20,
+      "constant": 5,
+      "per_task": 11,
+      "per_task_won": 6,
+      "per_task_lost": 0
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "n": 20,
+      "constant": 5,
+      "per_task": 11,
+      "per_task_won": 6,
+      "per_task_lost": 0
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "n": 20,
+      "constant": 15,
+      "per_task": 14,
+      "per_task_won": 0,
+      "per_task_lost": 1
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "n": 20,
+      "constant": 2,
+      "per_task": 9,
+      "per_task_won": 8,
+      "per_task_lost": 1
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "n": 20,
+      "constant": 11,
+      "per_task": 8,
+      "per_task_won": 1,
+      "per_task_lost": 4
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "n": 20,
+      "constant": 0,
+      "per_task": 13,
+      "per_task_won": 13,
+      "per_task_lost": 0
+    }
+  ],
+  "rows": [
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-1",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-2",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-3",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-4",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-5",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-6",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-7",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-8",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-9",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-10",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-11",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-12",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-13",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-14",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-15",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-16",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-17",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-18",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-19",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-20",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-1",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-2",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-3",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-4",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-5",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-6",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-7",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-8",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-9",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-10",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-11",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-12",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-13",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-14",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-15",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-16",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-17",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-18",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-19",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-20",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-1",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-2",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-3",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-4",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-5",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-6",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-7",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-8",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-9",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-10",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-11",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-12",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-13",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-14",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-15",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-16",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-17",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-18",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-19",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-20",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-1",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-2",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-3",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-4",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-5",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-6",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-7",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-8",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-9",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-10",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-11",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-12",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-13",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-14",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-15",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-16",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-17",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-18",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-19",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-20",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-1",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-2",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-3",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-4",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-5",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-6",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-7",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-8",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-9",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-10",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-11",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-12",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-13",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-14",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-15",
+      "constant": true,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-16",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-17",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-18",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-19",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-20",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-1",
+      "constant": true,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-2",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-3",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-4",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-5",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-6",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-7",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-8",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-9",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-10",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-11",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-12",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-13",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-14",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-15",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-16",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-17",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-18",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-19",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-20",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-1",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-2",
+      "constant": true,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-3",
+      "constant": true,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-4",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-5",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-6",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-7",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-8",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-9",
+      "constant": true,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-10",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-11",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-12",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-13",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-14",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-15",
+      "constant": true,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-16",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-17",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-18",
+      "constant": true,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-19",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-20",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-1",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-2",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-3",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-4",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-5",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-6",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-7",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-8",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-9",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-10",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-11",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-12",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-13",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-14",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-15",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-16",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-17",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-18",
+      "constant": false,
+      "per_task": true
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-19",
+      "constant": false,
+      "per_task": false
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-20",
+      "constant": false,
+      "per_task": false
+    }
+  ]
+}

@@ -5,21 +5,21 @@
 
 | 模型 | 自由增量代码 | 干净前缀代码 | 增量方案 | 从头方案 |
 |---|---:|---:|---:|---:|
-| qwen/qwen3-coder-30b-a3b-instruct | 5/20 | 10/19 | 15/20 | 17/20 |
+| qwen/qwen3-coder-30b-a3b-instruct | 5/20 | 10/20 | 15/20 | 17/20 |
 | mistralai/mistral-small-3.2-24b-instruct | 5/20 | 11/20 | 15/20 | 18/20 |
 | deepseek/deepseek-v4-flash | 12/20 | 12/20 | 16/20 | 18/20 |
 | openai/gpt-oss-120b | 7/20 | 13/20 | 15/20 | 17/20 |
 | google/gemini-2.5-flash | 11/20 | 14/20 | 16/20 | 20/20 |
 | openai/gpt-5-mini | 6/20 | 11/20 | 15/20 | 18/20 |
-| **合计** | 46/120 | 71/119 | 92/120 | 108/120 |
+| **合计** | 46/120 | 71/120 | 92/120 | 108/120 |
 
 | 配对比较 | 有效配对 | 胜 | 负 |
 |---|---:|---:|---:|
 | dna_vs_free | 120 | 62 | 0 |
-| dna_vs_free_clean | 119 | 40 | 4 |
+| dna_vs_free_clean | 120 | 41 | 4 |
 | dna_inc_vs_free | 120 | 46 | 0 |
-| dna_inc_vs_free_clean | 119 | 31 | 11 |
-| free_clean_vs_free | 119 | 31 | 5 |
+| dna_inc_vs_free_clean | 120 | 32 | 11 |
+| free_clean_vs_free | 120 | 31 | 6 |
 | dna_vs_dna_inc | 120 | 16 | 0 |
 
-已结算费用 $0.6392；未结算调用 14。
+已结算费用 $0.6490；未结算调用 16。

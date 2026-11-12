@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-12",
+  "status": "Public-requirement shortlist only; no new model calls, libraries, harness calibration, or hidden scoring. Not a complete preregistration.",
+  "criteria": "Different static-browser applications with an init and 20 task descriptions; no mandatory framework/server build. Convenience selection, not a random project sample.",
+  "projects": [
+    {
+      "project": "calculator",
+      "reason": "数学运算、输入状态、历史重放；单HTML静态页面",
+      "public_file": "artifacts/web-bench/projects/calculator/tasks.jsonl",
+      "sha256": "fefd51f04358128e2feaaa6f4215a0ee6a61a911fcb2b56f1b4f15e9174ca01e",
+      "rows": 21,
+      "fields_read": [
+        "id",
+        "description"
+      ]
+    },
+    {
+      "project": "table",
+      "reason": "二维区域选择与排序；HTML/CSS/ES模块",
+      "public_file": "artifacts/web-bench/projects/table/tasks.jsonl",
+      "sha256": "f7be722b8dd370f3e2d856fc8f0e6e6512138ed3d3c93eb84daf74f032df2ebf",
+      "rows": 21,
+      "fields_read": [
+        "id",
+        "description"
+      ]
+    },
+    {
+      "project": "bom",
+      "reason": "iframe导航、前后向历史与文档检索；浏览器API状态",
+      "public_file": "artifacts/web-bench/projects/bom/tasks.jsonl",
+      "sha256": "9fba2dbaf1f243b45fe7b9e5a63c353a9e7ed108e2ada9f038a89dd364be2cf4",
+      "rows": 21,
+      "fields_read": [
+        "id",
+        "description"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1243 @@
+{
+  "protocol": "Five prespecified milestones per project; half of each task file public; remaining tests hidden. Initial and repaired candidates scored on the same hidden subset.",
+  "base_stage": "artifacts/interface-blind-final-2",
+  "split": "test/results/behavior-feedback-split.json",
+  "cost": {
+    "calls": 104,
+    "settled_usd": 0.122873,
+    "exposure_usd": 0.290186,
+    "unsettled_calls": 13,
+    "cap_usd": 3.0,
+    "stop_usd": 0.0,
+    "halted": 0
+  },
+  "missing": [],
+  "groups": [
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "methods": {
+        "free_lib": {
+          "n": 5,
+          "initial": 2,
+          "final": 3,
+          "improved": 1,
+          "regressed": 0,
+          "final_code_shaped_plan": 0,
+          "repair_calls": 4,
+          "initial_public": 3,
+          "final_public": 3
+        },
+        "plan": {
+          "n": 5,
+          "initial": 2,
+          "final": 2,
+          "improved": 0,
+          "regressed": 0,
+          "final_code_shaped_plan": 0,
+          "repair_calls": 3,
+          "initial_public": 3,
+          "final_public": 4
+        }
+      },
+      "paired_final": {
+        "n": 5,
+        "won": 0,
+        "lost": 1,
+        "tied": 4
+      },
+      "rows": [
+        {
+          "task": "task-4",
+          "method": "free_lib",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-8",
+          "method": "free_lib",
+          "initial": false,
+          "final": true,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-12",
+          "method": "free_lib",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-16",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-20",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-4",
+          "method": "plan",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-8",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": true,
+          "repair_calls": 1,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-12",
+          "method": "plan",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-16",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-20",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        }
+      ],
+      "unmatched_valid": []
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "methods": {
+        "free_lib": {
+          "n": 5,
+          "initial": 2,
+          "final": 2,
+          "improved": 0,
+          "regressed": 0,
+          "final_code_shaped_plan": 0,
+          "repair_calls": 4,
+          "initial_public": 3,
+          "final_public": 4
+        },
+        "plan": {
+          "n": 5,
+          "initial": 3,
+          "final": 3,
+          "improved": 0,
+          "regressed": 0,
+          "final_code_shaped_plan": 0,
+          "repair_calls": 4,
+          "initial_public": 3,
+          "final_public": 3
+        }
+      },
+      "paired_final": {
+        "n": 5,
+        "won": 1,
+        "lost": 0,
+        "tied": 4
+      },
+      "rows": [
+        {
+          "task": "task-4",
+          "method": "free_lib",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-8",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": true,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-12",
+          "method": "free_lib",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-16",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-20",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-4",
+          "method": "plan",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-8",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-12",
+          "method": "plan",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-16",
+          "method": "plan",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-20",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        }
+      ],
+      "unmatched_valid": []
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "methods": {
+        "free_lib": {
+          "n": 5,
+          "initial": 0,
+          "final": 0,
+          "improved": 0,
+          "regressed": 0,
+          "final_code_shaped_plan": 0,
+          "repair_calls": 10,
+          "initial_public": 0,
+          "final_public": 0
+        },
+        "plan": {
+          "n": 5,
+          "initial": 2,
+          "final": 2,
+          "improved": 0,
+          "regressed": 0,
+          "final_code_shaped_plan": 0,
+          "repair_calls": 6,
+          "initial_public": 2,
+          "final_public": 2
+        }
+      },
+      "paired_final": {
+        "n": 5,
+        "won": 2,
+        "lost": 0,
+        "tied": 3
+      },
+      "rows": [
+        {
+          "task": "task-4",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-8",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-12",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-16",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-20",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-4",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-8",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-12",
+          "method": "plan",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-16",
+          "method": "plan",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-20",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        }
+      ],
+      "unmatched_valid": []
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "methods": {
+        "free_lib": {
+          "n": 5,
+          "initial": 2,
+          "final": 2,
+          "improved": 0,
+          "regressed": 0,
+          "final_code_shaped_plan": 0,
+          "repair_calls": 6,
+          "initial_public": 2,
+          "final_public": 3
+        },
+        "plan": {
+          "n": 5,
+          "initial": 2,
+          "final": 2,
+          "improved": 0,
+          "regressed": 0,
+          "final_code_shaped_plan": 0,
+          "repair_calls": 6,
+          "initial_public": 2,
+          "final_public": 2
+        }
+      },
+      "paired_final": {
+        "n": 5,
+        "won": 0,
+        "lost": 0,
+        "tied": 5
+      },
+      "rows": [
+        {
+          "task": "task-4",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-8",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": true,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-12",
+          "method": "free_lib",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-16",
+          "method": "free_lib",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-20",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-4",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-8",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-12",
+          "method": "plan",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-16",
+          "method": "plan",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-20",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        }
+      ],
+      "unmatched_valid": []
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "methods": {
+        "free_lib": {
+          "n": 5,
+          "initial": 1,
+          "final": 2,
+          "improved": 1,
+          "regressed": 0,
+          "final_code_shaped_plan": 0,
+          "repair_calls": 7,
+          "initial_public": 1,
+          "final_public": 3
+        },
+        "plan": {
+          "n": 5,
+          "initial": 2,
+          "final": 2,
+          "improved": 0,
+          "regressed": 0,
+          "final_code_shaped_plan": 0,
+          "repair_calls": 6,
+          "initial_public": 2,
+          "final_public": 3
+        }
+      },
+      "paired_final": {
+        "n": 5,
+        "won": 0,
+        "lost": 0,
+        "tied": 5
+      },
+      "rows": [
+        {
+          "task": "task-4",
+          "method": "free_lib",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-8",
+          "method": "free_lib",
+          "initial": false,
+          "final": true,
+          "initial_public": false,
+          "final_public": true,
+          "repair_calls": 1,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-12",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-16",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": true,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-20",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-4",
+          "method": "plan",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-8",
+          "method": "plan",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-12",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-16",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": true,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-20",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        }
+      ],
+      "unmatched_valid": []
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "methods": {
+        "free_lib": {
+          "n": 5,
+          "initial": 2,
+          "final": 2,
+          "improved": 0,
+          "regressed": 0,
+          "final_code_shaped_plan": 0,
+          "repair_calls": 6,
+          "initial_public": 2,
+          "final_public": 2
+        },
+        "plan": {
+          "n": 5,
+          "initial": 2,
+          "final": 2,
+          "improved": 0,
+          "regressed": 0,
+          "final_code_shaped_plan": 0,
+          "repair_calls": 6,
+          "initial_public": 2,
+          "final_public": 3
+        }
+      },
+      "paired_final": {
+        "n": 5,
+        "won": 0,
+        "lost": 0,
+        "tied": 5
+      },
+      "rows": [
+        {
+          "task": "task-4",
+          "method": "free_lib",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-8",
+          "method": "free_lib",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-12",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-16",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-20",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-4",
+          "method": "plan",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-8",
+          "method": "plan",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-12",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-16",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": true,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-20",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        }
+      ],
+      "unmatched_valid": []
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "methods": {
+        "free_lib": {
+          "n": 5,
+          "initial": 1,
+          "final": 1,
+          "improved": 0,
+          "regressed": 0,
+          "final_code_shaped_plan": 0,
+          "repair_calls": 8,
+          "initial_public": 1,
+          "final_public": 1
+        },
+        "plan": {
+          "n": 5,
+          "initial": 2,
+          "final": 2,
+          "improved": 0,
+          "regressed": 0,
+          "final_code_shaped_plan": 2,
+          "repair_calls": 5,
+          "initial_public": 2,
+          "final_public": 3
+        }
+      },
+      "paired_final": {
+        "n": 5,
+        "won": 1,
+        "lost": 0,
+        "tied": 4
+      },
+      "rows": [
+        {
+          "task": "task-4",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-8",
+          "method": "free_lib",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-12",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-16",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-20",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-4",
+          "method": "plan",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-8",
+          "method": "plan",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-12",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": true
+        },
+        {
+          "task": "task-16",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": true
+        },
+        {
+          "task": "task-20",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": true,
+          "repair_calls": 1,
+          "final_code_shaped_plan": false
+        }
+      ],
+      "unmatched_valid": []
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "methods": {
+        "free_lib": {
+          "n": 5,
+          "initial": 2,
+          "final": 2,
+          "improved": 0,
+          "regressed": 0,
+          "final_code_shaped_plan": 0,
+          "repair_calls": 5,
+          "initial_public": 2,
+          "final_public": 3
+        },
+        "plan": {
+          "n": 5,
+          "initial": 2,
+          "final": 2,
+          "improved": 0,
+          "regressed": 0,
+          "final_code_shaped_plan": 0,
+          "repair_calls": 3,
+          "initial_public": 3,
+          "final_public": 4
+        }
+      },
+      "paired_final": {
+        "n": 5,
+        "won": 0,
+        "lost": 0,
+        "tied": 5
+      },
+      "rows": [
+        {
+          "task": "task-4",
+          "method": "free_lib",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-8",
+          "method": "free_lib",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-12",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-16",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-20",
+          "method": "free_lib",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": true,
+          "repair_calls": 1,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-4",
+          "method": "plan",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-8",
+          "method": "plan",
+          "initial": true,
+          "final": true,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-12",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": false,
+          "repair_calls": 2,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-16",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": false,
+          "final_public": true,
+          "repair_calls": 1,
+          "final_code_shaped_plan": false
+        },
+        {
+          "task": "task-20",
+          "method": "plan",
+          "initial": false,
+          "final": false,
+          "initial_public": true,
+          "final_public": true,
+          "repair_calls": 0,
+          "final_code_shaped_plan": false
+        }
+      ],
+      "unmatched_valid": []
+    }
+  ],
+  "aggregate": {
+    "all": {
+      "free_lib": {
+        "n": 40,
+        "initial": 12,
+        "final": 14,
+        "improved": 2,
+        "regressed": 0,
+        "repair_calls": 50,
+        "initial_public": 14,
+        "final_public": 19,
+        "final_code_shaped_plan": 0
+      },
+      "plan": {
+        "n": 40,
+        "initial": 17,
+        "final": 17,
+        "improved": 0,
+        "regressed": 0,
+        "repair_calls": 39,
+        "initial_public": 19,
+        "final_public": 24,
+        "final_code_shaped_plan": 2
+      }
+    },
+    "project:dom1": {
+      "free_lib": {
+        "n": 20,
+        "initial": 6,
+        "final": 7,
+        "improved": 1,
+        "regressed": 0,
+        "repair_calls": 24,
+        "initial_public": 8,
+        "final_public": 10,
+        "final_code_shaped_plan": 0
+      },
+      "plan": {
+        "n": 20,
+        "initial": 9,
+        "final": 9,
+        "improved": 0,
+        "regressed": 0,
+        "repair_calls": 19,
+        "initial_public": 10,
+        "final_public": 11,
+        "final_code_shaped_plan": 0
+      }
+    },
+    "project:form": {
+      "free_lib": {
+        "n": 20,
+        "initial": 6,
+        "final": 7,
+        "improved": 1,
+        "regressed": 0,
+        "repair_calls": 26,
+        "initial_public": 6,
+        "final_public": 9,
+        "final_code_shaped_plan": 0
+      },
+      "plan": {
+        "n": 20,
+        "initial": 8,
+        "final": 8,
+        "improved": 0,
+        "regressed": 0,
+        "repair_calls": 20,
+        "initial_public": 9,
+        "final_public": 13,
+        "final_code_shaped_plan": 2
+      }
+    },
+    "model:mistralai/mistral-small-3.2-24b-instruct": {
+      "free_lib": {
+        "n": 20,
+        "initial": 4,
+        "final": 6,
+        "improved": 2,
+        "regressed": 0,
+        "repair_calls": 29,
+        "initial_public": 5,
+        "final_public": 7,
+        "final_code_shaped_plan": 0
+      },
+      "plan": {
+        "n": 20,
+        "initial": 8,
+        "final": 8,
+        "improved": 0,
+        "regressed": 0,
+        "repair_calls": 20,
+        "initial_public": 9,
+        "final_public": 12,
+        "final_code_shaped_plan": 2
+      }
+    },
+    "model:openai/gpt-oss-120b": {
+      "free_lib": {
+        "n": 20,
+        "initial": 8,
+        "final": 8,
+        "improved": 0,
+        "regressed": 0,
+        "repair_calls": 21,
+        "initial_public": 9,
+        "final_public": 12,
+        "final_code_shaped_plan": 0
+      },
+      "plan": {
+        "n": 20,
+        "initial": 9,
+        "final": 9,
+        "improved": 0,
+        "regressed": 0,
+        "repair_calls": 19,
+        "initial_public": 10,
+        "final_public": 12,
+        "final_code_shaped_plan": 0
+      }
+    }
+  }
+}

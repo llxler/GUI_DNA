@@ -16,16 +16,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 ALLOWED_ROOTS = {'src', 'test', 'tests', 'experiments', 'configs', 'scripts', 'data'}
 ALLOWED_FILES = {'pyproject.toml', 'uv.lock', 'README.md', '实验结果.md', '代码逻辑.md', '.gitignore'}
-EXTENSIONS = {'.py', '.js', '.ts', '.json', '.jsonl', '.html', '.css', '.md', '.txt', '.toml', '.lock', '.sh'}
+EXTENSIONS = {'.py', '.js', '.cjs', '.ts', '.json', '.jsonl', '.html', '.css', '.md', '.txt', '.toml', '.lock', '.sh'}
 
 
 def anonymize(text):
-    text = text.replace(str(ROOT), '/workspace/GUI_DNA')
-    text = re.sub(r'/home/[^/\s\"\']+/work/gui_test', '/workspace/GUI_DNA', text)
-    text = re.sub(r'/home/[^/\s\"\']+', '/home/anonymous', text)
-    text = text.replace('github.com/llxler/', 'example.invalid/anonymous/')
-    text = re.sub(r'\b(?:lxler|llxler)\b', 'anonymous', text, flags=re.I)
-    return text
+    # Shared redaction preserves regex syntax in exported utility source.
+    from test.export_replay_bundle import scrub
+    return scrub(text)
 
 
 def main():
@@ -39,7 +36,8 @@ def main():
         if path.is_symlink() or not path.is_file():
             continue
         content = anonymize(path.read_text()).encode()
-        if re.search(rb'(?i)(lxler|llxler|/home/(?!anonymous)[^/\s]+)', content):
+        from test.export_replay_bundle import has_identity
+        if has_identity(content):
             raise ValueError(f'identity remains in {name}')
         entries[name] = content
     entries['SNAPSHOT.md'] = (

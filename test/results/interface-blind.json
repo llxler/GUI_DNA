@@ -1,0 +1,2381 @@
+{
+  "stage": "artifacts/interface-blind-final-2",
+  "build_stage": "artifacts/interface-blind-build-2",
+  "protocol": "Cumulative requirements, full-page generation, no human schema/shell; library-assisted methods have identical user input. Unrestricted code inherits frozen library files and may replace any of them.",
+  "costs": {
+    "build": {
+      "calls": 1,
+      "settled_usd": 0.240875,
+      "exposure_usd": 0.240875,
+      "unsettled_calls": 0,
+      "cap_usd": 1.5,
+      "stop_usd": 0.0,
+      "halted": 0
+    },
+    "generation": {
+      "calls": 275,
+      "settled_usd": 0.347864,
+      "exposure_usd": 0.355965,
+      "unsettled_calls": 1,
+      "cap_usd": 2.0,
+      "stop_usd": 0.0,
+      "halted": 0
+    },
+    "build_previous_0": {
+      "calls": 4,
+      "settled_usd": 0.533831,
+      "exposure_usd": 0.808423,
+      "unsettled_calls": 1,
+      "cap_usd": 5.5,
+      "stop_usd": 0.0,
+      "halted": 0
+    },
+    "generation_previous_0": {
+      "calls": 65,
+      "settled_usd": 0.051227,
+      "exposure_usd": 0.201338,
+      "unsettled_calls": 17,
+      "cap_usd": 2.0,
+      "stop_usd": 0.0,
+      "halted": 0
+    },
+    "generation_previous_1": {
+      "calls": 461,
+      "settled_usd": 0.375538,
+      "exposure_usd": 1.097821,
+      "unsettled_calls": 73,
+      "cap_usd": 3.0,
+      "stop_usd": 0.0,
+      "halted": 0
+    },
+    "generation_previous_2": {
+      "calls": 17,
+      "settled_usd": 0.018628,
+      "exposure_usd": 0.056404,
+      "unsettled_calls": 4,
+      "cap_usd": 3.0,
+      "stop_usd": 0.0,
+      "halted": 0
+    },
+    "generation_previous_3": {
+      "calls": 70,
+      "settled_usd": 0.096572,
+      "exposure_usd": 0.153876,
+      "unsettled_calls": 7,
+      "cap_usd": 9.0,
+      "stop_usd": 0.0,
+      "halted": 0
+    }
+  },
+  "libraries": [
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "feedback": []
+        }
+      ],
+      "status": "frozen",
+      "manual_edits": [],
+      "package_sha256": "4d6ff942adf4e16c4c60b57f9fe7ab8e9c8def9c4675e37b49f2bd44ea02bd6a",
+      "selected_attempt": 0,
+      "file_count": 7,
+      "source_bytes": 25291,
+      "compiler_bytes": 1503,
+      "plan_schema": "Plan language (JSON data-only):\n- type: object\n- properties:\n  - title: string (optional). Page title. Default: 'Explorer'.\n  - theme: string (optional). Currently 'dark' only; ignored otherwise. Default: 'dark'.\n  - leftbarWidth: number (optional). Initial leftbar width in pixels. Default: 300.\n  - initialData: object (optional). The import/export shape:\n      { entries: [ Entry ] }\n      Entry :=\n        - { type: 'file', name: string, content: string }\n        - { type: 'dir', name: string, children: [ Entry ] }\n  - options: object (optional):\n      - resizable: boolean (default true). Show and enable the resizer.\n      - showGenerator: boolean (default true). Show 'gen' button.\n      - showFilter: boolean (default true). Show 'filter' button.\n      - showImportExport: boolean (default true). Show 'imp' and 'exp' buttons.\n- No functions, no embedded HTML/CSS/JS code are allowed in the plan; only data.\n- All behaviors are present regardless of plan fields. The plan only affects initial content and visibility of some toolbar buttons and sizes.\n",
+      "design": "This library provides a reusable, DOM-driven file-explorer UI with a left panel (tree) and right panel (textarea editor). It is composed from independently meaningful components: Layout/Split (Explorer, Leftbar, Editor, Resizer), Toolbar (Tools buttons), TreeView (Entries, File/Dir nodes), ContextMenu (right-click actions), Clipboard (copy/cut/paste), KeyboardShortcuts (accelerators), Import/Export (JSON), Filter, and DragDrop (tree reordering and placement). State is stored in the DOM itself (each entry is a DOM element with required classes/attributes), with minimal controller state for selection, clipboard, filter, and layout width. This keeps the runtime close to the public requirements (\"Use DOM API as much as possible\").\n\n- Components and responsibilities:\n  - Explorer/Layout: creates .explorer, .leftbar (300px default, border-box), .editor; flexbox fills viewport; .resizer is an absolute handle on the right edge of .leftbar, hidden until hover; drag adjusts width.\n  - Toolbar: .tools (40px height) with right-aligned buttons: file, dir, del, imp, exp, gen, filter. The del button is disabled with no SelectedEntry.\n  - TreeView: .entries contains root entries. File: <div class=\"entry file\" id=\"...\" data-content=\"...\">filename</div>. Dir: <div class=\"entry dir\" id=\"...\"><span class=\"name\">dirname</span><div class=\"dir-content\"></div></div>. Clicking a file selects it and loads content. Clicking a dir toggles its 'open' class and selects it. Selection adds 'selected' class; clicking empty space clears selection.\n  - Creation/Insertion rules: When creating via toolbar or context menu, if SelectedEntry is a file, insert new entry after it in its parent container; if SelectedEntry is a dir, open it and append into its dir-content; if no selection, append to root. New files get unique id, random filename, and random text in data-content; dirs get unique id + random dirname + dir-content child.\n  - Delete: Deletes SelectedEntry; selection moves to next sibling, else previous sibling, else parent dir, else none. If the new selection is a dir, it is shown (open).\n  - Drag and drop: Custom mouse-based DnD. Dragging over a dir: drop on its left half appends into that dir; on right half inserts after it. Dragging over a file inserts after it (either half). Dragging over empty entries area appends to root. Self/descendant drops are prevented. Visual cues indicate target.\n  - Context menu: Right-click on an entry shows a .menu with .menu-item elements: add file (.menu-item-add-file), add dir (.menu-item-add-dir), delete (.menu-item-delete), copy (.menu-item-copy), paste (.menu-item-paste), cut (.menu-item-cut), rename (.menu-item-rename). Right-click on empty entries area shows a menu suited for the panel (no rename). Items are enabled/disabled contextually (e.g., del disabled with no selection; paste disabled with empty clipboard). The right-clicked entry becomes the selection for its menu.\n  - Clipboard: Copy stores a deep data snapshot (ids are regenerated when pasting). Cut stores a live element reference to be moved; pasting completes the move and clears the cut clipboard. Paste goes into the selected dir or after the selected file, or root if no selection.\n  - Import/Export: imp clears entries and imports JSON of the form {entries:[{type:'file', name, content}, {type:'dir', name, children:[...]}]}. exp serializes the current DOM back to the same structure and shows it via alert().\n  - Editor autosave: Typing in the textarea updates the data-content attribute for the selected file live.\n  - Shortcuts: Cross-platform accelerators are installed and displayed in menu items. On macOS use Cmd+..., elsewhere Ctrl+.... Copy (C), Paste (V), Cut (X), Add File (J), Add Dir (K), Delete (Delete/Backspace). Key handling avoids interfering with textarea editing (Delete/Backspace do nothing while the editor is focused; accelerators still work).\n  - Filter: The filter button prompts for a keyword; entries whose names do not match (case-insensitive) and have no matching descendants are hidden. Dirs remain visible if any descendant matches.\n\nComposition rules:\n- The UI is created at runtime by app.js using the plan-provided options and initial data. All features are enabled by default; plan values adjust initial data, labels, and layout width. The plan is not executable code; it only configures data and options.\n- Components interact only through DOM contracts and a few controller variables (selected element, clipboard, filter string, leftbar width). The DOM is the single source of truth for entries; import/export/clipboard/drag operate by traversing DOM.\n- All required public class names, attributes, and behaviors are implemented as specified so planners can selectively exercise features.\n\nLimitations:\n- HTML5 native drag-and-drop is not used to avoid cross-browser issues; a custom mouse-based drag is used instead.\n- The filter does not auto-open dirs; it hides non-matching leaves and keeps ancestors visible if any descendant matches.\n- Random names/text are generated at runtime and are not deterministic across page loads.\n- There is no persistence beyond the current page session, except leftbar width in localStorage.\n"
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "feedback": []
+        }
+      ],
+      "status": "frozen",
+      "manual_edits": [],
+      "package_sha256": "09186c6bbc0c80bfa25331f73dc0e90b8d2e08f85c69c462aac1577d9154c309",
+      "selected_attempt": 0,
+      "file_count": 1,
+      "source_bytes": 16869,
+      "compiler_bytes": 3409,
+      "plan_schema": "{\n  \"toolbar_buttons\": [\"file\", \"dir\", \"del\", \"imp\", \"exp\", \"gen\", \"filter\"],\n  \"context_menu_items\": {\n    \"entry\": [\"add_file\", \"add_dir\", \"delete\", \"copy\", \"paste\", \"cut\", \"rename\"],\n    \"panel\": [\"add_file\", \"add_dir\", \"delete\", \"copy\", \"paste\"]\n  },\n  \"keyboard_shortcuts\": {\n    \"copy\": true,\n    \"paste\": true,\n    \"cut\": true,\n    \"add_file\": true,\n    \"add_dir\": true,\n    \"delete\": true\n  },\n  \"features\": {\n    \"drag_drop\": true,\n    \"auto_save\": true,\n    \"resizer\": true,\n    \"filter\": true\n  },\n  \"initial_entries\": [{\"type\": \"file\", \"name\": \"example.txt\", \"content\": \"Hello\"}, {\"type\": \"dir\", \"name\": \"folder\", \"children\": []}]\n}\nAll fields optional. Booleans enable/disable features. Arrays control which UI elements appear. initial_entries seeds the tree.",
+      "design": "The library provides a hierarchical file explorer with toolbar, entries panel, context menus, drag-and-drop, keyboard shortcuts, and a text editor. Components: (1) ExplorerShell: root container with leftbar and editor in flexbox. (2) Toolbar: button strip with configurable actions. (3) EntriesPanel: hierarchical tree of file/dir entries with selection, drag-drop, filtering. (4) ContextMenu: right-click menu with conditional items. (5) Editor: textarea synced to selected file. (6) Resizer: draggable divider for leftbar width. Shared state: selectedEntry (current selection), clipboard (copy/cut buffer), filter keyword. Composition: plan specifies which toolbar buttons to show, which context menu items to enable, keyboard shortcuts, and initial entries. The compiler generates index.html with inlined CSS, HTML structure, and initialization script."
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "feedback": []
+        }
+      ],
+      "status": "frozen",
+      "manual_edits": [],
+      "package_sha256": "023bfff47daf184b21ef2141bf7fbb452150d2c21ae3b33d4b1ee91810622535",
+      "selected_attempt": 0,
+      "file_count": 14,
+      "source_bytes": 35142,
+      "compiler_bytes": 1518,
+      "plan_schema": "Plan is a pure-data JSON object that configures the generated survey site. It does not contain code or HTML.\n\nRoot object:\n- title: string (default: \"Survey\") — Survey title displayed on the page and used in export.\n- formSelector: string (default: \"#survey-form\") — CSS selector for the form; index.html includes this form id by default.\n- contents: { enabled?: boolean } (default: {enabled:true}) — Toggle the right-side contents panel.\n- questions: array of questionSpec (default: []) — Ordered list of questions to build. Each questionSpec is:\n  - kind: string — One of: \"question\", \"single\", \"multi\", \"open\", \"rating\", \"ranking\", \"nps\", \"likert\", \"data\".\n  - title: string — Title text (without numeric index prefix).\n  - name: string — Unique name (also used as fieldset id). For kind=\"data\", name should reflect the data type (e.g., \"data-url\").\n  - position?: \"append\" | \"prepend\" (default: \"append\") — Where to insert relative to existing questions.\n  - required?: boolean (default: false) — Initial required state (if supported by the kind).\n  - Additional per-kind fields:\n    - kind=\"question\": none (base question, no inputs).\n    - kind=\"single\": { options: string[], isSelectMode?: boolean, isShuffleMode?: boolean }\n    - kind=\"multi\": { options: string[], isShuffleMode?: boolean }\n    - kind=\"open\": { isMultilines: boolean, minLength?: number }\n    - kind=\"rating\": { starCount?: number }\n    - kind=\"ranking\": { options: string[], isShuffleMode?: boolean }\n    - kind=\"nps\": {} (0-10 scale)\n    - kind=\"likert\": { options: string[], statements: string[] }\n    - kind=\"data\": { dataType: \"url\"|\"tel\"|\"email\"|\"date\"|\"number\" }\n\nRuntime behavior from plan:\n- Questions are created in order. For each item, Survey uses prependQuestion or appendQuestion according to position, then renumbers question titles so the topmost is index 1.\n- Required, isSelectMode, isShuffleMode, and minLength are applied after construction (consistent with constructor parameter constraints).\n- Contents panel is created/updated if contents.enabled is true.\n\nExport format (saved to localStorage.data when .export is clicked):\n{ title: string, questions: QuestionJSON[] }\nwhere each QuestionJSON includes all constructor and config properties for its type, e.g.:\n- single: { kind:\"single\", title, name, options, required, isShuffleMode, isSelectMode }\n- open: { kind:\"open\", title, name, isMultilines, minLength, required }\n- rating: { kind:\"rating\", title, name, starCount, required }\n- ranking: { kind:\"ranking\", title, name, options, isShuffleMode }\n- nps: { kind:\"nps\", title, name, required }\n- likert: { kind:\"likert\", title, name, options, statements, required }\n- data: { kind:\"data\", title, name, dataType, required }\n- multi: { kind:\"multi\", title, name, options, required, isShuffleMode }\n- question: { kind:\"question\", title, name, required }\n",
+      "design": "This package provides a reusable, browser-native survey component library and a compiler that assembles a complete static website from a JSON plan. The library exposes modular question classes, a Survey orchestrator, and a Contents navigation panel. Questions are independent components with their own DOM root, state, and configuration panel. Survey owns the form and the question order, handles numbering, submission validation, drag-and-drop reordering via Contents, and export to localStorage.\n\nComponent boundaries and ownership:\n- Question (base): Owns a fieldset root (fieldset.q, id=name) with a legend (.q-title), a body (.q-body) for controls, and a config panel (.q-config). It centralizes the required config (.q-required) and provides a common interface (setRequired, updateTitleIndex, toJSON, validateOnSubmit). Subclasses override rendering, required propagation, value access, and JSON export.\n- SingleSelectionQuestion: Single-choice options as radios or a select (isSelectMode). Maintains both original and current rendered order, supports shuffle (isShuffleMode), propagates required using the form control attributes (radios: set required on a group radio; select: set required on select). Value is the option index.\n- MultiSelectionQuestion: Multiple-choice as checkboxes, supports shuffle. Required validation is enforced on form submit (alert + prevent) when none is selected, as browser required does not apply to checkbox groups.\n- OpenQuestion: Free-text input (single-line input or multiline textarea). Exposes minLength (default 0). If required, minimum length is enforced to be at least 2. In all cases, DOM minLength enforces answer length strictly greater than minLength by setting element.minLength = max(minLength+1, required?2:0).\n- RatingQuestion: Star rating (default 5). Click to highlight stars (.star.active up to clicked). Stores normalized value [0,1] in a hidden input named by the question name. Required is enforced using a behind-the-scenes radio group (name=name+'__stars') so the browser's required validation works; selection syncs to stars and hidden input.\n- RankingQuestion: Drag-and-drop ordering of options (.ranking-item). Insert before/after a target depending on whether the drop occurs on the top/bottom half of the target. A hidden input named by the question name stores a comma-separated list of original option indices reflecting the current display order. Supports shuffle, and restoring to original order when shuffle is disabled.\n- NpsQuestion: 0–10 scores as clickable blocks (.score) backed by an actual radio group named by the question name. Required is enforced via radio required, and the selected score is stored directly in the param-named radio control.\n- LikertQuestion: A table (thead/thead) where each row is a statement and columns are radio options. Each row has its own radio group named {name}_{statementIndex}. When required, each row's radio group is required.\n- DataQuestion: Input with type (url, tel, email, date, number); required is propagated via HTML required.\n- Contents: A fixed right-side panel (.contents) that lists questions (items with .contents-item). It updates after inserts, clicking a contents item scrolls to the associated question, and drag-and-drop reorders contents and the questions simultaneously. Styling ensures the panel never covers question content (the main page reserves right margin space).\n- Survey: Binds to a form via selector, holds title and question order, and mediates insertion (prepend/append), numbering (1-based \"n.\" prefix in question titles), contents updates, drag reordering integration, form submission validation (delegated to question.validateOnSubmit), and export to localStorage.data when the .export button is clicked. Prepend inserts at the top of the form; append inserts before the submit button so the submit remains last.\n\nComposition rules:\n- The compiler embeds the plan data into index.html as a JSON script tag; index.js loads this configuration and instantiates Survey and questions accordingly. The plan drives the set of questions, their order (append/prepend), and initial configuration (required, shuffle, select mode, minLength, etc.).\n- Only the submit button is initially placed in the form (action=\"submit\"). All questions are inserted dynamically via Survey methods, preserving the requirement not to add more initial elements to the form. The export button lives outside the form.\n- Required validation priority via form control attributes is implemented where feasible: SingleSelection (radios/select), Likert (radios per row), Nps (radios), Rating (via an off-screen radio group). For MultiSelection, the required rule is enforced on submit with an alert per spec.\n- Drag-and-drop: Contents items and RankingQuestion options respect the top/bottom half rule for inserting before/after targets and update internal state accordingly. Survey re-numbers question titles after reorders.\n- Export: The .export button serializes the survey into localStorage.data with each question emitting all of its constructor parameters and configuration flags (e.g., options, statements, isSelectMode, isShuffleMode, isMultilines, starCount, minLength, required, type for DataQuestion).\n\nLimitations:\n- No persistence of user answers beyond native form submission and not part of export. Export captures configuration/state, not responses.\n- Shuffle generates a new random order each time it is enabled; turning it off restores original defined order, not user-changed orders (e.g., in Ranking). Dragging after shuffling changes the current order as usual.\n- Keyboard interaction for star/NPS blocks is limited to the underlying radio inputs; the visual blocks respond to clicks.\n- Smooth scrolling behavior depends on browser support.\n"
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "feedback": []
+        }
+      ],
+      "status": "frozen",
+      "manual_edits": [],
+      "package_sha256": "105d5e0072bf3f07bd92d009d8bd4b1dac22748ac273fc9739782a541523352f",
+      "selected_attempt": 0,
+      "file_count": 11,
+      "source_bytes": 27503,
+      "compiler_bytes": 5724,
+      "plan_schema": "{\n  \"survey\": {\n    \"title\": \"string - survey title\",\n    \"formSelector\": \"string - CSS selector for form element, default 'form'\"\n  },\n  \"questions\": [\n    {\n      \"type\": \"string - one of: single, multi, open, rating, ranking, nps, likert, data\",\n      \"title\": \"string - question title text\",\n      \"name\": \"string - form control name attribute\",\n      \"options\": \"string[] - for single/multi/ranking/likert types\",\n      \"statements\": \"string[] - for likert type only\",\n      \"isMultilines\": \"boolean - for open type, use textarea if true\",\n      \"starCount\": \"number - for rating type, default 5\",\n      \"dataType\": \"string - for data type: url/tel/email/date/number\",\n      \"required\": \"boolean - if true, question must be answered, default false\",\n      \"isSelectMode\": \"boolean - for single type, use select instead of radios, default false\",\n      \"isShuffleMode\": \"boolean - for single/multi/ranking, shuffle options, default false\",\n      \"minLength\": \"number - for open type, minimum answer length, default 0\",\n      \"position\": \"string - 'prepend' or 'append', default 'append'\"\n    }\n  ]\n}\nSemantic choices: Question order in plan array determines initial display order (top to bottom). Position 'prepend' adds to form start, 'append' to form end. Contents sidebar auto-generates from question collection. Drag-drop in contents reorders questions in DOM. Config checkboxes appear in each question's config panel. Required validation uses native form validation where possible, custom validation for complex types. Shuffle preserves original order for restoration. Export captures complete question state including all config properties.",
+      "design": "The library provides a Survey component system for building dynamic questionnaires. Core architecture: (1) Question base class with fieldset root, title legend, body container, and config panel. (2) Seven specialized question types inheriting from Question: SingleSelectionQuestion (radio/select), MultiSelectionQuestion (checkboxes), OpenQuestion (text/textarea), RatingQuestion (star rating), RankingQuestion (drag-drop ordering), NpsQuestion (0-10 score), LikertQuestion (matrix), DataQuestion (typed inputs). (3) Survey class manages form, question collection, and Contents sidebar. (4) Contents class provides navigation sidebar with drag-drop reordering. State ownership: Each Question owns its DOM subtree, validation state, and config properties. Survey owns the question collection and orchestrates updates. Contents mirrors question order. Composition: Plans specify survey title, form selector, and an array of question configurations. Each question config includes type, constructor params, and optional config properties (required, isSelectMode, isShuffleMode, minLength). The compiler generates index.html with form structure, index.js with Survey instantiation and question creation, and includes all library modules. Limitations: No dynamic question removal, no nested questions, no conditional logic, no backend integration."
+    }
+  ],
+  "groups": [
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "rows": [
+        {
+          "task": "task-1",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-2",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-3",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-4",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-5",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-6",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-7",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-8",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-9",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-10",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-11",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-12",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-13",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-14",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-15",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-16",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-17",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-18",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-19",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-20",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        }
+      ],
+      "first_rows": [
+        {
+          "task": "task-1",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-2",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-3",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-4",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-5",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-6",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-7",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-8",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-9",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-10",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-11",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-12",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-13",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-14",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-15",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-16",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-17",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-18",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-19",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-20",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        }
+      ],
+      "missing": [],
+      "totals": {
+        "free": {
+          "passed": 6,
+          "n": 20
+        },
+        "free_lib": {
+          "passed": 10,
+          "n": 20
+        },
+        "plan": {
+          "passed": 10,
+          "n": 20
+        }
+      },
+      "paired_plan_vs_free_lib": {
+        "n": 20,
+        "won": 0,
+        "lost": 0,
+        "tied": 20,
+        "difference_pp": 0.0
+      },
+      "paired_plan_vs_free": {
+        "n": 20,
+        "won": 4,
+        "lost": 0,
+        "tied": 16,
+        "difference_pp": 20.0
+      }
+    },
+    {
+      "project": "dom1",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "rows": [
+        {
+          "task": "task-1",
+          "free": true,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-2",
+          "free": true,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-3",
+          "free": true,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-4",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-5",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-6",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-7",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-8",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-9",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-10",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-11",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-12",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-13",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-14",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-15",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-16",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-17",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-18",
+          "free": true,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-19",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-20",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        }
+      ],
+      "first_rows": [
+        {
+          "task": "task-1",
+          "free": true,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-2",
+          "free": true,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-3",
+          "free": true,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-4",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-5",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-6",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-7",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-8",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-9",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-10",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-11",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-12",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-13",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-14",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-15",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-16",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-17",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-18",
+          "free": true,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-19",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-20",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        }
+      ],
+      "missing": [],
+      "totals": {
+        "free": {
+          "passed": 4,
+          "n": 20
+        },
+        "free_lib": {
+          "passed": 0,
+          "n": 20
+        },
+        "plan": {
+          "passed": 10,
+          "n": 20
+        }
+      },
+      "paired_plan_vs_free_lib": {
+        "n": 20,
+        "won": 10,
+        "lost": 0,
+        "tied": 10,
+        "difference_pp": 50.0
+      },
+      "paired_plan_vs_free": {
+        "n": 20,
+        "won": 6,
+        "lost": 0,
+        "tied": 14,
+        "difference_pp": 30.0
+      }
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "rows": [
+        {
+          "task": "task-1",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-2",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-3",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-4",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-5",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-6",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-7",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-8",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-9",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-10",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-11",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-12",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-13",
+          "free": false,
+          "free_lib": true,
+          "plan": false
+        },
+        {
+          "task": "task-14",
+          "free": false,
+          "free_lib": true,
+          "plan": false
+        },
+        {
+          "task": "task-15",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-16",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-17",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-18",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-19",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-20",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        }
+      ],
+      "first_rows": [
+        {
+          "task": "task-1",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-2",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-3",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-4",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-5",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-6",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-7",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-8",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-9",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-10",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-11",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-12",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-13",
+          "free": false,
+          "free_lib": true,
+          "plan": false
+        },
+        {
+          "task": "task-14",
+          "free": false,
+          "free_lib": true,
+          "plan": false
+        },
+        {
+          "task": "task-15",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-16",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-17",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-18",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-19",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-20",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        }
+      ],
+      "missing": [],
+      "totals": {
+        "free": {
+          "passed": 6,
+          "n": 20
+        },
+        "free_lib": {
+          "passed": 12,
+          "n": 20
+        },
+        "plan": {
+          "passed": 11,
+          "n": 20
+        }
+      },
+      "paired_plan_vs_free_lib": {
+        "n": 20,
+        "won": 1,
+        "lost": 2,
+        "tied": 17,
+        "difference_pp": -5.0
+      },
+      "paired_plan_vs_free": {
+        "n": 20,
+        "won": 5,
+        "lost": 0,
+        "tied": 15,
+        "difference_pp": 25.0
+      }
+    },
+    {
+      "project": "dom1",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "rows": [
+        {
+          "task": "task-1",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-2",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-3",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-4",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-5",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-6",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-7",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-8",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-9",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-10",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-11",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-12",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-13",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-14",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-15",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-16",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-17",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-18",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-19",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-20",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        }
+      ],
+      "first_rows": [
+        {
+          "task": "task-1",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-2",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-3",
+          "free": true,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-4",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-5",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-6",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-7",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-8",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-9",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-10",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-11",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-12",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-13",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-14",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-15",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-16",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-17",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-18",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-19",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-20",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        }
+      ],
+      "missing": [],
+      "totals": {
+        "free": {
+          "passed": 4,
+          "n": 20
+        },
+        "free_lib": {
+          "passed": 9,
+          "n": 20
+        },
+        "plan": {
+          "passed": 11,
+          "n": 20
+        }
+      },
+      "paired_plan_vs_free_lib": {
+        "n": 20,
+        "won": 2,
+        "lost": 0,
+        "tied": 18,
+        "difference_pp": 10.0
+      },
+      "paired_plan_vs_free": {
+        "n": 20,
+        "won": 7,
+        "lost": 0,
+        "tied": 13,
+        "difference_pp": 35.0
+      }
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "rows": [
+        {
+          "task": "task-1",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-2",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-3",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-4",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-5",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-6",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-7",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-8",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-9",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-10",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-11",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-12",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-13",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-14",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-15",
+          "free": true,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-16",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-17",
+          "free": true,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-18",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-19",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-20",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        }
+      ],
+      "first_rows": [
+        {
+          "task": "task-1",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-2",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-3",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-4",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-5",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-6",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-7",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-8",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-9",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-10",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-11",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-12",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-13",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-14",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-15",
+          "free": true,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-16",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-17",
+          "free": true,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-18",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-19",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-20",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        }
+      ],
+      "missing": [],
+      "totals": {
+        "free": {
+          "passed": 9,
+          "n": 20
+        },
+        "free_lib": {
+          "passed": 12,
+          "n": 20
+        },
+        "plan": {
+          "passed": 14,
+          "n": 20
+        }
+      },
+      "paired_plan_vs_free_lib": {
+        "n": 20,
+        "won": 2,
+        "lost": 0,
+        "tied": 18,
+        "difference_pp": 10.0
+      },
+      "paired_plan_vs_free": {
+        "n": 20,
+        "won": 6,
+        "lost": 1,
+        "tied": 13,
+        "difference_pp": 25.0
+      }
+    },
+    {
+      "project": "form",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "rows": [
+        {
+          "task": "task-1",
+          "free": true,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-2",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-3",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-4",
+          "free": true,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-5",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-6",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-7",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-8",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-9",
+          "free": true,
+          "free_lib": true,
+          "plan": false
+        },
+        {
+          "task": "task-10",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-11",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-12",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-13",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-14",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-15",
+          "free": true,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-16",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-17",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-18",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-19",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-20",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        }
+      ],
+      "first_rows": [
+        {
+          "task": "task-1",
+          "free": true,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-2",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-3",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-4",
+          "free": true,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-5",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-6",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-7",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-8",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-9",
+          "free": true,
+          "free_lib": true,
+          "plan": false
+        },
+        {
+          "task": "task-10",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-11",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-12",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-13",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-14",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-15",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-16",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-17",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-18",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-19",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-20",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        }
+      ],
+      "missing": [],
+      "totals": {
+        "free": {
+          "passed": 6,
+          "n": 20
+        },
+        "free_lib": {
+          "passed": 4,
+          "n": 20
+        },
+        "plan": {
+          "passed": 9,
+          "n": 20
+        }
+      },
+      "paired_plan_vs_free_lib": {
+        "n": 20,
+        "won": 6,
+        "lost": 1,
+        "tied": 13,
+        "difference_pp": 25.0
+      },
+      "paired_plan_vs_free": {
+        "n": 20,
+        "won": 6,
+        "lost": 3,
+        "tied": 11,
+        "difference_pp": 15.0
+      }
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "rows": [
+        {
+          "task": "task-1",
+          "free": true,
+          "free_lib": true,
+          "plan": false
+        },
+        {
+          "task": "task-2",
+          "free": true,
+          "free_lib": true,
+          "plan": false
+        },
+        {
+          "task": "task-3",
+          "free": true,
+          "free_lib": true,
+          "plan": false
+        },
+        {
+          "task": "task-4",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-5",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-6",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-7",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-8",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-9",
+          "free": true,
+          "free_lib": true,
+          "plan": false
+        },
+        {
+          "task": "task-10",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-11",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-12",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-13",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-14",
+          "free": false,
+          "free_lib": true,
+          "plan": false
+        },
+        {
+          "task": "task-15",
+          "free": true,
+          "free_lib": true,
+          "plan": false
+        },
+        {
+          "task": "task-16",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-17",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-18",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-19",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-20",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        }
+      ],
+      "first_rows": [
+        {
+          "task": "task-1",
+          "free": true,
+          "free_lib": true,
+          "plan": false
+        },
+        {
+          "task": "task-2",
+          "free": false,
+          "free_lib": true,
+          "plan": false
+        },
+        {
+          "task": "task-3",
+          "free": true,
+          "free_lib": true,
+          "plan": false
+        },
+        {
+          "task": "task-4",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-5",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-6",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-7",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-8",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-9",
+          "free": true,
+          "free_lib": true,
+          "plan": false
+        },
+        {
+          "task": "task-10",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-11",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-12",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-13",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-14",
+          "free": false,
+          "free_lib": true,
+          "plan": false
+        },
+        {
+          "task": "task-15",
+          "free": true,
+          "free_lib": true,
+          "plan": false
+        },
+        {
+          "task": "task-16",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-17",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-18",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-19",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-20",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        }
+      ],
+      "missing": [],
+      "totals": {
+        "free": {
+          "passed": 9,
+          "n": 20
+        },
+        "free_lib": {
+          "passed": 12,
+          "n": 20
+        },
+        "plan": {
+          "passed": 8,
+          "n": 20
+        }
+      },
+      "paired_plan_vs_free_lib": {
+        "n": 20,
+        "won": 2,
+        "lost": 6,
+        "tied": 12,
+        "difference_pp": -20.0
+      },
+      "paired_plan_vs_free": {
+        "n": 20,
+        "won": 4,
+        "lost": 5,
+        "tied": 11,
+        "difference_pp": -5.0
+      }
+    },
+    {
+      "project": "form",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "rows": [
+        {
+          "task": "task-1",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-2",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-3",
+          "free": true,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-4",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-5",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-6",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-7",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-8",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-9",
+          "free": true,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-10",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-11",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-12",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-13",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-14",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-15",
+          "free": true,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-16",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-17",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-18",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-19",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-20",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        }
+      ],
+      "first_rows": [
+        {
+          "task": "task-1",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-2",
+          "free": true,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-3",
+          "free": true,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-4",
+          "free": true,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-5",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-6",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-7",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-8",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-9",
+          "free": true,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-10",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-11",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-12",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-13",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-14",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-15",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-16",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-17",
+          "free": false,
+          "free_lib": true,
+          "plan": true
+        },
+        {
+          "task": "task-18",
+          "free": false,
+          "free_lib": false,
+          "plan": true
+        },
+        {
+          "task": "task-19",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        },
+        {
+          "task": "task-20",
+          "free": false,
+          "free_lib": false,
+          "plan": false
+        }
+      ],
+      "missing": [],
+      "totals": {
+        "free": {
+          "passed": 6,
+          "n": 20
+        },
+        "free_lib": {
+          "passed": 8,
+          "n": 20
+        },
+        "plan": {
+          "passed": 13,
+          "n": 20
+        }
+      },
+      "paired_plan_vs_free_lib": {
+        "n": 20,
+        "won": 5,
+        "lost": 0,
+        "tied": 15,
+        "difference_pp": 25.0
+      },
+      "paired_plan_vs_free": {
+        "n": 20,
+        "won": 7,
+        "lost": 0,
+        "tied": 13,
+        "difference_pp": 35.0
+      }
+    }
+  ],
+  "limitations": [
+    "Two projects, two planners, one sample; correlated tasks; no project-level significance claim.",
+    "Builders see the entire public requirement sequence; not held-out requirement transfer.",
+    "The public form requirements themselves specify classes and inheritance.",
+    "Libraries are not behaviorally verified; first public-valid output frozen without hidden selection.",
+    "Free baselines are reused across builders and must not be counted twice."
+  ]
+}
