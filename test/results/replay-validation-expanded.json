@@ -1,0 +1,58 @@
+{
+  "archive_sha256": "cf7a56bc88225700e5d5ab542769180008fb38c998f16af4baed33a125cde54a",
+  "published": false,
+  "checks": [
+    {
+      "module": "test.replay_scale_table",
+      "output": "test/results/scale-table-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_primary_tables",
+      "output": "test/results/primary-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.review_metrics",
+      "output": "test/results/review-metrics.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.interface_blind.analyze",
+      "output": "test/results/interface-blind.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.behavior_feedback_analyze",
+      "output": "test/results/behavior-feedback.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.repair_breakdown",
+      "output": "test/results/repair-breakdown.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.paired_intervals",
+      "output": "test/results/paired-intervals.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_new_tables",
+      "output": "test/results/new-tables-replay.json",
+      "exit_code": 0,
+      "identical": true
+    }
+  ],
+  "scope": "Hash verification; three primary accuracy tables plus five sample/seed/frontier extensions from raw records; five further summary recomputations. External row checks reuse observations across tables; distinct file-path count reported separately. Not a replay of every historical browser test or every paper table. Also four new cohorts (904 distinct candidates) and their stored fixed-control scores; no additional browser reruns.",
+  "hashes_verified": 137651,
+  "all_passed": true,
+  "expanded": true
+}

@@ -1,0 +1,710 @@
+{
+  "cohorts": {
+    "main": {
+      "attempts": {
+        "free_lib/candidates": 88,
+        "free_lib/extra_attempts": 0,
+        "free_lib/repaired_candidates": 0,
+        "free_lib/without_executable": 0,
+        "free_lib/first_response_passes": 88,
+        "plan/candidates": 88,
+        "plan/extra_attempts": 16,
+        "plan/repaired_candidates": 16,
+        "plan/without_executable": 0,
+        "plan/first_response_passes": 72,
+        "free/candidates": 44,
+        "free/extra_attempts": 0,
+        "free/repaired_candidates": 0,
+        "free/without_executable": 0,
+        "free/first_response_passes": 32
+      },
+      "final_free_lib_output_forms": {
+        "program": 88
+      },
+      "public_feedback": {
+        "$: unknown keys ['plan'], missing keys ['clearMemoryBehavior', 'entryAfterOperation', 'historyClickEffect', 'memoryRecallEffect']": 5,
+        "$: unknown keys ['program'], missing keys ['clipboard_mode', 'delete_selection_behavior', 'sort_order', 'sort_selection_tracking']": 2,
+        "$: unknown keys ['plan'], missing keys ['clipboard_mode', 'delete_selection_behavior', 'sort_order', 'sort_selection_tracking']": 1,
+        "$: unknown keys ['program'], missing keys ['copySemantics', 'deleteBehavior', 'selectionAfterSort', 'sortDirection']": 4,
+        "$: unknown keys ['plan'], missing keys ['copySemantics', 'deleteBehavior', 'selectionAfterSort', 'sortDirection']": 4
+      }
+    },
+    "strong": {
+      "attempts": {
+        "free_lib/candidates": 12,
+        "free_lib/extra_attempts": 0,
+        "free_lib/repaired_candidates": 0,
+        "free_lib/without_executable": 0,
+        "free_lib/first_response_passes": 12,
+        "plan/candidates": 12,
+        "plan/extra_attempts": 0,
+        "plan/repaired_candidates": 0,
+        "plan/without_executable": 0,
+        "plan/first_response_passes": 12
+      },
+      "final_free_lib_output_forms": {
+        "files": 1,
+        "program": 11
+      },
+      "public_feedback": {}
+    }
+  },
+  "final_failures": [
+    {
+      "cohort": "main",
+      "record": "artifacts/heldout-composition-run/runs/table/no_library/mistralai__mistral-small-3.2-24b-instruct/free/heldout-01/record.json",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "project": "table",
+      "task": "heldout-01",
+      "method": "free",
+      "first_failure_category": "clipboard_live_reference",
+      "first_failure": {
+        "case": 0,
+        "step": 3,
+        "action": [
+          "edit",
+          11
+        ],
+        "expected": {
+          "rows": [
+            [
+              "a",
+              11
+            ],
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              5
+            ]
+          ],
+          "selected": "a",
+          "clipboard": 11
+        },
+        "actual": {
+          "rows": [
+            [
+              "a",
+              11
+            ],
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              5
+            ]
+          ],
+          "selected": "a",
+          "clipboard": 7
+        },
+        "page_errors": []
+      },
+      "failure_count": 5
+    },
+    {
+      "cohort": "main",
+      "record": "artifacts/heldout-composition-run/runs/table/no_library/mistralai__mistral-small-3.2-24b-instruct/free/heldout-02/record.json",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "project": "table",
+      "task": "heldout-02",
+      "method": "free",
+      "first_failure_category": "clipboard_live_reference",
+      "first_failure": {
+        "case": 0,
+        "step": 3,
+        "action": [
+          "edit",
+          11
+        ],
+        "expected": {
+          "rows": [
+            [
+              "a",
+              11
+            ],
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              5
+            ]
+          ],
+          "selected": "a",
+          "clipboard": 11
+        },
+        "actual": {
+          "rows": [
+            [
+              "a",
+              11
+            ],
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              5
+            ]
+          ],
+          "selected": "a",
+          "clipboard": 7
+        },
+        "page_errors": []
+      },
+      "failure_count": 4
+    },
+    {
+      "cohort": "main",
+      "record": "artifacts/heldout-composition-run/runs/table/no_library/mistralai__mistral-small-3.2-24b-instruct/free/heldout-03/record.json",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "project": "table",
+      "task": "heldout-03",
+      "method": "free",
+      "first_failure_category": "selection_after_sort",
+      "first_failure": {
+        "case": 0,
+        "step": 4,
+        "action": [
+          "sort"
+        ],
+        "expected": {
+          "rows": [
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              5
+            ],
+            [
+              "a",
+              11
+            ]
+          ],
+          "selected": "b",
+          "clipboard": 7
+        },
+        "actual": {
+          "rows": [
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              5
+            ],
+            [
+              "a",
+              11
+            ]
+          ],
+          "selected": "a",
+          "clipboard": 7
+        },
+        "page_errors": []
+      },
+      "failure_count": 4
+    },
+    {
+      "cohort": "main",
+      "record": "artifacts/heldout-composition-run/runs/table/no_library/mistralai__mistral-small-3.2-24b-instruct/free/heldout-04/record.json",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "project": "table",
+      "task": "heldout-04",
+      "method": "free",
+      "first_failure_category": "clipboard_live_reference",
+      "first_failure": {
+        "case": 0,
+        "step": 3,
+        "action": [
+          "edit",
+          11
+        ],
+        "expected": {
+          "rows": [
+            [
+              "a",
+              11
+            ],
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              5
+            ]
+          ],
+          "selected": "a",
+          "clipboard": 11
+        },
+        "actual": {
+          "rows": [
+            [
+              "a",
+              11
+            ],
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              5
+            ]
+          ],
+          "selected": "a",
+          "clipboard": 7
+        },
+        "page_errors": []
+      },
+      "failure_count": 5
+    },
+    {
+      "cohort": "main",
+      "record": "artifacts/heldout-composition-run/runs/table/no_library/mistralai__mistral-small-3.2-24b-instruct/free/heldout-05/record.json",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "project": "table",
+      "task": "heldout-05",
+      "method": "free",
+      "first_failure_category": "clipboard_live_reference",
+      "first_failure": {
+        "case": 0,
+        "step": 3,
+        "action": [
+          "edit",
+          11
+        ],
+        "expected": {
+          "rows": [
+            [
+              "a",
+              11
+            ],
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              5
+            ]
+          ],
+          "selected": "a",
+          "clipboard": 11
+        },
+        "actual": {
+          "rows": [
+            [
+              "a",
+              11
+            ],
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              5
+            ]
+          ],
+          "selected": "a",
+          "clipboard": 7
+        },
+        "page_errors": []
+      },
+      "failure_count": 4
+    },
+    {
+      "cohort": "main",
+      "record": "artifacts/heldout-composition-run/runs/table/no_library/mistralai__mistral-small-3.2-24b-instruct/free/heldout-06/record.json",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "project": "table",
+      "task": "heldout-06",
+      "method": "free",
+      "first_failure_category": "selection_after_delete",
+      "first_failure": {
+        "case": 0,
+        "step": 6,
+        "action": [
+          "delete"
+        ],
+        "expected": {
+          "rows": [
+            [
+              "c",
+              5
+            ],
+            [
+              "b",
+              2
+            ]
+          ],
+          "selected": "c",
+          "clipboard": 7
+        },
+        "actual": {
+          "rows": [
+            [
+              "c",
+              5
+            ],
+            [
+              "b",
+              2
+            ]
+          ],
+          "selected": null,
+          "clipboard": 7
+        },
+        "page_errors": []
+      },
+      "failure_count": 5
+    },
+    {
+      "cohort": "main",
+      "record": "artifacts/heldout-composition-run/runs/table/no_library/mistralai__mistral-small-3.2-24b-instruct/free/heldout-07/record.json",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "project": "table",
+      "task": "heldout-07",
+      "method": "free",
+      "first_failure_category": "clipboard_live_reference",
+      "first_failure": {
+        "case": 0,
+        "step": 3,
+        "action": [
+          "edit",
+          11
+        ],
+        "expected": {
+          "rows": [
+            [
+              "a",
+              11
+            ],
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              5
+            ]
+          ],
+          "selected": "a",
+          "clipboard": 11
+        },
+        "actual": {
+          "rows": [
+            [
+              "a",
+              11
+            ],
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              5
+            ]
+          ],
+          "selected": "a",
+          "clipboard": 7
+        },
+        "page_errors": []
+      },
+      "failure_count": 5
+    },
+    {
+      "cohort": "main",
+      "record": "artifacts/heldout-composition-run/runs/table/no_library/mistralai__mistral-small-3.2-24b-instruct/free/heldout-08/record.json",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "project": "table",
+      "task": "heldout-08",
+      "method": "free",
+      "first_failure_category": "selection_after_sort",
+      "first_failure": {
+        "case": 1,
+        "step": 6,
+        "action": [
+          "sort"
+        ],
+        "expected": {
+          "rows": [
+            [
+              "a",
+              7
+            ],
+            [
+              "c",
+              2
+            ],
+            [
+              "b",
+              -3
+            ]
+          ],
+          "selected": "b",
+          "clipboard": 2
+        },
+        "actual": {
+          "rows": [
+            [
+              "a",
+              7
+            ],
+            [
+              "c",
+              2
+            ],
+            [
+              "b",
+              -3
+            ]
+          ],
+          "selected": "c",
+          "clipboard": 2
+        },
+        "page_errors": []
+      },
+      "failure_count": 2
+    },
+    {
+      "cohort": "main",
+      "record": "artifacts/heldout-composition-run/runs/table/no_library/mistralai__mistral-small-3.2-24b-instruct/free/heldout-09/record.json",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "project": "table",
+      "task": "heldout-09",
+      "method": "free",
+      "first_failure_category": "clipboard_live_reference",
+      "first_failure": {
+        "case": 0,
+        "step": 3,
+        "action": [
+          "edit",
+          11
+        ],
+        "expected": {
+          "rows": [
+            [
+              "a",
+              11
+            ],
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              5
+            ]
+          ],
+          "selected": "a",
+          "clipboard": 11
+        },
+        "actual": {
+          "rows": [
+            [
+              "a",
+              11
+            ],
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              5
+            ]
+          ],
+          "selected": "a",
+          "clipboard": 7
+        },
+        "page_errors": []
+      },
+      "failure_count": 4
+    },
+    {
+      "cohort": "main",
+      "record": "artifacts/heldout-composition-run/runs/table/no_library/mistralai__mistral-small-3.2-24b-instruct/free/heldout-10/record.json",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "project": "table",
+      "task": "heldout-10",
+      "method": "free",
+      "first_failure_category": "selection_after_sort",
+      "first_failure": {
+        "case": 1,
+        "step": 6,
+        "action": [
+          "sort"
+        ],
+        "expected": {
+          "rows": [
+            [
+              "a",
+              7
+            ],
+            [
+              "c",
+              2
+            ],
+            [
+              "b",
+              -3
+            ]
+          ],
+          "selected": "b",
+          "clipboard": 2
+        },
+        "actual": {
+          "rows": [
+            [
+              "a",
+              7
+            ],
+            [
+              "c",
+              2
+            ],
+            [
+              "b",
+              -3
+            ]
+          ],
+          "selected": "c",
+          "clipboard": 2
+        },
+        "page_errors": []
+      },
+      "failure_count": 3
+    },
+    {
+      "cohort": "main",
+      "record": "artifacts/heldout-composition-run/runs/table/no_library/mistralai__mistral-small-3.2-24b-instruct/free/heldout-11/record.json",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "project": "table",
+      "task": "heldout-11",
+      "method": "free",
+      "first_failure_category": "clipboard_live_reference",
+      "first_failure": {
+        "case": 0,
+        "step": 3,
+        "action": [
+          "edit",
+          11
+        ],
+        "expected": {
+          "rows": [
+            [
+              "a",
+              11
+            ],
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              5
+            ]
+          ],
+          "selected": "a",
+          "clipboard": 11
+        },
+        "actual": {
+          "rows": [
+            [
+              "a",
+              11
+            ],
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              5
+            ]
+          ],
+          "selected": "a",
+          "clipboard": 7
+        },
+        "page_errors": []
+      },
+      "failure_count": 5
+    },
+    {
+      "cohort": "main",
+      "record": "artifacts/heldout-composition-run/runs/table/no_library/openai__gpt-oss-120b/free/heldout-02/record.json",
+      "model": "openai/gpt-oss-120b",
+      "project": "table",
+      "task": "heldout-02",
+      "method": "free",
+      "first_failure_category": "selection_after_sort",
+      "first_failure": {
+        "case": 0,
+        "step": 4,
+        "action": [
+          "sort"
+        ],
+        "expected": {
+          "rows": [
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              5
+            ],
+            [
+              "a",
+              11
+            ]
+          ],
+          "selected": "b",
+          "clipboard": 11
+        },
+        "actual": {
+          "rows": [
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              5
+            ],
+            [
+              "a",
+              11
+            ]
+          ],
+          "selected": "a",
+          "clipboard": 11
+        },
+        "page_errors": []
+      },
+      "failure_count": 3
+    }
+  ],
+  "first_failure_counts": {
+    "clipboard_live_reference": 7,
+    "selection_after_sort": 4,
+    "selection_after_delete": 1
+  },
+  "scored_version_browser_counts": {
+    "153.0.8010.12": 244
+  },
+  "scope": "First failing observation per candidate, not an exhaustive causal attribution. Existing scores only."
+}

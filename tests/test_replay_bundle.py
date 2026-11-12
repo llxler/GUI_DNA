@@ -2,6 +2,22 @@ import hashlib
 import json
 from gui_dna.budget import Ledger
 from test.export_replay_bundle import pseudonym, sanitize_ledger, transform
+
+
+def test_expanded_export_includes_saved_modules_and_unusual_source_extensions(tmp_path, monkeypatch):
+    import json
+    from test import export_replay_bundle as exporter
+    stage = tmp_path / 'artifacts/webbench-expand-run'
+    page = stage / 'runs/project/model/task/version-0'
+    page.mkdir(parents=True)
+    (page / 'module.mjs').write_text('export const value = 1;')
+    (page / 'generated.payload').write_text('saved source')
+    (page / 'source-manifest.json').write_text(json.dumps({'files_sha256': {'module.mjs': 'hash', 'generated.payload': 'hash'}}))
+    monkeypatch.setattr(exporter, 'ROOT', tmp_path)
+    monkeypatch.setattr(exporter.subprocess, 'check_output', lambda *args, **kwargs: b'')
+    selected = set(exporter.selected_files(expanded=True))
+    assert page / 'module.mjs' in selected
+    assert page / 'generated.payload' in selected
 from test.ledger_read import calls, totals
 
 

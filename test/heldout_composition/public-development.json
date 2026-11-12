@@ -1,0 +1,3596 @@
+{
+  "calculator": [
+    {
+      "id": "dev-0",
+      "requirement": "Build a complete small accumulator calculator. It is a new synthetic task inspired by calculator memory/history interactions, not the official Web-Bench task.\nInitially total=0, memory=0, entry=\"\", history=[]. Show integer total in #total, integer memory in #memory, an editable input #entry, and buttons #add, #subtract, #save, #recall, #clear. Add/Subtract add/subtract the integer entry (empty means zero) to/from the current total, then append the resulting total to history. Save replaces memory with the current total. Recall modifies total according to the requirement below but does not add history. Clear sets total=0 and entry=\"\", never erases history, and handles memory as specified below. History items are buttons with consecutive data-history-index=\"0\", \"1\", ... and visible text equal to each recorded integer. Clicking one modifies total according to the requirement below; history itself is unchanged. Editing the entry alone changes no other state. All numbers are small integers. No persistence or network; each fresh page load starts at the initial state. Implement the whole page, event bindings, and state yourself; no shell is supplied.\n\nBehavior requirements:\nAfter Add or Subtract, empty the entry field.\nMemory Recall replaces the total with the saved memory value.\nClear preserves the saved memory value.\nClicking a history item replaces the total with that recorded value.",
+      "public_cases": [
+        {
+          "initial": {
+            "total": 0,
+            "memory": 0,
+            "entry": "",
+            "history": []
+          },
+          "steps": [
+            {
+              "action": [
+                "enter",
+                5
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 0,
+                "entry": "5",
+                "history": []
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  5
+                ]
+              }
+            },
+            {
+              "action": [
+                "save"
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5
+                ]
+              }
+            },
+            {
+              "action": [
+                "enter",
+                2
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "2",
+                "history": [
+                  5
+                ]
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 7,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "recall"
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "clear"
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "recall"
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "history",
+                0
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "initial": {
+            "total": 0,
+            "memory": 0,
+            "entry": "",
+            "history": []
+          },
+          "steps": [
+            {
+              "action": [
+                "enter",
+                7
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 0,
+                "entry": "7",
+                "history": []
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 7,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "enter",
+                3
+              ],
+              "expected": {
+                "total": 7,
+                "memory": 0,
+                "entry": "3",
+                "history": [
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "subtract"
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  7,
+                  4
+                ]
+              }
+            },
+            {
+              "action": [
+                "enter",
+                4
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 0,
+                "entry": "4",
+                "history": [
+                  7,
+                  4
+                ]
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 8,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "history",
+                1
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "save"
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 4,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "clear"
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 4,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "recall"
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 4,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 4,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8,
+                  4
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dev-1",
+      "requirement": "Build a complete small accumulator calculator. It is a new synthetic task inspired by calculator memory/history interactions, not the official Web-Bench task.\nInitially total=0, memory=0, entry=\"\", history=[]. Show integer total in #total, integer memory in #memory, an editable input #entry, and buttons #add, #subtract, #save, #recall, #clear. Add/Subtract add/subtract the integer entry (empty means zero) to/from the current total, then append the resulting total to history. Save replaces memory with the current total. Recall modifies total according to the requirement below but does not add history. Clear sets total=0 and entry=\"\", never erases history, and handles memory as specified below. History items are buttons with consecutive data-history-index=\"0\", \"1\", ... and visible text equal to each recorded integer. Clicking one modifies total according to the requirement below; history itself is unchanged. Editing the entry alone changes no other state. All numbers are small integers. No persistence or network; each fresh page load starts at the initial state. Implement the whole page, event bindings, and state yourself; no shell is supplied.\n\nBehavior requirements:\nAfter Add or Subtract, retain the entry field.\nMemory Recall replaces the total with the saved memory value.\nClear preserves the saved memory value.\nClicking a history item replaces the total with that recorded value.",
+      "public_cases": [
+        {
+          "initial": {
+            "total": 0,
+            "memory": 0,
+            "entry": "",
+            "history": []
+          },
+          "steps": [
+            {
+              "action": [
+                "enter",
+                5
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 0,
+                "entry": "5",
+                "history": []
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 0,
+                "entry": "5",
+                "history": [
+                  5
+                ]
+              }
+            },
+            {
+              "action": [
+                "save"
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "5",
+                "history": [
+                  5
+                ]
+              }
+            },
+            {
+              "action": [
+                "enter",
+                2
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "2",
+                "history": [
+                  5
+                ]
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 7,
+                "memory": 5,
+                "entry": "2",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "recall"
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "2",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "clear"
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "recall"
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "history",
+                0
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "initial": {
+            "total": 0,
+            "memory": 0,
+            "entry": "",
+            "history": []
+          },
+          "steps": [
+            {
+              "action": [
+                "enter",
+                7
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 0,
+                "entry": "7",
+                "history": []
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 7,
+                "memory": 0,
+                "entry": "7",
+                "history": [
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "enter",
+                3
+              ],
+              "expected": {
+                "total": 7,
+                "memory": 0,
+                "entry": "3",
+                "history": [
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "subtract"
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 0,
+                "entry": "3",
+                "history": [
+                  7,
+                  4
+                ]
+              }
+            },
+            {
+              "action": [
+                "enter",
+                4
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 0,
+                "entry": "4",
+                "history": [
+                  7,
+                  4
+                ]
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 8,
+                "memory": 0,
+                "entry": "4",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "history",
+                1
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 0,
+                "entry": "4",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "save"
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 4,
+                "entry": "4",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "clear"
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 4,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "recall"
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 4,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 4,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8,
+                  4
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dev-2",
+      "requirement": "Build a complete small accumulator calculator. It is a new synthetic task inspired by calculator memory/history interactions, not the official Web-Bench task.\nInitially total=0, memory=0, entry=\"\", history=[]. Show integer total in #total, integer memory in #memory, an editable input #entry, and buttons #add, #subtract, #save, #recall, #clear. Add/Subtract add/subtract the integer entry (empty means zero) to/from the current total, then append the resulting total to history. Save replaces memory with the current total. Recall modifies total according to the requirement below but does not add history. Clear sets total=0 and entry=\"\", never erases history, and handles memory as specified below. History items are buttons with consecutive data-history-index=\"0\", \"1\", ... and visible text equal to each recorded integer. Clicking one modifies total according to the requirement below; history itself is unchanged. Editing the entry alone changes no other state. All numbers are small integers. No persistence or network; each fresh page load starts at the initial state. Implement the whole page, event bindings, and state yourself; no shell is supplied.\n\nBehavior requirements:\nAfter Add or Subtract, empty the entry field.\nMemory Recall adds the saved memory value to the total.\nClear preserves the saved memory value.\nClicking a history item replaces the total with that recorded value.",
+      "public_cases": [
+        {
+          "initial": {
+            "total": 0,
+            "memory": 0,
+            "entry": "",
+            "history": []
+          },
+          "steps": [
+            {
+              "action": [
+                "enter",
+                5
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 0,
+                "entry": "5",
+                "history": []
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  5
+                ]
+              }
+            },
+            {
+              "action": [
+                "save"
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5
+                ]
+              }
+            },
+            {
+              "action": [
+                "enter",
+                2
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "2",
+                "history": [
+                  5
+                ]
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 7,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "recall"
+              ],
+              "expected": {
+                "total": 12,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "clear"
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "recall"
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "history",
+                0
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "initial": {
+            "total": 0,
+            "memory": 0,
+            "entry": "",
+            "history": []
+          },
+          "steps": [
+            {
+              "action": [
+                "enter",
+                7
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 0,
+                "entry": "7",
+                "history": []
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 7,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "enter",
+                3
+              ],
+              "expected": {
+                "total": 7,
+                "memory": 0,
+                "entry": "3",
+                "history": [
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "subtract"
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  7,
+                  4
+                ]
+              }
+            },
+            {
+              "action": [
+                "enter",
+                4
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 0,
+                "entry": "4",
+                "history": [
+                  7,
+                  4
+                ]
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 8,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "history",
+                1
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "save"
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 4,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "clear"
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 4,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "recall"
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 4,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 4,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8,
+                  4
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dev-3",
+      "requirement": "Build a complete small accumulator calculator. It is a new synthetic task inspired by calculator memory/history interactions, not the official Web-Bench task.\nInitially total=0, memory=0, entry=\"\", history=[]. Show integer total in #total, integer memory in #memory, an editable input #entry, and buttons #add, #subtract, #save, #recall, #clear. Add/Subtract add/subtract the integer entry (empty means zero) to/from the current total, then append the resulting total to history. Save replaces memory with the current total. Recall modifies total according to the requirement below but does not add history. Clear sets total=0 and entry=\"\", never erases history, and handles memory as specified below. History items are buttons with consecutive data-history-index=\"0\", \"1\", ... and visible text equal to each recorded integer. Clicking one modifies total according to the requirement below; history itself is unchanged. Editing the entry alone changes no other state. All numbers are small integers. No persistence or network; each fresh page load starts at the initial state. Implement the whole page, event bindings, and state yourself; no shell is supplied.\n\nBehavior requirements:\nAfter Add or Subtract, empty the entry field.\nMemory Recall replaces the total with the saved memory value.\nClear also resets the saved memory value to zero.\nClicking a history item replaces the total with that recorded value.",
+      "public_cases": [
+        {
+          "initial": {
+            "total": 0,
+            "memory": 0,
+            "entry": "",
+            "history": []
+          },
+          "steps": [
+            {
+              "action": [
+                "enter",
+                5
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 0,
+                "entry": "5",
+                "history": []
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  5
+                ]
+              }
+            },
+            {
+              "action": [
+                "save"
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5
+                ]
+              }
+            },
+            {
+              "action": [
+                "enter",
+                2
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "2",
+                "history": [
+                  5
+                ]
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 7,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "recall"
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "clear"
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "recall"
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "history",
+                0
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "initial": {
+            "total": 0,
+            "memory": 0,
+            "entry": "",
+            "history": []
+          },
+          "steps": [
+            {
+              "action": [
+                "enter",
+                7
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 0,
+                "entry": "7",
+                "history": []
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 7,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "enter",
+                3
+              ],
+              "expected": {
+                "total": 7,
+                "memory": 0,
+                "entry": "3",
+                "history": [
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "subtract"
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  7,
+                  4
+                ]
+              }
+            },
+            {
+              "action": [
+                "enter",
+                4
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 0,
+                "entry": "4",
+                "history": [
+                  7,
+                  4
+                ]
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 8,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "history",
+                1
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "save"
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 4,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "clear"
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "recall"
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8,
+                  0
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dev-4",
+      "requirement": "Build a complete small accumulator calculator. It is a new synthetic task inspired by calculator memory/history interactions, not the official Web-Bench task.\nInitially total=0, memory=0, entry=\"\", history=[]. Show integer total in #total, integer memory in #memory, an editable input #entry, and buttons #add, #subtract, #save, #recall, #clear. Add/Subtract add/subtract the integer entry (empty means zero) to/from the current total, then append the resulting total to history. Save replaces memory with the current total. Recall modifies total according to the requirement below but does not add history. Clear sets total=0 and entry=\"\", never erases history, and handles memory as specified below. History items are buttons with consecutive data-history-index=\"0\", \"1\", ... and visible text equal to each recorded integer. Clicking one modifies total according to the requirement below; history itself is unchanged. Editing the entry alone changes no other state. All numbers are small integers. No persistence or network; each fresh page load starts at the initial state. Implement the whole page, event bindings, and state yourself; no shell is supplied.\n\nBehavior requirements:\nAfter Add or Subtract, empty the entry field.\nMemory Recall replaces the total with the saved memory value.\nClear preserves the saved memory value.\nClicking a history item adds that recorded value to the total.",
+      "public_cases": [
+        {
+          "initial": {
+            "total": 0,
+            "memory": 0,
+            "entry": "",
+            "history": []
+          },
+          "steps": [
+            {
+              "action": [
+                "enter",
+                5
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 0,
+                "entry": "5",
+                "history": []
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  5
+                ]
+              }
+            },
+            {
+              "action": [
+                "save"
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5
+                ]
+              }
+            },
+            {
+              "action": [
+                "enter",
+                2
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "2",
+                "history": [
+                  5
+                ]
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 7,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "recall"
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "clear"
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "recall"
+              ],
+              "expected": {
+                "total": 5,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "history",
+                0
+              ],
+              "expected": {
+                "total": 10,
+                "memory": 5,
+                "entry": "",
+                "history": [
+                  5,
+                  7
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "initial": {
+            "total": 0,
+            "memory": 0,
+            "entry": "",
+            "history": []
+          },
+          "steps": [
+            {
+              "action": [
+                "enter",
+                7
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 0,
+                "entry": "7",
+                "history": []
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 7,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "enter",
+                3
+              ],
+              "expected": {
+                "total": 7,
+                "memory": 0,
+                "entry": "3",
+                "history": [
+                  7
+                ]
+              }
+            },
+            {
+              "action": [
+                "subtract"
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  7,
+                  4
+                ]
+              }
+            },
+            {
+              "action": [
+                "enter",
+                4
+              ],
+              "expected": {
+                "total": 4,
+                "memory": 0,
+                "entry": "4",
+                "history": [
+                  7,
+                  4
+                ]
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 8,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "history",
+                1
+              ],
+              "expected": {
+                "total": 12,
+                "memory": 0,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "save"
+              ],
+              "expected": {
+                "total": 12,
+                "memory": 12,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "clear"
+              ],
+              "expected": {
+                "total": 0,
+                "memory": 12,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "recall"
+              ],
+              "expected": {
+                "total": 12,
+                "memory": 12,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8
+                ]
+              }
+            },
+            {
+              "action": [
+                "add"
+              ],
+              "expected": {
+                "total": 12,
+                "memory": 12,
+                "entry": "",
+                "history": [
+                  7,
+                  4,
+                  8,
+                  12
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "table": [
+    {
+      "id": "dev-0",
+      "requirement": "Build a complete small editable numeric table. It is a new synthetic task inspired by table selection/sorting/clipboard interactions, not the official Web-Bench task.\nInitially rows in order are a=7, b=2, c=5, no selection, and empty clipboard. Each row is a clickable element with data-row-id=\"a\", \"b\", or \"c\", a child .row-value showing its integer value, and aria-selected=\"true\" only when selected (otherwise \"false\"). Clicking a row selects it. Provide an editable input #edit-value and buttons #apply, #sort, #copy, #paste, #delete. Apply sets the selected row's value to the integer input; with no selection it does nothing. Sort is stable for ties and does not run automatically after edits. Copy/Paste with no selection do nothing. Copy handles its source as specified below. Paste replaces the selected value with the current clipboard value; empty clipboard does nothing. Delete removes the selected row and handles selection as specified below; deleting with no selection does nothing. When no rows remain selection is empty. Show current clipboard value as an integer in #clipboard, or exactly \"empty\" if absent, including when a live source was deleted. Editing, Copy and Paste never change selection or row order. No persistence or network; each fresh load restores the initial state. Implement the whole page, event bindings, and state yourself; no shell is supplied.\n\nBehavior requirements:\nSort orders rows by increasing numeric value.\nAfter Sort, selection follows the same row identity.\nDelete clears the selection.\nCopy stores a snapshot of the selected value.",
+      "public_cases": [
+        {
+          "initial": {
+            "rows": [
+              [
+                "a",
+                7
+              ],
+              [
+                "b",
+                2
+              ],
+              [
+                "c",
+                5
+              ]
+            ],
+            "selected": null,
+            "clipboard": null
+          },
+          "steps": [
+            {
+              "action": [
+                "select",
+                "a"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": null
+              }
+            },
+            {
+              "action": [
+                "copy"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "edit",
+                9
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    9
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "sort"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ],
+                  [
+                    "a",
+                    9
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "select",
+                "b"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ],
+                  [
+                    "a",
+                    9
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "paste"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "b",
+                    7
+                  ],
+                  [
+                    "c",
+                    5
+                  ],
+                  [
+                    "a",
+                    9
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "delete"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "c",
+                    5
+                  ],
+                  [
+                    "a",
+                    9
+                  ]
+                ],
+                "selected": null,
+                "clipboard": 7
+              }
+            }
+          ]
+        },
+        {
+          "initial": {
+            "rows": [
+              [
+                "a",
+                7
+              ],
+              [
+                "b",
+                2
+              ],
+              [
+                "c",
+                5
+              ]
+            ],
+            "selected": null,
+            "clipboard": null
+          },
+          "steps": [
+            {
+              "action": [
+                "select",
+                "b"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": null
+              }
+            },
+            {
+              "action": [
+                "copy"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "edit",
+                8
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "select",
+                "c"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "c",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "paste"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ],
+                  [
+                    "c",
+                    2
+                  ]
+                ],
+                "selected": "c",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "sort"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "c",
+                    2
+                  ],
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ]
+                ],
+                "selected": "c",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "delete"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ]
+                ],
+                "selected": null,
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "select",
+                "a"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "paste"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    2
+                  ],
+                  [
+                    "b",
+                    8
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dev-1",
+      "requirement": "Build a complete small editable numeric table. It is a new synthetic task inspired by table selection/sorting/clipboard interactions, not the official Web-Bench task.\nInitially rows in order are a=7, b=2, c=5, no selection, and empty clipboard. Each row is a clickable element with data-row-id=\"a\", \"b\", or \"c\", a child .row-value showing its integer value, and aria-selected=\"true\" only when selected (otherwise \"false\"). Clicking a row selects it. Provide an editable input #edit-value and buttons #apply, #sort, #copy, #paste, #delete. Apply sets the selected row's value to the integer input; with no selection it does nothing. Sort is stable for ties and does not run automatically after edits. Copy/Paste with no selection do nothing. Copy handles its source as specified below. Paste replaces the selected value with the current clipboard value; empty clipboard does nothing. Delete removes the selected row and handles selection as specified below; deleting with no selection does nothing. When no rows remain selection is empty. Show current clipboard value as an integer in #clipboard, or exactly \"empty\" if absent, including when a live source was deleted. Editing, Copy and Paste never change selection or row order. No persistence or network; each fresh load restores the initial state. Implement the whole page, event bindings, and state yourself; no shell is supplied.\n\nBehavior requirements:\nSort orders rows by decreasing numeric value.\nAfter Sort, selection follows the same row identity.\nDelete clears the selection.\nCopy stores a snapshot of the selected value.",
+      "public_cases": [
+        {
+          "initial": {
+            "rows": [
+              [
+                "a",
+                7
+              ],
+              [
+                "b",
+                2
+              ],
+              [
+                "c",
+                5
+              ]
+            ],
+            "selected": null,
+            "clipboard": null
+          },
+          "steps": [
+            {
+              "action": [
+                "select",
+                "a"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": null
+              }
+            },
+            {
+              "action": [
+                "copy"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "edit",
+                9
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    9
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "sort"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    9
+                  ],
+                  [
+                    "c",
+                    5
+                  ],
+                  [
+                    "b",
+                    2
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "select",
+                "b"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    9
+                  ],
+                  [
+                    "c",
+                    5
+                  ],
+                  [
+                    "b",
+                    2
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "paste"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    9
+                  ],
+                  [
+                    "c",
+                    5
+                  ],
+                  [
+                    "b",
+                    7
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "delete"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    9
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": null,
+                "clipboard": 7
+              }
+            }
+          ]
+        },
+        {
+          "initial": {
+            "rows": [
+              [
+                "a",
+                7
+              ],
+              [
+                "b",
+                2
+              ],
+              [
+                "c",
+                5
+              ]
+            ],
+            "selected": null,
+            "clipboard": null
+          },
+          "steps": [
+            {
+              "action": [
+                "select",
+                "b"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": null
+              }
+            },
+            {
+              "action": [
+                "copy"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "edit",
+                8
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "select",
+                "c"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "c",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "paste"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ],
+                  [
+                    "c",
+                    2
+                  ]
+                ],
+                "selected": "c",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "sort"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "b",
+                    8
+                  ],
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "c",
+                    2
+                  ]
+                ],
+                "selected": "c",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "delete"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "b",
+                    8
+                  ],
+                  [
+                    "a",
+                    7
+                  ]
+                ],
+                "selected": null,
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "select",
+                "a"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "b",
+                    8
+                  ],
+                  [
+                    "a",
+                    7
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "paste"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "b",
+                    8
+                  ],
+                  [
+                    "a",
+                    2
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dev-2",
+      "requirement": "Build a complete small editable numeric table. It is a new synthetic task inspired by table selection/sorting/clipboard interactions, not the official Web-Bench task.\nInitially rows in order are a=7, b=2, c=5, no selection, and empty clipboard. Each row is a clickable element with data-row-id=\"a\", \"b\", or \"c\", a child .row-value showing its integer value, and aria-selected=\"true\" only when selected (otherwise \"false\"). Clicking a row selects it. Provide an editable input #edit-value and buttons #apply, #sort, #copy, #paste, #delete. Apply sets the selected row's value to the integer input; with no selection it does nothing. Sort is stable for ties and does not run automatically after edits. Copy/Paste with no selection do nothing. Copy handles its source as specified below. Paste replaces the selected value with the current clipboard value; empty clipboard does nothing. Delete removes the selected row and handles selection as specified below; deleting with no selection does nothing. When no rows remain selection is empty. Show current clipboard value as an integer in #clipboard, or exactly \"empty\" if absent, including when a live source was deleted. Editing, Copy and Paste never change selection or row order. No persistence or network; each fresh load restores the initial state. Implement the whole page, event bindings, and state yourself; no shell is supplied.\n\nBehavior requirements:\nSort orders rows by increasing numeric value.\nAfter Sort, selection stays at its previous ordinal position.\nDelete clears the selection.\nCopy stores a snapshot of the selected value.",
+      "public_cases": [
+        {
+          "initial": {
+            "rows": [
+              [
+                "a",
+                7
+              ],
+              [
+                "b",
+                2
+              ],
+              [
+                "c",
+                5
+              ]
+            ],
+            "selected": null,
+            "clipboard": null
+          },
+          "steps": [
+            {
+              "action": [
+                "select",
+                "a"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": null
+              }
+            },
+            {
+              "action": [
+                "copy"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "edit",
+                9
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    9
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "sort"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ],
+                  [
+                    "a",
+                    9
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "select",
+                "b"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ],
+                  [
+                    "a",
+                    9
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "paste"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "b",
+                    7
+                  ],
+                  [
+                    "c",
+                    5
+                  ],
+                  [
+                    "a",
+                    9
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "delete"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "c",
+                    5
+                  ],
+                  [
+                    "a",
+                    9
+                  ]
+                ],
+                "selected": null,
+                "clipboard": 7
+              }
+            }
+          ]
+        },
+        {
+          "initial": {
+            "rows": [
+              [
+                "a",
+                7
+              ],
+              [
+                "b",
+                2
+              ],
+              [
+                "c",
+                5
+              ]
+            ],
+            "selected": null,
+            "clipboard": null
+          },
+          "steps": [
+            {
+              "action": [
+                "select",
+                "b"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": null
+              }
+            },
+            {
+              "action": [
+                "copy"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "edit",
+                8
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "select",
+                "c"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "c",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "paste"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ],
+                  [
+                    "c",
+                    2
+                  ]
+                ],
+                "selected": "c",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "sort"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "c",
+                    2
+                  ],
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "delete"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "c",
+                    2
+                  ],
+                  [
+                    "a",
+                    7
+                  ]
+                ],
+                "selected": null,
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "select",
+                "a"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "c",
+                    2
+                  ],
+                  [
+                    "a",
+                    7
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "paste"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "c",
+                    2
+                  ],
+                  [
+                    "a",
+                    2
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dev-3",
+      "requirement": "Build a complete small editable numeric table. It is a new synthetic task inspired by table selection/sorting/clipboard interactions, not the official Web-Bench task.\nInitially rows in order are a=7, b=2, c=5, no selection, and empty clipboard. Each row is a clickable element with data-row-id=\"a\", \"b\", or \"c\", a child .row-value showing its integer value, and aria-selected=\"true\" only when selected (otherwise \"false\"). Clicking a row selects it. Provide an editable input #edit-value and buttons #apply, #sort, #copy, #paste, #delete. Apply sets the selected row's value to the integer input; with no selection it does nothing. Sort is stable for ties and does not run automatically after edits. Copy/Paste with no selection do nothing. Copy handles its source as specified below. Paste replaces the selected value with the current clipboard value; empty clipboard does nothing. Delete removes the selected row and handles selection as specified below; deleting with no selection does nothing. When no rows remain selection is empty. Show current clipboard value as an integer in #clipboard, or exactly \"empty\" if absent, including when a live source was deleted. Editing, Copy and Paste never change selection or row order. No persistence or network; each fresh load restores the initial state. Implement the whole page, event bindings, and state yourself; no shell is supplied.\n\nBehavior requirements:\nSort orders rows by increasing numeric value.\nAfter Sort, selection follows the same row identity.\nDelete selects the next row at the removed position, or the preceding last row if none follows.\nCopy stores a snapshot of the selected value.",
+      "public_cases": [
+        {
+          "initial": {
+            "rows": [
+              [
+                "a",
+                7
+              ],
+              [
+                "b",
+                2
+              ],
+              [
+                "c",
+                5
+              ]
+            ],
+            "selected": null,
+            "clipboard": null
+          },
+          "steps": [
+            {
+              "action": [
+                "select",
+                "a"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": null
+              }
+            },
+            {
+              "action": [
+                "copy"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "edit",
+                9
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    9
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "sort"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ],
+                  [
+                    "a",
+                    9
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "select",
+                "b"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ],
+                  [
+                    "a",
+                    9
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "paste"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "b",
+                    7
+                  ],
+                  [
+                    "c",
+                    5
+                  ],
+                  [
+                    "a",
+                    9
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "delete"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "c",
+                    5
+                  ],
+                  [
+                    "a",
+                    9
+                  ]
+                ],
+                "selected": "c",
+                "clipboard": 7
+              }
+            }
+          ]
+        },
+        {
+          "initial": {
+            "rows": [
+              [
+                "a",
+                7
+              ],
+              [
+                "b",
+                2
+              ],
+              [
+                "c",
+                5
+              ]
+            ],
+            "selected": null,
+            "clipboard": null
+          },
+          "steps": [
+            {
+              "action": [
+                "select",
+                "b"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": null
+              }
+            },
+            {
+              "action": [
+                "copy"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "edit",
+                8
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "select",
+                "c"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "c",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "paste"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ],
+                  [
+                    "c",
+                    2
+                  ]
+                ],
+                "selected": "c",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "sort"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "c",
+                    2
+                  ],
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ]
+                ],
+                "selected": "c",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "delete"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "select",
+                "a"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "paste"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    2
+                  ],
+                  [
+                    "b",
+                    8
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dev-4",
+      "requirement": "Build a complete small editable numeric table. It is a new synthetic task inspired by table selection/sorting/clipboard interactions, not the official Web-Bench task.\nInitially rows in order are a=7, b=2, c=5, no selection, and empty clipboard. Each row is a clickable element with data-row-id=\"a\", \"b\", or \"c\", a child .row-value showing its integer value, and aria-selected=\"true\" only when selected (otherwise \"false\"). Clicking a row selects it. Provide an editable input #edit-value and buttons #apply, #sort, #copy, #paste, #delete. Apply sets the selected row's value to the integer input; with no selection it does nothing. Sort is stable for ties and does not run automatically after edits. Copy/Paste with no selection do nothing. Copy handles its source as specified below. Paste replaces the selected value with the current clipboard value; empty clipboard does nothing. Delete removes the selected row and handles selection as specified below; deleting with no selection does nothing. When no rows remain selection is empty. Show current clipboard value as an integer in #clipboard, or exactly \"empty\" if absent, including when a live source was deleted. Editing, Copy and Paste never change selection or row order. No persistence or network; each fresh load restores the initial state. Implement the whole page, event bindings, and state yourself; no shell is supplied.\n\nBehavior requirements:\nSort orders rows by increasing numeric value.\nAfter Sort, selection follows the same row identity.\nDelete clears the selection.\nCopy stores a live reference to the selected row; its current value is used until that source row is deleted.",
+      "public_cases": [
+        {
+          "initial": {
+            "rows": [
+              [
+                "a",
+                7
+              ],
+              [
+                "b",
+                2
+              ],
+              [
+                "c",
+                5
+              ]
+            ],
+            "selected": null,
+            "clipboard": null
+          },
+          "steps": [
+            {
+              "action": [
+                "select",
+                "a"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": null
+              }
+            },
+            {
+              "action": [
+                "copy"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 7
+              }
+            },
+            {
+              "action": [
+                "edit",
+                9
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    9
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 9
+              }
+            },
+            {
+              "action": [
+                "sort"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ],
+                  [
+                    "a",
+                    9
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 9
+              }
+            },
+            {
+              "action": [
+                "select",
+                "b"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ],
+                  [
+                    "a",
+                    9
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 9
+              }
+            },
+            {
+              "action": [
+                "paste"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "b",
+                    9
+                  ],
+                  [
+                    "c",
+                    5
+                  ],
+                  [
+                    "a",
+                    9
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 9
+              }
+            },
+            {
+              "action": [
+                "delete"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "c",
+                    5
+                  ],
+                  [
+                    "a",
+                    9
+                  ]
+                ],
+                "selected": null,
+                "clipboard": 9
+              }
+            }
+          ]
+        },
+        {
+          "initial": {
+            "rows": [
+              [
+                "a",
+                7
+              ],
+              [
+                "b",
+                2
+              ],
+              [
+                "c",
+                5
+              ]
+            ],
+            "selected": null,
+            "clipboard": null
+          },
+          "steps": [
+            {
+              "action": [
+                "select",
+                "b"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": null
+              }
+            },
+            {
+              "action": [
+                "copy"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    2
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 2
+              }
+            },
+            {
+              "action": [
+                "edit",
+                8
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "b",
+                "clipboard": 8
+              }
+            },
+            {
+              "action": [
+                "select",
+                "c"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ],
+                  [
+                    "c",
+                    5
+                  ]
+                ],
+                "selected": "c",
+                "clipboard": 8
+              }
+            },
+            {
+              "action": [
+                "paste"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ],
+                  [
+                    "c",
+                    8
+                  ]
+                ],
+                "selected": "c",
+                "clipboard": 8
+              }
+            },
+            {
+              "action": [
+                "sort"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ],
+                  [
+                    "c",
+                    8
+                  ]
+                ],
+                "selected": "c",
+                "clipboard": 8
+              }
+            },
+            {
+              "action": [
+                "delete"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ]
+                ],
+                "selected": null,
+                "clipboard": 8
+              }
+            },
+            {
+              "action": [
+                "select",
+                "a"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    7
+                  ],
+                  [
+                    "b",
+                    8
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 8
+              }
+            },
+            {
+              "action": [
+                "paste"
+              ],
+              "expected": {
+                "rows": [
+                  [
+                    "a",
+                    8
+                  ],
+                  [
+                    "b",
+                    8
+                  ]
+                ],
+                "selected": "a",
+                "clipboard": 8
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

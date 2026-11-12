@@ -1,0 +1,27 @@
+{
+  "pytest": {
+    "command": "uv run pytest -q",
+    "passed": 79,
+    "failed": 1,
+    "failure": "tests/test_followup.py::test_draft_blur_cannot_swallow_a_following_delete: Locator.click timeout 1800ms on an existing visible edit button; no state mismatch before timeout",
+    "rerun_command": "uv run pytest tests/test_followup.py::test_draft_blur_cannot_swallow_a_following_delete -q",
+    "rerun_passed": 1,
+    "rerun_failed": 0,
+    "source_modified_for_retry": false
+  },
+  "frozen_scale_audit": {
+    "passed": true,
+    "generated": 190,
+    "complete_groups": 47,
+    "source_and_protocol_hashes_unchanged": true,
+    "halted": 1
+  },
+  "paper": {
+    "body_pages": 8,
+    "total_pages": 39,
+    "undefined_references": 0,
+    "overfull_boxes": 0,
+    "local_only": true
+  },
+  "scope": "Final offline checks. A single browser timeout on the first full pytest run is retained, with its isolated passing retry; this is not a claim that the first full run passed."
+}

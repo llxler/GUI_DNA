@@ -112,4 +112,30 @@ uv run python -m test.webbench_expand.evaluate_pinned --stage artifacts/webbench
 
 两个文档示例和每个规划者task-20最后可执行页都原样评分；新阶段的固定最终页控制在规划调用前指定，与第17节的事后控制不同。三个项目最终参考页均可固定通过全部20个任务文件，必须结合固定控制解释逐任务规划价值。统计单位仍是三个便利选择的项目，不能把前缀、建库者、规划者当作独立应用。
 
-原始阶段和论文仍只在本地。此前 `anonymous-replay.zip` 不包含本次新增阶段；R11b还需扩展导出清单与独立复验，随后另行匿名发布。
+原始阶段和论文仍只在本地。此前 `anonymous-replay.zip` 是第17节时间点快照；本次使用独立扩展文件名，见下节。
+
+
+## 2026-11-12续作：开发集建库与未见组合
+
+[heldout_composition/README.md](heldout_composition/README.md)和冻结[PROTOCOL.md](heldout_composition/PROTOCOL.md)定义新合成诊断。其行为维度和测试由本研究设计，不是官方Web-Bench任务；不要混入五项目主表。四库只看每应用5个开发需求及公开行为例，其余11种已知原语组合留测。所有配置隐藏动作相同，16种期望轨迹可区分；先参考校准32/32，再冻结输入、生成244候选、运行隐藏及364项控制。
+
+方案与同库代码主组均88/88，无库32/44；GPT-5 medium两种同库做法均12/12。无模型开发示例差分44/44，说明本次选择不需要LLM。五个固定开发示例各0/44，主组固定最终页8/88。结果、首个响应格式失败、供应商和费用见第19节。
+
+```bash
+uv run python -m test.heldout_composition.analyze
+uv run python -m test.heldout_composition.diagnostics
+uv run python -m test.heldout_composition.report
+uv run python -m test.heldout_composition.paper_tables
+uv run python -m test.replay_new_tables
+
+# 本地扩展包：包含第18–19节，不覆盖第17节历史快照。
+uv run python -m test.export_replay_bundle --expanded --out artifacts/anonymous-replay-20261112-expanded.zip --report test/results/replay-bundle-expanded.json
+uv run python -m test.validate_replay_bundle --expanded --archive artifacts/anonymous-replay-20261112-expanded.zip --report test/results/replay-validation-expanded.json
+```
+
+`replay_new_tables`从原始记录/评分独立重算第18–19节904个不同候选、874个固定控制和七个账本；不重新运行浏览器，也不把匿名重写字节当原冻结字节。扩展包保留生成源码（含编译器.mjs和特殊后缀文件）、请求/响应、评分、去标识账本与运行环境锁文件；不含密钥、作者Git历史或论文。独立解压目录移除API密钥后运行八个汇总入口，覆盖范围以`test/results/replay-validation-expanded.json`为准。匿名托管尚需完成，包的生成和验证不代表已公开。
+
+原工作区`analyze`会核对所有冻结文件，不要修改`heldout_composition`的生成/评分源文件或公开开发资料。其三个阶段账本已关闭，后续新条件必须另立阶段。当天总已结算$9.624046、含未确认预留$13.203664，原第三轮仍暂停；不以账户余额代替实验账本。
+
+
+第20节的`test.webbench_expand.saved_witnesses`从第18节已有合法方案和固定控制给出可达下界：53/120库与任务配对有通过见证。它不搜索、不调用API、不重跑浏览器；无见证不能说不可达。原工作区会复编译逐字核对，匿名包改用导出清单，不要求原哈希通过。

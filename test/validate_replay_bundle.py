@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import hashlib
+import argparse
 import json
 import os
 from pathlib import Path
@@ -33,7 +34,12 @@ def normalize(value, root):
 
 
 def main():
-    path = ROOT / 'artifacts/anonymous-replay.zip'
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--archive', type=Path, default=ROOT / 'artifacts/anonymous-replay.zip')
+    parser.add_argument('--report', type=Path, default=ROOT / 'test/results/replay-validation.json')
+    parser.add_argument('--expanded', action='store_true')
+    args = parser.parse_args()
+    path = args.archive
     result = {'archive_sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
               'published': False, 'checks': [], 'scope': 'Hash verification; three primary accuracy tables plus five sample/seed/frontier extensions from raw records; five further summary recomputations. External row checks reuse observations across tables; distinct file-path count reported separately. Not a replay of every historical browser test or every paper table.'}
     with tempfile.TemporaryDirectory(prefix='gui-dna-anonymous-replay-') as temporary:
@@ -52,7 +58,8 @@ def main():
         proof = subprocess.run([sys.executable, '-c', 'import gui_dna, test.interface_blind.core as c; print(gui_dna.__file__); print(c.ROOT)'],
                                cwd=root, env=env, check=True, capture_output=True, text=True)
         assert all(line.startswith(str(root)) for line in proof.stdout.splitlines()), proof.stdout
-        for module, output in CHECKS:
+        checks = CHECKS + ((('test.replay_new_tables', 'test/results/new-tables-replay.json'),) if args.expanded else ())
+        for module, output in checks:
             expected = json.loads((root / output).read_text())
             done = subprocess.run([sys.executable, '-m', module], cwd=root, env=env,
                                   capture_output=True, text=True, timeout=240)
@@ -65,9 +72,13 @@ def main():
             result['checks'].append(check)
             print(module, check['identical'], flush=True)
     result['all_passed'] = all(c['identical'] for c in result['checks'])
-    (ROOT / 'test/results/replay-validation.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
+    result['expanded'] = args.expanded
+    if args.expanded:
+        result['scope'] += ' Also four new cohorts (904 distinct candidates) and their stored fixed-control scores; no additional browser reruns.'
+    args.report.parent.mkdir(parents=True, exist_ok=True)
+    args.report.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
     if not result['all_passed']:
-        raise SystemExit('Replay validation failed; inspect test/results/replay-validation.json')
+        raise SystemExit(f'Replay validation failed; inspect {args.report}')
 
 
 if __name__ == '__main__':

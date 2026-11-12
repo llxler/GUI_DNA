@@ -20,7 +20,7 @@ from pathlib import Path
 from test.export_review_snapshot import ALLOWED_FILES, ALLOWED_ROOTS, EXTENSIONS
 
 ROOT = Path(__file__).resolve().parents[1]
-TEXT = EXTENSIONS | {'.csv', '.svg', '.yaml', '.yml'}
+TEXT = EXTENSIONS | {'.csv', '.svg', '.yaml', '.yml', '.mjs'}
 RAW_PREFIXES = ('todomvc-', 'webbench-dna', 'webapp1k-dna', 'name-sensitivity', 'interface-blind', 'behavior-feedback', 'library-')
 RAW_NAMES = {'live', 'followup', 'linked-plan-posthoc', 'scale-study', 'random-plans', 'failure-figure', 'review-20261112'}
 SKIP_PARTS = {'node_modules', '.git', '__pycache__', '.pytest_cache', 'playwright-output', 'test-results', 'playwright-report'}
@@ -77,15 +77,35 @@ def walk_files(root):
                 yield path
 
 
-def selected_files():
+def candidate_source_files(stage):
+    """Preserve every generated source file, even with an uncommon extension."""
+    result = set()
+    for manifest in stage.rglob('source-manifest.json'):
+        if any(part in SKIP_PARTS for part in manifest.parts):
+            continue
+        value = json.loads(manifest.read_text())
+        for name in value.get('files_sha256', {}):
+            path = manifest.parent / name
+            if not path.resolve().is_relative_to(stage.resolve()) or path.is_symlink():
+                raise ValueError('Unsafe candidate source path')
+            if not path.is_file():
+                raise ValueError(f'Missing saved candidate source: {path}')
+            result.add(path)
+    return result
+
+
+def selected_files(expanded=False):
     names = subprocess.check_output(['git', 'ls-files', '-z', '--cached', '--others', '--exclude-standard'], cwd=ROOT).decode().split('\0')
     chosen = {ROOT / n for n in names if n and (n in ALLOWED_FILES or (Path(n).parts[0] in ALLOWED_ROOTS and Path(n).suffix in TEXT))}
+    prefixes = RAW_PREFIXES + (('webbench-expand', 'heldout-composition') if expanded else ())
     for stage in (ROOT / 'artifacts').iterdir():
-        if not stage.is_dir() or not (stage.name in RAW_NAMES or stage.name.startswith(RAW_PREFIXES)):
+        if not stage.is_dir() or not (stage.name in RAW_NAMES or stage.name.startswith(prefixes)):
             continue
         for path in walk_files(stage):
             if path.suffix in TEXT | {'.sqlite3', '.png', '.jpg'}:
                 chosen.add(path)
+        if expanded and stage.name.startswith(('webbench-expand', 'heldout-composition')):
+            chosen.update(candidate_source_files(stage))
     if (ROOT / 'artifacts/budget.sqlite3').exists():
         chosen.add(ROOT / 'artifacts/budget.sqlite3')
     # List-16 reconstructs atoms from this standalone historical library.
@@ -93,14 +113,14 @@ def selected_files():
         path = ROOT / 'artifacts' / name
         if path.exists():
             chosen.add(path)
-    # The two small public projects support the new experiment's local grader.
-    for project in ('dom1', 'form'):
+    projects = ('dom1', 'form', 'calculator', 'table', 'bom') if expanded else ('dom1', 'form')
+    for project in projects:
         folder = ROOT / 'artifacts/web-bench/projects' / project
         chosen.update(p for p in walk_files(folder) if p.suffix in TEXT)
     license_path = ROOT / 'artifacts/web-bench/LICENSE'
     if license_path.exists():
         chosen.add(license_path)
-    generated_reports = {'replay-bundle.json', 'replay-validation.json'}
+    generated_reports = {'replay-bundle.json', 'replay-validation.json', 'replay-bundle-expanded.json', 'replay-validation-expanded.json'}
     return sorted(p for p in chosen if p.is_file() and not p.is_symlink() and p.name not in generated_reports
                   and not (p.parent.name == 'review-20261112' and p.name.startswith('credits')))
 
@@ -125,14 +145,29 @@ def sanitize_ledger(source, target):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--out', type=Path, default=ROOT / 'artifacts/anonymous-replay.zip')
+    parser.add_argument('--report', type=Path, default=ROOT / 'test/results/replay-bundle.json')
+    parser.add_argument('--expanded', action='store_true', help='Include the three-project and heldout-composition extensions')
     args = parser.parse_args()
+    args.out = args.out.resolve()
+    args.report = args.report.resolve()
     for stage in ('interface-blind-final-2', 'behavior-feedback'):
         if not (ROOT / 'artifacts' / stage / 'generation-complete.json').exists():
             raise ValueError(f'{stage}: finish generation before snapshotting')
         for record in (ROOT / 'artifacts' / stage / 'runs').rglob('record.json'):
             if not record.with_name('hidden.json').exists():
                 raise ValueError(f'{stage}: finish hidden scoring before snapshotting')
-    paths = selected_files()
+    if args.expanded:
+        for name in ('webbench-expand-run', 'heldout-composition-run'):
+            if not (ROOT / 'artifacts' / name / 'offline-complete.json').exists():
+                raise ValueError(f'{name}: finish the full offline pipeline before expanded export')
+        if not (ROOT / 'test/results/new-tables-replay.json').exists():
+            raise ValueError('Run test.replay_new_tables before expanded export')
+    paths = selected_files(args.expanded)
+    source_paths = set()
+    if args.expanded:
+        for stage in (ROOT / 'artifacts').iterdir():
+            if stage.is_dir() and stage.name.startswith(('webbench-expand', 'heldout-composition')):
+                source_paths.update(candidate_source_files(stage))
     call_ids = set()
     for path in paths:
         if path.suffix == '.sqlite3':
@@ -161,7 +196,7 @@ def main():
                     except json.JSONDecodeError:
                         lines.append(scrub(line))
                 content = ('\n'.join(lines) + '\n').encode()
-            elif path.suffix in TEXT or path.name == 'LICENSE':
+            elif path.suffix in TEXT or path.name == 'LICENSE' or path in source_paths:
                 content = scrub(original.decode()).encode()
             else:
                 content = original
@@ -172,7 +207,8 @@ def main():
                               'exported_sha256': hashlib.sha256(content).hexdigest(), 'bytes': len(content)}
             if i and i % 2000 == 0:
                 print(f'exported {i}/{len(paths)} files', flush=True)
-        metadata = {'commit': '7b31ca2b786eef120dd49ce63dd03d0c0006046d', 'scope': 'dom1 and form only; files retain upstream license notices'}
+        metadata = {'commit': '7b31ca2b786eef120dd49ce63dd03d0c0006046d',
+                    'scope': ('dom1, form, calculator, table, bom' if args.expanded else 'dom1 and form only') + '; files retain upstream license notices'}
         generated = {'artifacts/web-bench/REPLAY-UPSTREAM.json': json.dumps(metadata, indent=2) + '\n'}
         generated['REPLAY.md'] = '''# Anonymous observations bundle
 
@@ -201,6 +237,18 @@ upstream benchmark installations. The accompanying validation report states
 which tables were actually reproduced; this archive alone does not certify every
 paper table, every historical browser score, or anonymous online availability.
 '''
+        if args.expanded:
+            generated['REPLAY.md'] += '''
+This expanded snapshot additionally includes three official Web-Bench projects,
+their pinned Playwright 1.57 runtime lockfiles, and the separately labeled
+synthetic heldout-composition diagnostic. Recompute their four cohorts and fixed
+controls with:
+  python -m test.replay_new_tables
+This reads stored outcomes and does not rerun every browser trajectory. Original
+generation audits bind original bytes and are not applicable to rewritten files;
+verify REPLAY-MANIFEST.json instead. Browser replay requires separate dependency
+installation. The synthetic tasks are not official Web-Bench results.
+'''
         for name, text in generated.items():
             content = text.encode()
             archive.writestr(name, content)
@@ -209,7 +257,9 @@ paper table, every historical browser score, or anonymous online availability.
     result = {'file': str(args.out.relative_to(ROOT)), 'files': len(manifest), 'bytes': args.out.stat().st_size,
               'sha256': hashlib.sha256(args.out.read_bytes()).hexdigest(), 'published': False,
               'original_hashes_remapped': True, 'sqlite_ledgers': sum(p.suffix == '.sqlite3' for p in paths)}
-    output = ROOT / 'test/results/replay-bundle.json'
+    result['expanded'] = args.expanded
+    output = args.report
+    output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(result, indent=2) + '\n')
     print(json.dumps(result, indent=2))
 
