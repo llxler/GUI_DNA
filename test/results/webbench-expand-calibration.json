@@ -1,0 +1,209 @@
+{
+  "source_sha256": {
+    "artifacts/webbench-expand-harness/calibration.json": "f2425faf984246d3207ce8be35efda48ebcc9ee373d92fe9f71c5be01d293cd5",
+    "artifacts/webbench-expand-harness/final-reference-audit.json": "dc9e2ea0eaeaa173b5ede5a46d2fc0a9cfd36004258830ce44ba4d8c94b0c5c2",
+    "artifacts/webbench-expand-harness/bom-repeat.json": "ffb1e570d770907661bc047f6f3d0543aaf866deb584f0f242b8db58ff954c55",
+    "artifacts/webbench-expand-harness-157/calibration.json": "3045bc446fd29717822026efa46fdd5724b387e677890832eb5f1a5fe161e18d",
+    "artifacts/webbench-expand-harness-157/final-reference-audit.json": "c56c32b8eff42c11037db64426b08050f21b6ed665d7fc1f31a1f82bde1f446c",
+    "artifacts/webbench-expand-harness-157/bom-repeat.json": "835aeb35450cead866f02fdee1f6272d3950c9de2a5e719268a05ac736aabcce",
+    "artifacts/webbench-expand-harness-157/serial-reference-audit.json": "432cddda0c54fb59b74ba089c9a147a1b1d12df9f842a1da22f641ff3e053dc5"
+  },
+  "initial_reference": {
+    "calculator/init": {
+      "passed": true,
+      "tests_passed": 17,
+      "tests_listed": 17,
+      "expected_pass": true
+    },
+    "calculator/task-20": {
+      "passed": true,
+      "tests_passed": 1,
+      "tests_listed": 1,
+      "expected_pass": true
+    },
+    "calculator/negative": {
+      "passed": false,
+      "tests_passed": 0,
+      "tests_listed": 3,
+      "expected_pass": false
+    },
+    "table/init": {
+      "passed": true,
+      "tests_passed": 3,
+      "tests_listed": 3,
+      "expected_pass": true
+    },
+    "table/task-20": {
+      "passed": true,
+      "tests_passed": 3,
+      "tests_listed": 3,
+      "expected_pass": true
+    },
+    "table/negative": {
+      "passed": false,
+      "tests_passed": 0,
+      "tests_listed": 3,
+      "expected_pass": false
+    },
+    "bom/init": {
+      "passed": false,
+      "tests_passed": 2,
+      "tests_listed": 3,
+      "expected_pass": false
+    },
+    "bom/task-20": {
+      "passed": true,
+      "tests_passed": 3,
+      "tests_listed": 3,
+      "expected_pass": true
+    },
+    "bom/final-init": {
+      "passed": true,
+      "tests_passed": 3,
+      "tests_listed": 3,
+      "expected_pass": true
+    },
+    "bom/final-task-1": {
+      "passed": true,
+      "tests_passed": 3,
+      "tests_listed": 3,
+      "expected_pass": true
+    },
+    "bom/negative": {
+      "passed": false,
+      "tests_passed": 0,
+      "tests_listed": 3,
+      "expected_pass": false
+    }
+  },
+  "playwright_163_parallel_final_reference": {
+    "calculator": {
+      "n": 20,
+      "passed": 20,
+      "failed_tasks": []
+    },
+    "table": {
+      "n": 20,
+      "passed": 20,
+      "failed_tasks": []
+    },
+    "bom": {
+      "n": 20,
+      "passed": 18,
+      "failed_tasks": [
+        "task-14",
+        "task-19"
+      ]
+    }
+  },
+  "playwright_163_bom_serial_repeats": [
+    {
+      "task": "task-14",
+      "repeat": 0,
+      "passed": true
+    },
+    {
+      "task": "task-14",
+      "repeat": 1,
+      "passed": true
+    },
+    {
+      "task": "task-14",
+      "repeat": 2,
+      "passed": true
+    },
+    {
+      "task": "task-19",
+      "repeat": 0,
+      "passed": false
+    },
+    {
+      "task": "task-19",
+      "repeat": 1,
+      "passed": false
+    },
+    {
+      "task": "task-19",
+      "repeat": 2,
+      "passed": false
+    }
+  ],
+  "playwright_157_parallel_final_reference": {
+    "calculator": {
+      "n": 20,
+      "passed": 20,
+      "failed_tasks": []
+    },
+    "table": {
+      "n": 20,
+      "passed": 20,
+      "failed_tasks": []
+    },
+    "bom": {
+      "n": 20,
+      "passed": 19,
+      "failed_tasks": [
+        "task-7"
+      ]
+    }
+  },
+  "playwright_157_bom_serial_repeats": [
+    {
+      "task": "task-14",
+      "repeat": 0,
+      "passed": true
+    },
+    {
+      "task": "task-14",
+      "repeat": 1,
+      "passed": true
+    },
+    {
+      "task": "task-14",
+      "repeat": 2,
+      "passed": true
+    },
+    {
+      "task": "task-19",
+      "repeat": 0,
+      "passed": true
+    },
+    {
+      "task": "task-19",
+      "repeat": 1,
+      "passed": true
+    },
+    {
+      "task": "task-19",
+      "repeat": 2,
+      "passed": true
+    }
+  ],
+  "selected_runtime_final_reference": {
+    "calculator": {
+      "n": 20,
+      "passed": 20,
+      "failed_tasks": []
+    },
+    "table": {
+      "n": 20,
+      "passed": 20,
+      "failed_tasks": []
+    },
+    "bom": {
+      "n": 20,
+      "passed": 20,
+      "failed_tasks": []
+    }
+  },
+  "interpretation": "The unchanged upstream final page passes every task file in each project under the selected execution setting. High prefix scores alone therefore cannot establish useful per-task planning. This does not prove generated libraries are behaviorally adequate.",
+  "candidate_score_selection": false,
+  "sensitivity_rule_fixed_before_candidate_scores": {
+    "bom_excluded_tasks": [
+      7,
+      14,
+      19
+    ],
+    "primary_keeps_all20": true
+  }
+}

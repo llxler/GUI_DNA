@@ -1,6 +1,6 @@
 # 第 0 节审稿问题的复验入口
 
-结论统一见 [`实验结果.md` 第 16–17 节](../实验结果.md)，未解决的问题见 [`experiments/TODO.md`](../experiments/TODO.md)。这里记录复现流程，避免把探索性检查误作新主实验。第16节是2026-11-11的历史阶段；2026-11-12用户另授权当天不超过$20。
+结论统一见 [`实验结果.md` 第 16–18 节](../实验结果.md)，未解决的问题见 [`experiments/TODO.md`](../experiments/TODO.md)。这里记录复现流程，避免把探索性检查误作新主实验。第16节是2026-11-11的历史阶段；2026-11-12用户另授权当天不超过$20。
 
 ## 只读汇总与本地复验
 
@@ -78,3 +78,38 @@ uv run python -m test.validate_replay_bundle
 首个入口进行2692次候选记录与隐藏评分核对（跨表有复用，另报不同记录路径数），覆盖两套外部主表、TodoMVC五采样、Web-Bench两个新种子和两份GPT-5对照；第二个入口从190个已评分候选复算暂停的List-16准确率和配对区间，不打开账本、不恢复生成。Web-Bench主口径统一排除Gemma，不调用旧运行器的账本构造。后三个入口分别只读记账、制作本地匿名原始观测包、在独立临时目录复算指定表格。导出包含候选、响应、SSE、评分和去标识SQLite账本；原始哈希与导出哈希分开记录。导出脚本本身不上传，验证报告只证明实际复算的表，不能当成所有历史浏览器评分都已重新运行。论文仍不入Git。
 
 `interface_blind_audit`仅在原工作区运行：检查历史冻结哈希、160对同库user输入、有效响应终止原因和公开反馈消息边界。匿名包路径/ID经过重写，应改验其独立 `REPLAY-MANIFEST.json`，不能要求原冻结哈希也通过。
+
+## 2026-11-12续作：Web-Bench三个新项目
+
+`calculator/table/bom` 的项目清单在上一阶段按公开需求固定。新阶段入口在 [webbench_expand/PRELOAD.md](webbench_expand/PRELOAD.md)，评分以 [EVALUATION.md](webbench_expand/EVALUATION.md) 为准；目录内最初的README保留为建库时的冻结记录。不要运行旧 `run generate` 代替正式的 `generate`。建库只看全部公开需求，模型提出封闭方案模式与整页实现；这仍不是建库时未见组合迁移。
+
+同库代码可覆盖预加载文件，也可提交任意 `build(files, compile)` JavaScript，直接调用冻结编译器后修改结果。方案则先经过通用模式验证再调用同一个编译器。这一更强代码对照在首次规划调用前固定；不能把与第17节的分数变化归因于严格模式验证。
+
+主阶段为 `webbench-expand-build` 和 `webbench-expand-run`，600个候选。GPT-5 medium独立里程碑小试60个，最终记录位于 `webbench-expand-frontier-2`；成本同时读取初始 `webbench-expand-frontier` 及续作账本。原账本关闭后复制全部记录，仅补缺失请求与未开始候选，不重抽完整模型失败。当天全部账本已关闭新请求，以下命令不调用模型：
+
+```bash
+# 在原工作区核对冻结输入和评分前的候选文件快照。
+uv run python -m test.webbench_expand.snapshot
+uv run python -m test.webbench_expand.audit
+uv run python -m test.webbench_expand.calibration_summary
+
+# 已保存评分的只读汇总；frontier_analyze若缺固定最终页评分，会运行本地浏览器。
+uv run python -m test.webbench_expand.analyze
+uv run python -m test.webbench_expand.frontier_analyze
+uv run python -m test.webbench_expand.diagnostics
+uv run python -m test.webbench_expand.verify_scores
+uv run python -m test.review_daily_costs
+uv run python -m test.webbench_expand.paper_tables
+uv run python -m test.webbench_expand.report
+
+# 仅补缺失的浏览器评分，不覆盖已存成绩、不调用模型。
+uv run python -m test.webbench_expand.evaluate_pinned --workers 6
+uv run python -m test.webbench_expand.controls --workers 6
+uv run python -m test.webbench_expand.evaluate_pinned --stage artifacts/webbench-expand-frontier-2 --workers 6
+```
+
+运行环境由 `test.webbench_expand.setup_runtime` 及同目录的npm锁文件重建；上游测试、`test-util`、候选和协议各自有哈希。正式评分用Playwright1.57.0及Chromium1200，每任务只跑对应官方文件，BOM串行，不能随意增大并发。BOM task-7/14/19的敏感性集合在候选评分前根据参考页校准固定；主表仍保留全部20项。重复评分的同页不一致完整保留，不择优重跑。
+
+两个文档示例和每个规划者task-20最后可执行页都原样评分；新阶段的固定最终页控制在规划调用前指定，与第17节的事后控制不同。三个项目最终参考页均可固定通过全部20个任务文件，必须结合固定控制解释逐任务规划价值。统计单位仍是三个便利选择的项目，不能把前缀、建库者、规划者当作独立应用。
+
+原始阶段和论文仍只在本地。此前 `anonymous-replay.zip` 不包含本次新增阶段；R11b还需扩展导出清单与独立复验，随后另行匿名发布。
