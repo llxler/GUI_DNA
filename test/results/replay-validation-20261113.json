@@ -1,0 +1,65 @@
+{
+  "archive_sha256": "ec09158e21553f0af4bd964b059a3190daeb610f4c334afc24f799671da5c33b",
+  "published": false,
+  "checks": [
+    {
+      "module": "test.replay_scale_table",
+      "output": "test/results/scale-table-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_primary_tables",
+      "output": "test/results/primary-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.review_metrics",
+      "output": "test/results/review-metrics.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.interface_blind.analyze",
+      "output": "test/results/interface-blind.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.behavior_feedback_analyze",
+      "output": "test/results/behavior-feedback.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.repair_breakdown",
+      "output": "test/results/repair-breakdown.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.paired_intervals",
+      "output": "test/results/paired-intervals.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_new_tables",
+      "output": "test/results/new-tables-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_library_repair",
+      "output": "test/results/library-repair-replay.json",
+      "exit_code": 0,
+      "identical": true
+    }
+  ],
+  "scope": "Hash verification; three primary accuracy tables plus five sample/seed/frontier extensions from raw records; five further summary recomputations. External row checks reuse observations across tables; distinct file-path count reported separately. Not a replay of every historical browser test or every paper table. Also four new cohorts (904 distinct candidates) and their stored fixed-control scores; no additional browser reruns. Also strict and secondary repair replay tables reconstructed from stored raw reports; no new browser calls.",
+  "hashes_verified": 138954,
+  "all_passed": true,
+  "expanded": true,
+  "library_repair": true
+}

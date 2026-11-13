@@ -18,6 +18,22 @@ def test_expanded_export_includes_saved_modules_and_unusual_source_extensions(tm
     selected = set(exporter.selected_files(expanded=True))
     assert page / 'module.mjs' in selected
     assert page / 'generated.payload' in selected
+
+
+def test_repair_snapshot_is_explicit_and_includes_all_replay_sources(tmp_path, monkeypatch):
+    from test import export_replay_bundle as exporter
+    stage = tmp_path / 'artifacts/library-repair-20261113'
+    page = stage / 'pages/project/hash'
+    page.mkdir(parents=True)
+    (page / 'index.html').write_text('page')
+    (page / 'custom.payload').write_text('source')
+    (stage / 'inputs.json').write_text(json.dumps({'jobs': {'key': {'page': str(page.relative_to(tmp_path))}}}))
+    monkeypatch.setattr(exporter, 'ROOT', tmp_path)
+    monkeypatch.setattr(exporter.subprocess, 'check_output', lambda *args, **kwargs: b'')
+    assert page / 'index.html' not in exporter.selected_files(expanded=True)
+    selected = exporter.selected_files(expanded=True, library_repair=True)
+    assert page / 'index.html' in selected
+    assert page / 'custom.payload' in selected
 from test.ledger_read import calls, totals
 
 

@@ -91,20 +91,31 @@ def candidate_source_files(stage):
             if not path.is_file():
                 raise ValueError(f'Missing saved candidate source: {path}')
             result.add(path)
+    for filename in ('replay-inputs.json', 'format-replay-inputs.json', 'inputs.json'):
+        index = stage / filename
+        if not index.exists():
+            continue
+        for job in json.loads(index.read_text()).get('jobs', {}).values():
+            page = ROOT / job['page']
+            if not page.resolve().is_relative_to(stage.resolve()) or page.is_symlink():
+                raise ValueError('Unsafe replay page path')
+            result.update(walk_files(page))
     return result
 
 
-def selected_files(expanded=False):
+def selected_files(expanded=False, library_repair=False):
     names = subprocess.check_output(['git', 'ls-files', '-z', '--cached', '--others', '--exclude-standard'], cwd=ROOT).decode().split('\0')
     chosen = {ROOT / n for n in names if n and (n in ALLOWED_FILES or (Path(n).parts[0] in ALLOWED_ROOTS and Path(n).suffix in TEXT))}
     prefixes = RAW_PREFIXES + (('webbench-expand', 'heldout-composition') if expanded else ())
     for stage in (ROOT / 'artifacts').iterdir():
         if not stage.is_dir() or not (stage.name in RAW_NAMES or stage.name.startswith(prefixes)):
             continue
+        if stage.name.startswith('library-repair-') and not library_repair:
+            continue
         for path in walk_files(stage):
             if path.suffix in TEXT | {'.sqlite3', '.png', '.jpg'}:
                 chosen.add(path)
-        if expanded and stage.name.startswith(('webbench-expand', 'heldout-composition')):
+        if expanded and stage.name.startswith(('webbench-expand', 'heldout-composition', 'library-repair-')):
             chosen.update(candidate_source_files(stage))
     if (ROOT / 'artifacts/budget.sqlite3').exists():
         chosen.add(ROOT / 'artifacts/budget.sqlite3')
@@ -120,7 +131,9 @@ def selected_files(expanded=False):
     license_path = ROOT / 'artifacts/web-bench/LICENSE'
     if license_path.exists():
         chosen.add(license_path)
-    generated_reports = {'replay-bundle.json', 'replay-validation.json', 'replay-bundle-expanded.json', 'replay-validation-expanded.json'}
+    generated_reports = {'replay-bundle.json', 'replay-validation.json', 'replay-bundle-expanded.json', 'replay-validation-expanded.json',
+                         'replay-bundle-20261113.json', 'replay-validation-20261113.json',
+                         'replay-bundle-20261113-final.json', 'replay-validation-20261113-final.json'}
     return sorted(p for p in chosen if p.is_file() and not p.is_symlink() and p.name not in generated_reports
                   and not (p.parent.name == 'review-20261112' and p.name.startswith('credits')))
 
@@ -147,6 +160,7 @@ def main():
     parser.add_argument('--out', type=Path, default=ROOT / 'artifacts/anonymous-replay.zip')
     parser.add_argument('--report', type=Path, default=ROOT / 'test/results/replay-bundle.json')
     parser.add_argument('--expanded', action='store_true', help='Include the three-project and heldout-composition extensions')
+    parser.add_argument('--library-repair', action='store_true', help='Include the completed availability diagnostic and interrupted generation (requires --expanded)')
     args = parser.parse_args()
     args.out = args.out.resolve()
     args.report = args.report.resolve()
@@ -162,11 +176,21 @@ def main():
                 raise ValueError(f'{name}: finish the full offline pipeline before expanded export')
         if not (ROOT / 'test/results/new-tables-replay.json').exists():
             raise ValueError('Run test.replay_new_tables before expanded export')
-    paths = selected_files(args.expanded)
+    if args.library_repair:
+        if not args.expanded:
+            raise ValueError('--library-repair requires --expanded for its original source cohorts')
+        if not (ROOT / 'artifacts/library-repair-available-20261113/evaluation-complete.json').exists():
+            raise ValueError('Complete the separate availability diagnostic before exporting')
+        space = ROOT / 'artifacts/library-repair-space-20261113'
+        if space.exists() and not (space / 'evaluation-complete.json').exists():
+            raise ValueError('Finish the conditional space evaluation before exporting')
+        if not (ROOT / 'test/results/library-repair-replay.json').exists():
+            raise ValueError('Run test.replay_library_repair before exporting')
+    paths = selected_files(args.expanded, args.library_repair)
     source_paths = set()
     if args.expanded:
         for stage in (ROOT / 'artifacts').iterdir():
-            if stage.is_dir() and stage.name.startswith(('webbench-expand', 'heldout-composition')):
+            if stage.is_dir() and stage.name.startswith(('webbench-expand', 'heldout-composition') + (('library-repair-',) if args.library_repair else ())):
                 source_paths.update(candidate_source_files(stage))
     call_ids = set()
     for path in paths:
@@ -249,6 +273,27 @@ generation audits bind original bytes and are not applicable to rewritten files;
 verify REPLAY-MANIFEST.json instead. Browser replay requires separate dependency
 installation. The synthetic tasks are not official Web-Bench results.
 '''
+        if args.library_repair:
+            generated['REPLAY.md'] += '''
+The November 13 snapshot also includes the implementation-only library revision,
+strict-format results and separate exact-JSON-fence diagnostic. Reconstruct their
+old baselines and new stored raw browser reports with:
+  python -m test.replay_library_repair
+Only the three libraries with complete responses in both conditions are included
+in this posthoc availability subset; the planned six-library study remains
+incomplete. Its 90 original planner outputs are replayed, not newly generated.
+Development feedback and all-target requirement access prevent a transfer claim.
+The final snapshot additionally includes all 128 Boolean interaction settings at
+one fixed style, before and after one source-line intervention on table/task-20.
+This is a conditional slice, not an impossibility proof for the whole schema.
+An optional five-page browser smoke replay can run within a fresh extraction:
+  python -m test.replay_browser_smoke
+It installs the pinned npm dependencies from the local npm cache and requires
+the matching cached Chromium and system libraries. It checks four mechanism
+pages and the official reference on table/task-20; it does not certify the full
+browser history or a different operating system. The outer validator exposes
+this as --browser-smoke --browser-artifacts <new-directory> and preserves reports.
+'''
         for name, text in generated.items():
             content = text.encode()
             archive.writestr(name, content)
@@ -258,6 +303,7 @@ installation. The synthetic tasks are not official Web-Bench results.
               'sha256': hashlib.sha256(args.out.read_bytes()).hexdigest(), 'published': False,
               'original_hashes_remapped': True, 'sqlite_ledgers': sum(p.suffix == '.sqlite3' for p in paths)}
     result['expanded'] = args.expanded
+    result['library_repair'] = args.library_repair
     output = args.report
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(result, indent=2) + '\n')

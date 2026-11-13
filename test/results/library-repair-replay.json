@@ -1,0 +1,426 @@
+{
+  "all_passed": true,
+  "original_candidates": 90,
+  "unique_raw_reports": 204,
+  "mechanism_raw_reports": 4,
+  "mechanism": [
+    {
+      "name": "original",
+      "passed": false
+    },
+    {
+      "name": "original_plus_stop",
+      "passed": true
+    },
+    {
+      "name": "feedback",
+      "passed": true
+    },
+    {
+      "name": "feedback_minus_stop",
+      "passed": false
+    }
+  ],
+  "conditional_space": [
+    {
+      "condition": "original",
+      "n": 128,
+      "passed": 0
+    },
+    {
+      "condition": "stop_only",
+      "n": 128,
+      "passed": 32
+    }
+  ],
+  "conditional_new_reports": 254,
+  "conditional_reused_reports": 2,
+  "tables": [
+    {
+      "diagnostic": "strict",
+      "comparisons": 300,
+      "aggregates": [
+        {
+          "format": "strict",
+          "kind": "candidate",
+          "cohort": "main",
+          "condition": "feedback",
+          "method": "free_lib",
+          "n": 30,
+          "baseline": 10,
+          "passed": 11,
+          "wins": 1,
+          "losses": 0,
+          "compile_failures": 1
+        },
+        {
+          "format": "strict",
+          "kind": "candidate",
+          "cohort": "main",
+          "condition": "feedback",
+          "method": "plan",
+          "n": 30,
+          "baseline": 9,
+          "passed": 11,
+          "wins": 2,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "strict",
+          "kind": "candidate",
+          "cohort": "main",
+          "condition": "review",
+          "method": "free_lib",
+          "n": 30,
+          "baseline": 10,
+          "passed": 10,
+          "wins": 0,
+          "losses": 0,
+          "compile_failures": 1
+        },
+        {
+          "format": "strict",
+          "kind": "candidate",
+          "cohort": "main",
+          "condition": "review",
+          "method": "plan",
+          "n": 30,
+          "baseline": 9,
+          "passed": 9,
+          "wins": 0,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "strict",
+          "kind": "candidate",
+          "cohort": "strong",
+          "condition": "feedback",
+          "method": "free_lib",
+          "n": 15,
+          "baseline": 6,
+          "passed": 7,
+          "wins": 1,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "strict",
+          "kind": "candidate",
+          "cohort": "strong",
+          "condition": "feedback",
+          "method": "plan",
+          "n": 15,
+          "baseline": 6,
+          "passed": 7,
+          "wins": 1,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "strict",
+          "kind": "candidate",
+          "cohort": "strong",
+          "condition": "review",
+          "method": "free_lib",
+          "n": 15,
+          "baseline": 6,
+          "passed": 6,
+          "wins": 0,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "strict",
+          "kind": "candidate",
+          "cohort": "strong",
+          "condition": "review",
+          "method": "plan",
+          "n": 15,
+          "baseline": 6,
+          "passed": 6,
+          "wins": 0,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "strict",
+          "kind": "development",
+          "cohort": "main",
+          "condition": "feedback",
+          "method": "plan",
+          "n": 15,
+          "baseline": 5,
+          "passed": 7,
+          "wins": 2,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "strict",
+          "kind": "development",
+          "cohort": "main",
+          "condition": "review",
+          "method": "plan",
+          "n": 15,
+          "baseline": 5,
+          "passed": 5,
+          "wins": 0,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "strict",
+          "kind": "fixed",
+          "cohort": "main",
+          "condition": "feedback",
+          "method": "plan",
+          "n": 30,
+          "baseline": 12,
+          "passed": 14,
+          "wins": 2,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "strict",
+          "kind": "fixed",
+          "cohort": "main",
+          "condition": "review",
+          "method": "plan",
+          "n": 30,
+          "baseline": 12,
+          "passed": 12,
+          "wins": 0,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "strict",
+          "kind": "fixed",
+          "cohort": "strong",
+          "condition": "feedback",
+          "method": "plan",
+          "n": 15,
+          "baseline": 6,
+          "passed": 7,
+          "wins": 1,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "strict",
+          "kind": "fixed",
+          "cohort": "strong",
+          "condition": "review",
+          "method": "plan",
+          "n": 15,
+          "baseline": 6,
+          "passed": 6,
+          "wins": 0,
+          "losses": 0,
+          "compile_failures": 0
+        }
+      ]
+    },
+    {
+      "diagnostic": "single_fence",
+      "comparisons": 300,
+      "aggregates": [
+        {
+          "format": "single_fence",
+          "kind": "candidate",
+          "cohort": "main",
+          "condition": "feedback",
+          "method": "free_lib",
+          "n": 30,
+          "baseline": 10,
+          "passed": 11,
+          "wins": 1,
+          "losses": 0,
+          "compile_failures": 1
+        },
+        {
+          "format": "single_fence",
+          "kind": "candidate",
+          "cohort": "main",
+          "condition": "feedback",
+          "method": "plan",
+          "n": 30,
+          "baseline": 9,
+          "passed": 11,
+          "wins": 2,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "single_fence",
+          "kind": "candidate",
+          "cohort": "main",
+          "condition": "review",
+          "method": "free_lib",
+          "n": 30,
+          "baseline": 10,
+          "passed": 10,
+          "wins": 0,
+          "losses": 0,
+          "compile_failures": 1
+        },
+        {
+          "format": "single_fence",
+          "kind": "candidate",
+          "cohort": "main",
+          "condition": "review",
+          "method": "plan",
+          "n": 30,
+          "baseline": 9,
+          "passed": 9,
+          "wins": 0,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "single_fence",
+          "kind": "candidate",
+          "cohort": "strong",
+          "condition": "feedback",
+          "method": "free_lib",
+          "n": 15,
+          "baseline": 6,
+          "passed": 7,
+          "wins": 1,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "single_fence",
+          "kind": "candidate",
+          "cohort": "strong",
+          "condition": "feedback",
+          "method": "plan",
+          "n": 15,
+          "baseline": 6,
+          "passed": 7,
+          "wins": 1,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "single_fence",
+          "kind": "candidate",
+          "cohort": "strong",
+          "condition": "review",
+          "method": "free_lib",
+          "n": 15,
+          "baseline": 6,
+          "passed": 6,
+          "wins": 0,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "single_fence",
+          "kind": "candidate",
+          "cohort": "strong",
+          "condition": "review",
+          "method": "plan",
+          "n": 15,
+          "baseline": 6,
+          "passed": 6,
+          "wins": 0,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "single_fence",
+          "kind": "development",
+          "cohort": "main",
+          "condition": "feedback",
+          "method": "plan",
+          "n": 15,
+          "baseline": 5,
+          "passed": 7,
+          "wins": 2,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "single_fence",
+          "kind": "development",
+          "cohort": "main",
+          "condition": "review",
+          "method": "plan",
+          "n": 15,
+          "baseline": 5,
+          "passed": 5,
+          "wins": 0,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "single_fence",
+          "kind": "fixed",
+          "cohort": "main",
+          "condition": "feedback",
+          "method": "plan",
+          "n": 30,
+          "baseline": 12,
+          "passed": 14,
+          "wins": 2,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "single_fence",
+          "kind": "fixed",
+          "cohort": "main",
+          "condition": "review",
+          "method": "plan",
+          "n": 30,
+          "baseline": 12,
+          "passed": 12,
+          "wins": 0,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "single_fence",
+          "kind": "fixed",
+          "cohort": "strong",
+          "condition": "feedback",
+          "method": "plan",
+          "n": 15,
+          "baseline": 6,
+          "passed": 7,
+          "wins": 1,
+          "losses": 0,
+          "compile_failures": 0
+        },
+        {
+          "format": "single_fence",
+          "kind": "fixed",
+          "cohort": "strong",
+          "condition": "review",
+          "method": "plan",
+          "n": 15,
+          "baseline": 6,
+          "passed": 6,
+          "wins": 0,
+          "losses": 0,
+          "compile_failures": 0
+        }
+      ]
+    }
+  ],
+  "cost": {
+    "calls": 27,
+    "settled_usd": 1.26157,
+    "exposure_usd": 8.525842,
+    "unsettled_calls": 16,
+    "cap_usd": 9.0,
+    "stop_usd": 0.0,
+    "halted": 0
+  },
+  "scope": "Three complete library pairs only; planned six-library study remains incomplete. Stored original baselines and new raw Playwright reports independently reconstructed; strict and secondary formatting results remain separate. The complete fixed-style Boolean slice and line intervention are checked separately. No new API or browser calls. Anonymous exported bytes use the bundle manifest, not original source hashes."
+}

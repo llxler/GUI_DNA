@@ -1,0 +1,154 @@
+{
+  "protocol": {
+    "frozen_utc": "2026-11-13T11:38:27.429252+00:00",
+    "posthoc": true,
+    "project": "table",
+    "task": "task-20",
+    "source": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-20",
+    "plan": {
+      "theme": "light",
+      "palette": "blue",
+      "menuStyle": "shadow",
+      "gridDensity": "compact",
+      "interactions": {
+        "contextMenu": true,
+        "resize": true,
+        "dragReorder": true,
+        "edit": true,
+        "copyPaste": true,
+        "filterSort": true,
+        "rectangleSelection": true
+      }
+    },
+    "rows": [
+      {
+        "name": "original",
+        "page": "artifacts/library-repair-mechanism-20261113/pages/original",
+        "files_sha256": "8e2e515c523b9348c933b73bf39dc61fb19e411c0c060f803734ab223dcdc49c"
+      },
+      {
+        "name": "original_plus_stop",
+        "page": "artifacts/library-repair-mechanism-20261113/pages/original_plus_stop",
+        "files_sha256": "68a425eba6e52af4f896ef492f019f3a5f9a05b001cdfced51df516a45460b0d"
+      },
+      {
+        "name": "feedback",
+        "page": "artifacts/library-repair-mechanism-20261113/pages/feedback",
+        "files_sha256": "a60762cbaf67944c7e03a9071f19b9c741fd20b44cb86d5b0b65d72b6b19dc9d"
+      },
+      {
+        "name": "feedback_minus_stop",
+        "page": "artifacts/library-repair-mechanism-20261113/pages/feedback_minus_stop",
+        "files_sha256": "6816a8484f5225fa9ee583a42f29951a5fefb2186d68cf6a2bfeda92eeb89feb"
+      }
+    ],
+    "scope": "Single observed page/task, chosen after availability results. Four fixed pages, one evaluation each. Only stopPropagation is added to the original or removed from the feedback implementation; original candidate scores unchanged. Not a new model result or global defect attribution.",
+    "script_sha256": "2b2382361e9bfd9da9f0ddf3c3a006c9f8c5bdd35d2afb2ffc3e8c441eea7bbc"
+  },
+  "rows": [
+    {
+      "name": "original",
+      "page": "artifacts/library-repair-mechanism-20261113/pages/original",
+      "files_sha256": "8e2e515c523b9348c933b73bf39dc61fb19e411c0c060f803734ab223dcdc49c",
+      "all_passed": false,
+      "passed": 0,
+      "total_listed": 3,
+      "tests": [
+        {
+          "title": "sort menu-item",
+          "status": "failed"
+        },
+        {
+          "title": "sort menu-item desc",
+          "status": "missing"
+        },
+        {
+          "title": "sort menu-item asc",
+          "status": "missing"
+        }
+      ],
+      "exact_candidate_outcome": true,
+      "test_level_mean_valid": false,
+      "report_sha256": "d25b2fd0698308671978bfe93586fc7eaa74ec26d69d77e7a9774d33a5d38d41",
+      "report": "artifacts/library-repair-mechanism-20261113/scores/original/report.json"
+    },
+    {
+      "name": "original_plus_stop",
+      "page": "artifacts/library-repair-mechanism-20261113/pages/original_plus_stop",
+      "files_sha256": "68a425eba6e52af4f896ef492f019f3a5f9a05b001cdfced51df516a45460b0d",
+      "all_passed": true,
+      "passed": 3,
+      "total_listed": 3,
+      "tests": [
+        {
+          "title": "sort menu-item",
+          "status": "passed"
+        },
+        {
+          "title": "sort menu-item desc",
+          "status": "passed"
+        },
+        {
+          "title": "sort menu-item asc",
+          "status": "passed"
+        }
+      ],
+      "exact_candidate_outcome": true,
+      "test_level_mean_valid": true,
+      "report_sha256": "25b48b3d8e29580393cefd0a1f1c98606fbf21d29e5c4a4c31b94f92e382d597",
+      "report": "artifacts/library-repair-mechanism-20261113/scores/original_plus_stop/report.json"
+    },
+    {
+      "name": "feedback",
+      "page": "artifacts/library-repair-mechanism-20261113/pages/feedback",
+      "files_sha256": "a60762cbaf67944c7e03a9071f19b9c741fd20b44cb86d5b0b65d72b6b19dc9d",
+      "all_passed": true,
+      "passed": 3,
+      "total_listed": 3,
+      "tests": [
+        {
+          "title": "sort menu-item",
+          "status": "passed"
+        },
+        {
+          "title": "sort menu-item desc",
+          "status": "passed"
+        },
+        {
+          "title": "sort menu-item asc",
+          "status": "passed"
+        }
+      ],
+      "exact_candidate_outcome": true,
+      "test_level_mean_valid": true,
+      "report_sha256": "a67e8792d8669b03e58239a402b530e0880f1ee1586420fda90a7fd9e8be3159",
+      "report": "artifacts/library-repair-mechanism-20261113/scores/feedback/report.json"
+    },
+    {
+      "name": "feedback_minus_stop",
+      "page": "artifacts/library-repair-mechanism-20261113/pages/feedback_minus_stop",
+      "files_sha256": "6816a8484f5225fa9ee583a42f29951a5fefb2186d68cf6a2bfeda92eeb89feb",
+      "all_passed": false,
+      "passed": 0,
+      "total_listed": 3,
+      "tests": [
+        {
+          "title": "sort menu-item",
+          "status": "failed"
+        },
+        {
+          "title": "sort menu-item desc",
+          "status": "missing"
+        },
+        {
+          "title": "sort menu-item asc",
+          "status": "missing"
+        }
+      ],
+      "exact_candidate_outcome": true,
+      "test_level_mean_valid": false,
+      "report_sha256": "a76f05ee7d343833716156a842d742c028ba1d772131b8c5cb4b39489bf93d6f",
+      "report": "artifacts/library-repair-mechanism-20261113/scores/feedback_minus_stop/report.json"
+    }
+  ]
+}
