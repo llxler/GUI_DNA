@@ -147,3 +147,35 @@ uv run python -m test.validate_replay_bundle --expanded --archive artifacts/anon
 三套库（calculator/GPT-5、calculator/Sonnet、table/GPT-5）在两个条件下均完整，另立零API阶段重放90个旧候选。600项候选/固定最终方案/开发比较去重为204份浏览器报告；另有四页事件传播干预和固定样式的128种开关×两实现穷举（254份新报告）。严格JSON回退与唯一代码块提取诊断分开报告。文件编号分开不意味着语义未见，不能将此子集称为原六库完成、模型重新规划或泛化成绩。
 
 `test.library_repair.available analyze`核验原工作区快照；`test.replay_library_repair`从原基线与新原始Playwright报告独立复算，可在匿名包内运行。新匿名包需加`--expanded --library-repair`并使用独立20261113-final文件名；此前20261113包只覆盖条件穷举之前的结果，11月12日与更旧的包不含本批。九个入口验证保存观测重算；另可加`--browser-smoke --browser-artifacts <新目录>`，重新解包、离线重装npm依赖后实际重跑四张机制页面和官方参考页。浏览器及系统库仍来自本机缓存，不等于跨机器或全部历史浏览器测试重跑；包也未上传。
+
+## 2026-11-14：补齐六库、条件配置与匹配前缀
+
+三个新目录分别处理独立问题，协议、冻结边界与限制见各自README：
+
+- [library_repair_resume/README.md](library_repair_resume/README.md)：保留六份完整旧响应，仅补六份缺失；180个不同旧候选，严格/单代码块两口径共1200项比较、398份报告，其中204份精确复用。另对缺失入口占位的回归冻结六页干预，三份旧报告与三份新增报告分开保留。续作前已看过三库子集，时间顺序如实披露。
+- [library_toggle_control/README.md](library_toggle_control/README.md)：原六库各固定一个GPT-OSS方案锚点，只变化已有布尔叶子。129配置、645里程碑比较；三个小切片穷举、三个大切片抽32项。不是整个模式的随机基线或能力上界。
+- [prefix_factorial_v2/README.md](prefix_factorial_v2/README.md)：同库累计需求，2模型×2前缀×2输出×20任务。先生成全部160候选，再分别评价当前任务与全部历史，首次/最终共640比较。初始模式说明缺失的协议开发阶段在隐藏评分前中止，完整输出和费用保留，不能混入修正版。
+
+参考前缀的完整历史校准在[prefix_history_audit/README.md](prefix_history_audit/README.md)，210页面/文件配对、909断言全部通过。它只验证所列断言，不构成自然语言行为的形式证明。
+
+```bash
+# 原工作区只读重算与哈希/原报告核对。
+uv run python -m test.library_repair_resume.replay analyze
+uv run python -m test.library_toggle_control.analyze
+uv run python -m test.prefix_history_audit.analyze
+uv run python -m test.prefix_factorial_v2.analyze
+uv run python -m test.authorized_costs --date 20261114
+uv run python -m test.replay_nov14
+uv run python -m test.nov14_report
+uv run --with matplotlib python -m test.nov14_figure
+
+# 新快照保留旧包；匿名重写后用其导出哈希，而非原冻结哈希。
+uv run python -m test.export_replay_bundle --expanded --library-repair --nov14 --out artifacts/anonymous-replay-20261114.zip --report test/results/replay-bundle-20261114.json
+uv run python -m test.validate_replay_bundle --expanded --library-repair --nov14 --archive artifacts/anonymous-replay-20261114.zip --report test/results/replay-validation-20261114.json
+```
+
+新增第十个独立重算入口`test.replay_nov14`读取原始Playwright报告及各账本；它不重跑全部浏览器轨迹。`nov14_report`只写结果第22–24节和本地`DNA_latex/nov14_study.tex`；主文解释需另同步。原第三轮维持暂停，论文与匿名原始包仍仅本地，不上传。每日新增预算按`artifacts/review-20261114/budget-plan.json`核对，含已中止的协议开发；此前未知预留不清零，也不重复当作今天新增调用。
+
+本次最终账本已全部stop=0，新增结算与敞口均$1.323246。129个布尔配置没有新增见证（仍53/120）；160候选中43个当前/历史端点不同，均为当前通过而历史失败。原主表仍是原协议的当前文件口径，新增完整历史结果独立列第24节；更多旧页面复验见TODO R13。
+
+交付验证：`test/results/replay-validation-20261114.json`核对正式包150130个文件、十个独立重算入口及五页旧table机制浏览器检查，全部通过。48份匿名账本保留费用与策略；浏览器共享本机OS、缓存和系统库。正式包未上传；`anonymous-replay-20261114-interrupted-1.zip`是不完整导出，保留记录但不能使用。论文正文8页/全文43页，仍仅本地。

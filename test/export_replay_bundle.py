@@ -23,6 +23,10 @@ ROOT = Path(__file__).resolve().parents[1]
 TEXT = EXTENSIONS | {'.csv', '.svg', '.yaml', '.yml', '.mjs'}
 RAW_PREFIXES = ('todomvc-', 'webbench-dna', 'webapp1k-dna', 'name-sensitivity', 'interface-blind', 'behavior-feedback', 'library-')
 RAW_NAMES = {'live', 'followup', 'linked-plan-posthoc', 'scale-study', 'random-plans', 'failure-figure', 'review-20261112'}
+NOV14_NAMES = {'library-repair-resume-20261114', 'library-repair-full-20261114',
+               'library-repair-entrypoint-20261114',
+               'library-toggle-control-20261114', 'prefix-history-audit-20261114',
+               'prefix-factorial-20261114', 'prefix-factorial-v2-20261114', 'review-20261114'}
 SKIP_PARTS = {'node_modules', '.git', '__pycache__', '.pytest_cache', 'playwright-output', 'test-results', 'playwright-report'}
 AUTHOR_NAMES = ('lxler', 'llxler')
 HOME_IDENTITY = re.compile(rb'/home/(?!anonymous)[A-Za-z_][A-Za-z0-9_.-]*')
@@ -91,7 +95,7 @@ def candidate_source_files(stage):
             if not path.is_file():
                 raise ValueError(f'Missing saved candidate source: {path}')
             result.add(path)
-    for filename in ('replay-inputs.json', 'format-replay-inputs.json', 'inputs.json'):
+    for filename in ('replay-inputs.json', 'format-replay-inputs.json', 'inputs.json', 'scoring-inputs.json'):
         index = stage / filename
         if not index.exists():
             continue
@@ -103,19 +107,21 @@ def candidate_source_files(stage):
     return result
 
 
-def selected_files(expanded=False, library_repair=False):
+def selected_files(expanded=False, library_repair=False, nov14=False):
     names = subprocess.check_output(['git', 'ls-files', '-z', '--cached', '--others', '--exclude-standard'], cwd=ROOT).decode().split('\0')
     chosen = {ROOT / n for n in names if n and (n in ALLOWED_FILES or (Path(n).parts[0] in ALLOWED_ROOTS and Path(n).suffix in TEXT))}
     prefixes = RAW_PREFIXES + (('webbench-expand', 'heldout-composition') if expanded else ())
     for stage in (ROOT / 'artifacts').iterdir():
-        if not stage.is_dir() or not (stage.name in RAW_NAMES or stage.name.startswith(prefixes)):
+        if stage.name in NOV14_NAMES and not nov14:
+            continue
+        if not stage.is_dir() or not (stage.name in RAW_NAMES or stage.name.startswith(prefixes) or (nov14 and stage.name in NOV14_NAMES)):
             continue
         if stage.name.startswith('library-repair-') and not library_repair:
             continue
         for path in walk_files(stage):
             if path.suffix in TEXT | {'.sqlite3', '.png', '.jpg'}:
                 chosen.add(path)
-        if expanded and stage.name.startswith(('webbench-expand', 'heldout-composition', 'library-repair-')):
+        if expanded and (stage.name.startswith(('webbench-expand', 'heldout-composition', 'library-repair-')) or (nov14 and stage.name in NOV14_NAMES)):
             chosen.update(candidate_source_files(stage))
     if (ROOT / 'artifacts/budget.sqlite3').exists():
         chosen.add(ROOT / 'artifacts/budget.sqlite3')
@@ -133,8 +139,10 @@ def selected_files(expanded=False, library_repair=False):
         chosen.add(license_path)
     generated_reports = {'replay-bundle.json', 'replay-validation.json', 'replay-bundle-expanded.json', 'replay-validation-expanded.json',
                          'replay-bundle-20261113.json', 'replay-validation-20261113.json',
-                         'replay-bundle-20261113-final.json', 'replay-validation-20261113-final.json'}
+                         'replay-bundle-20261113-final.json', 'replay-validation-20261113-final.json',
+                         'replay-bundle-20261114.json', 'replay-validation-20261114.json'}
     return sorted(p for p in chosen if p.is_file() and not p.is_symlink() and p.name not in generated_reports
+                  and not (p.parent.name == 'review-20261114' and p.name == 'HANDOFF.md')
                   and not (p.parent.name == 'review-20261112' and p.name.startswith('credits')))
 
 
@@ -161,6 +169,7 @@ def main():
     parser.add_argument('--report', type=Path, default=ROOT / 'test/results/replay-bundle.json')
     parser.add_argument('--expanded', action='store_true', help='Include the three-project and heldout-composition extensions')
     parser.add_argument('--library-repair', action='store_true', help='Include the completed availability diagnostic and interrupted generation (requires --expanded)')
+    parser.add_argument('--nov14', action='store_true', help='Include completed repair continuation, Boolean controls and matched-prefix factorial')
     args = parser.parse_args()
     args.out = args.out.resolve()
     args.report = args.report.resolve()
@@ -186,11 +195,27 @@ def main():
             raise ValueError('Finish the conditional space evaluation before exporting')
         if not (ROOT / 'test/results/library-repair-replay.json').exists():
             raise ValueError('Run test.replay_library_repair before exporting')
-    paths = selected_files(args.expanded, args.library_repair)
+    if args.nov14:
+        if not args.library_repair:
+            raise ValueError('--nov14 requires --library-repair and --expanded')
+        for name in ('library-repair-full-20261114', 'prefix-factorial-v2-20261114'):
+            if not (ROOT / 'artifacts' / name / 'evaluation-complete.json').exists():
+                raise ValueError(f'{name}: complete scoring before export')
+        for project in ('calculator', 'table', 'bom'):
+            if not (ROOT / 'artifacts/library-toggle-control-20261114' / f'evaluation-complete-{project}.json').exists():
+                raise ValueError('Complete all Boolean control projects before export')
+        if not (ROOT / 'test/results/nov14-replay.json').exists():
+            raise ValueError('Run test.replay_nov14 before export')
+        if not (ROOT / 'artifacts/library-repair-entrypoint-20261114/evaluation-complete.json').exists():
+            raise ValueError('The frozen entrypoint intervention must be complete')
+        daily = json.loads((ROOT / 'test/results/review-20261114-costs.json').read_text())
+        if any(stage['stop_usd'] != 0 for stage in daily['stages'].values()):
+            raise ValueError('Close all November 14 generation stages before export')
+    paths = selected_files(args.expanded, args.library_repair, args.nov14)
     source_paths = set()
     if args.expanded:
         for stage in (ROOT / 'artifacts').iterdir():
-            if stage.is_dir() and stage.name.startswith(('webbench-expand', 'heldout-composition') + (('library-repair-',) if args.library_repair else ())):
+            if stage.is_dir() and (stage.name.startswith(('webbench-expand', 'heldout-composition') + (('library-repair-',) if args.library_repair else ())) or (args.nov14 and stage.name in NOV14_NAMES)):
                 source_paths.update(candidate_source_files(stage))
     call_ids = set()
     for path in paths:
@@ -294,6 +319,19 @@ pages and the official reference on table/task-20; it does not certify the full
 browser history or a different operating system. The outer validator exposes
 this as --browser-smoke --browser-artifacts <new-directory> and preserves reports.
 '''
+        if args.nov14:
+            generated['REPLAY.md'] += '''
+The November 14 snapshot additionally includes the disclosed six-response
+continuation, six conditional Boolean slices, all-history reference-prefix
+calibration, and the corrected matched-prefix factorial. Recompute these with:
+  python -m test.replay_nov14
+The initial malformed-contract factorial is retained as an abandoned development
+stage, including every paid response; it was never hidden-scored or pooled with
+the corrected experiment. Boolean sampling fixes non-Boolean anchor structure
+and is not uniform over the entire schema. Historical byte hashes are remapped
+by this export: use REPLAY-MANIFEST.json on the anonymous copy. API fees include
+abandoned development calls; no generation should be resumed from this bundle.
+'''
         for name, text in generated.items():
             content = text.encode()
             archive.writestr(name, content)
@@ -304,6 +342,7 @@ this as --browser-smoke --browser-artifacts <new-directory> and preserves report
               'original_hashes_remapped': True, 'sqlite_ledgers': sum(p.suffix == '.sqlite3' for p in paths)}
     result['expanded'] = args.expanded
     result['library_repair'] = args.library_repair
+    result['nov14'] = args.nov14
     output = args.report
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(result, indent=2) + '\n')

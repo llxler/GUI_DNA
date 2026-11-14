@@ -1,0 +1,110 @@
+{
+  "source": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-4",
+  "plan": {
+    "table_structure": {
+      "initial_rows": 2,
+      "initial_cols": 3,
+      "cell_content_pattern": "cell_x_y"
+    },
+    "features": {
+      "context_menu": true,
+      "cell_selection": true,
+      "keyboard_navigation": true,
+      "cell_editing": true,
+      "clipboard_operations": true,
+      "row_operations": true,
+      "col_operations": true,
+      "resize_rows": true,
+      "resize_cols": true,
+      "drag_reorder_rows": true,
+      "drag_reorder_cols": true,
+      "filtering": true,
+      "sorting": true,
+      "range_selection": true,
+      "mouse_drag_select": true
+    },
+    "interaction_options": {
+      "min_row_height": 40,
+      "min_col_width": 80,
+      "enable_multiselect": true,
+      "enable_edit_on_single_click": true,
+      "enable_extend_on_paste": true
+    }
+  },
+  "rows": [
+    {
+      "name": "original",
+      "score_key": "table/task-4/84120b365950787b81a8901bcbded59dfc9239bf6142889001b125e201f611d0",
+      "entry_present": true,
+      "passed": true
+    },
+    {
+      "name": "original_remove_entry",
+      "score_key": "table/task-4/e284d8c3f2c2fa32184b8a5535688552b9c214588c636e33585f620079352b5f",
+      "entry_present": false,
+      "passed": false
+    },
+    {
+      "name": "review",
+      "score_key": "table/task-4/06d73f769c04f3a8fff6b5e37fca9c95ce5d8f7bac2324ba55b17716300e223b",
+      "entry_present": false,
+      "passed": false
+    },
+    {
+      "name": "review_restore_placeholder",
+      "score_key": "table/task-4/bcf4ef2f360105aa8bc51ff4373d228698a51547dd578b99a97de54d67813c95",
+      "entry_present": true,
+      "passed": true
+    },
+    {
+      "name": "feedback",
+      "score_key": "table/task-4/815f5899bcd2c81a090581a5129e9b67a75cbf3c08c5bc55f81e498f68bbc356",
+      "entry_present": false,
+      "passed": false
+    },
+    {
+      "name": "feedback_restore_placeholder",
+      "score_key": "table/task-4/6c47b16395cce45940b5f9c7f1d47dc80faddb72d8df649bce1fcd4214ba3732",
+      "entry_present": true,
+      "passed": true
+    }
+  ],
+  "jobs": {
+    "table/task-4/84120b365950787b81a8901bcbded59dfc9239bf6142889001b125e201f611d0": {
+      "page": "artifacts/library-repair-entrypoint-20261114/pages/original",
+      "files_sha256": "84120b365950787b81a8901bcbded59dfc9239bf6142889001b125e201f611d0",
+      "reuse": "artifacts/library-repair-full-20261114/scores/table/task-4/84120b365950787b81a8901bcbded59dfc9239bf6142889001b125e201f611d0"
+    },
+    "table/task-4/e284d8c3f2c2fa32184b8a5535688552b9c214588c636e33585f620079352b5f": {
+      "page": "artifacts/library-repair-entrypoint-20261114/pages/original_remove_entry",
+      "files_sha256": "e284d8c3f2c2fa32184b8a5535688552b9c214588c636e33585f620079352b5f",
+      "reuse": null
+    },
+    "table/task-4/06d73f769c04f3a8fff6b5e37fca9c95ce5d8f7bac2324ba55b17716300e223b": {
+      "page": "artifacts/library-repair-entrypoint-20261114/pages/review",
+      "files_sha256": "06d73f769c04f3a8fff6b5e37fca9c95ce5d8f7bac2324ba55b17716300e223b",
+      "reuse": "artifacts/library-repair-full-20261114/scores/table/task-4/06d73f769c04f3a8fff6b5e37fca9c95ce5d8f7bac2324ba55b17716300e223b"
+    },
+    "table/task-4/bcf4ef2f360105aa8bc51ff4373d228698a51547dd578b99a97de54d67813c95": {
+      "page": "artifacts/library-repair-entrypoint-20261114/pages/review_restore_placeholder",
+      "files_sha256": "bcf4ef2f360105aa8bc51ff4373d228698a51547dd578b99a97de54d67813c95",
+      "reuse": null
+    },
+    "table/task-4/815f5899bcd2c81a090581a5129e9b67a75cbf3c08c5bc55f81e498f68bbc356": {
+      "page": "artifacts/library-repair-entrypoint-20261114/pages/feedback",
+      "files_sha256": "815f5899bcd2c81a090581a5129e9b67a75cbf3c08c5bc55f81e498f68bbc356",
+      "reuse": "artifacts/library-repair-full-20261114/scores/table/task-4/815f5899bcd2c81a090581a5129e9b67a75cbf3c08c5bc55f81e498f68bbc356"
+    },
+    "table/task-4/6c47b16395cce45940b5f9c7f1d47dc80faddb72d8df649bce1fcd4214ba3732": {
+      "page": "artifacts/library-repair-entrypoint-20261114/pages/feedback_restore_placeholder",
+      "files_sha256": "6c47b16395cce45940b5f9c7f1d47dc80faddb72d8df649bce1fcd4214ba3732",
+      "reuse": null
+    }
+  },
+  "scope": "Posthoc single table/Sonnet/GPT-OSS/task-4 fixed-plan intervention; not a new model score.",
+  "audit": {
+    "pages": 6,
+    "unique_reports": 6,
+    "reused_reports": 3
+  }
+}

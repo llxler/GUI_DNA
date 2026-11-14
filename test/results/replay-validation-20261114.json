@@ -1,0 +1,356 @@
+{
+  "archive_sha256": "c056aef2d28fa5a86c453cf0274277ae8c8c60bdf8f765fd7ef587717a267d8e",
+  "published": false,
+  "checks": [
+    {
+      "module": "test.replay_scale_table",
+      "output": "test/results/scale-table-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_primary_tables",
+      "output": "test/results/primary-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.review_metrics",
+      "output": "test/results/review-metrics.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.interface_blind.analyze",
+      "output": "test/results/interface-blind.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.behavior_feedback_analyze",
+      "output": "test/results/behavior-feedback.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.repair_breakdown",
+      "output": "test/results/repair-breakdown.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.paired_intervals",
+      "output": "test/results/paired-intervals.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_new_tables",
+      "output": "test/results/new-tables-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_library_repair",
+      "output": "test/results/library-repair-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_nov14",
+      "output": "test/results/nov14-replay.json",
+      "exit_code": 0,
+      "identical": true
+    }
+  ],
+  "scope": "Hash verification; three primary accuracy tables plus five sample/seed/frontier extensions from raw records; five further summary recomputations. External row checks reuse observations across tables; distinct file-path count reported separately. Not a replay of every historical browser test or every paper table. Also four new cohorts (904 distinct candidates) and their stored fixed-control scores; no additional browser reruns. Also strict and secondary repair replay tables reconstructed from stored raw reports; no new browser calls. Also November 14 full-library continuation, conditional toggles, prefix calibration and corrected factorial, reconstructed from raw reports and dated ledgers. Separate five-page table/task-20 browser smoke check uses a fresh extraction and npm install on the same host.",
+  "hashes_verified": 150130,
+  "browser_smoke": {
+    "scope": "Five table/task-20 pages only. Fresh extracted source and npm dependencies; same host OS, Node/Python interpreters and cached Chromium/system libraries. Not an independent machine or replay of every historical browser test.",
+    "environment": {
+      "upstream_commit": "7b31ca2b786eef120dd49ce63dd03d0c0006046d",
+      "playwright_version": "1.57.0",
+      "node_version": "v24.15.0",
+      "runtime_lock_sha256": "8fa4eafc6d9ac3b1e4080c42696e80c3ac544b091f8432afef23d5b4e7d0cf1f",
+      "official_files": {
+        "calculator/package.json": "f45ba2c1b2df9b1c34fac39b439fd4168408b10bfeceec754e498c75a49fd69e",
+        "calculator/task-1.spec.js": "49d1ac89c57116dc8edf96302061530b0ff19ffd2ce403801c4c2027a24bb425",
+        "calculator/task-6.spec.js": "b6626f09d33557c09985e0f955c8396ea404635e8bd4cc9239313cae28ee208d",
+        "calculator/task-7.spec.js": "9e9afcc25cbdba46992db951d3430198c53aadaefecc706c783d7262e47a0613",
+        "calculator/task-18.spec.js": "634efe3bbdc37d929e87fd0e3e1a9c5c12fa8a29ab176a9970e3726bedd42e6e",
+        "calculator/init.spec.js": "45fc445f3de8171832d9cfa5760078ee6fb0e403c1d09da30cb7cc77c0f45981",
+        "calculator/task-3.spec.js": "9063f8ab19bbdcaeb72c4716a5ddb3a7dfd8bb0900d1b5950966ff29d6b9f086",
+        "calculator/task-10.spec.js": "86278d35424d5fe61468cbf1577f62289eb5958a6509c0d0bd09c454e4c2e4ef",
+        "calculator/task-14.spec.js": "6aa9025bef94489d0a1cc876d144d15a72dd72f783c3e6fdfa3d50032c976a44",
+        "calculator/task-11.spec.js": "117409339019db026c8755346c77d1fd7c85806bddb6406010405f3b1876062a",
+        "calculator/task-13.spec.js": "d5aa24c40a2033e3c65e5a83d570193d13a29db344126dc7d2766d7d08d66036",
+        "calculator/task-12.spec.js": "132ecfbd5a8c4aa6e02462eefc25006f20c0101556efd30061bb22f62182bbac",
+        "calculator/task-15.spec.js": "6c9f99bc09beb36b138b156aedbae6ec2239b54cf7ad6a33f33164699671fc53",
+        "calculator/task-20.spec.js": "d7b08e0543ea5fd6e9a3d3965d711e1295e26b5db2f208ffbf96c5f7f627d532",
+        "calculator/task-8.spec.js": "a04f171a6758af5b7ff4e734b013176b7264594250d27bfc4573b97d88e8a25e",
+        "calculator/task-4.spec.js": "895950b6c1da800f122ed406aa00ab8b339fe4e4db15e39d605b11ac92e0a5b9",
+        "calculator/task-5.spec.js": "a126b0932cdd3ceb845e34c3db278e6f815ca37a8318fa38261497e637061109",
+        "calculator/task-17.spec.js": "2279e6ff4b4f1c0494cbac22f8c012b7aa519cfb5c8bfcc1c53913734e96aa8f",
+        "calculator/task-2.spec.js": "7e89fb32a23076b17f0063a19d8fa9e36a18bc41a4c00f390851210c30191328",
+        "calculator/task-9.spec.js": "46a707a9a795397be4b00ad4782e11fbe3251bb003b7f7a7620f30768196029e",
+        "calculator/task-19.spec.js": "c12e93759f9b1095221adbf7829a32ac268284c117505890e4cd6e7694ef266f",
+        "calculator/task-16.spec.js": "f72cc28d68b21c4a1e14fa2bd27078327258bd9db19e3e6f44d232dc565d9fad",
+        "table/package.json": "72bf712f00d7373519318f138dfd6d6ce461e7bce0f262641130ead8bea7a30b",
+        "table/task-1.spec.js": "1b3819f36bd694f6607399b7fb530e94448c1ac744a1b77f9faba55a43099fda",
+        "table/task-6.spec.js": "6080a2a8235cc7942754fa23dd9f6d0b9815d69fd7bb418db0273611cee44801",
+        "table/task-7.spec.js": "3573c99fb54dce3041bcb2ece15d409f40e65e45c8c4141c4622e3374d108160",
+        "table/task-18.spec.js": "62da9eab347c3cf3ff14ec454332daf92060cc81555807d4374d5298da3a0fe4",
+        "table/init.spec.js": "a210c647cfd5656e533e090ac5ddd72b225e38f6eb6d2e6833abeb580f969b9a",
+        "table/task-3.spec.js": "904be0e49351375332faa378d83f0d48f17427d4e108e95addd9d0881800f5c6",
+        "table/task-10.spec.js": "3bbb73e31e17bea7ad886ad799985b61400eed7c1c20ea059c56e2a085839053",
+        "table/task-14.spec.js": "22e228229e2ec706001e062309cff5428385b947b27086bdebac71c84d72fba6",
+        "table/task-11.spec.js": "f9ac35c8f35e6cbcc3a8527798e4beb40899423080713b2e4ac6cb9587c4bcfc",
+        "table/task-13.spec.js": "c40eeffb166575cd46fff464683ea227eb677d8a696e9020d6efb01410d393eb",
+        "table/task-12.spec.js": "510e67845c380490161a38eeb845e58657487787ea625e1d3169f83845d458ad",
+        "table/task-15.spec.js": "c5c53e6211706c7e858aa40ccb82a031353966ed4151a6e0516b5632680ae4d3",
+        "table/task-20.spec.js": "0b650070ed603e3a02133ad64bf8d2698a525c8e580713506c69762e7773bb64",
+        "table/task-8.spec.js": "d074a03293902edba3d0646022f6d927754eac3f857b6bd583d6ff5bf264d600",
+        "table/task-4.spec.js": "7fc7955af398296d71a5514720c956efa449c525c3881428eeed967ba838706a",
+        "table/task-5.spec.js": "d34481231b08483291ab5fd12d5f5927e5a975e7d0fe3baf7c0884db8da4e56e",
+        "table/task-17.spec.js": "fed0f8155da7b1c95ab940f1819364bd8eae3cff7013cc42aaa5ac0ac160dff5",
+        "table/task-2.spec.js": "140a6a31f29657da99502de6f96e8774b5e3fc21f168fe6e38c1a7b36c31211c",
+        "table/task-9.spec.js": "b7e985b08338a9e106f97688a01353385e599f5e0c98281498b6b3c55bc60e45",
+        "table/task-19.spec.js": "4ba6f29838682557db784864044706814ed1b74b3c1bf5f27c926222c6c5d143",
+        "table/task-16.spec.js": "e75423bb8d7620f6affdeeedcbb03ea17969fcd24c35844ef0a2d4090e994fab",
+        "bom/package.json": "73c6f21ca159211b32227c860196ef783cd89cb725b1bbab015a6d8a6ec004b6",
+        "bom/task-1.spec.js": "1cc32b33ed63f0def0d6921bd81ee5f7a3cc211385a505f8dc366e4c8939c0df",
+        "bom/task-6.spec.js": "62a330c86644108b46df531c2c6b8c4796c6f41960b67cde364efa5d1f13e31b",
+        "bom/task-7.spec.js": "f298a88b9d361b7129186090d9e9a009f7abbd97b2ddf71ba32931c1ffbd10ae",
+        "bom/task-18.spec.js": "b32c119dee66fe998c139f47841d6c970c8b56dbaf3ae5b4b5ef5f945903839b",
+        "bom/init.spec.js": "f8222922f0ad3170a107793e005b152d05761f03100afd78a51060319122c769",
+        "bom/task-3.spec.js": "01c13dbaa4c244490c18950f158a4de26695d2f414030fc547131ccb2e3de570",
+        "bom/task-10.spec.js": "121f18ce16344bf1de4c8707fedf967b4b07e82de7d4753a33b1c685add5d509",
+        "bom/task-14.spec.js": "70ffc2a22cee1f4348f9a33a5a5ede8103a7b4d80930c55dd6efc1a62696c0ac",
+        "bom/task-11.spec.js": "d8503a5a33aa322d5df9d506dc432bb06d2d2c92be8c47d42c40ed0425a28416",
+        "bom/task-13.spec.js": "cae9c9b9dc971476c3f4f1fd24425dd1156d27801578919208352c7e43b73a81",
+        "bom/task-12.spec.js": "dfb39c8680e180c41388256f4692ddb786eb8cce246f1f00be2a3d51cc476e82",
+        "bom/task-15.spec.js": "9fd89e3b0cb1d3d39a58f398c35cb7e0bfb62509707fc15dc8b7a22805e5352e",
+        "bom/task-20.spec.js": "17d7611eb349f7d81b117aa058dc58ead60ceb2e42a6c0e8b6945db5200d7f68",
+        "bom/task-8.spec.js": "308e81048155235a2c9ee4a0788de9fae595864c966d15c3ce7fb8ed13b75e63",
+        "bom/task-4.spec.js": "b1899fddbe30cb1720f7e57a7bd52407b33b2aba2d18e1d125eeb6a7234c6ba1",
+        "bom/task-5.spec.js": "742075a7ee61c76722635f23d24cdf6440c49fbfe6de9931e166f5db8719b3d0",
+        "bom/task-17.spec.js": "b928e565d8220867ea81b3ee684925100956b57c0a01c6993bd4e71e2225174d",
+        "bom/task-2.spec.js": "d0bfd17451ce48796a1c24cc8c061c4741c4eb7a0e5817582e0aeb05ccd65c13",
+        "bom/task-9.spec.js": "f22da485d6aa49fd7936221026d1253db9be7ad865d6544d3aa5072d3d106285",
+        "bom/task-19.spec.js": "24dbd8b26575950d8c5d7f478c6ebc06f7ab8915e9ad0e4ec42627104cff2a60",
+        "bom/task-16.spec.js": "8009c0f686c1b457beefddcf7999176afc13a3ce6efc46eec1ec38140e77b643"
+      },
+      "utility_sha256": "7319676beceb1478e73f9c5a9f1571618bc39e94084017b14ae44807e81b06e7",
+      "utility_scope": "Existing official utility honors EVAL_PROJECT_ROOT for candidate file checks.",
+      "protocol": "Official assertions unchanged. Production 30s/5s timeouts; Chromium; one worker; no retries. Stop after first failure for exact candidate-level pass/fail only.",
+      "utility_files_sha256": {
+        "index.js": "7319676beceb1478e73f9c5a9f1571618bc39e94084017b14ae44807e81b06e7",
+        "css.js": "f59d504d2b141c48b40e9907d03dae670efc23de7c1ebf800f72e7642c598fb7"
+      },
+      "config_sha256": "38c4c5de4f4cb901d85c5d5f6d41eb8f560839adb085fdf2e156172858e506ff",
+      "browser_sha256": "2e61bc3fd990bd4d7b419ef6b6303c67aaed683e5b83b3b25e416f015f343209",
+      "browser_cache_directory": "chrome-linux64"
+    },
+    "rows": [
+      {
+        "name": "original",
+        "page": "artifacts/library-repair-mechanism-20261113/pages/original",
+        "expected": false,
+        "expected_tests": [
+          {
+            "title": "sort menu-item",
+            "status": "failed"
+          },
+          {
+            "title": "sort menu-item desc",
+            "status": "missing"
+          },
+          {
+            "title": "sort menu-item asc",
+            "status": "missing"
+          }
+        ],
+        "all_passed": false,
+        "passed": 0,
+        "total_listed": 3,
+        "tests": [
+          {
+            "title": "sort menu-item",
+            "status": "failed"
+          },
+          {
+            "title": "sort menu-item desc",
+            "status": "missing"
+          },
+          {
+            "title": "sort menu-item asc",
+            "status": "missing"
+          }
+        ],
+        "exact_candidate_outcome": true,
+        "test_level_mean_valid": false,
+        "report_sha256": "57ff1af38caf8321ddf2fd95bb2f88a3fba346bfefabbc85e6c1069d9df789db",
+        "matches": true,
+        "report": "scores/original/report.json"
+      },
+      {
+        "name": "original_plus_stop",
+        "page": "artifacts/library-repair-mechanism-20261113/pages/original_plus_stop",
+        "expected": true,
+        "expected_tests": [
+          {
+            "title": "sort menu-item",
+            "status": "passed"
+          },
+          {
+            "title": "sort menu-item desc",
+            "status": "passed"
+          },
+          {
+            "title": "sort menu-item asc",
+            "status": "passed"
+          }
+        ],
+        "all_passed": true,
+        "passed": 3,
+        "total_listed": 3,
+        "tests": [
+          {
+            "title": "sort menu-item",
+            "status": "passed"
+          },
+          {
+            "title": "sort menu-item desc",
+            "status": "passed"
+          },
+          {
+            "title": "sort menu-item asc",
+            "status": "passed"
+          }
+        ],
+        "exact_candidate_outcome": true,
+        "test_level_mean_valid": true,
+        "report_sha256": "46eb21a32092fba78f2da0920f46ad34fdd873ad51031f3b2b8c290c6e229e81",
+        "matches": true,
+        "report": "scores/original_plus_stop/report.json"
+      },
+      {
+        "name": "feedback",
+        "page": "artifacts/library-repair-mechanism-20261113/pages/feedback",
+        "expected": true,
+        "expected_tests": [
+          {
+            "title": "sort menu-item",
+            "status": "passed"
+          },
+          {
+            "title": "sort menu-item desc",
+            "status": "passed"
+          },
+          {
+            "title": "sort menu-item asc",
+            "status": "passed"
+          }
+        ],
+        "all_passed": true,
+        "passed": 3,
+        "total_listed": 3,
+        "tests": [
+          {
+            "title": "sort menu-item",
+            "status": "passed"
+          },
+          {
+            "title": "sort menu-item desc",
+            "status": "passed"
+          },
+          {
+            "title": "sort menu-item asc",
+            "status": "passed"
+          }
+        ],
+        "exact_candidate_outcome": true,
+        "test_level_mean_valid": true,
+        "report_sha256": "610b04648da10a0ea237e3d5c4cbff6fd4d59e0fdc6ad2fa7f5ced440a4cf91a",
+        "matches": true,
+        "report": "scores/feedback/report.json"
+      },
+      {
+        "name": "feedback_minus_stop",
+        "page": "artifacts/library-repair-mechanism-20261113/pages/feedback_minus_stop",
+        "expected": false,
+        "expected_tests": [
+          {
+            "title": "sort menu-item",
+            "status": "failed"
+          },
+          {
+            "title": "sort menu-item desc",
+            "status": "missing"
+          },
+          {
+            "title": "sort menu-item asc",
+            "status": "missing"
+          }
+        ],
+        "all_passed": false,
+        "passed": 0,
+        "total_listed": 3,
+        "tests": [
+          {
+            "title": "sort menu-item",
+            "status": "failed"
+          },
+          {
+            "title": "sort menu-item desc",
+            "status": "missing"
+          },
+          {
+            "title": "sort menu-item asc",
+            "status": "missing"
+          }
+        ],
+        "exact_candidate_outcome": true,
+        "test_level_mean_valid": false,
+        "report_sha256": "80a5d0029de22494efb1f502e291fde8cb6827acd0c1c497769c9933a1db1c64",
+        "matches": true,
+        "report": "scores/feedback_minus_stop/report.json"
+      },
+      {
+        "name": "official_reference",
+        "page": "artifacts/web-bench/projects/table/src",
+        "expected": true,
+        "expected_tests": null,
+        "all_passed": true,
+        "passed": 3,
+        "total_listed": 3,
+        "tests": [
+          {
+            "title": "sort menu-item",
+            "status": "passed"
+          },
+          {
+            "title": "sort menu-item desc",
+            "status": "passed"
+          },
+          {
+            "title": "sort menu-item asc",
+            "status": "passed"
+          }
+        ],
+        "exact_candidate_outcome": true,
+        "test_level_mean_valid": true,
+        "report_sha256": "dbca1e8af3abe2a47ae36f23525bc83d088c5d210fe8e62993fa0d0bb4b2b04c",
+        "matches": true,
+        "report": "scores/official_reference/report.json"
+      }
+    ],
+    "all_passed": true,
+    "artifacts": "artifacts/replay-browser-20261114",
+    "shared_system_library_fallback": true
+  },
+  "all_passed": true,
+  "expanded": true,
+  "library_repair": true,
+  "nov14": true
+}

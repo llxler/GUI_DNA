@@ -34,6 +34,26 @@ def test_repair_snapshot_is_explicit_and_includes_all_replay_sources(tmp_path, m
     selected = exporter.selected_files(expanded=True, library_repair=True)
     assert page / 'index.html' in selected
     assert page / 'custom.payload' in selected
+
+
+def test_nov14_snapshot_keeps_old_exports_separate_and_includes_scoring_sources(tmp_path, monkeypatch):
+    from test import export_replay_bundle as exporter
+    stage = tmp_path / 'artifacts/prefix-factorial-v2-20261114'
+    page = stage / 'runs/model/reference/plan/task-1/version-0'
+    page.mkdir(parents=True)
+    (page / 'index.html').write_text('saved page')
+    (page / 'saved.payload').write_text('saved source')
+    (stage / 'scoring-inputs.json').write_text(json.dumps({'jobs': {'key': {'page': str(page.relative_to(tmp_path))}}}))
+    repair = tmp_path / 'artifacts/library-repair-full-20261114'
+    repair.mkdir()
+    (repair / 'inputs.json').write_text('{}')
+    monkeypatch.setattr(exporter, 'ROOT', tmp_path)
+    monkeypatch.setattr(exporter.subprocess, 'check_output', lambda *args, **kwargs: b'')
+    old = exporter.selected_files(expanded=True, library_repair=True)
+    assert page / 'index.html' not in old and repair / 'inputs.json' not in old
+    selected = exporter.selected_files(expanded=True, library_repair=True, nov14=True)
+    assert page / 'index.html' in selected and page / 'saved.payload' in selected
+    assert repair / 'inputs.json' in selected
 from test.ledger_read import calls, totals
 
 

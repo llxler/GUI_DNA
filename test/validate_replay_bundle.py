@@ -41,11 +41,14 @@ def main():
     parser.add_argument('--report', type=Path, default=ROOT / 'test/results/replay-validation.json')
     parser.add_argument('--expanded', action='store_true')
     parser.add_argument('--library-repair', action='store_true')
+    parser.add_argument('--nov14', action='store_true')
     parser.add_argument('--browser-smoke', action='store_true', help='Replay five saved table pages with fresh npm dependencies')
     parser.add_argument('--browser-artifacts', type=Path, help='New directory retaining browser reports and runtime provenance')
     args = parser.parse_args()
     if args.library_repair and not args.expanded:
         raise ValueError('--library-repair requires --expanded')
+    if args.nov14 and not args.library_repair:
+        raise ValueError('--nov14 requires --library-repair and --expanded')
     if args.browser_smoke and (not args.library_repair or args.browser_artifacts is None):
         raise ValueError('--browser-smoke requires --library-repair and --browser-artifacts')
     if args.browser_smoke and args.browser_artifacts.exists():
@@ -72,6 +75,8 @@ def main():
         checks = CHECKS + ((('test.replay_new_tables', 'test/results/new-tables-replay.json'),) if args.expanded else ())
         if args.library_repair:
             checks += (('test.replay_library_repair', 'test/results/library-repair-replay.json'),)
+        if args.nov14:
+            checks += (('test.replay_nov14', 'test/results/nov14-replay.json'),)
         for module, output in checks:
             expected = json.loads((root / output).read_text())
             done = subprocess.run([sys.executable, '-m', module], cwd=root, env=env,
@@ -106,10 +111,13 @@ def main():
         result['all_passed'] = result['all_passed'] and result['browser_smoke']['all_passed']
     result['expanded'] = args.expanded
     result['library_repair'] = args.library_repair
+    result['nov14'] = args.nov14
     if args.expanded:
         result['scope'] += ' Also four new cohorts (904 distinct candidates) and their stored fixed-control scores; no additional browser reruns.'
     if args.library_repair:
         result['scope'] += ' Also strict and secondary repair replay tables reconstructed from stored raw reports; no new browser calls.'
+    if args.nov14:
+        result['scope'] += ' Also November 14 full-library continuation, conditional toggles, prefix calibration and corrected factorial, reconstructed from raw reports and dated ledgers.'
     if args.browser_smoke:
         result['scope'] += ' Separate five-page table/task-20 browser smoke check uses a fresh extraction and npm install on the same host.'
     args.report.parent.mkdir(parents=True, exist_ok=True)
