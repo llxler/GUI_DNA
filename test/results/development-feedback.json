@@ -1,0 +1,134 @@
+{
+  "posthoc": true,
+  "rows": [
+    {
+      "project": "rows",
+      "model": "anthropic/claude-sonnet-4.5",
+      "label": "first",
+      "page": null,
+      "score_key": null,
+      "record": "artifacts/development-feedback-20261115/runs/rows/anthropic__claude-sonnet-4.5/record.json",
+      "all_passed": false,
+      "passed_cases": 0,
+      "attempts": 2,
+      "development_passes": 3,
+      "development_total": 3
+    },
+    {
+      "project": "rows",
+      "model": "anthropic/claude-sonnet-4.5",
+      "label": "final",
+      "page": "artifacts/development-feedback-20261115/runs/rows/anthropic__claude-sonnet-4.5/version-1",
+      "score_key": "031307202a5c8772519b86b269e55ed512b24b89df32487f7e9a054d49ce09af",
+      "record": "artifacts/development-feedback-20261115/runs/rows/anthropic__claude-sonnet-4.5/record.json",
+      "all_passed": true,
+      "passed_cases": 12,
+      "attempts": 2,
+      "development_passes": 3,
+      "development_total": 3
+    },
+    {
+      "project": "rows",
+      "model": "openai/gpt-5",
+      "label": "first",
+      "page": "artifacts/development-feedback-20261115/runs/rows/openai__gpt-5/version-0",
+      "score_key": "877469871e8df49072cce1b63ba167ed1f23d394ad3bffdce28179d4a671ee90",
+      "record": "artifacts/development-feedback-20261115/runs/rows/openai__gpt-5/record.json",
+      "all_passed": true,
+      "passed_cases": 12,
+      "attempts": 1,
+      "development_passes": 3,
+      "development_total": 3
+    },
+    {
+      "project": "rows",
+      "model": "openai/gpt-5",
+      "label": "final",
+      "page": "artifacts/development-feedback-20261115/runs/rows/openai__gpt-5/version-0",
+      "score_key": "877469871e8df49072cce1b63ba167ed1f23d394ad3bffdce28179d4a671ee90",
+      "record": "artifacts/development-feedback-20261115/runs/rows/openai__gpt-5/record.json",
+      "all_passed": true,
+      "passed_cases": 12,
+      "attempts": 1,
+      "development_passes": 3,
+      "development_total": 3
+    },
+    {
+      "project": "todos",
+      "model": "anthropic/claude-sonnet-4.5",
+      "label": "first",
+      "page": null,
+      "score_key": null,
+      "record": "artifacts/development-feedback-20261115/runs/todos/anthropic__claude-sonnet-4.5/record.json",
+      "all_passed": false,
+      "passed_cases": 0,
+      "attempts": 3,
+      "development_passes": 1,
+      "development_total": 3
+    },
+    {
+      "project": "todos",
+      "model": "anthropic/claude-sonnet-4.5",
+      "label": "final",
+      "page": "artifacts/development-feedback-20261115/runs/todos/anthropic__claude-sonnet-4.5/version-1",
+      "score_key": "4f637b161081f684102c697b9b1adbe8778a4bf9c368b59917d50898aebf9c43",
+      "record": "artifacts/development-feedback-20261115/runs/todos/anthropic__claude-sonnet-4.5/record.json",
+      "all_passed": false,
+      "passed_cases": 8,
+      "attempts": 3,
+      "development_passes": 1,
+      "development_total": 3
+    },
+    {
+      "project": "todos",
+      "model": "openai/gpt-5",
+      "label": "first",
+      "page": "artifacts/development-feedback-20261115/runs/todos/openai__gpt-5/version-0",
+      "score_key": "5daec1e0e2d294c208209658850615e04fd35f23b5cda7650bb1c750f81f3ef8",
+      "record": "artifacts/development-feedback-20261115/runs/todos/openai__gpt-5/record.json",
+      "all_passed": false,
+      "passed_cases": 6,
+      "attempts": 2,
+      "development_passes": 3,
+      "development_total": 3
+    },
+    {
+      "project": "todos",
+      "model": "openai/gpt-5",
+      "label": "final",
+      "page": "artifacts/development-feedback-20261115/runs/todos/openai__gpt-5/version-1",
+      "score_key": "d3651c4d10b7b2f34d70a92aa2490c5b5f018def808b563887e03b74376a802d",
+      "record": "artifacts/development-feedback-20261115/runs/todos/openai__gpt-5/record.json",
+      "all_passed": true,
+      "passed_cases": 12,
+      "attempts": 2,
+      "development_passes": 3,
+      "development_total": 3
+    }
+  ],
+  "costs": {
+    "calls": 8,
+    "settled_usd": 0.622788,
+    "exposure_usd": 0.622788,
+    "unsettled_calls": 0,
+    "cap_usd": 3.0,
+    "stop_usd": 0.0,
+    "halted": 0
+  },
+  "usage": {
+    "prompt_tokens": 35795,
+    "completion_tokens": 42536,
+    "cost": 0.6227864999999999,
+    "reasoning_tokens": 11712
+  },
+  "finish_reasons": {
+    "openai/gpt-5/stop": 3,
+    "anthropic/claude-sonnet-4.5/stop": 5
+  },
+  "providers": {
+    "openai/gpt-5/OpenAI": 3,
+    "anthropic/claude-sonnet-4.5/Claude Platform on AWS": 5
+  },
+  "raw_reports": 5,
+  "scope": "4 no-library full pages with construction-scale public feedback and 20000 output tokens/response; different information/feedback/cost from original 8000-token no-library candidates; no tool agent or pure feedback effect."
+}

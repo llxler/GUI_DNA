@@ -1,0 +1,4456 @@
+{
+  "scope": "Posthoc union of saved legal plans and fixed controls under same-page complete history. Positive pages are recompiled byte-for-byte against the original frozen package. No new search, model call or browser run; absence is not impossibility. Separate from the older current-file 53/120 bound.",
+  "library_task_pairs": 120,
+  "with_observed_witness": 14,
+  "libraries": [
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "n": 20,
+      "with_observed_witness": 0,
+      "witness_tasks": []
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "n": 20,
+      "with_observed_witness": 0,
+      "witness_tasks": []
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "n": 20,
+      "with_observed_witness": 0,
+      "witness_tasks": []
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "n": 20,
+      "with_observed_witness": 6,
+      "witness_tasks": [
+        "task-1",
+        "task-2",
+        "task-3",
+        "task-4",
+        "task-5",
+        "task-6"
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "n": 20,
+      "with_observed_witness": 4,
+      "witness_tasks": [
+        "task-1",
+        "task-2",
+        "task-3",
+        "task-4"
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "n": 20,
+      "with_observed_witness": 4,
+      "witness_tasks": [
+        "task-1",
+        "task-2",
+        "task-3",
+        "task-4"
+      ]
+    }
+  ],
+  "witnesses": [
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "task": "task-1",
+      "observations": [
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-1/version-1",
+          "score_key": "b8615dbc2723420989dee49da0660451252e0e52a565514ca3f9443605c51ba6"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-1/version-1",
+          "score_key": "b8615dbc2723420989dee49da0660451252e0e52a565514ca3f9443605c51ba6"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-1/version-0",
+          "score_key": "ceb3ab5dff6a2e18095fa38f2d899d08c839aa4b87b3b77a0d67cdbfb463b59d"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-1/version-0",
+          "score_key": "ceb3ab5dff6a2e18095fa38f2d899d08c839aa4b87b3b77a0d67cdbfb463b59d"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/example-0",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/bom/anthropic__claude-sonnet-4.5/example-0",
+          "score_key": "b8615dbc2723420989dee49da0660451252e0e52a565514ca3f9443605c51ba6"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/example-1",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/bom/anthropic__claude-sonnet-4.5/example-1",
+          "score_key": "f254fb04d59a167d052f750b455dfd681948847b8d71c9fb1ba0fe3aea21d490"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-20/version-0",
+          "score_key": "f254fb04d59a167d052f750b455dfd681948847b8d71c9fb1ba0fe3aea21d490"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-1",
+          "score_key": "f254fb04d59a167d052f750b455dfd681948847b8d71c9fb1ba0fe3aea21d490"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "task": "task-2",
+      "observations": [
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-2/version-1",
+          "score_key": "1b90d037380b822a65279171e0cfce8f66803f67635deabf9c6c05397d96e139"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-2/version-1",
+          "score_key": "1b90d037380b822a65279171e0cfce8f66803f67635deabf9c6c05397d96e139"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-2/version-0",
+          "score_key": "a208fff9c0af2d1cc4b168903bc829bab6018972eb8ed6ede80db2a8089312d0"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-2/version-0",
+          "score_key": "a208fff9c0af2d1cc4b168903bc829bab6018972eb8ed6ede80db2a8089312d0"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/example-0",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/bom/anthropic__claude-sonnet-4.5/example-0",
+          "score_key": "e28f161daa638965bb221ec28534442bf0f0493cc2d4ebf8275fafe51084b224"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/example-1",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/bom/anthropic__claude-sonnet-4.5/example-1",
+          "score_key": "cef30f87440a5863ef7da113399fdb90d65bede7f21fc5ab3a9bdfd42fe0377a"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-20/version-0",
+          "score_key": "cef30f87440a5863ef7da113399fdb90d65bede7f21fc5ab3a9bdfd42fe0377a"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-1",
+          "score_key": "cef30f87440a5863ef7da113399fdb90d65bede7f21fc5ab3a9bdfd42fe0377a"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "task": "task-3",
+      "observations": [
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-3/version-1",
+          "score_key": "1c27cba9711b8e7121f66344142df2aabc6d0aad4ac740834b3f18ac98ff6faa"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-3/version-1",
+          "score_key": "1c27cba9711b8e7121f66344142df2aabc6d0aad4ac740834b3f18ac98ff6faa"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-3/version-0",
+          "score_key": "c3afea48ff9b6e20111024008edd646dfad7f5d80bfff92a3da6dff9d3621514"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-3/version-0",
+          "score_key": "c3afea48ff9b6e20111024008edd646dfad7f5d80bfff92a3da6dff9d3621514"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/example-1",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/bom/anthropic__claude-sonnet-4.5/example-1",
+          "score_key": "15aea9d94e8cfaa89a966eca6e1b1cd66f2a2bc9b30b0c9c9a5f3128df60c2d1"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-20/version-0",
+          "score_key": "15aea9d94e8cfaa89a966eca6e1b1cd66f2a2bc9b30b0c9c9a5f3128df60c2d1"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-1",
+          "score_key": "15aea9d94e8cfaa89a966eca6e1b1cd66f2a2bc9b30b0c9c9a5f3128df60c2d1"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "task": "task-4",
+      "observations": [
+        {
+          "cohort": "frontier",
+          "method": "plan",
+          "model": "openai/gpt-5",
+          "label": "first",
+          "page": "artifacts/webbench-expand-frontier-2/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-5/plan/task-4/version-0",
+          "score_key": "3c97959088e89c9cda793b69083ef86e04385d2a6b5cbb9cff2f6cf55b709f62"
+        },
+        {
+          "cohort": "frontier",
+          "method": "plan",
+          "model": "openai/gpt-5",
+          "label": "final",
+          "page": "artifacts/webbench-expand-frontier-2/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-5/plan/task-4/version-0",
+          "score_key": "3c97959088e89c9cda793b69083ef86e04385d2a6b5cbb9cff2f6cf55b709f62"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "task": "task-1",
+      "observations": [
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-1/version-0",
+          "score_key": "ef5deff4a63279cab589d31ebf87c6586ed79da956e4433440349509a6401fc0"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-1/version-0",
+          "score_key": "ef5deff4a63279cab589d31ebf87c6586ed79da956e4433440349509a6401fc0"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-1/version-0",
+          "score_key": "ef5deff4a63279cab589d31ebf87c6586ed79da956e4433440349509a6401fc0"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-1/version-0",
+          "score_key": "ef5deff4a63279cab589d31ebf87c6586ed79da956e4433440349509a6401fc0"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/example-0",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/bom/openai__gpt-5/example-0",
+          "score_key": "ef5deff4a63279cab589d31ebf87c6586ed79da956e4433440349509a6401fc0"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/example-1",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/bom/openai__gpt-5/example-1",
+          "score_key": "bcac9d7c626a4d17dbb5667da3c505b4586ee923d7051cd65b4e1c14cfd97551"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-20/version-0",
+          "score_key": "ef5deff4a63279cab589d31ebf87c6586ed79da956e4433440349509a6401fc0"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-0",
+          "score_key": "ef5deff4a63279cab589d31ebf87c6586ed79da956e4433440349509a6401fc0"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "task": "task-2",
+      "observations": [
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-2/version-0",
+          "score_key": "e71b1fab2f462f0a1857c9e91af06a1ccc88e18c5b7cadafc86f15e9d3667632"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-2/version-0",
+          "score_key": "e71b1fab2f462f0a1857c9e91af06a1ccc88e18c5b7cadafc86f15e9d3667632"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-2/version-0",
+          "score_key": "e71b1fab2f462f0a1857c9e91af06a1ccc88e18c5b7cadafc86f15e9d3667632"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-2/version-0",
+          "score_key": "e71b1fab2f462f0a1857c9e91af06a1ccc88e18c5b7cadafc86f15e9d3667632"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/example-0",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/bom/openai__gpt-5/example-0",
+          "score_key": "e71b1fab2f462f0a1857c9e91af06a1ccc88e18c5b7cadafc86f15e9d3667632"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/example-1",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/bom/openai__gpt-5/example-1",
+          "score_key": "7285d524418dbfdc11607ff2be53f0efdae5a872d661248f815cf283e06a1344"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-20/version-0",
+          "score_key": "e71b1fab2f462f0a1857c9e91af06a1ccc88e18c5b7cadafc86f15e9d3667632"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-0",
+          "score_key": "e71b1fab2f462f0a1857c9e91af06a1ccc88e18c5b7cadafc86f15e9d3667632"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "task": "task-3",
+      "observations": [
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-3/version-0",
+          "score_key": "3e77543f2143e048953183b5feae446b8658f88740374b21f3a09a84e0153cd6"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-3/version-0",
+          "score_key": "3e77543f2143e048953183b5feae446b8658f88740374b21f3a09a84e0153cd6"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-3/version-0",
+          "score_key": "06a24dccfac367d29e46df46bf67667f39178050645e94c4854a56eddadbb2ac"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-3/version-0",
+          "score_key": "06a24dccfac367d29e46df46bf67667f39178050645e94c4854a56eddadbb2ac"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/example-0",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/bom/openai__gpt-5/example-0",
+          "score_key": "06a24dccfac367d29e46df46bf67667f39178050645e94c4854a56eddadbb2ac"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/example-1",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/bom/openai__gpt-5/example-1",
+          "score_key": "d2177c8890a606c733c1565c5491d63185bd57ab6fcbfeb4d314f2e19987b4a2"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-20/version-0",
+          "score_key": "06a24dccfac367d29e46df46bf67667f39178050645e94c4854a56eddadbb2ac"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-0",
+          "score_key": "06a24dccfac367d29e46df46bf67667f39178050645e94c4854a56eddadbb2ac"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "task": "task-4",
+      "observations": [
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-4/version-0",
+          "score_key": "d2c30302f6a2518516d378cb7d729ce7fe4db3a2270014ea52d4fd7763a926be"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-4/version-0",
+          "score_key": "d2c30302f6a2518516d378cb7d729ce7fe4db3a2270014ea52d4fd7763a926be"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-4/version-0",
+          "score_key": "d2c30302f6a2518516d378cb7d729ce7fe4db3a2270014ea52d4fd7763a926be"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-4/version-0",
+          "score_key": "d2c30302f6a2518516d378cb7d729ce7fe4db3a2270014ea52d4fd7763a926be"
+        },
+        {
+          "cohort": "frontier",
+          "method": "plan",
+          "model": "openai/gpt-5",
+          "label": "first",
+          "page": "artifacts/webbench-expand-frontier-2/runs/bom/openai__gpt-5/openai__gpt-5/plan/task-4/version-0",
+          "score_key": "c22f7637a3f56c3c4d0430b89caa54c8a715141df286a7f50cba05bdaeea3c13"
+        },
+        {
+          "cohort": "frontier",
+          "method": "plan",
+          "model": "openai/gpt-5",
+          "label": "final",
+          "page": "artifacts/webbench-expand-frontier-2/runs/bom/openai__gpt-5/openai__gpt-5/plan/task-4/version-0",
+          "score_key": "c22f7637a3f56c3c4d0430b89caa54c8a715141df286a7f50cba05bdaeea3c13"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/example-0",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/bom/openai__gpt-5/example-0",
+          "score_key": "d2c30302f6a2518516d378cb7d729ce7fe4db3a2270014ea52d4fd7763a926be"
+        },
+        {
+          "cohort": "frontier",
+          "method": "control/example-0",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/bom/openai__gpt-5/example-0",
+          "score_key": "d2c30302f6a2518516d378cb7d729ce7fe4db3a2270014ea52d4fd7763a926be"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/example-1",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/bom/openai__gpt-5/example-1",
+          "score_key": "6017a4c5a01c408ad2a4f6f48c90e42a6f410a6bc3b423c9adebbff224e4a5a1"
+        },
+        {
+          "cohort": "frontier",
+          "method": "control/example-1",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/bom/openai__gpt-5/example-1",
+          "score_key": "6017a4c5a01c408ad2a4f6f48c90e42a6f410a6bc3b423c9adebbff224e4a5a1"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-20/version-0",
+          "score_key": "d2c30302f6a2518516d378cb7d729ce7fe4db3a2270014ea52d4fd7763a926be"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-0",
+          "score_key": "d2c30302f6a2518516d378cb7d729ce7fe4db3a2270014ea52d4fd7763a926be"
+        },
+        {
+          "cohort": "frontier",
+          "method": "control/final-plan",
+          "model": "openai/gpt-5",
+          "label": "final",
+          "page": "artifacts/webbench-expand-frontier-2/runs/bom/openai__gpt-5/openai__gpt-5/plan/task-20/version-0",
+          "score_key": "d2c30302f6a2518516d378cb7d729ce7fe4db3a2270014ea52d4fd7763a926be"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "task": "task-1",
+      "observations": [
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-1/version-1",
+          "score_key": "81fe283d9b6b4e2e2b8c7dd292f2c579a155cc22ae744a79b45cc1f5d3242007"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-1/version-1",
+          "score_key": "81fe283d9b6b4e2e2b8c7dd292f2c579a155cc22ae744a79b45cc1f5d3242007"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-1/version-0",
+          "score_key": "81fe283d9b6b4e2e2b8c7dd292f2c579a155cc22ae744a79b45cc1f5d3242007"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-1/version-0",
+          "score_key": "81fe283d9b6b4e2e2b8c7dd292f2c579a155cc22ae744a79b45cc1f5d3242007"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/example-0",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/table/anthropic__claude-sonnet-4.5/example-0",
+          "score_key": "81fe283d9b6b4e2e2b8c7dd292f2c579a155cc22ae744a79b45cc1f5d3242007"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-20/version-0",
+          "score_key": "81fe283d9b6b4e2e2b8c7dd292f2c579a155cc22ae744a79b45cc1f5d3242007"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-1",
+          "score_key": "81fe283d9b6b4e2e2b8c7dd292f2c579a155cc22ae744a79b45cc1f5d3242007"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "task": "task-2",
+      "observations": [
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-2/version-1",
+          "score_key": "52c0721b4c95b9aa12ed5701448ee36f67e056b1d4d0168e8d11e28f4fe5e953"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-2/version-1",
+          "score_key": "52c0721b4c95b9aa12ed5701448ee36f67e056b1d4d0168e8d11e28f4fe5e953"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-2/version-0",
+          "score_key": "145e87a0bb3313477c0c70b3402f28d83195aaa7012d96221fb3f1b45796996c"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-2/version-0",
+          "score_key": "145e87a0bb3313477c0c70b3402f28d83195aaa7012d96221fb3f1b45796996c"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/example-0",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/table/anthropic__claude-sonnet-4.5/example-0",
+          "score_key": "145e87a0bb3313477c0c70b3402f28d83195aaa7012d96221fb3f1b45796996c"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-20/version-0",
+          "score_key": "145e87a0bb3313477c0c70b3402f28d83195aaa7012d96221fb3f1b45796996c"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-1",
+          "score_key": "145e87a0bb3313477c0c70b3402f28d83195aaa7012d96221fb3f1b45796996c"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "task": "task-3",
+      "observations": [
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-3/version-1",
+          "score_key": "74fa0df1837b6d5597b89bd421e174c11bccad3240c3bd65345a476bed8422f5"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-3/version-1",
+          "score_key": "74fa0df1837b6d5597b89bd421e174c11bccad3240c3bd65345a476bed8422f5"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-3/version-0",
+          "score_key": "74fa0df1837b6d5597b89bd421e174c11bccad3240c3bd65345a476bed8422f5"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-3/version-0",
+          "score_key": "74fa0df1837b6d5597b89bd421e174c11bccad3240c3bd65345a476bed8422f5"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/example-0",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/table/anthropic__claude-sonnet-4.5/example-0",
+          "score_key": "74fa0df1837b6d5597b89bd421e174c11bccad3240c3bd65345a476bed8422f5"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-20/version-0",
+          "score_key": "74fa0df1837b6d5597b89bd421e174c11bccad3240c3bd65345a476bed8422f5"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-1",
+          "score_key": "74fa0df1837b6d5597b89bd421e174c11bccad3240c3bd65345a476bed8422f5"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "task": "task-4",
+      "observations": [
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-4/version-1",
+          "score_key": "fdfec91591439c5f3375b06b1839d84accaff83b3cef6430e558b6fb3cee95d4"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-4/version-1",
+          "score_key": "fdfec91591439c5f3375b06b1839d84accaff83b3cef6430e558b6fb3cee95d4"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-4/version-0",
+          "score_key": "587656a6b9d4eeb8aa74815cd2ee89a7c4d8211ed366d206cb1295f4c77206aa"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-4/version-0",
+          "score_key": "587656a6b9d4eeb8aa74815cd2ee89a7c4d8211ed366d206cb1295f4c77206aa"
+        },
+        {
+          "cohort": "frontier",
+          "method": "plan",
+          "model": "openai/gpt-5",
+          "label": "first",
+          "page": "artifacts/webbench-expand-frontier-2/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-5/plan/task-4/version-0",
+          "score_key": "90a79d7672f701ef27e6b33eaf97fb57bee0a1a0f9da9d4a7f2b19fee795315d"
+        },
+        {
+          "cohort": "frontier",
+          "method": "plan",
+          "model": "openai/gpt-5",
+          "label": "final",
+          "page": "artifacts/webbench-expand-frontier-2/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-5/plan/task-4/version-0",
+          "score_key": "90a79d7672f701ef27e6b33eaf97fb57bee0a1a0f9da9d4a7f2b19fee795315d"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/example-0",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/table/anthropic__claude-sonnet-4.5/example-0",
+          "score_key": "587656a6b9d4eeb8aa74815cd2ee89a7c4d8211ed366d206cb1295f4c77206aa"
+        },
+        {
+          "cohort": "frontier",
+          "method": "control/example-0",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/table/anthropic__claude-sonnet-4.5/example-0",
+          "score_key": "587656a6b9d4eeb8aa74815cd2ee89a7c4d8211ed366d206cb1295f4c77206aa"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-20/version-0",
+          "score_key": "587656a6b9d4eeb8aa74815cd2ee89a7c4d8211ed366d206cb1295f4c77206aa"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-1",
+          "score_key": "587656a6b9d4eeb8aa74815cd2ee89a7c4d8211ed366d206cb1295f4c77206aa"
+        },
+        {
+          "cohort": "frontier",
+          "method": "control/final-plan",
+          "model": "openai/gpt-5",
+          "label": "final",
+          "page": "artifacts/webbench-expand-frontier-2/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-5/plan/task-20/version-0",
+          "score_key": "587656a6b9d4eeb8aa74815cd2ee89a7c4d8211ed366d206cb1295f4c77206aa"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "task": "task-5",
+      "observations": [
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-5/version-1",
+          "score_key": "d3c21f6129d9ec0af4875c7b2fbccc604184b43c9a3c127295e431483685ee28"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-5/version-1",
+          "score_key": "d3c21f6129d9ec0af4875c7b2fbccc604184b43c9a3c127295e431483685ee28"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-5/version-0",
+          "score_key": "a4d8911254ecb949db98aa5bb0a8d095b1748320ebc77befa8b97c255668b04d"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-5/version-0",
+          "score_key": "a4d8911254ecb949db98aa5bb0a8d095b1748320ebc77befa8b97c255668b04d"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/example-0",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/table/anthropic__claude-sonnet-4.5/example-0",
+          "score_key": "a4d8911254ecb949db98aa5bb0a8d095b1748320ebc77befa8b97c255668b04d"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-20/version-0",
+          "score_key": "a4d8911254ecb949db98aa5bb0a8d095b1748320ebc77befa8b97c255668b04d"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-1",
+          "score_key": "a4d8911254ecb949db98aa5bb0a8d095b1748320ebc77befa8b97c255668b04d"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "task": "task-6",
+      "observations": [
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-6/version-1",
+          "score_key": "5cd3efd94fde631d51cee77665352af437f577baa83d82dfb90bf97a2fa27ddd"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-6/version-1",
+          "score_key": "5cd3efd94fde631d51cee77665352af437f577baa83d82dfb90bf97a2fa27ddd"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "first",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-6/version-0",
+          "score_key": "dfb1694fe181972f420a1f1e73fcc19d48727daaba7e8bb1a4012ed71d4a3208"
+        },
+        {
+          "cohort": "expansion",
+          "method": "plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-6/version-0",
+          "score_key": "dfb1694fe181972f420a1f1e73fcc19d48727daaba7e8bb1a4012ed71d4a3208"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/example-0",
+          "model": null,
+          "label": "final",
+          "page": "artifacts/webbench-expand-controls/pages/table/anthropic__claude-sonnet-4.5/example-0",
+          "score_key": "dfb1694fe181972f420a1f1e73fcc19d48727daaba7e8bb1a4012ed71d4a3208"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "openai/gpt-oss-120b",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-20/version-0",
+          "score_key": "dfb1694fe181972f420a1f1e73fcc19d48727daaba7e8bb1a4012ed71d4a3208"
+        },
+        {
+          "cohort": "expansion",
+          "method": "control/final-plan",
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "label": "final",
+          "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-1",
+          "score_key": "dfb1694fe181972f420a1f1e73fcc19d48727daaba7e8bb1a4012ed71d4a3208"
+        }
+      ]
+    }
+  ],
+  "compiled_page_proofs": {
+    "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-1/version-1": {
+      "plan": {
+        "initial_page": "intro",
+        "available_docs": [
+          "intro",
+          "javascript",
+          "css"
+        ],
+        "navigation_features": {
+          "enable_homepage": true,
+          "enable_back": true,
+          "enable_forward": true,
+          "enable_refresh": true,
+          "disable_state_management": false
+        },
+        "settings_panel": {
+          "enable_reading_time": false,
+          "enable_theme_switcher": true,
+          "default_theme": "dark"
+        },
+        "doc_content": {
+          "intro_type": "minimal",
+          "technical_depth": "basic"
+        }
+      },
+      "output_sha256": "f2ae89062a353fd84a962c18a2c5471851cd8d4e8245821ed61c9d051a4154af"
+    },
+    "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-2/version-1": {
+      "plan": {
+        "initial_page": "intro",
+        "available_docs": [
+          "intro",
+          "javascript",
+          "css",
+          "html",
+          "nodejs"
+        ],
+        "navigation_features": {
+          "enable_homepage": true,
+          "enable_back": true,
+          "enable_forward": true,
+          "enable_refresh": true,
+          "disable_state_management": false
+        },
+        "settings_panel": {
+          "enable_reading_time": true,
+          "enable_theme_switcher": true,
+          "default_theme": "dark",
+          "enable_network_indicator": false,
+          "enable_geolocation_indicator": false,
+          "enable_fullscreen": false
+        }
+      },
+      "output_sha256": "a2eb918290b92a0bdd5f090401c6232b5f1b0b2b6c4100b9fadcb90e438a15f6"
+    },
+    "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-3/version-1": {
+      "plan": {
+        "initial_page": "intro",
+        "available_docs": [
+          "intro",
+          "javascript",
+          "css",
+          "html",
+          "nodejs"
+        ],
+        "navigation_features": {
+          "enable_homepage": true,
+          "enable_back": true,
+          "enable_forward": true,
+          "enable_refresh": true,
+          "disable_state_management": false
+        },
+        "settings_panel": {
+          "enable_reading_time": true,
+          "enable_theme_switcher": true,
+          "default_theme": "dark",
+          "enable_network_indicator": false,
+          "enable_geolocation_indicator": false,
+          "enable_fullscreen": false,
+          "geolocation_target": {
+            "latitude": 30,
+            "longitude": 120
+          }
+        },
+        "history_menus": {
+          "enable_back_menu": false,
+          "enable_forward_menu": false,
+          "menu_auto_hide": false
+        },
+        "cross_window": {
+          "enable_open_new_window": false,
+          "enable_close_button": false,
+          "sync_theme": false
+        },
+        "search_feature": {
+          "enable_keyword_search": false
+        },
+        "lifecycle": {
+          "enable_beforeunload_warning": false,
+          "enable_page_restoration": false,
+          "pause_timer_when_hidden": false
+        },
+        "doc_content": {
+          "intro_type": "detailed",
+          "technical_depth": "basic"
+        }
+      },
+      "output_sha256": "d477a91778ffbcf01ecaca3054faeb5a36f2e69a622aca6259752f60f3c8ffde"
+    },
+    "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-1/version-0": {
+      "plan": {
+        "initial_page": "intro",
+        "available_docs": [
+          "intro",
+          "javascript",
+          "css"
+        ],
+        "navigation_features": {
+          "enable_homepage": true,
+          "enable_back": true,
+          "enable_forward": true,
+          "enable_refresh": true,
+          "disable_state_management": false
+        },
+        "settings_panel": {
+          "enable_reading_time": false,
+          "enable_theme_switcher": true,
+          "default_theme": "dark",
+          "enable_network_indicator": false,
+          "enable_geolocation_indicator": false,
+          "enable_fullscreen": false,
+          "geolocation_target": {
+            "latitude": 0,
+            "longitude": 0
+          }
+        },
+        "history_menus": {
+          "enable_back_menu": false,
+          "enable_forward_menu": false,
+          "menu_auto_hide": false
+        },
+        "cross_window": {
+          "enable_open_new_window": false,
+          "enable_close_button": false,
+          "sync_theme": false
+        },
+        "search_feature": {
+          "enable_keyword_search": false
+        },
+        "lifecycle": {
+          "enable_beforeunload_warning": false,
+          "enable_page_restoration": false,
+          "pause_timer_when_hidden": false
+        },
+        "doc_content": {
+          "intro_type": "minimal",
+          "technical_depth": "basic"
+        }
+      },
+      "output_sha256": "c2774bb620f624ff7ab02bbf1109e62d11aadd680233b2282025f8f2969fcdb6"
+    },
+    "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-2/version-0": {
+      "plan": {
+        "initial_page": "intro",
+        "available_docs": [
+          "intro",
+          "javascript",
+          "css",
+          "html",
+          "nodejs"
+        ],
+        "navigation_features": {
+          "enable_homepage": true,
+          "enable_back": true,
+          "enable_forward": true,
+          "enable_refresh": true,
+          "disable_state_management": false
+        },
+        "history_menus": {
+          "enable_back_menu": false,
+          "enable_forward_menu": false,
+          "menu_auto_hide": false
+        },
+        "settings_panel": {
+          "enable_reading_time": true,
+          "enable_theme_switcher": true,
+          "default_theme": "dark",
+          "enable_network_indicator": false,
+          "enable_geolocation_indicator": false,
+          "enable_fullscreen": false,
+          "geolocation_target": {
+            "latitude": 30,
+            "longitude": 120
+          }
+        },
+        "cross_window": {
+          "enable_open_new_window": false,
+          "enable_close_button": false,
+          "sync_theme": false
+        },
+        "search_feature": {
+          "enable_keyword_search": false
+        },
+        "lifecycle": {
+          "enable_beforeunload_warning": false,
+          "enable_page_restoration": false,
+          "pause_timer_when_hidden": false
+        },
+        "doc_content": {
+          "intro_type": "minimal",
+          "technical_depth": "basic"
+        }
+      },
+      "output_sha256": "90f49087020f17bd68e9ec8989a1ee9f2d785e8e581a0fb9ae2e73c124e55e5c"
+    },
+    "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-3/version-0": {
+      "plan": {
+        "initial_page": "intro",
+        "available_docs": [
+          "intro",
+          "javascript",
+          "css",
+          "html",
+          "nodejs"
+        ],
+        "navigation_features": {
+          "enable_homepage": true,
+          "enable_back": true,
+          "enable_forward": true,
+          "enable_refresh": true,
+          "disable_state_management": false
+        },
+        "history_menus": {
+          "enable_back_menu": false,
+          "enable_forward_menu": false,
+          "menu_auto_hide": false
+        },
+        "settings_panel": {
+          "enable_reading_time": false,
+          "enable_theme_switcher": true,
+          "default_theme": "dark",
+          "enable_network_indicator": false,
+          "enable_geolocation_indicator": false,
+          "enable_fullscreen": false,
+          "geolocation_target": {
+            "latitude": 0,
+            "longitude": 0
+          }
+        },
+        "cross_window": {
+          "enable_open_new_window": false,
+          "enable_close_button": false,
+          "sync_theme": false
+        },
+        "search_feature": {
+          "enable_keyword_search": false
+        },
+        "lifecycle": {
+          "enable_beforeunload_warning": false,
+          "enable_page_restoration": false,
+          "pause_timer_when_hidden": false
+        },
+        "doc_content": {
+          "intro_type": "minimal",
+          "technical_depth": "basic"
+        }
+      },
+      "output_sha256": "617489a95cdc8cff631b5deb10f816133a4a92cdaf176e749244b20a0946fc62"
+    },
+    "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-1/version-0": {
+      "plan": {
+        "theme": "dark",
+        "startDoc": "intro",
+        "topbarHeight": 52,
+        "enableNetwork": true,
+        "enableGeolocation": true,
+        "showReadingTime": true,
+        "allowRestorePrompt": true
+      },
+      "output_sha256": "46df631717d37d325699e3ad3266316add1f0d2219e8f9be364547dff4eb2d67"
+    },
+    "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-2/version-0": {
+      "plan": {
+        "theme": "dark",
+        "startDoc": "intro",
+        "topbarHeight": 52,
+        "enableNetwork": true,
+        "enableGeolocation": true,
+        "showReadingTime": true,
+        "allowRestorePrompt": true
+      },
+      "output_sha256": "46df631717d37d325699e3ad3266316add1f0d2219e8f9be364547dff4eb2d67"
+    },
+    "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-3/version-0": {
+      "plan": {
+        "theme": "light",
+        "startDoc": "intro",
+        "topbarHeight": 52,
+        "enableNetwork": true,
+        "enableGeolocation": true,
+        "showReadingTime": true,
+        "allowRestorePrompt": true
+      },
+      "output_sha256": "7db703d2f67130dc2e7d7cfd6dcad819c5f94b876b07d60756d39852fec8825d"
+    },
+    "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-4/version-0": {
+      "plan": {
+        "theme": "dark",
+        "startDoc": "intro",
+        "topbarHeight": 52,
+        "enableNetwork": true,
+        "enableGeolocation": true,
+        "showReadingTime": true,
+        "allowRestorePrompt": true,
+        "geolocationTarget": {
+          "lat": 30,
+          "lon": 120
+        }
+      },
+      "output_sha256": "46df631717d37d325699e3ad3266316add1f0d2219e8f9be364547dff4eb2d67"
+    },
+    "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-1/version-0": {
+      "plan": {
+        "theme": "dark",
+        "startDoc": "intro",
+        "topbarHeight": 52,
+        "enableNetwork": true,
+        "enableGeolocation": true,
+        "showReadingTime": true,
+        "allowRestorePrompt": true,
+        "geolocationTarget": {
+          "lat": 30,
+          "lon": 120
+        }
+      },
+      "output_sha256": "46df631717d37d325699e3ad3266316add1f0d2219e8f9be364547dff4eb2d67"
+    },
+    "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-2/version-0": {
+      "plan": {
+        "theme": "dark",
+        "startDoc": "intro",
+        "topbarHeight": 52,
+        "enableNetwork": true,
+        "enableGeolocation": true,
+        "showReadingTime": true,
+        "allowRestorePrompt": true,
+        "geolocationTarget": {
+          "lat": 30,
+          "lon": 120
+        }
+      },
+      "output_sha256": "46df631717d37d325699e3ad3266316add1f0d2219e8f9be364547dff4eb2d67"
+    },
+    "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-3/version-0": {
+      "plan": {
+        "theme": "dark",
+        "startDoc": "intro",
+        "topbarHeight": 52,
+        "enableNetwork": true,
+        "enableGeolocation": true,
+        "showReadingTime": true,
+        "allowRestorePrompt": true,
+        "geolocationTarget": {
+          "lat": 30,
+          "lon": 120
+        }
+      },
+      "output_sha256": "46df631717d37d325699e3ad3266316add1f0d2219e8f9be364547dff4eb2d67"
+    },
+    "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-4/version-0": {
+      "plan": {
+        "theme": "dark",
+        "startDoc": "intro",
+        "topbarHeight": 52,
+        "enableNetwork": true,
+        "enableGeolocation": true,
+        "showReadingTime": true,
+        "allowRestorePrompt": true,
+        "geolocationTarget": {
+          "lat": 30,
+          "lon": 120
+        }
+      },
+      "output_sha256": "46df631717d37d325699e3ad3266316add1f0d2219e8f9be364547dff4eb2d67"
+    },
+    "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-1/version-1": {
+      "plan": {
+        "features": {
+          "context_menu": true,
+          "cell_selection": true,
+          "keyboard_navigation": true,
+          "cell_editing": true,
+          "clipboard_operations": true,
+          "row_operations": true,
+          "col_operations": true,
+          "resize_rows": true,
+          "resize_cols": true,
+          "drag_reorder_rows": true,
+          "drag_reorder_cols": true,
+          "filtering": true,
+          "sorting": true,
+          "range_selection": true,
+          "mouse_drag_select": true
+        },
+        "interaction_options": {
+          "min_row_height": 40,
+          "min_col_width": 80,
+          "enable_multiselect": true,
+          "enable_edit_on_single_click": true,
+          "enable_extend_on_paste": true
+        },
+        "table_structure": {
+          "initial_rows": 2,
+          "initial_cols": 3,
+          "cell_content_pattern": "cell_x_y"
+        }
+      },
+      "output_sha256": "84120b365950787b81a8901bcbded59dfc9239bf6142889001b125e201f611d0"
+    },
+    "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-2/version-1": {
+      "plan": {
+        "features": {
+          "context_menu": true,
+          "cell_selection": true,
+          "keyboard_navigation": true,
+          "cell_editing": true,
+          "clipboard_operations": true,
+          "row_operations": true,
+          "col_operations": true,
+          "resize_rows": true,
+          "resize_cols": true,
+          "drag_reorder_rows": true,
+          "drag_reorder_cols": true,
+          "filtering": false,
+          "sorting": false,
+          "range_selection": true,
+          "mouse_drag_select": true
+        },
+        "interaction_options": {
+          "min_row_height": 40,
+          "min_col_width": 80,
+          "enable_multiselect": true,
+          "enable_edit_on_single_click": true,
+          "enable_extend_on_paste": true
+        },
+        "table_structure": {
+          "initial_rows": 2,
+          "initial_cols": 3,
+          "cell_content_pattern": "cell_x_y"
+        }
+      },
+      "output_sha256": "60fde00b4cae1ccc4792ccc172aeb264b4ccb743f29c5fce2632dcc444653294"
+    },
+    "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-3/version-1": {
+      "plan": {
+        "table_structure": {
+          "initial_rows": 2,
+          "initial_cols": 3,
+          "cell_content_pattern": "cell_x_y"
+        },
+        "features": {
+          "context_menu": true,
+          "cell_selection": true,
+          "keyboard_navigation": true,
+          "cell_editing": true,
+          "clipboard_operations": true,
+          "row_operations": true,
+          "col_operations": true,
+          "resize_rows": true,
+          "resize_cols": true,
+          "drag_reorder_rows": true,
+          "drag_reorder_cols": true,
+          "filtering": true,
+          "sorting": true,
+          "range_selection": true,
+          "mouse_drag_select": true
+        },
+        "interaction_options": {
+          "min_row_height": 40,
+          "min_col_width": 80,
+          "enable_multiselect": true,
+          "enable_edit_on_single_click": true,
+          "enable_extend_on_paste": true
+        }
+      },
+      "output_sha256": "84120b365950787b81a8901bcbded59dfc9239bf6142889001b125e201f611d0"
+    },
+    "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-4/version-1": {
+      "plan": {
+        "table_structure": {
+          "initial_rows": 2,
+          "initial_cols": 3,
+          "cell_content_pattern": "cell_x_y"
+        },
+        "features": {
+          "context_menu": true,
+          "cell_selection": true,
+          "keyboard_navigation": true,
+          "cell_editing": true,
+          "clipboard_operations": true,
+          "row_operations": true,
+          "col_operations": true,
+          "resize_rows": true,
+          "resize_cols": true,
+          "drag_reorder_rows": true,
+          "drag_reorder_cols": true,
+          "filtering": false,
+          "sorting": false,
+          "range_selection": true,
+          "mouse_drag_select": true
+        },
+        "interaction_options": {
+          "min_row_height": 40,
+          "min_col_width": 80,
+          "enable_multiselect": true,
+          "enable_edit_on_single_click": true,
+          "enable_extend_on_paste": true
+        }
+      },
+      "output_sha256": "60fde00b4cae1ccc4792ccc172aeb264b4ccb743f29c5fce2632dcc444653294"
+    },
+    "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-5/version-1": {
+      "plan": {
+        "table_structure": {
+          "initial_rows": 2,
+          "initial_cols": 3,
+          "cell_content_pattern": "cell_x_y"
+        },
+        "features": {
+          "context_menu": true,
+          "cell_selection": true,
+          "keyboard_navigation": true,
+          "cell_editing": true,
+          "clipboard_operations": true,
+          "row_operations": true,
+          "col_operations": true,
+          "resize_rows": true,
+          "resize_cols": true,
+          "drag_reorder_rows": true,
+          "drag_reorder_cols": true,
+          "filtering": false,
+          "sorting": false,
+          "range_selection": true,
+          "mouse_drag_select": true
+        },
+        "interaction_options": {
+          "min_row_height": 40,
+          "min_col_width": 80,
+          "enable_multiselect": true,
+          "enable_edit_on_single_click": true,
+          "enable_extend_on_paste": true
+        }
+      },
+      "output_sha256": "60fde00b4cae1ccc4792ccc172aeb264b4ccb743f29c5fce2632dcc444653294"
+    },
+    "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-6/version-1": {
+      "plan": {
+        "features": {
+          "context_menu": true,
+          "cell_selection": true,
+          "keyboard_navigation": true,
+          "cell_editing": true,
+          "clipboard_operations": true,
+          "row_operations": true,
+          "col_operations": true,
+          "resize_rows": true,
+          "resize_cols": true,
+          "drag_reorder_rows": true,
+          "drag_reorder_cols": true,
+          "filtering": false,
+          "sorting": false,
+          "range_selection": true,
+          "mouse_drag_select": true
+        },
+        "interaction_options": {
+          "min_row_height": 40,
+          "min_col_width": 80,
+          "enable_multiselect": true,
+          "enable_edit_on_single_click": true,
+          "enable_extend_on_paste": true
+        },
+        "table_structure": {
+          "initial_rows": 2,
+          "initial_cols": 3,
+          "cell_content_pattern": "cell_x_y"
+        }
+      },
+      "output_sha256": "60fde00b4cae1ccc4792ccc172aeb264b4ccb743f29c5fce2632dcc444653294"
+    },
+    "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-1/version-0": {
+      "plan": {
+        "table_structure": {
+          "initial_rows": 2,
+          "initial_cols": 3,
+          "cell_content_pattern": "cell_x_y"
+        },
+        "features": {
+          "context_menu": true,
+          "cell_selection": true,
+          "keyboard_navigation": true,
+          "cell_editing": true,
+          "clipboard_operations": true,
+          "row_operations": true,
+          "col_operations": true,
+          "resize_rows": true,
+          "resize_cols": true,
+          "drag_reorder_rows": true,
+          "drag_reorder_cols": true,
+          "filtering": true,
+          "sorting": true,
+          "range_selection": true,
+          "mouse_drag_select": true
+        },
+        "interaction_options": {
+          "min_row_height": 40,
+          "min_col_width": 80,
+          "enable_multiselect": true,
+          "enable_edit_on_single_click": true,
+          "enable_extend_on_paste": true
+        }
+      },
+      "output_sha256": "84120b365950787b81a8901bcbded59dfc9239bf6142889001b125e201f611d0"
+    },
+    "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-2/version-0": {
+      "plan": {
+        "table_structure": {
+          "initial_rows": 2,
+          "initial_cols": 3,
+          "cell_content_pattern": "cell_x_y"
+        },
+        "features": {
+          "context_menu": true,
+          "cell_selection": true,
+          "keyboard_navigation": true,
+          "cell_editing": true,
+          "clipboard_operations": true,
+          "row_operations": true,
+          "col_operations": true,
+          "resize_rows": true,
+          "resize_cols": true,
+          "drag_reorder_rows": true,
+          "drag_reorder_cols": true,
+          "filtering": true,
+          "sorting": true,
+          "range_selection": true,
+          "mouse_drag_select": true
+        },
+        "interaction_options": {
+          "min_row_height": 40,
+          "min_col_width": 80,
+          "enable_multiselect": true,
+          "enable_edit_on_single_click": true,
+          "enable_extend_on_paste": true
+        }
+      },
+      "output_sha256": "84120b365950787b81a8901bcbded59dfc9239bf6142889001b125e201f611d0"
+    },
+    "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-3/version-0": {
+      "plan": {
+        "table_structure": {
+          "initial_rows": 2,
+          "initial_cols": 3,
+          "cell_content_pattern": "cell_x_y"
+        },
+        "features": {
+          "context_menu": true,
+          "cell_selection": true,
+          "keyboard_navigation": true,
+          "cell_editing": true,
+          "clipboard_operations": true,
+          "row_operations": true,
+          "col_operations": true,
+          "resize_rows": true,
+          "resize_cols": true,
+          "drag_reorder_rows": true,
+          "drag_reorder_cols": true,
+          "filtering": true,
+          "sorting": true,
+          "range_selection": true,
+          "mouse_drag_select": true
+        },
+        "interaction_options": {
+          "min_row_height": 40,
+          "min_col_width": 80,
+          "enable_multiselect": true,
+          "enable_edit_on_single_click": true,
+          "enable_extend_on_paste": true
+        }
+      },
+      "output_sha256": "84120b365950787b81a8901bcbded59dfc9239bf6142889001b125e201f611d0"
+    },
+    "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-4/version-0": {
+      "plan": {
+        "table_structure": {
+          "initial_rows": 2,
+          "initial_cols": 3,
+          "cell_content_pattern": "cell_x_y"
+        },
+        "features": {
+          "context_menu": true,
+          "cell_selection": true,
+          "keyboard_navigation": true,
+          "cell_editing": true,
+          "clipboard_operations": true,
+          "row_operations": true,
+          "col_operations": true,
+          "resize_rows": true,
+          "resize_cols": true,
+          "drag_reorder_rows": true,
+          "drag_reorder_cols": true,
+          "filtering": true,
+          "sorting": true,
+          "range_selection": true,
+          "mouse_drag_select": true
+        },
+        "interaction_options": {
+          "min_row_height": 40,
+          "min_col_width": 80,
+          "enable_multiselect": true,
+          "enable_edit_on_single_click": true,
+          "enable_extend_on_paste": true
+        }
+      },
+      "output_sha256": "84120b365950787b81a8901bcbded59dfc9239bf6142889001b125e201f611d0"
+    },
+    "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-5/version-0": {
+      "plan": {
+        "table_structure": {
+          "initial_rows": 2,
+          "initial_cols": 3,
+          "cell_content_pattern": "cell_x_y"
+        },
+        "features": {
+          "context_menu": true,
+          "cell_selection": true,
+          "keyboard_navigation": true,
+          "cell_editing": true,
+          "clipboard_operations": true,
+          "row_operations": true,
+          "col_operations": true,
+          "resize_rows": true,
+          "resize_cols": true,
+          "drag_reorder_rows": true,
+          "drag_reorder_cols": true,
+          "filtering": true,
+          "sorting": true,
+          "range_selection": true,
+          "mouse_drag_select": true
+        },
+        "interaction_options": {
+          "min_row_height": 40,
+          "min_col_width": 80,
+          "enable_multiselect": true,
+          "enable_edit_on_single_click": true,
+          "enable_extend_on_paste": true
+        }
+      },
+      "output_sha256": "84120b365950787b81a8901bcbded59dfc9239bf6142889001b125e201f611d0"
+    },
+    "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-6/version-0": {
+      "plan": {
+        "table_structure": {
+          "initial_rows": 2,
+          "initial_cols": 3,
+          "cell_content_pattern": "cell_x_y"
+        },
+        "features": {
+          "context_menu": true,
+          "cell_selection": true,
+          "keyboard_navigation": true,
+          "cell_editing": true,
+          "clipboard_operations": true,
+          "row_operations": true,
+          "col_operations": true,
+          "resize_rows": true,
+          "resize_cols": true,
+          "drag_reorder_rows": true,
+          "drag_reorder_cols": true,
+          "filtering": true,
+          "sorting": true,
+          "range_selection": true,
+          "mouse_drag_select": true
+        },
+        "interaction_options": {
+          "min_row_height": 40,
+          "min_col_width": 80,
+          "enable_multiselect": true,
+          "enable_edit_on_single_click": true,
+          "enable_extend_on_paste": true
+        }
+      },
+      "output_sha256": "84120b365950787b81a8901bcbded59dfc9239bf6142889001b125e201f611d0"
+    },
+    "artifacts/webbench-expand-frontier-2/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-5/plan/task-4/version-0": {
+      "plan": {
+        "initial_page": "intro",
+        "available_docs": [
+          "intro",
+          "javascript",
+          "css",
+          "html",
+          "nodejs"
+        ],
+        "navigation_features": {
+          "enable_homepage": true,
+          "enable_back": true,
+          "enable_forward": true,
+          "enable_refresh": true,
+          "disable_state_management": true
+        },
+        "settings_panel": {
+          "enable_reading_time": false,
+          "enable_theme_switcher": true,
+          "default_theme": "dark"
+        }
+      },
+      "output_sha256": "ca7e55d0c828347a425c3404732c525d66c8ab704e4bc48295105954be0ce203"
+    },
+    "artifacts/webbench-expand-frontier-2/runs/bom/openai__gpt-5/openai__gpt-5/plan/task-4/version-0": {
+      "plan": {
+        "theme": "dark",
+        "startDoc": "intro",
+        "topbarHeight": 52,
+        "enableNetwork": false,
+        "enableGeolocation": false,
+        "showReadingTime": false,
+        "allowRestorePrompt": false
+      },
+      "output_sha256": "1b914a7bd5351f2e427558702300fcd7d5a577b7367619c82ffd5d65b9fef0c9"
+    },
+    "artifacts/webbench-expand-frontier-2/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-5/plan/task-4/version-0": {
+      "plan": {
+        "table_structure": {
+          "initial_rows": 2,
+          "initial_cols": 3,
+          "cell_content_pattern": "cell_x_y"
+        },
+        "features": {
+          "context_menu": true,
+          "cell_selection": true,
+          "keyboard_navigation": false,
+          "cell_editing": false,
+          "clipboard_operations": false,
+          "row_operations": true,
+          "col_operations": true,
+          "resize_rows": false,
+          "resize_cols": false,
+          "drag_reorder_rows": false,
+          "drag_reorder_cols": false,
+          "filtering": false,
+          "sorting": false,
+          "range_selection": false,
+          "mouse_drag_select": false
+        },
+        "interaction_options": {
+          "min_row_height": 40,
+          "min_col_width": 80,
+          "enable_multiselect": false,
+          "enable_edit_on_single_click": false,
+          "enable_extend_on_paste": false
+        }
+      },
+      "output_sha256": "775e778c5a9999993b4ab8c96030c1229f0e1a0a8e103015868895eb2bbb2503"
+    },
+    "artifacts/webbench-expand-controls/pages/table/anthropic__claude-sonnet-4.5/example-0": {
+      "plan": {
+        "table_structure": {
+          "initial_rows": 2,
+          "initial_cols": 3,
+          "cell_content_pattern": "cell_x_y"
+        },
+        "features": {
+          "context_menu": true,
+          "cell_selection": true,
+          "keyboard_navigation": true,
+          "cell_editing": true,
+          "clipboard_operations": true,
+          "row_operations": true,
+          "col_operations": true,
+          "resize_rows": true,
+          "resize_cols": true,
+          "drag_reorder_rows": true,
+          "drag_reorder_cols": true,
+          "filtering": true,
+          "sorting": true,
+          "range_selection": true,
+          "mouse_drag_select": true
+        },
+        "interaction_options": {
+          "min_row_height": 40,
+          "min_col_width": 80,
+          "enable_multiselect": true,
+          "enable_edit_on_single_click": true,
+          "enable_extend_on_paste": true
+        }
+      },
+      "output_sha256": "65c90bb177abffe6db9851dd51028bf063c4605f057a1c7f538136033a087175"
+    },
+    "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-20/version-0": {
+      "plan": {
+        "table_structure": {
+          "initial_rows": 2,
+          "initial_cols": 3,
+          "cell_content_pattern": "cell_x_y"
+        },
+        "features": {
+          "context_menu": true,
+          "cell_selection": true,
+          "keyboard_navigation": true,
+          "cell_editing": true,
+          "clipboard_operations": true,
+          "row_operations": true,
+          "col_operations": true,
+          "resize_rows": true,
+          "resize_cols": true,
+          "drag_reorder_rows": true,
+          "drag_reorder_cols": true,
+          "filtering": true,
+          "sorting": true,
+          "range_selection": true,
+          "mouse_drag_select": true
+        },
+        "interaction_options": {
+          "min_row_height": 40,
+          "min_col_width": 80,
+          "enable_multiselect": true,
+          "enable_edit_on_single_click": true,
+          "enable_extend_on_paste": true
+        }
+      },
+      "output_sha256": "84120b365950787b81a8901bcbded59dfc9239bf6142889001b125e201f611d0"
+    },
+    "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-1": {
+      "plan": {
+        "table_structure": {
+          "initial_rows": 2,
+          "initial_cols": 3,
+          "cell_content_pattern": "cell_x_y"
+        },
+        "features": {
+          "context_menu": true,
+          "cell_selection": true,
+          "keyboard_navigation": true,
+          "cell_editing": true,
+          "clipboard_operations": true,
+          "row_operations": true,
+          "col_operations": true,
+          "resize_rows": true,
+          "resize_cols": true,
+          "drag_reorder_rows": true,
+          "drag_reorder_cols": true,
+          "filtering": true,
+          "sorting": true,
+          "range_selection": true,
+          "mouse_drag_select": true
+        },
+        "interaction_options": {
+          "min_row_height": 40,
+          "min_col_width": 80,
+          "enable_multiselect": true,
+          "enable_edit_on_single_click": true,
+          "enable_extend_on_paste": true
+        }
+      },
+      "output_sha256": "84120b365950787b81a8901bcbded59dfc9239bf6142889001b125e201f611d0"
+    },
+    "artifacts/webbench-expand-controls/pages/bom/openai__gpt-5/example-0": {
+      "plan": {},
+      "output_sha256": "4b3fc8ba6f1fc3e83a57bd817a1052457ca564766bd74d84055367f54c7fb047"
+    },
+    "artifacts/webbench-expand-controls/pages/bom/openai__gpt-5/example-1": {
+      "plan": {
+        "theme": "light",
+        "startDoc": "javascript",
+        "topbarHeight": 56,
+        "enableNetwork": true,
+        "enableGeolocation": true,
+        "showReadingTime": true,
+        "allowRestorePrompt": true,
+        "geolocationTarget": {
+          "lat": 30,
+          "lon": 120
+        }
+      },
+      "output_sha256": "5444096dbb79f952f5ef738264767684912d01d7a1f4268bfda63edab0d17003"
+    },
+    "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-20/version-0": {
+      "plan": {
+        "theme": "dark",
+        "startDoc": "intro",
+        "topbarHeight": 52,
+        "enableNetwork": true,
+        "enableGeolocation": true,
+        "showReadingTime": true,
+        "allowRestorePrompt": true,
+        "geolocationTarget": {
+          "lat": 30,
+          "lon": 120
+        }
+      },
+      "output_sha256": "46df631717d37d325699e3ad3266316add1f0d2219e8f9be364547dff4eb2d67"
+    },
+    "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-0": {
+      "plan": {
+        "theme": "dark",
+        "startDoc": "intro",
+        "topbarHeight": 52,
+        "enableNetwork": true,
+        "enableGeolocation": true,
+        "showReadingTime": true,
+        "allowRestorePrompt": true,
+        "geolocationTarget": {
+          "lat": 30,
+          "lon": 120
+        }
+      },
+      "output_sha256": "46df631717d37d325699e3ad3266316add1f0d2219e8f9be364547dff4eb2d67"
+    },
+    "artifacts/webbench-expand-controls/pages/bom/anthropic__claude-sonnet-4.5/example-0": {
+      "plan": {
+        "initial_page": "intro",
+        "available_docs": [
+          "intro",
+          "javascript",
+          "css"
+        ],
+        "navigation_features": {
+          "enable_homepage": true,
+          "enable_back": true,
+          "enable_forward": true,
+          "enable_refresh": true,
+          "disable_state_management": false
+        },
+        "settings_panel": {
+          "enable_reading_time": false,
+          "enable_theme_switcher": true,
+          "default_theme": "dark"
+        },
+        "doc_content": {
+          "intro_type": "minimal",
+          "technical_depth": "basic"
+        }
+      },
+      "output_sha256": "f5652a0d4c8c8f0201d1969f93bbfec4c5e998599ba23f25594ec4729c4261f6"
+    },
+    "artifacts/webbench-expand-controls/pages/bom/anthropic__claude-sonnet-4.5/example-1": {
+      "plan": {
+        "initial_page": "intro",
+        "available_docs": [
+          "intro",
+          "javascript",
+          "css",
+          "html",
+          "nodejs"
+        ],
+        "navigation_features": {
+          "enable_homepage": true,
+          "enable_back": true,
+          "enable_forward": true,
+          "enable_refresh": true,
+          "disable_state_management": false
+        },
+        "history_menus": {
+          "enable_back_menu": true,
+          "enable_forward_menu": true,
+          "menu_auto_hide": true
+        },
+        "settings_panel": {
+          "enable_reading_time": true,
+          "enable_theme_switcher": true,
+          "default_theme": "dark",
+          "enable_network_indicator": true,
+          "enable_geolocation_indicator": true,
+          "enable_fullscreen": true,
+          "geolocation_target": {
+            "latitude": 30,
+            "longitude": 120
+          }
+        },
+        "cross_window": {
+          "enable_open_new_window": true,
+          "enable_close_button": true,
+          "sync_theme": true
+        },
+        "search_feature": {
+          "enable_keyword_search": true
+        },
+        "lifecycle": {
+          "enable_beforeunload_warning": true,
+          "enable_page_restoration": true,
+          "pause_timer_when_hidden": true
+        },
+        "doc_content": {
+          "intro_type": "detailed",
+          "technical_depth": "advanced"
+        }
+      },
+      "output_sha256": "130b7cf31da82863f168be0b590511a0f2e1a0d56281c1858543830cf3ac6858"
+    },
+    "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-20/version-0": {
+      "plan": {
+        "initial_page": "intro",
+        "available_docs": [
+          "intro",
+          "javascript",
+          "css",
+          "html",
+          "nodejs"
+        ],
+        "navigation_features": {
+          "enable_homepage": true,
+          "enable_back": true,
+          "enable_forward": true,
+          "enable_refresh": true,
+          "disable_state_management": false
+        },
+        "history_menus": {
+          "enable_back_menu": true,
+          "enable_forward_menu": true,
+          "menu_auto_hide": true
+        },
+        "settings_panel": {
+          "enable_reading_time": true,
+          "enable_theme_switcher": true,
+          "default_theme": "dark",
+          "enable_network_indicator": true,
+          "enable_geolocation_indicator": true,
+          "enable_fullscreen": true,
+          "geolocation_target": {
+            "latitude": 30,
+            "longitude": 120
+          }
+        },
+        "cross_window": {
+          "enable_open_new_window": true,
+          "enable_close_button": true,
+          "sync_theme": true
+        },
+        "search_feature": {
+          "enable_keyword_search": true
+        },
+        "lifecycle": {
+          "enable_beforeunload_warning": true,
+          "enable_page_restoration": true,
+          "pause_timer_when_hidden": true
+        },
+        "doc_content": {
+          "intro_type": "detailed",
+          "technical_depth": "advanced"
+        }
+      },
+      "output_sha256": "c0223d70961cadb0751fd10a84e914bd1bf420cd60cf12c3ade78e8e6f208fa3"
+    },
+    "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-1": {
+      "plan": {
+        "initial_page": "intro",
+        "available_docs": [
+          "intro",
+          "javascript",
+          "css",
+          "html",
+          "nodejs"
+        ],
+        "navigation_features": {
+          "enable_homepage": true,
+          "enable_back": true,
+          "enable_forward": true,
+          "enable_refresh": true,
+          "disable_state_management": false
+        },
+        "history_menus": {
+          "enable_back_menu": true,
+          "enable_forward_menu": true,
+          "menu_auto_hide": true
+        },
+        "settings_panel": {
+          "enable_reading_time": true,
+          "enable_theme_switcher": true,
+          "default_theme": "dark",
+          "enable_network_indicator": true,
+          "enable_geolocation_indicator": true,
+          "enable_fullscreen": true,
+          "geolocation_target": {
+            "latitude": 30,
+            "longitude": 120
+          }
+        },
+        "cross_window": {
+          "enable_open_new_window": true,
+          "enable_close_button": true,
+          "sync_theme": true
+        },
+        "search_feature": {
+          "enable_keyword_search": true
+        },
+        "lifecycle": {
+          "enable_beforeunload_warning": true,
+          "enable_page_restoration": true,
+          "pause_timer_when_hidden": true
+        },
+        "doc_content": {
+          "intro_type": "detailed",
+          "technical_depth": "advanced"
+        }
+      },
+      "output_sha256": "c0223d70961cadb0751fd10a84e914bd1bf420cd60cf12c3ade78e8e6f208fa3"
+    },
+    "artifacts/webbench-expand-frontier-2/runs/bom/openai__gpt-5/openai__gpt-5/plan/task-20/version-0": {
+      "plan": {
+        "theme": "dark",
+        "startDoc": "intro",
+        "topbarHeight": 52,
+        "enableNetwork": true,
+        "enableGeolocation": true,
+        "showReadingTime": true,
+        "allowRestorePrompt": true,
+        "geolocationTarget": {
+          "lat": 30,
+          "lon": 120
+        }
+      },
+      "output_sha256": "46df631717d37d325699e3ad3266316add1f0d2219e8f9be364547dff4eb2d67"
+    },
+    "artifacts/webbench-expand-frontier-2/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-5/plan/task-20/version-0": {
+      "plan": {
+        "table_structure": {
+          "initial_rows": 2,
+          "initial_cols": 3,
+          "cell_content_pattern": "cell_x_y"
+        },
+        "features": {
+          "context_menu": true,
+          "cell_selection": true,
+          "keyboard_navigation": true,
+          "cell_editing": true,
+          "clipboard_operations": true,
+          "row_operations": true,
+          "col_operations": true,
+          "resize_rows": true,
+          "resize_cols": true,
+          "drag_reorder_rows": true,
+          "drag_reorder_cols": true,
+          "filtering": true,
+          "sorting": true,
+          "range_selection": true,
+          "mouse_drag_select": true
+        },
+        "interaction_options": {
+          "min_row_height": 40,
+          "min_col_width": 80,
+          "enable_multiselect": true,
+          "enable_edit_on_single_click": true,
+          "enable_extend_on_paste": true
+        }
+      },
+      "output_sha256": "84120b365950787b81a8901bcbded59dfc9239bf6142889001b125e201f611d0"
+    }
+  },
+  "main_plan_categories": {
+    "passed": 26,
+    "failed_without_observed_history_witness": 212,
+    "failed_with_legal_history_witness": 2
+  },
+  "main_plan_outcomes": [
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-1",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-1/version-1",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-10",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-10/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-11",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-11/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-12",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-12/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-13",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-13/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-14",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-14/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-15",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-15/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-16",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-16/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-17",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-17/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-18",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-18/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-19",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-19/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-2",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-2/version-1",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-20",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-3",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-3/version-1",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-4",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-4/version-1",
+      "history_passed": false,
+      "category": "failed_with_legal_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-5",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-5/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-6",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-6/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-7",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-7/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-8",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-8/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-9",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-9/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-1",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-1/version-0",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-10",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-10/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-11",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-11/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-12",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-12/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-13",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-13/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-14",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-14/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-15",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-15/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-16",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-16/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-17",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-17/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-18",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-18/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-19",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-19/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-2",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-2/version-0",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-20",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-20/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-3",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-3/version-0",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-4",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-4/version-0",
+      "history_passed": false,
+      "category": "failed_with_legal_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-5",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-5/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-6",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-6/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-7",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-7/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-8",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-8/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-9",
+      "page": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-9/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-1",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-1/version-0",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-10",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-10/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-11",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-11/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-12",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-12/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-13",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-13/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-14",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-14/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-15",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-15/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-16",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-16/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-17",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-17/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-18",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-18/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-19",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-19/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-2",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-2/version-0",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-20",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-3",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-3/version-0",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-4",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-4/version-0",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-5",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-5/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-6",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-6/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-7",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-7/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-8",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-8/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-9",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-9/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-1",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-1/version-0",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-10",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-10/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-11",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-11/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-12",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-12/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-13",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-13/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-14",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-14/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-15",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-15/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-16",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-16/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-17",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-17/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-18",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-18/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-19",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-19/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-2",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-2/version-0",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-20",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-20/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-3",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-3/version-0",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-4",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-4/version-0",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-5",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-5/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-6",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-6/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-7",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-7/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-8",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-8/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-9",
+      "page": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-9/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-1",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-1/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-10",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-10/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-11",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-11/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-12",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-12/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-13",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-13/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-14",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-14/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-15",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-15/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-16",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-16/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-17",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-17/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-18",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-18/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-19",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-19/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-2",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-2/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-20",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-3",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-3/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-4",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-4/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-5",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-5/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-6",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-6/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-7",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-7/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-8",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-8/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-9",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-9/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-1",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-1/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-10",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-10/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-11",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-11/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-12",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-12/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-13",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-13/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-14",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-14/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-15",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-15/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-16",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-16/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-17",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-17/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-18",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-18/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-19",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-19/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-2",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-2/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-20",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-20/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-3",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-3/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-4",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-4/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-5",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-5/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-6",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-6/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-7",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-7/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-8",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-8/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-9",
+      "page": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-9/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-1",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-1/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-10",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-10/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-11",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-11/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-12",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-12/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-13",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-13/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-14",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-14/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-15",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-15/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-16",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-16/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-17",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-17/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-18",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-18/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-19",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-19/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-2",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-2/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-20",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-3",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-3/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-4",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-4/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-5",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-5/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-6",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-6/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-7",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-7/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-8",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-8/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-9",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-9/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-1",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/plan/task-1/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-10",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/plan/task-10/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-11",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/plan/task-11/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-12",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/plan/task-12/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-13",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/plan/task-13/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-14",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/plan/task-14/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-15",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/plan/task-15/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-16",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/plan/task-16/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-17",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/plan/task-17/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-18",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/plan/task-18/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-19",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/plan/task-19/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-2",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/plan/task-2/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-20",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/plan/task-20/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-3",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/plan/task-3/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-4",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/plan/task-4/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-5",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/plan/task-5/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-6",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/plan/task-6/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-7",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/plan/task-7/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-8",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/plan/task-8/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "calculator",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-9",
+      "page": "artifacts/webbench-expand-run/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/plan/task-9/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-1",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-1/version-1",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-10",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-10/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-11",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-11/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-12",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-12/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-13",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-13/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-14",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-14/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-15",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-15/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-16",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-16/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-17",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-17/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-18",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-18/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-19",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-19/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-2",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-2/version-1",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-20",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-3",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-3/version-1",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-4",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-4/version-1",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-5",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-5/version-1",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-6",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-6/version-1",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-7",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-7/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-8",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-8/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-9",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/mistralai__mistral-small-3.2-24b-instruct/plan/task-9/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-1",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-1/version-0",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-10",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-10/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-11",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-11/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-12",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-12/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-13",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-13/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-14",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-14/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-15",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-15/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-16",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-16/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-17",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-17/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-18",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-18/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-19",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-19/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-2",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-2/version-0",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-20",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-20/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-3",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-3/version-0",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-4",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-4/version-0",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-5",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-5/version-0",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-6",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-6/version-0",
+      "history_passed": true,
+      "category": "passed"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-7",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-7/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-8",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-8/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-9",
+      "page": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-9/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-1",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-1/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-10",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-10/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-11",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-11/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-12",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-12/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-13",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-13/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-14",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-14/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-15",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-15/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-16",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-16/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-17",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-17/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-18",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-18/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-19",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-19/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-2",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-2/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-20",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-20/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-3",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-3/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-4",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-4/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-5",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-5/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-6",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-6/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-7",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-7/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-8",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-8/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "task-9",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/mistralai__mistral-small-3.2-24b-instruct/plan/task-9/version-1",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-1",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-1/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-10",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-10/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-11",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-11/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-12",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-12/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-13",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-13/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-14",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-14/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-15",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-15/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-16",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-16/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-17",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-17/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-18",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-18/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-19",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-19/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-2",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-2/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-20",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-20/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-3",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-3/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-4",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-4/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-5",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-5/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-6",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-6/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-7",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-7/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-8",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-8/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "model": "openai/gpt-oss-120b",
+      "task": "task-9",
+      "page": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-9/version-0",
+      "history_passed": false,
+      "category": "failed_without_observed_history_witness"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "posthoc": true,
+  "image_id": "sha256:959f87213949f5daf8067a540aab8c67df111ce8e8f3ccd6ddbfe66360bc4c41",
+  "uid": 1000,
+  "gid": 1000,
+  "network_modes": [
+    "none",
+    "bridge"
+  ],
+  "program": "const {chromium}=require('/opt/replay/node_modules/playwright');\n(async()=>{const browser=await chromium.launch();const page=await browser.newPage();\nawait page.goto('data:text/html,<title>environment probe</title>');\nconsole.log(JSON.stringify({navigator_online:await page.evaluate(()=>navigator.onLine),\nchromium:browser.version(),url:page.url()}));await browser.close();\n})().catch(e=>{console.error(e);process.exit(1)});",
+  "scope": "Blank data URL only, no external navigation, no benchmark scoring. navigator.onLine is an environment hint, not proof of Internet connectivity.",
+  "observations": [
+    {
+      "network": "none",
+      "navigator_online": false,
+      "chromium": "143.0.7499.4",
+      "url": "data:text/html,<title>environment probe</title>"
+    },
+    {
+      "network": "bridge",
+      "navigator_online": true,
+      "chromium": "143.0.7499.4",
+      "url": "data:text/html,<title>environment probe</title>"
+    }
+  ],
+  "benchmark_pages_reexecuted": 0
+}

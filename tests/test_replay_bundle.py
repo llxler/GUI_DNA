@@ -87,3 +87,42 @@ def test_redaction_preserves_regex_literals_and_exported_utility(tmp_path):
     assert not namespace['has_identity'](b'/home/anonymous/cache')
     assert has_identity(sample_home.encode())
     assert not has_identity(b"re.compile(r'/home/[A-Za-z_][A-Za-z0-9_.-]*')")
+
+
+def test_nov15_snapshot_includes_frozen_shared_pages_and_excludes_account_metadata(tmp_path, monkeypatch):
+    from test import export_replay_bundle as exporter
+    stage=tmp_path/'artifacts/history-replay-20261115'
+    page=tmp_path/'artifacts/old-stage/page'
+    page.mkdir(parents=True);stage.mkdir(parents=True)
+    content='saved shared source'
+    (page/'unusual.payload').write_text(content)
+    (stage/'inputs.json').write_text(json.dumps({'jobs':{'key':{'page':str(page.relative_to(tmp_path)),
+        'files':{'unusual.payload':hashlib.sha256(content.encode()).hexdigest()}}}}))
+    review=tmp_path/'artifacts/review-20261115';review.mkdir()
+    (review/'credits-initial.json').write_text('{"account_remaining": 99}')
+    (review/'budget-plan.json').write_text('{}')
+    preview=review/'paper-preview';preview.mkdir();(preview/'page-1.png').write_bytes(b'paper draft')
+    monkeypatch.setattr(exporter,'ROOT',tmp_path)
+    monkeypatch.setattr(exporter.subprocess,'check_output',lambda *args,**kwargs:b'')
+    assert stage/'inputs.json' not in exporter.selected_files(expanded=True,library_repair=True,nov14=True)
+    selected=exporter.selected_files(expanded=True,library_repair=True,nov14=True,nov15=True)
+    assert page/'unusual.payload' in selected
+    assert review/'budget-plan.json' in selected and review/'credits-initial.json' not in selected
+    assert preview/'page-1.png' not in selected
+
+
+def test_shared_replay_source_requires_matching_hash_and_artifact_boundary(tmp_path,monkeypatch):
+    import pytest
+    from test import export_replay_bundle as exporter
+    stage=tmp_path/'artifacts/history-replay-20261115';stage.mkdir(parents=True)
+    page=tmp_path/'outside';page.mkdir();(page/'source').write_text('data')
+    job={'page':str(page.relative_to(tmp_path)),'files':{'source':hashlib.sha256(b'data').hexdigest()}}
+    (stage/'inputs.json').write_text(json.dumps({'jobs':{'key':job}}))
+    monkeypatch.setattr(exporter,'ROOT',tmp_path)
+    with pytest.raises(ValueError,match='Unsafe replay'):
+        exporter.candidate_source_files(stage,allow_shared_artifacts=True)
+    page=tmp_path/'artifacts/old';page.mkdir();(page/'source').write_text('changed')
+    job['page']=str(page.relative_to(tmp_path))
+    (stage/'inputs.json').write_text(json.dumps({'jobs':{'key':job}}))
+    with pytest.raises(ValueError,match='differs'):
+        exporter.candidate_source_files(stage,allow_shared_artifacts=True)

@@ -27,6 +27,12 @@ NOV14_NAMES = {'library-repair-resume-20261114', 'library-repair-full-20261114',
                'library-repair-entrypoint-20261114',
                'library-toggle-control-20261114', 'prefix-history-audit-20261114',
                'prefix-factorial-20261114', 'prefix-factorial-v2-20261114', 'review-20261114'}
+NOV15_NAMES = {'history-replay-20261115', 'interaction-transfer-sources-20261115',
+               'finite-schema-audit-20261115', 'container-replay-20261115-uid', 'container-network-probe-20261115',
+               'interaction-transfer-calibration-20261115', 'interaction-transfer-build-20261115',
+               'interaction-transfer-run-20261115', 'interaction-transfer-controls-20261115', 'review-20261115',
+               'interaction-union-20261115', 'development-feedback-20261115', 'container-replay-20261115',
+               'history-tasks-only-20261115', 'linked-control', 'compact-pair'}
 SKIP_PARTS = {'node_modules', '.git', '__pycache__', '.pytest_cache', 'playwright-output', 'test-results', 'playwright-report'}
 AUTHOR_NAMES = ('lxler', 'llxler')
 HOME_IDENTITY = re.compile(rb'/home/(?!anonymous)[A-Za-z_][A-Za-z0-9_.-]*')
@@ -81,7 +87,7 @@ def walk_files(root):
                 yield path
 
 
-def candidate_source_files(stage):
+def candidate_source_files(stage, allow_shared_artifacts=False):
     """Preserve every generated source file, even with an uncommon extension."""
     result = set()
     for manifest in stage.rglob('source-manifest.json'):
@@ -101,30 +107,54 @@ def candidate_source_files(stage):
             continue
         for job in json.loads(index.read_text()).get('jobs', {}).values():
             page = ROOT / job['page']
-            if not page.resolve().is_relative_to(stage.resolve()) or page.is_symlink():
+            if page.is_symlink():
                 raise ValueError('Unsafe replay page path')
-            result.update(walk_files(page))
+            if page.resolve().is_relative_to(stage.resolve()):
+                result.update(walk_files(page))
+            elif allow_shared_artifacts and page.resolve().is_relative_to((ROOT / 'artifacts').resolve()):
+                mapping = job.get('files_sha256', job.get('files'))
+                if not isinstance(mapping, dict) or not mapping:
+                    raise ValueError('Shared source requires an explicit frozen file map')
+                for name, expected_sha in mapping.items():
+                    source = page / name
+                    if source.is_symlink() or not source.resolve().is_relative_to(page.resolve()):
+                        raise ValueError('Unsafe shared source path')
+                    if hashlib.sha256(source.read_bytes()).hexdigest() != expected_sha:
+                        raise ValueError('Shared source differs from frozen manifest')
+                    result.add(source)
+            else:
+                raise ValueError('Unsafe replay page path')
     return result
 
 
-def selected_files(expanded=False, library_repair=False, nov14=False):
+def selected_files(expanded=False, library_repair=False, nov14=False, nov15=False):
     names = subprocess.check_output(['git', 'ls-files', '-z', '--cached', '--others', '--exclude-standard'], cwd=ROOT).decode().split('\0')
     chosen = {ROOT / n for n in names if n and (n in ALLOWED_FILES or (Path(n).parts[0] in ALLOWED_ROOTS and Path(n).suffix in TEXT))}
     prefixes = RAW_PREFIXES + (('webbench-expand', 'heldout-composition') if expanded else ())
     for stage in (ROOT / 'artifacts').iterdir():
+        if stage.name in NOV15_NAMES and not nov15:
+            continue
         if stage.name in NOV14_NAMES and not nov14:
             continue
-        if not stage.is_dir() or not (stage.name in RAW_NAMES or stage.name.startswith(prefixes) or (nov14 and stage.name in NOV14_NAMES)):
+        if not stage.is_dir() or not (stage.name in RAW_NAMES or stage.name.startswith(prefixes) or (nov14 and stage.name in NOV14_NAMES) or (nov15 and stage.name in NOV15_NAMES)):
             continue
         if stage.name.startswith('library-repair-') and not library_repair:
             continue
         for path in walk_files(stage):
             if path.suffix in TEXT | {'.sqlite3', '.png', '.jpg'}:
                 chosen.add(path)
-        if expanded and (stage.name.startswith(('webbench-expand', 'heldout-composition', 'library-repair-')) or (nov14 and stage.name in NOV14_NAMES)):
-            chosen.update(candidate_source_files(stage))
+        if expanded and (stage.name.startswith(('webbench-expand', 'heldout-composition', 'library-repair-')) or (nov14 and stage.name in NOV14_NAMES) or (nov15 and stage.name in NOV15_NAMES)):
+            chosen.update(candidate_source_files(stage, allow_shared_artifacts=nov15 and stage.name in NOV15_NAMES))
+        if nov15 and stage.name in ('container-replay-20261115', 'container-replay-20261115-uid'):
+            chosen.update(walk_files(stage / 'inputs/pages'))
+            dockerfile = stage / 'context/Dockerfile'
+            if dockerfile.exists(): chosen.add(dockerfile)
     if (ROOT / 'artifacts/budget.sqlite3').exists():
         chosen.add(ROOT / 'artifacts/budget.sqlite3')
+    if nov15:
+        # Only the probe ledger is needed for the original-study cost subtotal;
+        # its large unrelated npm checkout is not part of this addition.
+        chosen.add(ROOT / 'artifacts/benchmark-probe/budget.sqlite3')
     # List-16 reconstructs atoms from this standalone historical library.
     for name in ('library-live.json', 'library-offline.json', 'library-learning-history.json'):
         path = ROOT / 'artifacts' / name
@@ -140,10 +170,12 @@ def selected_files(expanded=False, library_repair=False, nov14=False):
     generated_reports = {'replay-bundle.json', 'replay-validation.json', 'replay-bundle-expanded.json', 'replay-validation-expanded.json',
                          'replay-bundle-20261113.json', 'replay-validation-20261113.json',
                          'replay-bundle-20261113-final.json', 'replay-validation-20261113-final.json',
-                         'replay-bundle-20261114.json', 'replay-validation-20261114.json'}
+                         'replay-bundle-20261114.json', 'replay-validation-20261114.json',
+                         'replay-bundle-20261115.json', 'replay-validation-20261115.json'}
     return sorted(p for p in chosen if p.is_file() and not p.is_symlink() and p.name not in generated_reports
-                  and not (p.parent.name == 'review-20261114' and p.name == 'HANDOFF.md')
-                  and not (p.parent.name == 'review-20261112' and p.name.startswith('credits')))
+                  and not (p.parent.name.startswith('review-') and p.name == 'HANDOFF.md')
+                  and not (p.parent.name.startswith('review-') and p.name.startswith('credits'))
+                  and not (p.parent.name == 'paper-preview' and p.parent.parent.name.startswith('review-')))
 
 
 def sanitize_ledger(source, target):
@@ -170,6 +202,7 @@ def main():
     parser.add_argument('--expanded', action='store_true', help='Include the three-project and heldout-composition extensions')
     parser.add_argument('--library-repair', action='store_true', help='Include the completed availability diagnostic and interrupted generation (requires --expanded)')
     parser.add_argument('--nov14', action='store_true', help='Include completed repair continuation, Boolean controls and matched-prefix factorial')
+    parser.add_argument('--nov15', action='store_true', help='Include historical full-prefix replay and development-only interaction transfer')
     args = parser.parse_args()
     args.out = args.out.resolve()
     args.report = args.report.resolve()
@@ -211,12 +244,51 @@ def main():
         daily = json.loads((ROOT / 'test/results/review-20261114-costs.json').read_text())
         if any(stage['stop_usd'] != 0 for stage in daily['stages'].values()):
             raise ValueError('Close all November 14 generation stages before export')
-    paths = selected_files(args.expanded, args.library_repair, args.nov14)
+    if args.nov15:
+        if not args.nov14:
+            raise ValueError('--nov15 requires --nov14, --library-repair and --expanded')
+        for name in ('history-replay-20261115', 'interaction-transfer-run-20261115',
+                     'interaction-union-20261115', 'development-feedback-20261115'):
+            if not (ROOT / 'artifacts' / name / 'evaluation-complete.json').exists():
+                raise ValueError(f'{name}: complete scoring before export')
+        if not (ROOT / 'test/results/nov15-replay.json').exists():
+            raise ValueError('Run test.replay_nov15 before export')
+        daily = json.loads((ROOT / 'test/results/review-20261115-costs.json').read_text())
+        from test.authorized_costs import summarize as authorized_costs
+        if daily != authorized_costs('20261115'):
+            raise ValueError('Refresh November 15 cost snapshot before export')
+        if any(stage['stop_usd'] != 0 for stage in daily['stages'].values()):
+            raise ValueError('Close November 15 paid stages before export')
+        container = ROOT / 'artifacts/container-replay-20261115'
+        if container.exists() and not (ROOT / 'test/results/container-replay.json').exists():
+            raise ValueError('Analyze the completed container observations before export')
+        if container.exists():
+            observed = json.loads((ROOT / 'test/results/container-replay.json').read_text())
+            stage_name = observed.get('stage', 'artifacts/container-replay-20261115')
+            allowed = {'artifacts/container-replay-20261115', 'artifacts/container-replay-20261115-uid'}
+            if stage_name not in allowed or not (ROOT / stage_name / 'outputs/complete.json').exists():
+                raise ValueError('Complete the explicitly identified container stage before export')
+            if stage_name.endswith('-uid'):
+                recovery = json.loads((ROOT / stage_name / 'recovery.json').read_text())
+                assert recovery['parent'] == 'artifacts/container-replay-20261115' and recovery['original_pages_scored'] == 0
+                assert not list((container / 'outputs').iterdir()), 'Original infrastructure failure must precede all page observations'
+                assert (ROOT / stage_name / 'inputs/inputs.json').read_bytes() == (container / 'inputs/inputs.json').read_bytes()
+        task_history = ROOT / 'artifacts/history-tasks-only-20261115'
+        if task_history.exists() and not (task_history / 'evaluation-complete.json').exists():
+            raise ValueError('Complete the separately frozen task-file history diagnostic before export')
+        if task_history.exists() and not (ROOT / 'test/results/history-tasks-only.json').exists():
+            raise ValueError('Analyze task-file history evidence before export')
+        finite_schema = ROOT / 'artifacts/finite-schema-audit-20261115'
+        if finite_schema.exists() and not (finite_schema / 'evaluation-complete.json').exists():
+            raise ValueError('Complete the finite-schema audit before export')
+        if finite_schema.exists() and not (ROOT / 'test/results/finite-schema-audit.json').exists():
+            raise ValueError('Analyze the finite-schema audit before export')
+    paths = selected_files(args.expanded, args.library_repair, args.nov14, args.nov15)
     source_paths = set()
     if args.expanded:
         for stage in (ROOT / 'artifacts').iterdir():
-            if stage.is_dir() and (stage.name.startswith(('webbench-expand', 'heldout-composition') + (('library-repair-',) if args.library_repair else ())) or (args.nov14 and stage.name in NOV14_NAMES)):
-                source_paths.update(candidate_source_files(stage))
+            if stage.is_dir() and (stage.name.startswith(('webbench-expand', 'heldout-composition') + (('library-repair-',) if args.library_repair else ())) or (args.nov14 and stage.name in NOV14_NAMES) or (args.nov15 and stage.name in NOV15_NAMES)):
+                source_paths.update(candidate_source_files(stage, allow_shared_artifacts=args.nov15 and stage.name in NOV15_NAMES))
     call_ids = set()
     for path in paths:
         if path.suffix == '.sqlite3':
@@ -332,6 +404,29 @@ and is not uniform over the entire schema. Historical byte hashes are remapped
 by this export: use REPLAY-MANIFEST.json on the anonymous copy. API fees include
 abandoned development calls; no generation should be resumed from this bundle.
 '''
+        if args.nov15:
+            generated['REPLAY.md'] += '''
+The November 15 snapshot adds same-page full-history Web-Bench checks and a
+separate two-application interaction-transfer diagnostic grounded in public
+specifications. Recompute the stored reports, controls and dated costs with:
+  python -m test.replay_nov15
+The initial legacy-rule/positive-reference labeling error and its pre-candidate
+correction are retained. The new synthetic trajectories are not official
+TodoMVC, js-framework-benchmark or Web-Bench scores. This reconstruction does
+not rerun all browser trajectories or establish cross-machine reproducibility.
+The exploratory Boolean-union control and construction-scale no-library public
+feedback baseline remain separate from the originally frozen comparisons.
+The posthoc task-file history diagnostic retains the original initialization-
+plus-history endpoint and separately completes previously censored task files.
+This snapshot also carries read-only reconstructions of the two historical pilot
+tables, explicit original-study cost subtotal, and additional appendix columns.
+The posthoc finite-schema audit enumerates all 1,215 semantic configurations of
+one calculator library, including omitted optional fields, and tests its official
+initial-file necessary condition. It is not an impossibility claim about other
+libraries or about the original current-task endpoint.
+If included, container observations use an isolated userspace and browser image,
+but share the host kernel; the Docker image itself is not included in this zip.
+'''
         for name, text in generated.items():
             content = text.encode()
             archive.writestr(name, content)
@@ -343,6 +438,7 @@ abandoned development calls; no generation should be resumed from this bundle.
     result['expanded'] = args.expanded
     result['library_repair'] = args.library_repair
     result['nov14'] = args.nov14
+    result['nov15'] = args.nov15
     output = args.report
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(result, indent=2) + '\n')

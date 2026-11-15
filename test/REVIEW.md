@@ -179,3 +179,55 @@ uv run python -m test.validate_replay_bundle --expanded --library-repair --nov14
 本次最终账本已全部stop=0，新增结算与敞口均$1.323246。129个布尔配置没有新增见证（仍53/120）；160候选中43个当前/历史端点不同，均为当前通过而历史失败。原主表仍是原协议的当前文件口径，新增完整历史结果独立列第24节；更多旧页面复验见TODO R13。
 
 交付验证：`test/results/replay-validation-20261114.json`核对正式包150130个文件、十个独立重算入口及五页旧table机制浏览器检查，全部通过。48份匿名账本保留费用与策略；浏览器共享本机OS、缓存和系统库。正式包未上传；`anonymous-replay-20261114-interrupted-1.zip`是不完整导出，保留记录但不能使用。论文正文8页/全文43页，仍仅本地。
+
+## 2026-11-15：完整历史、交错轨迹与强控制
+
+- [history_replay/README.md](history_replay/README.md)：固定原dom1主七模型、两项目/三项目自建库及GPT-5小试，1640候选/规则页的首次/最终，加730固定控制；4010端点、1650去重浏览器工作。旧当前文件分数和新同页完整历史分开，原页面不变。正参考误标及评分前修正见其REFERENCE.md。
+- [interaction_transfer/README.md](interaction_transfer/README.md)：两个公开规格来源的独立合成诊断；8开发集建库、36候选、56控制。所有生成先于隐藏评分；源码/测试/公开输入和依赖已冻结。首次version-0口径和12条相关轨迹在协议中单列。
+- [interaction_union/README.md](interaction_union/README.md)：观察原严格合并错误后提出的通用布尔OR，7/8库全过，7报告按完整源文件/项目/轨迹精确复用，非布尔冲突保留。不能回填成原预定控制。
+- [development_feedback/PROTOCOL.md](development_feedback/PROTOCOL.md)：观察反馈不对称后，固定4个无库完整页、两原建库模型、20000-token×最多3响应与公开开发反馈；结果独立报告，不称纯反馈因子或工具代理。目录在review-manifest和评分快照中冻结，含只读analyze实现；新改进必须另立文件/阶段。
+
+```bash
+# 只读复算；生成/评分已完成后不要再prepare或run旧阶段。
+uv run python -m test.history_replay.analyze
+uv run python -m test.history_replay.diagnostics
+uv run python -m test.history_replay.witnesses
+uv run python -m test.interaction_transfer.analyze
+uv run python -m test.interaction_union.analyze
+uv run python -m test.development_feedback.analyze
+uv run python -m test.authorized_costs --date 20261115
+uv run python -m test.replay_nov15
+uv run python -m test.nov15_report --write-docs
+
+# 仅重新导出论文图的矢量文字，不更改已保存截图和评分。
+uv run --with matplotlib --with pymupdf --with cairosvg python -m test.paper_asset_fonts
+
+# 新匿名快照；旧包保留，未上传。
+uv run python -m test.export_replay_bundle --expanded --library-repair --nov14 --nov15 --out artifacts/anonymous-replay-20261115.zip --report test/results/replay-bundle-20261115.json
+uv run python -m test.validate_replay_bundle --expanded --library-repair --nov14 --nov15 --archive artifacts/anonymous-replay-20261115.zip --report test/results/replay-validation-20261115.json
+```
+
+今天授权最多4小时、新增API≤$20；每日计划`artifacts/review-20261115/budget-plan.json`，统计入口只读账本。原第三轮始终暂停。生成阶段关闭后不放宽账本，不将旧未知费用当零；论文和原始复验包仅本地，Git只包含代码、说明和派生结果。
+
+第25节复验已全部结束：原dom1方案57/140、同库代码40/140完整历史过；三项目方案26/240、代码27/240。六库120配对的完整历史合法见证为14，不替换第20节当前文件口径53；正见证从冻结包重新编译逐字核对。214个主方案历史失败中2个有合法替代见证，212个未知。原当前成绩不改，未知不等于不可达。
+
+逐表范围索引：`uv run python -m test.paper_replay_coverage`读取本地忽略的论文及其input文件，登记所有正文/附录表（含无label表），输出`test/results/paper-table-coverage.{json,md}`。索引只说明来源复算覆盖，不能当成所有TeX数字已经逐格比较。原工作区冻结字节审计用`uv run python -m test.replay_nov15 --source-integrity`；匿名重写副本使用自己的`REPLAY-MANIFEST.json`，不得运行原字节审计冒充一致。
+
+补充task历史诊断见[history_tasks_only/README.md](history_tasks_only/README.md)：事后只排独立init文件，原4010端点中1311份报告已有决定性task证据，339份补跑；三项目方案41/240对同库42/240，原dom1方案57/140不变。完整历史主指标仍包含init。`uv run python -m test.history_tasks_only.analyze`只读重算，已接入`test.replay_nov15`。
+
+`uv run python -m test.replay_table_details`独立重算原论文明确阶段集合的$14.36小计（后续review不混入）、三项目库规模/尝试数和预定敏感性表、第一套合成实验的采用响应token用量；也接入第11个独立复算入口。它仍不代表所有旧表单元格及浏览器环境均已核对。
+
+`uv run python -m test.replay_pilot_tables`核对两轮旧试验及事后连接器：128个第一轮候选、264个第二轮候选、48个旧输出重放，478份原始逐用例评价文件；第一轮表中的生成费用通过请求ID与只读主账本匹配。不会运行旧的可写账本汇总器，不恢复第三轮，也不冒充重新运行全部旧浏览器。该检查一并接入`test.replay_nov15`，所需旧`linked-control`/`compact-pair`原始目录纳入当天最终匿名快照。
+
+`uv run python -m test.replay_review_tables`补核对命名干预、固定槽位建库、旧两项目固定控制及编译器格式放宽。前两者从候选记录和保存的隐藏分数复算，固定控制另外核对320份原始Playwright报告；TodoMVC使用相同原始16响应的live备份与放宽后结果，Gemma未列入早期严格汇总，其来源明确为live备份。Duo的Qwen判定另对照原始Jest报告。表外槽位一致率、全部条件费用及重新安装历史Jest环境不在此检查范围；已接入`test.replay_nov15`。
+
+`replay_table_details`还核对List-16所有尝试的请求ID/只读费用和原始响应token，以及原Web-Bench六阶段费用、响应/拒绝数和顺序分数。顺序分数是“遇连续两次当前文件失败即停”的旧指标，不能与同一页面完整历史混用；费用保留传输开销，不改变旧未知预留。
+
+
+有限模式审计见[finite_schema_audit/README.md](finite_schema_audit/README.md)：原calculator/GPT-5的全部1215配置（含可选字段省略）、128不同源码、130新浏览器报告；全部在官方init的除零行为失败。原库/测试不改，事后单库选择明确，不外推其他五库或原当前文件任务。`test.finite_schema_audit.analyze`重算；`test.replay_nov15`还逐个重新编译1215配置核对完整输出哈希。冻结清单含评分前的依赖补充快照。
+
+
+最终容器复验使用[container_replay_uid/README.md](container_replay_uid/README.md)：原默认root/no-capability启动在写输出时失败，0页评分；恢复阶段保持同镜像/19页/断言，仅匹配输出所有者UID/GID。18/19判定一致（实际4页通过），唯一差异为BOM参考task-17默认在线判据。空白data-URL网络探针证明none/bridge模式的navigator.onLine分别false/true，不重跑基准、不回填19页结果。环境为Ubuntu24.04.3/Node24.11.1/PW1.57/Chromium1200，未挂宿主缓存，仍共享内核；它与匿名包独立解包统计复算是两项验证，详见结果第28节。`test.container_network_probe`只用于最初冻结执行，已有产物不得覆盖；只读复算统一用`test.replay_nov15`。
+
+
+**2026-11-15实际收尾状态**：墙钟超出4h要求后停止新增实验/归档；上文正式20261115导出/验证命令尚未执行完成，没有对应最终zip和正式报告。core/precontainer各11入口通过但内容较早；finite中间包保留校验失败，修复overlay已通过。下一次按这些命令创建新正式包并验证，不能将中间结果当最终验收。当前本地原始结果、15份冻结快照、104全套测试及后续9项定向检查已通过，论文正文8/总51页。

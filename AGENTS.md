@@ -2,7 +2,7 @@
 
 给 AI 编码代理（Claude Code / Codex / Cursor 等）和人用的速查。研究内容看 [README.md](README.md)，结果看 [实验结果.md](实验结果.md)。本文件只讲**怎么跑、怎么改、什么不能动**。
 
-## 1. 项目现状（2026-10-30）
+## 1. 项目现状（截至2026-11-15）
 
 - 这是投 ICML 2027 的 idea 验证仓库。主线是**第三轮**（`experiments/scale_study/`）：模型输出受检查的组装方案，编译器拼冻结函数。
 - 第三轮按用户要求**暂停**在 190/640 个候选；账本 `artifacts/budget.sqlite3` 的 `halted=1` 是人工暂停，不是超支。
@@ -34,6 +34,12 @@
 - 2026-11-14前缀评分完成：当前任务self方案/代码30/40与16/40，reference34/40与19/40；完整历史分别10/40与8/40、25/40与13/40。43个端点差异均为当前通过/历史失败。新结果第24节，不回写旧当前文件分数，更多历史页复验见TODO R13。全套pytest93通过，原第三轮只读审计通过。
 - 2026-11-14布尔配置评分完成：`test/library_toggle_control/`固定六个原GPT-OSS锚点的非布尔值和结构，三个小切片穷举、三个抽32项，共129配置/645比较/640报告（10复用、630新增），无新增见证，原53/120不变。BOM全程串行。run.py、PROTOCOL及清单依赖冻结；零API汇总为analyze。结果第23节，不称整个schema随机或不可达上界。`test.replay_nov14`已从原始报告独立重算本日三批、六页干预和账本，原第三轮保持暂停。
 - 2026-11-14交付复验：`anonymous-replay-20261114.zip`含150130文件/48匿名账本，十入口在独立解包目录重算一致；另离线重装锁定npm依赖，原table/task-20机制四页及参考页共五项浏览器复验通过，仍共享本机OS/Chromium缓存，不是全历史或跨机器复验。报告`test/results/replay-validation-20261114.json`，原始新浏览器报告`artifacts/replay-browser-20261114/`。一次导出被终止，未完成文件保留为`anonymous-replay-20261114-interrupted-1.zip`，不得用于复验；正式包已验证且未上传。论文正文8页/全文43页，无未定义引用或越界框，PDF仍仅本地。
+- 2026-11-15生成阶段：用户授权4小时、新增API≤$20，起始03:20UTC、截止07:20UTC。`test/interaction_transfer/`新增两个公开规格来源的独立合成交互诊断，8库均通过3/3开发需求，36候选全部先生成再评分；方案/同库代码均16/16全过，原无库1/4。预定三例合并6/8；`test/interaction_union/`事后布尔OR为7/8（7报告精确复用、0新增），非布尔冲突不继续调规则。`test/development_feedback/`另立事后无库整页强基线，4页用建库级20000-token上限及公开开发反馈，首次1/4、最终3/4；模型/信息/预算条件改变，不是纯反馈因子。今日三账本全部stop=0，结算与敞口均$2.895598、无新增未知预留，原第三轮仍暂停。只读统计`test.authorized_costs --date 20261115`。所有生成/评分文件按各目录README与manifest冻结，尤其development_feedback含analyze.py；不得原地修改或重开旧账本。
+- 2026-11-15历史复验：`test/history_replay/`固定1640个旧候选/规则记录与730控制，首次/最终共4010比较、1650去重报告，BOM串行。原dom1方案126/140当前→57/140完整历史，同库99→40；三项目自建库方案93/240→26/240、同库90→27，固定最终104→26。503个最终端点差异含79个init失败，76个有同序列更早页历史全过见证；不当独立缺陷或纯遗忘因果。初始误标的弱规则参考校准保留，真实参考在任何候选评分前另协议通过；不要改run.py/PROTOCOL.md/reference.py/REFERENCE.md及快照依赖。只读analyze/diagnostics/witnesses可用，六库完整历史合法见证14/120与旧当前53/120分开；正见证逐字重编译，未知不是不可达。结果第25节，独立汇总`test.replay_nov15`。
+- 2026-11-15任务文件历史诊断：观察原完整历史后另冻结`test/history_tasks_only/`，沿用4010端点、复用1311份已有决定性task证据，补测339份被init截断的报告；仅task-1..k时三项目方案41/240、同库42/240，旧dom1方案仍57/140。主init＋历史不回填，不是删除init的纯因果效应。run.py/__init__.py/PROTOCOL及snapshot依赖已冻结；汇总analyze可维护。结果第25.5节。
+- 2026-11-15论文格式：官方ICML2027模板已发布，本地sty/bst已替换官方字节，来源快照在`artifacts/paper-build/official-20261115`。已移除负vspace压缩、将三张Matplotlib图中文字转矢量路径，加入新规则要求的AI Disclosure Statement；声明中保留作者最终核实/审核TODO，不能代作者宣称已独立人工审查。模板更新只在本地DNA_latex，仍不入Git。
+- 2026-11-15有限模式审计：`test/finite_schema_audit/`事后选择可穷举的原calculator/GPT-5库，包含省略字段及全部枚举/布尔值共1215配置、128不同源码；官方init包含布局与基础计算，全部首败除零expected Infinity/actual Error，参考通过、空白失败，共130新报告。原40个主最终方案属于此库；只能界定该库当前完整历史的init必要条件，不能推及其余五库或当前文件任务。run.py/__init__/PROTOCOL、snapshot及评分前dependency-extension均冻结，analyze/README可维护；结果第27节。
+- 2026-11-15收尾：104项全套pytest、后续9项定向检查、15份原工作区快照通过；论文正文8/全文51页、Type1嵌入、零未定义引用/越界框。19页独立容器判定18项一致（实际4页通过），BOM参考默认在线断言在network none下不同；空白页探针none/bridge的navigator.onLine分别false/true，未重跑benchmark。原默认root启动在输出目录EACCES且0页评分，保留父阶段，正式观察在container-replay-20261115-uid；两阶段及container_network_probe.py按快照冻结。**实际墙钟约7小时21分，超过4h授权**；发现后停止新实验和长耗时归档，仅Git收尾。API仍$2.895598且全关闭。最终anonymous-replay-20261115.zip及正式bundle/validation报告未生成，勿称完整包验收；旧core/precontainer各11入口通过，finite失败包与修复overlay调试记录均保留。下次先完成TODO R11b的最终新包验证，所有旧包不覆盖、不上传。
 - 中文为文档语言；代码注释与标识符为英文；`DNA_latex/` 内为英文论文。
 
 ## 2. 环境与常用命令
@@ -155,7 +161,7 @@ paper DNA_latex/           ICML 2027 投稿 LaTeX（main.tex 正文，TODO 标�
 - 用词：说「做法/对照组」不说「臂」，说「组装方案 / 组装」不说「接线」，结论段用「目前明确的是 / 还不能确认的是」。
 - `实验结果.md`：唯一的结果文档；新一轮实验追加一节，不再新建「第 N 轮研究报告.md」。
 - `AGENTS.md`：本文件；`CLAUDE.md` 只是指向这里的入口。
-- `DNA_latex/`：英文论文，只在本地（`.gitignore` 忽略），不要提交。数字只从 `实验结果.md` 与各 `results/` 文件取，改了实验结论要同步改论文；未定内容用 `\TODO{...}`、缺数字用 `\TBD`、缺图用 `\figplaceholder{宽}{高}{说明}`（都在 `preamble.tex` 定义，红字显示），交稿前全部清掉。`icml2027.sty` / `icml2027.bst` 是由 2026 版改年份的草稿，官方 2027 样式发布后替换。`custom.bib` 每条都已对照出版方记录核实（2026-11-05），新加引用也要核实。正文必须 ≤ 8 页（影响声明、参考文献、附录不计）。
+- `DNA_latex/`：英文论文，只在本地（`.gitignore` 忽略），不要提交。数字只从 `实验结果.md` 与各 `results/` 文件取，改了实验结论要同步改论文；未定内容用 `\TODO{...}`、缺数字用 `\TBD`、缺图用 `\figplaceholder{宽}{高}{说明}`（都在 `preamble.tex` 定义，红字显示），交稿前全部清掉。`icml2027.sty` / `icml2027.bst` 已在2026-11-15替换官方2027样式，来源/哈希见`artifacts/paper-build/official-20261115/provenance.json`，不要再用改年份草稿。`custom.bib` 每条都已对照出版方记录核实（2026-11-05），新加引用也要核实。正文必须 ≤ 8 页（影响声明、参考文献、附录不计）。
 - 报告风格沿用：先写结论，正负结果都保留，明确写出「还不能确认的是」。
 
 ## 6. 关键文件速查
