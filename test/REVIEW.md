@@ -262,3 +262,19 @@ uv run python -m test.validate_replay_bundle --expanded --library-repair --nov14
 本轮两处续作都保留独立目录：[GPT-5预算断点续补](matched_feedback_continue/README.md)只补缺失请求；[BOM校准例外](schema_search_continue/README.md)保留空白页通过task-20的原报告，并在完整历史负对照失败后续评原冻结配置。后者不修改官方断言，BOM当前通过不能单独证明目标功能正确；原五库入口的BOM完成标记不会被伪造。统计与匿名导出会联合原阶段和续作阶段。
 
 最终交付以`anonymous-replay-20261116-final-2.zip`及对应`replay-validation-20261116-final-2.json`为准：168,095清单文件、55账本、12入口全部一致。最初包的复验超时、第二包应用JSON被重新缩进的失败报告均保留；源码哈希检查没有放宽。全套118项测试通过；纸面数值核对限定于9表198个指定单元格，不代表全文或全部浏览器复现。
+
+
+## 2026-11-16 公开基准稿的编辑核对
+
+用户《论文问题.pdf》限定论文采用公开数据集结果。本次只改本地论文、对应TODO及核对工具：不调用模型、不改冻结源码/成绩、不重打匿名包。自建研究保留在历史材料，当前PDF不含其正文或附录；Web-Bench上的模型建库实验仍属公开任务评估。旧包仍是此前实验快照，不包含本次编辑检查工具，原验证结果不回写。
+
+```bash
+uv run python -m test.paper_public_review
+uv run python -m test.paper_cells --report test/results/paper-cell-audit-public-20261116.json
+uv run python -m test.paper_replay_coverage --cell-audit test/results/paper-cell-audit-public-20261116.json --report test/results/paper-table-coverage-public-20261116.json
+uv run --with pymupdf python -m test.paper_format --report test/results/paper-format-public-20261116.json
+```
+
+`paper_cells`现在按`main.tex`实际input树选择表格，不把本地仍存在但未使用的旧表列为当前稿验证。公开套件费用小计从原明确账本行重算为$11.945801，显示$11.95；原全阶段$14.358198及其报告保持不变。`paper_public_review`检查移出研究的引用、保留在文字中的0/45与0/158、真实TodoMVC计划/诊断及原提示词listing字节；它不重跑基准浏览器，也不等于全文或独立人工审核。当前数字验收为7表147指定单元格/240个数值，36表均登记来源；其余内容仍保留审核范围说明。
+
+当前本地论文输入使用`prompts_public.tex`、`nov15_history.tex`和`public_feedback_audits.tex`，完整历史生成稿仍留在本地。不要将旧`heldout_study`/`nov15_study`直接重新接入论文。`test.nov16_report`会覆盖《实验结果》第29节以后的文字，重跑前必须保护第31节人工交付补充与第32节编辑记录。

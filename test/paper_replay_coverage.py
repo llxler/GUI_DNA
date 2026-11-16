@@ -6,6 +6,7 @@ the local ignored manuscript; the generated index can accompany a source bundle.
 from __future__ import annotations
 
 from collections import Counter
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -138,6 +139,10 @@ def unlabeled(row):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--report', type=Path, default=ROOT / 'test/results/paper-table-coverage.json')
+    parser.add_argument('--cell-audit', type=Path, default=ROOT / 'test/results/paper-cell-audit.json')
+    args = parser.parse_args()
     sources, rows = table_inventory()
     mapped = mapping()
     for row in rows:
@@ -162,13 +167,14 @@ def main():
     result = dict(scope='Table-to-source coverage inventory only; not independent numerical verification of every LaTeX cell. The local manuscript is intentionally excluded from Git and anonymous source bundles.',
                   manuscript_sources_sha256=sources, table_count=len(rows),
                   source_coverage_counts=dict(Counter(r['source_coverage'] for r in rows)), rows=rows)
-    audit_path = ROOT / 'test/results/paper-cell-audit.json'
+    audit_path = args.cell_audit.resolve()
     if audit_path.exists():
         audit = json.loads(audit_path.read_text())
         assert all(hashlib.sha256((ROOT / p).read_bytes()).hexdigest() == value for p,value in audit['manuscript_sources_sha256'].items()), 'Refresh literal cell audit after paper edits'
         result['separate_literal_cell_audit'] = {'report': str(audit_path.relative_to(ROOT)),
             'checked_cells': audit['checked_cells'], 'tables': audit['tables'], 'scope': audit['scope']}
-    path = ROOT / 'test/results/paper-table-coverage.json'
+    path = args.report
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
     lines = ['# 论文逐表复验范围', '', '这是来源对应表，不是所有LaTeX单元格均已验证的证明。`recomputed_sources`只表示相关来源在现有独立入口中重算；`partial`保留未覆盖列；`not_recomputed`明确列出缺口。全文及附录表格均登记，未编号表以源文件顺序标识。', '',
              '| 表格 | 来源复算范围 | 入口 | 尚未覆盖 |', '|---|---|---|---|']

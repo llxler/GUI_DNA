@@ -1,0 +1,755 @@
+{
+  "scope": "Table-to-source coverage inventory only; not independent numerical verification of every LaTeX cell. The local manuscript is intentionally excluded from Git and anonymous source bundles.",
+  "manuscript_sources_sha256": {
+    "DNA_latex/main.tex": "96526497e06c32708c3483e12a16e63945efa0274454dcd5b4de35228828e8ae",
+    "DNA_latex/preamble.tex": "c37da03b67c2d193ab8b034e6dc81bf3ed008cbca0d9cd8d2cd42dc41c3ed806",
+    "DNA_latex/history_main_table.tex": "c3707e9e0d8f5a8ab6ce132a83bb7cd6ced12c80277bc8159d9258eda9e87eaf",
+    "DNA_latex/prompts_public.tex": "cba032a2528cd4eedc889aa6c0229280949971ede46cce62406670f5b0c5df03",
+    "DNA_latex/additional_behavior.tex": "a9b12bd25549e31ff5eb03280a9f3ab44f22ebf49a1cf9049a8a9311d1a9856c",
+    "DNA_latex/supplied_formalism.tex": "64902b8063490fc60eca64c9a6ac3bb99b31808bdf004b50045980f19de72fc0",
+    "DNA_latex/interface_study.tex": "b70729f532c3e0c8b791cc4236e99a0c884231cbc78c198808c79333e2ae898a",
+    "DNA_latex/webbench_expansion.tex": "134c9583d22afa5936f3bb4466818e728c4f813a2821fa22a15d5ef9a41b0fb6",
+    "DNA_latex/webbench_expansion_tables.tex": "2224c0945b4262d48e9ba26d183ffcf7fdaea2c6f0695d8077a9f5b6772777ea",
+    "DNA_latex/library_repair.tex": "09cbde3101cbe3e57437b5c5558896793e5f6bacbe96a84d25969b1c9596b92c",
+    "DNA_latex/nov14_study.tex": "57fb94aa55865b4b31b62830da16a2652f060ab2df9ab48ffb7caee43a82991b",
+    "DNA_latex/nov15_history.tex": "bd319054e69083822f51a84054348834ba070910eda8400ff426fddf9a15a579",
+    "DNA_latex/finite_schema_audit.tex": "18bce2151df841fd7922e6b44a5d4da841c5c1e8df3f80b5ef9cab03c6aa36ee",
+    "DNA_latex/nov15_delivery.tex": "1fb4897bad9b75f4c96c0faff38597de445e285b9326b3f30f9a9f40a0de9bfe",
+    "DNA_latex/public_feedback_audits.tex": "9cb185260c46536d1a10dcf475f6cc9055f8fb23e1300cbbe70a3a4b6b0e9725",
+    "DNA_latex/original_suite_details.tex": "bf6bc500f85c8b6ca634f5fd1d79649ef4e64bfad439a1b8f1d02e5ca4b59869"
+  },
+  "table_count": 36,
+  "source_coverage_counts": {
+    "partial": 6,
+    "recomputed_sources": 28,
+    "specification": 2
+  },
+  "rows": [
+    {
+      "id": "tab:main",
+      "file": "DNA_latex/main.tex",
+      "line": 143,
+      "caption_start": "Supplied-library results on public requirements and official tests: final passes / candidates. TodoMVC instances use feature subsets; Web-Bench uses the current task file. Library ",
+      "source_coverage": "partial",
+      "replay_modules": [
+        "test.replay_primary_tables",
+        "test.review_metrics"
+      ],
+      "sources": [
+        "test/results/primary-replay.json",
+        "test/results/review-metrics.json"
+      ],
+      "runtime": "TodoMVC/Web-Bench: locked Playwright 1.63 + Chromium; List-16: Python Playwright.",
+      "remaining": "Accuracy source aggregates are checked. This entry does not by itself reconstruct every auxiliary source/cohort or per-model paired column appearing across these tables; see the replay output for the exact records checked. No full original browser replay or literal TeX-cell comparison.",
+      "source_paths_present": {
+        "test/results/primary-replay.json": true,
+        "test/results/review-metrics.json": true
+      },
+      "remaining_zh": "部分来源、配对子列或辅助口径尚未全部覆盖，具体范围见同名JSON及重算输出。"
+    },
+    {
+      "id": "tab:interface-main",
+      "file": "DNA_latex/main.tex",
+      "line": 182,
+      "caption_start": "Model-proposed interfaces with direct compiler reuse available to code. Current-task passes pool two libraries per cell. These complete-page comparisons use matched cumulative requ",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_new_tables"
+      ],
+      "sources": [
+        "test/results/new-tables-replay.json"
+      ],
+      "runtime": "Web-Bench expansion: locked Playwright 1.57; synthetic: Python Playwright.",
+      "remaining": "Reconstructs saved candidate/control outcomes and ledger totals. Not a fresh browser run or literal TeX-cell comparison.",
+      "source_paths_present": {
+        "test/results/new-tables-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "tab:history-main",
+      "file": "DNA_latex/history_main_table.tex",
+      "line": 1,
+      "caption_start": "Saved-page endpoints under separate Web-Bench protocols. Current-file counts are historical observations; complete history is newly evaluated on the same saved sources. Prefixes an",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_nov15"
+      ],
+      "sources": [
+        "test/results/nov15-replay.json"
+      ],
+      "runtime": "History: original 1.63/1.57; interaction diagnostics: Python Playwright.",
+      "remaining": "Reconstructs raw reports, configuration proposals and ledgers. History was newly executed locally; the anonymous summary check does not itself rerun browsers or compare literal TeX cells.",
+      "source_paths_present": {
+        "test/results/nov15-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "tab:todomvc-tests",
+      "file": "DNA_latex/main.tex",
+      "line": 309,
+      "caption_start": "Official Playwright TodoMVC tests and the features each exercises beyond the core (add, persistence). A task is graded on every test whose features it enables.}",
+      "source_coverage": "specification",
+      "replay_modules": [],
+      "sources": [
+        "AGENTS.md"
+      ],
+      "runtime": "No numeric outcome replay applies.",
+      "remaining": "Descriptive protocol/source inventory; manual comparison with the stated specification remains necessary.",
+      "source_paths_present": {
+        "AGENTS.md": true
+      },
+      "remaining_zh": "规范/来源描述，仍需人工逐项核对，不适用准确率复算。"
+    },
+    {
+      "id": "tab:intervals",
+      "file": "DNA_latex/main.tex",
+      "line": 356,
+      "caption_start": "Historical eight-model paired differences in final full-task pass rate, \\method minus baseline, in points. The seven-model Web-Bench primary analysis is in \\cref{app:review}. Inter",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.paired_intervals",
+        "test.review_metrics"
+      ],
+      "sources": [
+        "test/results/paired-intervals.json",
+        "test/results/review-metrics.json"
+      ],
+      "runtime": "No new browser dependency.",
+      "remaining": "Recomputes bootstrap summaries from saved scores; does not remove task/model dependence or check literal TeX cells.",
+      "source_paths_present": {
+        "test/results/paired-intervals.json": true,
+        "test/results/review-metrics.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "tab:relax",
+      "file": "DNA_latex/main.tex",
+      "line": 389,
+      "caption_start": "Strict (live) vs.\\ relaxed (replayed on the same saved responses, no new calls) compilers. Final full-task passes; rejections in parentheses.}",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_nov15",
+        "test.replay_review_tables"
+      ],
+      "sources": [
+        "test/results/review-tables-replay.json"
+      ],
+      "runtime": "Duo: historical CRA/Jest/npm pins; TodoMVC: locked Playwright 1.63.",
+      "remaining": "Strict live backups and the same original relaxed responses are reconstructed, with Duo verdicts checked against raw Jest reports. Gemma is absent from the early strict summary and uses its live backups. No historical Jest/browser reinstall or literal TeX-cell comparison.",
+      "source_paths_present": {
+        "test/results/review-tables-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。另需历史CRA/Jest运行环境；当前Chromium复验不能代替它。"
+    },
+    {
+      "id": "tab:models",
+      "file": "DNA_latex/main.tex",
+      "line": 412,
+      "caption_start": "Per-model final full-task passes (first version in parentheses where it differs; \\method's first and final versions coincide). Seq.: Web-Bench sequential score, \\free$\\to$\\method.",
+      "source_coverage": "partial",
+      "replay_modules": [
+        "test.replay_primary_tables",
+        "test.review_metrics"
+      ],
+      "sources": [
+        "test/results/primary-replay.json",
+        "test/results/review-metrics.json"
+      ],
+      "runtime": "TodoMVC/Web-Bench: locked Playwright 1.63 + Chromium; List-16: Python Playwright.",
+      "remaining": "Accuracy source aggregates are checked. This entry does not by itself reconstruct every auxiliary source/cohort or per-model paired column appearing across these tables; see the replay output for the exact records checked. No full original browser replay or literal TeX-cell comparison.",
+      "source_paths_present": {
+        "test/results/primary-replay.json": true,
+        "test/results/review-metrics.json": true
+      },
+      "remaining_zh": "部分来源、配对子列或辅助口径尚未全部覆盖，具体范围见同名JSON及重算输出。"
+    },
+    {
+      "id": "tab:todomvc-full",
+      "file": "DNA_latex/main.tex",
+      "line": 444,
+      "caption_start": "TodoMVC, final full-task passes per model (/16; first version in parentheses where it differs). \\rulectl is deterministic and identical for every model.}",
+      "source_coverage": "partial",
+      "replay_modules": [
+        "test.replay_primary_tables",
+        "test.review_metrics"
+      ],
+      "sources": [
+        "test/results/primary-replay.json",
+        "test/results/review-metrics.json"
+      ],
+      "runtime": "TodoMVC/Web-Bench: locked Playwright 1.63 + Chromium; List-16: Python Playwright.",
+      "remaining": "Accuracy source aggregates are checked. This entry does not by itself reconstruct every auxiliary source/cohort or per-model paired column appearing across these tables; see the replay output for the exact records checked. No full original browser replay or literal TeX-cell comparison.",
+      "source_paths_present": {
+        "test/results/primary-replay.json": true,
+        "test/results/review-metrics.json": true
+      },
+      "remaining_zh": "部分来源、配对子列或辅助口径尚未全部覆盖，具体范围见同名JSON及重算输出。"
+    },
+    {
+      "id": "tab:webbench-full",
+      "file": "DNA_latex/main.tex",
+      "line": 469,
+      "caption_start": "\\webbench per model: final task passes (/20), sequential score, model calls, compiler/parse rejections and settled cost for \\free and \\method; final task passes for \\freelib and \\n",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_primary_tables",
+        "test.replay_table_details",
+        "test.replay_nov15"
+      ],
+      "sources": [
+        "test/results/primary-replay.json",
+        "test/results/table-details-replay.json"
+      ],
+      "runtime": "Locked Playwright 1.63; retained transport classification and original six-stage costs.",
+      "remaining": "Passes, calls/rejections, sequential current-file score and costs independently reconstructed. This sequential score is not the complete-history endpoint; no new browser execution or literal TeX-cell comparison.",
+      "source_paths_present": {
+        "test/results/primary-replay.json": true,
+        "test/results/table-details-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "tab:repair",
+      "file": "DNA_latex/main.tex",
+      "line": 502,
+      "caption_start": "Where correctness arrives. Each candidate is \\emph{first} (its first version passes all hidden tests), \\emph{repaired} (only its final version passes) or \\emph{never} (its final ve",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.repair_breakdown",
+        "test.replay_primary_tables",
+        "test.replay_scale_table"
+      ],
+      "sources": [
+        "test/results/repair-breakdown.json"
+      ],
+      "runtime": "No new browser dependency.",
+      "remaining": "First/final classifications from retained records; no new execution or literal TeX-cell check.",
+      "source_paths_present": {
+        "test/results/repair-breakdown.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "tab:samples",
+      "file": "DNA_latex/main.tex",
+      "line": 533,
+      "caption_start": "TodoMVC with five samples per family (final full-task passes; first version in parentheses where it differs). Gemma-3-12B: 35 \\free and 37 \\method records (\\cref{app:transport}).}",
+      "source_coverage": "partial",
+      "replay_modules": [
+        "test.replay_primary_tables",
+        "test.review_metrics"
+      ],
+      "sources": [
+        "test/results/primary-replay.json",
+        "test/results/review-metrics.json"
+      ],
+      "runtime": "TodoMVC/Web-Bench: locked Playwright 1.63 + Chromium; List-16: Python Playwright.",
+      "remaining": "Accuracy source aggregates are checked. This entry does not by itself reconstruct every auxiliary source/cohort or per-model paired column appearing across these tables; see the replay output for the exact records checked. No full original browser replay or literal TeX-cell comparison.",
+      "source_paths_present": {
+        "test/results/primary-replay.json": true,
+        "test/results/review-metrics.json": true
+      },
+      "remaining_zh": "部分来源、配对子列或辅助口径尚未全部覆盖，具体范围见同名JSON及重算输出。"
+    },
+    {
+      "id": "tab:seeds",
+      "file": "DNA_latex/main.tex",
+      "line": 558,
+      "caption_start": "\\webbench across three seeds (final task passes /20; seed 1 is the study of \\cref{tab:models}). \\method's count is identical across seeds for five of the seven models, whereas free",
+      "source_coverage": "partial",
+      "replay_modules": [
+        "test.replay_primary_tables",
+        "test.review_metrics"
+      ],
+      "sources": [
+        "test/results/primary-replay.json",
+        "test/results/review-metrics.json"
+      ],
+      "runtime": "TodoMVC/Web-Bench: locked Playwright 1.63 + Chromium; List-16: Python Playwright.",
+      "remaining": "Accuracy source aggregates are checked. This entry does not by itself reconstruct every auxiliary source/cohort or per-model paired column appearing across these tables; see the replay output for the exact records checked. No full original browser replay or literal TeX-cell comparison.",
+      "source_paths_present": {
+        "test/results/primary-replay.json": true,
+        "test/results/review-metrics.json": true
+      },
+      "remaining_zh": "部分来源、配对子列或辅助口径尚未全部覆盖，具体范围见同名JSON及重算输出。"
+    },
+    {
+      "id": "tab:cost",
+      "file": "DNA_latex/main.tex",
+      "line": 603,
+      "caption_start": "Settled cost of the original public-suite studies (USD; review extensions excluded), recomputed from an explicit original-stage ledger list by \\code{test/replay\\_table\\_details.py}",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_nov15",
+        "test.replay_table_details"
+      ],
+      "sources": [
+        "test/results/table-details-replay.json"
+      ],
+      "runtime": "Read-only SQLite, source packages, adopted responses and saved hidden scores; no new browser dependency.",
+      "remaining": "Explicit original cost-stage set, displayed library-size/attempt and sensitivity columns, or adopted-response token usage are independently reconstructed. Not a fresh browser run or a comparison of every TeX cell.",
+      "source_paths_present": {
+        "test/results/table-details-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。原始阶段名单已明确固定，不能换用当前全账本总额。"
+    },
+    {
+      "id": "main:table-13",
+      "file": "DNA_latex/main.tex",
+      "line": 643,
+      "caption_start": "Complete matched cohort across four protocols after transport completion. Qwen reference-prefix task 16 produces three responses truncated at 12,000 tokens and no executable page; ",
+      "source_coverage": "partial",
+      "replay_modules": [
+        "test.review_metrics"
+      ],
+      "sources": [
+        "test/webbench_dna/results/clean-prefix.json"
+      ],
+      "runtime": "Locked Playwright 1.63; original transport continuation preserved.",
+      "remaining": "Matched counts are reconstructed from the saved clean-prefix summary; raw responses and every browser report are not independently reconciled by that entry.",
+      "source_paths_present": {
+        "test/webbench_dna/results/clean-prefix.json": true
+      },
+      "remaining_zh": "部分来源、配对子列或辅助口径尚未全部覆盖，具体范围见同名JSON及重算输出。"
+    },
+    {
+      "id": "main:table-14",
+      "file": "DNA_latex/main.tex",
+      "line": 668,
+      "caption_start": "Full-task passes under prompt interventions. TodoMVC models: Qwen3-Coder-30B, Mistral-Small, GPT-OSS-120B, DeepSeek-V4-Pro; Web-Bench replaces Pro with Flash. The original column i",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_nov15",
+        "test.replay_review_tables"
+      ],
+      "sources": [
+        "test/results/review-tables-replay.json"
+      ],
+      "runtime": "Locked Playwright 1.63; prior evaluator corrections retained.",
+      "remaining": "Accuracy, denominators and rejections reconstructed from records and retained hidden scores. Surrounding reference-choice agreement and all condition-level costs are outside this check; no fresh browser run or literal TeX-cell check.",
+      "source_paths_present": {
+        "test/results/review-tables-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "main:table-15",
+      "file": "DNA_latex/main.tex",
+      "line": 687,
+      "caption_start": "Requirements-only body construction, with a human-fixed schema. Counts are final task passes across four planners; the plain-code and human-library columns are the same saved 64-ca",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_nov15",
+        "test.replay_review_tables"
+      ],
+      "sources": [
+        "test/results/review-tables-replay.json"
+      ],
+      "runtime": "Locked Playwright 1.63; prior evaluator corrections retained.",
+      "remaining": "Accuracy, denominators and rejections reconstructed from records and retained hidden scores. Surrounding reference-choice agreement and all condition-level costs are outside this check; no fresh browser run or literal TeX-cell check.",
+      "source_paths_present": {
+        "test/results/review-tables-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "main:table-16",
+      "file": "DNA_latex/main.tex",
+      "line": 713,
+      "caption_start": "Frozen source size. Physical nonblank lines depend heavily on formatting; bytes are reported as a second scale measure. Neither is a proxy for human effort. Duo counts 15 atoms wit",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.review_metrics"
+      ],
+      "sources": [
+        "test/results/review-metrics.json"
+      ],
+      "runtime": "Local source files only.",
+      "remaining": "Sizes are reconstructed; human effort is unknown and not inferred from bytes.",
+      "source_paths_present": {
+        "test/results/review-metrics.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "interface_study:table-1",
+      "file": "DNA_latex/interface_study.tex",
+      "line": 9,
+      "caption_start": "Four model-proposed packages. File counts are not atom counts: Sonnet's \\texttt{dom1} runtime places multiple components in one file. Costs are the four observed construction calls",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.interface_blind.analyze"
+      ],
+      "sources": [
+        "test/results/interface-blind.json"
+      ],
+      "runtime": "Local source and read-only SQLite.",
+      "remaining": "Source sizes and stage fees reconstructed; not a literal TeX-cell check.",
+      "source_paths_present": {
+        "test/results/interface-blind.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "tab:interfaces",
+      "file": "DNA_latex/interface_study.tex",
+      "line": 34,
+      "caption_start": "Full-task passes under model-proposed interfaces and matched cumulative generation. Every cell has 20 candidates. Plain-code observations are reused across builders. Mistral uses D",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.interface_blind.analyze"
+      ],
+      "sources": [
+        "test/results/interface-blind.json"
+      ],
+      "runtime": "Locked Playwright 1.63.",
+      "remaining": "Source records and first/final hidden scores are recomputed; not every raw browser assertion is reconstructed by this entry, and literal TeX cells are not compared.",
+      "source_paths_present": {
+        "test/results/interface-blind.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "interface_study:table-3",
+      "file": "DNA_latex/interface_study.tex",
+      "line": 60,
+      "caption_start": "No current-task decision: unchanged documentation examples. Each entry is full-task passes out of 20. These two configurations are neither a uniform chance baseline nor an upper bo",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_nov15",
+        "test.replay_review_tables"
+      ],
+      "sources": [
+        "test/results/review-tables-replay.json"
+      ],
+      "runtime": "Locked Playwright 1.63.",
+      "remaining": "Original current-task fixed controls reconstructed from 320 raw Playwright reports, independently of the new history endpoint. No fresh browser execution or literal TeX-cell comparison.",
+      "source_paths_present": {
+        "test/results/review-tables-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "interface_study:table-4",
+      "file": "DNA_latex/interface_study.tex",
+      "line": 77,
+      "caption_start": "Post-hoc reuse of a final-task plan. Counts are out of 20; W/L compares per-task planning against the unchanged final-task page.}",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_nov15",
+        "test.replay_review_tables"
+      ],
+      "sources": [
+        "test/results/review-tables-replay.json"
+      ],
+      "runtime": "Locked Playwright 1.63.",
+      "remaining": "Original current-task fixed controls reconstructed from 320 raw Playwright reports, independently of the new history endpoint. No fresh browser execution or literal TeX-cell comparison.",
+      "source_paths_present": {
+        "test/results/review-tables-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "interface_study:table-5",
+      "file": "DNA_latex/interface_study.tex",
+      "line": 103,
+      "caption_start": "Separate behavior-feedback protocol: passes before and after at most two additional repairs on the same remaining hidden subset. Only tasks with both methods observed are compared.",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.behavior_feedback_analyze"
+      ],
+      "sources": [
+        "test/results/behavior-feedback.json"
+      ],
+      "runtime": "Locked Playwright 1.63.",
+      "remaining": "Saved before/after scores are reaggregated; no fresh browser execution or literal TeX-cell check.",
+      "source_paths_present": {
+        "test/results/behavior-feedback.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "tab:expansion",
+      "file": "DNA_latex/webbench_expansion_tables.tex",
+      "line": 1,
+      "caption_start": "Three-project expansion, all official task files. Each cell is passes out of 20; plain code is reused across builders. Fixed final reuses the last executable task-20 plan unchanged",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_new_tables"
+      ],
+      "sources": [
+        "test/results/new-tables-replay.json"
+      ],
+      "runtime": "Web-Bench expansion: locked Playwright 1.57; synthetic: Python Playwright.",
+      "remaining": "Reconstructs saved candidate/control outcomes and ledger totals. Not a fresh browser run or literal TeX-cell comparison.",
+      "source_paths_present": {
+        "test/results/new-tables-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "tab:expansion-libraries",
+      "file": "DNA_latex/webbench_expansion_tables.tex",
+      "line": 26,
+      "caption_start": "Frozen library sizes, observed builder attempts, and both unchanged documentation examples. Example counts are out of 20. Implementation can reside inside the compiler; file-map si",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_nov15",
+        "test.replay_table_details"
+      ],
+      "sources": [
+        "test/results/table-details-replay.json"
+      ],
+      "runtime": "Read-only SQLite, source packages, adopted responses and saved hidden scores; no new browser dependency.",
+      "remaining": "Explicit original cost-stage set, displayed library-size/attempt and sensitivity columns, or adopted-response token usage are independently reconstructed. Not a fresh browser run or a comparison of every TeX cell.",
+      "source_paths_present": {
+        "test/results/table-details-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "tab:expansion-sensitivity",
+      "file": "DNA_latex/webbench_expansion_tables.tex",
+      "line": 45,
+      "caption_start": "Prespecified sensitivity analysis: omit only BOM tasks 7, 14 and 19 identified in reference-only calibration. Counts pool two builders and two planners, not independent application",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_nov15",
+        "test.replay_table_details"
+      ],
+      "sources": [
+        "test/results/table-details-replay.json"
+      ],
+      "runtime": "Read-only SQLite, source packages, adopted responses and saved hidden scores; no new browser dependency.",
+      "remaining": "Explicit original cost-stage set, displayed library-size/attempt and sensitivity columns, or adopted-response token usage are independently reconstructed. Not a fresh browser run or a comparison of every TeX cell.",
+      "source_paths_present": {
+        "test/results/table-details-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "tab:expansion-frontier",
+      "file": "DNA_latex/webbench_expansion_tables.tex",
+      "line": 61,
+      "caption_start": "Separate GPT-5 medium-reasoning pilot. Every cell has five prespecified milestones (4, 8, 12, 16, 20). Libraries, inputs, 12,000-token cap and repair allowance match; these scores ",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_new_tables"
+      ],
+      "sources": [
+        "test/results/new-tables-replay.json"
+      ],
+      "runtime": "Web-Bench expansion: locked Playwright 1.57; synthetic: Python Playwright.",
+      "remaining": "Reconstructs saved candidate/control outcomes and ledger totals. Not a fresh browser run or literal TeX-cell comparison.",
+      "source_paths_present": {
+        "test/results/new-tables-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "tab:library-repair",
+      "file": "DNA_latex/library_repair.tex",
+      "line": 12,
+      "caption_start": "Available-pair replay only. Review and feedback each revise the implementation once; planning outputs are fixed. Main pools GPT-OSS and Mistral. Rows remain correlated within two p",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_library_repair"
+      ],
+      "sources": [
+        "test/results/library-repair-replay.json"
+      ],
+      "runtime": "Locked Playwright 1.57.",
+      "remaining": "Three-library-pair timestamp remains separate from the later six-library result. Raw-report reconstruction, not full browser reexecution or literal TeX-cell comparison.",
+      "source_paths_present": {
+        "test/results/library-repair-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "nov14_study:table-1",
+      "file": "DNA_latex/nov14_study.tex",
+      "line": 8,
+      "caption_start": "Completed six-library replay. Main pools the two original planners; GPT-5 is separate. Old outputs are fixed, so these are implementation-intervention outcomes, not new planning ac",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_nov14"
+      ],
+      "sources": [
+        "test/results/nov14-replay.json"
+      ],
+      "runtime": "Locked Playwright 1.57 for expansion repair/toggles; 1.63 for dom1 prefixes.",
+      "remaining": "Reconstructs saved raw reports and ledgers, including reused reports. No fresh execution of every page or literal TeX-cell comparison.",
+      "source_paths_present": {
+        "test/results/nov14-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "nov14_study:table-2",
+      "file": "DNA_latex/nov14_study.tex",
+      "line": 28,
+      "caption_start": "Single fixed-plan entrypoint intervention. Three exact earlier reports are reused; three new pages are scored. This post-hoc case does not change any model result or establish a ge",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_nov14"
+      ],
+      "sources": [
+        "test/results/nov14-replay.json"
+      ],
+      "runtime": "Locked Playwright 1.57 for expansion repair/toggles; 1.63 for dom1 prefixes.",
+      "remaining": "Reconstructs saved raw reports and ledgers, including reused reports. No fresh execution of every page or literal TeX-cell comparison.",
+      "source_paths_present": {
+        "test/results/nov14-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "nov14_study:table-3",
+      "file": "DNA_latex/nov14_study.tex",
+      "line": 42,
+      "caption_start": "Original-library Boolean slices. Mean and anchor counts are tasks passed out of five. Configuration outcomes share applications and sometimes exact pages; they are not independent ",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_nov14"
+      ],
+      "sources": [
+        "test/results/nov14-replay.json"
+      ],
+      "runtime": "Locked Playwright 1.57 for expansion repair/toggles; 1.63 for dom1 prefixes.",
+      "remaining": "Reconstructs saved raw reports and ledgers, including reused reports. No fresh execution of every page or literal TeX-cell comparison.",
+      "source_paths_present": {
+        "test/results/nov14-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "tab:prefix-factorial",
+      "file": "DNA_latex/nov14_study.tex",
+      "line": 62,
+      "caption_start": "Matched-prefix factorial, pooled descriptively over two models. Initial compilation failures count as first-output failures; final uses the last executable public-repair version. H",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_nov14"
+      ],
+      "sources": [
+        "test/results/nov14-replay.json"
+      ],
+      "runtime": "Locked Playwright 1.57 for expansion repair/toggles; 1.63 for dom1 prefixes.",
+      "remaining": "Reconstructs saved raw reports and ledgers, including reused reports. No fresh execution of every page or literal TeX-cell comparison.",
+      "source_paths_present": {
+        "test/results/nov14-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "tab:history-replay",
+      "file": "DNA_latex/nov15_history.tex",
+      "line": 9,
+      "caption_start": "Final-page historical current-file observations and new same-page complete-history outcomes. Protocols remain separate; reverse differences are retained. Fixed controls without his",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_nov15"
+      ],
+      "sources": [
+        "test/results/nov15-replay.json"
+      ],
+      "runtime": "History: original 1.63/1.57; interaction diagnostics: Python Playwright.",
+      "remaining": "Reconstructs raw reports, configuration proposals and ledgers. History was newly executed locally; the anonymous summary check does not itself rerun browsers or compare literal TeX cells.",
+      "source_paths_present": {
+        "test/results/nov15-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "tab:task-history",
+      "file": "DNA_latex/nov15_history.tex",
+      "line": 74,
+      "caption_start": "Final-page task-file history diagnostic, separately frozen after the init-plus-history result. Reverse counts are historical current-file failures with task-history success; missin",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_nov15"
+      ],
+      "sources": [
+        "test/results/nov15-replay.json"
+      ],
+      "runtime": "History: original 1.63/1.57; interaction diagnostics: Python Playwright.",
+      "remaining": "Reconstructs raw reports, configuration proposals and ledgers. History was newly executed locally; the anonymous summary check does not itself rerun browsers or compare literal TeX cells.",
+      "source_paths_present": {
+        "test/results/nov15-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "tab:matched-feedback",
+      "file": "DNA_latex/public_feedback_audits.tex",
+      "line": 10,
+      "caption_start": "Matched public-feedback comparison. Each cell is first$\\to$final passes on the indicated endpoint. All 45 final candidates fail both the withheld suite and full history, as reporte",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_nov16"
+      ],
+      "sources": [
+        "test/results/nov16-replay.json"
+      ],
+      "runtime": "Locked Playwright 1.57; original official assertions and closed ledgers.",
+      "remaining": "Reconstructs matched-feedback candidate/control outcomes, actual tokens/costs, and bounded schema search. Separate model cohorts; no fresh browser execution during anonymous summary validation.",
+      "source_paths_present": {
+        "test/results/nov16-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "tab:matched-feedback-usage",
+      "file": "DNA_latex/public_feedback_audits.tex",
+      "line": 29,
+      "caption_start": "Actual generation use. Cached tokens are included in prompt tokens; reasoning tokens are included in completion tokens. Fees exclude the previously constructed libraries and local ",
+      "source_coverage": "recomputed_sources",
+      "replay_modules": [
+        "test.replay_nov16"
+      ],
+      "sources": [
+        "test/results/nov16-replay.json"
+      ],
+      "runtime": "Locked Playwright 1.57; original official assertions and closed ledgers.",
+      "remaining": "Reconstructs matched-feedback candidate/control outcomes, actual tokens/costs, and bounded schema search. Separate model cohorts; no fresh browser execution during anonymous summary validation.",
+      "source_paths_present": {
+        "test/results/nov16-replay.json": true
+      },
+      "remaining_zh": "对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。"
+    },
+    {
+      "id": "tab:suites",
+      "file": "DNA_latex/original_suite_details.tex",
+      "line": 4,
+      "caption_start": "Original supplied-library suites. Final scores use Chromium/Playwright or the benchmark's Jest harness. Duo uses test-conditioned prompts; TodoMVC and Web-Bench withhold their eval",
+      "source_coverage": "specification",
+      "replay_modules": [],
+      "sources": [
+        "AGENTS.md"
+      ],
+      "runtime": "No numeric outcome replay applies.",
+      "remaining": "Descriptive protocol/source inventory; manual comparison with the stated specification remains necessary.",
+      "source_paths_present": {
+        "AGENTS.md": true
+      },
+      "remaining_zh": "规范/来源描述，仍需人工逐项核对，不适用准确率复算。"
+    }
+  ],
+  "separate_literal_cell_audit": {
+    "report": "test/results/paper-cell-audit-public-20261116.json",
+    "checked_cells": 147,
+    "tables": [
+      "tab:cost",
+      "tab:history-main",
+      "tab:interface-main",
+      "tab:main",
+      "tab:matched-feedback",
+      "tab:matched-feedback-usage",
+      "tab:todomvc-full"
+    ],
+    "scope": "Only tables reachable from the current manuscript input tree are considered; unused archived TeX files are excluded. Literal cells listed here are compared with reconstructed results and retained paired rows. Matched-feedback costs are checked in micro-dollars; public-suite ledger subtotals are checked at displayed precision. Unlisted cells, prose, statistical intervals, other costs and citations are not covered. Does not rerun browsers or establish independent human review."
+  }
+}
