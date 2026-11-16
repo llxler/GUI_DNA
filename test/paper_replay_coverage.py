@@ -33,6 +33,9 @@ NOV14 = evidence('recomputed_sources', 'test.replay_nov14',
 NOV15 = evidence('recomputed_sources', 'test.replay_nov15',
     'test/results/nov15-replay.json', 'History: original 1.63/1.57; interaction diagnostics: Python Playwright.',
     'Reconstructs raw reports, configuration proposals and ledgers. History was newly executed locally; the anonymous summary check does not itself rerun browsers or compare literal TeX cells.')
+NOV16 = evidence('recomputed_sources', 'test.replay_nov16',
+    'test/results/nov16-replay.json', 'Locked Playwright 1.57; original official assertions and closed ledgers.',
+    'Reconstructs matched-feedback candidate/control outcomes, actual tokens/costs, and bounded schema search. Separate model cohorts; no fresh browser execution during anonymous summary validation.')
 STATIC = evidence('specification', '', 'AGENTS.md', 'No numeric outcome replay applies.',
     'Descriptive protocol/source inventory; manual comparison with the stated specification remains necessary.')
 
@@ -47,6 +50,8 @@ def mapping():
                  'tab:interaction-library-shape', 'tab:interaction-controls', 'tab:development-feedback'):
         m[name] = NOV15
     m['tab:prefix-factorial'] = NOV14
+    for name in ('tab:matched-feedback-main', 'tab:matched-feedback', 'tab:matched-feedback-usage', 'tab:schema-search'):
+        m[name] = NOV16
     m['tab:list16'] = evidence('recomputed_sources', 'test.replay_scale_table test.replay_table_details test.replay_nov15', 'test/results/scale-table-replay.json test/results/table-details-replay.json',
         'Python Playwright; original generation remains paused.',
         'Accuracy and paired intervals reconstructed for complete groups; cost and response tokens separately reconstructed over all attempted records. No writable Ledger, fresh browser run or literal TeX-cell comparison.')
@@ -157,6 +162,12 @@ def main():
     result = dict(scope='Table-to-source coverage inventory only; not independent numerical verification of every LaTeX cell. The local manuscript is intentionally excluded from Git and anonymous source bundles.',
                   manuscript_sources_sha256=sources, table_count=len(rows),
                   source_coverage_counts=dict(Counter(r['source_coverage'] for r in rows)), rows=rows)
+    audit_path = ROOT / 'test/results/paper-cell-audit.json'
+    if audit_path.exists():
+        audit = json.loads(audit_path.read_text())
+        assert all(hashlib.sha256((ROOT / p).read_bytes()).hexdigest() == value for p,value in audit['manuscript_sources_sha256'].items()), 'Refresh literal cell audit after paper edits'
+        result['separate_literal_cell_audit'] = {'report': str(audit_path.relative_to(ROOT)),
+            'checked_cells': audit['checked_cells'], 'tables': audit['tables'], 'scope': audit['scope']}
     path = ROOT / 'test/results/paper-table-coverage.json'
     path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
     lines = ['# 论文逐表复验范围', '', '这是来源对应表，不是所有LaTeX单元格均已验证的证明。`recomputed_sources`只表示相关来源在现有独立入口中重算；`partial`保留未覆盖列；`not_recomputed`明确列出缺口。全文及附录表格均登记，未编号表以源文件顺序标识。', '',

@@ -1,0 +1,86 @@
+{
+  "archive_sha256": "1782b6609dfe2b2a7194b6650ff80b1cc94ddd3c77da04da2c3b27704303f27c",
+  "published": false,
+  "checks": [
+    {
+      "module": "test.replay_scale_table",
+      "output": "test/results/scale-table-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_primary_tables",
+      "output": "test/results/primary-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.review_metrics",
+      "output": "test/results/review-metrics.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.interface_blind.analyze",
+      "output": "test/results/interface-blind.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.behavior_feedback_analyze",
+      "output": "test/results/behavior-feedback.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.repair_breakdown",
+      "output": "test/results/repair-breakdown.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.paired_intervals",
+      "output": "test/results/paired-intervals.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_new_tables",
+      "output": "test/results/new-tables-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_library_repair",
+      "output": "test/results/library-repair-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_nov14",
+      "output": "test/results/nov14-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_nov15",
+      "output": "test/results/nov15-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_nov16",
+      "output": "test/results/nov16-replay.json",
+      "exit_code": 0,
+      "identical": true
+    }
+  ],
+  "scope": "Hash verification; three primary accuracy tables plus five sample/seed/frontier extensions from raw records; five further summary recomputations. External row checks reuse observations across tables; distinct file-path count reported separately. Not a replay of every historical browser test or every paper table. Also four new cohorts (904 distinct candidates) and their stored fixed-control scores; no additional browser reruns. Also strict and secondary repair replay tables reconstructed from stored raw reports; no new browser calls. Also November 14 full-library continuation, conditional toggles, prefix calibration and corrected factorial, reconstructed from raw reports and dated ledgers. Also November 15 full-history cohorts and legal-plan witnesses, development-only interaction transfer, exploratory Boolean-union and public-feedback controls, and any included container observations from stored raw reports and dated ledgers. Container report reconstruction does not launch a new container. Also November 16 matched public-feedback outcomes/actual compute and bounded schema search, reconstructed from raw reports and frozen populations. No fresh browser execution.",
+  "hashes_verified": 168095,
+  "all_passed": true,
+  "expanded": true,
+  "library_repair": true,
+  "nov14": true,
+  "nov15": true,
+  "nov16": true
+}

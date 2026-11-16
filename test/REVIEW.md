@@ -231,3 +231,34 @@ uv run python -m test.validate_replay_bundle --expanded --library-repair --nov14
 
 
 **2026-11-15实际收尾状态**：墙钟超出4h要求后停止新增实验/归档；上文正式20261115导出/验证命令尚未执行完成，没有对应最终zip和正式报告。core/precontainer各11入口通过但内容较早；finite中间包保留校验失败，修复overlay已通过。下一次按这些命令创建新正式包并验证，不能将中间结果当最终验收。当前本地原始结果、15份冻结快照、104全套测试及后续9项定向检查已通过，论文正文8/总51页。
+
+## 2026-11-16：匹配反馈与库配置诊断
+
+协议和冻结范围分别见[matched_feedback](matched_feedback/README.md)、[matched_feedback_frontier](matched_feedback_frontier/README.md)、[schema_search](schema_search/README.md)、[compiler_reuse_audit](compiler_reuse_audit/README.md)。原六库、第三轮以及历史分数保持不变。两个新模型队列全部生成后，按GPT-OSS评分→GPT-5评分→BOM配置搜索顺序运行，避免BOM跨阶段并发；发生中断时不把缺失计为模型失败。
+
+完成后的只读入口：
+
+```bash
+uv run python -m test.matched_feedback.analyze
+uv run python -m test.matched_feedback_frontier.analyze
+uv run python -m test.schema_search.analyze
+uv run python -m test.compiler_reuse_audit.analyze
+uv run python -m test.authorized_costs --date 20261116
+uv run python -m test.replay_nov16 --source-integrity
+uv run python -m test.replay_nov16
+```
+
+`--source-integrity`只用于原工作区；匿名包使用重写哈希映射。最后的重算会重新执行纯VM构建、重构保存的公开/隐藏报告，不新调API或浏览器。两个模型单列，代码可直接复用编译器；每次响应上限一致，但仍需报告实际推理、缓存与费用。配置搜索是固定锚点附近的有限搜索，不能当作库上界。
+
+本日匿名包使用新的文件名，完整前置开关不能省略：
+
+```bash
+uv run python -m test.export_replay_bundle --expanded --library-repair --nov14 --nov15 --nov16 --out artifacts/anonymous-replay-20261116-final-2.zip --report test/results/replay-bundle-20261116-final-2.json
+uv run python -m test.validate_replay_bundle --expanded --library-repair --nov14 --nov15 --nov16 --archive artifacts/anonymous-replay-20261116-final-2.zip --report test/results/replay-validation-20261116-final-2.json
+```
+
+以上仅本地导出/复验，不上传。实际完成状态以两份正式报告为准，旧包不覆盖。论文仍本地保存；`test.paper_cells`核对明确列出的LaTeX单元格，`test.paper_replay_coverage`登记来源和缺口，两者都不代表作者最终人工审核。
+
+本轮两处续作都保留独立目录：[GPT-5预算断点续补](matched_feedback_continue/README.md)只补缺失请求；[BOM校准例外](schema_search_continue/README.md)保留空白页通过task-20的原报告，并在完整历史负对照失败后续评原冻结配置。后者不修改官方断言，BOM当前通过不能单独证明目标功能正确；原五库入口的BOM完成标记不会被伪造。统计与匿名导出会联合原阶段和续作阶段。
+
+最终交付以`anonymous-replay-20261116-final-2.zip`及对应`replay-validation-20261116-final-2.json`为准：168,095清单文件、55账本、12入口全部一致。最初包的复验超时、第二包应用JSON被重新缩进的失败报告均保留；源码哈希检查没有放宽。全套118项测试通过；纸面数值核对限定于9表198个指定单元格，不代表全文或全部浏览器复现。

@@ -1,0 +1,4805 @@
+{
+  "posthoc": true,
+  "libraries": [
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "pool": "artifacts/schema-search-20261116/populations/calculator/anthropic__claude-sonnet-4.5/pool.json",
+      "package": "artifacts/webbench-expand-build/libraries/calculator/anthropic__claude-sonnet-4.5/package.json",
+      "population_size": 2112,
+      "selected_count": 32,
+      "anchor_source": "artifacts/webbench-expand-run/runs/calculator/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-20",
+      "rejected_proposals": 0,
+      "distinct_anchors": 2
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "pool": "artifacts/schema-search-20261116/populations/table/openai__gpt-5/pool.json",
+      "package": "artifacts/webbench-expand-build/libraries/table/openai__gpt-5/package.json",
+      "population_size": 48,
+      "selected_count": 32,
+      "anchor_source": "artifacts/webbench-expand-run/runs/table/openai__gpt-5/openai__gpt-oss-120b/plan/task-20",
+      "rejected_proposals": 0,
+      "distinct_anchors": 3
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "pool": "artifacts/schema-search-20261116/populations/table/anthropic__claude-sonnet-4.5/pool.json",
+      "package": "artifacts/webbench-expand-build/libraries/table/anthropic__claude-sonnet-4.5/package.json",
+      "population_size": 30,
+      "selected_count": 30,
+      "anchor_source": "artifacts/webbench-expand-run/runs/table/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-20",
+      "rejected_proposals": 0,
+      "distinct_anchors": 2
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "pool": "artifacts/schema-search-20261116/populations/bom/openai__gpt-5/pool.json",
+      "package": "artifacts/webbench-expand-build/libraries/bom/openai__gpt-5/package.json",
+      "population_size": 63,
+      "selected_count": 32,
+      "anchor_source": "artifacts/webbench-expand-run/runs/bom/openai__gpt-5/openai__gpt-oss-120b/plan/task-20",
+      "rejected_proposals": 0,
+      "distinct_anchors": 3
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "pool": "artifacts/schema-search-20261116/populations/bom/anthropic__claude-sonnet-4.5/pool.json",
+      "package": "artifacts/webbench-expand-build/libraries/bom/anthropic__claude-sonnet-4.5/package.json",
+      "population_size": 65,
+      "selected_count": 32,
+      "anchor_source": "artifacts/webbench-expand-run/runs/bom/anthropic__claude-sonnet-4.5/openai__gpt-oss-120b/plan/task-20",
+      "rejected_proposals": 46,
+      "distinct_anchors": 2
+    }
+  ],
+  "configurations": 158,
+  "comparisons": 316,
+  "unique_reports": 288,
+  "recompiled_configurations": 158,
+  "calibration_exception": {
+    "project": "bom",
+    "blank_current_passes": true,
+    "reason": "Missing content iframe is null, satisfies toBeDefined, and returns before feature assertions.",
+    "continuation": "artifacts/schema-search-continue-20261116"
+  },
+  "groups": {
+    "bom/anthropic/claude-sonnet-4.5/current": {
+      "passed": 12,
+      "total": 32,
+      "compile_failed": 0
+    },
+    "bom/anthropic/claude-sonnet-4.5/history": {
+      "passed": 0,
+      "total": 32,
+      "compile_failed": 0
+    },
+    "bom/openai/gpt-5/current": {
+      "passed": 0,
+      "total": 32,
+      "compile_failed": 0
+    },
+    "bom/openai/gpt-5/history": {
+      "passed": 0,
+      "total": 32,
+      "compile_failed": 0
+    },
+    "calculator/anthropic/claude-sonnet-4.5/current": {
+      "passed": 0,
+      "total": 32,
+      "compile_failed": 0
+    },
+    "calculator/anthropic/claude-sonnet-4.5/history": {
+      "passed": 0,
+      "total": 32,
+      "compile_failed": 0
+    },
+    "table/anthropic/claude-sonnet-4.5/current": {
+      "passed": 0,
+      "total": 30,
+      "compile_failed": 0
+    },
+    "table/anthropic/claude-sonnet-4.5/history": {
+      "passed": 0,
+      "total": 30,
+      "compile_failed": 0
+    },
+    "table/openai/gpt-5/current": {
+      "passed": 0,
+      "total": 32,
+      "compile_failed": 0
+    },
+    "table/openai/gpt-5/history": {
+      "passed": 0,
+      "total": 32,
+      "compile_failed": 0
+    }
+  },
+  "rows": [
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "7a0a6df6ea17b082cac5a19d6dbeb451fe33f3ebc600cbf6486337f97b9c707c",
+      "endpoint": "current",
+      "score_key": "25c7aaeb36b32a60aa629f574a87218831665d5598f50be4d398a6a0342c2f2d",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "7a0a6df6ea17b082cac5a19d6dbeb451fe33f3ebc600cbf6486337f97b9c707c",
+      "endpoint": "history",
+      "score_key": "0784f5be333db088b46476589f4eef02c6021d4222ccbaaf72c3f87dfe7f9a91",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "1 2 3  Clear"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "92364402b9fcb7974cc3787642efaeeebb2f4cd55b71af4f778eae9ad8daab0e",
+      "endpoint": "current",
+      "score_key": "becb4078010fbf231169094cea66869c88512e4a59a16d0ee5890f8513f4032c",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "92364402b9fcb7974cc3787642efaeeebb2f4cd55b71af4f778eae9ad8daab0e",
+      "endpoint": "history",
+      "score_key": "3836b82c854d887a060f94aeda7ea8dfff6e43a6ee389d934bca1f23d60a172b",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "1 2 3  Clear"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "00490222ebdc82c89fe40d00d95e9ff9e0834c5f867f8b7daae669f1881dd408",
+      "endpoint": "current",
+      "score_key": "d779836c79bef02cb6566c3091c3abaa8a88bea52c137acd8fe1748b2f1639c8",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "00490222ebdc82c89fe40d00d95e9ff9e0834c5f867f8b7daae669f1881dd408",
+      "endpoint": "history",
+      "score_key": "68280c32fb806ede5f9157bfcfd199d0c9f746a979d9a1f453f07ee8850e5242",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "1 2 3  Clear"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "00509d906a753add92899d95e901368911d44ff81131efb9aa6232b54cf898c8",
+      "endpoint": "current",
+      "score_key": "bfc86a33c322e466349e7e920a2cfde8711c139ff49c8011d12f6d2ba0de4e71",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "00509d906a753add92899d95e901368911d44ff81131efb9aa6232b54cf898c8",
+      "endpoint": "history",
+      "score_key": "830c0642a4affd5369d8d57e616167599b4018533530d34042b098227a923cbb",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "check all buttons"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "0069f2f9e33dcd1983381845d544e34b25c5b79b79a94f653f9864b173e52e70",
+      "endpoint": "current",
+      "score_key": "06b8c84ed5a9a0c753704d4a9a2f636fa2abd522e34af9d37b670d9e87a3bc45",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "0069f2f9e33dcd1983381845d544e34b25c5b79b79a94f653f9864b173e52e70",
+      "endpoint": "history",
+      "score_key": "4724437bc3adf9126ed6ef6d01ce9f8f2a07d63693126538d7b5efae1bc33d47",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "check all buttons"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "00c27c5f003c7978d032124074635be95c89bb415f0438a7eba21fed1f56b8bf",
+      "endpoint": "current",
+      "score_key": "dca52efd262f292fa5d46d95fa370ecad2400ecaa2d334f9116d2cae2b3518b7",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "00c27c5f003c7978d032124074635be95c89bb415f0438a7eba21fed1f56b8bf",
+      "endpoint": "history",
+      "score_key": "dcdc44e4e6b2ae45356f3bd3a91f9382a309ae8f36479a92cc329d636eb8c2bb",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "check all buttons"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "00f1fb8555fed8ef7c3202a432de150fd2514f5a777d91a991e4aedc1721c8f0",
+      "endpoint": "current",
+      "score_key": "3c17538e085c18b51047242c1a982217e669eff67f5d9611270c7dbf53aa2588",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "00f1fb8555fed8ef7c3202a432de150fd2514f5a777d91a991e4aedc1721c8f0",
+      "endpoint": "history",
+      "score_key": "6d94c07487617b0d45ca94f6c78f98ccc9bbfbc175c4354aaa3e998f1f8b2e51",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "5 - 3 ="
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "00faead78cf028c89fc344f1b9f5af59ce8c07f357d443fec48f9687032ac150",
+      "endpoint": "current",
+      "score_key": "f65119af0ea77213d3c4bbd6afb678bfeff043df4720d23bf726fef7850244ba",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "00faead78cf028c89fc344f1b9f5af59ce8c07f357d443fec48f9687032ac150",
+      "endpoint": "history",
+      "score_key": "b342451d5d2559858bad674f9ce5bbc903f66807c69678300fc8bba347a878e4",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "check all buttons"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "015785060228ec7ba3a7f282af166d204b7900f01ca663a85fe32b4686042bae",
+      "endpoint": "current",
+      "score_key": "e9dacb18ae2aab875b65184b1379ba9958e930da09b4332bc8b1caf550a01bf5",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "015785060228ec7ba3a7f282af166d204b7900f01ca663a85fe32b4686042bae",
+      "endpoint": "history",
+      "score_key": "67a4e0f31bc21ad36c14a2895eee499947dc1a43d5b5ab06270213244882f227",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "1 2 3  Clear"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "016edc9de3e511dfda1c5c953f775a7c2789b0f8edee49d3070a3769bca66579",
+      "endpoint": "current",
+      "score_key": "2e1281970985199047f8b81c6e7d1bf4d62812e7b2ed46efc8863c7d33521d7e",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "016edc9de3e511dfda1c5c953f775a7c2789b0f8edee49d3070a3769bca66579",
+      "endpoint": "history",
+      "score_key": "d6984c0b92d4217d792e570e2c596f302a990ca7ab8d688f403be2a5493f060c",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "1 2 3  Clear"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01a777601138556be5717f681ce96100bee9401047cfaddc38e8b4ed2b9a1b07",
+      "endpoint": "current",
+      "score_key": "5ac7548d082898832270bbc27bded934938da87467ba3df67a27572a26f76f03",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01a777601138556be5717f681ce96100bee9401047cfaddc38e8b4ed2b9a1b07",
+      "endpoint": "history",
+      "score_key": "1b1be20159c53e5d8ae3dba2408102bea7d71c35c6ddeddb709f5af2e88105aa",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "check all buttons"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01babd0335966ddfcc831d0952d00639495e4494e6e6af1fc719a5417a657907",
+      "endpoint": "current",
+      "score_key": "0bf93c68b7ef2fc9c9a3b96c8c3271d382ec3f11b6f3576f06df8862a07ee080",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01babd0335966ddfcc831d0952d00639495e4494e6e6af1fc719a5417a657907",
+      "endpoint": "history",
+      "score_key": "5bafa2e482bb330e7f1bd8d5559a10140df19842b931b7ccd01cea47efd433d1",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "check all buttons"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01c61467e930e90fded829bc5d726c7ebd3e8fba7266d8f3f83334f4d1559a29",
+      "endpoint": "current",
+      "score_key": "769051d85cb1b96816cce699e63d10388bc60770feb4002c7a0a4197f33ef5b5",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01c61467e930e90fded829bc5d726c7ebd3e8fba7266d8f3f83334f4d1559a29",
+      "endpoint": "history",
+      "score_key": "d2c3116ce31cb2e52422720bb6272d3f0d4abe59edd91ba34e68fa15a4d6164f",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "1 2 3  Clear"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01d6964157d63db555660be2a74dc551271ea22a2b510f60ca61c9b91f68cf62",
+      "endpoint": "current",
+      "score_key": "15d00f7e17324a7bfa3e3a9a67f9d5299b25d6911ddc73c2b0d759cd4f2f725b",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01d6964157d63db555660be2a74dc551271ea22a2b510f60ca61c9b91f68cf62",
+      "endpoint": "history",
+      "score_key": "30a066b58c30bd29bfa5c8f8f83bafba69ed1b0f0cd77ba7e02f89564720b92c",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "1 2 3  Clear"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01d6b9403b054654294f8e3cb9c9349ffc3518d03baf4a88c01b8da9ef0e85fb",
+      "endpoint": "current",
+      "score_key": "11c52370ccf1775f531c6b5a7db81738a720d464dff690b8e0335bd8a99eb677",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01d6b9403b054654294f8e3cb9c9349ffc3518d03baf4a88c01b8da9ef0e85fb",
+      "endpoint": "history",
+      "score_key": "a5aa09d74f04cea1cc634aae1a02a8a6e6df423274339422f1dff21ec1e0e5d0",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "1 2 3  Clear"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01e2ef1db1ac138754ccdfd853f524152ba1b77798b726c47b743b00eee598f2",
+      "endpoint": "current",
+      "score_key": "9d683125bb16fc9d288c8b0e1a167f101e965cc0f19349c5fd1b67d4c745b8f6",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01e2ef1db1ac138754ccdfd853f524152ba1b77798b726c47b743b00eee598f2",
+      "endpoint": "history",
+      "score_key": "58b1c12fb2d1047f154165339c85c4c8a64ed1231447973498c1924ba2b4f777",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "check all buttons"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01e8d76086f29474e59cd4e16ad7512dd6f454b39933dbf8889c52f6e61d69c6",
+      "endpoint": "current",
+      "score_key": "9d5ffc075ce24cdbe366ffb8434d74bf14d164f3cfdba0d63cf6b68a52c8c71d",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01e8d76086f29474e59cd4e16ad7512dd6f454b39933dbf8889c52f6e61d69c6",
+      "endpoint": "history",
+      "score_key": "b0bcbc763c290fe9fc4fd1f9869ce293d4feb0789bf69a92252cd5e1598255c8",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "1 2 3  Clear"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01e8f51a42b5383637d20a4631b7d47f36b138ddc9a8180c54e2e246e6a50938",
+      "endpoint": "current",
+      "score_key": "2235f532c2d14a0b78dddebbcc3157819af7b0d84bb3b37ef80e5ed23e942a3b",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01e8f51a42b5383637d20a4631b7d47f36b138ddc9a8180c54e2e246e6a50938",
+      "endpoint": "history",
+      "score_key": "c0ef41161467db491069ca65ae9f7e943de859d523355e322a2b6584bc0dd9c2",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "check all buttons"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01eb462455d02ff0151c67c4a60b5bb1099205834c58745ceea8f1bb85fa2941",
+      "endpoint": "current",
+      "score_key": "40ec8eaf594dad0f4c9cbe9efb8c990dd7ba9a572b417f6bd9d217973031a964",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01eb462455d02ff0151c67c4a60b5bb1099205834c58745ceea8f1bb85fa2941",
+      "endpoint": "history",
+      "score_key": "c3370efa3a580ead193220c673f51174da733414530106cde28c2f79e2409d28",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "check all buttons"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01f3057f994c1a0d36e340337f3a5bb2b8ec3f290083e4c895a15b2f2371ef74",
+      "endpoint": "current",
+      "score_key": "25c7aaeb36b32a60aa629f574a87218831665d5598f50be4d398a6a0342c2f2d",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01f3057f994c1a0d36e340337f3a5bb2b8ec3f290083e4c895a15b2f2371ef74",
+      "endpoint": "history",
+      "score_key": "0784f5be333db088b46476589f4eef02c6021d4222ccbaaf72c3f87dfe7f9a91",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "1 2 3  Clear"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01f75681966175f9657de5c5324e1601903ff2c9564365e00715865a580c3077",
+      "endpoint": "current",
+      "score_key": "ea3c918e6ac22b4adb9bc2cae8968671b60812ed9f5df66ed5f49cafe16b1a07",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "01f75681966175f9657de5c5324e1601903ff2c9564365e00715865a580c3077",
+      "endpoint": "history",
+      "score_key": "b9f60dc5ed6b37fdf6b991709203a45d8c554b07300a9779250d031a823c9b34",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "1 + 2 ="
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "0210051e5a326df335d7011d95e546eb8a3d96f13820e1994500bd59fcbf4fda",
+      "endpoint": "current",
+      "score_key": "280dec3285c215151282cb0fb3059a1809576701b51c0aa5f1d8b754e4b9c964",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "0210051e5a326df335d7011d95e546eb8a3d96f13820e1994500bd59fcbf4fda",
+      "endpoint": "history",
+      "score_key": "1aad8be7ad9988db2a0b096de7da1756892752ce1cbd268cb06dd63744889b5a",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "check all buttons"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "025246cb29c1e55194bcee824431efbe3231d5697c039bb9f23fd69cba50de4a",
+      "endpoint": "current",
+      "score_key": "b6591e449d2f70638d2bf052843e110cacd877f982ca8fa56c8fba96e0a13bf1",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "025246cb29c1e55194bcee824431efbe3231d5697c039bb9f23fd69cba50de4a",
+      "endpoint": "history",
+      "score_key": "abba7f98b2734f5aca8ae3004e36f97fae9d24fd834ea14d66bbed93320a49a3",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "1 + 2 ="
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "025b485fb96a0697b9a9721e3caaff0d5d4b37c81795a33b64b11c3b9f8ba5e9",
+      "endpoint": "current",
+      "score_key": "08f3a8b5d139c79c6481285ba0efde413950bbec1ee14b82d5ff4f042a92f043",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "025b485fb96a0697b9a9721e3caaff0d5d4b37c81795a33b64b11c3b9f8ba5e9",
+      "endpoint": "history",
+      "score_key": "ad9ff4adc2115f467d68dfc0c33cc0f806e47cb8518b6a50d16d5c2e18a7b1de",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "5 - 3 ="
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "025c33ac343151f9a4bd3e74b2cb3c283a7fea9c95b50b699526d4c730c45fd3",
+      "endpoint": "current",
+      "score_key": "9ce8db989c275c20699d23cdfac488b6441dc44f58970061b5a9f14fcf68124c",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "025c33ac343151f9a4bd3e74b2cb3c283a7fea9c95b50b699526d4c730c45fd3",
+      "endpoint": "history",
+      "score_key": "476a4beb7bddadaa39123aeb6d70c60a3edd0224f92b60f101f5855d282a4db8",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "check all buttons"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "02816867cf335c693585e5a095316ca6f9d43c077d50d0bf96052fe78567326e",
+      "endpoint": "current",
+      "score_key": "3d3db22664380dd3647da2e1047f881e3f94a6ee174c8acc5b0b4ec30565544a",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "02816867cf335c693585e5a095316ca6f9d43c077d50d0bf96052fe78567326e",
+      "endpoint": "history",
+      "score_key": "e3e4f28494ede0359e697c0fffee390e139d64250cd29cb92d35da9bdf44a37a",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "1 2 3  Clear"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "02b0ca9fdd92fcc48f8972fcc9f258b95f5a2e2f8dfc3fbcedd8cedc8a41c152",
+      "endpoint": "current",
+      "score_key": "87b4aefd941f7f7a12e619c8fbf91ef09a38bfd3ca8b39a303fd6ce9ce75d832",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "02b0ca9fdd92fcc48f8972fcc9f258b95f5a2e2f8dfc3fbcedd8cedc8a41c152",
+      "endpoint": "history",
+      "score_key": "8e4d69791146a2157379a975f763d55da9e3c1e208f0867bdc9233fbf4069b17",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "check all buttons"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "02cda3f4a1a97568bca4d8c6261195f7b787ac9b8caf402d0e8111fc847854bc",
+      "endpoint": "current",
+      "score_key": "7e118517a0a140f52383ed5952185fc069cd187c5eb4cc1139f3fffa6a5ff0b5",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "02cda3f4a1a97568bca4d8c6261195f7b787ac9b8caf402d0e8111fc847854bc",
+      "endpoint": "history",
+      "score_key": "c56d558dca282a80d89757864dca1726260547a948ce024efa5954022cb81d9b",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "check all buttons"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "02f70e3fd0c8995ab4dc1acc9d49511663b6cbac49b22b1a0276b0bedebc5731",
+      "endpoint": "current",
+      "score_key": "055d90d04c2f9efdfadd7ab4917f91d5ccebf643088e9a14993594b316a0a78a",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "02f70e3fd0c8995ab4dc1acc9d49511663b6cbac49b22b1a0276b0bedebc5731",
+      "endpoint": "history",
+      "score_key": "b412cc3420f4f065b2987564652710182ef11b3fcfca603377cbee32dce54a39",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "check all buttons"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "035b329b5d3a42c9f8d51fc3e7c2cf4482665834e130a4522b36643195ae7662",
+      "endpoint": "current",
+      "score_key": "e5b48dcb664d584526ad4f9fecb44bca4b0543b6f8a64d9f6bd67c41af2e66c6",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "035b329b5d3a42c9f8d51fc3e7c2cf4482665834e130a4522b36643195ae7662",
+      "endpoint": "history",
+      "score_key": "3dac19f7f362b644724fbbe01a21235f2650ea3a537cd237b643ec6824fc5631",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "1 2 3  Clear"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "038e7143c941d390ae940186e230a41c2b95944b62971bd346066d2fb6e32409",
+      "endpoint": "current",
+      "score_key": "1f43daa345a203c2b07e90893265e804dc04ac0f186f4d38f88ff59f77987b83",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "038e7143c941d390ae940186e230a41c2b95944b62971bd346066d2fb6e32409",
+      "endpoint": "history",
+      "score_key": "e6cce942320b3eb59314c6be0f5510d96b50375ddbd1324ca82fc7c48c09d22f",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "check all buttons"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "03a46f4cc4bdb9ffc6522be047fb93fa0e8c2952d4843a9415ba7b5428f601b7",
+      "endpoint": "current",
+      "score_key": "958d8c0690718a2b89cf3184f6c287c5e947ff39daeee27aac047572a35a4397",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "click history-items"
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "03a46f4cc4bdb9ffc6522be047fb93fa0e8c2952d4843a9415ba7b5428f601b7",
+      "endpoint": "history",
+      "score_key": "60a6fc81a33bba04c0c8cfbc0c9a8054763d2269243306795fb1bfae9a51aa8a",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": "1 2 3  Clear"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "endpoint": "current",
+      "score_key": "7897d1085358a8a9536f9759ca6dd8043834c6bd8951f7deb350fbd93c26c676",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "endpoint": "history",
+      "score_key": "2aa4014da5ffefc580898d541536d369cf74d6aaa7463da352bcc407daae8889",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "fe85462d357c37cec7dd1b1647f37a4711b76f10fe3684d3e5aa9413eaea42eb",
+      "endpoint": "current",
+      "score_key": "43fb70d231abfac94572cf5dc62bd7226b2644a2bf78916e7d9d89860aa22f6b",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "fe85462d357c37cec7dd1b1647f37a4711b76f10fe3684d3e5aa9413eaea42eb",
+      "endpoint": "history",
+      "score_key": "eb1b5e91fc2d17b215a690b22bd06803c6b1cede6a5271516526db448459f924",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "2b9fcac5ebdc8619c03ff1a597e3103ffad9adb0daf5c75642049da7be31f9b4",
+      "endpoint": "current",
+      "score_key": "c60a37269cf1b001442109c132fb53b4b7234534e273e836435d6dc4cc599bb8",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "2b9fcac5ebdc8619c03ff1a597e3103ffad9adb0daf5c75642049da7be31f9b4",
+      "endpoint": "history",
+      "score_key": "ed3d448d7fd9fed5bd1637825eaca91f220c4414d917e5bcf882b1a31672efb9",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "00ca4c323708e1bc86bcfb73559384b73b322bf6df52e632caa087969d327077",
+      "endpoint": "current",
+      "score_key": "1184ad2f503edaee933d5c594622146386c03d73e721ae5fb517277df29f2d72",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "00ca4c323708e1bc86bcfb73559384b73b322bf6df52e632caa087969d327077",
+      "endpoint": "history",
+      "score_key": "e87425978805f99e4da93e1e752dc6bcb4dd35c0573045132573f927ff4e6bb3",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "15f8bbe00ead19a79a011e0fa45e8ec60fbfa9183c5f6bdaaa019888a561df21",
+      "endpoint": "current",
+      "score_key": "e14e68b062b5e622724388a295b5fd8ad024324abc772f2f30e24dbe1187c0ab",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "15f8bbe00ead19a79a011e0fa45e8ec60fbfa9183c5f6bdaaa019888a561df21",
+      "endpoint": "history",
+      "score_key": "ba539b69f3315dfa1454b94a77aaf3fb53afdedf667dadaedea173fbf7077d53",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "183c40bb3d4d65b5813dc8d64668138d8d9f3427d45b6ef54681d47999855a97",
+      "endpoint": "current",
+      "score_key": "1b47ac55fb35b1d3bb8a2bd6dd32c86a2a0c6227e276c245367f2ec6a55a8514",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "183c40bb3d4d65b5813dc8d64668138d8d9f3427d45b6ef54681d47999855a97",
+      "endpoint": "history",
+      "score_key": "f823c1ebe606ff56a92c674dfd56906ee66daaf1d164b3fcd36fd52107e67537",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "18bc44b84b44e05487af6748b92d5e8f5a63723f812be27824ce5c8b73e5db47",
+      "endpoint": "current",
+      "score_key": "fbaabe68987750a892b25be505a830ef6a5e0e6196014565ffc57d5b16a58962",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "18bc44b84b44e05487af6748b92d5e8f5a63723f812be27824ce5c8b73e5db47",
+      "endpoint": "history",
+      "score_key": "523ac1395bdd4d3f65f039995948c4831b652b9655722fea329174555ef21684",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "1a9099d2aea32edea131cbea35aa8b2177ce7f2faa21b2622202dfa18554fe2f",
+      "endpoint": "current",
+      "score_key": "f73667bf272f9a302302690c5dd297ea613286d91281d4567de12a4ddde005b1",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "1a9099d2aea32edea131cbea35aa8b2177ce7f2faa21b2622202dfa18554fe2f",
+      "endpoint": "history",
+      "score_key": "082d167a9dc8698b356e07127f42b3adfa742db7ba7e6033b6ce750bbf45b44e",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "1ac7398e1d6c30002d4bbdc285633d02ccc145af3c30ea23cda6be8d5707cf3c",
+      "endpoint": "current",
+      "score_key": "aa37b742ff4ec96781e2ebc758c89e9299f7a20a83250bbf884fa727161e4354",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "1ac7398e1d6c30002d4bbdc285633d02ccc145af3c30ea23cda6be8d5707cf3c",
+      "endpoint": "history",
+      "score_key": "9d4e8826096c8979cbdf7cb385dfe05054f3d69c271e493c7a2fc1bc443351f4",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "1b0ac9669f76efe61648abf3bff8b8856c3893c4ba804fccd76d705acecffca7",
+      "endpoint": "current",
+      "score_key": "fa4b807bcd8acaa21b015a75d1c0a86fd976994db4b72f0958a0bd569fe02bb4",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "1b0ac9669f76efe61648abf3bff8b8856c3893c4ba804fccd76d705acecffca7",
+      "endpoint": "history",
+      "score_key": "3654e0d5362abf1896002d756c0ae7fced0c2120c27ddeb4ddbb35073bbf1e92",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "1cb471b0ad2c28dc942f8e37c51bfeb870645d5e0343a63453be4bb5f22bcae9",
+      "endpoint": "current",
+      "score_key": "01810197cac090b32dc1e0e6f16e7f021e6f0b0be4cdcd9a4046e9d33707f2cd",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "1cb471b0ad2c28dc942f8e37c51bfeb870645d5e0343a63453be4bb5f22bcae9",
+      "endpoint": "history",
+      "score_key": "dd790c46b1dcbdcc7e945e14386274fe8516a0a3608bec7c7dcdbd5e1f01407a",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "1cf0e0b92834634b61a6a41b73ef9a506236a4bd939042aac1758165c33bcf08",
+      "endpoint": "current",
+      "score_key": "bde09ea524aa09c28e8fb8d4d0bcb6caaf1f1ebed19f2904d8256d1f5499c8be",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "1cf0e0b92834634b61a6a41b73ef9a506236a4bd939042aac1758165c33bcf08",
+      "endpoint": "history",
+      "score_key": "ba006ac85b9b9127778b0a28d1ea9608e12634e5d6323c11f75ae07a96fbbca8",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "1df6e176a0015844e10b39567d570004df09eeb492f4e97d430fff55f4045819",
+      "endpoint": "current",
+      "score_key": "c078831d6a63456032a505b0cc43de059236fe6860598a5ad9e72c2707cd5975",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "1df6e176a0015844e10b39567d570004df09eeb492f4e97d430fff55f4045819",
+      "endpoint": "history",
+      "score_key": "919dc4b23da65feafb4e4a103e7d94bda7a42e1b55f4d2afcc1c140ffa1e4a34",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "1e6413c1c597942e14eb415df9201b6c0815de6893749093dd33da428712e729",
+      "endpoint": "current",
+      "score_key": "8affb7586721ef03a906a0d80db0371430112f0e664f3548a5894ee834a4dd9f",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "1e6413c1c597942e14eb415df9201b6c0815de6893749093dd33da428712e729",
+      "endpoint": "history",
+      "score_key": "531e4b78b616ca3972ab90810f13024a2b83150311457b9e16e3028d1f6af099",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "299ae61d6dde8f5b28e8281bbf4c59cf30555cd23b21b99ec3b91f64626747cf",
+      "endpoint": "current",
+      "score_key": "20ba594aafd230d9c2fe9436d0e52db920bc278237f4433e1b5c7716067f09da",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "299ae61d6dde8f5b28e8281bbf4c59cf30555cd23b21b99ec3b91f64626747cf",
+      "endpoint": "history",
+      "score_key": "4215df0b475ed3410f5cf97f74591825adb1f37077c031462e9fdd67ce8d942c",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "2a74a5a59b2269105e61d8755f172a7052f416654d8c932fb2749793d321faaf",
+      "endpoint": "current",
+      "score_key": "ba7b5633a0c613d911893b28d3e674224c2034c095c62b579d725a3b42d06515",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "2a74a5a59b2269105e61d8755f172a7052f416654d8c932fb2749793d321faaf",
+      "endpoint": "history",
+      "score_key": "5c0e9b9196c63130c1fdaa4830b1a900ca99dcbff83f41f5adb23bce7aee24db",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "2ad8725a8dd6e7e91d85d3bf2c9334025f82ead69e6aa3d314cabefd0eaaa689",
+      "endpoint": "current",
+      "score_key": "4574649fa8f6ec1fe7f91e4155950233512b3631691d08093e674f1a06c9af58",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "2ad8725a8dd6e7e91d85d3bf2c9334025f82ead69e6aa3d314cabefd0eaaa689",
+      "endpoint": "history",
+      "score_key": "859c45f5021aa2c34bf9770a0c0ea31bf1f6d1cb3923a83b9770d7aa78526be3",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "3a9f38756dc378088e3be0afc4d48043995e0bdffdc3ea408e392559d4dd431a",
+      "endpoint": "current",
+      "score_key": "d0c727be7aeabd1c8e8e419ed415edfe61ff1e834682cf7086710bbfb8beb0b3",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "3a9f38756dc378088e3be0afc4d48043995e0bdffdc3ea408e392559d4dd431a",
+      "endpoint": "history",
+      "score_key": "4d86328c28a6480cb29aaeba75e35a2f704b3f30b8a8767028438c319a60fa7f",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "3dd2a2f5e5d3afbb027b2e92e430982a4548e9c09fdcfc33157b9e3c4c49da52",
+      "endpoint": "current",
+      "score_key": "8dbec1f13b9612e29148ce0acb0fe4261ca90826378bc2ad60b8ac7e639fde5a",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "3dd2a2f5e5d3afbb027b2e92e430982a4548e9c09fdcfc33157b9e3c4c49da52",
+      "endpoint": "history",
+      "score_key": "be845fdf8cabb57c78f0a3c75ffd568a5ba246813f5764281d48f50ddab09d8f",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "5db247a9911f7dbb869bdd7f27f57acc2d6cbe9d731ae50d16c8838febdc9f9b",
+      "endpoint": "current",
+      "score_key": "a2697bb921fac44a518d55d1f6dd9e00250de22649ccebbf2f360881ddc5c932",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "5db247a9911f7dbb869bdd7f27f57acc2d6cbe9d731ae50d16c8838febdc9f9b",
+      "endpoint": "history",
+      "score_key": "8a769ac6cf2b3cfdafd44a6d82a1a0dcc99e3eaec1f416865913c4d82f624951",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "70998619780488b73db16d5d5b0d54b2f620c77897669cb6a706dac79ea11bb2",
+      "endpoint": "current",
+      "score_key": "bc72e027e97f1cbb2afe22e3e9cb09af36b41731e6522287b1700564468a4b33",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "70998619780488b73db16d5d5b0d54b2f620c77897669cb6a706dac79ea11bb2",
+      "endpoint": "history",
+      "score_key": "3f5e07758a5e9a7991fb9a7f4143d0287de0fbb492ccf246400e47ca346b7f69",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "72ad62d9bf35296c68cedc7d5048eb39521e988ea7c124952bbdb0ffbfc82bbd",
+      "endpoint": "current",
+      "score_key": "2ed5b6ea65df4ebb1747922d456d9976b945d7c81d7d2bb0b90cf1be4fd0a517",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "72ad62d9bf35296c68cedc7d5048eb39521e988ea7c124952bbdb0ffbfc82bbd",
+      "endpoint": "history",
+      "score_key": "979d85c13141740b50ac3a38c64338b9356f7749ce14f11252b0a8ac829ddd4c",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "74506306f86d4f879556ff6571b684808853538fb4ed7a1f41da11a12d3cd218",
+      "endpoint": "current",
+      "score_key": "8f223a952703f55a296f4cb8074bc609c169ef0b04154709cb7439183ff03a82",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "74506306f86d4f879556ff6571b684808853538fb4ed7a1f41da11a12d3cd218",
+      "endpoint": "history",
+      "score_key": "2584bfbec12bc7f1e1f1d54384191345d0f206d43c0ad0e819368c5ffeff464d",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "7a336c2d723279d7dd6f5fce58670e3d6ae3e6de13691756488fe1418caa7047",
+      "endpoint": "current",
+      "score_key": "0157437e94ab316b5da152bb57bd709b03699cc2bea997e8426c69aa41a5c15f",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "7a336c2d723279d7dd6f5fce58670e3d6ae3e6de13691756488fe1418caa7047",
+      "endpoint": "history",
+      "score_key": "e879cfc9ac013733a10d2654caba3e87fffb2f49c5ed0181d71502f25754aebd",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "835129dcab5ea99aee406e65e2553332a7683866c72d1b4eec7a86b82474f3d8",
+      "endpoint": "current",
+      "score_key": "388d85e4d1c2aa1cbb89afc02b22c9a4a1e97b893ed80f8c29c10d3967190768",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "835129dcab5ea99aee406e65e2553332a7683866c72d1b4eec7a86b82474f3d8",
+      "endpoint": "history",
+      "score_key": "fa9ed55770858dcc885f7cca80448220810bdbb82bfa3fc9b12edaca7c6c0db1",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "915cd2a30575999eb7cc590c66fc0d6a3c757b033ac0866efe2514e01ed8836c",
+      "endpoint": "current",
+      "score_key": "f2dd4683114c346ce8e6cdd2434ad2ae6a0560366a53db8f665408a6385e5049",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "915cd2a30575999eb7cc590c66fc0d6a3c757b033ac0866efe2514e01ed8836c",
+      "endpoint": "history",
+      "score_key": "8048a2818f00135ba590d7e56b6313d2803c51bbe14dfb1536c110116bc87756",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "954a2b67125729627de23c44be3391a03b5f2b6856567e7164c4708a9d2f49c8",
+      "endpoint": "current",
+      "score_key": "0005b770d938a8ea1df4cde6fee0ed872a1105f251dd5bd84cb30cf155aa6642",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "954a2b67125729627de23c44be3391a03b5f2b6856567e7164c4708a9d2f49c8",
+      "endpoint": "history",
+      "score_key": "fa9d4677f57273f32d403c410a5de7a7dc9b17f9a4795bdc208737975173e464",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "976d3acdd3ea18ab2b3186aec6b1d64854dc737f0cf544ed4292c910d882e7f7",
+      "endpoint": "current",
+      "score_key": "60612c168330d2a77dfce5e17eecd905a82015d2ac21f3b3a2e783e434e2d330",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "976d3acdd3ea18ab2b3186aec6b1d64854dc737f0cf544ed4292c910d882e7f7",
+      "endpoint": "history",
+      "score_key": "35e73b3f82812fef62b70648e2739ad759036ac77146f12e866b4843a8b67346",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "a25a03fd54c5b994fbbbcab5cea1199c921091f1285e5a4cdb8bc99f12741056",
+      "endpoint": "current",
+      "score_key": "cc0e95b1a4e9aa3dd06a0089cad9ec04167494588e73940b0fcff8bcbd858579",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "a25a03fd54c5b994fbbbcab5cea1199c921091f1285e5a4cdb8bc99f12741056",
+      "endpoint": "history",
+      "score_key": "206412d460b19c8fa1a6629b01825394f352e9155287cb81e65237c0106ebccc",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "a286a2f89d15ac20b9bdb0a14ec7e7164aae2aa59cc2205d066a2e581f02538f",
+      "endpoint": "current",
+      "score_key": "99a8752beaab7b88d97032b5cda0dc7e1c588db6d69a9e12e7ffb11a265f8bfb",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "a286a2f89d15ac20b9bdb0a14ec7e7164aae2aa59cc2205d066a2e581f02538f",
+      "endpoint": "history",
+      "score_key": "3a3b6988696ab3b57c3182c86294be2c75e5ce32af517aaa594dad9e0848e19c",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "aaeeb70c2be62f42a8be5a1e8e865e27cee20f4002433092fae0ac4fe717713d",
+      "endpoint": "current",
+      "score_key": "01ebe00abc336887ed9fef5733fdca2d4db41ae4a10967d0ac5669bafdcd316f",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "aaeeb70c2be62f42a8be5a1e8e865e27cee20f4002433092fae0ac4fe717713d",
+      "endpoint": "history",
+      "score_key": "497d9e64ee1e434a72a438d5841ceb93daa21b7a5cd8d089994206bd03bfb261",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "ac0d961bb56f8a7d02e28688e021b2a34b2cd9250ef4104700c8df69b1ad1726",
+      "endpoint": "current",
+      "score_key": "5a8ba7c064831e726a955dad1e0d4296b9968d53f2abfe7179c4f69a57ef23ed",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "openai/gpt-5",
+      "plan_key": "ac0d961bb56f8a7d02e28688e021b2a34b2cd9250ef4104700c8df69b1ad1726",
+      "endpoint": "history",
+      "score_key": "267f18281fed39e84e60203bfc71c0415b10cbb1ea5d956aed98d0196416f357",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-1",
+          "title": ".menu show/hide(from table click)"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "599bca8d2d33591c06258980c21a81a245a3f6684101d013218600e0fab2284c",
+      "endpoint": "current",
+      "score_key": "28abedf9fc4663019677cff0b76bb60ee04cdc3171fee9ef202d98c8572ca322",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "599bca8d2d33591c06258980c21a81a245a3f6684101d013218600e0fab2284c",
+      "endpoint": "history",
+      "score_key": "bfe0a14000ec8db411e6e59b4da166f9e46d1f12795a813a036c0adba1ecabe3",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": "mouse down/move/up select a row of cells"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "58f4c6c1be668c2a5b38ee3d44d52a694eb3b2dda3c9684a768ec771ba5aa2eb",
+      "endpoint": "current",
+      "score_key": "955cfb0542e11541ee948d1a57617a8c9551622c74e90a03d036a995fe6dbce1",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "58f4c6c1be668c2a5b38ee3d44d52a694eb3b2dda3c9684a768ec771ba5aa2eb",
+      "endpoint": "history",
+      "score_key": "49d3411b7bf8e54ec78ea4a00a976d5dd61f1196672c0ff644bdeac935061e11",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": ".table structure"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "120b2948f73f29364eeb394e9a05bc96f0e2cc7e8fbc3d2e0e32fb33299e2a9b",
+      "endpoint": "current",
+      "score_key": "8548c7869551ff85ac76a2a4dc3cabb117edc5b46df277c657e42d5357bf6af5",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "120b2948f73f29364eeb394e9a05bc96f0e2cc7e8fbc3d2e0e32fb33299e2a9b",
+      "endpoint": "history",
+      "score_key": "a40bfb129499bc17372c0ea9ef63921cc5f712ca407acf16b306cbdb07cf5e45",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": ".table structure"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "171bf0068967f40dad87756375c03f04f49347cf12e160b54ca79c3da3771547",
+      "endpoint": "current",
+      "score_key": "e17cfe5f62122a18d7952bf01a607a93c3ea9b8095a1b72e7fc92343c61ed044",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "171bf0068967f40dad87756375c03f04f49347cf12e160b54ca79c3da3771547",
+      "endpoint": "history",
+      "score_key": "30047e85e20c5942d7566067c478c7bf5221dca904bd618b9ecae75d23f724cd",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": ".table structure"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "1e168cf2c20da25ca2aff2b1c9554be856a12bcb979c92dc8a374eaefdc8a7a3",
+      "endpoint": "current",
+      "score_key": "3680b4a1fa04816c8e0962edd7447e360cd501b979c0263b264c8c8714e11c8f",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "1e168cf2c20da25ca2aff2b1c9554be856a12bcb979c92dc8a374eaefdc8a7a3",
+      "endpoint": "history",
+      "score_key": "09012dba129f2ea4487919e78a943c488862d5808ee7228ff445bb918aa2b850",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": "mouse down/move/up select a row of cells"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "2124562405fd8d66627b21b0229762911578b3030eb297000c052005e83a7071",
+      "endpoint": "current",
+      "score_key": "707dbf038d6a252530a9ee0fce3aad888e42a45a014ed942f774f5a52aec3bd0",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "2124562405fd8d66627b21b0229762911578b3030eb297000c052005e83a7071",
+      "endpoint": "history",
+      "score_key": "ff9a63da1e093ce6f6f30ab6f1110a93bd3143de6b20cebe5a17f342aa87fb68",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": ".table structure"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "40f095b007b5dfd38b38859f17678bf16b0ab3df0f9a21eed4e68a62dab4ad64",
+      "endpoint": "current",
+      "score_key": "b48ceec24589baba793c67411599a396d735e9957d8b3f12c79ca47051f42c0b",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "40f095b007b5dfd38b38859f17678bf16b0ab3df0f9a21eed4e68a62dab4ad64",
+      "endpoint": "history",
+      "score_key": "e34ed3735493d5933406081dca845d88612c8d6458402cef7dfd8515aee61e18",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": ".table structure"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "4c2c2b992941a3c95aa72daf9c87b223f0d2b90d33a7cf0b740353db13478894",
+      "endpoint": "current",
+      "score_key": "0f555cd12c67606f63a9c0ebab7b75911a519d0c0491f2e617c62e90e0be59bb",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "4c2c2b992941a3c95aa72daf9c87b223f0d2b90d33a7cf0b740353db13478894",
+      "endpoint": "history",
+      "score_key": "58ae7e284ae655635d317179c70d6bb3b0f145dc7bbe36d70923fb2fc4fad712",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": ".table structure"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "5418dc1d4fa4499f6de63a875034063ac2360de1505cfcbf1e704f3a943435db",
+      "endpoint": "current",
+      "score_key": "19d462bd7b1c6d6439c990280c39f9edf74625fe319efdb175d6f182948253d6",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "5418dc1d4fa4499f6de63a875034063ac2360de1505cfcbf1e704f3a943435db",
+      "endpoint": "history",
+      "score_key": "ff2dcea3451ec74002932a9742d49625f08580cf11eb6ec817a7130d811360f3",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": ".table structure"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "61f447699e595f07a3e3b402d56eb99ac0ecc80cb9599032cb87d394255fa950",
+      "endpoint": "current",
+      "score_key": "1e8177820211d8d9598fa8029917ae91367d2f39751d3b1593adfed0a499425b",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "61f447699e595f07a3e3b402d56eb99ac0ecc80cb9599032cb87d394255fa950",
+      "endpoint": "history",
+      "score_key": "e848c453b5e91cba90277a10d7a143a364af11e782d7339fe312435a797fc4bb",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": ".table structure"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "66140cfbd1d804fb534b19c080a4f98de224c09febfa6f186299b497443b6e2a",
+      "endpoint": "current",
+      "score_key": "7e25c4266fbba70ef8543c428a34c6554a17582ff5a9a29f08c2a9a18f0b7d26",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "66140cfbd1d804fb534b19c080a4f98de224c09febfa6f186299b497443b6e2a",
+      "endpoint": "history",
+      "score_key": "8f377d60caff1e53c77a8408afdb2e6b16f0b4edeb9af10e16dee7bac5d596b6",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": "mouse down/move/up select a row of cells"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "95b406cb2bbf3144d05b905fcccf843c62253457e0662ec19fc55f78304a007b",
+      "endpoint": "current",
+      "score_key": "4d16e18d7d1e2b55d06069c261542602d2733d9d79744141041eb78f8720e9c5",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "95b406cb2bbf3144d05b905fcccf843c62253457e0662ec19fc55f78304a007b",
+      "endpoint": "history",
+      "score_key": "2517a49214185034ed7735b0b5c3bcae1e6b07a82727e555d95bd261142ffaa8",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": ".table structure"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "999823c639a84764db42a109ddb2f970405271955b482e8cd52a252033749a62",
+      "endpoint": "current",
+      "score_key": "93bf70577a98f093c3aeed46372c00d04deabc8fb5b516e0b15c861541a46072",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "999823c639a84764db42a109ddb2f970405271955b482e8cd52a252033749a62",
+      "endpoint": "history",
+      "score_key": "31bad1812dadcbb7bd2e7e2f5fde4109c4f2bfd78f570dc2239385d22e202095",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": ".table structure"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "9e5583d9cd6fe47ad302e1f8c139778046a9c8eb62dfaffd962cc94f10cf6733",
+      "endpoint": "current",
+      "score_key": "193f11e44156ca9b80340257081111ac57a62bb9369f9a3e4612fe4d3f8fd8e4",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "9e5583d9cd6fe47ad302e1f8c139778046a9c8eb62dfaffd962cc94f10cf6733",
+      "endpoint": "history",
+      "score_key": "af45f963a680b1cb092e2d8519714bc042fd30b8d77d2f0d94957f58d17a9a1c",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": "mouse down/move/up select a row of cells"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "a16bebb3ebc85759234abf117e7158f19274f8b9367b27e8fe7a08ff832d1918",
+      "endpoint": "current",
+      "score_key": "753a01573931fa3e8ef8395edd952120f805e1ca8d276a6a291687e08e0ceb1a",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "a16bebb3ebc85759234abf117e7158f19274f8b9367b27e8fe7a08ff832d1918",
+      "endpoint": "history",
+      "score_key": "094b0d5c7c82a96cb424993b0db90513f6bd273250fb0594bf5ce365e3bbe8e6",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": "mouse down/move/up select a row of cells"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "ad0f1b28b0c20e14b5a633c32dd42eb10db2ec1b50ec6fdd179fac8b3812e6a7",
+      "endpoint": "current",
+      "score_key": "e37a39620d4b4f4ebe737922bb58d47ea92fc46a712983db0034023fbab05409",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "ad0f1b28b0c20e14b5a633c32dd42eb10db2ec1b50ec6fdd179fac8b3812e6a7",
+      "endpoint": "history",
+      "score_key": "dfc19df8b18a872f6be980093aca7aab47515283b2388e5c1b04ce1a4da91902",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": "mouse down/move/up select a row of cells"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "b02398385249056ec16918a66147b27a109c447a4659d63276bf56e78aab0cb2",
+      "endpoint": "current",
+      "score_key": "a76a3f00adaad04afdf2f4cfd66e8936969434631f5903f0f5b232cea41dfcd5",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "b02398385249056ec16918a66147b27a109c447a4659d63276bf56e78aab0cb2",
+      "endpoint": "history",
+      "score_key": "dd040f76eaa34547b0bbed2955d29997e73f8dbed0a54c7885bf7c2bea8d47e4",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": ".table structure"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "b868a4ed83e17910c79d032e67cc863dc716fcb44f0190d7880f732952df8c41",
+      "endpoint": "current",
+      "score_key": "ed90a23710ce7ba9deefa91f76ffc2728d25a6e57cc1278bfd9b6b5ccdebb6b8",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "b868a4ed83e17910c79d032e67cc863dc716fcb44f0190d7880f732952df8c41",
+      "endpoint": "history",
+      "score_key": "748829bb4ac79865697fa959f20a4c731b950d4f0de3f30e661d30d85b94a189",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": ".table structure"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "b9369e669b67f0330fa788243c4d598c77b6e1b3c9cae96b2ae95d908b8e68cb",
+      "endpoint": "current",
+      "score_key": "876d808588f6f78002813ebee7a81afbca69a99fe8de907455633985d26a32d9",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "b9369e669b67f0330fa788243c4d598c77b6e1b3c9cae96b2ae95d908b8e68cb",
+      "endpoint": "history",
+      "score_key": "8e343ee733737b592df83707e4b895cd9a94e0da5cbb3bc420abe765ec58ce00",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": ".table structure"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "ba285a9b30a713204da8e28e1b2368cf685a496f035ba509605b1c718c2bd164",
+      "endpoint": "current",
+      "score_key": "66afe84502def5c05e365b85a7707a9f64a1e708b9fdcf90a17dfe785448b94d",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "ba285a9b30a713204da8e28e1b2368cf685a496f035ba509605b1c718c2bd164",
+      "endpoint": "history",
+      "score_key": "fac526ed1faf92fff23fd6cfc44e9f061fb1c2d92bc996ab36bff2e16e92097e",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": ".table structure"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "be52c337a446cf2f8df71898121d174c0bcbd2e0fe48a54555ee163e5ffe384a",
+      "endpoint": "current",
+      "score_key": "8364a712e173d98bd263536fa0b4eac3cc4e5576a5d573586600c2ef1b4e05de",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "be52c337a446cf2f8df71898121d174c0bcbd2e0fe48a54555ee163e5ffe384a",
+      "endpoint": "history",
+      "score_key": "3f7717a0ec35d7da5cecf1058c2ae96e5498d2fd91522fce4bbdd99c7d9a2b39",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": ".table structure"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "ca7a26f4955878550a28693ebde41005f148e03d1a486dded7172fdf599b26fc",
+      "endpoint": "current",
+      "score_key": "506f2a73c41597ef0b642ae5bb193ecca5b4b35cadf4ef37b4fc28a899ebd39c",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "ca7a26f4955878550a28693ebde41005f148e03d1a486dded7172fdf599b26fc",
+      "endpoint": "history",
+      "score_key": "6ed61e9eeee40b332d5dba5c8abc4f58c311284cc73cbc89b2928864f2c49985",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": "mouse down/move/up select a row of cells"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "d3797ebdd4f44a12b55dad8c16382af62dff456ce52f90c2bccec4ca57de07a6",
+      "endpoint": "current",
+      "score_key": "70d8fda0fdf6b394076a525842038a54e4b8decc16c020456fe78834e0daccf3",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "d3797ebdd4f44a12b55dad8c16382af62dff456ce52f90c2bccec4ca57de07a6",
+      "endpoint": "history",
+      "score_key": "7415b0057547e5f36aee6b73d84d4f9444528e9dfa5f81836f059ec26a022435",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": ".table structure"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "d8680ba763c04e12de40ab0bf4fce4be4e7fa57360556dadd0a08b2671fd405b",
+      "endpoint": "current",
+      "score_key": "ad9a88e424d2eaea5c3e30f600f0c82c08ee873a3e774466a709bc3d9360da96",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "d8680ba763c04e12de40ab0bf4fce4be4e7fa57360556dadd0a08b2671fd405b",
+      "endpoint": "history",
+      "score_key": "de6a9a074ab13f080ded2dc33ed1f23354a5450a11bf8ae470649315bab23115",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": "mouse down/move/up select a row of cells"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "d997b316fbc8ea4aab94c4ae5fd59202bd1a6611d5cf955fba11f3cedf5aaa53",
+      "endpoint": "current",
+      "score_key": "31d0d79598aded61d6071505fc6552d72b202e7979c2b3d24bc3ba6c60522d5f",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "d997b316fbc8ea4aab94c4ae5fd59202bd1a6611d5cf955fba11f3cedf5aaa53",
+      "endpoint": "history",
+      "score_key": "edb68018fc1f1731b5360591294937e7969785a02e26d17a96a4b8c640635fa0",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": "mouse down/move/up select a row of cells"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "dfe53642ad01869f97900b549728e4abb2a9ba382ad08481779910f6f0543f68",
+      "endpoint": "current",
+      "score_key": "67a46faa7d6fcb670b2d09a1070c453980d3f2063a95737a66e813495e6f07b8",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "dfe53642ad01869f97900b549728e4abb2a9ba382ad08481779910f6f0543f68",
+      "endpoint": "history",
+      "score_key": "1713ca181f93c448a8d8a658aaa6ef572a9e1e6cda763b112d210622baedcee0",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": ".table structure"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "e5af15d3af607bbc1eff39382451bdf0c12d3e3cd6988244641414f06e14dabf",
+      "endpoint": "current",
+      "score_key": "02625622e3cb18a6dc9cfcf11827383f478881c4f9cd95aab2003784d7510bf0",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "e5af15d3af607bbc1eff39382451bdf0c12d3e3cd6988244641414f06e14dabf",
+      "endpoint": "history",
+      "score_key": "b82911c21fdee5d9e61f4ed8e097c190ea8c9134a97673466ccc7be8f84a11f0",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": ".table structure"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "f1b0c29be44d2dcf412441868bf32855e9849f138290fb4e50f796cc764c0458",
+      "endpoint": "current",
+      "score_key": "3751b1312bb6692bcda5e7fcf4cd23e42294bcdef8bea8b334a4e7066ddd46d8",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "f1b0c29be44d2dcf412441868bf32855e9849f138290fb4e50f796cc764c0458",
+      "endpoint": "history",
+      "score_key": "931ccf626d3c624b8ab086586478d813a15510d626b97b05c3c8efe2d7e6dda3",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": ".table structure"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "f562663746ff56ca9c12ef92c41440b672e4543f0da48e5ebb2bc3af47b9da1a",
+      "endpoint": "current",
+      "score_key": "f79154bb33ddffa77f4f7376abc8fb060f34b4d31046a7ad3e58ff3fe08015b3",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "f562663746ff56ca9c12ef92c41440b672e4543f0da48e5ebb2bc3af47b9da1a",
+      "endpoint": "history",
+      "score_key": "93724e9b19dc7af5ffed5c6245cf7288bfca166a5fe5fbbfbd1baca17b8acd98",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "init",
+          "title": ".table structure"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "f9d135c28667fcf8894c11a41eb1829293ad4da229f6ad23c291a65d83593338",
+      "endpoint": "current",
+      "score_key": "2ceaf018814bf177d59c05f5913e00b4fd7a6d345b599cc9e880836efd35af6f",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": "sort menu-item"
+        }
+      ]
+    },
+    {
+      "project": "table",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "f9d135c28667fcf8894c11a41eb1829293ad4da229f6ad23c291a65d83593338",
+      "endpoint": "history",
+      "score_key": "44975c1c834349c41d236883f57a4be1abb0ee088a52a6390f049e422c510433",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": "mouse down/move/up select a row of cells"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "endpoint": "current",
+      "score_key": "f9d13fe51a99b9e844fd5c147cfec2fc211d5a3ca80307d0559a675ec5be7466",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "endpoint": "history",
+      "score_key": "8f342e0c18856aae2e3e1e67d5e1a0983b9a1f535687db21865de0478e08aa27",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "47068d50bcbde01cf6ce7b47342734fd232ffd34851a5ce48d99f439706089d3",
+      "endpoint": "current",
+      "score_key": "fbea45ca0401ba2b399336acdf2c0b80653dc5de8f57915f3bf655440fe5d447",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "47068d50bcbde01cf6ce7b47342734fd232ffd34851a5ce48d99f439706089d3",
+      "endpoint": "history",
+      "score_key": "320a003d6c587f60b77012709368b5404f121e7ff19b3ff1fba048876b4015b2",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "921c66c9a4b669a1a4d53aaa300d0316c2659c3d2a9d5b24099d0abc1bec5506",
+      "endpoint": "current",
+      "score_key": "f9d13fe51a99b9e844fd5c147cfec2fc211d5a3ca80307d0559a675ec5be7466",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "921c66c9a4b669a1a4d53aaa300d0316c2659c3d2a9d5b24099d0abc1bec5506",
+      "endpoint": "history",
+      "score_key": "8f342e0c18856aae2e3e1e67d5e1a0983b9a1f535687db21865de0478e08aa27",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "01c66956eb9ee94d2984d8eafa88fb053f3514ee273b5035a776ec4941dc0802",
+      "endpoint": "current",
+      "score_key": "2694ca036aaeb7aec4a01e8ef0fb26b7e18e2414f99ab3a8b2ab291e243f72ae",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "01c66956eb9ee94d2984d8eafa88fb053f3514ee273b5035a776ec4941dc0802",
+      "endpoint": "history",
+      "score_key": "8c1c7b9c5313039290f69882d7dcf682bc196dc1d642a58d421ee2d37326c299",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "03442278ca315c742e78130e71d17bf5d7985abf435a2249acd1368db122ade5",
+      "endpoint": "current",
+      "score_key": "fbea45ca0401ba2b399336acdf2c0b80653dc5de8f57915f3bf655440fe5d447",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "03442278ca315c742e78130e71d17bf5d7985abf435a2249acd1368db122ade5",
+      "endpoint": "history",
+      "score_key": "320a003d6c587f60b77012709368b5404f121e7ff19b3ff1fba048876b4015b2",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "036d11d732f1c0cfb4d0b405b397562d0bbd14ff1b6523bb90ff6bfa21d7825a",
+      "endpoint": "current",
+      "score_key": "c27ffd5cd21b598d7e2add7b9b45688c22f8f23d0d4bb70d40f3fc67a70d64bc",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "036d11d732f1c0cfb4d0b405b397562d0bbd14ff1b6523bb90ff6bfa21d7825a",
+      "endpoint": "history",
+      "score_key": "7ea5cebc0d7d0fbd957a5729a970d16ba3b978951a644728cc72aa94b0230332",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "03c0a864348a856431b9bb65c61cc6e4081a3561b12647aead144194201f6356",
+      "endpoint": "current",
+      "score_key": "f9d13fe51a99b9e844fd5c147cfec2fc211d5a3ca80307d0559a675ec5be7466",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "03c0a864348a856431b9bb65c61cc6e4081a3561b12647aead144194201f6356",
+      "endpoint": "history",
+      "score_key": "8f342e0c18856aae2e3e1e67d5e1a0983b9a1f535687db21865de0478e08aa27",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "0f4f87db4567232a7f1756aa1534ec1314777b39c3bf5209f87cf9739321cddc",
+      "endpoint": "current",
+      "score_key": "f9d13fe51a99b9e844fd5c147cfec2fc211d5a3ca80307d0559a675ec5be7466",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "0f4f87db4567232a7f1756aa1534ec1314777b39c3bf5209f87cf9739321cddc",
+      "endpoint": "history",
+      "score_key": "8f342e0c18856aae2e3e1e67d5e1a0983b9a1f535687db21865de0478e08aa27",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "1701bda3e4c03decc84f7455928e50feb6cb0550ad848d411f34eb7f70629c91",
+      "endpoint": "current",
+      "score_key": "f9d13fe51a99b9e844fd5c147cfec2fc211d5a3ca80307d0559a675ec5be7466",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "1701bda3e4c03decc84f7455928e50feb6cb0550ad848d411f34eb7f70629c91",
+      "endpoint": "history",
+      "score_key": "8f342e0c18856aae2e3e1e67d5e1a0983b9a1f535687db21865de0478e08aa27",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "1eb013340cdde6b0d33949683dda6a89778222e89beffe5e6e54bb5d74088c7d",
+      "endpoint": "current",
+      "score_key": "3b9580477338a65d74c19639a127d9b2a0b39a7d46e28adffcc28f6250b875a1",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "1eb013340cdde6b0d33949683dda6a89778222e89beffe5e6e54bb5d74088c7d",
+      "endpoint": "history",
+      "score_key": "36fb653e3b028dd49fd2f4b906ad97bb199688d07acb94a67de26fbb82f25d1c",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "23da510e6b8303e62cd5387bdb0f2ba3bf86da62a63b745eb52bdc167508ca2d",
+      "endpoint": "current",
+      "score_key": "2694ca036aaeb7aec4a01e8ef0fb26b7e18e2414f99ab3a8b2ab291e243f72ae",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "23da510e6b8303e62cd5387bdb0f2ba3bf86da62a63b745eb52bdc167508ca2d",
+      "endpoint": "history",
+      "score_key": "8c1c7b9c5313039290f69882d7dcf682bc196dc1d642a58d421ee2d37326c299",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "2ca51d18a5cf7f56b993a3b6e22d0d437625d61df05952733ecf8c65571186fd",
+      "endpoint": "current",
+      "score_key": "f9d13fe51a99b9e844fd5c147cfec2fc211d5a3ca80307d0559a675ec5be7466",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "2ca51d18a5cf7f56b993a3b6e22d0d437625d61df05952733ecf8c65571186fd",
+      "endpoint": "history",
+      "score_key": "8f342e0c18856aae2e3e1e67d5e1a0983b9a1f535687db21865de0478e08aa27",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "33aa5d87d9e81121f499daf527cfa227ab053e4b7c15fbddd7952e0a79b5142b",
+      "endpoint": "current",
+      "score_key": "540cd7eb89bd412e99ca784f1b3104960e6c45c766124a3906cc3daf61a92c6e",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "33aa5d87d9e81121f499daf527cfa227ab053e4b7c15fbddd7952e0a79b5142b",
+      "endpoint": "history",
+      "score_key": "e64d48f7abe16d2912a3e54358a15a5450acd1edaa477904888454cf358057d9",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "3763d9fcfea8b30113b6ecc492d465a69c90b6297b825013ed19f254062d6df8",
+      "endpoint": "current",
+      "score_key": "e9ce3e3b51df79b5b86eb5245c3659771785e2bac37589d96632adf497653737",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "3763d9fcfea8b30113b6ecc492d465a69c90b6297b825013ed19f254062d6df8",
+      "endpoint": "history",
+      "score_key": "cdf75a471aef8cc2ac2516271a4f532819df19b1b2dd456c3a2de6e3bf0fb163",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "37c270b655487cb43b67f367fa00d159dcb983be8a95b6b51165f6be4da1e25e",
+      "endpoint": "current",
+      "score_key": "3b368b0b81fbede4c4c681dfdda79052bd4c47e80774fc76e461a803aea41352",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "37c270b655487cb43b67f367fa00d159dcb983be8a95b6b51165f6be4da1e25e",
+      "endpoint": "history",
+      "score_key": "d9c0ee2c7e3385f55d0bad6f382bf9ba3c834bdb4054d17655607ee546bf3e9b",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "38d6f0d38c6e1ab7c28d42ba9fe0f27695691b580edba707412423b5180c3a4e",
+      "endpoint": "current",
+      "score_key": "f9d13fe51a99b9e844fd5c147cfec2fc211d5a3ca80307d0559a675ec5be7466",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "38d6f0d38c6e1ab7c28d42ba9fe0f27695691b580edba707412423b5180c3a4e",
+      "endpoint": "history",
+      "score_key": "8f342e0c18856aae2e3e1e67d5e1a0983b9a1f535687db21865de0478e08aa27",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "412d3ac9553d5fbdfc46a96bc11306d991889e374e51e323c1022eb34694fcaa",
+      "endpoint": "current",
+      "score_key": "a67a7d2c205372ed724127e0af392570f10c171016a1ebb41c9a2a8b843b1fd7",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "412d3ac9553d5fbdfc46a96bc11306d991889e374e51e323c1022eb34694fcaa",
+      "endpoint": "history",
+      "score_key": "c3abb8975f45456824b4e5a99ace36113dd86b28597756a6f0cfe6d113e82c12",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "47e4dc916cfd4bb3c6d1716c252fa1ff061a4767ef4e6f9bea7071f2c839e907",
+      "endpoint": "current",
+      "score_key": "9b78522ed06cd5dc68929850d7e499fbef1084749a75ab66189fae2f4c4c5a3f",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "47e4dc916cfd4bb3c6d1716c252fa1ff061a4767ef4e6f9bea7071f2c839e907",
+      "endpoint": "history",
+      "score_key": "90ea361f28f1eb3bd8ad5c4ec73dd848d663ef0623804f301ade799e84cf0616",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "4ed6ad30bb3ceac07763c719a6f6147085bd3806d49f3cf639aee1a16389abbb",
+      "endpoint": "current",
+      "score_key": "96386d7ab5befac9216f16e823b492d33ac1c7d3cda452b27f4c4e05efc5b3de",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "4ed6ad30bb3ceac07763c719a6f6147085bd3806d49f3cf639aee1a16389abbb",
+      "endpoint": "history",
+      "score_key": "d516ea44118102a12eee83fa65ae72a37336a1de06b34fd2f7bb943744de4038",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "52bf6607a356e5678fe81ec6004cb224cdd20e91e80b483021b99f7da26a47de",
+      "endpoint": "current",
+      "score_key": "fbea45ca0401ba2b399336acdf2c0b80653dc5de8f57915f3bf655440fe5d447",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "52bf6607a356e5678fe81ec6004cb224cdd20e91e80b483021b99f7da26a47de",
+      "endpoint": "history",
+      "score_key": "320a003d6c587f60b77012709368b5404f121e7ff19b3ff1fba048876b4015b2",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "55e5ef8288f873935a34af0b504f088be45f01081ccb62d0697bd179dbe337b2",
+      "endpoint": "current",
+      "score_key": "ccc2e4f1de5eddf1c630c38e5b4a33212400388da842184f3b57ffda1bdd01ac",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "55e5ef8288f873935a34af0b504f088be45f01081ccb62d0697bd179dbe337b2",
+      "endpoint": "history",
+      "score_key": "3bd663e6e01cb260ec22e7b5e57bd92b928ba0dd78127a85f4182adf7232c41b",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "57f32b5224ea10180ef4e96a6f77391246f3def75a54f7d79d2f6a8f6fde0d92",
+      "endpoint": "current",
+      "score_key": "31ff45fd607fa287fa6dcc7b29c923ce79480a7bed573d2e96076f03764cebbc",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "57f32b5224ea10180ef4e96a6f77391246f3def75a54f7d79d2f6a8f6fde0d92",
+      "endpoint": "history",
+      "score_key": "417178d8ac9f4a7249709386a37600d4b4f02bdd84409e901d93c9cd069fae9d",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "594a86a2b909840e9a86c75c261bb1c524729609d00491285127f4b97c17da5b",
+      "endpoint": "current",
+      "score_key": "f9d13fe51a99b9e844fd5c147cfec2fc211d5a3ca80307d0559a675ec5be7466",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "594a86a2b909840e9a86c75c261bb1c524729609d00491285127f4b97c17da5b",
+      "endpoint": "history",
+      "score_key": "8f342e0c18856aae2e3e1e67d5e1a0983b9a1f535687db21865de0478e08aa27",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "5a144362026506ecc2eb9c27027666eb51c4b0ed42f12cfbedc09e3c95716e35",
+      "endpoint": "current",
+      "score_key": "93d2cad7ffc86049e301fd27dc028984995f39c66b5623388f18db33a7c479b3",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "5a144362026506ecc2eb9c27027666eb51c4b0ed42f12cfbedc09e3c95716e35",
+      "endpoint": "history",
+      "score_key": "b93ad7c442bb8b1a945898d86aec1c1b0a6147baa4d16041d116b9c69d829ae9",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "61ca822e309be356071ea1668df5b3a667799333e4400c706a2e063e594af24a",
+      "endpoint": "current",
+      "score_key": "8fd410309e36ea499cdb828a37dd84e86b9584598fc398015aff5c91c31d74f7",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "61ca822e309be356071ea1668df5b3a667799333e4400c706a2e063e594af24a",
+      "endpoint": "history",
+      "score_key": "38a91e151fb0f99e3ac05163bc0f94d918ce4cd22ae2f420364459e0ba38b60d",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "62e293c7516bf6b90a4b89e8bedd0bdfaa7d047f3d69fddd5228506310909110",
+      "endpoint": "current",
+      "score_key": "f5f55b5def901476594867328bded94a5c700b60cbf377103ff3d379d7308f0d",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "62e293c7516bf6b90a4b89e8bedd0bdfaa7d047f3d69fddd5228506310909110",
+      "endpoint": "history",
+      "score_key": "0b3376efe5f1cce9830f833143acf35478b4c46cc1fdff236e2dadb537ed2379",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "63d27841827575c8cd468037b75bea5a8359842da0c69239ed5c39253415f341",
+      "endpoint": "current",
+      "score_key": "a123a428b24e7a6fb320c995f84f1566a6eb731f572dabc6c38ab0c87f05b2eb",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "63d27841827575c8cd468037b75bea5a8359842da0c69239ed5c39253415f341",
+      "endpoint": "history",
+      "score_key": "5b3b9bbc20d7e29fdf1c8e7424bf13507a5e651b8c3ba6ec53fd0b2a91fda4d6",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "676a17e7f487215d17728e4056e93c88912510859666aa9b2662a66c8bb38291",
+      "endpoint": "current",
+      "score_key": "22251776c4e4fc01feccc5c9cb7717406001a3c7493f7e6dcd7674af8887c4d5",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "676a17e7f487215d17728e4056e93c88912510859666aa9b2662a66c8bb38291",
+      "endpoint": "history",
+      "score_key": "2a6b67774f78d40f3cf6260dc2d9c45a2bdf80cad98e05bd8a32b8fe25196a5b",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "685351cbee858be5135051e76c461b3ce76dd49d066dae1749ee8dd1c8c70fb5",
+      "endpoint": "current",
+      "score_key": "987d085eb644af787211c526372999be7db28817801b4840065042cc60059a17",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "685351cbee858be5135051e76c461b3ce76dd49d066dae1749ee8dd1c8c70fb5",
+      "endpoint": "history",
+      "score_key": "7ff2ba732e0597064fc196c1a503d367cc40ffee932938cddabdefa1412cd0fe",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "6a60c1657ad4a9710626075ef6ec26d2282be59141465c65147f00158566067b",
+      "endpoint": "current",
+      "score_key": "1a0159ad563e5c859413db9ac6b521a92dc9cc70c69ac247b824ab7383b74c30",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "6a60c1657ad4a9710626075ef6ec26d2282be59141465c65147f00158566067b",
+      "endpoint": "history",
+      "score_key": "bf1bdee2025163eb9678eefcf2bdf63c1b1f422113ad6e284b984a47fac68849",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "712a8c0572bb9a63dd77b5170afba0d695a1d3b4b172c087fa75ebb9bf1cdc68",
+      "endpoint": "current",
+      "score_key": "ed653ad2971b30df2904de557ab955cefd19703a687017451a653ddceaf3d280",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "712a8c0572bb9a63dd77b5170afba0d695a1d3b4b172c087fa75ebb9bf1cdc68",
+      "endpoint": "history",
+      "score_key": "1d28995636fd5c451dee7651a95716120b0e941649bccd8853b4c0f7462635f2",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "754e11e0cbd31e70c8cf5616345714ba4b6fed4fbc737132d3099998b539a827",
+      "endpoint": "current",
+      "score_key": "987d085eb644af787211c526372999be7db28817801b4840065042cc60059a17",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword simple complex"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "openai/gpt-5",
+      "plan_key": "754e11e0cbd31e70c8cf5616345714ba4b6fed4fbc737132d3099998b539a827",
+      "endpoint": "history",
+      "score_key": "7ff2ba732e0597064fc196c1a503d367cc40ffee932938cddabdefa1412cd0fe",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "607ef300fd313f0afbe01475a080f569ed44619b6a0c74280f26b7d76ac5370c",
+      "endpoint": "current",
+      "score_key": "25678e899e184c9ec92900d1b4383158fabd3e0dc1acf50320c7bb47f8335d96",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "607ef300fd313f0afbe01475a080f569ed44619b6a0c74280f26b7d76ac5370c",
+      "endpoint": "history",
+      "score_key": "d2a19b8cadf149c674b6421d6a185f80bb825b4f2b5bae14e495cc595f485940",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "fe5273c873236282413a30f0ccc2b33d852fed96aa2399afad8c38855b6ff22e",
+      "endpoint": "current",
+      "score_key": "3c36140e1c5df67117260d2343d72c16db4d3a4e6c6ba797d1c5b0adda974ad9",
+      "compile_error": null,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "fe5273c873236282413a30f0ccc2b33d852fed96aa2399afad8c38855b6ff22e",
+      "endpoint": "history",
+      "score_key": "b1c9417816e6b3da6a4dd85b814ae16935b639ede8ae4737eb8cc0b787a76f33",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "039243ab90cae79a788db5922d4fe528615d07b1c0db1b24ff5bf33ffb48dcd8",
+      "endpoint": "current",
+      "score_key": "25678e899e184c9ec92900d1b4383158fabd3e0dc1acf50320c7bb47f8335d96",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "039243ab90cae79a788db5922d4fe528615d07b1c0db1b24ff5bf33ffb48dcd8",
+      "endpoint": "history",
+      "score_key": "d2a19b8cadf149c674b6421d6a185f80bb825b4f2b5bae14e495cc595f485940",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "040b16d668dcf2c7c7af3094b450e0f008f4b5715ea1b71d168a445107d24be1",
+      "endpoint": "current",
+      "score_key": "0c779f53626668c1826ca90249387f54ac9f018a437d4f4e0fddd1d93e2bc857",
+      "compile_error": null,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "040b16d668dcf2c7c7af3094b450e0f008f4b5715ea1b71d168a445107d24be1",
+      "endpoint": "history",
+      "score_key": "181da1f528481adc71598af354a81d9341b394735751eabfa07a313c00ac5812",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "061780a8f59130389f9a66e52e37d2ddf6497ed8efba3cd5bf80c19bdd4d8320",
+      "endpoint": "current",
+      "score_key": "f1a80e0147915bf4ea07800ee32c91dbb80ff7f7b256d94d172ed6db44fd9c31",
+      "compile_error": null,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "061780a8f59130389f9a66e52e37d2ddf6497ed8efba3cd5bf80c19bdd4d8320",
+      "endpoint": "history",
+      "score_key": "128095ffa357bccb8cd262acd627b6fd2b024806f2acbc60217c1591504055ca",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "0835840475c249ae0bbfad211f5c79cb2432d4fd153165009f7f2a4f7b1f9e02",
+      "endpoint": "current",
+      "score_key": "120c0e06241c62bac7e4fb7c9f49abb64e703f6bd08b64ce023d033da20ffb88",
+      "compile_error": null,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "0835840475c249ae0bbfad211f5c79cb2432d4fd153165009f7f2a4f7b1f9e02",
+      "endpoint": "history",
+      "score_key": "4849a08340b85701eb1a3f17f4d560da331acaedd059158f7b8f22a1f11505fd",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "0c8b855cd43eaf7f013396a0deec2ea9dc9cb8416d58782afed435fcdaf91487",
+      "endpoint": "current",
+      "score_key": "0019e2f33ed95c29d0c2dbecc0c71a6c5a7c49d55ebe7a19d6822321f4e45835",
+      "compile_error": null,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "0c8b855cd43eaf7f013396a0deec2ea9dc9cb8416d58782afed435fcdaf91487",
+      "endpoint": "history",
+      "score_key": "0da4fd33176c0bacdd332d7981f406b0743e652ba0da0afe348bc439ff64f9ec",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "0e1a226677a718ef4a15162f1a787621b01336a643f17058c4d674b39198af88",
+      "endpoint": "current",
+      "score_key": "b4025d60df1841f7cbfa24a9286258e64bdc755d14648be8cb4ad5faf127e887",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "0e1a226677a718ef4a15162f1a787621b01336a643f17058c4d674b39198af88",
+      "endpoint": "history",
+      "score_key": "ec627db5ad2ad067822c0a6d8201e1937ac97c55389670de155528fde4cf072c",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "115dd9a06ec87aafc98e300ac79e617173b90936704f46f344ac9401b6989c94",
+      "endpoint": "current",
+      "score_key": "64c645b01918ba67c810a2bdd782c7ea05af13480ae258d28ac4f3959255a5af",
+      "compile_error": null,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "115dd9a06ec87aafc98e300ac79e617173b90936704f46f344ac9401b6989c94",
+      "endpoint": "history",
+      "score_key": "59f5c7d194c691b843257822177133307c114ed732f4a3474d82b56983818bef",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "17e08a4384a998157f1739c65c778e531e83401f71beef467498422067b2430e",
+      "endpoint": "current",
+      "score_key": "3c2bf214e7f7fb30e605b13988510ed85772da6e79eae805b37865ee370c3bab",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "17e08a4384a998157f1739c65c778e531e83401f71beef467498422067b2430e",
+      "endpoint": "history",
+      "score_key": "bdc221132bf3bcdc5eb93c930ff5d0de06e8fbbe990bd7e0f369967a02d379d7",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "1ef1398b5fff98bebb587f90c387af339dd5e3468760b8858d6d17bd6d70b609",
+      "endpoint": "current",
+      "score_key": "410ab283073a4409e20a4fc35470b49120851f78bc5c718159511049fae9a203",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "1ef1398b5fff98bebb587f90c387af339dd5e3468760b8858d6d17bd6d70b609",
+      "endpoint": "history",
+      "score_key": "465dcabdfafb440e40c8263e9ad6a6140350156746060a186ef1ca279e7f4693",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "222bddf114e545914cf1a7f653803ff01c2a8cf334491f8c32260aa748227607",
+      "endpoint": "current",
+      "score_key": "42d1bd89e88659db77a600e4798da85274ad73060143c08753d06c4028a6a9bb",
+      "compile_error": null,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "222bddf114e545914cf1a7f653803ff01c2a8cf334491f8c32260aa748227607",
+      "endpoint": "history",
+      "score_key": "d88505edf1426ab275c679f46328ac2df25d46e4fb3358ff610ba197a98a0285",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "25c54586d91b1a918c5e92d603f7d73940712ce03b91234054c0a2333e7803bb",
+      "endpoint": "current",
+      "score_key": "6e6ff8e1d5f4667b6de825f202a55628058467d8e8c05faea9cd24cbdf889f4d",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "25c54586d91b1a918c5e92d603f7d73940712ce03b91234054c0a2333e7803bb",
+      "endpoint": "history",
+      "score_key": "6c9c7d2caa3f64791a80bf4975fd385e5a592321d5db2ec78e31e0ec01883c1b",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "29786405bd0545a5cce43640d073b1781be7f2d5612f6346e6964abbd1f43e1a",
+      "endpoint": "current",
+      "score_key": "992b7861807f11013dcd6b3af76c792dac6c26c70f85feabdaefc2fa8e35e81e",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "29786405bd0545a5cce43640d073b1781be7f2d5612f6346e6964abbd1f43e1a",
+      "endpoint": "history",
+      "score_key": "5ee49b8e26d6df7d81c1e8fd8b557c8712b04457ab65387981195ab4fc0518f7",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "29d59c82476dd7143051be4aaa9cc1355089d27a9bf0bf6d325ff003c6e6d1e7",
+      "endpoint": "current",
+      "score_key": "466d8f4e0258f77cc7c5565ee666256967dc686901816633dd36b23e43ccea44",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "29d59c82476dd7143051be4aaa9cc1355089d27a9bf0bf6d325ff003c6e6d1e7",
+      "endpoint": "history",
+      "score_key": "b9af0e07d2b496bc713733d86fdfda0e542ef3e3dc9269293272089e77eca9c9",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "30ccc43993065fe3e5ebb90b3226471bb284f12599f36af0596559899014a3b4",
+      "endpoint": "current",
+      "score_key": "51f43d81030e7432b246f2747d4e652011262af07a0ed13f35d92fd785afe3a8",
+      "compile_error": null,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "30ccc43993065fe3e5ebb90b3226471bb284f12599f36af0596559899014a3b4",
+      "endpoint": "history",
+      "score_key": "650c0f7e07bfc1160713ac048a110b76e0c2430bd0e5d385c1a8c5a85d1d776c",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "35df4f588b4e115f92a4c84d96d9c91787ab7110f554f55e80bbb7bb1446d0e8",
+      "endpoint": "current",
+      "score_key": "7d523d5625fad480242ccaa5ff50439852f4f608cb979eacd3dfb51c7bf1befb",
+      "compile_error": null,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "35df4f588b4e115f92a4c84d96d9c91787ab7110f554f55e80bbb7bb1446d0e8",
+      "endpoint": "history",
+      "score_key": "739cf389e67455ea1071fa933038a8f490b28697759b5babdedb3d24ec79d751",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "436755ae81243fbc74c953ef2ce78ebeeb87468ad135882c547ae8c431034fd2",
+      "endpoint": "current",
+      "score_key": "9b1395436045aac8873f3c3d129501747ff3789479dcc25813746c2fc0447def",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "436755ae81243fbc74c953ef2ce78ebeeb87468ad135882c547ae8c431034fd2",
+      "endpoint": "history",
+      "score_key": "1d12e520a2be23b411f989f7a36576a595e515700b89f3ee4b7720b6c9ab4a53",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "4a34b5c86c49892c6aafc76a753ceaf57a45cd1ab6bd4ac510cd9a3fd34b16a0",
+      "endpoint": "current",
+      "score_key": "38455f452905d0c3a772fa110ae0d4f48f4b9c24669a347bb2247a4aca6c5d6f",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "4a34b5c86c49892c6aafc76a753ceaf57a45cd1ab6bd4ac510cd9a3fd34b16a0",
+      "endpoint": "history",
+      "score_key": "067a9a6c65dd56b2b153dbf6a9a0e2210bd1ffa1762d1232821a6ca5bceaa85c",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "4f892d439bdfe5f5442879c5625d4cbbc8ad658acf5aa2422d9520973471f54b",
+      "endpoint": "current",
+      "score_key": "45349b29d940c4a26b9416092956370c4e8acb7c793d682748a2bf864b6f328b",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "4f892d439bdfe5f5442879c5625d4cbbc8ad658acf5aa2422d9520973471f54b",
+      "endpoint": "history",
+      "score_key": "01bbf1170a09ed50e3ce018c3d49b6d5171f4f31c923f89098417b069c49ccc4",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "50552337b6a7356617edc47e86565ff4c3f9f9135f4043bb9516de7188cec9f4",
+      "endpoint": "current",
+      "score_key": "42dacf8276dbb0368b722138322e01e77ce3242d250e09f1dccbea071a64d934",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "50552337b6a7356617edc47e86565ff4c3f9f9135f4043bb9516de7188cec9f4",
+      "endpoint": "history",
+      "score_key": "9a2b2919661bbc8c31fac7701c4f4cd5ba147a44f2de5e984571f765fb5a7c9d",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "50fb8a1c896a1d697d060aff9be2aae975e919e9e5b072f57ae0ebd1b39d1e5a",
+      "endpoint": "current",
+      "score_key": "58e90989d6ccc6bb1dc2ebd652acddc80da8bea6fb6555de1f7c5fe627f44c98",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "50fb8a1c896a1d697d060aff9be2aae975e919e9e5b072f57ae0ebd1b39d1e5a",
+      "endpoint": "history",
+      "score_key": "19d401485fc8b8db7c606d6a3bf1512b24b202e30b6ba6d27664129a301e2870",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "589d06c0b5e9b2d11df3b0c5e44d604b817ee75a0a5669748ccba42618d40f18",
+      "endpoint": "current",
+      "score_key": "c954d61ef4c5423b7d1f3de3a0086d69af68b88183fe7d26863c3ddef7235324",
+      "compile_error": null,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "589d06c0b5e9b2d11df3b0c5e44d604b817ee75a0a5669748ccba42618d40f18",
+      "endpoint": "history",
+      "score_key": "15f94ba8d7ed390f1a2829abdb31ec9e2c8b64037b2ef163d5b53508f6a688c0",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "59b7a556d955ad44ed2fb3bf62c5a8ab15861ea9c6e51f2acbfc984bfcb62276",
+      "endpoint": "current",
+      "score_key": "95e4bababa753d8a60c076500029c6b38d140e2e4f296a3d609d48d3c2691133",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "59b7a556d955ad44ed2fb3bf62c5a8ab15861ea9c6e51f2acbfc984bfcb62276",
+      "endpoint": "history",
+      "score_key": "74e09776a5561165701461870c79a8de54c6983d3baa6ba690d380074b9f6737",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "5c5cd9b47fe739e58d712101dacd887b4a9c6cd01e133a2c3f5b451539b61c2a",
+      "endpoint": "current",
+      "score_key": "3dc3d0602155bc3a99d2a316bfe81b664c611c0aac8b18513447065e1a9d36d4",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "5c5cd9b47fe739e58d712101dacd887b4a9c6cd01e133a2c3f5b451539b61c2a",
+      "endpoint": "history",
+      "score_key": "40d40e2c127a453e8522c7824760b220450c9b557c2a2705e8ffeb5cd3011baa",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "613433afc6e85bc7cbb675b5fdee24f7b821b0bc041b198d7a8033faa31e9794",
+      "endpoint": "current",
+      "score_key": "2cef8bcd780c28075995b723b7aa88024817180ae9c2219a6ac33f269bd367dc",
+      "compile_error": null,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "613433afc6e85bc7cbb675b5fdee24f7b821b0bc041b198d7a8033faa31e9794",
+      "endpoint": "history",
+      "score_key": "d0d91d7f16f9419829322055d5a6e412db37b0a62478ee86e31d4e5cf92cddec",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "62cf2038b4b09c48c0ea8504f342f6cbfbca4b653443493939bd6ef252049d48",
+      "endpoint": "current",
+      "score_key": "e694045ac9d74ae620cb32527d12c528c7f83c37481ea607fe885b4706cfeb07",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "62cf2038b4b09c48c0ea8504f342f6cbfbca4b653443493939bd6ef252049d48",
+      "endpoint": "history",
+      "score_key": "69e2ccb47af821e49f4d6bc611d9ee51123247c79a566ca08067a904c416676c",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "67c767f08f3c5bf2dd00a4e0afa676e477bc6b63792179f26117ac92b368919d",
+      "endpoint": "current",
+      "score_key": "25678e899e184c9ec92900d1b4383158fabd3e0dc1acf50320c7bb47f8335d96",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "67c767f08f3c5bf2dd00a4e0afa676e477bc6b63792179f26117ac92b368919d",
+      "endpoint": "history",
+      "score_key": "d2a19b8cadf149c674b6421d6a185f80bb825b4f2b5bae14e495cc595f485940",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "6a0a3b286aabe3b91046abaedecad042ccbb429e09795c77e65fae84d19e6fa8",
+      "endpoint": "current",
+      "score_key": "750b3f0e4707aa1e4596d384145c07a3ed87f4ae2edb87c9317a822c99134456",
+      "compile_error": null,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "6a0a3b286aabe3b91046abaedecad042ccbb429e09795c77e65fae84d19e6fa8",
+      "endpoint": "history",
+      "score_key": "ae529676ac03a61d8cd55f2c8bd00dc8cc370e6d561df21d84b0dcc8860ed622",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu item click"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "6a3e29457303c0208a90a00c8122a4e5a427179568d5a20d0c0fbcaf2f2d442f",
+      "endpoint": "current",
+      "score_key": "d9e30d1095e494a5044c6addf12c22d79bd20fd72b56224024821bca06bac1cc",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "6a3e29457303c0208a90a00c8122a4e5a427179568d5a20d0c0fbcaf2f2d442f",
+      "endpoint": "history",
+      "score_key": "992a8611395c60e158298503e64e3c54b34c203a957aa2e9f2c941b853bdbb74",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "6a58e8640a74976778ac7af3fac7b9eb3e6ead36c28b0aba2eea28934b632c70",
+      "endpoint": "current",
+      "score_key": "c234437c5118ee335011dd4c1ea124cbe11049a7bddc13cfc0ab98e109e4a42e",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "6a58e8640a74976778ac7af3fac7b9eb3e6ead36c28b0aba2eea28934b632c70",
+      "endpoint": "history",
+      "score_key": "9e798b7ba11eafcac9db7a9364465ce7b1f866f7634d42f12dbad9d3d0ad8cdb",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "6fc72796f2c5f859471e859c85e5dc160eb3e5814b02ef3a6eaa137576d7363b",
+      "endpoint": "current",
+      "score_key": "737ce34fad92175494c2bbc50bb139adc71875efbe815b3cba1cd9db1d14422e",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-20",
+          "title": ".keyword"
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "plan_key": "6fc72796f2c5f859471e859c85e5dc160eb3e5814b02ef3a6eaa137576d7363b",
+      "endpoint": "history",
+      "score_key": "99119b579b08155fde2ce5fa7df31aaa1c0cfaa7ca970c423645283a881441cd",
+      "compile_error": null,
+      "passed": false,
+      "failures": [
+        {
+          "file": "task-10",
+          "title": ".back menu"
+        }
+      ]
+    }
+  ],
+  "scope": "Five libraries; deterministic bounded single-change search around three anchors, including non-Boolean values, optional omission/insertion and arrays. Task-20 current and complete-history endpoints only. BOM current-file passes include a known vacuous-test risk and are not feature-correctness witnesses alone. No uniform full-schema sampling or impossibility bound. Original 53/120 and 14/120 witness snapshots unchanged."
+}

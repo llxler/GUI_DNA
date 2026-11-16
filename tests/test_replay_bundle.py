@@ -57,6 +57,19 @@ def test_nov14_snapshot_keeps_old_exports_separate_and_includes_scoring_sources(
 from test.ledger_read import calls, totals
 
 
+def test_nov16_export_includes_generation_schedule_and_separate_scoring_pages(tmp_path,monkeypatch):
+    from test import export_replay_bundle as exporter
+    stage=tmp_path/'artifacts/matched-feedback-20261116'
+    page=stage/'runs/project/candidate/version-0';page.mkdir(parents=True)
+    (page/'custom.payload').write_text('candidate source')
+    (stage/'inputs.json').write_text(json.dumps({'jobs':[{'folder':'schedule-only'}]}))
+    (stage/'evaluation-inputs.json').write_text(json.dumps({'jobs':{'key':{'page':str(page.relative_to(tmp_path))}}}))
+    monkeypatch.setattr(exporter,'ROOT',tmp_path)
+    monkeypatch.setattr(exporter.subprocess,'check_output',lambda *args,**kwargs:b'')
+    assert page/'custom.payload' not in exporter.selected_files(expanded=True,library_repair=True,nov14=True,nov15=True)
+    assert page/'custom.payload' in exporter.selected_files(expanded=True,library_repair=True,nov14=True,nov15=True,nov16=True)
+
+
 def test_anonymous_ledger_preserves_costs_without_modifying_original(tmp_path):
     original, exported = tmp_path / 'original.sqlite3', tmp_path / 'exported.sqlite3'
     ledger = Ledger(original, .1, .09)
@@ -126,3 +139,37 @@ def test_shared_replay_source_requires_matching_hash_and_artifact_boundary(tmp_p
     (stage/'inputs.json').write_text(json.dumps({'jobs':{'key':job}}))
     with pytest.raises(ValueError,match='differs'):
         exporter.candidate_source_files(stage,allow_shared_artifacts=True)
+
+
+def test_frozen_runner_dependencies_are_retained_and_hash_checked(tmp_path, monkeypatch):
+    import hashlib
+    import json
+    import pytest
+    from test import export_replay_bundle as exporter
+    monkeypatch.setattr(exporter,'ROOT',tmp_path)
+    stage=tmp_path/'artifacts'/'example';stage.mkdir(parents=True)
+    metadata=stage/'scores'/'playwright-output'/'.last-run.json';metadata.parent.mkdir(parents=True)
+    metadata.write_text('{"status":"failed"}\n')
+    (stage/'snapshot.json').write_text(json.dumps({'sha256':{str(metadata.relative_to(tmp_path)):hashlib.sha256(metadata.read_bytes()).hexdigest()}}))
+    assert exporter.frozen_source_files(stage)=={metadata}
+    metadata.write_text('{"status":"passed"}\n')
+    with pytest.raises(ValueError,match='Changed frozen dependency'):
+        exporter.frozen_source_files(stage)
+
+
+def test_application_json_bytes_are_not_metadata_reformatted(tmp_path):
+    import hashlib
+    import pytest
+    from test import export_replay_bundle as exporter
+    asset=tmp_path/'files.json'
+    original=b'{"id":"gen-application-id","value":1}'
+    asset.write_bytes(original)
+    manifest=tmp_path/'source-manifest.json'
+    manifest.write_text(json.dumps({'files_sha256':{'files.json':hashlib.sha256(original).hexdigest()}}))
+    literal=exporter.literal_json_sources([manifest,asset],{asset})
+    assert literal=={asset}
+    assert exporter.sanitize_json(original,set(),literal_source=asset in literal)==original
+    metadata=exporter.sanitize_json(original,set())
+    assert json.loads(metadata)['id'].startswith('gen-anonymous-')
+    asset.write_bytes(b'changed')
+    with pytest.raises(AssertionError):exporter.literal_json_sources([manifest,asset],{asset})

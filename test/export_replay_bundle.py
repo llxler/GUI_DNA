@@ -33,6 +33,7 @@ NOV15_NAMES = {'history-replay-20261115', 'interaction-transfer-sources-20261115
                'interaction-transfer-run-20261115', 'interaction-transfer-controls-20261115', 'review-20261115',
                'interaction-union-20261115', 'development-feedback-20261115', 'container-replay-20261115',
                'history-tasks-only-20261115', 'linked-control', 'compact-pair'}
+NOV16_NAMES = {'matched-feedback-20261116', 'matched-feedback-frontier-20261116', 'matched-feedback-frontier-continue-20261116', 'schema-search-20261116', 'schema-search-continue-20261116', 'compiler-reuse-audit-20261116', 'review-20261116'}
 SKIP_PARTS = {'node_modules', '.git', '__pycache__', '.pytest_cache', 'playwright-output', 'test-results', 'playwright-report'}
 AUTHOR_NAMES = ('lxler', 'llxler')
 HOME_IDENTITY = re.compile(rb'/home/(?!anonymous)[A-Za-z_][A-Za-z0-9_.-]*')
@@ -78,6 +79,29 @@ def transform(value, call_ids):
     return scrub(value) if isinstance(value, str) else value
 
 
+
+def literal_json_sources(paths, source_paths):
+    """Identify application assets explicitly named by their source manifest."""
+    result=set()
+    for manifest in paths:
+        if manifest.name!='source-manifest.json':continue
+        for name,expected in json.loads(manifest.read_text()).get('files_sha256',{}).items():
+            path=manifest.parent/name
+            if path in source_paths and path.suffix in ('.json','.jsonl'):
+                assert hashlib.sha256(path.read_bytes()).hexdigest()==expected
+                result.add(path)
+    return result
+
+
+def sanitize_json(original, call_ids, literal_source=False):
+    if literal_source:
+        return scrub(original.decode()).encode()
+    try:
+        return (json.dumps(transform(json.loads(original), call_ids), ensure_ascii=False, indent=2)+'\n').encode()
+    except json.JSONDecodeError:
+        return scrub(original.decode()).encode()
+
+
 def walk_files(root):
     for directory, folders, files in os.walk(root, followlinks=False):
         folders[:] = [name for name in folders if name not in SKIP_PARTS and not (Path(directory) / name).is_symlink()]
@@ -101,11 +125,15 @@ def candidate_source_files(stage, allow_shared_artifacts=False):
             if not path.is_file():
                 raise ValueError(f'Missing saved candidate source: {path}')
             result.add(path)
-    for filename in ('replay-inputs.json', 'format-replay-inputs.json', 'inputs.json', 'scoring-inputs.json'):
+    for filename in ('replay-inputs.json', 'format-replay-inputs.json', 'inputs.json', 'scoring-inputs.json', 'evaluation-inputs.json'):
         index = stage / filename
         if not index.exists():
             continue
-        for job in json.loads(index.read_text()).get('jobs', {}).values():
+        jobs = json.loads(index.read_text()).get('jobs', {})
+        if isinstance(jobs, list):
+            # Generation schedules are lists; saved sources have their own manifests.
+            continue
+        for job in jobs.values():
             page = ROOT / job['page']
             if page.is_symlink():
                 raise ValueError('Unsafe replay page path')
@@ -127,28 +155,56 @@ def candidate_source_files(stage, allow_shared_artifacts=False):
     return result
 
 
-def selected_files(expanded=False, library_repair=False, nov14=False, nov15=False):
+def frozen_source_files(stage):
+    """Include exact dependencies required by the new full snapshot verifier."""
+    result=set()
+    for filename in ('snapshot.json','candidate-snapshot.json','shared-dependencies.json'):
+        index=stage/filename
+        if not index.exists():continue
+        for name,expected in json.loads(index.read_text())['sha256'].items():
+            path=ROOT/name
+            if path.is_symlink() or not path.resolve().is_relative_to(ROOT.resolve()) or not path.is_file():
+                raise ValueError('Unsafe or missing frozen dependency: '+name)
+            if hashlib.sha256(path.read_bytes()).hexdigest()!=expected:
+                raise ValueError('Changed frozen dependency: '+name)
+            result.add(path)
+    return result
+
+
+def selected_files(expanded=False, library_repair=False, nov14=False, nov15=False, nov16=False):
     names = subprocess.check_output(['git', 'ls-files', '-z', '--cached', '--others', '--exclude-standard'], cwd=ROOT).decode().split('\0')
     chosen = {ROOT / n for n in names if n and (n in ALLOWED_FILES or (Path(n).parts[0] in ALLOWED_ROOTS and Path(n).suffix in TEXT))}
     prefixes = RAW_PREFIXES + (('webbench-expand', 'heldout-composition') if expanded else ())
     for stage in (ROOT / 'artifacts').iterdir():
+        if stage.name in NOV16_NAMES and not nov16:
+            continue
         if stage.name in NOV15_NAMES and not nov15:
             continue
         if stage.name in NOV14_NAMES and not nov14:
             continue
-        if not stage.is_dir() or not (stage.name in RAW_NAMES or stage.name.startswith(prefixes) or (nov14 and stage.name in NOV14_NAMES) or (nov15 and stage.name in NOV15_NAMES)):
+        if not stage.is_dir() or not (stage.name in RAW_NAMES or stage.name.startswith(prefixes) or (nov14 and stage.name in NOV14_NAMES) or (nov15 and stage.name in NOV15_NAMES) or (nov16 and stage.name in NOV16_NAMES)):
             continue
         if stage.name.startswith('library-repair-') and not library_repair:
             continue
         for path in walk_files(stage):
             if path.suffix in TEXT | {'.sqlite3', '.png', '.jpg'}:
                 chosen.add(path)
-        if expanded and (stage.name.startswith(('webbench-expand', 'heldout-composition', 'library-repair-')) or (nov14 and stage.name in NOV14_NAMES) or (nov15 and stage.name in NOV15_NAMES)):
-            chosen.update(candidate_source_files(stage, allow_shared_artifacts=nov15 and stage.name in NOV15_NAMES))
+        if expanded and (stage.name.startswith(('webbench-expand', 'heldout-composition', 'library-repair-')) or (nov14 and stage.name in NOV14_NAMES) or (nov15 and stage.name in NOV15_NAMES) or (nov16 and stage.name in NOV16_NAMES)):
+            chosen.update(candidate_source_files(stage, allow_shared_artifacts=(nov15 and stage.name in NOV15_NAMES) or (nov16 and stage.name == 'schema-search-continue-20261116')))
+        if nov16 and stage.name in NOV16_NAMES:
+            # A frozen dependency may be metadata inside an otherwise excluded
+            # runner-output directory or a specific locked npm package file.
+            chosen.update(frozen_source_files(stage))
         if nov15 and stage.name in ('container-replay-20261115', 'container-replay-20261115-uid'):
             chosen.update(walk_files(stage / 'inputs/pages'))
             dockerfile = stage / 'context/Dockerfile'
             if dockerfile.exists(): chosen.add(dockerfile)
+    if nov16:
+        # Independent replay executes the retained matcher probe without a new
+        # npm install. Keep its three locked packages, not browser binaries.
+        runtime=ROOT/'artifacts/webbench-expand-runtime-157/node_modules'
+        for name in ('@playwright/test','playwright','playwright-core'):
+            chosen.update(walk_files(runtime/name))
     if (ROOT / 'artifacts/budget.sqlite3').exists():
         chosen.add(ROOT / 'artifacts/budget.sqlite3')
     if nov15:
@@ -171,7 +227,10 @@ def selected_files(expanded=False, library_repair=False, nov14=False, nov15=Fals
                          'replay-bundle-20261113.json', 'replay-validation-20261113.json',
                          'replay-bundle-20261113-final.json', 'replay-validation-20261113-final.json',
                          'replay-bundle-20261114.json', 'replay-validation-20261114.json',
-                         'replay-bundle-20261115.json', 'replay-validation-20261115.json'}
+                         'replay-bundle-20261115.json', 'replay-validation-20261115.json',
+                         'replay-bundle-20261116.json', 'replay-validation-20261116.json',
+                         'replay-bundle-20261116-final.json', 'replay-validation-20261116-final.json',
+                         'replay-bundle-20261116-final-2.json', 'replay-validation-20261116-final-2.json'}
     return sorted(p for p in chosen if p.is_file() and not p.is_symlink() and p.name not in generated_reports
                   and not (p.parent.name.startswith('review-') and p.name == 'HANDOFF.md')
                   and not (p.parent.name.startswith('review-') and p.name.startswith('credits'))
@@ -203,6 +262,7 @@ def main():
     parser.add_argument('--library-repair', action='store_true', help='Include the completed availability diagnostic and interrupted generation (requires --expanded)')
     parser.add_argument('--nov14', action='store_true', help='Include completed repair continuation, Boolean controls and matched-prefix factorial')
     parser.add_argument('--nov15', action='store_true', help='Include historical full-prefix replay and development-only interaction transfer')
+    parser.add_argument('--nov16', action='store_true', help='Include matched public feedback and bounded non-Boolean schema search')
     args = parser.parse_args()
     args.out = args.out.resolve()
     args.report = args.report.resolve()
@@ -283,12 +343,33 @@ def main():
             raise ValueError('Complete the finite-schema audit before export')
         if finite_schema.exists() and not (ROOT / 'test/results/finite-schema-audit.json').exists():
             raise ValueError('Analyze the finite-schema audit before export')
-    paths = selected_files(args.expanded, args.library_repair, args.nov14, args.nov15)
+    if args.nov16:
+        if not args.nov15:
+            raise ValueError('--nov16 requires --nov15 and its prerequisites')
+        from test.matched_feedback_frontier.analyze import effective_out
+        for stage_name in ('matched-feedback-20261116', effective_out().name):
+            for name in ('generation-complete.json', 'evaluation-complete.json'):
+                if not (ROOT / 'artifacts' / stage_name / name).exists():
+                    raise ValueError('Complete both matched-feedback cohorts before export')
+        from test.schema_search.analyze import scoring_out
+        for project in ('calculator', 'table', 'bom'):
+            if not (scoring_out(project) / f'evaluation-complete-{project}.json').exists():
+                raise ValueError('Complete all bounded-search project queues before export')
+        if not (ROOT / 'test/results/nov16-replay.json').exists():
+            raise ValueError('Run test.replay_nov16 before export')
+        if not (ROOT / 'artifacts/compiler-reuse-audit-20261116/complete.json').exists():
+            raise ValueError('Complete retained-code compiler reuse audit before export')
+        from test.authorized_costs import summarize as authorized_costs
+        daily = json.loads((ROOT / 'test/results/review-20261116-costs.json').read_text())
+        if daily != authorized_costs('20261116') or any(s['stop_usd'] != 0 for s in daily['stages'].values()):
+            raise ValueError('Refresh costs and close November 16 ledgers before export')
+    paths = selected_files(args.expanded, args.library_repair, args.nov14, args.nov15, args.nov16)
     source_paths = set()
     if args.expanded:
         for stage in (ROOT / 'artifacts').iterdir():
-            if stage.is_dir() and (stage.name.startswith(('webbench-expand', 'heldout-composition') + (('library-repair-',) if args.library_repair else ())) or (args.nov14 and stage.name in NOV14_NAMES) or (args.nov15 and stage.name in NOV15_NAMES)):
-                source_paths.update(candidate_source_files(stage, allow_shared_artifacts=args.nov15 and stage.name in NOV15_NAMES))
+            if stage.is_dir() and (stage.name.startswith(('webbench-expand', 'heldout-composition') + (('library-repair-',) if args.library_repair else ())) or (args.nov14 and stage.name in NOV14_NAMES) or (args.nov15 and stage.name in NOV15_NAMES) or (args.nov16 and stage.name in NOV16_NAMES)):
+                source_paths.update(candidate_source_files(stage, allow_shared_artifacts=(args.nov15 and stage.name in NOV15_NAMES) or (args.nov16 and stage.name == 'schema-search-continue-20261116')))
+    literal_sources=literal_json_sources(paths,source_paths)
     call_ids = set()
     for path in paths:
         if path.suffix == '.sqlite3':
@@ -304,11 +385,10 @@ def main():
                 target = Path(temp) / f'{i}.sqlite3'
                 sanitize_ledger(path, target)
                 content = target.read_bytes()
+            elif path in literal_sources:
+                content = sanitize_json(original, call_ids, literal_source=True)
             elif path.suffix == '.json':
-                try:
-                    content = (json.dumps(transform(json.loads(original), call_ids), ensure_ascii=False, indent=2) + '\n').encode()
-                except json.JSONDecodeError:
-                    content = scrub(original.decode()).encode()
+                content = sanitize_json(original, call_ids)
             elif path.suffix == '.jsonl':
                 lines = []
                 for line in original.decode().splitlines():
@@ -427,6 +507,19 @@ libraries or about the original current-task endpoint.
 If included, container observations use an isolated userspace and browser image,
 but share the host kernel; the Docker image itself is not included in this zip.
 '''
+        if args.nov16:
+            generated['REPLAY.md'] += '''
+The November 16 snapshot adds a three-project matched public-feedback study and
+a bounded non-Boolean/omission search over five original frozen libraries.
+  python -m test.replay_nov16
+Both are exploratory follow-ups. Equal feedback opportunities and output limits
+do not imply equal realized compute. The search is not a full-schema bound.
+All source, request, scoring and accounting observations remain separate from
+the original all-hidden results. This command recomputes saved observations;
+it does not rerun every browser page or publish the archive.
+Three locked Playwright npm packages are retained for the local null/undefined
+matcher probe. Browser binaries are not included; this is not a browser rerun.
+'''
         for name, text in generated.items():
             content = text.encode()
             archive.writestr(name, content)
@@ -439,6 +532,7 @@ but share the host kernel; the Docker image itself is not included in this zip.
     result['library_repair'] = args.library_repair
     result['nov14'] = args.nov14
     result['nov15'] = args.nov15
+    result['nov16'] = args.nov16
     output = args.report
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(result, indent=2) + '\n')

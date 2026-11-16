@@ -43,6 +43,7 @@ def main():
     parser.add_argument('--library-repair', action='store_true')
     parser.add_argument('--nov14', action='store_true')
     parser.add_argument('--nov15', action='store_true')
+    parser.add_argument('--nov16', action='store_true')
     parser.add_argument('--browser-smoke', action='store_true', help='Replay five saved table pages with fresh npm dependencies')
     parser.add_argument('--browser-artifacts', type=Path, help='New directory retaining browser reports and runtime provenance')
     args = parser.parse_args()
@@ -52,6 +53,8 @@ def main():
         raise ValueError('--nov14 requires --library-repair and --expanded')
     if args.nov15 and not args.nov14:
         raise ValueError('--nov15 requires --nov14 and its prerequisites')
+    if args.nov16 and not args.nov15:
+        raise ValueError('--nov16 requires --nov15 and its prerequisites')
     if args.browser_smoke and (not args.library_repair or args.browser_artifacts is None):
         raise ValueError('--browser-smoke requires --library-repair and --browser-artifacts')
     if args.browser_smoke and args.browser_artifacts.exists():
@@ -82,6 +85,8 @@ def main():
             checks += (('test.replay_nov14', 'test/results/nov14-replay.json'),)
         if args.nov15:
             checks += (('test.replay_nov15', 'test/results/nov15-replay.json'),)
+        if args.nov16:
+            checks += (('test.replay_nov16', 'test/results/nov16-replay.json'),)
         for module, output in checks:
             expected = json.loads((root / output).read_text())
             done = subprocess.run([sys.executable, '-m', module], cwd=root, env=env,
@@ -118,6 +123,7 @@ def main():
     result['library_repair'] = args.library_repair
     result['nov14'] = args.nov14
     result['nov15'] = args.nov15
+    result['nov16'] = args.nov16
     if args.expanded:
         result['scope'] += ' Also four new cohorts (904 distinct candidates) and their stored fixed-control scores; no additional browser reruns.'
     if args.library_repair:
@@ -126,6 +132,8 @@ def main():
         result['scope'] += ' Also November 14 full-library continuation, conditional toggles, prefix calibration and corrected factorial, reconstructed from raw reports and dated ledgers.'
     if args.nov15:
         result['scope'] += ' Also November 15 full-history cohorts and legal-plan witnesses, development-only interaction transfer, exploratory Boolean-union and public-feedback controls, and any included container observations from stored raw reports and dated ledgers. Container report reconstruction does not launch a new container.'
+    if args.nov16:
+        result['scope'] += ' Also November 16 matched public-feedback outcomes/actual compute and bounded schema search, reconstructed from raw reports and frozen populations. No fresh browser execution.'
     if args.browser_smoke:
         result['scope'] += ' Separate five-page table/task-20 browser smoke check uses a fresh extraction and npm install on the same host.'
     args.report.parent.mkdir(parents=True, exist_ok=True)

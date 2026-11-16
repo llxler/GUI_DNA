@@ -4,11 +4,11 @@
 
 | 表格 | 来源复算范围 | 入口 | 尚未覆盖 |
 |---|---|---|---|
-| tab:suites | specification | 无独立入口 | 规范/来源描述，仍需人工逐项核对，不适用准确率复算。 |
-| tab:main | partial | test.replay_primary_tables, test.review_metrics | 部分来源、配对子列或辅助口径尚未全部覆盖，具体范围见同名JSON及重算输出。 |
 | tab:interface-main | recomputed_sources | test.replay_new_tables | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。 |
 | tab:history-main | recomputed_sources | test.replay_nov15 | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。 |
+| tab:matched-feedback-main | recomputed_sources | test.replay_nov16 | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。 |
 | tab:heldout-main | recomputed_sources | test.replay_new_tables | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。 |
+| tab:main | partial | test.replay_primary_tables, test.review_metrics | 部分来源、配对子列或辅助口径尚未全部覆盖，具体范围见同名JSON及重算输出。 |
 | tab:round1 | recomputed_sources | test.replay_nov15, test.replay_pilot_tables | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。 |
 | tab:round2 | recomputed_sources | test.replay_nov15, test.replay_pilot_tables | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。已使用独立只读入口，未调用会打开可写主账本的旧汇总器。 |
 | tab:list16-lib | specification | 无独立入口 | 规范/来源描述，仍需人工逐项核对，不适用准确率复算。 |
@@ -23,10 +23,10 @@
 | tab:samples | partial | test.replay_primary_tables, test.review_metrics | 部分来源、配对子列或辅助口径尚未全部覆盖，具体范围见同名JSON及重算输出。 |
 | tab:seeds | partial | test.replay_primary_tables, test.review_metrics | 部分来源、配对子列或辅助口径尚未全部覆盖，具体范围见同名JSON及重算输出。 |
 | tab:cost | recomputed_sources | test.replay_nov15, test.replay_table_details | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。原始阶段名单已明确固定，不能换用当前全账本总额。 |
-| main:table-18 | partial | test.review_metrics | 部分来源、配对子列或辅助口径尚未全部覆盖，具体范围见同名JSON及重算输出。 |
+| main:table-17 | partial | test.review_metrics | 部分来源、配对子列或辅助口径尚未全部覆盖，具体范围见同名JSON及重算输出。 |
+| main:table-18 | recomputed_sources | test.replay_nov15, test.replay_review_tables | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。 |
 | main:table-19 | recomputed_sources | test.replay_nov15, test.replay_review_tables | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。 |
-| main:table-20 | recomputed_sources | test.replay_nov15, test.replay_review_tables | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。 |
-| main:table-21 | recomputed_sources | test.review_metrics | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。 |
+| main:table-20 | recomputed_sources | test.review_metrics | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。 |
 | interface_study:table-1 | recomputed_sources | test.interface_blind.analyze | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。 |
 | tab:interfaces | recomputed_sources | test.interface_blind.analyze | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。 |
 | interface_study:table-3 | recomputed_sources | test.replay_nov15, test.replay_review_tables | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。 |
@@ -49,5 +49,9 @@
 | tab:interaction-library-shape | recomputed_sources | test.replay_nov15 | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。 |
 | tab:interaction-controls | recomputed_sources | test.replay_nov15 | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。 |
 | tab:development-feedback | recomputed_sources | test.replay_nov15 | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。 |
+| tab:matched-feedback | recomputed_sources | test.replay_nov16 | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。 |
+| tab:matched-feedback-usage | recomputed_sources | test.replay_nov16 | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。 |
+| tab:schema-search | recomputed_sources | test.replay_nov16 | 对应来源已重算；仍需逐格核对论文转写，不表示所有浏览器重新执行。 |
+| tab:suites | specification | 无独立入口 | 规范/来源描述，仍需人工逐项核对，不适用准确率复算。 |
 
 浏览器运行时、来源路径及本地论文输入哈希见同名JSON。源码路径存在不等于运行器或整套浏览器已在独立环境复现；原第三轮保持暂停。

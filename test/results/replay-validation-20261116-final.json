@@ -1,0 +1,87 @@
+{
+  "archive_sha256": "cd2dd435abfe9c403a1273eaf07272822e73990909ac17c23857cec0f2394a9a",
+  "published": false,
+  "checks": [
+    {
+      "module": "test.replay_scale_table",
+      "output": "test/results/scale-table-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_primary_tables",
+      "output": "test/results/primary-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.review_metrics",
+      "output": "test/results/review-metrics.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.interface_blind.analyze",
+      "output": "test/results/interface-blind.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.behavior_feedback_analyze",
+      "output": "test/results/behavior-feedback.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.repair_breakdown",
+      "output": "test/results/repair-breakdown.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.paired_intervals",
+      "output": "test/results/paired-intervals.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_new_tables",
+      "output": "test/results/new-tables-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_library_repair",
+      "output": "test/results/library-repair-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_nov14",
+      "output": "test/results/nov14-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_nov15",
+      "output": "test/results/nov15-replay.json",
+      "exit_code": 0,
+      "identical": true
+    },
+    {
+      "module": "test.replay_nov16",
+      "output": "test/results/nov16-replay.json",
+      "exit_code": 1,
+      "identical": false,
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"<replay-root>/test/replay_nov16.py\", line 122, in <module>\n    if __name__=='__main__':main()\n                            ~~~~^^\n  File \"<replay-root>/test/replay_nov16.py\", line 38, in main\n    matched=feedback(); bounded=search(); frontier=frontier_feedback(); reuse=reuse_audit(True); calibration=[]\n  File \"<replay-root>/test/matched_feedback/analyze.py\", line 35, in reconstruct\n    assert source_files(ROOT / job['page']) == job['files']\n           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"<replay-root>/test/history_replay/run.py\", line 75, in source_files\n    assert all(sha(page / n) == h for n, h in files.items()), str(page)\n           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: <replay-root>/artifacts/matched-feedback-20261116/runs/calculator/openai__gpt-5/openai__gpt-oss-120b/2026111601/free_lib/version-0\n"
+    }
+  ],
+  "scope": "Hash verification; three primary accuracy tables plus five sample/seed/frontier extensions from raw records; five further summary recomputations. External row checks reuse observations across tables; distinct file-path count reported separately. Not a replay of every historical browser test or every paper table. Also four new cohorts (904 distinct candidates) and their stored fixed-control scores; no additional browser reruns. Also strict and secondary repair replay tables reconstructed from stored raw reports; no new browser calls. Also November 14 full-library continuation, conditional toggles, prefix calibration and corrected factorial, reconstructed from raw reports and dated ledgers. Also November 15 full-history cohorts and legal-plan witnesses, development-only interaction transfer, exploratory Boolean-union and public-feedback controls, and any included container observations from stored raw reports and dated ledgers. Container report reconstruction does not launch a new container. Also November 16 matched public-feedback outcomes/actual compute and bounded schema search, reconstructed from raw reports and frozen populations. No fresh browser execution.",
+  "hashes_verified": 168095,
+  "all_passed": false,
+  "expanded": true,
+  "library_repair": true,
+  "nov14": true,
+  "nov15": true,
+  "nov16": true
+}

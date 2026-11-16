@@ -2,9 +2,9 @@
 
 给 AI 编码代理（Claude Code / Codex / Cursor 等）和人用的速查。研究内容看 [README.md](README.md)，结果看 [实验结果.md](实验结果.md)。本文件只讲**怎么跑、怎么改、什么不能动**。
 
-## 1. 项目现状（截至2026-11-15）
+## 1. 项目现状（截至2026-11-16）
 
-- 这是投 ICML 2027 的 idea 验证仓库。主线是**第三轮**（`experiments/scale_study/`）：模型输出受检查的组装方案，编译器拼冻结函数。
+- 这是投 ICML 2027 的研究验证仓库。论文当前以**模型自建库及其复用评估**为主线（`test/interface_blind/`、`test/webbench_expand/`及后续诊断）；原第三轮（`experiments/scale_study/`）是受检查方案拼冻结函数的历史机制实验，仍保持暂停与冻结。
 - 第三轮按用户要求**暂停**在 190/640 个候选；账本 `artifacts/budget.sqlite3` 的 `halted=1` 是人工暂停，不是超支。
 - `qwen/qwen3-coder-plus` 已在 OpenRouter 下线，续跑会在模型检查处停下（预期行为）。
 - 第三轮产物里的 `result.json` / `results.json` 记录的是**绝对路径** `/home/lxler/work/gui_test/...`（项目旧目录名）。目录已改名为 `GUI_DNA`，所以保留了符号链接 `/home/lxler/work/gui_test -> /home/lxler/work/GUI_DNA`；删掉它 `resume_scale`、`audit_scale`、`analyze` 都会 FileNotFoundError。换机器时把仓库放到同一路径或建同名链接。
@@ -40,6 +40,14 @@
 - 2026-11-15论文格式：官方ICML2027模板已发布，本地sty/bst已替换官方字节，来源快照在`artifacts/paper-build/official-20261115`。已移除负vspace压缩、将三张Matplotlib图中文字转矢量路径，加入新规则要求的AI Disclosure Statement；声明中保留作者最终核实/审核TODO，不能代作者宣称已独立人工审查。模板更新只在本地DNA_latex，仍不入Git。
 - 2026-11-15有限模式审计：`test/finite_schema_audit/`事后选择可穷举的原calculator/GPT-5库，包含省略字段及全部枚举/布尔值共1215配置、128不同源码；官方init包含布局与基础计算，全部首败除零expected Infinity/actual Error，参考通过、空白失败，共130新报告。原40个主最终方案属于此库；只能界定该库当前完整历史的init必要条件，不能推及其余五库或当前文件任务。run.py/__init__/PROTOCOL、snapshot及评分前dependency-extension均冻结，analyze/README可维护；结果第27节。
 - 2026-11-15收尾：104项全套pytest、后续9项定向检查、15份原工作区快照通过；论文正文8/全文51页、Type1嵌入、零未定义引用/越界框。19页独立容器判定18项一致（实际4页通过），BOM参考默认在线断言在network none下不同；空白页探针none/bridge的navigator.onLine分别false/true，未重跑benchmark。原默认root启动在输出目录EACCES且0页评分，保留父阶段，正式观察在container-replay-20261115-uid；两阶段及container_network_probe.py按快照冻结。**实际墙钟约7小时21分，超过4h授权**；发现后停止新实验和长耗时归档，仅Git收尾。API仍$2.895598且全关闭。最终anonymous-replay-20261115.zip及正式bundle/validation报告未生成，勿称完整包验收；旧core/precontainer各11入口通过，finite失败包与修复overlay调试记录均保留。下次先完成TODO R11b的最终新包验证，所有旧包不覆盖、不上传。
+- 2026-11-16生成与冻结：用户授权4小时、新增API≤$20，起始03:58UTC，保守截止07:50UTC。开工余额$4.874510325，实际生成受可用余额约束。`test/matched_feedback/`在原三项目六库上匹配完整目标、五个公开测试源码/反馈、20000-token上限与最多两次修复：GPT-OSS两次重复共30候选；`test/matched_feedback_frontier/`另立GPT-5 medium的15候选。初始GPT-5预留阈值阻止了五条链的后续请求，关闭原账本后由`test/matched_feedback_continue/`只补缺失，已有响应和公开报告逐字复用。三账本128调用，结算与敞口均$4.043009、全部stop=0、无新增未知预留；只读`test.authorized_costs --date 20261116`。所有生成完成后才评分，两组BOM依次串行。原第三轮仍暂停。上述目录生成/评分源码、PROTOCOL及snapshot依赖已冻结，不得原地改动或重开账本。
+- 2026-11-16零API诊断：`test/compiler_reuse_audit/`冻结VM观察脚本，对旧240份同库代码及新18份代码的首次/最终共276位置审计；旧114份可认证为合法冻结编译结果精确复用、108份files输出运行时路径未知，不把结果接近都归于复用。`test/schema_search/`冻结五库158配置，限定单处非布尔值/数组结构/可选字段省略补入，按哈希选取；不是整个模式上界。两个目录的run、PROTOCOL及snapshot依赖已冻结，analyze/README可维护。旧11月15日正式匿名包已补齐：159991文件/52账本、11独立入口一致；本日新包单独生成，不覆盖旧包、不上传。
+- 2026-11-16校准例外：五库搜索的BOM空白当前页意外通过官方task-20（三断言用toBeDefined检查null后提前返回），原入口在BOM候选评分前停止。`test/schema_search_continue/`另冻结例外协议，保留原三报告，追加空白完整历史负对照和null/undefined matcher探针，续评原64配置/102作业；calculator/table原成绩不变。新run/init/PROTOCOL及snapshot依赖同样冻结；只读`test.schema_search.analyze`和`test.replay_nov16`联合两个阶段。BOM当前通过不能单独当功能见证，旧官方分数不回填。
+- 2026-11-16评分与本地复验完成：匹配反馈45个最终候选（42个可执行）完整历史与16留测文件均无全过；GPT-5公开五文件无库1→3/3、同库1→3/6、方案0/6，不能将公开通过替代完整目标。五库158配置/316比较/288报告完成，完整历史0/158，BOM/Sonnet当前12/32官方通过受上述测试缺口限制。原主表统一事后排除BOM/task-20为方案91/236、同库88/236、无库41/118，原成绩不回填。只读`test.replay_nov16`核对9快照、40校准报告（含原BOM空白当前异常）、两个模型公开/隐藏评分、实际费用、编译器复用及配置重编译。全套pytest118通过；本地论文正文8/全文56页，关键9表198指定单元格/363数值核对，全部49表来源登记；仍有作者审核和匿名URL待办。结果第29–31节。
+- 2026-11-16收工指示：用户要求“把当前的这个实验弄完之后，今天的todo部分就先做到这里”。当前评分和分析已完成，只做本轮归档验证与Git交付，不再启动其他TODO实验；三本API账本均已关闭，原第三轮仍暂停。剩余事项看更新后的TODO，后续续作按新的用户指示执行。
+- 2026-11-16归档复验性能修复：首个20261116包前11入口通过，第12入口因重复读取大哈希清单触及240秒限时。原包不覆盖；`test/replay_hashes.py`仅缓存不可变清单版本，仍逐份检查实际字节和原始/导出双哈希，四个未冻结统计入口改用它，所有9个实验快照不变，原工作区重算结果逐字一致。新增2项回归后全套117项通过；最终包改用20261116-final文件名，实际验收看对应报告。
+- 2026-11-16归档字节修复：第二包的第12入口发现应用JSON资产被元数据导出器重新缩进，源文件哈希断言失败；原包与失败报告保留。只对来源清单明确声明的应用JSON/JSONL保留原格式，请求元数据仍匿名化，原哈希断言不放宽。最新候选包改为20261116-final-2；是否完整验收必须看同名validation报告，不把前两个包称为已验收。
+- 2026-11-16最终验收：`anonymous-replay-20261116-final-2.zip`含168095清单文件/55匿名账本，12入口独立解包重算全部一致，正式报告`test/results/replay-validation-20261116-final-2.json`。前两个未完整验收的包/失败记录保留；包未上传，论文正文8/全文56页仍本地。118项全套pytest通过、9表198指定单元格通过；API仍$4.043009且全关闭。07:33UTC收尾检查约3h35m，低于4h；只余Git交付，按用户要求今天不再启动实验。
 - 中文为文档语言；代码注释与标识符为英文；`DNA_latex/` 内为英文论文。
 
 ## 2. 环境与常用命令
@@ -112,7 +120,7 @@ uv run python -m test.rerun_failed --stage artifacts/<stage> --suite webbench|to
 
 `.browser-deps/` 里是无 sudo 环境解包的 `libnspr4`/`libnss3`，评测子进程自动加到 `LD_LIBRARY_PATH`；没有也不影响有系统库的机器。
 
-## 3. 架构：三轮代码并存，第三轮是主线
+## 3. 架构：三轮历史代码与模型建库实验并存
 
 三轮实验的代码**叠加而不替换**，后一轮 import 前一轮：
 
