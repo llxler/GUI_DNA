@@ -41,6 +41,15 @@ def main():
         observed=numbers(cell)
         assert observed==list(expected),(table,row,column,observed,expected)
         checks.append({'table':table,'row':row,'column':column,'observed':observed,'expected':list(expected)})
+    if 'tab:draw' in active_tables:
+        from test.paper_nov17 import cells as draw_cells
+        expected = draw_cells(load('test/results/webbench-draw-20261117.json'))
+        actual = [row for row in rows('tab:draw') if row[0].strip() in ('GPT-OSS-120B','GPT-5')]
+        assert len(actual) == len(expected)
+        for observed,wanted in zip(actual,expected):
+            assert observed[0].strip() == wanted[0] and observed[1].strip() == wanted[1]
+            for column in range(2,6):
+                check('tab:draw','/'.join(wanted[:2]),str(column),observed[column],wanted[column] or [])
     primary=load('test/results/primary-replay.json')
     mainrows=rows('tab:main')
     for suite,macro in [('todomvc',r'\todomvc'),('webbench',r'\webbench')]:

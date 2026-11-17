@@ -43,6 +43,10 @@ STATIC = evidence('specification', '', 'AGENTS.md', 'No numeric outcome replay a
 
 def mapping():
     m = {name: PRIMARY for name in ('tab:main', 'tab:models', 'tab:todomvc-full', 'tab:webbench-full', 'tab:samples', 'tab:seeds')}
+    m['tab:draw'] = evidence('recomputed_sources', 'test.replay_nov17 test.paper_nov17',
+        'test/results/webbench-draw-20261117.json test/results/replay-20261117.json',
+        'Fixed Vite 7.1.5, sass-embedded 1.83.1, Playwright 1.57.0 and Chromium.',
+        'Recompiles saved model outputs and reconciles frozen input/report hashes and paired endpoints; selected table cells separately checked. Not included in the older anonymous bundle or cross-machine browser replay.')
     for name in ('tab:suites', 'tab:list16-lib', 'tab:todomvc-tests'):
         m[name] = STATIC
     for name in ('tab:interface-main', 'tab:heldout-main', 'tab:expansion', 'tab:expansion-frontier', 'tab:heldout-full'):

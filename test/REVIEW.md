@@ -278,3 +278,17 @@ uv run --with pymupdf python -m test.paper_format --report test/results/paper-fo
 `paper_cells`现在按`main.tex`实际input树选择表格，不把本地仍存在但未使用的旧表列为当前稿验证。公开套件费用小计从原明确账本行重算为$11.945801，显示$11.95；原全阶段$14.358198及其报告保持不变。`paper_public_review`检查移出研究的引用、保留在文字中的0/45与0/158、真实TodoMVC计划/诊断及原提示词listing字节；它不重跑基准浏览器，也不等于全文或独立人工审核。当前数字验收为7表147指定单元格/240个数值，36表均登记来源；其余内容仍保留审核范围说明。
 
 当前本地论文输入使用`prompts_public.tex`、`nov15_history.tex`和`public_feedback_audits.tex`，完整历史生成稿仍留在本地。不要将旧`heldout_study`/`nov15_study`直接重新接入论文。`test.nov16_report`会覆盖《实验结果》第29节以后的文字，重跑前必须保护第31节人工交付补充与第32节编辑记录。
+
+
+## 2026-11-17：公开draw与官方断言诊断
+
+[draw协议与入口](webbench_draw/README.md)包含两套自建库、50候选、当前/完整历史及固定页控制，全部生成先于候选评分；[断言审计](assertion_audit/README.md)包含126文件静态登记和BOM六文件的36报告矩阵。原分数不回填，新协议不合并旧分母。联合复算核对保存模型输出的逐字重编译、原始报告、冻结字节、消息边界和已关闭账本；这不是匿名包或跨机器复验。
+
+```bash
+uv run python -m test.replay_nov17
+uv run python -m test.authorized_costs --date 20261117
+uv run python -m test.paper_nov17
+uv run python -m test.paper_cells --report test/results/paper-cell-audit-20261117.json
+```
+
+`test/draw_interface_audit.py`及其注册清单已经冻结；162个配置的JS不变只说明源码字节，不证明交互等价。其他冻结文件按两个README和清单执行。论文新input为`nov17_draw.tex`，仍本地；旧生成器不得覆盖它或接回已移出的合成研究。新数据没有自动进入11月16日匿名包。
