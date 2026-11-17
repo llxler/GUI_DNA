@@ -1,192 +1,43 @@
-# AGENTS.md — GUI-DNA 操作手册
+# GUI-DNA：代理操作指南
 
-给 AI 编码代理（Claude Code / Codex / Cursor 等）和人用的速查。研究内容看 [README.md](README.md)，结果看 [实验结果.md](实验结果.md)。本文件只讲**怎么跑、怎么改、什么不能动**。
+先读 [README](README.md)、[当前任务](docs/roadmap.md)；方法见 [docs/method.md](docs/method.md)，历史结果见 [docs/results.md](docs/results.md)。详细旧指令仅供查证：[归档](docs/archive/agent-instructions-20261117.md)。不要默认加载整份历史。
 
-## 1. 项目现状（截至2026-11-17）
+## 当前工作范围
 
-- 这是投 ICML 2027 的研究验证仓库。论文当前以**模型自建库及其复用评估**为主线（`test/interface_blind/`、`test/webbench_expand/`及后续诊断）；原第三轮（`experiments/scale_study/`）是受检查方案拼冻结函数的历史机制实验，仍保持暂停与冻结。
-- 第三轮按用户要求**暂停**在 190/640 个候选；账本 `artifacts/budget.sqlite3` 的 `halted=1` 是人工暂停，不是超支。
-- `qwen/qwen3-coder-plus` 已在 OpenRouter 下线，续跑会在模型检查处停下（预期行为）。
-- 第三轮产物里的 `result.json` / `results.json` 记录的是**绝对路径** `/home/lxler/work/gui_test/...`（项目旧目录名）。目录已改名为 `GUI_DNA`，所以保留了符号链接 `/home/lxler/work/gui_test -> /home/lxler/work/GUI_DNA`；删掉它 `resume_scale`、`audit_scale`、`analyze` 都会 FileNotFoundError。换机器时把仓库放到同一路径或建同名链接。
-- OpenRouter 余额约 $5.5（2026-10-30），用户预算很紧，**任何付费调用先问清楚、先查余额**。
-- 2026-11-01 新增 `test/webapp1k_dna/`：在公开 benchmark WebApp1K-Duo 上对比自由代码与 GUI-DNA 组装（10 个样本，独立账本）。`test/` 是实验目录，`tests/` 才是主代码的 pytest。
-- 2026-11-02 新增 `test/todomvc_dna/`：TodoMVC 规范 + Playwright 官方 TodoMVC 测试集（24 项，隐藏）上的三种做法对比；功能通过共享状态互相影响，与 `data/dev/` 同构。Node 侧运行器在 `test/todomvc_dna/harness/`（需 `npm install`）。
-- 2026-11-02 新增 `test/webbench_dna/`：Web-Bench（字节）dom1 项目上的对比，官方测试逐字、参考实现拆成原子函数库。2026-11-03 TodoMVC 与 Web-Bench 都扩到 8 个模型并加了两个对照（自由代码 + 同一函数库、方案不做覆盖检查）；结果汇总在 `实验结果.md` 第 12 节。OpenAI 模型要经 `test/provider_ext.py`（冻结客户端的子类：允许低强度推理、去掉 GPT-5 不接受的参数）。账本不能放宽，扩展时用新的 `--out` 目录并拷入旧 `runs/`，费用用 `--extra-ledgers` 合并。余额约 $1.8（2026-11-03）。Node 运行器在 `test/webbench_dna/harness/`（需 `npm install`）；上游仓库克隆在 `artifacts/web-bench/`（只读）。
-- 2026-11-05 整理：第二轮辅助脚本归档到 `experiments/round2/`（模块方式运行）；事后连接器复验 `experiments/replay_linked_plans.py` + `plan_linker.py` 留在原处，因为 `artifacts/linked-plan-posthoc/manifest.json` 记录了它们的路径与哈希，挪动或格式化都会让复验断言失败。新增 `DNA_latex/`（ICML 2027 论文源，英文；只在本地，`.gitignore` 忽略，不入库），旧论文模板目录已删。
-- 2026-11-08：新增 `experiments/TODO.md`（**实验待做清单**，开工先读，做完的项从清单删除、结果进 `实验结果.md`）；零成本脚本 `test/paired_intervals.py`（TodoMVC / Web-Bench 配对差的聚类 bootstrap 区间 → `test/results/paired-intervals.{json,md}`）与 `test/webbench_dna/taskmap_figure.py`（`uv run --with matplotlib`，输出 `DNA_latex/figures/webbench_taskmap.pdf`）；Web-Bench 第五阶段 `artifacts/webbench-dna-5/` 已完成（「自由 + 同一函数库」「方案不做覆盖检查」补到全部 8 个模型，已结算 $1.68；结论见 `实验结果.md` 第 13 节：强模型拿到函数库写自由代码 68/80 对方案 73/80，函数库本身是强模型收益的大头）。余额 2026-11-08 约 $21.4（用户已充值），本次用掉约 $1.7。
-- 2026-11-09：按 `experiments/TODO.md` 做完一批并写进 `实验结果.md` 第 14 节。零成本：`test/export_prompts.py`（→ `DNA_latex/prompts.tex`）、`test/repair_breakdown.py`、`test/ledger_costs.py`、`test/model_table.py`、`test/webbench_dna/seeds.py`、编译器放宽时间线。付费（四个新阶段、独立账本，合计 $6.9）：`artifacts/todomvc-dna-5/`（每族 5 采样，自由代码 288/315 对 GUI-DNA 317/317）、`artifacts/webbench-dna-seed1/`、`-seed2/`（7 模型 × 2 个新种子：方案在强模型上三个种子都是 73/80，「自由 + 同一函数库」68 / 48 / 68）、`artifacts/webbench-dna-frontier/`（GPT-5：自由 14/20 对方案 18/20）、`artifacts/webbench-dna-6/`（= 第五阶段 + Mistral「自由 + 函数库」任务 10–20 重做；**现在的 `test/webbench_dna/results/summary.json` 来自这里**，数字与第五阶段相同）。**传输失败规则**：HTTP 429 重试耗尽 / 连接中断不是模型输出，`test/rerun_failed.py` 把这类记录挪到 `<stage>/discarded-transport/<n>/` 后用同样参数重跑；Gemma 3 12B 当天在 OpenRouter 两个供应商都持续限流，重做失败，所以 Web-Bench 上它的自由代码数字是下界（论文与第 14.5 节已写明），新种子与新采样排除了它。配置改动：`test/provider_ext.py` 的 429 重试放宽到 6 次（最长等 5 分钟）；两个运行器把 Gemma 钉到 NextBit（`provider_order`，之前所有 Gemma 调用实际都走它）；`test/webbench_dna/run.py` 加了 `openai/gpt-5` 的推理强度 / 省略参数 / 价格上限；`test/todomvc_dna/run.py` 加 `--no-generate`。余额收工时约 $13.7，**用户要求之后不再花 API 费用**；论文 `DNA_latex/main.tex` 已同步（新附录 app:samples、app:transport、app:repair、prompts.tex；tab:cost 合计 $14.36）。本机没有 TeX，用 tectonic 静态二进制在临时目录编译检查过。
-- 2026-11-11：按审稿人视角复核论文并改稿（不花 API）。`experiments/TODO.md` 第 0 节是审稿评估（当前估 2/5，硬伤与会被问的问题），后面的待办改成 R 组（零成本）与 P 组（付费，要点头）；最该先做的付费项是 P1「干净前缀对照」。新增零成本脚本 `test/review_checks.py`（→ `test/results/review-checks.{json,md}`）与 `实验结果.md` 第 15 节。论文 `DNA_latex/main.tex` 重排了故事线（主表改成「自由代码 → + 函数库 → + 方案 → + 检查」的阶梯，图 1 用 TikZ 画出，新增 Protocol asymmetry 局限，新增 6 条已核实的参考文献），正文刚好 8 页、余量约 5 行；改稿前的版本在 `DNA_latex/backup/`。本机编译用 `artifacts/paper-build/build.sh`（把 `DNA_latex/` 拷到 `artifacts/paper-build/build/`、注入 T1 字体后用 tectonic 编译；该目录被忽略，tectonic 二进制在 `artifacts/paper-build/bin/`，没有就重新下载）。
-- 2026-11-11 续作：用户明确授权 TODO 第 0 节补强总额不超过 $10，覆盖此前“本轮后不再花 API”的限制；不授权续跑第三轮。完成项写入 `实验结果.md` 第 16 节，剩余是接口盲设计、第二项目、充分反馈等，详见更新的 TODO。新增复验入口与范围在 `test/REVIEW.md`；统计读账本必须使用 `test/ledger_read.py`，不要用很小 cap 打开 `Ledger`。本轮模型建库保留人工槽位，不能称完整 P2；Web-Bench 主表统一排除 Gemma。`webbench-dna-clean-2` 继续参考前缀/增量方案实验，新 Mistral 请求从限流的 DeepInfra 改为官方 Mistral，保留独立账本和来源清单。匿名源码汇总包仅本地生成，未上传；论文仍不入 Git。
-- 2026-11-11 本轮收工：用户要求“先干到这，没干完下次继续，只 push 已做内容”。实验已停止，协议对照一个 Qwen 修复传输不完整候选留待 TODO P1a；共同有效子集119，四种协议通过45/71/91/107。审稿阶段含接手前已结算 $2.838848、含预留敞口 $3.052179；下次明确续做前不得重启 API。
-- 2026-11-12：用户明确续做 TODO，授权当天总额不超过 $20；优先 P2b＋P3 的公开需求接口建库（`test/interface_blind/`），并补 P1a、P6。初始分配后关闭旧账本并另立续跑，实际预算计划在 `artifacts/review-20261112/budget-plan.json`，只读汇总用 `test.review_daily_costs`；原第三轮仍暂停。四套库均已冻结。Parasail持续provider-error后，隐藏评分前将Mistral整组改到DeepInfra FP8，最终阶段为 `interface-blind-final-2`，旧记录保留。新协议、输入边界和运行入口见 `test/interface_blind/README.md`。
-- 2026-11-12 收工：P1a已补到120配对（46/71/92/108）；接口盲设计＋整页两项目400候选完成，方案86/160对同库代码67/160，收益集中在Mistral（GPT-OSS反而43/80对46/80）。80候选的独立公开行为反馈小试也完成：代码12→14/40，方案17→17/40。全部当天阶段stop=0，已结算$1.797186、保守敞口$3.259005，原第三轮仍暂停。恢复入口 `test.behavior_feedback_resume` 仅规范化元组/列表的JSON等价表示，原清单/输入/冻结源码不变；回归测试已覆盖。完整结果第17节，剩余重点是未见组合、严格接口和独立项目，见TODO。
-- 2026-11-12 验收：全套pytest 68项通过；本地 `artifacts/anonymous-replay.zip` 含118850个文件/37份匿名账本，7个独立目录汇总入口重算一致（`test/results/replay-validation.json`）。这不是全部历史浏览器测试重跑，包也未上传；匿名发布仍见TODO R11b。导出器含历史 `library-live.json` 及建库记录，匿名路径检查有自包含源码回归。论文 `DNA_latex/main.pdf` 已更新，正文8页，仍不入Git。
-- 2026-11-12 Web-Bench扩展：按同日$20授权，`test/webbench_expand/` 新增calculator/table/bom，六套模型接口库冻结。主阶段 `webbench-expand-run` 的600个候选已生成并评分：方案93/240、同库代码90/240、无库42/120；两个原有接口项目与新三项目协议不同，不合并。正式生成入口 `test.webbench_expand.generate`，协议见 `PRELOAD.md`，不要用早期 `run generate`。同库代码可直接执行不受方案模式限制的 `build(files,compile)`，方案使用通用封闭模式。所有传输断点保留已有效输出与反馈，只补缺失请求；全部660个候选完成后才开始隐藏评分。
-- 2026-11-12 同次GPT-5 medium小试：新三个项目各task-4/8/12/16/20、两库×两种做法，共60候选。初始 `webbench-expand-frontier` 触及预算预留阈值后关闭，复制全部记录到独立账本 `webbench-expand-frontier-2`，由 `test.webbench_expand.frontier_continue` 续补；不得放宽旧账本。现已全部生成，全部当天账本stop=0，累计已结算$8.720036、保守敞口$12.132895，费用用 `test.review_daily_costs` 复算。原第三轮仍暂停。
-- 2026-11-12 Web-Bench扩展评分完成：600主候选、480固定控制、60 GPT-5候选及30固定最终页全部完成。固定最终方案104/240高于逐任务93/240；GPT-5 medium为方案13/30、同库代码14/30。主600源文件审计及660候选/510控制与1213份原始Playwright报告核对通过；两条同页重复评分差异均在预先排除的BOM task-19，未择优重跑。完整结果第18节，入口 `test/REVIEW.md`。正式评分用独立Playwright1.57/Chromium1200，BOM串行；主表20项、预定17项敏感性子集均保留。成本时间点快照 `test/results/webbench-expand-cost-checkpoint.json` 不随后续阶段增长。旧匿名包未含本次扩展。 本批74项pytest通过，论文编译通过、正文8页（PDF共36页），仍不入Git。
-- 2026-11-12 后续授权：用户将外出4小时，允许继续实验和改论文，并考虑以自建库为主线；按今天累计$20上限执行（不是另加$20）。优先P2c的开发需求/未见组合划分，新增实验必须独立于官方Web-Bench结果，保持模型自建接口、强同库代码、固定/无模型控制，不恢复原第三轮。
-- 2026-11-12 未见组合小试完成：`test/heldout_composition/`是Web-Bench启发的**新合成诊断**，不是官方任务。每应用四个二元行为差异，开发为基础＋四个单项变化，留测11个组合；32/32参考校准、16种期望均可区分后冻结。四库首次输出开发5/5；220主候选方案88/88、同库代码88/88、无库32/44，GPT-5 medium独立24候选两方法均12/12。无模型差分44/44，五开发示例各0/44，主组固定最终8/88，不能声称LLM规划必要。全部244候选、364控制评分及哈希审计完成，结果第19节。新增API结算$0.904010/敞口$1.070769；当天累计$9.624046/$13.203664，所有账本stop=0，原第三轮暂停。**不要修改已冻结domain/fixtures/browser/reference/prepare/core/run/controls/evaluate、PROTOCOL/public-development及清单列出的复用文件**；只读入口analyze/diagnostics/report/paper_tables。源文件、校准草稿和传输尝试保留。前一批官方Web-Bench已push `5577ca5`，本批另行提交。
-- 2026-11-12 本批验收：新合成研究与官方库已观测可达诊断见第19–20节；第18节六库的120个库与任务配对中53个有合法通过见证，无见证不是不可达。全套pytest首跑79通过、1个旧浏览器点击超时，失败项原样单独重跑通过；导出回归3项通过，未改冻结代码。原第三轮只读审计通过，190候选/47组、halted=1。论文改题为 *Building and Reusing GUI Libraries: A Study of Assembly Plans*，正文8页/PDF共39页、无未定义引用或越界框，仍仅本地。扩展匿名包 `artifacts/anonymous-replay-20261112-expanded.zip`（137651文件/44账本）八入口独立目录重算一致，含904新候选、874控制和53见证配对；不等于全部浏览器重跑，未匿名上传，余项见TODO R11b。旧包保留，验证报告 `test/results/replay-validation-expanded.json`。
-- 2026-11-13：用户本次授权新增API最多$10、总时限3小时。`test/library_repair/`初始六库×自查/开发反馈的12份修复因代理流中断、SSL失败和直连地区拒绝只得到6份完整响应；**原六库实验未完成**，不继续改路由。原账本`library-repair-20261113`已关闭stop=0，已结算$1.261570、保守敞口$8.525842（16份未知预留）；5份中断流通过平台逐请求元数据确认后由正常`Ledger.settle`结算，未推定其他失败零费用。另立零API可用配对子集`library-repair-available-20261113`：calculator两库＋table/GPT-5库，90个旧候选、600项比较/204份浏览器评分。主方案9→11/30、同库代码10→11/30、固定最终方案12→14/30；自查不变，全部新增候选通过集中table/GPT-5的task-20。严格格式与事后单JSON块提取分数相同；两份Sonnet的严格输出失败保留。四页额外干预（`library-repair-mechanism-20261113`）把该例定位于右键菜单事件冒泡：原页加stopPropagation即过、修复页撤掉又失败。随后`library-repair-space-20261113`固定四项样式字段、穷举7个布尔开关：原库0/128，单行修复32/128；精确复用两份已有报告，其余254份新增，不能称整个模式不可达。结果第21节，入口`test/library_repair/README.md`；不要修改该README列出的冻结源码/快照文件。API不再运行、原第三轮仍暂停。全套87项pytest及新增导出/边界10项通过；新匿名快照用`--expanded --library-repair`及独立20261113-final文件名，保留此前20261113与旧包且不上传。
-- 2026-11-13交付复验：最终匿名包`anonymous-replay-20261113-final.zip`含141773文件/45账本，九个入口在独立目录重算一致。`test.replay_browser_smoke`另在解包副本离线重装锁定npm依赖，实际复现table/task-20四张机制页面和官方参考页共5项；仍共享本机OS、Chromium缓存与系统库，不是跨机器或全历史浏览器复现。原始新报告在`artifacts/replay-browser-20261113-final/`，验证报告`test/results/replay-validation-20261113-final.json`。论文正文8页/总40页，仍仅本地；包未上传，原第三轮保持暂停。
-- 2026-11-14：用户授权新增API≤$20、总时限2小时。`test/library_repair_resume/`保持原消息/模型/供应商约束补齐六份缺失，新增$1.126485；六库完整重放180旧候选、1200项比较/398报告（204复用、194新增），严格主方案21→23/60，唯一代码块口径6赢6输、净21/60。原三库第21节快照不回填；新结果第22节。另有单一table/Sonnet/GPT-OSS/task-4入口占位遗漏干预，六页/三新报告：删原入口失败、两修订只恢复占位键后通过，不改模型成绩。该目录`run/replay/entrypoint.py`及两协议和清单依赖已冻结。
-- 2026-11-14匹配前缀：原参考输入20页的初始布局与完整历史210配对/909断言全过；`test/prefix_history_audit/`源码已冻结。初始`prefix_factorial`漏明确顶层模式，在任何隐藏评分前中止，保留120调用/55完整候选链/$0.037816。另立`prefix_factorial_v2`向两种输出共同给明确模式；160候选全部生成后冻结640首次/最终×当前/历史比较（262报告）。两模型各自身/参考HTML前缀×同库代码/方案，累计信息匹配；仍不是纯错误继承因果。正式生成$0.158945；今日全部账本stop=0、累计结算与敞口均$1.323246，无今日未知预留。旧未知预留保持，原第三轮仍暂停。正式run/score、两个PROTOCOL及清单依赖不可改；统计用`test.authorized_costs --date 20261114`。
-- 2026-11-14前缀评分完成：当前任务self方案/代码30/40与16/40，reference34/40与19/40；完整历史分别10/40与8/40、25/40与13/40。43个端点差异均为当前通过/历史失败。新结果第24节，不回写旧当前文件分数，更多历史页复验见TODO R13。全套pytest93通过，原第三轮只读审计通过。
-- 2026-11-14布尔配置评分完成：`test/library_toggle_control/`固定六个原GPT-OSS锚点的非布尔值和结构，三个小切片穷举、三个抽32项，共129配置/645比较/640报告（10复用、630新增），无新增见证，原53/120不变。BOM全程串行。run.py、PROTOCOL及清单依赖冻结；零API汇总为analyze。结果第23节，不称整个schema随机或不可达上界。`test.replay_nov14`已从原始报告独立重算本日三批、六页干预和账本，原第三轮保持暂停。
-- 2026-11-14交付复验：`anonymous-replay-20261114.zip`含150130文件/48匿名账本，十入口在独立解包目录重算一致；另离线重装锁定npm依赖，原table/task-20机制四页及参考页共五项浏览器复验通过，仍共享本机OS/Chromium缓存，不是全历史或跨机器复验。报告`test/results/replay-validation-20261114.json`，原始新浏览器报告`artifacts/replay-browser-20261114/`。一次导出被终止，未完成文件保留为`anonymous-replay-20261114-interrupted-1.zip`，不得用于复验；正式包已验证且未上传。论文正文8页/全文43页，无未定义引用或越界框，PDF仍仅本地。
-- 2026-11-15生成阶段：用户授权4小时、新增API≤$20，起始03:20UTC、截止07:20UTC。`test/interaction_transfer/`新增两个公开规格来源的独立合成交互诊断，8库均通过3/3开发需求，36候选全部先生成再评分；方案/同库代码均16/16全过，原无库1/4。预定三例合并6/8；`test/interaction_union/`事后布尔OR为7/8（7报告精确复用、0新增），非布尔冲突不继续调规则。`test/development_feedback/`另立事后无库整页强基线，4页用建库级20000-token上限及公开开发反馈，首次1/4、最终3/4；模型/信息/预算条件改变，不是纯反馈因子。今日三账本全部stop=0，结算与敞口均$2.895598、无新增未知预留，原第三轮仍暂停。只读统计`test.authorized_costs --date 20261115`。所有生成/评分文件按各目录README与manifest冻结，尤其development_feedback含analyze.py；不得原地修改或重开旧账本。
-- 2026-11-15历史复验：`test/history_replay/`固定1640个旧候选/规则记录与730控制，首次/最终共4010比较、1650去重报告，BOM串行。原dom1方案126/140当前→57/140完整历史，同库99→40；三项目自建库方案93/240→26/240、同库90→27，固定最终104→26。503个最终端点差异含79个init失败，76个有同序列更早页历史全过见证；不当独立缺陷或纯遗忘因果。初始误标的弱规则参考校准保留，真实参考在任何候选评分前另协议通过；不要改run.py/PROTOCOL.md/reference.py/REFERENCE.md及快照依赖。只读analyze/diagnostics/witnesses可用，六库完整历史合法见证14/120与旧当前53/120分开；正见证逐字重编译，未知不是不可达。结果第25节，独立汇总`test.replay_nov15`。
-- 2026-11-15任务文件历史诊断：观察原完整历史后另冻结`test/history_tasks_only/`，沿用4010端点、复用1311份已有决定性task证据，补测339份被init截断的报告；仅task-1..k时三项目方案41/240、同库42/240，旧dom1方案仍57/140。主init＋历史不回填，不是删除init的纯因果效应。run.py/__init__.py/PROTOCOL及snapshot依赖已冻结；汇总analyze可维护。结果第25.5节。
-- 2026-11-15论文格式：官方ICML2027模板已发布，本地sty/bst已替换官方字节，来源快照在`artifacts/paper-build/official-20261115`。已移除负vspace压缩、将三张Matplotlib图中文字转矢量路径，加入新规则要求的AI Disclosure Statement；声明中保留作者最终核实/审核TODO，不能代作者宣称已独立人工审查。模板更新只在本地DNA_latex，仍不入Git。
-- 2026-11-15有限模式审计：`test/finite_schema_audit/`事后选择可穷举的原calculator/GPT-5库，包含省略字段及全部枚举/布尔值共1215配置、128不同源码；官方init包含布局与基础计算，全部首败除零expected Infinity/actual Error，参考通过、空白失败，共130新报告。原40个主最终方案属于此库；只能界定该库当前完整历史的init必要条件，不能推及其余五库或当前文件任务。run.py/__init__/PROTOCOL、snapshot及评分前dependency-extension均冻结，analyze/README可维护；结果第27节。
-- 2026-11-15收尾：104项全套pytest、后续9项定向检查、15份原工作区快照通过；论文正文8/全文51页、Type1嵌入、零未定义引用/越界框。19页独立容器判定18项一致（实际4页通过），BOM参考默认在线断言在network none下不同；空白页探针none/bridge的navigator.onLine分别false/true，未重跑benchmark。原默认root启动在输出目录EACCES且0页评分，保留父阶段，正式观察在container-replay-20261115-uid；两阶段及container_network_probe.py按快照冻结。**实际墙钟约7小时21分，超过4h授权**；发现后停止新实验和长耗时归档，仅Git收尾。API仍$2.895598且全关闭。最终anonymous-replay-20261115.zip及正式bundle/validation报告未生成，勿称完整包验收；旧core/precontainer各11入口通过，finite失败包与修复overlay调试记录均保留。下次先完成TODO R11b的最终新包验证，所有旧包不覆盖、不上传。
-- 2026-11-16生成与冻结：用户授权4小时、新增API≤$20，起始03:58UTC，保守截止07:50UTC。开工余额$4.874510325，实际生成受可用余额约束。`test/matched_feedback/`在原三项目六库上匹配完整目标、五个公开测试源码/反馈、20000-token上限与最多两次修复：GPT-OSS两次重复共30候选；`test/matched_feedback_frontier/`另立GPT-5 medium的15候选。初始GPT-5预留阈值阻止了五条链的后续请求，关闭原账本后由`test/matched_feedback_continue/`只补缺失，已有响应和公开报告逐字复用。三账本128调用，结算与敞口均$4.043009、全部stop=0、无新增未知预留；只读`test.authorized_costs --date 20261116`。所有生成完成后才评分，两组BOM依次串行。原第三轮仍暂停。上述目录生成/评分源码、PROTOCOL及snapshot依赖已冻结，不得原地改动或重开账本。
-- 2026-11-16零API诊断：`test/compiler_reuse_audit/`冻结VM观察脚本，对旧240份同库代码及新18份代码的首次/最终共276位置审计；旧114份可认证为合法冻结编译结果精确复用、108份files输出运行时路径未知，不把结果接近都归于复用。`test/schema_search/`冻结五库158配置，限定单处非布尔值/数组结构/可选字段省略补入，按哈希选取；不是整个模式上界。两个目录的run、PROTOCOL及snapshot依赖已冻结，analyze/README可维护。旧11月15日正式匿名包已补齐：159991文件/52账本、11独立入口一致；本日新包单独生成，不覆盖旧包、不上传。
-- 2026-11-16校准例外：五库搜索的BOM空白当前页意外通过官方task-20（三断言用toBeDefined检查null后提前返回），原入口在BOM候选评分前停止。`test/schema_search_continue/`另冻结例外协议，保留原三报告，追加空白完整历史负对照和null/undefined matcher探针，续评原64配置/102作业；calculator/table原成绩不变。新run/init/PROTOCOL及snapshot依赖同样冻结；只读`test.schema_search.analyze`和`test.replay_nov16`联合两个阶段。BOM当前通过不能单独当功能见证，旧官方分数不回填。
-- 2026-11-16评分与本地复验完成：匹配反馈45个最终候选（42个可执行）完整历史与16留测文件均无全过；GPT-5公开五文件无库1→3/3、同库1→3/6、方案0/6，不能将公开通过替代完整目标。五库158配置/316比较/288报告完成，完整历史0/158，BOM/Sonnet当前12/32官方通过受上述测试缺口限制。原主表统一事后排除BOM/task-20为方案91/236、同库88/236、无库41/118，原成绩不回填。只读`test.replay_nov16`核对9快照、40校准报告（含原BOM空白当前异常）、两个模型公开/隐藏评分、实际费用、编译器复用及配置重编译。全套pytest118通过；本地论文正文8/全文56页，关键9表198指定单元格/363数值核对，全部49表来源登记；仍有作者审核和匿名URL待办。结果第29–31节。
-- 2026-11-16收工指示：用户要求“把当前的这个实验弄完之后，今天的todo部分就先做到这里”。当前评分和分析已完成，只做本轮归档验证与Git交付，不再启动其他TODO实验；三本API账本均已关闭，原第三轮仍暂停。剩余事项看更新后的TODO，后续续作按新的用户指示执行。
-- 2026-11-16归档复验性能修复：首个20261116包前11入口通过，第12入口因重复读取大哈希清单触及240秒限时。原包不覆盖；`test/replay_hashes.py`仅缓存不可变清单版本，仍逐份检查实际字节和原始/导出双哈希，四个未冻结统计入口改用它，所有9个实验快照不变，原工作区重算结果逐字一致。新增2项回归后全套117项通过；最终包改用20261116-final文件名，实际验收看对应报告。
-- 2026-11-16归档字节修复：第二包的第12入口发现应用JSON资产被元数据导出器重新缩进，源文件哈希断言失败；原包与失败报告保留。只对来源清单明确声明的应用JSON/JSONL保留原格式，请求元数据仍匿名化，原哈希断言不放宽。最新候选包改为20261116-final-2；是否完整验收必须看同名validation报告，不把前两个包称为已验收。
-- 2026-11-16最终验收：`anonymous-replay-20261116-final-2.zip`含168095清单文件/55匿名账本，12入口独立解包重算全部一致，正式报告`test/results/replay-validation-20261116-final-2.json`。前两个未完整验收的包/失败记录保留；包未上传，论文正文8/全文56页仍本地。118项全套pytest通过、9表198指定单元格通过；API仍$4.043009且全关闭。07:33UTC收尾检查约3h35m，低于4h；只余Git交付，按用户要求今天不再启动实验。
-- 2026-11-16论文意见修订：用户《论文问题.pdf》要求论文只用公开数据集、精简全零/饱和表并突出GUI-DNA的实证收益。当前题为 *GUI-DNA: Assembling GUI Behavior from Reusable Libraries*；移出List-16、旧自建试验及两套合成诊断的全部正文/附录内容，历史记录和冻结代码不删。模型自建库的公开Web-Bench实验保留；后续TODO优先公开任务，旧NEXT_NONMONOTONE草案不执行。新稿正文7/全文45页、36表，7表147指定单元格核对，公开套件历史费用小计$11.945801（不是新增费用）。检查入口`test.paper_public_review`，详见第32节；旧审稿报告/匿名包不覆盖，本轮无API调用。新本地input为`prompts_public.tex`、`nov15_history.tex`、`public_feedback_audits.tex`，不要用旧生成器把已移出的研究接回稿件。论文仍不入Git。
-- 2026-11-17：用户授权2小时/API≤$10，先移除论文截图对比图。`test/webbench_draw/`增加公开draw项目，两库/两生成模型/五里程碑共50候选，生成完后评280端点/124报告；方案/同库代码当前14/20与14/20，完整历史2/20与3/20，无库3/10与2/10。固定最终页40/40判定与逐任务方案一致。GPT-5接口仅主题/字号，`test.draw_interface_audit`枚举162合法配置的JS均不变（仅字节结论，不是行为等价）。62请求账本结算/敞口$3.285408，原始回执$3.28538045，三账本stop=0、无新增未知预留；原第三轮仍暂停。新预算只读入口`test.authorized_costs --date 20261117`。`test/assertion_audit/`另做六项目126文件静态登记及BOM六文件×三页×两断言的36报告串行诊断：原版空白/删iframe页全过5/6，独立null检查后0/6，参考均6/6；六文件统一排除敏感性79/216对78/216，旧成绩不改。上述运行源码、协议/快照及`test/draw_interface_audit.py`按各README冻结；分析可维护。联合复算`test.replay_nov17`通过，121项pytest通过；论文正文7/全文46页，8表171指定单元格、37表来源登记，仍仅本地。新增input为`nov17_draw.tex`，不要用旧生成器覆盖；新数据未进入旧匿名包，不称新包/跨机器验收。结果第33–34节，后续重点改为行为层接口及一次构建/固定复用的匹配对照。
-- 中文为文档语言；代码注释与标识符为英文；`DNA_latex/` 内为英文论文。
+- 论文主线：**AI 根据公开需求建库 → GUI-DNA 组装**，对比**不给库、从零生成代码**。基线仍获得需求和运行合同。
+- `studies/results/end_to_end.json` 是当前报告视图；`free_lib` 是保留代码与数据的历史消融，不进入当前论文正文/附录或展示。原分数、方法标识和历史记录不改名冒充基线。
+- 只用公开基准支持当前论文；旧合成任务仅归档。不同协议分别报告，当前任务/完整历史分开，基线不按建库者重复计数，建库费用与信息范围必须披露。
+- 原第三轮仍暂停：190/640，`artifacts/budget.sqlite3` 的 `halted=1` 不动。新任务不自动授权续跑第三轮。
+- 付费调用须有适用于本轮的预算和时间授权，先查余额；已有授权范围内不重复询问。当前编辑与重算不产生 API 费用，下一批付费实验仍待授权。
 
-## 2. 环境与常用命令
+## 目录与冻结边界
+
+- `studies/`：公开基准研究、分析、汇总；`tests/`：工程回归测试；`experiments/`：早期冻结原型与历史运行器。各目录 README 解释边界。
+- `test -> studies` 是旧清单/导入的兼容链接，不能删除；新代码和文档使用 `studies`。旧中文文件名及 `experiments/TODO.md` 同样是文档兼容链接。
+- 保留 `/home/lxler/work/gui_test -> /home/lxler/work/GUI_DNA`：旧记录使用绝对路径。
+- **不得修改** `src/gui_dna/**`、`experiments/scale_study/*.py`、`configs/scale-study.json`、历史连接器 `experiments/{plan_linker,replay_linked_plans}.py`，以及各研究 README、manifest/snapshot 指定的冻结源码、协议、输入、评分与记录。旧 `test/...` 路径的哈希仍按原字节验证。
+- 已冻结研究要改方法时另建目录、协议、输出目录与账本；不得覆盖原候选、挑选较好重跑结果或将隐藏反馈传入生成器。
+- 账本只读用 `studies/ledger_read.py`；不要为统计实例化 `Ledger`，不要放宽/重开旧账本。传输中断保留未知预留，不推定零费用。
+- `artifacts/web-bench/` 为只读上游快照。官方断言不改；诊断另立阶段，历史分数不回填。
+
+## 常用命令
 
 ```bash
-# 安装（Python 3.13 + uv）
 uv sync --extra dev
-uv run playwright install chromium            # 首次；浏览器放在 ~/.cache/ms-playwright
-# 项目目录改名后 .venv 里脚本的 shebang 会失效（Failed to spawn: pytest）：
-uv venv --clear && uv sync --extra dev
-
-# 测试（含真实 Chromium，约 1 分钟，40 项）
+uv run playwright install chromium
 uv run pytest -q
-uv run pytest tests/test_scale_study.py -q                     # 单文件
-uv run pytest tests/test_followup.py::test_ablation_context_boundaries -q   # 单测
-uv run pytest -q -k "compiler or linker"                       # 关键字
-
-# 不花钱的验证
-uv run gui-dna evaluate --self-check --out artifacts/selfcheck   # v1 评测器校准
-uv run gui-dna compare --offline                                 # v1 离线四方法流程
-uv run python -m experiments.scale_study.calibrate               # v3 参考实现 + 策略错误校准
-uv run python -m experiments.scale_rule_control                  # v3 零 API 规则控制
-uv run python -m experiments.scale_study.analyze                 # 从 results.json 重算 analysis.json / report.md
-uv run python -m experiments.audit_scale                         # 第三轮只读审计（哈希、账本、链接）
-uv run python -m experiments.round2.summarize_followup          # v2 汇总（无 API）
-uv run python experiments/replay_linked_plans.py                 # v2 连接器离线复验（无 API；manifest 钉了路径，不要挪）
-
-# 付费（需要 export OPENROUTER_API_KEY=...；密钥只读环境变量）
-uv run python scripts/check_openrouter_credits.py --required-usd 1   # 查余额，退出码 2 = 不足
-uv run python -m experiments.resume_scale --check                     # 只读断点检查
-uv run python -m experiments.resume_scale --resume                    # 明确继续第三轮
-uv run gui-dna generate --method constrained --task test-delete-pagination --out artifacts/custom-run   # v1 单次生成
-
-# 外部 benchmark 探针（WebApp1K-Duo，官方 Jest 评分，独立小账本 artifacts/benchmark-probe/budget.sqlite3）
-#   首次：git clone --depth 1 https://github.com/onekq/WebApp1k.git artifacts/benchmark-probe/WebApp1k
-#         (cd artifacts/benchmark-probe/WebApp1k/staging && npm install && npm install react-router-dom@6 node-fetch@2)
-#         （fetch-mock 钉 9.11.0、react-router-dom 钉 6.x、node-fetch 2.x，否则官方测试在 CRA 5 / Jest 27 下无法加载）
-uv run python -m experiments.webapp1k_probe --models deepseek/deepseek-v4-pro-0813 --categories blogging taskmanagement --per-category 5
-uv run python -m experiments.webapp1k_probe --evaluate-only        # 只重新评分已保存的实现，不花钱
-
-# WebApp1K-Duo 上的方法对比（test/webapp1k_dna/，独立账本 artifacts/webapp1k-dna/budget.sqlite3，上限 $1）
-uv run pytest test/webapp1k_dna -q                                  # 方案编译器离线测试
-uv run python -m test.webapp1k_dna.run --arms rule                  # 零 API：建冻结原子函数库 + 规则组装 + Jest
-uv run python -m test.webapp1k_dna.run --arms free rule dna         # 付费：自由代码 vs GUI-DNA 组装方案（默认 10 个 Duo）
-
-# TodoMVC 规范 + 官方 Playwright 测试集（test/todomvc_dna/，独立账本 artifacts/todomvc-dna/budget.sqlite3，上限 $1）
-(cd test/todomvc_dna/harness && npm install)                        # 首次：@playwright/test 钉 1.63.0，复用已装浏览器
-uv run pytest test/todomvc_dna -q                                   # 离线检查
-uv run python -m test.todomvc_dna.run --arms rule                   # 零 API：规则组装 + 官方测试评分
-uv run python -m test.todomvc_dna.run --arms free rule dna --samples 2   # 付费三种做法对比
-
-# Web-Bench dom1（test/webbench_dna/，独立账本 artifacts/webbench-dna/budget.sqlite3，上限 $1.5）
-#   首次：git clone --depth 1 https://github.com/bytedance/web-bench.git artifacts/web-bench ；(cd test/webbench_dna/harness && npm install)
-uv run pytest test/webbench_dna -q
-uv run python -m test.webbench_dna.run --arms rule                                  # 零 API：规则组装 + 官方测试
-uv run python -m test.webbench_dna.run --arms free rule dna --models <...>           # 付费；--evaluate-only 只重评，--grade-workers 并行评分
-
-# 零成本的汇总 / 论文素材脚本（2026-11-08/09）
-uv run python -m test.paired_intervals [--todomvc <summary.json> --label <tag>]    # 配对差的聚类 bootstrap 区间 → test/results/paired-intervals*.md
-uv run python -m test.repair_breakdown                 # 首次即对 / 修复后才对 / 修复也不对 → test/results/repair-breakdown.md
-uv run python -m test.export_prompts                   # 四个数据集的提示词逐字导出 → DNA_latex/prompts.tex（本地论文目录）
-uv run python -m test.ledger_costs                     # 所有账本按阶段汇总已结算费用（只读）
-uv run python -m test.model_table --summary <summary.json> --arms free dna          # 逐模型小表（Markdown + LaTeX 行）
-uv run python -m test.webbench_dna.seeds               # Web-Bench 多种子汇总（读 artifacts/webbench-dna-seed*/summary.json）
-uv run python -m test.review_checks                    # 审稿人会追问的四个数字：冻结后采样、各做法费用、修复来源、顺序协议的错误继承 → test/results/review-checks.md
-uv run --with matplotlib python -m test.webbench_dna.taskmap_figure                  # 逐任务通过图 → DNA_latex/figures/
-# 传输失败（HTTP 429 重试耗尽、连接中断）不是模型输出：先列出、再 --apply 把这些记录挪到 <stage>/discarded-transport/<n>/，然后用同样参数重跑该阶段（顺序做法从出错任务起全部重做）
-uv run python -m test.rerun_failed --stage artifacts/<stage> --suite webbench|todomvc [--apply]
+uv run python -m studies.end_to_end --check      # 当前比较视图，只读
+uv run python -m studies.paper_end_to_end       # 本地论文表格/范围核对
+uv run python -m experiments.audit_scale        # 暂停的第三轮，只读
+uv run python scripts/check_openrouter_credits.py --required-usd 1
 ```
 
-`.browser-deps/` 里是无 sudo 环境解包的 `libnspr4`/`libnss3`，评测子进程自动加到 `LD_LIBRARY_PATH`；没有也不影响有系统库的机器。
+更多复验入口见 [docs/reproducibility.md](docs/reproducibility.md)。不要用旧论文生成器将已移出的研究/消融重新写入当前稿件。
 
-## 3. 架构：三轮历史代码与模型建库实验并存
+## 文档与交付
 
-三轮实验的代码**叠加而不替换**，后一轮 import 前一轮：
-
-```
-v1  src/gui_dna/            tasks/prompts/generation/experiment  四方法 direct|retrieval|dna|constrained
-      ├─ render.py           shell.html 外壳 + reference.js（带 @function 契约注释的参考函数）
-      ├─ evaluation.py       Playwright 子进程评测器；perform()/check() 被 v2、v3 复用
-      ├─ oracle.py / suites.py   独立期望语义 + 隐藏用例（只被评测器 import）
-      ├─ provider.py         OpenRouter 单次请求：预留→POST→结算；重放已结算响应；只重试 429
-      └─ budget.py           SQLite 账本 Ledger(path, cap, stop)；只能收紧、不能放宽
-v2  src/gui_dna/followup/   atomic_library()（v1 库人工拆成原子函数）+ compile_plan v1 + 八方法 study
-      + experiments/round2/   预加载强基线、同等接口配对、汇总（只复算 实验结果.md 第 3 节，不在冻结清单内）
-      + experiments/replay_linked_plans.py / plan_linker.py   事后连接器复验（路径被其 manifest 钉住）
-v3  experiments/scale_study/ library()（v2 库人工扩成 20 个语义变体）+ 策略盲 compile_plan + 四方法 study
-      + experiments/resume_scale.py / audit_scale.py / scale_rule_control.py
-ext test/{webapp1k_dna,todomvc_dna,webbench_dna}/  三个外部数据集上的对比（各有 README）；experiments/webapp1k_probe.py 被 test/webapp1k_dna 复用
-paper DNA_latex/           ICML 2027 投稿 LaTeX（main.tex 正文，TODO 标记待补数字与图；本地目录，不入库）
-```
-
-一个候选的生命周期（三轮一致）：
-
-1. `tasks()` 给出 `{requirement, features, initial}`（v3 另有评测专用 `policy`，**不进 prompt**）。
-2. `messages_for(task, method, lib)` 按方法构造消息；plan 两组初始消息字节相同，三个预加载组用户数据字节相同（有测试保证）。
-3. `OpenRouter.call()`：`Ledger.reserve()` → POST → `settle()`；目录下已有 `request.json` 且账本已结算则直接重放 `response.json`，不再付费。
-4. 输出 → `parse_json` → 代码直接用 / `compile_plan(plan)` 拼装；失败则 `compile_error` 作为公开反馈。
-5. `write_app()` 把代码注入 `shell.html` → `evaluate()` 在子进程跑公开用例 → 失败反馈追加到消息，最多两轮修复。
-6. 写 `result.json`（含 fingerprint 与各版本 sha256）。目录已存在时校验哈希后复用，配置变了就报错，不覆盖。
-7. **全部生成结束后**才统一跑隐藏评测（首次与最终版本都评），再 `analyze` 做配对比较与家族聚类 bootstrap。
-
-上下文边界靠结构保证：`oracle.py`、`fixtures.py`、`suites.py` 只被评测器 import；`messages_for` 用字段白名单；`tests/test_protocol.py`、`tests/test_scale_study.py` 断言隐藏数据、策略字段不出现在 prompt 里。改 prompt 或库时先跑这些测试。
-
-## 4. 红线（改之前先看）
-
-- **不要修改** `experiments/scale_study/*.py`、`src/gui_dna/**`（含 assets）和 `configs/scale-study.json`：第三轮 manifest 冻结了它们的 SHA-256，`resume_scale --check` / `audit_scale` 会失败，第三轮结果也会失去可比性。要改方法就新建目录（如 `experiments/round4/`）和新配置，另立实验阶段。
-- **不要删除、替换、手改** `artifacts/budget.sqlite3`；不要手动把 `halted` 改回 0（只能通过 `resume_scale --resume` 的受控流程）。小预算探针请用**独立账本**：`Ledger(ROOT/'artifacts/<probe>/budget.sqlite3', cap, stop)` 传给 `OpenRouter(config, ledger)`。
-- 新的付费实验用**新的 `--out` 目录**；不要覆盖已有运行清单。
-- 不要把隐藏失败、`policy` 字段、oracle 逻辑放进任何模型消息。
-- 不要在同一模型组里静默换模型；模型下线就另立阶段并写进报告。
-- `artifacts/` 默认不入库（`.gitignore` 只放行各轮 `report.md` / `protocol.md`）；不要把截图、响应、账本提交上去。
-- 费用、通过率等数字一律从 `results.json` / `analysis.json` / 账本重算，不要凭记忆改文档。
-
-## 5. 文档约定
-
-- `README.md`：安装 + idea 介绍，不放逐轮细节。
-- `代码逻辑.md`：给新读者的流水线讲解（数据、两种做法逐步对照、指标、术语表），改方法或加数据集时同步更新。
-- 用词：说「做法/对照组」不说「臂」，说「组装方案 / 组装」不说「接线」，结论段用「目前明确的是 / 还不能确认的是」。
-- `实验结果.md`：唯一的结果文档；新一轮实验追加一节，不再新建「第 N 轮研究报告.md」。
-- `AGENTS.md`：本文件；`CLAUDE.md` 只是指向这里的入口。
-- `DNA_latex/`：英文论文，只在本地（`.gitignore` 忽略），不要提交。数字只从 `实验结果.md` 与各 `results/` 文件取，改了实验结论要同步改论文；未定内容用 `\TODO{...}`、缺数字用 `\TBD`、缺图用 `\figplaceholder{宽}{高}{说明}`（都在 `preamble.tex` 定义，红字显示），交稿前全部清掉。`icml2027.sty` / `icml2027.bst` 已在2026-11-15替换官方2027样式，来源/哈希见`artifacts/paper-build/official-20261115/provenance.json`，不要再用改年份草稿。`custom.bib` 每条都已对照出版方记录核实（2026-11-05），新加引用也要核实。正文必须 ≤ 8 页（影响声明、参考文献、附录不计）。
-- 报告风格沿用：先写结论，正负结果都保留，明确写出「还不能确认的是」。
-
-## 6. 关键文件速查
-
-| 想做什么 | 看哪里 |
-|---|---|
-| 改第三轮任务/语义变体/编译器（新阶段） | `experiments/scale_study/domain.py`：`tasks()`、`library()`、`compile_plan()`、`reference_plan()`、`messages_for()` |
-| 看隐藏用例怎么生成 | `experiments/scale_study/fixtures.py`（v3）、`src/gui_dna/followup/fixtures.py`（v2）、`src/gui_dna/suites.py`（v1） |
-| 看评测器怎么比对 DOM 与状态 | `experiments/scale_study/evaluator.py` 的 `check()`；`src/gui_dna/evaluation.py` 的 `perform()` |
-| 看统计口径 | `experiments/scale_study/analyze.py`：完整组筛选、`paired_interval()` |
-| 加新模型/改价格上限 | `configs/*.json` 的 `models`、`model_price_caps`、`provider_order`；`provider.py` 会校验模型在目录中 |
-| 渲染外壳与事件协议 | `src/gui_dna/assets/shell.html`（`window.__gui.{reset,dispatch,snapshot}`）、`src/gui_dna/prompts.py` 的 `INTERFACE` |
-| 外部 benchmark 候选与探针 | `实验结果.md` 第 8 节；`experiments/webapp1k_probe.py`；`artifacts/benchmark-probe/summary.md` |
-| 在 Web-Bench dom1 上跑 GUI-DNA | `test/webbench_dna/README.md`；`shell.html`、`library.py`（参考实现拆成的原子 + 变体）、`domain.py`（任务阶梯、`compile_plan`、提示词）、`evaluate.py`、`run.py`；官方测试在 `harness/dom1-tests/`；结论在 `实验结果.md` 第 11 节 |
-| 在 TodoMVC 官方测试集上跑 GUI-DNA | `test/todomvc_dna/README.md`；`shell.html`（公开外壳与协议）、`library.py`（冻结原子，含语义变体）、`domain.py`（任务族、需求、`compile_plan`、提示词）、`evaluate.py`（公开冒烟 + 官方隐藏评测）、`run.py`；结果 `test/todomvc_dna/results/`；结论在 `实验结果.md` 第 10 节 |
-| 改论文 | `DNA_latex/main.tex`（正文与附录）、`preamble.tex`（宏与标记）、`custom.bib`；表格数字对应 `实验结果.md` 第 4、10、11、12 节 |
-| 下一个该做什么实验 | `experiments/TODO.md`（按收益/成本排序，含费用估算与入口命令） |
-| 在 WebApp1K-Duo 上跑 GUI-DNA（扩大实验入口） | `test/webapp1k_dna/README.md`；`run.py`（三种做法）、`compiler.py`（计划检查 + 拼装）、`analyze.js`（babel 静态字符串）；结果 `test/webapp1k_dna/results/`；结论在 `实验结果.md` 第 9 节 |
+- 文档用中文，代码注释/标识符和 `DNA_latex/` 论文用英文。结果唯一追加到 `docs/results.md`；已完成待办移出 roadmap，历史保存在结果与 Git。
+- 修改实验结论时同步 README、方法说明、论文及本地 `presentation/`。按 [presentation/TODO.md](presentation/TODO.md) 更新 `DNA.md`、12 页 `slides.pptx` 和对应 `script.md`；不增加篇幅，备注与讲稿一致，追加一行更新记录。
+- `DNA_latex/`、`presentation/`、原始响应/账本/截图不入 Git，不强制添加。当前官方 ICML 2027 样式不改，正文不超过 8 页；引用与数字须有可核查来源。
+- 新论文表格只由 `studies.paper_end_to_end --write` 生成；本地编译入口 `artifacts/paper-build/build.sh`。生成后仍须检查 PDF、来源、负结果和待作者审核项。
+- 不宣称未执行的实验、完整匿名发布或跨机器复现已完成；新包使用独立文件名，不覆盖旧包，不自行上传。

@@ -1,5 +1,6 @@
 """Read-only final audit of the completed enlarged study and report evidence."""
 from collections import Counter, defaultdict
+import argparse
 from pathlib import Path
 import hashlib
 import json
@@ -8,13 +9,27 @@ import re
 
 from gui_dna.tasks import ROOT,dump
 from gui_dna.library import digest
-from gui_dna.budget import Ledger
+from studies.ledger_read import calls as ledger_calls, totals as ledger_totals
 from experiments.scale_study.domain import METHODS
 
 OUT=ROOT/'artifacts/scale-study'
 
 
+def read_accounting(path):
+    rows = ledger_calls(path)
+    totals = ledger_totals(path)
+    return {'calls': rows, 'actual_usd': totals['settled_usd'],
+            'exposure_usd': totals['exposure_usd'],
+            'library_usd': sum(r['actual'] or 0 for r in rows if r['purpose'].startswith('library')) / 1e6,
+            'unsettled_calls': totals['unsettled_calls'],
+            'policy': {'id': 1, 'cap': round(totals['cap_usd'] * 1e6),
+                       'stop': round(totals['stop_usd'] * 1e6), 'halted': totals['halted']}}
+
+
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--report', type=Path, default=OUT/'final-verification.json')
+    args = parser.parse_args()
     manifest=json.loads((OUT/'manifest.json').read_text())
     for name,sha in manifest['sources'].items():assert digest((ROOT/name).read_text())==sha,name
     assert digest((OUT/'protocol.md').read_text())==manifest['protocol_sha256']
@@ -55,7 +70,7 @@ def main():
             messages.append(json.loads((Path(group[method]['directory'])/'candidate-0/messages.json').read_text()))
         assert messages[0]==messages[1]
         assert set(json.loads(messages[0][1]['content']))=={'requirement','features','initial','functions'}
-    a=Ledger(ROOT/'artifacts/budget.sqlite3').summary()
+    a=read_accounting(ROOT/'artifacts/budget.sqlite3')
     calls=[c for c in a['calls'] if c['purpose'].startswith('scale:')]
     assert {c['id'] for c in calls}==request_ids
     assert all(c['status']!='reserved' for c in a['calls'])
@@ -68,9 +83,10 @@ def main():
                 if p.is_file() and p.suffix in ['.py','.json','.js','.html','.txt','.md']:
                     assert secret not in p.read_bytes(),str(p);scanned+=1
     for filename in ['README.md','实验结果.md']:
-        for target in re.findall(r'\]\(([^)]+)\)',(ROOT/filename).read_text()):
+        document = (ROOT/filename).resolve()
+        for target in re.findall(r'\]\(([^)]+)\)',document.read_text()):
             if '://' not in target and not target.startswith('#') and target!='artifacts/scale-study/final-verification.json':
-                assert (ROOT/target.split('#')[0]).exists(),target
+                assert (document.parent/target.split('#')[0]).exists(),target
     test_log=(OUT/'tests-before-evaluation.txt').read_text();assert '38 passed' in test_log
     control=json.loads((ROOT/'artifacts/scale-rule-control/results.json').read_text())
     for r in control['runs']:assert digest(Path(r['app']).read_text())==r['app_sha256']
@@ -81,7 +97,7 @@ def main():
             'key_available_for_exact_scan':bool(secret),'secret_scan_files':scanned,
             'call_statuses':dict(Counter(c['status'] for c in calls)),
             'accounting':{k:a[k] for k in ['actual_usd','exposure_usd','library_usd','unsettled_calls','policy']}}
-    dump(OUT/'final-verification.json',report);print(json.dumps(report,ensure_ascii=False,indent=2))
+    dump(args.report,report);print(json.dumps(report,ensure_ascii=False,indent=2))
 
 
 if __name__=='__main__':main()

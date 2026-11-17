@@ -17,7 +17,7 @@ import tempfile
 import zipfile
 from pathlib import Path
 
-from test.export_review_snapshot import ALLOWED_FILES, ALLOWED_ROOTS, EXTENSIONS
+from test.export_review_snapshot import ALLOWED_FILES, ALLOWED_ROOTS, EXTENSIONS, source_file_paths, is_document_alias
 
 ROOT = Path(__file__).resolve().parents[1]
 TEXT = EXTENSIONS | {'.csv', '.svg', '.yaml', '.yml', '.mjs'}
@@ -173,7 +173,7 @@ def frozen_source_files(stage):
 
 def selected_files(expanded=False, library_repair=False, nov14=False, nov15=False, nov16=False):
     names = subprocess.check_output(['git', 'ls-files', '-z', '--cached', '--others', '--exclude-standard'], cwd=ROOT).decode().split('\0')
-    chosen = {ROOT / n for n in names if n and (n in ALLOWED_FILES or (Path(n).parts[0] in ALLOWED_ROOTS and Path(n).suffix in TEXT))}
+    chosen = source_file_paths(ROOT, names, TEXT)
     prefixes = RAW_PREFIXES + (('webbench-expand', 'heldout-composition') if expanded else ())
     for stage in (ROOT / 'artifacts').iterdir():
         if stage.name in NOV16_NAMES and not nov16:
@@ -231,7 +231,7 @@ def selected_files(expanded=False, library_repair=False, nov14=False, nov15=Fals
                          'replay-bundle-20261116.json', 'replay-validation-20261116.json',
                          'replay-bundle-20261116-final.json', 'replay-validation-20261116-final.json',
                          'replay-bundle-20261116-final-2.json', 'replay-validation-20261116-final-2.json'}
-    return sorted(p for p in chosen if p.is_file() and not p.is_symlink() and p.name not in generated_reports
+    return sorted(p for p in chosen if p.is_file() and (not p.is_symlink() or is_document_alias(ROOT, p)) and p.name not in generated_reports
                   and not (p.parent.name.startswith('review-') and p.name == 'HANDOFF.md')
                   and not (p.parent.name.startswith('review-') and p.name.startswith('credits'))
                   and not (p.parent.name == 'paper-preview' and p.parent.parent.name.startswith('review-')))
