@@ -6,7 +6,7 @@ import hashlib
 import json
 import subprocess
 from gui_dna.provider import parse_json
-from test.history_replay.run import ROOT,read,dump,sha,digest,source_files,now
+from studies.study_io import ROOT,read,dump,sha,digest,source_files,now
 from test.webbench_expand.schema import validate
 from test.interface_blind.core import slug
 
@@ -68,7 +68,7 @@ def classify(row,observation):
 def run():
     assert not OUT.exists()
     rows=cases();paths=[HERE/'run.py',HERE/'probe.cjs',HERE/'PROTOCOL.md',HERE/'__init__.py',
-        ROOT/'test/webbench_expand/schema.py',ROOT/'test/history_replay/run.py',ROOT/'test/interface_blind/core.py',
+        ROOT/'test/webbench_expand/schema.py',ROOT/'studies/study_io.py', 'studies/browser_jobs.py',ROOT/'test/interface_blind/core.py',
         ROOT/'src/gui_dna/provider.py']
     paths += [ROOT/'artifacts'/stage/'generation-complete.json' for _,stage in stages()]
     for row in rows:

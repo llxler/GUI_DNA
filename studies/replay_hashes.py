@@ -2,7 +2,7 @@
 from functools import lru_cache
 from pathlib import Path
 import json
-from test.history_replay.run import ROOT, sha
+from studies.study_io import ROOT, sha
 
 
 @lru_cache(maxsize=2)

@@ -1,7 +1,7 @@
 """Scoped runtime adapter; the shared frozen source files remain unchanged."""
 from contextlib import contextmanager
 from pathlib import Path
-from test.history_replay.run import ROOT, read, sha
+from studies.study_io import ROOT, read, sha
 
 HERE=Path(__file__).resolve().parent
 OUT=ROOT/'artifacts/matched-feedback-frontier-20261116'
@@ -25,8 +25,8 @@ def verify():
 
 @contextmanager
 def configured():
-    from test.matched_feedback import core,browser,prepare,run,evaluate,analyze
-    modules=(core,browser,prepare,run,evaluate,analyze)
+    from test.matched_feedback import core,browser,prepare,run
+    modules=(core,browser,prepare,run)
     changes=[]
     def change(module,name,value):
         changes.append((module,name,getattr(module,name)));setattr(module,name,value)

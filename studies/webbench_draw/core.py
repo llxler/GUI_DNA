@@ -7,7 +7,7 @@ from test.interface_blind.core import ROOT, UPSTREAM, dump, slug, validate_files
 from test.webbench_expand.core import SCHEMA_RULES, compile_plan, config as previous_config
 from test.webbench_expand.schema import check_schema
 from test.webbench_expand.generate import output_files
-from test.history_replay.run import digest, sha
+from studies.study_io import digest, sha
 from .browser import public_check
 
 HERE = Path(__file__).resolve().parent

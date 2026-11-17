@@ -2,7 +2,7 @@
 from pathlib import Path
 import json
 
-from test.history_replay.run import ROOT, read, dump, sha, digest, now
+from studies.study_io import ROOT, read, dump, sha, digest, now
 from test.webbench_expand.core import PROJECTS, BUILDERS, UPSTREAM, ENVIRONMENT, requirements
 from test.webbench_expand.generate import messages_for as original_messages, output_files
 from test.interface_blind.core import validate_files, write_files, slug

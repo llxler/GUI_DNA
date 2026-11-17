@@ -2,7 +2,7 @@
 
 展示统一使用 `by_builder`、`by_project_builder`、`by_generator_builder`，每组与共用无库基线的目标和分母一致；费用同样按建库者分开。旧聚合字段仅供对账。
 
-当前主比较入口是 [`end_to_end.json`](end_to_end.json)：AI 建库＋GUI-DNA 对真实无库生成。它记录源哈希、真实候选路径、两种端点、基线去重、建库费用和报告范围；是事后派生视图，不是新模型实验。
+当前主比较入口是 [`end_to_end.json`](end_to_end.json)：AI 建库＋GUI-DNA 对真实无库生成。它记录源哈希、真实候选路径、当前任务指标、基线去重、建库费用和报告范围；是事后派生视图，不是新模型实验。
 
 ```bash
 uv run python -m studies.end_to_end --check

@@ -25,10 +25,6 @@ def cell(value):
     return f"{value['passed']}/{value['total']} ({percentage(value['rate_percent'])}\\%)"
 
 
-def outcomes(result):
-    return [cell(result[endpoint][method]) for endpoint in ("current", "history") for method in ("free", "plan")]
-
-
 def table(label, caption, headers, rows, spec=None, wide=False):
     kind = "table*" if wide else "table"
     spec = spec or "l" + "r" * (len(headers) - 1)
@@ -54,19 +50,19 @@ def builder_cells(groups, endpoint):
 
 def render(data):
     columns = ["Direct", "GUI-DNA (GPT-5)", "GUI-DNA (Sonnet)"]
-    rows = [[COHORTS[c], endpoint.title(), *builder_cells(value["by_builder"], endpoint)]
-            for c, value in data["cohorts"].items() for endpoint in ("current", "history")]
-    main = table("tab:endtoend", "Web-Bench results separated by library builder. The two GUI-DNA columns identify GPT-5-built and Claude-Sonnet-4.5-built libraries, not target generators. Each row uses identical target keys and denominators. Direct is one shared no-library baseline, shown once; it is not an additional sample for each library. Cells are final passes / candidates (percent). Target generators are pooled within each explicitly named study; their separate results appear in Appendix~\\ref{app:details}. Construction adds information and compute (Section~\\ref{sec:setup}).", ["Study", "Endpoint", *columns], rows, wide=True)
+    rows = [[COHORTS[c], *builder_cells(value["by_builder"], endpoint)]
+            for c, value in data["cohorts"].items() for endpoint in ("current",)]
+    main = table("tab:endtoend", "Current-task Web-Bench results separated by library builder. The two GUI-DNA columns identify GPT-5-built and Claude-Sonnet-4.5-built libraries, not target generators. Each row uses identical target keys and denominators. Direct is one shared no-library baseline, shown once; it is not an additional sample for each library. Cells are final passes / candidates (percent). Target generators are pooled within each explicitly named study; their separate results appear in Appendix~\\ref{app:details}. Construction adds information and compute (Section~\\ref{sec:setup}).", ["Study", *columns], rows, wide=True)
     appendix = [r"\section{Detailed End-to-End Results}", r"\label{app:details}",
                 "Library builders remain separate in every comparison. The shared direct baseline appears once per row. Generator and project breakdowns retain the same target keys for all three columns; no best-library selection or independent replication of shared baselines is performed."]
-    rows = [[p, endpoint.title(), *builder_cells(groups, endpoint)] for value in data["cohorts"].values()
-            for p, groups in value["by_project_builder"].items() for endpoint in ("current", "history")]
-    appendix.append(table("tab:endtoend-project", "Per-project results, with library builders in separate columns. Target generators are pooled only within each project. Draw uses five milestones; the other studies use all twenty prefixes.", ["Project", "Endpoint", *columns], rows))
+    rows = [[p, *builder_cells(groups, endpoint)] for value in data["cohorts"].values()
+            for p, groups in value["by_project_builder"].items() for endpoint in ("current",)]
+    appendix.append(table("tab:endtoend-project", "Per-project results, with library builders in separate columns. Target generators are pooled only within each project. Draw uses five milestones; the other studies use all twenty prefixes.", ["Project", *columns], rows))
     names = {"interface":"dom1/form", "expansion":"Three-project", "draw":"draw"}
-    rows = [[names[c], MODELS[model], endpoint.title(), *builder_cells(groups, endpoint)]
+    rows = [[names[c], MODELS[model], *builder_cells(groups, endpoint)]
             for c, value in data["cohorts"].items() for model, groups in value["by_generator_builder"].items()
-            for endpoint in ("current", "history")]
-    appendix.append(table("tab:endtoend-generator", "Separate target-generator and library-builder results. Three-project denotes calculator/table/bom; projects remain pooled within that row, and individual project results appear above. The header's model names identify library builders; the Generator column identifies the model producing target code or plans.", ["Study", "Generator", "Endpoint", *columns], rows, spec="lllrrr"))
+            for endpoint in ("current",)]
+    appendix.append(table("tab:endtoend-generator", "Separate target-generator and library-builder results. Three-project denotes calculator/table/bom; projects remain pooled within that row, and individual project results appear above. The header's model names identify library builders; the Generator column identifies the model producing target code or plans.", ["Study", "Generator", *columns], rows, spec="llrrr"))
     appendix += [r"\clearpage", r"\section{Construction and Generation Accounting}", r"\label{app:cost}",
                  r"Table~\ref{tab:construction} separates library builders' recorded construction charges, including unsuccessful attempts. Each row covers that builder's libraries for the named study. Exposure includes unresolved transport reservations. Local compute and unlogged human preparation time are excluded."]
     rows = [[COHORTS[c], MODELS[b], f"{values[b]['settled_usd']:.6f}", f"{values[b]['exposure_usd']:.6f}"]
@@ -107,10 +103,12 @@ def audit(data, generated):
     labels = re.findall(r"\\label\{(tab:[^}]+)\}", content)
     expected_labels = re.findall(r"\\label\{(tab:[^}]+)\}", "\n".join(generated.values()))
     assert set(labels) == set(expected_labels) and len(labels) == len(set(labels)), "Unregistered table"
-    # Adverse endpoint and protocol disclosures must survive editorial changes.
-    for phrase in ("8/120", "18/120", "15/120", "0/10", "2/10", "43/108", "36/108", "39/108",
+    # Current-task scope and protocol disclosures must survive editorial changes.
+    for phrase in ("43/108", "36/108", "39/108",
                    "all twenty public requirements", "not a matched total-budget", "retrospective"):
         assert phrase in content, f"Missing primary result/boundary: {phrase}"
+    assert not re.search(r"complete.history|full.history|history replay", content, re.I)
+    assert "current official task file" in content
     result = {"all_passed": True, "tables": expected_labels,
               "all_active_tables_generated_and_verified": True,
               "primary_view_sha256": sha(OUTPUT), "source_sha256": data["source_sha256"],

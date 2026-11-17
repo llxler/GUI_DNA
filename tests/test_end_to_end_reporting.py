@@ -6,28 +6,28 @@ from studies.end_to_end import builder_comparisons, comparison, reconstruct, uni
 def test_shared_baseline_is_not_replicated_or_relabelled():
     baseline = {"cohort": "c", "project": "p", "model": "m", "task": "task-1",
                 "method": "free", "builder": "b1", "current": True,
-                "history": False, "record": "actual-free-record"}
+                "record": "actual-free-record"}
     other = {**baseline, "builder": "b2"}
     archived = {**baseline, "method": "free_lib", "record": "library-assisted-record"}
     selected = unique_records([baseline, other, archived])
     assert len(selected) == 1 and selected[0]["builder"] is None
     assert comparison(selected)["current"]["free"]["total"] == 1
-    conflicting = {**other, "history": True}
+    conflicting = {**other, "current": False}
     with pytest.raises(ValueError, match="Conflicting observations"):
         unique_records([baseline, conflicting])
 
 
-def test_primary_view_keeps_adverse_endpoints_and_missing_counterparts():
+def test_primary_view_uses_original_current_scores_and_missing_counterparts():
     data = reconstruct()
     assert {k: v["results"]["current"]["free"]["total"] for k, v in data["cohorts"].items()} == {
         "interface": 80, "expansion": 120, "draw": 10}
     for cohort in ("expansion", "draw"):
         assert data["cohorts"][cohort]["results"]["current"]["difference_pp"] > 0
-        assert data["cohorts"][cohort]["results"]["history"]["difference_pp"] < 0
     assert "frontier" not in data["cohorts"]
     assert any("No no-library" in row["reason"] for row in data["not_reported"])
     assert all(row["method"] in ("free", "plan") for row in data["records"])
-    assert sum(x["reported_candidates"] for x in data["matched_feedback"].values()) == 27
+    assert all("history" not in row for row in data["records"])
+    assert not any("history-replay" in name for name in data["source_sha256"])
     for value in data["costs"]["draw_per_generator_scenarios"].values():
         assert value["pipeline_receipts_usd"] > value["selection_receipts_usd"]
     assert data["costs"]["draw_complete_original_study_ledger_usd"] == 3.285408
@@ -39,11 +39,11 @@ def test_builder_comparisons_match_targets_and_preserve_opposite_effects():
         for groups in [cohort["by_builder"], *cohort["by_project_builder"].values(),
                        *cohort["by_generator_builder"].values()]:
             for result in groups.values():
-                for endpoint in ("current", "history"):
+                for endpoint in ("current",):
                     assert result[endpoint]["free"]["total"] == result[endpoint]["plan"]["total"]
-    expansion = data["cohorts"]["expansion"]["by_builder"]
-    assert expansion["openai/gpt-5"]["history"]["difference_pp"] < 0
-    assert expansion["anthropic/claude-sonnet-4.5"]["history"]["difference_pp"] > 0
+    expansion = data["bom_sensitivity"]["by_builder"]
+    assert expansion["openai/gpt-5"]["current"]["difference_pp"] > 0
+    assert expansion["anthropic/claude-sonnet-4.5"]["current"]["difference_pp"] < 0
     for value in data["costs"]["draw_by_generator_builder"].values():
         assert value["targets_per_method"] == 5
         assert value["pipeline_usd"] == pytest.approx(value["build_usd"] + value["selection_usd"])

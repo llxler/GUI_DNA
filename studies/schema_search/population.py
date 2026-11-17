@@ -1,7 +1,7 @@
 """Schema-only deterministic proposals, without test outcomes or project rules."""
 from copy import deepcopy
 from test.webbench_expand.schema import validate
-from test.history_replay.run import digest
+from studies.study_io import digest
 
 
 def representative(schema, high=False):

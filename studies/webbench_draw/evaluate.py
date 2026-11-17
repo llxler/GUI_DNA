@@ -3,10 +3,11 @@ from __future__ import annotations
 import argparse
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
-from test.history_replay.run import read, now, sha, source_files, digest, dump
+from studies.study_io import read, now, sha, source_files, digest, dump
 from test.ledger_read import totals
 from .core import ROOT, HERE, BUILD, BUILDERS, STAGES, MILESTONES, slug
 from .browser import OUT, grade, prepare_harness
+from studies.browser_jobs import current_task_specs
 
 
 def prepare():
@@ -34,7 +35,7 @@ def prepare():
         if page:
             for name in files:
                 freeze(page / name)
-        for endpoint, specs in [('current',[f'task-{k}']), ('history',['init', *[f'task-{i}' for i in range(1,k+1)]])]:
+        for endpoint, specs in [('current', current_task_specs(info['task']))]:
             key = digest({'files':files,'specs':specs}) if page else None
             if page:
                 jobs.setdefault(key, {'page':str(page.relative_to(ROOT)), 'files':files,'specs':specs})

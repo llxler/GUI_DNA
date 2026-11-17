@@ -9,7 +9,7 @@ from gui_dna.budget import Ledger
 from gui_dna.provider import ProviderError
 from test.streaming_provider_v2 import StreamingOpenRouter
 from test.ledger_read import calls,totals
-from test.history_replay.run import ROOT,read,dump,sha,digest,now
+from studies.study_io import ROOT,read,dump,sha,digest,now
 from test.matched_feedback_frontier import adapt
 
 HERE=Path(__file__).resolve().parent

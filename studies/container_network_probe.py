@@ -9,7 +9,7 @@ import os
 from pathlib import Path
 import subprocess
 
-from test.history_replay.run import ROOT, now, read, dump, sha
+from studies.study_io import ROOT, now, read, dump, sha
 
 OUT = ROOT / 'artifacts/container-network-probe-20261115'
 CODE = """const {chromium}=require('/opt/replay/node_modules/playwright');

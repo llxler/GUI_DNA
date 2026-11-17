@@ -1,6 +1,6 @@
 # 复算与公开材料说明
 
-研究代码在 `studies/`，工程测试在 `tests/`。旧记录的 `test/...` 路径仍有效；迁移仅改变目录组织，冻结源码、原始实验 JSON 和账本不重新解释。
+研究代码在 `studies/`，工程测试在 `tests/`。旧记录的 `test/...` 路径仍有效；当前分支已移除累计前缀评分入口；原始实验 JSON 和账本不重新解释。
 
 ## 零 API 复算
 
@@ -12,9 +12,9 @@ uv run python -m experiments.audit_scale
 
 主视图的默认展示按建库者分列，项目/生成模型另分层，原合并字段只供对账。`studies.builder_costs` 从本地账本和 draw 回执重建逐建库者费用索引；没有原始产物时，主视图可从已登记索引复算。
 
-主视图脚本检查两项目/三项目的原当前结果与历史复验一致，按真实候选去重；独立保留 draw 端点、BOM 敏感性、反馈负结果和建库费用。只读分析不等于全历史浏览器重跑。完整旧研究命令见 [历史索引](../studies/REVIEW.md)。
+主视图脚本直接读取两项目/三项目的原当前成绩与 draw 的 current 行，按真实候选去重；保留 BOM 敏感性和建库费用。它不读取累计前缀复验结果，不重新运行浏览器。完整旧研究命令见 [历史索引](../studies/REVIEW.md)。
 
-本地拥有完整 `artifacts/` 时可进一步复验研究快照与原报告。请使用对应研究 README 的只读分析入口，不执行生成、修复或恢复命令。代码 checkout 不包含被忽略的响应、页面、账本、浏览器缓存或上游 checkout；仅有源码不能重放全部历史结果。
+本地拥有完整 `artifacts/` 时可进一步复验研究快照与原报告。旧快照必须在登记的源码版本复算，见 [退役说明](archive/full-history-retirement.md)。当前分支不再提供已删除实验的复验入口；不要修改旧清单来迁就新源码。代码 checkout 不包含被忽略的响应、页面、账本、浏览器缓存或上游 checkout；仅有源码不能重放全部历史结果。
 
 ## 本地论文与展示
 
@@ -27,11 +27,11 @@ artifacts/presentation-build/venv/bin/python artifacts/presentation-build/build_
 artifacts/presentation-build/venv/bin/python artifacts/presentation-build/render_and_check.py
 ```
 
-这些目录/工具为本地编辑资产，尚未作为公开论文材料发布。旧 `paper_cells`、`paper_public_review`、`paper_nov17 --write` 等针对历史稿件；不得用其旧模板覆盖当前稿件。新稿全部活跃表格由 `paper_end_to_end` 登记和核对。
+这些目录/工具为本地编辑资产，尚未作为公开论文材料发布。旧论文模板与累计前缀表格生成器已移出当前工作树；不得从旧版本重新接回当前稿件。新稿全部活跃表格由 `paper_end_to_end` 登记和核对。
 
 ## 路径兼容与匿名包
 
 - `test -> studies` 保持旧 Python 导入和哈希路径；`实验结果.md`、`代码逻辑.md`、`experiments/TODO.md` 指向正式 `docs/` 文件。克隆时须保留符号链接；无符号链接环境可使用匿名导出器的实文件副本。
-- 匿名导出需同时保留正式路径和旧 `test/...` 可执行副本，不能把路径变更当作改写冻结证据的理由。新清单登记原始与匿名化字节的区别。
+- 匿名导出需同时保留正式路径和旧 `test/...` 可执行副本，不能把路径变更当作改写冻结证据的理由。新清单登记原始与匿名化字节的区别。含已退役实验的旧导出选项已停用；新论文材料需另立范围明确的包。
 - 最后已完整验收的大包是 `anonymous-replay-20261116-final-2.zip`，12 个入口通过；该包不含本日新实验与本次迁移，不宣称新版已验收。旧包不覆盖、不自行上传。
 - 仓库保留上游许可证和来源说明。数据与匿名下载地址仍待作者审核，见 [roadmap](roadmap.md)。

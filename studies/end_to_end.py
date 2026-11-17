@@ -32,7 +32,7 @@ def unique_records(rows):
                row.get("seed"), row["method"],
                row.get("builder") if row["method"] == "plan" else None)
         if key in seen:
-            for field in ("current", "history", "record"):
+            for field in ("current", "record"):
                 if seen[key][field] != row[field]:
                     raise ValueError(f"Conflicting observations for {key}: {field}")
         else:
@@ -52,7 +52,7 @@ def count(rows, endpoint):
 def comparison(rows):
     methods = {m: [r for r in rows if r["method"] == m] for m in METHODS}
     result = {endpoint: {m: count(group, endpoint) for m, group in methods.items()}
-              for endpoint in ("current", "history")}
+              for endpoint in ("current",)}
     for value in result.values():
         value["difference_pp"] = (
             value["plan"]["rate_percent"] - value["free"]["rate_percent"]
@@ -91,7 +91,7 @@ def paired_by_builder(rows):
             "free_only": sum(f[endpoint] and not p[endpoint] for p, f in values),
             "both_pass": sum(p[endpoint] and f[endpoint] for p, f in values),
             "both_fail": sum(not p[endpoint] and not f[endpoint] for p, f in values),
-        } for endpoint in ("current", "history")}
+        } for endpoint in ("current",)}
     return result
 
 
@@ -103,7 +103,6 @@ def reconstruct():
         sources[path.relative_to(ROOT).as_posix()] = sha(path)
         return json.loads(path.read_text())
 
-    history = read("history-replay.json")
     draw = read("webbench-draw-20261117.json")
     interface = read("interface-blind.json")
     expansion = read("webbench-expand.json")
@@ -111,18 +110,24 @@ def reconstruct():
     supplied = read("primary-replay.json")
     builder_costs = read("builder_costs.json")
     rows = []
-    for row in history["rows"]:
-        if row["label"] != "final" or row["cohort"] not in ("interface", "expansion"):
-            continue
-        if row["method"] not in METHODS:
-            continue
-        rows.append({k: row[k] for k in (
-            "cohort", "project", "builder", "model", "method", "task", "record")}
-                    | {"current": row["old_current_passed"],
-                       "history": row["history_passed"]})
+    def original_row(cohort, stage, project, builder, model, method, task, passed):
+        library = builder.replace("/", "__") if method == "plan" else "no_library"
+        record = f"{stage}/runs/{project}/{library}/{model.replace('/', '__')}/{method}/{task}/record.json"
+        return {"cohort": cohort, "project": project, "builder": builder if method == "plan" else None,
+                "model": model, "method": method, "task": task, "record": record, "current": passed}
+
+    for group in interface["groups"]:
+        for row in group["rows"]:
+            for method in METHODS:
+                rows.append(original_row("interface", interface["stage"], group["project"],
+                    group["builder"], group["model"], method, row["task"], row[method]))
+    for row in expansion["rows"]:
+        if row["method"] in METHODS:
+            rows.append(original_row("expansion", expansion["stages"]["run"], row["project"],
+                row["builder"], row["model"], row["method"], row["task"], row["final"]))
     draw_rows = {}
     for row in draw["rows"]:
-        if row["label"] != "final" or row["method"] not in METHODS:
+        if row["label"] != "final" or row["method"] not in METHODS or row["endpoint"] != "current":
             continue
         key = row["record"]
         value = draw_rows.setdefault(key, {"cohort": "draw", **{k: row[k] for k in (
@@ -175,40 +180,11 @@ def reconstruct():
         assert {k: sensitivity[m][k] for k in ("passed", "total")} == assertion["six_file_sensitivity"]["methods"][m]
     sensitivity["difference_pp"] = sensitivity["plan"]["rate_percent"] - sensitivity["free"]["rate_percent"]
 
-    feedback = {}
-    for name in ("matched-feedback.json", "matched-feedback-frontier.json"):
-        data = read(name)
-        feedback[name] = {
-            "original_candidates_all_methods": data["candidates"],
-            "reported_candidates": sum(data["public_summary"][m]["total"] for m in METHODS),
-            "public": {m: data["public_summary"][m] for m in METHODS},
-            "results": {key: value for key, value in data["groups"].items() if key.split("/")[0] in METHODS},
-            "usage": {m: data["usage"][m] for m in METHODS},
-        }
-        feedback[name]["by_builder"] = {}
-        for builder in sorted({r["builder"] for r in data["records"] if r["method"] == "plan"}):
-            groups = {}
-            for method in METHODS:
-                selected = [r for r in data["records"] if r["method"] == method
-                            and (method == "free" or r["builder"] == builder)]
-                groups[method] = {"total": len(selected),
-                                  "public_first": sum(r["first_public_passes"] == 5 for r in selected),
-                                  "public_final": sum(r["final_public_passes"] == 5 for r in selected)}
-                for endpoint in ("history", "withheld"):
-                    groups[method][endpoint] = sum(r["passed"] for r in data["rows"]
-                        if r["label"] == "final" and r["endpoint"] == endpoint and r["method"] == method
-                        and (method == "free" or r["builder"] == builder))
-            assert groups["free"]["total"] == groups["plan"]["total"]
-            feedback[name]["by_builder"][builder] = groups
     historical = {}
     for suite in ("todomvc", "webbench"):
         data = next(s for s in supplied["suites"] if s["suite"] == suite and s["summary"] == "summary")
         historical[suite] = {m: {"passed": data["primary"][m]["final_all"],
                                  "total": data["primary"][m]["n"]} for m in ("free", "dna")}
-    for m in ("free", "dna"):
-        selected = [r for r in history["rows"] if r["cohort"] == "expert" and r["method"] == m and r["label"] == "final"]
-        historical["webbench"][m]["history_passed"] = sum(r["history_passed"] for r in selected)
-
     def sum_cost(values, field):
         return float(sum((Decimal(str(v[field])) for v in values), Decimal(0)))
 
@@ -241,8 +217,9 @@ def reconstruct():
             "scope": "Each generator is charged both library builds once across ten plan targets (two builders x five milestones). Independent scenarios; do not sum construction across generators. Actual study built the two libraries only once.",
         }
     return {
-        "schema_version": 2, "reporting_revision": "2026-11-17-by-builder",
-        "reporting_contract": "Report each builder separately, including project/generator breakdowns, sensitivity, feedback and cost. Each comparison uses the same target keys and denominator as the shared actual no-library baseline. Existing pooled fields are retained for internal reconciliation only, not presentation.",
+        "schema_version": 3, "reporting_revision": "2026-11-17-current-task-only",
+        "evaluation_scope": "Current official task file only; not certification of the whole application.",
+        "reporting_contract": "Report each builder separately, including project/generator breakdowns, sensitivity and cost. Each comparison uses the same target keys and denominator as the shared actual no-library baseline. Existing pooled fields are retained for internal reconciliation only, not presentation.",
         "selection_policy": "Retrospective reporting of existing observations; not a preregistered new experiment.",
         "method_roles": {
             "free": {"role": "primary_baseline", "label": "Direct code without a library", "library_access": False},
@@ -256,7 +233,7 @@ def reconstruct():
                             "by_builder": {b: {"current": v["current"]}
                                            for b, v in builder_comparisons(sensitive).items()},
                             "posthoc": True, "original_scores_unchanged": True},
-        "matched_feedback": feedback, "supplied_library_context": historical,
+        "supplied_library_context": historical,
         "not_reported": [{"study": "webbench-expand-frontier", "reason": "No no-library candidates in this cohort; cannot form the primary comparison."}],
         "costs": {"construction": construction,
                   "construction_by_builder": builder_costs["construction_by_builder"],

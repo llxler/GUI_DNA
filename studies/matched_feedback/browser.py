@@ -1,21 +1,21 @@
 """Unchanged official assertions with separate public and withheld file sets."""
 import re
 import threading
-from test.history_replay import run as history
+from studies import browser_jobs
 from .core import OUT, ROOT, read, dump
 
 BOM_LOCK = threading.Lock()
 
 
 def grade(project, page, specs, key, calibration=False):
-    history.OUT = OUT
+    browser_jobs.OUT = OUT
     job = {'project': project, 'harness': '157-' + project, 'runtime': '157',
-        'page': str(page.relative_to(ROOT)), 'files': history.source_files(page),
+        'page': str(page.relative_to(ROOT)), 'files': browser_jobs.source_files(page),
         'specs': list(specs), 'all_tests': False}
     if project == 'bom':
         with BOM_LOCK:
-            return history.grade(key, job, calibration)
-    return history.grade(key, job, calibration)
+            return browser_jobs.grade(key, job, calibration)
+    return browser_jobs.grade(key, job, calibration)
 
 
 def public_feedback(project, page, key):

@@ -3,14 +3,14 @@ from concurrent.futures import ThreadPoolExecutor
 import argparse
 from .core import *
 from .browser import grade
-from test.history_replay import run as history
+from studies import browser_jobs
 
 
 def prepare():
     assert not OUT.exists(), 'Never overwrite a stage'
-    history.OUT = OUT
+    browser_jobs.OUT = OUT
     for project in PROJECTS:
-        history.prepare_harness('expansion', project)
+        browser_jobs.prepare_harness('expansion', project)
     controls = []
     for project in PROJECTS:
         for builder in BUILDERS:
@@ -28,11 +28,10 @@ def prepare():
     calibration = []
     def one(project):
         reference = UPSTREAM / 'projects' / project / 'src'
-        for label, specs in [('public', PUBLIC), ('withheld', read(OUT / 'inputs.json')['withheld']),
-                             ('history', ['init', *[f'task-{i}' for i in range(1,21)]])]:
+        for label, specs in [('public', PUBLIC), ('current', ['task-20'])]:
             result = grade(project, reference, specs, project + '/' + label, True)
             calibration.append({'project': project, 'label': label, 'all_passed': result['all_passed'], 'expected': True})
-        for label, specs in [('blank-init', ['init']), ('blank-history', ['init', *[f'task-{i}' for i in range(1,21)]])]:
+        for label, specs in [('blank-init', ['init'])]:
             result = grade(project, OUT / 'blank' / project, specs, project + '/' + label, True)
             calibration.append({'project': project, 'label': label, 'all_passed': result['all_passed'], 'expected': False})
     with ThreadPoolExecutor(max_workers=3) as pool:
@@ -40,7 +39,7 @@ def prepare():
     dump(OUT / 'calibration.json', sorted(calibration, key=lambda x: (x['project'],x['label'])))
     assert all(r['all_passed'] == r['expected'] for r in calibration)
     paths = [p for p in HERE.iterdir() if p.suffix in ('.py', '.md') and p.name not in ('analyze.py','README.md')]
-    deps = ['test/history_replay/run.py', 'test/todomvc_dna/evaluate.py', 'test/webbench_expand/core.py',
+    deps = ['studies/study_io.py', 'studies/browser_jobs.py', 'test/todomvc_dna/evaluate.py', 'test/webbench_expand/core.py',
         'test/webbench_expand/schema.py', 'test/webbench_expand/generate.py', 'test/webbench_expand/free_build.cjs',
         'test/interface_blind/core.py', 'test/interface_blind/compile.cjs', 'test/provider_ext.py',
         'test/streaming_provider_v2.py', 'src/gui_dna/provider.py', 'src/gui_dna/budget.py',
@@ -55,8 +54,8 @@ def prepare():
         paths += [UPSTREAM / 'projects' / project / 'tasks.jsonl']
         paths += [p for p in (UPSTREAM / 'projects' / project / 'src').rglob('*') if p.is_file()]
         paths += [package_path(project, b) for b in BUILDERS]
-    paths += [history.RUNTIME['157'] / '@playwright/test/package.json', history.RUNTIME['157'].parent / 'package-lock.json']
-    paths += [history.RUNTIME['157'] / '@web-bench/test-util' / n for n in ('index.js','css.js')]
+    paths += [browser_jobs.RUNTIME['157'] / '@playwright/test/package.json', browser_jobs.RUNTIME['157'].parent / 'package-lock.json']
+    paths += [browser_jobs.RUNTIME['157'] / '@web-bench/test-util' / n for n in ('index.js','css.js')]
     dump(OUT / 'snapshot.json', {'frozen_utc': now(), 'sha256': {str(p.relative_to(ROOT)): sha(p) for p in paths},
         'config': configuration(), 'scope': 'Exploratory matched feedback; no new library construction or independent sources.'})
     print('Calibrated and frozen', len(jobs()), 'candidates and', len(controls), 'controls', flush=True)

@@ -1,4 +1,4 @@
-from test.finite_schema_audit.run import population
+from studies.schema_search.finite import population
 from test.webbench_expand.schema import validate
 
 
@@ -21,7 +21,7 @@ def test_report_hash_requires_explicit_original_to_exported_mapping(tmp_path, mo
     import hashlib
     import json
     import pytest
-    from test.finite_schema_audit import analyze
+    from studies import replay_hashes as analyze
     monkeypatch.setattr(analyze, 'ROOT', tmp_path)
     report = tmp_path / 'report.json'
     original = hashlib.sha256(b'original report').hexdigest()

@@ -3,7 +3,7 @@
 This checks generated file bytes, not browser behavior or functional reachability.
 """
 from itertools import product
-from test.history_replay.run import ROOT, read, sha, digest, dump, now
+from studies.study_io import ROOT, read, sha, digest, dump, now
 from test.webbench_draw.core import BUILD, slug, compile_plan
 
 

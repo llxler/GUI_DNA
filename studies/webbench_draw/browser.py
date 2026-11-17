@@ -6,11 +6,12 @@ import select
 import shutil
 import subprocess
 import tempfile
+from studies.browser_jobs import check_explicit_specs
 from test.interface_blind.core import ROOT, UPSTREAM, browser_env, dump
-from test.history_replay.run import cases_by_file, digest, now, read, sha, source_files
+from studies.study_io import cases_by_file, digest, now, read, sha, source_files
 
 HERE = Path(__file__).resolve().parent
-OUT = ROOT / 'artifacts/webbench-draw-eval-20261117'
+OUT = ROOT / 'artifacts/webbench-draw-current-only'
 RUNTIME = ROOT / 'artifacts/webbench-draw-runtime-20261117'
 
 
@@ -86,6 +87,7 @@ module.exports=defineConfig({testDir:'./test',timeout:30000,expect:{timeout:5000
 
 
 def grade(key, job, calibration=False):
+    check_explicit_specs(job["specs"])
     folder = OUT / ('calibration' if calibration else 'scores') / key
     target = folder / 'score.json'
     if target.exists():
@@ -135,7 +137,7 @@ def calibrate():
     blank.mkdir(parents=True, exist_ok=True)
     (blank / 'index.html').write_text('<!doctype html><html><body></body></html>')
     rows = []
-    for kind, page, specs in [('reference', reference, ['init', *[f'task-{i}' for i in range(1,21)]])]:
+    for kind, page, specs in [(f'reference-{k}', reference, [f'task-{k}']) for k in (4,8,12,16,20)]:
         job = {'page':str(page.relative_to(ROOT)), 'files':source_files(page), 'specs':specs}
         result = grade(kind, job, True)
         rows.append({'kind':kind, 'passed':result['passed'], 'score':'calibration/' + kind + '/score.json'})
@@ -144,8 +146,8 @@ def calibrate():
         result = grade(f'blank-{k}', job, True)
         rows.append({'kind':f'blank-{k}', 'passed':result['passed'], 'score':f'calibration/blank-{k}/score.json'})
     dump(OUT / 'calibration.json', {'created_utc':now(), 'rows':rows,
-        'valid':rows[0]['passed'] and not any(row['passed'] for row in rows[1:])})
-    assert rows[0]['passed'] and not any(row['passed'] for row in rows[1:]), 'Calibration failed; no paid generation'
+        'valid':all(row['passed'] for row in rows[:5]) and not any(row['passed'] for row in rows[5:])})
+    assert all(row['passed'] for row in rows[:5]) and not any(row['passed'] for row in rows[5:]), 'Calibration failed; no paid generation'
 
 
 if __name__ == '__main__':

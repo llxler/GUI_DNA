@@ -10,7 +10,7 @@ from gui_dna.budget import BudgetStop, Ledger
 from gui_dna.provider import ProviderError, parse_json
 from test.streaming_provider_v2 import StreamingOpenRouter
 from test.review_stage import freeze
-from test.history_replay.run import now, read, sha
+from studies.study_io import now, read, sha
 from .core import (ROOT, HERE, BUILDERS, PLANNERS, MILESTONES, BUILD, STAGES, SEED,
     builder_messages, planner_messages, config, output_files, validate_package,
     write_source, public_check, dump, digest, slug)
@@ -35,7 +35,7 @@ def freeze_inputs(out, cfg):
         'test/interface_blind/compile.cjs','test/webbench_expand/core.py','test/webbench_expand/schema.py',
         'test/webbench_expand/generate.py','test/webbench_expand/free_build.cjs',
         'test/webbench_expand/run.py','test/webbench_expand/resume.py',
-        'test/history_replay/run.py','test/provider_ext.py','test/streaming_provider_v2.py',
+        'studies/study_io.py', 'studies/browser_jobs.py','test/provider_ext.py','test/streaming_provider_v2.py',
         'src/gui_dna/provider.py','src/gui_dna/budget.py','pyproject.toml','uv.lock',
         'artifacts/review-20261117/budget-plan.json',
         str((RUNTIME / 'package-lock.json').relative_to(ROOT)), str((EVAL / 'calibration.json').relative_to(ROOT))]

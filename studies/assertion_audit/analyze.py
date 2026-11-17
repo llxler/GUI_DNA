@@ -1,7 +1,7 @@
 """Recompute diagnostic counts from unchanged raw Playwright reports."""
 from collections import defaultdict
 import json
-from test.history_replay.run import read, dump, sha, cases_by_file, ROOT
+from studies.study_io import read, dump, sha, cases_by_file, ROOT
 from .run import OUT
 
 

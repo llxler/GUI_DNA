@@ -5,8 +5,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 import re
 import shutil
-from test.history_replay import run as history
-from test.history_replay.run import ROOT, UPSTREAM, read, dump, sha, now, source_files
+from studies import browser_jobs
+from studies.study_io import ROOT, UPSTREAM, read, dump, sha, now, source_files
 
 HERE = Path(__file__).resolve().parent
 OUT = ROOT / 'artifacts/assertion-audit-20261117'
@@ -39,8 +39,8 @@ def prepare():
     blank = OUT / 'pages/blank'
     blank.mkdir(parents=True)
     (blank / 'index.html').write_text('<!doctype html><html><body></body></html>')
-    history.OUT = OUT
-    history.prepare_harness('expansion','bom')
+    browser_jobs.OUT = OUT
+    browser_jobs.prepare_harness('expansion','bom')
     original = OUT / 'harness/157-bom'
     corrected = OUT / 'harness/157-bom-nullguard'
     shutil.copytree(original, corrected, symlinks=True)
@@ -63,13 +63,13 @@ def prepare():
                     'specs':[f'task-{k}'],'all_tests':True}
     dump(OUT / 'inputs.json', {'jobs':jobs,'replacements':replacements,'created_utc':now()})
     files = [HERE/'__init__.py',HERE/'run.py',HERE/'PROTOCOL.md',
-        ROOT/'test/history_replay/run.py',ROOT/'test/todomvc_dna/evaluate.py',
+        ROOT/'studies/study_io.py', 'studies/browser_jobs.py',ROOT/'test/todomvc_dna/evaluate.py',
         OUT/'inputs.json',OUT/'static-inventory.json',
-        history.RUNTIME['157'].parent/'package-lock.json']
+        browser_jobs.RUNTIME['157'].parent/'package-lock.json']
     for base in (OUT/'pages',OUT/'harness'):
         files += [p for p in base.rglob('*') if p.is_file() and 'node_modules' not in p.parts]
     for name in ('index.js','css.js'):
-        files.append(history.RUNTIME['157']/'@web-bench/test-util'/name)
+        files.append(browser_jobs.RUNTIME['157']/'@web-bench/test-util'/name)
     hashes.update({str(p.relative_to(ROOT)):sha(p) for p in files})
     dump(OUT/'snapshot.json',{'frozen_utc':now(),'sha256':hashes})
     print(f'Frozen {len(entries)} official files, {sum(replacements.values())} guard substitutions, {len(jobs)} reports',flush=True)
@@ -79,10 +79,10 @@ def evaluate():
     snapshot = read(OUT/'snapshot.json')
     for name,checksum in snapshot['sha256'].items():
         assert sha(ROOT/name)==checksum,name
-    history.OUT = OUT
+    browser_jobs.OUT = OUT
     for key,job in read(OUT/'inputs.json')['jobs'].items():
         assert datetime.now(timezone.utc) < datetime(2026,11,17,3,25,tzinfo=timezone.utc), 'Diagnostic time boundary'
-        result = history.grade(key,job)
+        result = browser_jobs.grade(key,job)
         print(key,result['all_passed'],flush=True)
     dump(OUT/'evaluation-complete.json',{'finished_utc':now(),'inputs_sha256':sha(OUT/'inputs.json')})
 

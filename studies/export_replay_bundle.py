@@ -288,6 +288,8 @@ def main():
             raise ValueError('Finish the conditional space evaluation before exporting')
         if not (ROOT / 'test/results/library-repair-replay.json').exists():
             raise ValueError('Run test.replay_library_repair before exporting')
+    if args.nov14 or args.nov15 or args.nov16:
+        raise ValueError('These frozen snapshots require Git c50291b; retired source is absent from the current tree. See docs/archive/full-history-retirement.md')
     if args.nov14:
         if not args.library_repair:
             raise ValueError('--nov14 requires --library-repair and --expanded')
