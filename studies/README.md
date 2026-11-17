@@ -5,7 +5,7 @@
 ## 当前论文入口
 
 - [研究设计与主比较](../docs/method.md)：AI 建库＋GUI-DNA 对无库代码。
-- [主比较 JSON](results/end_to_end.json)：保留真实方法身份、唯一基线、当前/历史端点与建库费用；`free_lib` 只在历史记录中。
+- [主比较 JSON](results/end_to_end.json)：按建库者分列，项目/目标生成模型另分层；共用唯一基线，每组目标和分母一致，当前/历史端点与建库费用分别报告；`free_lib` 只在历史记录中。
 - [重算与复现](../docs/reproducibility.md)、[下一阶段协议](../docs/end_to_end_protocol.md)、[任务清单](../docs/roadmap.md)。
 
 ```bash

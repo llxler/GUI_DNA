@@ -60,6 +60,18 @@ def comparison(rows):
     return result
 
 
+def builder_comparisons(rows):
+    baseline = [r for r in rows if r["method"] == "free"]
+    key = lambda r: (r["project"], r["model"], r["task"], r.get("seed"))
+    result = {}
+    for builder in sorted({r["builder"] for r in rows if r["method"] == "plan"}):
+        plans = [r for r in rows if r["method"] == "plan" and r["builder"] == builder]
+        assert {key(r) for r in plans} == {key(r) for r in baseline}, "Unmatched builder comparison"
+        assert len(plans) == len(baseline)
+        result[builder] = comparison(baseline + plans)
+    return result
+
+
 def paired_by_builder(rows):
     # The same baseline may appear in several descriptive comparisons, never
     # as additional independent baseline samples or pooled significance tests.
@@ -97,6 +109,7 @@ def reconstruct():
     expansion = read("webbench-expand.json")
     assertion = read("assertion-audit-20261117.json")
     supplied = read("primary-replay.json")
+    builder_costs = read("builder_costs.json")
     rows = []
     for row in history["rows"]:
         if row["label"] != "final" or row["cohort"] not in ("interface", "expansion"):
@@ -130,8 +143,11 @@ def reconstruct():
                            for p in sorted({r["project"] for r in selected})},
             "by_generator": {m: comparison([r for r in selected if r["model"] == m])
                              for m in sorted({r["model"] for r in selected})},
-            "by_builder": {b: comparison([r for r in selected if r["builder"] in (b, None)])
-                           for b in sorted({r["builder"] for r in selected if r["builder"]})},
+            "by_builder": builder_comparisons(selected),
+            "by_project_builder": {p: builder_comparisons([r for r in selected if r["project"] == p])
+                                   for p in sorted({r["project"] for r in selected})},
+            "by_generator_builder": {m: builder_comparisons([r for r in selected if r["model"] == m])
+                                     for m in sorted({r["model"] for r in selected})},
             "paired_by_builder": paired_by_builder(selected),
         }
     # Independent agreement with the original current-file summaries.
@@ -169,6 +185,21 @@ def reconstruct():
             "results": {key: value for key, value in data["groups"].items() if key.split("/")[0] in METHODS},
             "usage": {m: data["usage"][m] for m in METHODS},
         }
+        feedback[name]["by_builder"] = {}
+        for builder in sorted({r["builder"] for r in data["records"] if r["method"] == "plan"}):
+            groups = {}
+            for method in METHODS:
+                selected = [r for r in data["records"] if r["method"] == method
+                            and (method == "free" or r["builder"] == builder)]
+                groups[method] = {"total": len(selected),
+                                  "public_first": sum(r["first_public_passes"] == 5 for r in selected),
+                                  "public_final": sum(r["final_public_passes"] == 5 for r in selected)}
+                for endpoint in ("history", "withheld"):
+                    groups[method][endpoint] = sum(r["passed"] for r in data["rows"]
+                        if r["label"] == "final" and r["endpoint"] == endpoint and r["method"] == method
+                        and (method == "free" or r["builder"] == builder))
+            assert groups["free"]["total"] == groups["plan"]["total"]
+            feedback[name]["by_builder"][builder] = groups
     historical = {}
     for suite in ("todomvc", "webbench"):
         data = next(s for s in supplied["suites"] if s["suite"] == suite and s["summary"] == "summary")
@@ -190,6 +221,10 @@ def reconstruct():
                  "exposure_usd": draw["costs"]["stages"]["webbench-draw-build-20261117"]["exposure_usd"],
                  "provider_receipts_usd": sum_cost(draw_build, "cost_usd")},
     }
+    assert builder_costs["draw_summary_sha256"] == sources["studies/results/webbench-draw-20261117.json"]
+    for cohort, values in builder_costs["construction_by_builder"].items():
+        for field in ("settled_usd", "exposure_usd"):
+            assert abs(sum(v[field] for v in values.values()) - construction[cohort][field]) < 1e-9
     draw_costs = {}
     for model in cohorts["draw"]["generators"]:
         free, plan = (draw["usage"][f"{model}/{m}"] for m in METHODS)
@@ -206,7 +241,8 @@ def reconstruct():
             "scope": "Each generator is charged both library builds once across ten plan targets (two builders x five milestones). Independent scenarios; do not sum construction across generators. Actual study built the two libraries only once.",
         }
     return {
-        "schema_version": 1, "reporting_revision": "2026-11-17-end-to-end",
+        "schema_version": 2, "reporting_revision": "2026-11-17-by-builder",
+        "reporting_contract": "Report each builder separately, including project/generator breakdowns, sensitivity, feedback and cost. Each comparison uses the same target keys and denominator as the shared actual no-library baseline. Existing pooled fields are retained for internal reconciliation only, not presentation.",
         "selection_policy": "Retrospective reporting of existing observations; not a preregistered new experiment.",
         "method_roles": {
             "free": {"role": "primary_baseline", "label": "Direct code without a library", "library_access": False},
@@ -217,10 +253,14 @@ def reconstruct():
         "unit": "One final saved candidate per project, generator, task and (for plans only) builder. The baseline is counted once, not repeated across builders. No pooling across study protocols.",
         "cohorts": cohorts, "records": rows,
         "bom_sensitivity": {"excluded_tasks": excluded, "current": sensitivity,
+                            "by_builder": {b: {"current": v["current"]}
+                                           for b, v in builder_comparisons(sensitive).items()},
                             "posthoc": True, "original_scores_unchanged": True},
         "matched_feedback": feedback, "supplied_library_context": historical,
         "not_reported": [{"study": "webbench-expand-frontier", "reason": "No no-library candidates in this cohort; cannot form the primary comparison."}],
         "costs": {"construction": construction,
+                  "construction_by_builder": builder_costs["construction_by_builder"],
+                  "draw_by_generator_builder": builder_costs["draw_scenarios"],
                   "draw_per_generator_scenarios": draw_costs,
                   "draw_complete_original_study_ledger_usd": draw["costs"]["settled_usd"],
                   "draw_complete_original_study_receipts_usd": draw["provider_billed_usd"],
@@ -241,7 +281,7 @@ def main():
         assert json.loads(OUTPUT.read_text()) == value, "Saved primary view differs from its sources"
     else:
         OUTPUT.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n")
-    print(json.dumps({k: v["results"] for k, v in value["cohorts"].items()}, indent=2))
+    print(json.dumps({k: v["by_builder"] for k, v in value["cohorts"].items()}, indent=2))
 
 
 if __name__ == "__main__":

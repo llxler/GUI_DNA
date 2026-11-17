@@ -1,0 +1,528 @@
+{
+  "construction_by_builder": {
+    "interface": {
+      "anthropic/claude-sonnet-4.5": {
+        "settled_microusd": 327594,
+        "exposure_microusd": 327594,
+        "calls": 2,
+        "settled_usd": 0.327594,
+        "exposure_usd": 0.327594
+      },
+      "openai/gpt-5": {
+        "settled_microusd": 447112,
+        "exposure_microusd": 721704,
+        "calls": 3,
+        "settled_usd": 0.447112,
+        "exposure_usd": 0.721704
+      }
+    },
+    "expansion": {
+      "anthropic/claude-sonnet-4.5": {
+        "settled_microusd": 1181010,
+        "exposure_microusd": 1685313,
+        "calls": 7,
+        "settled_usd": 1.18101,
+        "exposure_usd": 1.685313
+      },
+      "openai/gpt-5": {
+        "settled_microusd": 778918,
+        "exposure_microusd": 1050502,
+        "calls": 6,
+        "settled_usd": 0.778918,
+        "exposure_usd": 1.050502
+      }
+    },
+    "draw": {
+      "anthropic/claude-sonnet-4.5": {
+        "settled_microusd": 152952,
+        "exposure_microusd": 152952,
+        "calls": 1,
+        "settled_usd": 0.152952,
+        "exposure_usd": 0.152952
+      },
+      "openai/gpt-5": {
+        "settled_microusd": 185242,
+        "exposure_microusd": 185242,
+        "calls": 1,
+        "settled_usd": 0.185242,
+        "exposure_usd": 0.185242
+      }
+    }
+  },
+  "construction_ledger_rows": {
+    "artifacts/interface-blind-build/budget.sqlite3": [
+      {
+        "model": "openai/gpt-5",
+        "status": "settled",
+        "reserved": 271353,
+        "actual": 206237
+      },
+      {
+        "model": "anthropic/claude-sonnet-4.5",
+        "status": "settled",
+        "reserved": 417246,
+        "actual": 124683
+      },
+      {
+        "model": "openai/gpt-5",
+        "status": "uncertain",
+        "reserved": 274592,
+        "actual": null
+      },
+      {
+        "model": "anthropic/claude-sonnet-4.5",
+        "status": "settled",
+        "reserved": 425019,
+        "actual": 202911
+      }
+    ],
+    "artifacts/interface-blind-build-2/budget.sqlite3": [
+      {
+        "model": "openai/gpt-5",
+        "status": "settled",
+        "reserved": 274592,
+        "actual": 240875
+      }
+    ],
+    "artifacts/webbench-expand-build/budget.sqlite3": [
+      {
+        "model": "anthropic/claude-sonnet-4.5",
+        "status": "settled",
+        "reserved": 412815,
+        "actual": 146340
+      },
+      {
+        "model": "openai/gpt-5",
+        "status": "uncertain",
+        "reserved": 271584,
+        "actual": null
+      },
+      {
+        "model": "openai/gpt-5",
+        "status": "settled",
+        "reserved": 269507,
+        "actual": 140957
+      },
+      {
+        "model": "anthropic/claude-sonnet-4.5",
+        "status": "settled",
+        "reserved": 417801,
+        "actual": 224082
+      },
+      {
+        "model": "anthropic/claude-sonnet-4.5",
+        "status": "uncertain",
+        "reserved": 504303,
+        "actual": null
+      },
+      {
+        "model": "openai/gpt-5",
+        "status": "settled",
+        "reserved": 272018,
+        "actual": 227214
+      },
+      {
+        "model": "openai/gpt-5",
+        "status": "settled",
+        "reserved": 296833,
+        "actual": 99130
+      },
+      {
+        "model": "anthropic/claude-sonnet-4.5",
+        "status": "settled",
+        "reserved": 549465,
+        "actual": 258024
+      },
+      {
+        "model": "openai/gpt-5",
+        "status": "settled",
+        "reserved": 324642,
+        "actual": 102589
+      },
+      {
+        "model": "anthropic/claude-sonnet-4.5",
+        "status": "settled",
+        "reserved": 418842,
+        "actual": 174234
+      },
+      {
+        "model": "openai/gpt-5",
+        "status": "settled",
+        "reserved": 271584,
+        "actual": 209028
+      },
+      {
+        "model": "anthropic/claude-sonnet-4.5",
+        "status": "settled",
+        "reserved": 504303,
+        "actual": 176172
+      },
+      {
+        "model": "anthropic/claude-sonnet-4.5",
+        "status": "settled",
+        "reserved": 532308,
+        "actual": 202158
+      }
+    ],
+    "artifacts/webbench-draw-build-20261117/budget.sqlite3": [
+      {
+        "model": "anthropic/claude-sonnet-4.5",
+        "status": "settled",
+        "reserved": 416517,
+        "actual": 152952
+      },
+      {
+        "model": "openai/gpt-5",
+        "status": "settled",
+        "reserved": 271049,
+        "actual": 185242
+      }
+    ]
+  },
+  "draw_scenarios": {
+    "openai/gpt-5|anthropic/claude-sonnet-4.5": {
+      "generator": "openai/gpt-5",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "targets_per_method": 5,
+      "direct_usd": 1.22983025,
+      "build_usd": 0.152952,
+      "selection_usd": 0.164142,
+      "pipeline_usd": 0.317094,
+      "direct_per_target_usd": 0.24596605,
+      "pipeline_per_target_usd": 0.0634188
+    },
+    "openai/gpt-5|openai/gpt-5": {
+      "generator": "openai/gpt-5",
+      "builder": "openai/gpt-5",
+      "targets_per_method": 5,
+      "direct_usd": 1.22983025,
+      "build_usd": 0.18524125,
+      "selection_usd": 0.114955,
+      "pipeline_usd": 0.30019625,
+      "direct_per_target_usd": 0.24596605,
+      "pipeline_per_target_usd": 0.06003925
+    },
+    "openai/gpt-oss-120b|anthropic/claude-sonnet-4.5": {
+      "generator": "openai/gpt-oss-120b",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "targets_per_method": 5,
+      "direct_usd": 0.00312078,
+      "build_usd": 0.152952,
+      "selection_usd": 0.00145092,
+      "pipeline_usd": 0.15440292,
+      "direct_per_target_usd": 0.000624156,
+      "pipeline_per_target_usd": 0.030880584
+    },
+    "openai/gpt-oss-120b|openai/gpt-5": {
+      "generator": "openai/gpt-oss-120b",
+      "builder": "openai/gpt-5",
+      "targets_per_method": 5,
+      "direct_usd": 0.00312078,
+      "build_usd": 0.18524125,
+      "selection_usd": 0.00131667,
+      "pipeline_usd": 0.18655792,
+      "direct_per_target_usd": 0.000624156,
+      "pipeline_per_target_usd": 0.037311584
+    }
+  },
+  "draw_receipts": [
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/anthropic__claude-sonnet-4.5/plan/task-12/call-0/response.json",
+      "sha256": "94d99b18d2168c4f41fe91a02c9d58352dd34296b7f7be4418b809dc8287c4b6",
+      "model": "openai/gpt-5",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "method": "plan",
+      "cost_usd": 0.023365
+    },
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/anthropic__claude-sonnet-4.5/plan/task-16/call-0/response.json",
+      "sha256": "57e75c488b06231a263554ac111090a786dc0fee283fe999ec3bf1e9203796ca",
+      "model": "openai/gpt-5",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "method": "plan",
+      "cost_usd": 0.0435455
+    },
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/anthropic__claude-sonnet-4.5/plan/task-20/call-0/response.json",
+      "sha256": "3b46498fae46bd2af352eeb7e653d8b0014cffe93ea898242c7b0b0875c2a7e2",
+      "model": "openai/gpt-5",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "method": "plan",
+      "cost_usd": 0.03754025
+    },
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/anthropic__claude-sonnet-4.5/plan/task-4/call-0/response.json",
+      "sha256": "8f8bc8d514ac527fb92a9a689fd4fad753b5ca31812fb833bd8aa03f7a60ac08",
+      "model": "openai/gpt-5",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "method": "plan",
+      "cost_usd": 0.02957
+    },
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/anthropic__claude-sonnet-4.5/plan/task-8/call-0/response.json",
+      "sha256": "44a9d026f31365095dcf5536de932da685390253a83fdf4e12ad68f3e61859d1",
+      "model": "openai/gpt-5",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "method": "plan",
+      "cost_usd": 0.03012125
+    },
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/no_library/free/task-12/call-0/response.json",
+      "sha256": "a99445bfab18e0dd56171036c3cbd50bb8340203140320ec50c1871081734e80",
+      "model": "openai/gpt-5",
+      "builder": null,
+      "method": "free",
+      "cost_usd": 0.121265
+    },
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/no_library/free/task-12/call-1/response.json",
+      "sha256": "289de2057992bc33c4b7e2f7edf7e2f81e684bb98dc8f28696f27c17b7221970",
+      "model": "openai/gpt-5",
+      "builder": null,
+      "method": "free",
+      "cost_usd": 0.12747875
+    },
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/no_library/free/task-12/call-2/response.json",
+      "sha256": "064009cd1ae82dff64c0a01c7f89a778c0dc681dbbe14e1bef36bcf415efe6f5",
+      "model": "openai/gpt-5",
+      "builder": null,
+      "method": "free",
+      "cost_usd": 0.0923135
+    },
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/no_library/free/task-16/call-0/response.json",
+      "sha256": "08313433bbab2564f3f3a856e6ebc009feea5ea9fd20481ab8dabbff0bc99327",
+      "model": "openai/gpt-5",
+      "builder": null,
+      "method": "free",
+      "cost_usd": 0.1214475
+    },
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/no_library/free/task-16/call-1/response.json",
+      "sha256": "afcf8005e1ca65b1634b1667884c48a946f9d024daef8cae468124087d892529",
+      "model": "openai/gpt-5",
+      "builder": null,
+      "method": "free",
+      "cost_usd": 0.12368675
+    },
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/no_library/free/task-16/call-2/response.json",
+      "sha256": "f617ad9081cfd902c91a7642d05f6de7267e4cc776b2b4afd39ebb7a7e7a2a54",
+      "model": "openai/gpt-5",
+      "builder": null,
+      "method": "free",
+      "cost_usd": 0.12333025
+    },
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/no_library/free/task-20/call-0/response.json",
+      "sha256": "9de9e6680a50f323c9160a9ea1bd68223a177e201527d15ed69433af36a40ad9",
+      "model": "openai/gpt-5",
+      "builder": null,
+      "method": "free",
+      "cost_usd": 0.12043425
+    },
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/no_library/free/task-20/call-1/response.json",
+      "sha256": "592b116a9e14ee12a95447492d3404c3799577ca4ad03a7e4d3ce411a40e98be",
+      "model": "openai/gpt-5",
+      "builder": null,
+      "method": "free",
+      "cost_usd": 0.12559275
+    },
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/no_library/free/task-20/call-2/response.json",
+      "sha256": "857d2d14590fbd92539fb1cb71fa713b7de3079be045b43a60ccf8f4205c29f8",
+      "model": "openai/gpt-5",
+      "builder": null,
+      "method": "free",
+      "cost_usd": 0.12092025
+    },
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/no_library/free/task-4/call-0/response.json",
+      "sha256": "85d47e45d1f1a2c0065e90c1d26469f93a3c09b9bd1613dcfcde6b3280c596dd",
+      "model": "openai/gpt-5",
+      "builder": null,
+      "method": "free",
+      "cost_usd": 0.07486
+    },
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/no_library/free/task-8/call-0/response.json",
+      "sha256": "465da11d3a93189e6c9e231ff5ae7610c2fa365ea2b6ace67823a5024cc389d8",
+      "model": "openai/gpt-5",
+      "builder": null,
+      "method": "free",
+      "cost_usd": 0.07850125
+    },
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/openai__gpt-5/plan/task-12/call-0/response.json",
+      "sha256": "55b4ef96e30f5c361c077a46d5cc49ddeb7b6500350b33f3c5b1e623dbfd67de",
+      "model": "openai/gpt-5",
+      "builder": "openai/gpt-5",
+      "method": "plan",
+      "cost_usd": 0.02181
+    },
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/openai__gpt-5/plan/task-16/call-0/response.json",
+      "sha256": "2ed9db774bbef7a5e2db27eb76dcc2a3f25da62041c8503c336c144cb71c8471",
+      "model": "openai/gpt-5",
+      "builder": "openai/gpt-5",
+      "method": "plan",
+      "cost_usd": 0.0209525
+    },
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/openai__gpt-5/plan/task-20/call-0/response.json",
+      "sha256": "0140fc310f89c3aebe8382c87033c83b0a20f3c1474c737e3ed211eea3759d8a",
+      "model": "openai/gpt-5",
+      "builder": "openai/gpt-5",
+      "method": "plan",
+      "cost_usd": 0.02858125
+    },
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/openai__gpt-5/plan/task-4/call-0/response.json",
+      "sha256": "36e501744697ddd62c3e76170f62c4eb64be5bf0060ffe8f358b75be9bbbd30e",
+      "model": "openai/gpt-5",
+      "builder": "openai/gpt-5",
+      "method": "plan",
+      "cost_usd": 0.020455
+    },
+    {
+      "path": "artifacts/webbench-draw-frontier-20261117/runs/openai__gpt-5/plan/task-8/call-0/response.json",
+      "sha256": "48cfc7d4e18bee6c38376ddbcc941cdf6ecd8c4a41d5b4079070121d227fd908",
+      "model": "openai/gpt-5",
+      "builder": "openai/gpt-5",
+      "method": "plan",
+      "cost_usd": 0.02315625
+    },
+    {
+      "path": "artifacts/webbench-draw-oss-20261117/runs/anthropic__claude-sonnet-4.5/plan/task-12/call-0/response.json",
+      "sha256": "567237dff9586fed46b53835a3956fef6b015f4320bbeb86f8f4d4ceb596dc8b",
+      "model": "openai/gpt-oss-120b",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "method": "plan",
+      "cost_usd": 0.00029826
+    },
+    {
+      "path": "artifacts/webbench-draw-oss-20261117/runs/anthropic__claude-sonnet-4.5/plan/task-16/call-0/response.json",
+      "sha256": "2a1c018281426b168c73a97cacaa33641e1f1e7cb7ff2e9e5b3a974718a3a6e8",
+      "model": "openai/gpt-oss-120b",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "method": "plan",
+      "cost_usd": 0.0002877
+    },
+    {
+      "path": "artifacts/webbench-draw-oss-20261117/runs/anthropic__claude-sonnet-4.5/plan/task-20/call-0/response.json",
+      "sha256": "106cb3a65b1cd48bf52ab010b24ccc5da08696519c33b395ebd1cb731843e579",
+      "model": "openai/gpt-oss-120b",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "method": "plan",
+      "cost_usd": 0.00029166
+    },
+    {
+      "path": "artifacts/webbench-draw-oss-20261117/runs/anthropic__claude-sonnet-4.5/plan/task-4/call-0/response.json",
+      "sha256": "e784e185706cef9a86ad7bcb139e5b7605b3a925d1ff2945dc3cdc6b2b0f6a1d",
+      "model": "openai/gpt-oss-120b",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "method": "plan",
+      "cost_usd": 0.00027933
+    },
+    {
+      "path": "artifacts/webbench-draw-oss-20261117/runs/anthropic__claude-sonnet-4.5/plan/task-8/call-0/response.json",
+      "sha256": "a3925f8200f8c1b987166d3e7db1c37b2cdc6a6f198bb92c8744055dce737e0c",
+      "model": "openai/gpt-oss-120b",
+      "builder": "anthropic/claude-sonnet-4.5",
+      "method": "plan",
+      "cost_usd": 0.00029397
+    },
+    {
+      "path": "artifacts/webbench-draw-oss-20261117/runs/no_library/free/task-12/call-0/response.json",
+      "sha256": "a5a881bf5c8110376359f3ea78fa9d1466a05f65b98e2ea79c3b2637eee3d986",
+      "model": "openai/gpt-oss-120b",
+      "builder": null,
+      "method": "free",
+      "cost_usd": 0.00068097
+    },
+    {
+      "path": "artifacts/webbench-draw-oss-20261117/runs/no_library/free/task-16/call-0/response.json",
+      "sha256": "8b3d5a7ec6de33768c73be96895bdc1e4f3f97a6b0ba77c06a3cd20b4c3c6644",
+      "model": "openai/gpt-oss-120b",
+      "builder": null,
+      "method": "free",
+      "cost_usd": 0.00046575
+    },
+    {
+      "path": "artifacts/webbench-draw-oss-20261117/runs/no_library/free/task-16/call-1/response.json",
+      "sha256": "e5669763015b4afc33d96bfb99c1c8aa61f4f97bc9276bb1f0c9b034194022ce",
+      "model": "openai/gpt-oss-120b",
+      "builder": null,
+      "method": "free",
+      "cost_usd": 0.00056922
+    },
+    {
+      "path": "artifacts/webbench-draw-oss-20261117/runs/no_library/free/task-20/call-0/response.json",
+      "sha256": "c8ef63e620091d439f2b1c6a420c6d7df6930caf061e8cefcc34df96714b0332",
+      "model": "openai/gpt-oss-120b",
+      "builder": null,
+      "method": "free",
+      "cost_usd": 0.00054042
+    },
+    {
+      "path": "artifacts/webbench-draw-oss-20261117/runs/no_library/free/task-4/call-0/response.json",
+      "sha256": "b9c4ee2d9374bfb87c789d122d027fb4baa3a4228ef0bd7e774f2ad2e17a1e77",
+      "model": "openai/gpt-oss-120b",
+      "builder": null,
+      "method": "free",
+      "cost_usd": 0.00038109
+    },
+    {
+      "path": "artifacts/webbench-draw-oss-20261117/runs/no_library/free/task-8/call-0/response.json",
+      "sha256": "ff95dcbcb5ead0ba6fb24dcf1477811f2297f59cfd4fd2b809099bc8dd9365b0",
+      "model": "openai/gpt-oss-120b",
+      "builder": null,
+      "method": "free",
+      "cost_usd": 0.00048333
+    },
+    {
+      "path": "artifacts/webbench-draw-oss-20261117/runs/openai__gpt-5/plan/task-12/call-0/response.json",
+      "sha256": "0e1105f9d414a8c0a3cf0d0343dc8fc0835d47ee56d85ade253b0c1730bd82dc",
+      "model": "openai/gpt-oss-120b",
+      "builder": "openai/gpt-5",
+      "method": "plan",
+      "cost_usd": 0.00026397
+    },
+    {
+      "path": "artifacts/webbench-draw-oss-20261117/runs/openai__gpt-5/plan/task-16/call-0/response.json",
+      "sha256": "ab2091f2ab6f54926e3540c423f7e5fe3b94607fa1cd04ec638600453e08d979",
+      "model": "openai/gpt-oss-120b",
+      "builder": "openai/gpt-5",
+      "method": "plan",
+      "cost_usd": 0.00027045
+    },
+    {
+      "path": "artifacts/webbench-draw-oss-20261117/runs/openai__gpt-5/plan/task-20/call-0/response.json",
+      "sha256": "ec6e4e1d0affccb48b217c1348ebed856fcf31ac941f2f5fcb767f9a55833135",
+      "model": "openai/gpt-oss-120b",
+      "builder": "openai/gpt-5",
+      "method": "plan",
+      "cost_usd": 0.00026352
+    },
+    {
+      "path": "artifacts/webbench-draw-oss-20261117/runs/openai__gpt-5/plan/task-4/call-0/response.json",
+      "sha256": "c5c78958520b6cfe6fa4fed10083d61ef4efcae75433f61fae193aea1f1ceca9",
+      "model": "openai/gpt-oss-120b",
+      "builder": "openai/gpt-5",
+      "method": "plan",
+      "cost_usd": 0.00025539
+    },
+    {
+      "path": "artifacts/webbench-draw-oss-20261117/runs/openai__gpt-5/plan/task-8/call-0/response.json",
+      "sha256": "a82c21dfa0fea21ccdafecbc0d6b8f5b32d087710f3acc5e9f38b251f3946280",
+      "model": "openai/gpt-oss-120b",
+      "builder": "openai/gpt-5",
+      "method": "plan",
+      "cost_usd": 0.00026334
+    }
+  ],
+  "draw_summary_sha256": "ff3ccf03adec78f67bfd5424690853d76e0eee0daf8af0ba7bfd9771e3fd0370",
+  "scope": "Each draw scenario pays one builder once for five targets. Baseline receipts are shared across builder comparisons; construction is shared across generator scenarios. Do not sum these scenarios as the study bill. Failed calls and unresolved reservations remain in construction accounting."
+}

@@ -1,6 +1,6 @@
 import pytest
 
-from studies.end_to_end import comparison, reconstruct, unique_records
+from studies.end_to_end import builder_comparisons, comparison, reconstruct, unique_records
 
 
 def test_shared_baseline_is_not_replicated_or_relabelled():
@@ -31,6 +31,27 @@ def test_primary_view_keeps_adverse_endpoints_and_missing_counterparts():
     for value in data["costs"]["draw_per_generator_scenarios"].values():
         assert value["pipeline_receipts_usd"] > value["selection_receipts_usd"]
     assert data["costs"]["draw_complete_original_study_ledger_usd"] == 3.285408
+
+
+def test_builder_comparisons_match_targets_and_preserve_opposite_effects():
+    data = reconstruct()
+    for cohort in data["cohorts"].values():
+        for groups in [cohort["by_builder"], *cohort["by_project_builder"].values(),
+                       *cohort["by_generator_builder"].values()]:
+            for result in groups.values():
+                for endpoint in ("current", "history"):
+                    assert result[endpoint]["free"]["total"] == result[endpoint]["plan"]["total"]
+    expansion = data["cohorts"]["expansion"]["by_builder"]
+    assert expansion["openai/gpt-5"]["history"]["difference_pp"] < 0
+    assert expansion["anthropic/claude-sonnet-4.5"]["history"]["difference_pp"] > 0
+    for value in data["costs"]["draw_by_generator_builder"].values():
+        assert value["targets_per_method"] == 5
+        assert value["pipeline_usd"] == pytest.approx(value["build_usd"] + value["selection_usd"])
+    free = {"project": "p", "model": "m", "task": "task-1", "method": "free",
+            "builder": None, "current": True, "history": False}
+    plan = {**free, "task": "task-2", "method": "plan", "builder": "b"}
+    with pytest.raises(AssertionError, match="Unmatched builder comparison"):
+        builder_comparisons([free, plan])
 
 
 def test_portable_export_preserves_frozen_import_paths(tmp_path):

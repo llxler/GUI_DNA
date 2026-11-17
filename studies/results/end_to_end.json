@@ -1,6 +1,7 @@
 {
-  "schema_version": 1,
-  "reporting_revision": "2026-11-17-end-to-end",
+  "schema_version": 2,
+  "reporting_revision": "2026-11-17-by-builder",
+  "reporting_contract": "Report each builder separately, including project/generator breakdowns, sensitivity, feedback and cost. Each comparison uses the same target keys and denominator as the shared actual no-library baseline. Existing pooled fields are retained for internal reconciliation only, not presentation.",
   "selection_policy": "Retrospective reporting of existing observations; not a preregistered new experiment.",
   "method_roles": {
     "free": {
@@ -234,6 +235,242 @@
               "rate_percent": 25.0
             },
             "difference_pp": 10.0
+          }
+        }
+      },
+      "by_project_builder": {
+        "dom1": {
+          "anthropic/claude-sonnet-4.5": {
+            "current": {
+              "free": {
+                "passed": 10,
+                "total": 40,
+                "rate_percent": 25.0
+              },
+              "plan": {
+                "passed": 22,
+                "total": 40,
+                "rate_percent": 55.0
+              },
+              "difference_pp": 30.0
+            },
+            "history": {
+              "free": {
+                "passed": 5,
+                "total": 40,
+                "rate_percent": 12.5
+              },
+              "plan": {
+                "passed": 10,
+                "total": 40,
+                "rate_percent": 25.0
+              },
+              "difference_pp": 12.5
+            }
+          },
+          "openai/gpt-5": {
+            "current": {
+              "free": {
+                "passed": 10,
+                "total": 40,
+                "rate_percent": 25.0
+              },
+              "plan": {
+                "passed": 20,
+                "total": 40,
+                "rate_percent": 50.0
+              },
+              "difference_pp": 25.0
+            },
+            "history": {
+              "free": {
+                "passed": 5,
+                "total": 40,
+                "rate_percent": 12.5
+              },
+              "plan": {
+                "passed": 6,
+                "total": 40,
+                "rate_percent": 15.0
+              },
+              "difference_pp": 2.5
+            }
+          }
+        },
+        "form": {
+          "anthropic/claude-sonnet-4.5": {
+            "current": {
+              "free": {
+                "passed": 15,
+                "total": 40,
+                "rate_percent": 37.5
+              },
+              "plan": {
+                "passed": 21,
+                "total": 40,
+                "rate_percent": 52.5
+              },
+              "difference_pp": 15.0
+            },
+            "history": {
+              "free": {
+                "passed": 7,
+                "total": 40,
+                "rate_percent": 17.5
+              },
+              "plan": {
+                "passed": 6,
+                "total": 40,
+                "rate_percent": 15.0
+              },
+              "difference_pp": -2.5
+            }
+          },
+          "openai/gpt-5": {
+            "current": {
+              "free": {
+                "passed": 15,
+                "total": 40,
+                "rate_percent": 37.5
+              },
+              "plan": {
+                "passed": 23,
+                "total": 40,
+                "rate_percent": 57.5
+              },
+              "difference_pp": 20.0
+            },
+            "history": {
+              "free": {
+                "passed": 7,
+                "total": 40,
+                "rate_percent": 17.5
+              },
+              "plan": {
+                "passed": 14,
+                "total": 40,
+                "rate_percent": 35.0
+              },
+              "difference_pp": 17.5
+            }
+          }
+        }
+      },
+      "by_generator_builder": {
+        "mistralai/mistral-small-3.2-24b-instruct": {
+          "anthropic/claude-sonnet-4.5": {
+            "current": {
+              "free": {
+                "passed": 10,
+                "total": 40,
+                "rate_percent": 25.0
+              },
+              "plan": {
+                "passed": 24,
+                "total": 40,
+                "rate_percent": 60.0
+              },
+              "difference_pp": 35.0
+            },
+            "history": {
+              "free": {
+                "passed": 5,
+                "total": 40,
+                "rate_percent": 12.5
+              },
+              "plan": {
+                "passed": 10,
+                "total": 40,
+                "rate_percent": 25.0
+              },
+              "difference_pp": 12.5
+            }
+          },
+          "openai/gpt-5": {
+            "current": {
+              "free": {
+                "passed": 10,
+                "total": 40,
+                "rate_percent": 25.0
+              },
+              "plan": {
+                "passed": 19,
+                "total": 40,
+                "rate_percent": 47.5
+              },
+              "difference_pp": 22.5
+            },
+            "history": {
+              "free": {
+                "passed": 5,
+                "total": 40,
+                "rate_percent": 12.5
+              },
+              "plan": {
+                "passed": 7,
+                "total": 40,
+                "rate_percent": 17.5
+              },
+              "difference_pp": 5.0
+            }
+          }
+        },
+        "openai/gpt-oss-120b": {
+          "anthropic/claude-sonnet-4.5": {
+            "current": {
+              "free": {
+                "passed": 15,
+                "total": 40,
+                "rate_percent": 37.5
+              },
+              "plan": {
+                "passed": 19,
+                "total": 40,
+                "rate_percent": 47.5
+              },
+              "difference_pp": 10.0
+            },
+            "history": {
+              "free": {
+                "passed": 7,
+                "total": 40,
+                "rate_percent": 17.5
+              },
+              "plan": {
+                "passed": 6,
+                "total": 40,
+                "rate_percent": 15.0
+              },
+              "difference_pp": -2.5
+            }
+          },
+          "openai/gpt-5": {
+            "current": {
+              "free": {
+                "passed": 15,
+                "total": 40,
+                "rate_percent": 37.5
+              },
+              "plan": {
+                "passed": 24,
+                "total": 40,
+                "rate_percent": 60.0
+              },
+              "difference_pp": 22.5
+            },
+            "history": {
+              "free": {
+                "passed": 7,
+                "total": 40,
+                "rate_percent": 17.5
+              },
+              "plan": {
+                "passed": 13,
+                "total": 40,
+                "rate_percent": 32.5
+              },
+              "difference_pp": 15.0
+            }
           }
         }
       },
@@ -516,6 +753,300 @@
           }
         }
       },
+      "by_project_builder": {
+        "bom": {
+          "anthropic/claude-sonnet-4.5": {
+            "current": {
+              "free": {
+                "passed": 17,
+                "total": 40,
+                "rate_percent": 42.5
+              },
+              "plan": {
+                "passed": 18,
+                "total": 40,
+                "rate_percent": 45.0
+              },
+              "difference_pp": 2.5
+            },
+            "history": {
+              "free": {
+                "passed": 9,
+                "total": 40,
+                "rate_percent": 22.5
+              },
+              "plan": {
+                "passed": 6,
+                "total": 40,
+                "rate_percent": 15.0
+              },
+              "difference_pp": -7.5
+            }
+          },
+          "openai/gpt-5": {
+            "current": {
+              "free": {
+                "passed": 17,
+                "total": 40,
+                "rate_percent": 42.5
+              },
+              "plan": {
+                "passed": 23,
+                "total": 40,
+                "rate_percent": 57.5
+              },
+              "difference_pp": 15.0
+            },
+            "history": {
+              "free": {
+                "passed": 9,
+                "total": 40,
+                "rate_percent": 22.5
+              },
+              "plan": {
+                "passed": 8,
+                "total": 40,
+                "rate_percent": 20.0
+              },
+              "difference_pp": -2.5
+            }
+          }
+        },
+        "calculator": {
+          "anthropic/claude-sonnet-4.5": {
+            "current": {
+              "free": {
+                "passed": 14,
+                "total": 40,
+                "rate_percent": 35.0
+              },
+              "plan": {
+                "passed": 6,
+                "total": 40,
+                "rate_percent": 15.0
+              },
+              "difference_pp": -20.0
+            },
+            "history": {
+              "free": {
+                "passed": 2,
+                "total": 40,
+                "rate_percent": 5.0
+              },
+              "plan": {
+                "passed": 0,
+                "total": 40,
+                "rate_percent": 0.0
+              },
+              "difference_pp": -5.0
+            }
+          },
+          "openai/gpt-5": {
+            "current": {
+              "free": {
+                "passed": 14,
+                "total": 40,
+                "rate_percent": 35.0
+              },
+              "plan": {
+                "passed": 20,
+                "total": 40,
+                "rate_percent": 50.0
+              },
+              "difference_pp": 15.0
+            },
+            "history": {
+              "free": {
+                "passed": 2,
+                "total": 40,
+                "rate_percent": 5.0
+              },
+              "plan": {
+                "passed": 0,
+                "total": 40,
+                "rate_percent": 0.0
+              },
+              "difference_pp": -5.0
+            }
+          }
+        },
+        "table": {
+          "anthropic/claude-sonnet-4.5": {
+            "current": {
+              "free": {
+                "passed": 11,
+                "total": 40,
+                "rate_percent": 27.5
+              },
+              "plan": {
+                "passed": 20,
+                "total": 40,
+                "rate_percent": 50.0
+              },
+              "difference_pp": 22.5
+            },
+            "history": {
+              "free": {
+                "passed": 4,
+                "total": 40,
+                "rate_percent": 10.0
+              },
+              "plan": {
+                "passed": 12,
+                "total": 40,
+                "rate_percent": 30.0
+              },
+              "difference_pp": 20.0
+            }
+          },
+          "openai/gpt-5": {
+            "current": {
+              "free": {
+                "passed": 11,
+                "total": 40,
+                "rate_percent": 27.5
+              },
+              "plan": {
+                "passed": 6,
+                "total": 40,
+                "rate_percent": 15.0
+              },
+              "difference_pp": -12.5
+            },
+            "history": {
+              "free": {
+                "passed": 4,
+                "total": 40,
+                "rate_percent": 10.0
+              },
+              "plan": {
+                "passed": 0,
+                "total": 40,
+                "rate_percent": 0.0
+              },
+              "difference_pp": -10.0
+            }
+          }
+        }
+      },
+      "by_generator_builder": {
+        "mistralai/mistral-small-3.2-24b-instruct": {
+          "anthropic/claude-sonnet-4.5": {
+            "current": {
+              "free": {
+                "passed": 16,
+                "total": 60,
+                "rate_percent": 26.666666666666668
+              },
+              "plan": {
+                "passed": 21,
+                "total": 60,
+                "rate_percent": 35.0
+              },
+              "difference_pp": 8.333333333333332
+            },
+            "history": {
+              "free": {
+                "passed": 5,
+                "total": 60,
+                "rate_percent": 8.333333333333334
+              },
+              "plan": {
+                "passed": 9,
+                "total": 60,
+                "rate_percent": 15.0
+              },
+              "difference_pp": 6.666666666666666
+            }
+          },
+          "openai/gpt-5": {
+            "current": {
+              "free": {
+                "passed": 16,
+                "total": 60,
+                "rate_percent": 26.666666666666668
+              },
+              "plan": {
+                "passed": 25,
+                "total": 60,
+                "rate_percent": 41.666666666666664
+              },
+              "difference_pp": 14.999999999999996
+            },
+            "history": {
+              "free": {
+                "passed": 5,
+                "total": 60,
+                "rate_percent": 8.333333333333334
+              },
+              "plan": {
+                "passed": 4,
+                "total": 60,
+                "rate_percent": 6.666666666666667
+              },
+              "difference_pp": -1.666666666666667
+            }
+          }
+        },
+        "openai/gpt-oss-120b": {
+          "anthropic/claude-sonnet-4.5": {
+            "current": {
+              "free": {
+                "passed": 26,
+                "total": 60,
+                "rate_percent": 43.333333333333336
+              },
+              "plan": {
+                "passed": 23,
+                "total": 60,
+                "rate_percent": 38.333333333333336
+              },
+              "difference_pp": -5.0
+            },
+            "history": {
+              "free": {
+                "passed": 10,
+                "total": 60,
+                "rate_percent": 16.666666666666668
+              },
+              "plan": {
+                "passed": 9,
+                "total": 60,
+                "rate_percent": 15.0
+              },
+              "difference_pp": -1.6666666666666679
+            }
+          },
+          "openai/gpt-5": {
+            "current": {
+              "free": {
+                "passed": 26,
+                "total": 60,
+                "rate_percent": 43.333333333333336
+              },
+              "plan": {
+                "passed": 24,
+                "total": 60,
+                "rate_percent": 40.0
+              },
+              "difference_pp": -3.3333333333333357
+            },
+            "history": {
+              "free": {
+                "passed": 10,
+                "total": 60,
+                "rate_percent": 16.666666666666668
+              },
+              "plan": {
+                "passed": 4,
+                "total": 60,
+                "rate_percent": 6.666666666666667
+              },
+              "difference_pp": -10.0
+            }
+          }
+        }
+      },
       "paired_by_builder": {
         "anthropic/claude-sonnet-4.5": {
           "current": {
@@ -734,6 +1265,184 @@
               "rate_percent": 20.0
             },
             "difference_pp": 0.0
+          }
+        }
+      },
+      "by_project_builder": {
+        "draw": {
+          "anthropic/claude-sonnet-4.5": {
+            "current": {
+              "free": {
+                "passed": 3,
+                "total": 10,
+                "rate_percent": 30.0
+              },
+              "plan": {
+                "passed": 6,
+                "total": 10,
+                "rate_percent": 60.0
+              },
+              "difference_pp": 30.0
+            },
+            "history": {
+              "free": {
+                "passed": 2,
+                "total": 10,
+                "rate_percent": 20.0
+              },
+              "plan": {
+                "passed": 0,
+                "total": 10,
+                "rate_percent": 0.0
+              },
+              "difference_pp": -20.0
+            }
+          },
+          "openai/gpt-5": {
+            "current": {
+              "free": {
+                "passed": 3,
+                "total": 10,
+                "rate_percent": 30.0
+              },
+              "plan": {
+                "passed": 8,
+                "total": 10,
+                "rate_percent": 80.0
+              },
+              "difference_pp": 50.0
+            },
+            "history": {
+              "free": {
+                "passed": 2,
+                "total": 10,
+                "rate_percent": 20.0
+              },
+              "plan": {
+                "passed": 2,
+                "total": 10,
+                "rate_percent": 20.0
+              },
+              "difference_pp": 0.0
+            }
+          }
+        }
+      },
+      "by_generator_builder": {
+        "openai/gpt-5": {
+          "anthropic/claude-sonnet-4.5": {
+            "current": {
+              "free": {
+                "passed": 2,
+                "total": 5,
+                "rate_percent": 40.0
+              },
+              "plan": {
+                "passed": 3,
+                "total": 5,
+                "rate_percent": 60.0
+              },
+              "difference_pp": 20.0
+            },
+            "history": {
+              "free": {
+                "passed": 1,
+                "total": 5,
+                "rate_percent": 20.0
+              },
+              "plan": {
+                "passed": 0,
+                "total": 5,
+                "rate_percent": 0.0
+              },
+              "difference_pp": -20.0
+            }
+          },
+          "openai/gpt-5": {
+            "current": {
+              "free": {
+                "passed": 2,
+                "total": 5,
+                "rate_percent": 40.0
+              },
+              "plan": {
+                "passed": 4,
+                "total": 5,
+                "rate_percent": 80.0
+              },
+              "difference_pp": 40.0
+            },
+            "history": {
+              "free": {
+                "passed": 1,
+                "total": 5,
+                "rate_percent": 20.0
+              },
+              "plan": {
+                "passed": 1,
+                "total": 5,
+                "rate_percent": 20.0
+              },
+              "difference_pp": 0.0
+            }
+          }
+        },
+        "openai/gpt-oss-120b": {
+          "anthropic/claude-sonnet-4.5": {
+            "current": {
+              "free": {
+                "passed": 1,
+                "total": 5,
+                "rate_percent": 20.0
+              },
+              "plan": {
+                "passed": 3,
+                "total": 5,
+                "rate_percent": 60.0
+              },
+              "difference_pp": 40.0
+            },
+            "history": {
+              "free": {
+                "passed": 1,
+                "total": 5,
+                "rate_percent": 20.0
+              },
+              "plan": {
+                "passed": 0,
+                "total": 5,
+                "rate_percent": 0.0
+              },
+              "difference_pp": -20.0
+            }
+          },
+          "openai/gpt-5": {
+            "current": {
+              "free": {
+                "passed": 1,
+                "total": 5,
+                "rate_percent": 20.0
+              },
+              "plan": {
+                "passed": 4,
+                "total": 5,
+                "rate_percent": 80.0
+              },
+              "difference_pp": 60.0
+            },
+            "history": {
+              "free": {
+                "passed": 1,
+                "total": 5,
+                "rate_percent": 20.0
+              },
+              "plan": {
+                "passed": 1,
+                "total": 5,
+                "rate_percent": 20.0
+              },
+              "difference_pp": 0.0
+            }
           }
         }
       },
@@ -7727,6 +8436,38 @@
       },
       "difference_pp": 0.4629629629629619
     },
+    "by_builder": {
+      "anthropic/claude-sonnet-4.5": {
+        "current": {
+          "free": {
+            "passed": 39,
+            "total": 108,
+            "rate_percent": 36.111111111111114
+          },
+          "plan": {
+            "passed": 36,
+            "total": 108,
+            "rate_percent": 33.333333333333336
+          },
+          "difference_pp": -2.7777777777777786
+        }
+      },
+      "openai/gpt-5": {
+        "current": {
+          "free": {
+            "passed": 39,
+            "total": 108,
+            "rate_percent": 36.111111111111114
+          },
+          "plan": {
+            "passed": 43,
+            "total": 108,
+            "rate_percent": 39.81481481481482
+          },
+          "difference_pp": 3.7037037037037024
+        }
+      }
+    },
     "posthoc": true,
     "original_scores_unchanged": true
   },
@@ -7831,6 +8572,40 @@
           "reasoning_tokens_reported": 36,
           "cost_usd": 0.014893
         }
+      },
+      "by_builder": {
+        "anthropic/claude-sonnet-4.5": {
+          "free": {
+            "total": 6,
+            "public_first": 0,
+            "public_final": 0,
+            "history": 0,
+            "withheld": 0
+          },
+          "plan": {
+            "total": 6,
+            "public_first": 0,
+            "public_final": 0,
+            "history": 0,
+            "withheld": 0
+          }
+        },
+        "openai/gpt-5": {
+          "free": {
+            "total": 6,
+            "public_first": 0,
+            "public_final": 0,
+            "history": 0,
+            "withheld": 0
+          },
+          "plan": {
+            "total": 6,
+            "public_first": 0,
+            "public_final": 0,
+            "history": 0,
+            "withheld": 0
+          }
+        }
       }
     },
     "matched-feedback-frontier.json": {
@@ -7933,6 +8708,40 @@
           "reasoning_tokens_reported": 18,
           "cost_usd": 1.563346
         }
+      },
+      "by_builder": {
+        "anthropic/claude-sonnet-4.5": {
+          "free": {
+            "total": 3,
+            "public_first": 1,
+            "public_final": 3,
+            "history": 0,
+            "withheld": 0
+          },
+          "plan": {
+            "total": 3,
+            "public_first": 0,
+            "public_final": 0,
+            "history": 0,
+            "withheld": 0
+          }
+        },
+        "openai/gpt-5": {
+          "free": {
+            "total": 3,
+            "public_first": 1,
+            "public_final": 3,
+            "history": 0,
+            "withheld": 0
+          },
+          "plan": {
+            "total": 3,
+            "public_first": 0,
+            "public_final": 0,
+            "history": 0,
+            "withheld": 0
+          }
+        }
       }
     }
   },
@@ -7983,6 +8792,102 @@
         "provider_receipts_usd": 0.33819325
       }
     },
+    "construction_by_builder": {
+      "interface": {
+        "anthropic/claude-sonnet-4.5": {
+          "settled_microusd": 327594,
+          "exposure_microusd": 327594,
+          "calls": 2,
+          "settled_usd": 0.327594,
+          "exposure_usd": 0.327594
+        },
+        "openai/gpt-5": {
+          "settled_microusd": 447112,
+          "exposure_microusd": 721704,
+          "calls": 3,
+          "settled_usd": 0.447112,
+          "exposure_usd": 0.721704
+        }
+      },
+      "expansion": {
+        "anthropic/claude-sonnet-4.5": {
+          "settled_microusd": 1181010,
+          "exposure_microusd": 1685313,
+          "calls": 7,
+          "settled_usd": 1.18101,
+          "exposure_usd": 1.685313
+        },
+        "openai/gpt-5": {
+          "settled_microusd": 778918,
+          "exposure_microusd": 1050502,
+          "calls": 6,
+          "settled_usd": 0.778918,
+          "exposure_usd": 1.050502
+        }
+      },
+      "draw": {
+        "anthropic/claude-sonnet-4.5": {
+          "settled_microusd": 152952,
+          "exposure_microusd": 152952,
+          "calls": 1,
+          "settled_usd": 0.152952,
+          "exposure_usd": 0.152952
+        },
+        "openai/gpt-5": {
+          "settled_microusd": 185242,
+          "exposure_microusd": 185242,
+          "calls": 1,
+          "settled_usd": 0.185242,
+          "exposure_usd": 0.185242
+        }
+      }
+    },
+    "draw_by_generator_builder": {
+      "openai/gpt-5|anthropic/claude-sonnet-4.5": {
+        "generator": "openai/gpt-5",
+        "builder": "anthropic/claude-sonnet-4.5",
+        "targets_per_method": 5,
+        "direct_usd": 1.22983025,
+        "build_usd": 0.152952,
+        "selection_usd": 0.164142,
+        "pipeline_usd": 0.317094,
+        "direct_per_target_usd": 0.24596605,
+        "pipeline_per_target_usd": 0.0634188
+      },
+      "openai/gpt-5|openai/gpt-5": {
+        "generator": "openai/gpt-5",
+        "builder": "openai/gpt-5",
+        "targets_per_method": 5,
+        "direct_usd": 1.22983025,
+        "build_usd": 0.18524125,
+        "selection_usd": 0.114955,
+        "pipeline_usd": 0.30019625,
+        "direct_per_target_usd": 0.24596605,
+        "pipeline_per_target_usd": 0.06003925
+      },
+      "openai/gpt-oss-120b|anthropic/claude-sonnet-4.5": {
+        "generator": "openai/gpt-oss-120b",
+        "builder": "anthropic/claude-sonnet-4.5",
+        "targets_per_method": 5,
+        "direct_usd": 0.00312078,
+        "build_usd": 0.152952,
+        "selection_usd": 0.00145092,
+        "pipeline_usd": 0.15440292,
+        "direct_per_target_usd": 0.000624156,
+        "pipeline_per_target_usd": 0.030880584
+      },
+      "openai/gpt-oss-120b|openai/gpt-5": {
+        "generator": "openai/gpt-oss-120b",
+        "builder": "openai/gpt-5",
+        "targets_per_method": 5,
+        "direct_usd": 0.00312078,
+        "build_usd": 0.18524125,
+        "selection_usd": 0.00131667,
+        "pipeline_usd": 0.18655792,
+        "direct_per_target_usd": 0.000624156,
+        "pipeline_per_target_usd": 0.037311584
+      }
+    },
     "draw_per_generator_scenarios": {
       "openai/gpt-5": {
         "free_candidates": 5,
@@ -8022,6 +8927,7 @@
     "studies/results/webbench-expand.json": "c360df68caea4455237956988b1d1c27f3505a0582319cbe0fb255151dcb826c",
     "studies/results/assertion-audit-20261117.json": "cc74a88938190566b924881bb053a37b600477ba0ab744a9de374e54f5f92aaf",
     "studies/results/primary-replay.json": "c1059301404af339a3d31f1fbd3d5359826798321be7686e72d56c2aa4bf6917",
+    "studies/results/builder_costs.json": "c0ebb5a1fef81b1a316576a1dc2a24c4540490be35ecb32a334d78832daaa5af",
     "studies/results/matched-feedback.json": "122a1f5726be87a8bc12865a259ad6817c99a644cb978c1475dcf84b95b16062",
     "studies/results/matched-feedback-frontier.json": "25436fdbef4c2c0b4131662288a5d5f355bce00ac8d63c6be8fbe3c3476d6dea"
   },
