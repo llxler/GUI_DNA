@@ -1,0 +1,2391 @@
+{
+  "controls": {
+    "reference": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "blank": [
+      {
+        "seed": 1,
+        "k": {
+          "before": null,
+          "after": null,
+          "canvas": false
+        },
+        "z": {
+          "before": null,
+          "after": null,
+          "canvas": false
+        },
+        "response": null
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": null,
+          "after": null,
+          "canvas": false
+        },
+        "z": {
+          "before": null,
+          "after": null,
+          "canvas": false
+        },
+        "response": null
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": null,
+          "after": null,
+          "canvas": false
+        },
+        "z": {
+          "before": null,
+          "after": null,
+          "canvas": false
+        },
+        "response": null
+      }
+    ]
+  },
+  "libraries": {
+    "1": {
+      "package_sha256": "6bc383f4e16a2d01bc1da4136ab6f988fcba73375800a91d44853e5252e839b6",
+      "rows": [
+        {
+          "label": "example-0",
+          "plan": {
+            "mode": "normal",
+            "difficulty": "normal",
+            "weatherStart": "auto",
+            "enableBoss": true,
+            "maxLives": 5,
+            "initialLives": 1,
+            "initialBombs": 3,
+            "spawnItems": "medium",
+            "spawnField": "medium",
+            "speedUp": "normal",
+            "forwardSpeed": 4,
+            "gravityTimes100": 45,
+            "jumpSpeedTimes10": 60,
+            "bulletIntervalMs": 200,
+            "coinPhaseCycle": "one_repeat",
+            "frParam": "fr",
+            "colorTheme": "default",
+            "weatherEnabled": {
+              "normal": true,
+              "rain": true,
+              "wind": true,
+              "night": true
+            },
+            "shieldSeconds": 5,
+            "lossShieldSeconds": 1,
+            "windMultiplierTimes100": 150,
+            "rainJumpTimes100": 80,
+            "rainFallTimes100": 120
+          },
+          "source_digest": "2b592fb0cafe48712b37a15d719dbbcb80388e1f60fe40e73439fbf80b8e3f78",
+          "responses": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "label": "example-1",
+          "plan": {
+            "mode": "debug",
+            "difficulty": "easy",
+            "weatherStart": "normal",
+            "enableBoss": false,
+            "maxLives": 10,
+            "initialLives": 3,
+            "initialBombs": 2,
+            "spawnItems": "high",
+            "spawnField": "low",
+            "speedUp": "strong",
+            "forwardSpeed": 3,
+            "gravityTimes100": 35,
+            "jumpSpeedTimes10": 60,
+            "bulletIntervalMs": 200,
+            "coinPhaseCycle": "single",
+            "frParam": "fr",
+            "colorTheme": "high_contrast",
+            "weatherEnabled": {
+              "normal": true,
+              "rain": true,
+              "wind": true,
+              "night": false
+            },
+            "shieldSeconds": 5,
+            "lossShieldSeconds": 2,
+            "windMultiplierTimes100": 200,
+            "rainJumpTimes100": 80,
+            "rainFallTimes100": 120
+          },
+          "source_digest": "882e4fbb1e1f85e759150f9744d495e6dfcdb6923f86da433eb726db61d5ed82",
+          "responses": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "label": "field/coinPhaseCycle",
+          "plan": {
+            "mode": "normal",
+            "difficulty": "normal",
+            "weatherStart": "auto",
+            "enableBoss": true,
+            "maxLives": 5,
+            "initialLives": 1,
+            "initialBombs": 3,
+            "spawnItems": "medium",
+            "spawnField": "medium",
+            "speedUp": "normal",
+            "forwardSpeed": 4,
+            "gravityTimes100": 45,
+            "jumpSpeedTimes10": 60,
+            "bulletIntervalMs": 200,
+            "coinPhaseCycle": "single",
+            "frParam": "fr",
+            "colorTheme": "default",
+            "weatherEnabled": {
+              "normal": true,
+              "rain": true,
+              "wind": true,
+              "night": true
+            },
+            "shieldSeconds": 5,
+            "lossShieldSeconds": 1,
+            "windMultiplierTimes100": 150,
+            "rainJumpTimes100": 80,
+            "rainFallTimes100": 120
+          },
+          "source_digest": "bb54fb03d17cc7266f4c789bc818e90fa300f16d6611d6226258e7607141bccc",
+          "responses": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "label": "field/colorTheme",
+          "plan": {
+            "mode": "normal",
+            "difficulty": "normal",
+            "weatherStart": "auto",
+            "enableBoss": true,
+            "maxLives": 5,
+            "initialLives": 1,
+            "initialBombs": 3,
+            "spawnItems": "medium",
+            "spawnField": "medium",
+            "speedUp": "normal",
+            "forwardSpeed": 4,
+            "gravityTimes100": 45,
+            "jumpSpeedTimes10": 60,
+            "bulletIntervalMs": 200,
+            "coinPhaseCycle": "one_repeat",
+            "frParam": "fr",
+            "colorTheme": "high_contrast",
+            "weatherEnabled": {
+              "normal": true,
+              "rain": true,
+              "wind": true,
+              "night": true
+            },
+            "shieldSeconds": 5,
+            "lossShieldSeconds": 1,
+            "windMultiplierTimes100": 150,
+            "rainJumpTimes100": 80,
+            "rainFallTimes100": 120
+          },
+          "source_digest": "ab26835902fb74509598bb53b9c5b1a5408efe9367c78082606e6652fc0be664",
+          "responses": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "label": "field/difficulty",
+          "plan": {
+            "mode": "normal",
+            "difficulty": "easy",
+            "weatherStart": "auto",
+            "enableBoss": true,
+            "maxLives": 5,
+            "initialLives": 1,
+            "initialBombs": 3,
+            "spawnItems": "medium",
+            "spawnField": "medium",
+            "speedUp": "normal",
+            "forwardSpeed": 4,
+            "gravityTimes100": 45,
+            "jumpSpeedTimes10": 60,
+            "bulletIntervalMs": 200,
+            "coinPhaseCycle": "one_repeat",
+            "frParam": "fr",
+            "colorTheme": "default",
+            "weatherEnabled": {
+              "normal": true,
+              "rain": true,
+              "wind": true,
+              "night": true
+            },
+            "shieldSeconds": 5,
+            "lossShieldSeconds": 1,
+            "windMultiplierTimes100": 150,
+            "rainJumpTimes100": 80,
+            "rainFallTimes100": 120
+          },
+          "source_digest": "c202f4cb7386186ecf32ffaef75cbc0e577f55220cd87ca3f05918c6af3789c2",
+          "responses": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "label": "field/enableBoss",
+          "plan": {
+            "mode": "normal",
+            "difficulty": "normal",
+            "weatherStart": "auto",
+            "enableBoss": false,
+            "maxLives": 5,
+            "initialLives": 1,
+            "initialBombs": 3,
+            "spawnItems": "medium",
+            "spawnField": "medium",
+            "speedUp": "normal",
+            "forwardSpeed": 4,
+            "gravityTimes100": 45,
+            "jumpSpeedTimes10": 60,
+            "bulletIntervalMs": 200,
+            "coinPhaseCycle": "one_repeat",
+            "frParam": "fr",
+            "colorTheme": "default",
+            "weatherEnabled": {
+              "normal": true,
+              "rain": true,
+              "wind": true,
+              "night": true
+            },
+            "shieldSeconds": 5,
+            "lossShieldSeconds": 1,
+            "windMultiplierTimes100": 150,
+            "rainJumpTimes100": 80,
+            "rainFallTimes100": 120
+          },
+          "source_digest": "11b0be427fa26b7c6389b9fb91bb8ba517961a58b3acbc5f7332ea7849433f4f",
+          "responses": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "label": "field/forwardSpeed",
+          "plan": {
+            "mode": "normal",
+            "difficulty": "normal",
+            "weatherStart": "auto",
+            "enableBoss": true,
+            "maxLives": 5,
+            "initialLives": 1,
+            "initialBombs": 3,
+            "spawnItems": "medium",
+            "spawnField": "medium",
+            "speedUp": "normal",
+            "forwardSpeed": 3,
+            "gravityTimes100": 45,
+            "jumpSpeedTimes10": 60,
+            "bulletIntervalMs": 200,
+            "coinPhaseCycle": "one_repeat",
+            "frParam": "fr",
+            "colorTheme": "default",
+            "weatherEnabled": {
+              "normal": true,
+              "rain": true,
+              "wind": true,
+              "night": true
+            },
+            "shieldSeconds": 5,
+            "lossShieldSeconds": 1,
+            "windMultiplierTimes100": 150,
+            "rainJumpTimes100": 80,
+            "rainFallTimes100": 120
+          },
+          "source_digest": "820a8409184aa43a76aaa696617b5574651755e9cd47e93cbe4511b7aa9bffd4",
+          "responses": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "label": "field/gravityTimes100",
+          "plan": {
+            "mode": "normal",
+            "difficulty": "normal",
+            "weatherStart": "auto",
+            "enableBoss": true,
+            "maxLives": 5,
+            "initialLives": 1,
+            "initialBombs": 3,
+            "spawnItems": "medium",
+            "spawnField": "medium",
+            "speedUp": "normal",
+            "forwardSpeed": 4,
+            "gravityTimes100": 35,
+            "jumpSpeedTimes10": 60,
+            "bulletIntervalMs": 200,
+            "coinPhaseCycle": "one_repeat",
+            "frParam": "fr",
+            "colorTheme": "default",
+            "weatherEnabled": {
+              "normal": true,
+              "rain": true,
+              "wind": true,
+              "night": true
+            },
+            "shieldSeconds": 5,
+            "lossShieldSeconds": 1,
+            "windMultiplierTimes100": 150,
+            "rainJumpTimes100": 80,
+            "rainFallTimes100": 120
+          },
+          "source_digest": "c0c6e9dbc2e28caa1156dc95b4d0f37d5d33588092bfb38e2a271d24c7a06c4e",
+          "responses": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "label": "field/initialBombs",
+          "plan": {
+            "mode": "normal",
+            "difficulty": "normal",
+            "weatherStart": "auto",
+            "enableBoss": true,
+            "maxLives": 5,
+            "initialLives": 1,
+            "initialBombs": 2,
+            "spawnItems": "medium",
+            "spawnField": "medium",
+            "speedUp": "normal",
+            "forwardSpeed": 4,
+            "gravityTimes100": 45,
+            "jumpSpeedTimes10": 60,
+            "bulletIntervalMs": 200,
+            "coinPhaseCycle": "one_repeat",
+            "frParam": "fr",
+            "colorTheme": "default",
+            "weatherEnabled": {
+              "normal": true,
+              "rain": true,
+              "wind": true,
+              "night": true
+            },
+            "shieldSeconds": 5,
+            "lossShieldSeconds": 1,
+            "windMultiplierTimes100": 150,
+            "rainJumpTimes100": 80,
+            "rainFallTimes100": 120
+          },
+          "source_digest": "cb80c85ab6a22956c7779aef591e859940f89143e211aae1b82aed9819896cdf",
+          "responses": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "label": "field/initialLives",
+          "plan": {
+            "mode": "normal",
+            "difficulty": "normal",
+            "weatherStart": "auto",
+            "enableBoss": true,
+            "maxLives": 5,
+            "initialLives": 3,
+            "initialBombs": 3,
+            "spawnItems": "medium",
+            "spawnField": "medium",
+            "speedUp": "normal",
+            "forwardSpeed": 4,
+            "gravityTimes100": 45,
+            "jumpSpeedTimes10": 60,
+            "bulletIntervalMs": 200,
+            "coinPhaseCycle": "one_repeat",
+            "frParam": "fr",
+            "colorTheme": "default",
+            "weatherEnabled": {
+              "normal": true,
+              "rain": true,
+              "wind": true,
+              "night": true
+            },
+            "shieldSeconds": 5,
+            "lossShieldSeconds": 1,
+            "windMultiplierTimes100": 150,
+            "rainJumpTimes100": 80,
+            "rainFallTimes100": 120
+          },
+          "source_digest": "07ae68690260bc642e67b554be962fdcb853c72505a555b1df1737628aa49db1",
+          "responses": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "label": "field/lossShieldSeconds",
+          "plan": {
+            "mode": "normal",
+            "difficulty": "normal",
+            "weatherStart": "auto",
+            "enableBoss": true,
+            "maxLives": 5,
+            "initialLives": 1,
+            "initialBombs": 3,
+            "spawnItems": "medium",
+            "spawnField": "medium",
+            "speedUp": "normal",
+            "forwardSpeed": 4,
+            "gravityTimes100": 45,
+            "jumpSpeedTimes10": 60,
+            "bulletIntervalMs": 200,
+            "coinPhaseCycle": "one_repeat",
+            "frParam": "fr",
+            "colorTheme": "default",
+            "weatherEnabled": {
+              "normal": true,
+              "rain": true,
+              "wind": true,
+              "night": true
+            },
+            "shieldSeconds": 5,
+            "lossShieldSeconds": 2,
+            "windMultiplierTimes100": 150,
+            "rainJumpTimes100": 80,
+            "rainFallTimes100": 120
+          },
+          "source_digest": "6bf9a7c73cb10bbdb5f5427e05c43f87e1d46adf52301d2690826ff2cb690087",
+          "responses": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "label": "field/maxLives",
+          "plan": {
+            "mode": "normal",
+            "difficulty": "normal",
+            "weatherStart": "auto",
+            "enableBoss": true,
+            "maxLives": 10,
+            "initialLives": 1,
+            "initialBombs": 3,
+            "spawnItems": "medium",
+            "spawnField": "medium",
+            "speedUp": "normal",
+            "forwardSpeed": 4,
+            "gravityTimes100": 45,
+            "jumpSpeedTimes10": 60,
+            "bulletIntervalMs": 200,
+            "coinPhaseCycle": "one_repeat",
+            "frParam": "fr",
+            "colorTheme": "default",
+            "weatherEnabled": {
+              "normal": true,
+              "rain": true,
+              "wind": true,
+              "night": true
+            },
+            "shieldSeconds": 5,
+            "lossShieldSeconds": 1,
+            "windMultiplierTimes100": 150,
+            "rainJumpTimes100": 80,
+            "rainFallTimes100": 120
+          },
+          "source_digest": "7ab4a9e1c33de22e3cd0a39eee6d2d379f5ac7910c3f1387c40c4355e90d2dfe",
+          "responses": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "label": "field/mode",
+          "plan": {
+            "mode": "debug",
+            "difficulty": "normal",
+            "weatherStart": "auto",
+            "enableBoss": true,
+            "maxLives": 5,
+            "initialLives": 1,
+            "initialBombs": 3,
+            "spawnItems": "medium",
+            "spawnField": "medium",
+            "speedUp": "normal",
+            "forwardSpeed": 4,
+            "gravityTimes100": 45,
+            "jumpSpeedTimes10": 60,
+            "bulletIntervalMs": 200,
+            "coinPhaseCycle": "one_repeat",
+            "frParam": "fr",
+            "colorTheme": "default",
+            "weatherEnabled": {
+              "normal": true,
+              "rain": true,
+              "wind": true,
+              "night": true
+            },
+            "shieldSeconds": 5,
+            "lossShieldSeconds": 1,
+            "windMultiplierTimes100": 150,
+            "rainJumpTimes100": 80,
+            "rainFallTimes100": 120
+          },
+          "source_digest": "c9f1cb3ae02cbe29955b092d2431903fa4b945b472801d27d3e76a3f4f58a823",
+          "responses": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "label": "field/spawnField",
+          "plan": {
+            "mode": "normal",
+            "difficulty": "normal",
+            "weatherStart": "auto",
+            "enableBoss": true,
+            "maxLives": 5,
+            "initialLives": 1,
+            "initialBombs": 3,
+            "spawnItems": "medium",
+            "spawnField": "low",
+            "speedUp": "normal",
+            "forwardSpeed": 4,
+            "gravityTimes100": 45,
+            "jumpSpeedTimes10": 60,
+            "bulletIntervalMs": 200,
+            "coinPhaseCycle": "one_repeat",
+            "frParam": "fr",
+            "colorTheme": "default",
+            "weatherEnabled": {
+              "normal": true,
+              "rain": true,
+              "wind": true,
+              "night": true
+            },
+            "shieldSeconds": 5,
+            "lossShieldSeconds": 1,
+            "windMultiplierTimes100": 150,
+            "rainJumpTimes100": 80,
+            "rainFallTimes100": 120
+          },
+          "source_digest": "0671381fe6724764a0364570f51e532b47417337d9881e39abf5c8ef3401c70a",
+          "responses": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "label": "field/spawnItems",
+          "plan": {
+            "mode": "normal",
+            "difficulty": "normal",
+            "weatherStart": "auto",
+            "enableBoss": true,
+            "maxLives": 5,
+            "initialLives": 1,
+            "initialBombs": 3,
+            "spawnItems": "high",
+            "spawnField": "medium",
+            "speedUp": "normal",
+            "forwardSpeed": 4,
+            "gravityTimes100": 45,
+            "jumpSpeedTimes10": 60,
+            "bulletIntervalMs": 200,
+            "coinPhaseCycle": "one_repeat",
+            "frParam": "fr",
+            "colorTheme": "default",
+            "weatherEnabled": {
+              "normal": true,
+              "rain": true,
+              "wind": true,
+              "night": true
+            },
+            "shieldSeconds": 5,
+            "lossShieldSeconds": 1,
+            "windMultiplierTimes100": 150,
+            "rainJumpTimes100": 80,
+            "rainFallTimes100": 120
+          },
+          "source_digest": "149b029ffdd164fd8e4a8e94c09b7a54ba62d33b8b2691c821aaed0a5d5c93d0",
+          "responses": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "label": "field/speedUp",
+          "plan": {
+            "mode": "normal",
+            "difficulty": "normal",
+            "weatherStart": "auto",
+            "enableBoss": true,
+            "maxLives": 5,
+            "initialLives": 1,
+            "initialBombs": 3,
+            "spawnItems": "medium",
+            "spawnField": "medium",
+            "speedUp": "strong",
+            "forwardSpeed": 4,
+            "gravityTimes100": 45,
+            "jumpSpeedTimes10": 60,
+            "bulletIntervalMs": 200,
+            "coinPhaseCycle": "one_repeat",
+            "frParam": "fr",
+            "colorTheme": "default",
+            "weatherEnabled": {
+              "normal": true,
+              "rain": true,
+              "wind": true,
+              "night": true
+            },
+            "shieldSeconds": 5,
+            "lossShieldSeconds": 1,
+            "windMultiplierTimes100": 150,
+            "rainJumpTimes100": 80,
+            "rainFallTimes100": 120
+          },
+          "source_digest": "e3cc87c5ea84507a5f304440a5a13187e72dd1c6978e076562af588552da2fca",
+          "responses": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "label": "field/weatherEnabled",
+          "plan": {
+            "mode": "normal",
+            "difficulty": "normal",
+            "weatherStart": "auto",
+            "enableBoss": true,
+            "maxLives": 5,
+            "initialLives": 1,
+            "initialBombs": 3,
+            "spawnItems": "medium",
+            "spawnField": "medium",
+            "speedUp": "normal",
+            "forwardSpeed": 4,
+            "gravityTimes100": 45,
+            "jumpSpeedTimes10": 60,
+            "bulletIntervalMs": 200,
+            "coinPhaseCycle": "one_repeat",
+            "frParam": "fr",
+            "colorTheme": "default",
+            "weatherEnabled": {
+              "normal": true,
+              "rain": true,
+              "wind": true,
+              "night": false
+            },
+            "shieldSeconds": 5,
+            "lossShieldSeconds": 1,
+            "windMultiplierTimes100": 150,
+            "rainJumpTimes100": 80,
+            "rainFallTimes100": 120
+          },
+          "source_digest": "f2e4ed5f777a47894c7b9fd84df9f79d29ce01aa7e9e9050b62fedd084bd84e5",
+          "responses": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "label": "field/weatherStart",
+          "plan": {
+            "mode": "normal",
+            "difficulty": "normal",
+            "weatherStart": "normal",
+            "enableBoss": true,
+            "maxLives": 5,
+            "initialLives": 1,
+            "initialBombs": 3,
+            "spawnItems": "medium",
+            "spawnField": "medium",
+            "speedUp": "normal",
+            "forwardSpeed": 4,
+            "gravityTimes100": 45,
+            "jumpSpeedTimes10": 60,
+            "bulletIntervalMs": 200,
+            "coinPhaseCycle": "one_repeat",
+            "frParam": "fr",
+            "colorTheme": "default",
+            "weatherEnabled": {
+              "normal": true,
+              "rain": true,
+              "wind": true,
+              "night": true
+            },
+            "shieldSeconds": 5,
+            "lossShieldSeconds": 1,
+            "windMultiplierTimes100": 150,
+            "rainJumpTimes100": 80,
+            "rainFallTimes100": 120
+          },
+          "source_digest": "36caa658b0217b2f6e0d3ad2855c35b6366cfbdab4caded89c88d8b9307d868d",
+          "responses": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "label": "field/windMultiplierTimes100",
+          "plan": {
+            "mode": "normal",
+            "difficulty": "normal",
+            "weatherStart": "auto",
+            "enableBoss": true,
+            "maxLives": 5,
+            "initialLives": 1,
+            "initialBombs": 3,
+            "spawnItems": "medium",
+            "spawnField": "medium",
+            "speedUp": "normal",
+            "forwardSpeed": 4,
+            "gravityTimes100": 45,
+            "jumpSpeedTimes10": 60,
+            "bulletIntervalMs": 200,
+            "coinPhaseCycle": "one_repeat",
+            "frParam": "fr",
+            "colorTheme": "default",
+            "weatherEnabled": {
+              "normal": true,
+              "rain": true,
+              "wind": true,
+              "night": true
+            },
+            "shieldSeconds": 5,
+            "lossShieldSeconds": 1,
+            "windMultiplierTimes100": 200,
+            "rainJumpTimes100": 80,
+            "rainFallTimes100": 120
+          },
+          "source_digest": "3136be1d50cfa5d964676256e866503f8fc8d917106d6e6d6911e5e828d84814",
+          "responses": [
+            false,
+            false,
+            false
+          ]
+        }
+      ]
+    },
+    "2": {
+      "package_sha256": "b1c5e2d396238b292453547fcf3b324ef8a1fc4d6ddc2c4a69531605d3ba3ae1",
+      "rows": [
+        {
+          "label": "example-0",
+          "plan": {
+            "difficulty": "normal",
+            "debug": false,
+            "initialLives": 1,
+            "randomRatePct": 25,
+            "fieldRandomRatePct": 25,
+            "weather": "enabled",
+            "speedUpPct": 150,
+            "dprMode": "auto",
+            "startShieldMs": 0
+          },
+          "source_digest": "ca4426878a13122ad0cf9763deecfe1e4adbe60a12225d21045a4c7c1fbca138",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "example-1",
+          "plan": {
+            "difficulty": "easy",
+            "debug": true,
+            "initialLives": 3,
+            "randomRatePct": 30,
+            "fieldRandomRatePct": 20,
+            "weather": "disabled",
+            "speedUpPct": 180,
+            "dprMode": "fixed1",
+            "startShieldMs": 500
+          },
+          "source_digest": "00ebcb2478c86ef49c62a7e61fe6b0299915e6d0473f0703adb4cae6ef989a0c",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/debug",
+          "plan": {
+            "difficulty": "normal",
+            "debug": true,
+            "initialLives": 1,
+            "randomRatePct": 25,
+            "fieldRandomRatePct": 25,
+            "weather": "enabled",
+            "speedUpPct": 150,
+            "dprMode": "auto",
+            "startShieldMs": 0
+          },
+          "source_digest": "1fd2f347e67a548063e3e111ea7b3296cd2597cbe8fbed45e77a6a4d17f83070",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/difficulty",
+          "plan": {
+            "difficulty": "easy",
+            "debug": false,
+            "initialLives": 1,
+            "randomRatePct": 25,
+            "fieldRandomRatePct": 25,
+            "weather": "enabled",
+            "speedUpPct": 150,
+            "dprMode": "auto",
+            "startShieldMs": 0
+          },
+          "source_digest": "6ccc422cce8f286bf7735401716ab9bc94e4b3a008c380df59bc12c451dfce20",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/dprMode",
+          "plan": {
+            "difficulty": "normal",
+            "debug": false,
+            "initialLives": 1,
+            "randomRatePct": 25,
+            "fieldRandomRatePct": 25,
+            "weather": "enabled",
+            "speedUpPct": 150,
+            "dprMode": "fixed1",
+            "startShieldMs": 0
+          },
+          "source_digest": "4758316ea0b1e42f238f2fa4bb659a023c0c774f538b44fd72dbe0b640070a39",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/fieldRandomRatePct",
+          "plan": {
+            "difficulty": "normal",
+            "debug": false,
+            "initialLives": 1,
+            "randomRatePct": 25,
+            "fieldRandomRatePct": 20,
+            "weather": "enabled",
+            "speedUpPct": 150,
+            "dprMode": "auto",
+            "startShieldMs": 0
+          },
+          "source_digest": "cebde0866e9dfffe54198a8031fac4692480e3ffb3740c732a2299297d854d85",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/initialLives",
+          "plan": {
+            "difficulty": "normal",
+            "debug": false,
+            "initialLives": 3,
+            "randomRatePct": 25,
+            "fieldRandomRatePct": 25,
+            "weather": "enabled",
+            "speedUpPct": 150,
+            "dprMode": "auto",
+            "startShieldMs": 0
+          },
+          "source_digest": "45d48e2f5423e06eaf155683239b17c6c0e9eb726ace88880b67e29e1d40aa54",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/randomRatePct",
+          "plan": {
+            "difficulty": "normal",
+            "debug": false,
+            "initialLives": 1,
+            "randomRatePct": 30,
+            "fieldRandomRatePct": 25,
+            "weather": "enabled",
+            "speedUpPct": 150,
+            "dprMode": "auto",
+            "startShieldMs": 0
+          },
+          "source_digest": "ee9ad04a8c00758e2401133e2beaa008dbf083bc74ee70bc95030bbea320e8d8",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/speedUpPct",
+          "plan": {
+            "difficulty": "normal",
+            "debug": false,
+            "initialLives": 1,
+            "randomRatePct": 25,
+            "fieldRandomRatePct": 25,
+            "weather": "enabled",
+            "speedUpPct": 180,
+            "dprMode": "auto",
+            "startShieldMs": 0
+          },
+          "source_digest": "f00ecdd0d0a5eeb6865db0c6a4cf61d53f88955afe4a93754bccdded52c5703b",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/startShieldMs",
+          "plan": {
+            "difficulty": "normal",
+            "debug": false,
+            "initialLives": 1,
+            "randomRatePct": 25,
+            "fieldRandomRatePct": 25,
+            "weather": "enabled",
+            "speedUpPct": 150,
+            "dprMode": "auto",
+            "startShieldMs": 500
+          },
+          "source_digest": "6d0bf61715abc14fad405ab307e11dd03d43835aa7a724f24c26a52cae762db3",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/weather",
+          "plan": {
+            "difficulty": "normal",
+            "debug": false,
+            "initialLives": 1,
+            "randomRatePct": 25,
+            "fieldRandomRatePct": 25,
+            "weather": "disabled",
+            "speedUpPct": 150,
+            "dprMode": "auto",
+            "startShieldMs": 0
+          },
+          "source_digest": "f27952c545cded238561235171ec0a315a38b5c74a9d87cf8e51d3636f777f89",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        }
+      ]
+    }
+  },
+  "observations": {
+    "2b592fb0cafe48712b37a15d719dbbcb80388e1f60fe40e73439fbf80b8e3f78": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      }
+    ],
+    "882e4fbb1e1f85e759150f9744d495e6dfcdb6923f86da433eb726db61d5ed82": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      }
+    ],
+    "bb54fb03d17cc7266f4c789bc818e90fa300f16d6611d6226258e7607141bccc": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      }
+    ],
+    "ab26835902fb74509598bb53b9c5b1a5408efe9367c78082606e6652fc0be664": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      }
+    ],
+    "c202f4cb7386186ecf32ffaef75cbc0e577f55220cd87ca3f05918c6af3789c2": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      }
+    ],
+    "11b0be427fa26b7c6389b9fb91bb8ba517961a58b3acbc5f7332ea7849433f4f": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      }
+    ],
+    "820a8409184aa43a76aaa696617b5574651755e9cd47e93cbe4511b7aa9bffd4": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      }
+    ],
+    "c0c6e9dbc2e28caa1156dc95b4d0f37d5d33588092bfb38e2a271d24c7a06c4e": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      }
+    ],
+    "cb80c85ab6a22956c7779aef591e859940f89143e211aae1b82aed9819896cdf": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      }
+    ],
+    "07ae68690260bc642e67b554be962fdcb853c72505a555b1df1737628aa49db1": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      }
+    ],
+    "6bf9a7c73cb10bbdb5f5427e05c43f87e1d46adf52301d2690826ff2cb690087": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      }
+    ],
+    "7ab4a9e1c33de22e3cd0a39eee6d2d379f5ac7910c3f1387c40c4355e90d2dfe": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      }
+    ],
+    "c9f1cb3ae02cbe29955b092d2431903fa4b945b472801d27d3e76a3f4f58a823": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      }
+    ],
+    "0671381fe6724764a0364570f51e532b47417337d9881e39abf5c8ef3401c70a": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      }
+    ],
+    "149b029ffdd164fd8e4a8e94c09b7a54ba62d33b8b2691c821aaed0a5d5c93d0": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      }
+    ],
+    "e3cc87c5ea84507a5f304440a5a13187e72dd1c6978e076562af588552da2fca": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      }
+    ],
+    "f2e4ed5f777a47894c7b9fd84df9f79d29ce01aa7e9e9050b62fedd084bd84e5": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      }
+    ],
+    "36caa658b0217b2f6e0d3ad2855c35b6366cfbdab4caded89c88d8b9307d868d": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      }
+    ],
+    "3136be1d50cfa5d964676256e866503f8fc8d917106d6e6d6911e5e828d84814": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": false
+      }
+    ],
+    "ca4426878a13122ad0cf9763deecfe1e4adbe60a12225d21045a4c7c1fbca138": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "00ebcb2478c86ef49c62a7e61fe6b0299915e6d0473f0703adb4cae6ef989a0c": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "1fd2f347e67a548063e3e111ea7b3296cd2597cbe8fbed45e77a6a4d17f83070": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "6ccc422cce8f286bf7735401716ab9bc94e4b3a008c380df59bc12c451dfce20": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "4758316ea0b1e42f238f2fa4bb659a023c0c774f538b44fd72dbe0b640070a39": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "cebde0866e9dfffe54198a8031fac4692480e3ffb3740c732a2299297d854d85": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "45d48e2f5423e06eaf155683239b17c6c0e9eb726ace88880b67e29e1d40aa54": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "ee9ad04a8c00758e2401133e2beaa008dbf083bc74ee70bc95030bbea320e8d8": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "f00ecdd0d0a5eeb6865db0c6a4cf61d53f88955afe4a93754bccdded52c5703b": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "6d0bf61715abc14fad405ab307e11dd03d43835aa7a724f24c26a52cae762db3": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "f27952c545cded238561235171ec0a315a38b5c74a9d87cf8e51d3636f777f89": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ]
+  },
+  "freeze": {
+    "run.py": "f5ea124514df998d72ed48ce49ae3418895909ac4073b74c1d1d2955b8d64196",
+    "PROTOCOL.md": "472583650e7264a8156c9b3b0329835dd3f91256f8a6ac9b167ef473ab48daa1"
+  }
+}

@@ -109,3 +109,33 @@ def test_historical_audit_does_not_write_ledger(tmp_path):
     assert result["policy"] == {"id": 1, "cap": 500000, "stop": 400000, "halted": 1}
     assert result["library_usd"] == result["actual_usd"] == .01
     assert hashlib.sha256(path.read_bytes()).hexdigest() == before
+
+
+def test_prospective_view_charges_failed_builds_and_checks_pair_counts():
+    from copy import deepcopy
+    from pathlib import Path
+    import json
+    from studies.end_to_end import validate_matched_workflow
+
+    saved = Path(__file__).resolve().parents[1] / 'studies/results/matched-canvas-20261118.json'
+    study = json.loads(saved.read_text())
+    validate_matched_workflow(study)
+    for rep in (1, 2):
+        group = study['groups'][f'plan-{rep}']
+        assert group['observed'] == group['planned'] == 5 and group['passed'] == 0
+        assert group['cost']['settled_usd'] > 0 and group['receipts_usd']['target'] == 0
+    swapped = deepcopy(study)
+    swapped['paired']['1']['both_pass'] += 1
+    with pytest.raises(AssertionError):
+        validate_matched_workflow(swapped)
+
+
+def test_paper_cells_use_only_jointly_observed_positions():
+    from studies.paper_end_to_end import matched_table
+
+    study = {'project':'example','model':'openai/gpt-5','config':{'max_tokens':32000},
+             'groups':{f'{arm}-{rep}':{'cost':{'settled_usd':0.25}}
+                       for rep in (1, 2) for arm in ('free','plan')},
+             'paired':{str(rep):{'both_pass':1,'both_fail':1,'direct_only':2,'plan_only':0}
+                       for rep in (1, 2)}}
+    assert matched_table([study]).count('3/4 & 1/4') == 2

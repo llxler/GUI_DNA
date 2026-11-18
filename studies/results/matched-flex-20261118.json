@@ -1,0 +1,504 @@
+{
+  "project": "flex",
+  "model": "openai/gpt-5",
+  "builder": "openai/gpt-5",
+  "generator": "openai/gpt-5",
+  "milestones": [
+    "task-4",
+    "task-8",
+    "task-12",
+    "task-16",
+    "task-20"
+  ],
+  "calibrated_milestones": [
+    "task-4",
+    "task-8",
+    "task-12",
+    "task-16",
+    "task-20"
+  ],
+  "config": {
+    "models": [
+      "openai/gpt-5"
+    ],
+    "max_tokens": 32000,
+    "temperature": 0.6,
+    "price_caps_per_million": {
+      "prompt": 1.25,
+      "completion": 10
+    },
+    "reasoning_effort": {
+      "openai/gpt-5": "medium"
+    },
+    "omit_params": {
+      "openai/gpt-5": [
+        "seed",
+        "temperature"
+      ]
+    },
+    "provider_order": {
+      "openai/gpt-5": [
+        "OpenAI"
+      ]
+    }
+  },
+  "cap_per_repetition_arm_usd": 3.45,
+  "calibration": {
+    "reference/task-4": {
+      "passed": true,
+      "report_sha256": "9b94315581472ce8ba60b2caffab9dc18b68ad5be8476f28110c6f862b1168e1"
+    },
+    "blank/task-4": {
+      "passed": false,
+      "report_sha256": "bb6afe7692fc0416fded8b2ed0466c594ad41b8c00ca9877eeba4a2acef7eb91"
+    },
+    "reference/task-8": {
+      "passed": true,
+      "report_sha256": "f15144d24313d1013962d715dd2843de7921fa300a28f7f3a8ea855c702a9645"
+    },
+    "blank/task-8": {
+      "passed": false,
+      "report_sha256": "0bbccd2324ac2715b872a269cc54c119c30fb636b1c8cbc1631223a392d16332"
+    },
+    "reference/task-12": {
+      "passed": true,
+      "report_sha256": "aaf5dba752c5cb96e2b2fe7641de3371c3e78cadab8c6a93764716a4ed34d5a2"
+    },
+    "blank/task-12": {
+      "passed": false,
+      "report_sha256": "a70fde92967c374c1f2150ef02dd8a75b7ae818497a92f969c22f1aee3fba245"
+    },
+    "reference/task-16": {
+      "passed": true,
+      "report_sha256": "9638a76da8ec41ce19ee5abf8675b9341462dd0639cb0ca0e4baa80bc14feaf5"
+    },
+    "blank/task-16": {
+      "passed": false,
+      "report_sha256": "d3ca0ade598052e94d15d20bf055037a03acff12c7c91fc7872f9cf05a86cb4c"
+    },
+    "reference/task-20": {
+      "passed": true,
+      "report_sha256": "6cbdc14acc9f6f7098921e8f89cf3ad3a4d3e473ac99baa8f1279b4c2cff1469"
+    },
+    "blank/task-20": {
+      "passed": false,
+      "report_sha256": "e2f7a0ad1b0779543c5263550117fe994c66f9032d96cb2c816f7fafd87f98bc"
+    }
+  },
+  "groups": {
+    "free-1": {
+      "arm": "free",
+      "repetition": 1,
+      "prepare_status": "accepted",
+      "prepare_sha256": "1e3934e78592192b79ecc2c42cc507579ffee2bb4633082d32c4722ab896c03c",
+      "planned": 5,
+      "observed": 5,
+      "passed": 1,
+      "calibrated_passes": 1,
+      "cost": {
+        "calls": 6,
+        "settled_usd": 0.480567,
+        "exposure_usd": 0.480567,
+        "unsettled_calls": 0,
+        "cap_usd": 3.45,
+        "stop_usd": 0.0,
+        "halted": 0
+      },
+      "receipts_usd": {
+        "prepare": 0.1004675,
+        "target": 0.38009525
+      },
+      "settled_attempts": {
+        "prepare/attempt-0": {
+          "response_sha256": "9ceba07258c8c1a597a6576893721608dc5402cb8749f0718fd4ce2512e747e3",
+          "finish_reason": "stop",
+          "completion_tokens": 9904,
+          "cost_usd": 0.1004675
+        },
+        "task-12/attempt-0": {
+          "response_sha256": "08bc4ad80c3d4496db7bf136740974e5b37fb028ea18a2f3590ef4024eb0ab9f",
+          "finish_reason": "stop",
+          "completion_tokens": 9107,
+          "cost_usd": 0.09603425
+        },
+        "task-16/attempt-0": {
+          "response_sha256": "41aa6e446a4796b7de063ae8bec572bc7c7ad0857e24f7a41c39605b8bdd64af",
+          "finish_reason": "stop",
+          "completion_tokens": 9075,
+          "cost_usd": 0.09571425
+        },
+        "task-20/attempt-0": {
+          "response_sha256": "75379ac582949239a3c8c78aa16901bdb7b567bdcb258b609f710f64b80f00a1",
+          "finish_reason": "stop",
+          "completion_tokens": 10436,
+          "cost_usd": 0.10932425
+        },
+        "task-4/attempt-0": {
+          "response_sha256": "cb52839beab98fa56cbb5996e1c555255b9b96b4b9254173beab0bc5cd6ee6c4",
+          "finish_reason": "stop",
+          "completion_tokens": 3067,
+          "cost_usd": 0.03678625
+        },
+        "task-8/attempt-0": {
+          "response_sha256": "b50a0cef32be282df4e78b7a0533382b91019da8f58c1bd180a787ca3bfbd5ff",
+          "finish_reason": "stop",
+          "completion_tokens": 3612,
+          "cost_usd": 0.04223625
+        }
+      }
+    },
+    "free-2": {
+      "arm": "free",
+      "repetition": 2,
+      "prepare_status": "accepted",
+      "prepare_sha256": "6484b7b3b9ef71f1b8b58ca7b2ef6e988547102313da990b0973f1b27d1f6203",
+      "planned": 5,
+      "observed": 5,
+      "passed": 1,
+      "calibrated_passes": 1,
+      "cost": {
+        "calls": 6,
+        "settled_usd": 0.575158,
+        "exposure_usd": 0.575158,
+        "unsettled_calls": 0,
+        "cap_usd": 3.45,
+        "stop_usd": 0.0,
+        "halted": 0
+      },
+      "receipts_usd": {
+        "prepare": 0.1111755,
+        "target": 0.4639795
+      },
+      "settled_attempts": {
+        "prepare/attempt-0": {
+          "response_sha256": "b6171a3f0edff620c7beb921df4d121fee6568c36ffbe160ef25f26619b86e5e",
+          "finish_reason": "stop",
+          "completion_tokens": 11090,
+          "cost_usd": 0.1111755
+        },
+        "task-12/attempt-0": {
+          "response_sha256": "f488824c445c1423b48f6f6295d0da3388e188f0ad0959f4b6f91c7391ce05ce",
+          "finish_reason": "stop",
+          "completion_tokens": 9649,
+          "cost_usd": 0.1022275
+        },
+        "task-16/attempt-0": {
+          "response_sha256": "e93fb806bd95dbf48f72bb34a34fc93e7aed7ae0ce674efea5e326ce251ed545",
+          "finish_reason": "stop",
+          "completion_tokens": 11317,
+          "cost_usd": 0.1177555
+        },
+        "task-20/attempt-0": {
+          "response_sha256": "2befc3bc4bf0e9596ae3d7fcc2f63c6ba0321f26385c081341212eb0d662fea4",
+          "finish_reason": "stop",
+          "completion_tokens": 14470,
+          "cost_usd": 0.1492855
+        },
+        "task-4/attempt-0": {
+          "response_sha256": "3082f791279d1f60d2945a519fbf3e8716645ad3bfa6829bfd9971996659c6db",
+          "finish_reason": "stop",
+          "completion_tokens": 3653,
+          "cost_usd": 0.0411155
+        },
+        "task-8/attempt-0": {
+          "response_sha256": "0c3b512a26cbdab4037a691dcfd33baa4a220141915ed8928566526de7353ecb",
+          "finish_reason": "stop",
+          "completion_tokens": 4901,
+          "cost_usd": 0.0535955
+        }
+      }
+    },
+    "plan-1": {
+      "arm": "plan",
+      "repetition": 1,
+      "prepare_status": "accepted",
+      "prepare_sha256": "4a9cdd1324353a074fbd7f7bca10bc65dee1ad89b0c1dd1d024992f8ce0ea960",
+      "planned": 5,
+      "observed": 5,
+      "passed": 1,
+      "calibrated_passes": 1,
+      "cost": {
+        "calls": 7,
+        "settled_usd": 0.353834,
+        "exposure_usd": 0.353834,
+        "unsettled_calls": 0,
+        "cap_usd": 3.45,
+        "stop_usd": 0.0,
+        "halted": 0
+      },
+      "receipts_usd": {
+        "prepare": 0.23504875,
+        "target": 0.1187825
+      },
+      "settled_attempts": {
+        "prepare/attempt-0": {
+          "response_sha256": "35d168d0cec26f092b4af1448d94613b22dab669e970d257210a66683772a270",
+          "finish_reason": "stop",
+          "completion_tokens": 15143,
+          "cost_usd": 0.15176
+        },
+        "prepare/attempt-1": {
+          "response_sha256": "2d874540e188712689f91b82f4066181da29402ddaef691520d70802f7737bde",
+          "finish_reason": "stop",
+          "completion_tokens": 7736,
+          "cost_usd": 0.08328875
+        },
+        "task-12/attempt-0": {
+          "response_sha256": "06c8bdfa5d9b68579653e287105faf07a2d51f583771f3d455c79854e5b92b78",
+          "finish_reason": "stop",
+          "completion_tokens": 1871,
+          "cost_usd": 0.0243905
+        },
+        "task-16/attempt-0": {
+          "response_sha256": "6cfe20f1d6efad785e0610a22e217f917375930feb058d403bc044ad089ed676",
+          "finish_reason": "stop",
+          "completion_tokens": 2959,
+          "cost_usd": 0.0352705
+        },
+        "task-20/attempt-0": {
+          "response_sha256": "b8a5d8446c901f57e23582fa633e26b432443ec24b7d9ffdc1b2aa7797dadc0d",
+          "finish_reason": "stop",
+          "completion_tokens": 1836,
+          "cost_usd": 0.0240405
+        },
+        "task-4/attempt-0": {
+          "response_sha256": "4ac48f87a2cce2b82bcc9b34e47cb1969a106210a84249dc4a648da866b7798d",
+          "finish_reason": "stop",
+          "completion_tokens": 1484,
+          "cost_usd": 0.0205205
+        },
+        "task-8/attempt-0": {
+          "response_sha256": "462ab7578596264399187e237c2b64f17982c5611e9d80774a7ff049adfa69ba",
+          "finish_reason": "stop",
+          "completion_tokens": 888,
+          "cost_usd": 0.0145605
+        }
+      }
+    },
+    "plan-2": {
+      "arm": "plan",
+      "repetition": 2,
+      "prepare_status": "accepted",
+      "prepare_sha256": "3009f6b2b635881817985acad3c3181adc027dfc3c56083678dc890a62c8935b",
+      "planned": 5,
+      "observed": 5,
+      "passed": 1,
+      "calibrated_passes": 1,
+      "cost": {
+        "calls": 6,
+        "settled_usd": 0.210127,
+        "exposure_usd": 0.210127,
+        "unsettled_calls": 0,
+        "cap_usd": 3.45,
+        "stop_usd": 0.0,
+        "halted": 0
+      },
+      "receipts_usd": {
+        "prepare": 0.15575,
+        "target": 0.054377
+      },
+      "settled_attempts": {
+        "prepare/attempt-0": {
+          "response_sha256": "c6fb78a31ecaa311aa93f1205b96556fe11c863f67a43202429a8f2cb95256d1",
+          "finish_reason": "stop",
+          "completion_tokens": 15398,
+          "cost_usd": 0.15575
+        },
+        "task-12/attempt-0": {
+          "response_sha256": "6e597a452b53ead89b10e3a849fb53179ebaf61f2e8ddff815d4d78b68a14ee4",
+          "finish_reason": "stop",
+          "completion_tokens": 543,
+          "cost_usd": 0.010643
+        },
+        "task-16/attempt-0": {
+          "response_sha256": "9bd3dc92db2885726dd6014cdb69bbf19bc2be24a58d74f5524e60b9ab9c6ae6",
+          "finish_reason": "stop",
+          "completion_tokens": 568,
+          "cost_usd": 0.010893
+        },
+        "task-20/attempt-0": {
+          "response_sha256": "1767a848eae82914219758282a578bf5059aff1b5c5fec3110fa4ef1bf8615c7",
+          "finish_reason": "stop",
+          "completion_tokens": 702,
+          "cost_usd": 0.012233
+        },
+        "task-4/attempt-0": {
+          "response_sha256": "f42660bd63c0ca65c0c275abdab0fda1071769eca72c916982a31f83660abf47",
+          "finish_reason": "stop",
+          "completion_tokens": 507,
+          "cost_usd": 0.010283
+        },
+        "task-8/attempt-0": {
+          "response_sha256": "386174c05bcb1656ff42733685a8c7d1318829e90f1d542fa0103c0c67efd025",
+          "finish_reason": "stop",
+          "completion_tokens": 396,
+          "cost_usd": 0.010325
+        }
+      }
+    }
+  },
+  "paired": {
+    "1": {
+      "direct_only": 0,
+      "plan_only": 0,
+      "both_pass": 1,
+      "both_fail": 4
+    },
+    "2": {
+      "direct_only": 0,
+      "plan_only": 0,
+      "both_pass": 1,
+      "both_fail": 4
+    }
+  },
+  "rows": {
+    "free-1/task-4": {
+      "status": "accepted",
+      "passed": true,
+      "page": "artifacts/matched-flex-20261118/free-1/task-4/attempt-0/page",
+      "report_sha256": "562919aded5f6bf198aa554c1b0ab5efb208569424430ed22b1f60311a19e58c",
+      "first_failed_case": null
+    },
+    "free-1/task-8": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/matched-flex-20261118/free-1/task-8/attempt-0/page",
+      "report_sha256": "109bf531ae9eefaab67c007e99d8d063a6e169a2cd4ed7576e417ea7d300191a",
+      "first_failed_case": "menu items width"
+    },
+    "free-1/task-12": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/matched-flex-20261118/free-1/task-12/attempt-0/page",
+      "report_sha256": "9780f0c52d490cb444e54cd54e5900ec8ced222d1d7f6dc2d62b922b8f1c65c8",
+      "first_failed_case": "cards height"
+    },
+    "free-1/task-16": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/matched-flex-20261118/free-1/task-16/attempt-0/page",
+      "report_sha256": "80ce73c765190e89a74156e5465b0abd3c406686a1e7858ecff9e8d838ce6544",
+      "first_failed_case": "cards reverse"
+    },
+    "free-1/task-20": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/matched-flex-20261118/free-1/task-20/attempt-0/page",
+      "report_sha256": "947d36e9849bc8ec39666afc4c0a3e54bc75e149376887e1df0d7dc390691db1",
+      "first_failed_case": "right-drag"
+    },
+    "free-2/task-4": {
+      "status": "accepted",
+      "passed": true,
+      "page": "artifacts/matched-flex-20261118/free-2/task-4/attempt-0/page",
+      "report_sha256": "d425d0367e5cf0f4c3bdf532972f94ea07158e5d02452f497734a1b1e155e963",
+      "first_failed_case": null
+    },
+    "free-2/task-8": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/matched-flex-20261118/free-2/task-8/attempt-0/page",
+      "report_sha256": "0aed47b97571f96e09417758c51ebb10c390c33591a048583d60698fb61c6c62",
+      "first_failed_case": "menu items width"
+    },
+    "free-2/task-12": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/matched-flex-20261118/free-2/task-12/attempt-0/page",
+      "report_sha256": "34c126ba5144a83de115f4b989295ed07b0d2a7db8e2c737e213a9e594536a91",
+      "first_failed_case": "cards height"
+    },
+    "free-2/task-16": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/matched-flex-20261118/free-2/task-16/attempt-0/page",
+      "report_sha256": "8e9fe13697dac781fc146515394ced61fa92f5ee9a58ba41884c32ff093a8d5b",
+      "first_failed_case": "cards reverse"
+    },
+    "free-2/task-20": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/matched-flex-20261118/free-2/task-20/attempt-0/page",
+      "report_sha256": "a88c31a7010d61299d9828c4d117e4abfc661aad2dd0ca4f526efc95d9566b2d",
+      "first_failed_case": "right-drag"
+    },
+    "plan-1/task-4": {
+      "status": "accepted",
+      "passed": true,
+      "page": "artifacts/matched-flex-20261118/plan-1/task-4/attempt-0/page",
+      "report_sha256": "c92e4c3514314606949b5bf221709d1132e0be0ac5651eacbb5e4082089a2328",
+      "first_failed_case": null
+    },
+    "plan-1/task-8": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/matched-flex-20261118/plan-1/task-8/attempt-0/page",
+      "report_sha256": "1bdb8ad517f44a14c42ce1d35985f5568d1532b7fe04f4a50b08590fe0411bf0",
+      "first_failed_case": "menu items width"
+    },
+    "plan-1/task-12": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/matched-flex-20261118/plan-1/task-12/attempt-0/page",
+      "report_sha256": "5a77d8f41dfd48793fe309d6e7a53bf2195e9f048ffa3fd9f93840418e080576",
+      "first_failed_case": "content 12 cards"
+    },
+    "plan-1/task-16": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/matched-flex-20261118/plan-1/task-16/attempt-0/page",
+      "report_sha256": "c496745b825a056675b6d08507f903e892f8f60f1a1a91a930a851f3cc3d8bc7",
+      "first_failed_case": "cards reverse"
+    },
+    "plan-1/task-20": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/matched-flex-20261118/plan-1/task-20/attempt-0/page",
+      "report_sha256": "a406268ffd8c1ab7ff26d49853290ec89192133d3c37f9491582f8bb70e28ff2",
+      "first_failed_case": "right-drag"
+    },
+    "plan-2/task-4": {
+      "status": "accepted",
+      "passed": true,
+      "page": "artifacts/matched-flex-20261118/plan-2/task-4/attempt-0/page",
+      "report_sha256": "6168a21a66f5bc96e1e791dd130b5ba6eb4fc5daf1d4def8a588c8d592acc9e9",
+      "first_failed_case": null
+    },
+    "plan-2/task-8": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/matched-flex-20261118/plan-2/task-8/attempt-0/page",
+      "report_sha256": "4bf3ea2b23fd3771956cc3823fa660f0fdeb8ee736c7e6183cbae1fabcd5072c",
+      "first_failed_case": "menu items width"
+    },
+    "plan-2/task-12": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/matched-flex-20261118/plan-2/task-12/attempt-0/page",
+      "report_sha256": "1b4cf91f5875ad964d28f73ae11a55010b0efd45a043e46f3cba76940141d13b",
+      "first_failed_case": "content 12 cards"
+    },
+    "plan-2/task-16": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/matched-flex-20261118/plan-2/task-16/attempt-0/page",
+      "report_sha256": "83b19acd8adb707abcf4fa8a7e7ab3d4ab1adb29eac94724d9931153787a1fc8",
+      "first_failed_case": "cards reverse"
+    },
+    "plan-2/task-20": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/matched-flex-20261118/plan-2/task-20/attempt-0/page",
+      "report_sha256": "dbb3a07bd0fa3b57ec8f6b24843101cfb668253bf802bda7240cf4537ce8dd28",
+      "first_failed_case": "right-drag"
+    }
+  },
+  "source_sha256": {
+    "protocol-freeze.json": "5c218f5bf5190ece454ab9ca9ff00b86fe39040738f93ecd1b9de10c0ae120df",
+    "calibration.json": "2e635aa16d550045cf185eeb134089f5b777b33a31a5a83b6bc9b17620d4ade3",
+    "generated.json": "223505f25bebf0d35cf87defe21d44322d281af4048851f6c775f3c35230aae3",
+    "evaluation.json": "9a79a23b9473da368fc9fd76f43abd2a651b1a351bb86b14dc73f485a7f5a4ee"
+  },
+  "scope": "Independent responsive-layout replication with matched public requirements and spending caps.",
+  "extension_sha256": "f70e9e5190640595bee8cb289d8226cc02e626683842ccae2adb461fd4874304"
+}

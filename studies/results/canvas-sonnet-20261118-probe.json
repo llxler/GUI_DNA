@@ -1,0 +1,1960 @@
+{
+  "controls": {
+    "reference": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "blank": [
+      {
+        "seed": 1,
+        "k": {
+          "before": null,
+          "after": null,
+          "canvas": false
+        },
+        "z": {
+          "before": null,
+          "after": null,
+          "canvas": false
+        },
+        "response": null
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": null,
+          "after": null,
+          "canvas": false
+        },
+        "z": {
+          "before": null,
+          "after": null,
+          "canvas": false
+        },
+        "response": null
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": null,
+          "after": null,
+          "canvas": false
+        },
+        "z": {
+          "before": null,
+          "after": null,
+          "canvas": false
+        },
+        "response": null
+      }
+    ]
+  },
+  "libraries": {
+    "1": {
+      "package_sha256": "97cb63fbc11d883adcf8dd2611da36f567e2902c441a0e4f471b183c8a8ffac4",
+      "rows": [
+        {
+          "label": "example-0",
+          "plan": {
+            "weather_system": {
+              "types": [
+                "Normal",
+                "Rain",
+                "Wind",
+                "Night"
+              ],
+              "change_interval": 5,
+              "particle_count": 300
+            },
+            "items": {
+              "spawn_rate": 25,
+              "shield_duration": 5,
+              "shield_flash_duration": 1,
+              "temporary_shield_duration": 1
+            },
+            "enemies": {
+              "spawn_interval": 1,
+              "max_count": 10,
+              "speed": 6,
+              "vertical_velocity_range": 5
+            },
+            "boss": {
+              "spawn_delay": 10,
+              "lives": 10,
+              "size": 60,
+              "respawn_delay": 10
+            },
+            "gravity_field": {
+              "spawn_rate": 25,
+              "width_multiplier": 3,
+              "height": 40,
+              "check_interval": 5
+            },
+            "controls": {
+              "jump_keys": [
+                "w",
+                "j",
+                "space",
+                "arrowUp",
+                "click",
+                "enter"
+              ],
+              "descend_keys": [
+                "arrowDown",
+                "s"
+              ],
+              "speedup_keys": [
+                "arrowRight",
+                "d"
+              ],
+              "shoot_key": "k",
+              "bomb_key": "b"
+            },
+            "difficulty": {
+              "max_lives": 10,
+              "default_lives": 1,
+              "default_bombs": 3,
+              "max_bombs": 3,
+              "bullet_cooldown": 2,
+              "coin_phase_duration": 5,
+              "post_coin_phase_shield": 3
+            }
+          },
+          "source_digest": "1ec1aeda6613ae8a5463d40bda366883103528117e0a4bb548ebee4bb3506803",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "example-1",
+          "plan": {
+            "weather_system": {
+              "types": [
+                "Normal",
+                "Rain",
+                "Night"
+              ],
+              "change_interval": 8,
+              "particle_count": 200
+            },
+            "items": {
+              "spawn_rate": 50,
+              "shield_duration": 8,
+              "shield_flash_duration": 2,
+              "temporary_shield_duration": 2
+            },
+            "enemies": {
+              "spawn_interval": 2,
+              "max_count": 5,
+              "speed": 4,
+              "vertical_velocity_range": 3
+            },
+            "boss": {
+              "spawn_delay": 15,
+              "lives": 5,
+              "size": 50,
+              "respawn_delay": 15
+            },
+            "gravity_field": {
+              "spawn_rate": 40,
+              "width_multiplier": 4,
+              "height": 50,
+              "check_interval": 7
+            },
+            "controls": {
+              "jump_keys": [
+                "space",
+                "click",
+                "enter"
+              ],
+              "descend_keys": [
+                "arrowDown"
+              ],
+              "speedup_keys": [
+                "arrowRight"
+              ],
+              "shoot_key": "k",
+              "bomb_key": "b"
+            },
+            "difficulty": {
+              "max_lives": 15,
+              "default_lives": 3,
+              "default_bombs": 5,
+              "max_bombs": 5,
+              "bullet_cooldown": 1,
+              "coin_phase_duration": 8,
+              "post_coin_phase_shield": 5
+            }
+          },
+          "source_digest": "64180ed8e1a9904bfebbdf9ff67f684baf292ac09c6079022e592335ad2702e1",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/boss",
+          "plan": {
+            "weather_system": {
+              "types": [
+                "Normal",
+                "Rain",
+                "Wind",
+                "Night"
+              ],
+              "change_interval": 5,
+              "particle_count": 300
+            },
+            "items": {
+              "spawn_rate": 25,
+              "shield_duration": 5,
+              "shield_flash_duration": 1,
+              "temporary_shield_duration": 1
+            },
+            "enemies": {
+              "spawn_interval": 1,
+              "max_count": 10,
+              "speed": 6,
+              "vertical_velocity_range": 5
+            },
+            "boss": {
+              "spawn_delay": 15,
+              "lives": 5,
+              "size": 50,
+              "respawn_delay": 15
+            },
+            "gravity_field": {
+              "spawn_rate": 25,
+              "width_multiplier": 3,
+              "height": 40,
+              "check_interval": 5
+            },
+            "controls": {
+              "jump_keys": [
+                "w",
+                "j",
+                "space",
+                "arrowUp",
+                "click",
+                "enter"
+              ],
+              "descend_keys": [
+                "arrowDown",
+                "s"
+              ],
+              "speedup_keys": [
+                "arrowRight",
+                "d"
+              ],
+              "shoot_key": "k",
+              "bomb_key": "b"
+            },
+            "difficulty": {
+              "max_lives": 10,
+              "default_lives": 1,
+              "default_bombs": 3,
+              "max_bombs": 3,
+              "bullet_cooldown": 2,
+              "coin_phase_duration": 5,
+              "post_coin_phase_shield": 3
+            }
+          },
+          "source_digest": "1e8f97bdcced7c61c12171c12789171862abb8b659b915b086ebe10bcda1ab4c",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/controls",
+          "plan": {
+            "weather_system": {
+              "types": [
+                "Normal",
+                "Rain",
+                "Wind",
+                "Night"
+              ],
+              "change_interval": 5,
+              "particle_count": 300
+            },
+            "items": {
+              "spawn_rate": 25,
+              "shield_duration": 5,
+              "shield_flash_duration": 1,
+              "temporary_shield_duration": 1
+            },
+            "enemies": {
+              "spawn_interval": 1,
+              "max_count": 10,
+              "speed": 6,
+              "vertical_velocity_range": 5
+            },
+            "boss": {
+              "spawn_delay": 10,
+              "lives": 10,
+              "size": 60,
+              "respawn_delay": 10
+            },
+            "gravity_field": {
+              "spawn_rate": 25,
+              "width_multiplier": 3,
+              "height": 40,
+              "check_interval": 5
+            },
+            "controls": {
+              "jump_keys": [
+                "space",
+                "click",
+                "enter"
+              ],
+              "descend_keys": [
+                "arrowDown"
+              ],
+              "speedup_keys": [
+                "arrowRight"
+              ],
+              "shoot_key": "k",
+              "bomb_key": "b"
+            },
+            "difficulty": {
+              "max_lives": 10,
+              "default_lives": 1,
+              "default_bombs": 3,
+              "max_bombs": 3,
+              "bullet_cooldown": 2,
+              "coin_phase_duration": 5,
+              "post_coin_phase_shield": 3
+            }
+          },
+          "source_digest": "3d8859675602816cdc5f71cbede84f55ba927fd6a22b61f7c4ef35a8500c54ad",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/difficulty",
+          "plan": {
+            "weather_system": {
+              "types": [
+                "Normal",
+                "Rain",
+                "Wind",
+                "Night"
+              ],
+              "change_interval": 5,
+              "particle_count": 300
+            },
+            "items": {
+              "spawn_rate": 25,
+              "shield_duration": 5,
+              "shield_flash_duration": 1,
+              "temporary_shield_duration": 1
+            },
+            "enemies": {
+              "spawn_interval": 1,
+              "max_count": 10,
+              "speed": 6,
+              "vertical_velocity_range": 5
+            },
+            "boss": {
+              "spawn_delay": 10,
+              "lives": 10,
+              "size": 60,
+              "respawn_delay": 10
+            },
+            "gravity_field": {
+              "spawn_rate": 25,
+              "width_multiplier": 3,
+              "height": 40,
+              "check_interval": 5
+            },
+            "controls": {
+              "jump_keys": [
+                "w",
+                "j",
+                "space",
+                "arrowUp",
+                "click",
+                "enter"
+              ],
+              "descend_keys": [
+                "arrowDown",
+                "s"
+              ],
+              "speedup_keys": [
+                "arrowRight",
+                "d"
+              ],
+              "shoot_key": "k",
+              "bomb_key": "b"
+            },
+            "difficulty": {
+              "max_lives": 15,
+              "default_lives": 3,
+              "default_bombs": 5,
+              "max_bombs": 5,
+              "bullet_cooldown": 1,
+              "coin_phase_duration": 8,
+              "post_coin_phase_shield": 5
+            }
+          },
+          "source_digest": "bb329165905fea036eed12ef39d359dabe237ff055fde6481e8c39c165242ba3",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/enemies",
+          "plan": {
+            "weather_system": {
+              "types": [
+                "Normal",
+                "Rain",
+                "Wind",
+                "Night"
+              ],
+              "change_interval": 5,
+              "particle_count": 300
+            },
+            "items": {
+              "spawn_rate": 25,
+              "shield_duration": 5,
+              "shield_flash_duration": 1,
+              "temporary_shield_duration": 1
+            },
+            "enemies": {
+              "spawn_interval": 2,
+              "max_count": 5,
+              "speed": 4,
+              "vertical_velocity_range": 3
+            },
+            "boss": {
+              "spawn_delay": 10,
+              "lives": 10,
+              "size": 60,
+              "respawn_delay": 10
+            },
+            "gravity_field": {
+              "spawn_rate": 25,
+              "width_multiplier": 3,
+              "height": 40,
+              "check_interval": 5
+            },
+            "controls": {
+              "jump_keys": [
+                "w",
+                "j",
+                "space",
+                "arrowUp",
+                "click",
+                "enter"
+              ],
+              "descend_keys": [
+                "arrowDown",
+                "s"
+              ],
+              "speedup_keys": [
+                "arrowRight",
+                "d"
+              ],
+              "shoot_key": "k",
+              "bomb_key": "b"
+            },
+            "difficulty": {
+              "max_lives": 10,
+              "default_lives": 1,
+              "default_bombs": 3,
+              "max_bombs": 3,
+              "bullet_cooldown": 2,
+              "coin_phase_duration": 5,
+              "post_coin_phase_shield": 3
+            }
+          },
+          "source_digest": "082b5f1abb11a71faf4a48229adddc108668a1c98d72fb880ffa6fa8f1a56c51",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/gravity_field",
+          "plan": {
+            "weather_system": {
+              "types": [
+                "Normal",
+                "Rain",
+                "Wind",
+                "Night"
+              ],
+              "change_interval": 5,
+              "particle_count": 300
+            },
+            "items": {
+              "spawn_rate": 25,
+              "shield_duration": 5,
+              "shield_flash_duration": 1,
+              "temporary_shield_duration": 1
+            },
+            "enemies": {
+              "spawn_interval": 1,
+              "max_count": 10,
+              "speed": 6,
+              "vertical_velocity_range": 5
+            },
+            "boss": {
+              "spawn_delay": 10,
+              "lives": 10,
+              "size": 60,
+              "respawn_delay": 10
+            },
+            "gravity_field": {
+              "spawn_rate": 40,
+              "width_multiplier": 4,
+              "height": 50,
+              "check_interval": 7
+            },
+            "controls": {
+              "jump_keys": [
+                "w",
+                "j",
+                "space",
+                "arrowUp",
+                "click",
+                "enter"
+              ],
+              "descend_keys": [
+                "arrowDown",
+                "s"
+              ],
+              "speedup_keys": [
+                "arrowRight",
+                "d"
+              ],
+              "shoot_key": "k",
+              "bomb_key": "b"
+            },
+            "difficulty": {
+              "max_lives": 10,
+              "default_lives": 1,
+              "default_bombs": 3,
+              "max_bombs": 3,
+              "bullet_cooldown": 2,
+              "coin_phase_duration": 5,
+              "post_coin_phase_shield": 3
+            }
+          },
+          "source_digest": "55c1885268bb8935d4dbfc4876a5d8fb79050052afe80d78b8a29fea710c46f0",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/items",
+          "plan": {
+            "weather_system": {
+              "types": [
+                "Normal",
+                "Rain",
+                "Wind",
+                "Night"
+              ],
+              "change_interval": 5,
+              "particle_count": 300
+            },
+            "items": {
+              "spawn_rate": 50,
+              "shield_duration": 8,
+              "shield_flash_duration": 2,
+              "temporary_shield_duration": 2
+            },
+            "enemies": {
+              "spawn_interval": 1,
+              "max_count": 10,
+              "speed": 6,
+              "vertical_velocity_range": 5
+            },
+            "boss": {
+              "spawn_delay": 10,
+              "lives": 10,
+              "size": 60,
+              "respawn_delay": 10
+            },
+            "gravity_field": {
+              "spawn_rate": 25,
+              "width_multiplier": 3,
+              "height": 40,
+              "check_interval": 5
+            },
+            "controls": {
+              "jump_keys": [
+                "w",
+                "j",
+                "space",
+                "arrowUp",
+                "click",
+                "enter"
+              ],
+              "descend_keys": [
+                "arrowDown",
+                "s"
+              ],
+              "speedup_keys": [
+                "arrowRight",
+                "d"
+              ],
+              "shoot_key": "k",
+              "bomb_key": "b"
+            },
+            "difficulty": {
+              "max_lives": 10,
+              "default_lives": 1,
+              "default_bombs": 3,
+              "max_bombs": 3,
+              "bullet_cooldown": 2,
+              "coin_phase_duration": 5,
+              "post_coin_phase_shield": 3
+            }
+          },
+          "source_digest": "a628f7a3b5b9b3ea74365d488b18e95619618262b92db2ebd7c79d169c1d5a3a",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/weather_system",
+          "plan": {
+            "weather_system": {
+              "types": [
+                "Normal",
+                "Rain",
+                "Night"
+              ],
+              "change_interval": 8,
+              "particle_count": 200
+            },
+            "items": {
+              "spawn_rate": 25,
+              "shield_duration": 5,
+              "shield_flash_duration": 1,
+              "temporary_shield_duration": 1
+            },
+            "enemies": {
+              "spawn_interval": 1,
+              "max_count": 10,
+              "speed": 6,
+              "vertical_velocity_range": 5
+            },
+            "boss": {
+              "spawn_delay": 10,
+              "lives": 10,
+              "size": 60,
+              "respawn_delay": 10
+            },
+            "gravity_field": {
+              "spawn_rate": 25,
+              "width_multiplier": 3,
+              "height": 40,
+              "check_interval": 5
+            },
+            "controls": {
+              "jump_keys": [
+                "w",
+                "j",
+                "space",
+                "arrowUp",
+                "click",
+                "enter"
+              ],
+              "descend_keys": [
+                "arrowDown",
+                "s"
+              ],
+              "speedup_keys": [
+                "arrowRight",
+                "d"
+              ],
+              "shoot_key": "k",
+              "bomb_key": "b"
+            },
+            "difficulty": {
+              "max_lives": 10,
+              "default_lives": 1,
+              "default_bombs": 3,
+              "max_bombs": 3,
+              "bullet_cooldown": 2,
+              "coin_phase_duration": 5,
+              "post_coin_phase_shield": 3
+            }
+          },
+          "source_digest": "93cc88223b08a83d575598c1af36520f4641e91a2b7df747f66651d4aeaaede4",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        }
+      ]
+    },
+    "2": {
+      "package_sha256": "6dfcc6d3157380a2cfbaf10fb971051c2a4be3afbd7c07116237575a3ba12462",
+      "rows": [
+        {
+          "label": "example-0",
+          "plan": {
+            "physics": {
+              "gravityAcceleration": 45,
+              "maxFallSpeed": 6,
+              "jumpVelocity": -6,
+              "rapidDescentSpeed": 6
+            },
+            "items": {
+              "spawnRate": 25,
+              "shieldDuration": 5,
+              "shieldFlashDuration": 1,
+              "maxLives": 10,
+              "coinScoreValue": 10
+            },
+            "weather": {
+              "changeInterval": 5,
+              "particleCount": 300,
+              "rainSpeedMultiplier": 100,
+              "rainJumpMultiplier": 80,
+              "rainFallMultiplier": 120,
+              "windSpeedMultiplier": 150
+            },
+            "enemies": {
+              "spawnInterval": 1,
+              "maxCount": 10,
+              "horizontalSpeed": 6,
+              "verticalSpeedRange": 5
+            },
+            "boss": {
+              "spawnDelay": 10,
+              "lives": 10,
+              "size": 60,
+              "verticalSpeed": 3,
+              "shootInterval": 200
+            },
+            "difficulty": {
+              "pipeGapMin": 120,
+              "pipeGapMax": 240,
+              "pipeSpacing": 200,
+              "baseScrollSpeed": 4,
+              "gravityFieldSpawnRate": 25,
+              "gravityFieldWidth": 600,
+              "bombCapacity": 3,
+              "coinPhaseDuration": 5,
+              "coinPhaseShieldDuration": 3
+            }
+          },
+          "source_digest": "10f2ad727a3558cd16035065966e9f4c925646fe083569ee2320093dbdfb9962",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "example-1",
+          "plan": {
+            "physics": {
+              "gravityAcceleration": 30,
+              "maxFallSpeed": 4,
+              "jumpVelocity": -8,
+              "rapidDescentSpeed": 4
+            },
+            "items": {
+              "spawnRate": 50,
+              "shieldDuration": 10,
+              "shieldFlashDuration": 2,
+              "maxLives": 10,
+              "coinScoreValue": 5
+            },
+            "weather": {
+              "changeInterval": 10,
+              "particleCount": 150,
+              "rainSpeedMultiplier": 100,
+              "rainJumpMultiplier": 90,
+              "rainFallMultiplier": 110,
+              "windSpeedMultiplier": 120
+            },
+            "enemies": {
+              "spawnInterval": 3,
+              "maxCount": 5,
+              "horizontalSpeed": 3,
+              "verticalSpeedRange": 3
+            },
+            "boss": {
+              "spawnDelay": 20,
+              "lives": 5,
+              "size": 60,
+              "verticalSpeed": 2,
+              "shootInterval": 500
+            },
+            "difficulty": {
+              "pipeGapMin": 180,
+              "pipeGapMax": 300,
+              "pipeSpacing": 300,
+              "baseScrollSpeed": 2,
+              "gravityFieldSpawnRate": 10,
+              "gravityFieldWidth": 400,
+              "bombCapacity": 5,
+              "coinPhaseDuration": 10,
+              "coinPhaseShieldDuration": 5
+            }
+          },
+          "source_digest": "5dccf06e71dad27c03a64b104ae0b5051c4d31b0a963f37de52ecd7c8214ccb6",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/boss",
+          "plan": {
+            "physics": {
+              "gravityAcceleration": 45,
+              "maxFallSpeed": 6,
+              "jumpVelocity": -6,
+              "rapidDescentSpeed": 6
+            },
+            "items": {
+              "spawnRate": 25,
+              "shieldDuration": 5,
+              "shieldFlashDuration": 1,
+              "maxLives": 10,
+              "coinScoreValue": 10
+            },
+            "weather": {
+              "changeInterval": 5,
+              "particleCount": 300,
+              "rainSpeedMultiplier": 100,
+              "rainJumpMultiplier": 80,
+              "rainFallMultiplier": 120,
+              "windSpeedMultiplier": 150
+            },
+            "enemies": {
+              "spawnInterval": 1,
+              "maxCount": 10,
+              "horizontalSpeed": 6,
+              "verticalSpeedRange": 5
+            },
+            "boss": {
+              "spawnDelay": 20,
+              "lives": 5,
+              "size": 60,
+              "verticalSpeed": 2,
+              "shootInterval": 500
+            },
+            "difficulty": {
+              "pipeGapMin": 120,
+              "pipeGapMax": 240,
+              "pipeSpacing": 200,
+              "baseScrollSpeed": 4,
+              "gravityFieldSpawnRate": 25,
+              "gravityFieldWidth": 600,
+              "bombCapacity": 3,
+              "coinPhaseDuration": 5,
+              "coinPhaseShieldDuration": 3
+            }
+          },
+          "source_digest": "751f575946de623f5805468d4ca8903d423cdaa27eaaa5e17b5304b5f39c1244",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/difficulty",
+          "plan": {
+            "physics": {
+              "gravityAcceleration": 45,
+              "maxFallSpeed": 6,
+              "jumpVelocity": -6,
+              "rapidDescentSpeed": 6
+            },
+            "items": {
+              "spawnRate": 25,
+              "shieldDuration": 5,
+              "shieldFlashDuration": 1,
+              "maxLives": 10,
+              "coinScoreValue": 10
+            },
+            "weather": {
+              "changeInterval": 5,
+              "particleCount": 300,
+              "rainSpeedMultiplier": 100,
+              "rainJumpMultiplier": 80,
+              "rainFallMultiplier": 120,
+              "windSpeedMultiplier": 150
+            },
+            "enemies": {
+              "spawnInterval": 1,
+              "maxCount": 10,
+              "horizontalSpeed": 6,
+              "verticalSpeedRange": 5
+            },
+            "boss": {
+              "spawnDelay": 10,
+              "lives": 10,
+              "size": 60,
+              "verticalSpeed": 3,
+              "shootInterval": 200
+            },
+            "difficulty": {
+              "pipeGapMin": 180,
+              "pipeGapMax": 300,
+              "pipeSpacing": 300,
+              "baseScrollSpeed": 2,
+              "gravityFieldSpawnRate": 10,
+              "gravityFieldWidth": 400,
+              "bombCapacity": 5,
+              "coinPhaseDuration": 10,
+              "coinPhaseShieldDuration": 5
+            }
+          },
+          "source_digest": "458d4542dcb8ac5e568a5d3172b93674ff6e4c232fd0ed02f2a789d9b87bf6c2",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/enemies",
+          "plan": {
+            "physics": {
+              "gravityAcceleration": 45,
+              "maxFallSpeed": 6,
+              "jumpVelocity": -6,
+              "rapidDescentSpeed": 6
+            },
+            "items": {
+              "spawnRate": 25,
+              "shieldDuration": 5,
+              "shieldFlashDuration": 1,
+              "maxLives": 10,
+              "coinScoreValue": 10
+            },
+            "weather": {
+              "changeInterval": 5,
+              "particleCount": 300,
+              "rainSpeedMultiplier": 100,
+              "rainJumpMultiplier": 80,
+              "rainFallMultiplier": 120,
+              "windSpeedMultiplier": 150
+            },
+            "enemies": {
+              "spawnInterval": 3,
+              "maxCount": 5,
+              "horizontalSpeed": 3,
+              "verticalSpeedRange": 3
+            },
+            "boss": {
+              "spawnDelay": 10,
+              "lives": 10,
+              "size": 60,
+              "verticalSpeed": 3,
+              "shootInterval": 200
+            },
+            "difficulty": {
+              "pipeGapMin": 120,
+              "pipeGapMax": 240,
+              "pipeSpacing": 200,
+              "baseScrollSpeed": 4,
+              "gravityFieldSpawnRate": 25,
+              "gravityFieldWidth": 600,
+              "bombCapacity": 3,
+              "coinPhaseDuration": 5,
+              "coinPhaseShieldDuration": 3
+            }
+          },
+          "source_digest": "b7e454b9577bafe014cd63eb734bd596f3b4796b115b83d1b17dccd47ccf5f92",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/items",
+          "plan": {
+            "physics": {
+              "gravityAcceleration": 45,
+              "maxFallSpeed": 6,
+              "jumpVelocity": -6,
+              "rapidDescentSpeed": 6
+            },
+            "items": {
+              "spawnRate": 50,
+              "shieldDuration": 10,
+              "shieldFlashDuration": 2,
+              "maxLives": 10,
+              "coinScoreValue": 5
+            },
+            "weather": {
+              "changeInterval": 5,
+              "particleCount": 300,
+              "rainSpeedMultiplier": 100,
+              "rainJumpMultiplier": 80,
+              "rainFallMultiplier": 120,
+              "windSpeedMultiplier": 150
+            },
+            "enemies": {
+              "spawnInterval": 1,
+              "maxCount": 10,
+              "horizontalSpeed": 6,
+              "verticalSpeedRange": 5
+            },
+            "boss": {
+              "spawnDelay": 10,
+              "lives": 10,
+              "size": 60,
+              "verticalSpeed": 3,
+              "shootInterval": 200
+            },
+            "difficulty": {
+              "pipeGapMin": 120,
+              "pipeGapMax": 240,
+              "pipeSpacing": 200,
+              "baseScrollSpeed": 4,
+              "gravityFieldSpawnRate": 25,
+              "gravityFieldWidth": 600,
+              "bombCapacity": 3,
+              "coinPhaseDuration": 5,
+              "coinPhaseShieldDuration": 3
+            }
+          },
+          "source_digest": "a41368f526e85aef59a316c8bd70ed3407f7f1ee12edaa8b413412b8a74bbbaf",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/physics",
+          "plan": {
+            "physics": {
+              "gravityAcceleration": 30,
+              "maxFallSpeed": 4,
+              "jumpVelocity": -8,
+              "rapidDescentSpeed": 4
+            },
+            "items": {
+              "spawnRate": 25,
+              "shieldDuration": 5,
+              "shieldFlashDuration": 1,
+              "maxLives": 10,
+              "coinScoreValue": 10
+            },
+            "weather": {
+              "changeInterval": 5,
+              "particleCount": 300,
+              "rainSpeedMultiplier": 100,
+              "rainJumpMultiplier": 80,
+              "rainFallMultiplier": 120,
+              "windSpeedMultiplier": 150
+            },
+            "enemies": {
+              "spawnInterval": 1,
+              "maxCount": 10,
+              "horizontalSpeed": 6,
+              "verticalSpeedRange": 5
+            },
+            "boss": {
+              "spawnDelay": 10,
+              "lives": 10,
+              "size": 60,
+              "verticalSpeed": 3,
+              "shootInterval": 200
+            },
+            "difficulty": {
+              "pipeGapMin": 120,
+              "pipeGapMax": 240,
+              "pipeSpacing": 200,
+              "baseScrollSpeed": 4,
+              "gravityFieldSpawnRate": 25,
+              "gravityFieldWidth": 600,
+              "bombCapacity": 3,
+              "coinPhaseDuration": 5,
+              "coinPhaseShieldDuration": 3
+            }
+          },
+          "source_digest": "1e05a10cbcd6d591c7a448c4eef2c824ee5d8965673a36cb6b1b5f69fb0a5be0",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": "field/weather",
+          "plan": {
+            "physics": {
+              "gravityAcceleration": 45,
+              "maxFallSpeed": 6,
+              "jumpVelocity": -6,
+              "rapidDescentSpeed": 6
+            },
+            "items": {
+              "spawnRate": 25,
+              "shieldDuration": 5,
+              "shieldFlashDuration": 1,
+              "maxLives": 10,
+              "coinScoreValue": 10
+            },
+            "weather": {
+              "changeInterval": 10,
+              "particleCount": 150,
+              "rainSpeedMultiplier": 100,
+              "rainJumpMultiplier": 90,
+              "rainFallMultiplier": 110,
+              "windSpeedMultiplier": 120
+            },
+            "enemies": {
+              "spawnInterval": 1,
+              "maxCount": 10,
+              "horizontalSpeed": 6,
+              "verticalSpeedRange": 5
+            },
+            "boss": {
+              "spawnDelay": 10,
+              "lives": 10,
+              "size": 60,
+              "verticalSpeed": 3,
+              "shootInterval": 200
+            },
+            "difficulty": {
+              "pipeGapMin": 120,
+              "pipeGapMax": 240,
+              "pipeSpacing": 200,
+              "baseScrollSpeed": 4,
+              "gravityFieldSpawnRate": 25,
+              "gravityFieldWidth": 600,
+              "bombCapacity": 3,
+              "coinPhaseDuration": 5,
+              "coinPhaseShieldDuration": 3
+            }
+          },
+          "source_digest": "589264ea2fb6ae819441e3f95fc22230bede57fa406ddef551afd6406c6acf95",
+          "responses": [
+            true,
+            true,
+            true
+          ]
+        }
+      ]
+    }
+  },
+  "observations": {
+    "1ec1aeda6613ae8a5463d40bda366883103528117e0a4bb548ebee4bb3506803": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "64180ed8e1a9904bfebbdf9ff67f684baf292ac09c6079022e592335ad2702e1": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "1e8f97bdcced7c61c12171c12789171862abb8b659b915b086ebe10bcda1ab4c": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "3d8859675602816cdc5f71cbede84f55ba927fd6a22b61f7c4ef35a8500c54ad": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "bb329165905fea036eed12ef39d359dabe237ff055fde6481e8c39c165242ba3": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "082b5f1abb11a71faf4a48229adddc108668a1c98d72fb880ffa6fa8f1a56c51": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "55c1885268bb8935d4dbfc4876a5d8fb79050052afe80d78b8a29fea710c46f0": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "a628f7a3b5b9b3ea74365d488b18e95619618262b92db2ebd7c79d169c1d5a3a": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "93cc88223b08a83d575598c1af36520f4641e91a2b7df747f66651d4aeaaede4": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "10f2ad727a3558cd16035065966e9f4c925646fe083569ee2320093dbdfb9962": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "5dccf06e71dad27c03a64b104ae0b5051c4d31b0a963f37de52ecd7c8214ccb6": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "751f575946de623f5805468d4ca8903d423cdaa27eaaa5e17b5304b5f39c1244": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "458d4542dcb8ac5e568a5d3172b93674ff6e4c232fd0ed02f2a789d9b87bf6c2": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "b7e454b9577bafe014cd63eb734bd596f3b4796b115b83d1b17dccd47ccf5f92": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "a41368f526e85aef59a316c8bd70ed3407f7f1ee12edaa8b413412b8a74bbbaf": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "1e05a10cbcd6d591c7a448c4eef2c824ee5d8965673a36cb6b1b5f69fb0a5be0": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ],
+    "589264ea2fb6ae819441e3f95fc22230bede57fa406ddef551afd6406c6acf95": [
+      {
+        "seed": 1,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 2,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      },
+      {
+        "seed": 3,
+        "k": {
+          "before": 0,
+          "after": 1,
+          "canvas": true
+        },
+        "z": {
+          "before": 0,
+          "after": 0,
+          "canvas": true
+        },
+        "response": true
+      }
+    ]
+  },
+  "freeze": {
+    "run.py": "f5ea124514df998d72ed48ce49ae3418895909ac4073b74c1d1d2955b8d64196",
+    "PROTOCOL.md": "472583650e7264a8156c9b3b0329835dd3f91256f8a6ac9b167ef473ab48daa1"
+  }
+}

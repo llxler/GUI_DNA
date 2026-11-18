@@ -16,6 +16,21 @@ uv run python -m experiments.audit_scale
 
 本地拥有完整 `artifacts/` 时可进一步复验研究快照与原报告。旧快照必须在登记的源码版本复算，见 [退役说明](archive/full-history-retirement.md)。当前分支不再提供已删除实验的复验入口；不要修改旧清单来迁就新源码。代码 checkout 不包含被忽略的响应、页面、账本、浏览器缓存或上游 checkout；仅有源码不能重放全部历史结果。
 
+## 匹配工作流与交互诊断
+
+`canvas_pilots` 中三个批次分别保留 GPT-5 的两个输出上限与 Claude 的 32k 复验，`matched_flex` 为另一项目。每重复有 5 个预定目标。重算核对任务配对和每次请求的微美元取整，`observed_reuse_costs` 将准备费记一次，再按目标顺序累计回执。
+
+有本地原始材料时，以下命令仅对已完成阶段重新分析，模型生成另有独立入口：
+
+```bash
+uv run python -m studies.matched_canvas.analyze --check
+uv run python -m studies.canvas_capacity.run analyze
+uv run python -m studies.matched_flex.run analyze
+uv run python -m studies.canvas_model_replication.run analyze
+```
+
+各阶段保留公开提示、最终响应、准备失败、冻结源码、逐个浏览器报告与只读账本。固定页面控制复用完全相同源码与任务的报告；接口测量另存真实浏览器观察，在查看主模型成绩后设计的干预已在协议中标明。完整实验均按当前任务文件评分。
+
 ## 本地论文与展示
 
 ```bash
@@ -33,5 +48,7 @@ artifacts/presentation-build/venv/bin/python artifacts/presentation-build/render
 
 - `test -> studies` 保持旧 Python 导入和哈希路径；`实验结果.md`、`代码逻辑.md`、`experiments/TODO.md` 指向正式 `docs/` 文件。克隆时须保留符号链接；无符号链接环境可使用匿名导出器的实文件副本。
 - 匿名导出需同时保留正式路径和旧 `test/...` 可执行副本，不能把路径变更当作改写冻结证据的理由。新清单登记原始与匿名化字节的区别。含已退役实验的旧导出选项已停用；新论文材料需另立范围明确的包。
-- 最后已完整验收的大包是 `anonymous-replay-20261116-final-2.zip`，12 个入口通过；该包不含本日新实验与本次迁移，不宣称新版已验收。旧包不覆盖、不自行上传。
+- 旧大包为 `anonymous-replay-20261116-final-2.zip`，12 个入口通过；该包的检验只对应当时登记的材料。旧包不覆盖、不自行上传。
 - 仓库保留上游许可证和来源说明。数据与匿名下载地址仍待作者审核，见 [roadmap](roadmap.md)。
+
+2026-11-18 的当前报告包为 `current-report-20261118.zip`，使用 [导出与解包说明](../studies/current_bundle/README.md)。在本机另行解包后，正式、兼容两个入口重算一致，核对 80 个预定位置、147 条精简浏览器报告（127 份不同原件），两个项目共七次真实浏览器抽查与原判定一致。哈希与逐页结果见 [验收记录](../studies/results/current-report-validation-20261118.json)。

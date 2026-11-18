@@ -1,0 +1,567 @@
+{
+  "project": "canvas",
+  "model": "anthropic/claude-sonnet-4.5",
+  "builder": "anthropic/claude-sonnet-4.5",
+  "generator": "anthropic/claude-sonnet-4.5",
+  "milestones": [
+    "task-4",
+    "task-8",
+    "task-12",
+    "task-16",
+    "task-20"
+  ],
+  "calibrated_milestones": [
+    "task-4",
+    "task-8",
+    "task-12",
+    "task-16",
+    "task-20"
+  ],
+  "config": {
+    "models": [
+      "anthropic/claude-sonnet-4.5"
+    ],
+    "max_tokens": 32000,
+    "temperature": 0.6,
+    "price_caps_per_million": {
+      "prompt": 3,
+      "completion": 15
+    },
+    "provider_order": {
+      "anthropic/claude-sonnet-4.5": [
+        "Anthropic"
+      ]
+    }
+  },
+  "cap_per_repetition_arm_usd": 3,
+  "calibration": {
+    "reference/task-4": {
+      "passed": true,
+      "report_sha256": "87fbd03f6df93656bf9dfb23408e08a3f200a90b9b5a34ea898b8fa61ca68c2b"
+    },
+    "blank/task-4": {
+      "passed": false,
+      "report_sha256": "f0311abac8c7578d024b0e533528f0b404650d5a1d0789dbf1693fb52b8c99bc"
+    },
+    "reference/task-8": {
+      "passed": true,
+      "report_sha256": "677e84d8ac00aaa4d336826717398cda771a88365229ef4aa62903146338ba23"
+    },
+    "blank/task-8": {
+      "passed": false,
+      "report_sha256": "1196377f8a1a343b9c5c3bc2f84582f22f73a1bbd34f737f6e707a5192f13f83"
+    },
+    "reference/task-12": {
+      "passed": true,
+      "report_sha256": "21f96d8fe0f768214271dc2c48cf8e10707efebd16f0c0dab0360801b626d110"
+    },
+    "blank/task-12": {
+      "passed": false,
+      "report_sha256": "1847395a2ee95d7d05391745d68f87bffc1929813938787ae198a3ab657c7e93"
+    },
+    "reference/task-16": {
+      "passed": true,
+      "report_sha256": "3f7644d7a4a0d443066a11613d2a46154d905f66709e2f5c14ee30006bb3112d"
+    },
+    "blank/task-16": {
+      "passed": false,
+      "report_sha256": "acce2ef5575dd035d5acff5a1e3733fb7c9f311c43c15c5fe8eb7891c487d840"
+    },
+    "reference/task-20": {
+      "passed": true,
+      "report_sha256": "6fc2bb4d94f29a4a5eafc47c6bca24e30cc2db67ffe47428fbfcd0dd235aa5c3"
+    },
+    "blank/task-20": {
+      "passed": false,
+      "report_sha256": "04711543043c17a905cabcca16fefad2675054b2f77a1b04d1056a127c420a79"
+    }
+  },
+  "groups": {
+    "free-1": {
+      "arm": "free",
+      "repetition": 1,
+      "prepare_status": "accepted",
+      "prepare_sha256": "392c3e7053e1a9f9cfe7437133a5d570bca955433f39fa1a09a755a738bfe18a",
+      "planned": 5,
+      "observed": 5,
+      "passed": 3,
+      "calibrated_passes": 3,
+      "cost": {
+        "calls": 11,
+        "settled_usd": 2.209281,
+        "exposure_usd": 2.209281,
+        "unsettled_calls": 0,
+        "cap_usd": 3.0,
+        "stop_usd": 0.0,
+        "halted": 0
+      },
+      "receipts_usd": {
+        "prepare": 0.060819,
+        "target": 2.148462
+      },
+      "settled_attempts": {
+        "prepare/attempt-0": {
+          "response_sha256": "1c04e30096a87eae06025e50d5259b2fef51f586661613f63778666c8c591199",
+          "finish_reason": "stop",
+          "completion_tokens": 3490,
+          "cost_usd": 0.060819
+        },
+        "task-12/attempt-0": {
+          "response_sha256": "a5417e91312e17e631f0982aaf879ae04da4f2db88e24f574040fcaf7971d84e",
+          "finish_reason": "stop",
+          "completion_tokens": 11418,
+          "cost_usd": 0.190164
+        },
+        "task-12/attempt-1": {
+          "response_sha256": "ebe847155db0fcdc4cafbbf657dc7229fb512b6781f4df42537e6cda032b17a8",
+          "finish_reason": "stop",
+          "completion_tokens": 10999,
+          "cost_usd": 0.218244
+        },
+        "task-16/attempt-0": {
+          "response_sha256": "b1497017205b8b050bff4966ed7b6a966a456ad948f58e245b153be5e0cef150",
+          "finish_reason": "stop",
+          "completion_tokens": 18572,
+          "cost_usd": 0.297474
+        },
+        "task-16/attempt-1": {
+          "response_sha256": "eccc1e1643fd65275aad4121e9fce102149833bbdd01619f2b477ad880f0735d",
+          "finish_reason": "stop",
+          "completion_tokens": 16387,
+          "cost_usd": 0.320526
+        },
+        "task-20/attempt-0": {
+          "response_sha256": "e52178596fa927513e9fa87c93037ad4229edb5deebf6d691df3077fc75d4947",
+          "finish_reason": "stop",
+          "completion_tokens": 19090,
+          "cost_usd": 0.305244
+        },
+        "task-20/attempt-1": {
+          "response_sha256": "b4b8f0d0fb8097fa41d00d498de1c17eaa9fcbaab6a5fc8b1d4b87a198bed225",
+          "finish_reason": "stop",
+          "completion_tokens": 17021,
+          "cost_usd": 0.33159
+        },
+        "task-4/attempt-0": {
+          "response_sha256": "3bf071f3d2383bb899836d4171ebb9c4cc433fd9074df97b6989f9ef57cf5ff2",
+          "finish_reason": "stop",
+          "completion_tokens": 6782,
+          "cost_usd": 0.120624
+        },
+        "task-4/attempt-1": {
+          "response_sha256": "0632f15022ea1e5e78573dd9183c22b68f45d05cc84ded542a3797e56295903f",
+          "finish_reason": "stop",
+          "completion_tokens": 5676,
+          "cost_usd": 0.124491
+        },
+        "task-8/attempt-0": {
+          "response_sha256": "a2b78e99bc9e80eec337b0316bba40d0ae9a4f1aa7fe07dd40764b3843827637",
+          "finish_reason": "stop",
+          "completion_tokens": 6832,
+          "cost_usd": 0.121374
+        },
+        "task-8/attempt-1": {
+          "response_sha256": "488813e8d7e610111a8bd6cd157ac539878846053fd5d7e9574a06111d96243f",
+          "finish_reason": "stop",
+          "completion_tokens": 5282,
+          "cost_usd": 0.118731
+        }
+      }
+    },
+    "free-2": {
+      "arm": "free",
+      "repetition": 2,
+      "prepare_status": "accepted",
+      "prepare_sha256": "86e4a8699c44f9e1a9cdcce78ab4cc2e982aedebeefa4c171d3c78739550669b",
+      "planned": 5,
+      "observed": 5,
+      "passed": 1,
+      "calibrated_passes": 1,
+      "cost": {
+        "calls": 11,
+        "settled_usd": 2.224548,
+        "exposure_usd": 2.224548,
+        "unsettled_calls": 0,
+        "cap_usd": 3.0,
+        "stop_usd": 0.0,
+        "halted": 0
+      },
+      "receipts_usd": {
+        "prepare": 0.087969,
+        "target": 2.136579
+      },
+      "settled_attempts": {
+        "prepare/attempt-0": {
+          "response_sha256": "3036d695220e0cfc5747e6ff78c5c5338fdeb9436ab6bb71d6579acd8f20f714",
+          "finish_reason": "stop",
+          "completion_tokens": 5300,
+          "cost_usd": 0.087969
+        },
+        "task-12/attempt-0": {
+          "response_sha256": "dacef7b11309f68d4bb6405ccfec159be6e07e7008d7d640442d8cf816c2e12d",
+          "finish_reason": "stop",
+          "completion_tokens": 11965,
+          "cost_usd": 0.203799
+        },
+        "task-12/attempt-1": {
+          "response_sha256": "e28ab475b7935403124b8ad5c25416d49de6b9314f130c19d036eadf82c1dae5",
+          "finish_reason": "stop",
+          "completion_tokens": 9765,
+          "cost_usd": 0.206805
+        },
+        "task-16/attempt-0": {
+          "response_sha256": "0517830958ff8382ad1b542d6f2db15e58fff5a591047764d7f3b19ebd8cc150",
+          "finish_reason": "stop",
+          "completion_tokens": 16062,
+          "cost_usd": 0.265254
+        },
+        "task-16/attempt-1": {
+          "response_sha256": "e048feb30b329f25762b18bed8a58a4203446f3082cfabce2b6ad7cf29a10e5b",
+          "finish_reason": "stop",
+          "completion_tokens": 13236,
+          "cost_usd": 0.271161
+        },
+        "task-20/attempt-0": {
+          "response_sha256": "de59a1d3d3f318df8d9fa1c6e650505dcccf42214adc627a2e8cd1a3132b7d74",
+          "finish_reason": "stop",
+          "completion_tokens": 20432,
+          "cost_usd": 0.330804
+        },
+        "task-20/attempt-1": {
+          "response_sha256": "9e6f800a49e0b2ba3d0418f2b8b0bdeb04644f03a80c137d6644d4ad1dbd9672",
+          "finish_reason": "stop",
+          "completion_tokens": 17731,
+          "cost_usd": 0.351696
+        },
+        "task-4/attempt-0": {
+          "response_sha256": "8ad349b640f5d16793c22f8f33ad8e8d9ad3a68f40dec564757d0c57e9634dbb",
+          "finish_reason": "stop",
+          "completion_tokens": 6103,
+          "cost_usd": 0.115869
+        },
+        "task-4/attempt-1": {
+          "response_sha256": "a977fc6da2da1c3f09a5c114eeac9291347a4ef800a46f62b72b5b7c0f164c1a",
+          "finish_reason": "stop",
+          "completion_tokens": 4626,
+          "cost_usd": 0.112134
+        },
+        "task-8/attempt-0": {
+          "response_sha256": "6d75ff36f5e2faa10c5fbd559beb1c294eb3b1c927213ec6bb294b9aee937c00",
+          "finish_reason": "stop",
+          "completion_tokens": 7231,
+          "cost_usd": 0.132789
+        },
+        "task-8/attempt-1": {
+          "response_sha256": "d326e1d6a06acebdcfd2efcb625b6d309ff9a611a79e9ae6c34f34e7931e151e",
+          "finish_reason": "stop",
+          "completion_tokens": 6676,
+          "cost_usd": 0.146268
+        }
+      }
+    },
+    "plan-1": {
+      "arm": "plan",
+      "repetition": 1,
+      "prepare_status": "accepted",
+      "prepare_sha256": "97cb63fbc11d883adcf8dd2611da36f567e2902c441a0e4f471b183c8a8ffac4",
+      "planned": 5,
+      "observed": 5,
+      "passed": 1,
+      "calibrated_passes": 1,
+      "cost": {
+        "calls": 8,
+        "settled_usd": 1.046145,
+        "exposure_usd": 1.046145,
+        "unsettled_calls": 0,
+        "cap_usd": 3.0,
+        "stop_usd": 0.0,
+        "halted": 0
+      },
+      "receipts_usd": {
+        "prepare": 0.644817,
+        "target": 0.401328
+      },
+      "settled_attempts": {
+        "prepare/attempt-0": {
+          "response_sha256": "ae185513862350939860003f77e859805816bdb9a76259dc2c7ecc2cfe9e8fc3",
+          "finish_reason": "stop",
+          "completion_tokens": 19850,
+          "cost_usd": 0.307158
+        },
+        "prepare/attempt-1": {
+          "response_sha256": "f9eadd83b1d98a25777103e79965f2e9440d5afd4e7684d71ee5a7e6a2a54d48",
+          "finish_reason": "stop",
+          "completion_tokens": 17906,
+          "cost_usd": 0.337659
+        },
+        "task-12/attempt-0": {
+          "response_sha256": "74274f6cba7bb5dcea27054ff052993fe2b238e2e8b213318ea4850dfe8eeeff",
+          "finish_reason": "stop",
+          "completion_tokens": 425,
+          "cost_usd": 0.065907
+        },
+        "task-16/attempt-0": {
+          "response_sha256": "d1577981ba16d1c4207079d93fea159bc2372349f75278417f6a1b37bc50cfb9",
+          "finish_reason": "stop",
+          "completion_tokens": 675,
+          "cost_usd": 0.069657
+        },
+        "task-16/attempt-1": {
+          "response_sha256": "08f1667126d347fe8d4baf27cec70677c7300f363c6c386a2effe8ca2d43a6e7",
+          "finish_reason": "stop",
+          "completion_tokens": 425,
+          "cost_usd": 0.068043
+        },
+        "task-20/attempt-0": {
+          "response_sha256": "09b10001cf59b6f2c0df6ccec2f952e3aff58095831f403ed5e243bcc6ad4a41",
+          "finish_reason": "stop",
+          "completion_tokens": 425,
+          "cost_usd": 0.065907
+        },
+        "task-4/attempt-0": {
+          "response_sha256": "5a15bd12e6854a7fbf3e6be2ebfe8f69e4e28ed06777af0cdd90831a7c909ed8",
+          "finish_reason": "stop",
+          "completion_tokens": 425,
+          "cost_usd": 0.065907
+        },
+        "task-8/attempt-0": {
+          "response_sha256": "af16f1436626b593819811dc1d93d9f49ffc1e586e3dc1bf12beb7927c1f8f14",
+          "finish_reason": "stop",
+          "completion_tokens": 425,
+          "cost_usd": 0.065907
+        }
+      }
+    },
+    "plan-2": {
+      "arm": "plan",
+      "repetition": 2,
+      "prepare_status": "accepted",
+      "prepare_sha256": "6dfcc6d3157380a2cfbaf10fb971051c2a4be3afbd7c07116237575a3ba12462",
+      "planned": 5,
+      "observed": 5,
+      "passed": 1,
+      "calibrated_passes": 1,
+      "cost": {
+        "calls": 7,
+        "settled_usd": 1.04754,
+        "exposure_usd": 1.04754,
+        "unsettled_calls": 0,
+        "cap_usd": 3.0,
+        "stop_usd": 0.0,
+        "halted": 0
+      },
+      "receipts_usd": {
+        "prepare": 0.69186,
+        "target": 0.35568
+      },
+      "settled_attempts": {
+        "prepare/attempt-0": {
+          "response_sha256": "067e1e7a1abaf73ee984ff2d94c9da4c40bcf0baf4a73af653b82b7b8fa4291d",
+          "finish_reason": "stop",
+          "completion_tokens": 21031,
+          "cost_usd": 0.324873
+        },
+        "prepare/attempt-1": {
+          "response_sha256": "49b33235f2dfe5c3008bd30042f11ca93df15c3c3ba52c6c06a56e99845ca731",
+          "finish_reason": "stop",
+          "completion_tokens": 19625,
+          "cost_usd": 0.366987
+        },
+        "task-12/attempt-0": {
+          "response_sha256": "09918dacba6ee2624dab531c70c7fbb3255d9e143251d1269c98501061c4ccf1",
+          "finish_reason": "stop",
+          "completion_tokens": 423,
+          "cost_usd": 0.071136
+        },
+        "task-16/attempt-0": {
+          "response_sha256": "7395cfec47af5a36c986ee9435686e940b607d0abf54f0412feebc4cde2aac1e",
+          "finish_reason": "stop",
+          "completion_tokens": 423,
+          "cost_usd": 0.071136
+        },
+        "task-20/attempt-0": {
+          "response_sha256": "53a6801aa36d2c02d867a07c5dc6a305feea689d73d06238389ed688a3d8c1fb",
+          "finish_reason": "stop",
+          "completion_tokens": 423,
+          "cost_usd": 0.071136
+        },
+        "task-4/attempt-0": {
+          "response_sha256": "3fc7e5726e1952bac49f7d7cac1468fdd2e0bd3ccc79b0e3f1b41a3d216c012a",
+          "finish_reason": "stop",
+          "completion_tokens": 423,
+          "cost_usd": 0.071136
+        },
+        "task-8/attempt-0": {
+          "response_sha256": "5184dcaa67c769a80a1cf2485bea174980edeb74a1ecf1216362b0da1dbc6da6",
+          "finish_reason": "stop",
+          "completion_tokens": 423,
+          "cost_usd": 0.071136
+        }
+      }
+    }
+  },
+  "paired": {
+    "1": {
+      "direct_only": 3,
+      "plan_only": 1,
+      "both_pass": 0,
+      "both_fail": 1
+    },
+    "2": {
+      "direct_only": 0,
+      "plan_only": 0,
+      "both_pass": 1,
+      "both_fail": 4
+    }
+  },
+  "rows": {
+    "free-1/task-4": {
+      "status": "invalid",
+      "passed": false,
+      "page": "artifacts/canvas-sonnet-20261118/free-1/task-4/attempt-1/page",
+      "report_sha256": "882b96339b4493ecaf9f96f9a6d16062f50a51a049ee000b6d4d4235934430f4",
+      "first_failed_case": "pipes should be created and move correctly"
+    },
+    "free-1/task-8": {
+      "status": "accepted",
+      "passed": true,
+      "page": "artifacts/canvas-sonnet-20261118/free-1/task-8/attempt-1/page",
+      "report_sha256": "be9295b2208b28f121df48f99d91dc3e16a9d5729f5ea0fa35599d6af091aee8",
+      "first_failed_case": null
+    },
+    "free-1/task-12": {
+      "status": "accepted",
+      "passed": true,
+      "page": "artifacts/canvas-sonnet-20261118/free-1/task-12/attempt-1/page",
+      "report_sha256": "221ef20a547335b6359b8c46b8398d813fb5e1959c7bfa55d433cead57c1346b",
+      "first_failed_case": null
+    },
+    "free-1/task-16": {
+      "status": "accepted",
+      "passed": true,
+      "page": "artifacts/canvas-sonnet-20261118/free-1/task-16/attempt-1/page",
+      "report_sha256": "3eac7f7c838eb47986d26753ffe72e52b8a93c6f23ec58a2174fbf6d142f9645",
+      "first_failed_case": null
+    },
+    "free-1/task-20": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/canvas-sonnet-20261118/free-1/task-20/attempt-1/page",
+      "report_sha256": "3228fa1a45cb6e7f658fef5d550f7029698c9cc186106d283e81484d80858920",
+      "first_failed_case": "should enter coin space when boss is defeated"
+    },
+    "free-2/task-4": {
+      "status": "accepted",
+      "passed": true,
+      "page": "artifacts/canvas-sonnet-20261118/free-2/task-4/attempt-1/page",
+      "report_sha256": "939d67be3e614379a28b4e5a7cde721a2034643f30058a864cf5c7484653380a",
+      "first_failed_case": null
+    },
+    "free-2/task-8": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/canvas-sonnet-20261118/free-2/task-8/attempt-1/page",
+      "report_sha256": "49c9276a40d378a7ea28c18c64aa44da3ba744dc6444b7486de0bdbcd8608ebd",
+      "first_failed_case": "modules should be properly loaded"
+    },
+    "free-2/task-12": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/canvas-sonnet-20261118/free-2/task-12/attempt-1/page",
+      "report_sha256": "f2cef7156c4b0df3c53bd546f85f1cb7f5008f7d0b02084e1dd7dd866c58d897",
+      "first_failed_case": "collecting coin increases score count"
+    },
+    "free-2/task-16": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/canvas-sonnet-20261118/free-2/task-16/attempt-1/page",
+      "report_sha256": "1b8eb53538ee7786f794c37db957bb30d84a8559ae24917be1b7d733685c2b22",
+      "first_failed_case": "arrow down key increases falling speed"
+    },
+    "free-2/task-20": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/canvas-sonnet-20261118/free-2/task-20/attempt-1/page",
+      "report_sha256": "d7ee4de64fbe17dbe27dd3df71a159244ef5a383ff8ce8585b69ec4f2b4321d9",
+      "first_failed_case": "should enter coin space when boss is defeated"
+    },
+    "plan-1/task-4": {
+      "status": "accepted",
+      "passed": true,
+      "page": "artifacts/canvas-sonnet-20261118/plan-1/task-4/attempt-0/page",
+      "report_sha256": "77368adfd4639c915380ec61858b47c383aab8b418c6c13d12fe989802eac50a",
+      "first_failed_case": null
+    },
+    "plan-1/task-8": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/canvas-sonnet-20261118/plan-1/task-8/attempt-0/page",
+      "report_sha256": "59010b6e3c790cb9fef877a218f2ba363c9b5cad6c0aa36aaf375f124df1900d",
+      "first_failed_case": "modules should be properly loaded"
+    },
+    "plan-1/task-12": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/canvas-sonnet-20261118/plan-1/task-12/attempt-0/page",
+      "report_sha256": "afb4a027ed82abb5f51a51f90dbf49ffffd74c561be1cece28bd8af9607159a2",
+      "first_failed_case": "collecting coin increases score count"
+    },
+    "plan-1/task-16": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/canvas-sonnet-20261118/plan-1/task-16/attempt-1/page",
+      "report_sha256": "486b6fffc04e0e69e9e00eb0c06675b93f1352153026e986d8d3ebe2c579070b",
+      "first_failed_case": "arrow down key increases falling speed"
+    },
+    "plan-1/task-20": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/canvas-sonnet-20261118/plan-1/task-20/attempt-0/page",
+      "report_sha256": "ff20740b3d64cbb745268456901a9942f2d2cc65993f4bb0b742b70ae4b642ef",
+      "first_failed_case": "should enter coin space when boss is defeated"
+    },
+    "plan-2/task-4": {
+      "status": "accepted",
+      "passed": true,
+      "page": "artifacts/canvas-sonnet-20261118/plan-2/task-4/attempt-0/page",
+      "report_sha256": "a4e60d752cd3e4bde5d3f56295138a2306d283208246814a11c37c4a95e1a2e2",
+      "first_failed_case": null
+    },
+    "plan-2/task-8": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/canvas-sonnet-20261118/plan-2/task-8/attempt-0/page",
+      "report_sha256": "63df2254b113005acaddf6a2c90b4997f5b775d5889d8132a07d2cd8e7894f16",
+      "first_failed_case": "modules should be properly loaded"
+    },
+    "plan-2/task-12": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/canvas-sonnet-20261118/plan-2/task-12/attempt-0/page",
+      "report_sha256": "1b8afef8131b4f702f5c55d6b6aa624e3ab44c49c42934fc3eb2b7c2f8260fbb",
+      "first_failed_case": "collecting coin increases score count"
+    },
+    "plan-2/task-16": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/canvas-sonnet-20261118/plan-2/task-16/attempt-0/page",
+      "report_sha256": "c9784d02de9da760863369bab3f66dd953ab82ac7a1d61a24387579b061db1bf",
+      "first_failed_case": "arrow down key increases falling speed"
+    },
+    "plan-2/task-20": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/canvas-sonnet-20261118/plan-2/task-20/attempt-0/page",
+      "report_sha256": "057ac1c23085a0238a4e58838e68b7595ffff48b222d37782656fe1749777e5c",
+      "first_failed_case": "should enter coin space when boss is defeated"
+    }
+  },
+  "source_sha256": {
+    "protocol-freeze.json": "4a91f6e73ae63578c1be97a4620aa50c768caef41ce6b4d053db70bd971d2398",
+    "calibration.json": "59ac035a93aad1d6e36cd10f65b814cee42b4dd8b315189a67af0d3a605c26f4",
+    "generated.json": "afb650f3b8e85b38b38f8419e4bec782ddf6c42eb8329e2b517d336419652083",
+    "evaluation.json": "bb7bdb47983a20a1ec7564942052e19c045880d0f44529b378d48bb6690d869d"
+  },
+  "scope": "Independent Claude Sonnet 4.5 replication on canvas with matched public information and spending cap.",
+  "extension_sha256": "d2c24daf8036db1f349f9aac7e2ed3d9ad12d072e6b6c3c41ae872a0c3d1d5d3"
+}

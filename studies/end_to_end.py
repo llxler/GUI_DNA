@@ -8,10 +8,11 @@ from __future__ import annotations
 
 import argparse
 from collections import defaultdict
-from decimal import Decimal
+from decimal import Decimal, ROUND_CEILING
 import hashlib
 import json
 from pathlib import Path
+from studies.canvas_capacity.summarize import summarize as summarize_canvas_controls
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "studies/results/end_to_end.json"
@@ -93,6 +94,69 @@ def paired_by_builder(rows):
             "both_fail": sum(not p[endpoint] and not f[endpoint] for p, f in values),
         } for endpoint in ("current",)}
     return result
+
+
+def validate_matched_workflow(study):
+    """Recompute matched targets, aggregate scores and micro-dollar charges from portable rows."""
+    tasks = study["milestones"]
+    assert len(tasks) == len(set(tasks)) == 5
+    assert set(study["groups"]) == {f"{arm}-{rep}" for arm in METHODS for rep in (1, 2)}
+    expected = {f"{arm}-{rep}/{t}" for arm in METHODS for rep in (1, 2) for t in tasks}
+    assert set(study["rows"]) == expected
+    for name, group in study["groups"].items():
+        rows = [study["rows"][name + "/" + task] for task in tasks]
+        assert name == f"{group['arm']}-{group['repetition']}"
+        assert group["planned"] == len(rows)
+        assert group["observed"] == sum(row["passed"] is not None for row in rows)
+        assert group["passed"] == sum(row["passed"] is True for row in rows)
+        for row in rows:
+            assert (row["passed"] is None) == (row["status"] == "missing")
+            assert bool(row.get("report_sha256")) == bool(row["page"])
+            if not row["page"] and row["status"] != "missing":
+                assert row["passed"] is False
+        attempts = group["settled_attempts"]
+        bill = group["cost"]
+        assert len(attempts) + bill["unsettled_calls"] == bill["calls"]
+        micros = sum((Decimal(str(a["cost_usd"])) * 1000000).to_integral_value(rounding=ROUND_CEILING)
+                     for a in attempts.values())
+        assert micros == Decimal(str(bill["settled_usd"])) * 1000000
+        assert bill["settled_usd"] <= bill["exposure_usd"] <= bill["cap_usd"] == study["cap_per_repetition_arm_usd"]
+    for rep in (1, 2):
+        keys = {"direct_only": (True, False), "plan_only": (False, True),
+                "both_pass": (True, True), "both_fail": (False, False)}
+        pairs = [tuple(study["rows"][f"{arm}-{rep}/{task}"]["passed"] for arm in METHODS) for task in tasks]
+        assert study["paired"][str(rep)] == {k: pairs.count(v) for k, v in keys.items()}
+    return study
+
+
+def observed_reuse_costs(study):
+    """Charge preparation once, then add task-specific charges in milestone order."""
+    out = {}
+    for rep in (1, 2):
+        series = []
+        comparable = True
+        by_arm = {}
+        for arm in METHODS:
+            group = study["groups"][f"{arm}-{rep}"]
+            comparable &= group["observed"] == group["planned"] and not group["cost"]["unsettled_calls"]
+            by_stage = defaultdict(Decimal)
+            for key, attempt in group["settled_attempts"].items():
+                by_stage[key.split("/")[0]] += Decimal(str(attempt["cost_usd"]))
+            by_arm[arm] = by_stage
+        running = {arm: by_arm[arm]["prepare"] for arm in METHODS}
+        successes = dict.fromkeys(METHODS, 0)
+        for task in study["milestones"]:
+            for arm in METHODS:
+                running[arm] += by_arm[arm][task]
+                successes[arm] += study["rows"][f"{arm}-{rep}/{task}"]["passed"] is True
+            series.append({"through": task, "provider_receipts_usd": {arm: float(running[arm]) for arm in METHODS},
+                           "observed_passes_to_date": successes.copy()})
+        available = study["groups"][f"plan-{rep}"]["prepare_status"] == "accepted"
+        cheaper = [row["provider_receipts_usd"]["plan"] <= row["provider_receipts_usd"]["free"] for row in series]
+        first = next((i + 1 for i in range(len(series)) if all(cheaper[i:])), None) if comparable and available else None
+        out[str(rep)] = {"complete_cost_accounting": bool(comparable), "library_available": available,
+                         "first_horizon_with_no_higher_cost_through_five": first, "milestones": series}
+    return out
 
 
 def reconstruct():
@@ -216,18 +280,41 @@ def reconstruct():
             "free_per_target_receipts_usd": float(Decimal(str(free["cost_usd"])) / 5),
             "scope": "Each generator is charged both library builds once across ten plan targets (two builders x five milestones). Independent scenarios; do not sum construction across generators. Actual study built the two libraries only once.",
         }
+    pilots = {}
+    diagnostics = {}
+    for label, prefix, fixed_name in [
+            ("scheduled", "matched-canvas-20261118", "canvas-fixed-reuse-20261118.json"),
+            ("capacity_followup", "canvas-capacity-20261118", "canvas-capacity-20261118-reuse.json"),
+            ("model_replication", "canvas-sonnet-20261118", "canvas-sonnet-20261118-reuse.json")]:
+        study = validate_matched_workflow(read(prefix + ".json"))
+        pilots[label] = study
+        diagnostics[label] = summarize_canvas_controls(read(prefix + "-probe.json"), read(fixed_name), study)
+    flex = validate_matched_workflow(read("matched-flex-20261118.json"))
+    matched = {**pilots, "flex":flex}
+    bills = [g["cost"] for study in matched.values() for g in study["groups"].values()]
     return {
-        "schema_version": 3, "reporting_revision": "2026-11-17-current-task-only",
+        "schema_version": 4, "reporting_revision": "2026-11-18-matched-workflows",
+        "canvas_pilots": pilots,
+        "canvas_controls": diagnostics,
+        "matched_flex": flex,
+        "observed_reuse_costs": {k: observed_reuse_costs(s) for k,s in matched.items()},
+        "matched_study_accounting": {"ledgers":len(bills), "calls":sum(b["calls"] for b in bills),
+            "unsettled_calls":sum(b["unsettled_calls"] for b in bills),
+            "settled_usd":sum_cost(bills,"settled_usd"), "exposure_usd":sum_cost(bills,"exposure_usd"),
+            "scope":"Billing only, for the four matched stages of 2026-11-18. No pooling of outcome counts."},
+        "table_behavior": read("table-behavior-probe-20261118.json"),
+        "canvas_speed": read("canvas-speed-probe-20261118.json"),
+        "input_controls": read("input-controls-20261118.json"),
         "evaluation_scope": "Current official task file only; not certification of the whole application.",
         "reporting_contract": "Report each builder separately, including project/generator breakdowns, sensitivity and cost. Each comparison uses the same target keys and denominator as the shared actual no-library baseline. Existing pooled fields are retained for internal reconciliation only, not presentation.",
-        "selection_policy": "Retrospective reporting of existing observations; not a preregistered new experiment.",
+        "selection_policy": "cohorts contains the retrospective comparison. The prospective canvas pilot, its capacity follow-up and the independent flex replication have distinct budgets, preparations and denominators.",
         "method_roles": {
             "free": {"role": "primary_baseline", "label": "Direct code without a library", "library_access": False},
             "plan": {"role": "proposed_pipeline", "label": "AI library construction + GUI-DNA assembly", "library_access": True},
             "free_lib": {"role": "archived_ablation", "reported_in_paper": False, "records_preserved": True},
         },
-        "information_boundary": "Builders saw all twenty public requirements and had construction calls; no-library generators saw the target cumulative prefix and runtime contract. Builder reference implementations and behavioral tests were withheld. This is a whole-workflow contrast, not matched total information/compute or an isolated planning effect.",
-        "unit": "One final saved candidate per project, generator, task and (for plans only) builder. The baseline is counted once, not repeated across builders. No pooling across study protocols.",
+        "information_boundary": "In the retrospective cohorts, builders saw all twenty public requirements and had construction calls; no-library generators saw the target cumulative prefix and runtime contract. Builder reference implementations and behavioral tests were withheld. This is a whole-workflow contrast, not matched total information/compute or an isolated planning effect.",
+        "unit": "Retrospective cohorts count a final saved candidate; the shared baseline is counted once. Prospective studies count scheduled target positions per workflow and repetition, including a failed build. Transport or budget gaps are missing. No pooling across protocols.",
         "cohorts": cohorts, "records": rows,
         "bom_sensitivity": {"excluded_tasks": excluded, "current": sensitivity,
                             "by_builder": {b: {"current": v["current"]}
@@ -245,7 +332,7 @@ def reconstruct():
                   "limitations": "Method-selected receipts exclude unresolved historical transport reservations. Construction, failed build attempts and exposure are reported separately. Local compute and human time are unpriced. Original stage bills include archived conditions and are not rewritten."},
         "source_sha256": sources,
         "validation_scope": "Zero-API reconstruction from saved endpoint summaries with independent current-score cross-checks; not a new browser evaluation or new model generation.",
-        "new_api_cost_usd": 0,
+        "reconstruction_api_cost_usd": 0,
     }
 
 

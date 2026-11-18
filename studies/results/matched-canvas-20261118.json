@@ -1,0 +1,457 @@
+{
+  "project": "canvas",
+  "model": "openai/gpt-5",
+  "builder": "openai/gpt-5",
+  "generator": "openai/gpt-5",
+  "milestones": [
+    "task-4",
+    "task-8",
+    "task-12",
+    "task-16",
+    "task-20"
+  ],
+  "calibrated_milestones": [
+    "task-4",
+    "task-8",
+    "task-12",
+    "task-16",
+    "task-20"
+  ],
+  "config": {
+    "models": [
+      "openai/gpt-5"
+    ],
+    "max_tokens": 16000,
+    "temperature": 0.6,
+    "price_caps_per_million": {
+      "prompt": 1.25,
+      "completion": 10
+    },
+    "reasoning_effort": {
+      "openai/gpt-5": "medium"
+    },
+    "omit_params": {
+      "openai/gpt-5": [
+        "seed",
+        "temperature"
+      ]
+    },
+    "provider_order": {
+      "openai/gpt-5": [
+        "OpenAI"
+      ]
+    }
+  },
+  "cap_per_repetition_arm_usd": 4,
+  "calibration": {
+    "reference/task-4": {
+      "passed": true,
+      "report_sha256": "87fbd03f6df93656bf9dfb23408e08a3f200a90b9b5a34ea898b8fa61ca68c2b"
+    },
+    "blank/task-4": {
+      "passed": false,
+      "report_sha256": "f0311abac8c7578d024b0e533528f0b404650d5a1d0789dbf1693fb52b8c99bc"
+    },
+    "reference/task-8": {
+      "passed": true,
+      "report_sha256": "677e84d8ac00aaa4d336826717398cda771a88365229ef4aa62903146338ba23"
+    },
+    "blank/task-8": {
+      "passed": false,
+      "report_sha256": "1196377f8a1a343b9c5c3bc2f84582f22f73a1bbd34f737f6e707a5192f13f83"
+    },
+    "reference/task-12": {
+      "passed": true,
+      "report_sha256": "21f96d8fe0f768214271dc2c48cf8e10707efebd16f0c0dab0360801b626d110"
+    },
+    "blank/task-12": {
+      "passed": false,
+      "report_sha256": "1847395a2ee95d7d05391745d68f87bffc1929813938787ae198a3ab657c7e93"
+    },
+    "reference/task-16": {
+      "passed": true,
+      "report_sha256": "3f7644d7a4a0d443066a11613d2a46154d905f66709e2f5c14ee30006bb3112d"
+    },
+    "blank/task-16": {
+      "passed": false,
+      "report_sha256": "acce2ef5575dd035d5acff5a1e3733fb7c9f311c43c15c5fe8eb7891c487d840"
+    },
+    "reference/task-20": {
+      "passed": true,
+      "report_sha256": "6fc2bb4d94f29a4a5eafc47c6bca24e30cc2db67ffe47428fbfcd0dd235aa5c3"
+    },
+    "blank/task-20": {
+      "passed": false,
+      "report_sha256": "04711543043c17a905cabcca16fefad2675054b2f77a1b04d1056a127c420a79"
+    }
+  },
+  "groups": {
+    "free-1": {
+      "arm": "free",
+      "repetition": 1,
+      "prepare_status": "accepted",
+      "prepare_sha256": "d0d7054262c071afc6ce29069e7330696d7e2791020e981647a836ea5593ede1",
+      "planned": 5,
+      "observed": 5,
+      "passed": 1,
+      "calibrated_passes": 1,
+      "cost": {
+        "calls": 9,
+        "settled_usd": 1.302264,
+        "exposure_usd": 1.302264,
+        "unsettled_calls": 0,
+        "cap_usd": 4.0,
+        "stop_usd": 0.0,
+        "halted": 0
+      },
+      "receipts_usd": {
+        "prepare": 0.1097775,
+        "target": 1.19248325
+      },
+      "settled_attempts": {
+        "prepare/attempt-0": {
+          "response_sha256": "d113acfbe1842a00ce344307af9c63389d90f01c275874aa924a0cf8605ea006",
+          "finish_reason": "stop",
+          "completion_tokens": 10654,
+          "cost_usd": 0.1097775
+        },
+        "task-12/attempt-0": {
+          "response_sha256": "3f3d9775790186042bde1ea11bdf1766980a3e59d56946fac820ee25ae954e50",
+          "finish_reason": "length",
+          "completion_tokens": 16000,
+          "cost_usd": 0.16894275
+        },
+        "task-12/attempt-1": {
+          "response_sha256": "abe85654acf12c076a8538b9c2126fefa3141cf5d1512ed68713681ea8d9d57f",
+          "finish_reason": "stop",
+          "completion_tokens": 12299,
+          "cost_usd": 0.13547325
+        },
+        "task-16/attempt-0": {
+          "response_sha256": "e5c46a951f53561fc365c218a239a56f7276032b22e55e3c4c62a5d3a106eac0",
+          "finish_reason": "length",
+          "completion_tokens": 16000,
+          "cost_usd": 0.16894275
+        },
+        "task-16/attempt-1": {
+          "response_sha256": "b1831fe13f2e654073ad12769cb60d923f4b617e9dbe36eca1803bb83e758d59",
+          "finish_reason": "length",
+          "completion_tokens": 16000,
+          "cost_usd": 0.170397
+        },
+        "task-20/attempt-0": {
+          "response_sha256": "20bc6627c4eea41862460761cc6bd9fdb3e77768ead798f4f71c3b93a422623a",
+          "finish_reason": "length",
+          "completion_tokens": 16000,
+          "cost_usd": 0.16894275
+        },
+        "task-20/attempt-1": {
+          "response_sha256": "a3c53d400517c6fea052133ffe3f9859e8f365ff267a11811678ed605a6c4027",
+          "finish_reason": "length",
+          "completion_tokens": 16000,
+          "cost_usd": 0.17327325
+        },
+        "task-4/attempt-0": {
+          "response_sha256": "a5e6e94d02bdd5c1a2d07a8e4ebd67a6652725d6b00adcd93dc1d1176cfd4d04",
+          "finish_reason": "stop",
+          "completion_tokens": 9503,
+          "cost_usd": 0.10670875
+        },
+        "task-8/attempt-0": {
+          "response_sha256": "2cfb34f68d1eadb483eda33d68643df3655dfa463169824e7d69baf6af07171c",
+          "finish_reason": "stop",
+          "completion_tokens": 9086,
+          "cost_usd": 0.09980275
+        }
+      }
+    },
+    "free-2": {
+      "arm": "free",
+      "repetition": 2,
+      "prepare_status": "accepted",
+      "prepare_sha256": "d31be534cba4d8fa88760c782b85d0c478302f4befc37577726e40c9596c9601",
+      "planned": 5,
+      "observed": 5,
+      "passed": 1,
+      "calibrated_passes": 1,
+      "cost": {
+        "calls": 9,
+        "settled_usd": 1.318211,
+        "exposure_usd": 1.318211,
+        "unsettled_calls": 0,
+        "cap_usd": 4.0,
+        "stop_usd": 0.0,
+        "halted": 0
+      },
+      "receipts_usd": {
+        "prepare": 0.1125815,
+        "target": 1.2056275
+      },
+      "settled_attempts": {
+        "prepare/attempt-0": {
+          "response_sha256": "4614f1a81a60fe5c2fa81b690fe13af4f7026af2c72dd84ea8364d2023ac8859",
+          "finish_reason": "stop",
+          "completion_tokens": 11208,
+          "cost_usd": 0.1125815
+        },
+        "task-12/attempt-0": {
+          "response_sha256": "da7aca2e40b9755435cc7acc4c794f57c5e48b086d8be7c5a985e1043880cf2c",
+          "finish_reason": "stop",
+          "completion_tokens": 15678,
+          "cost_usd": 0.165399
+        },
+        "task-12/attempt-1": {
+          "response_sha256": "ad66ca641c66108144ea7f19029d6992feb5b7dd410cfa8c094631341d44ec3e",
+          "finish_reason": "stop",
+          "completion_tokens": 10653,
+          "cost_usd": 0.11918375
+        },
+        "task-16/attempt-0": {
+          "response_sha256": "85f07c8ab4e36ea80501e0dae6cb365c66b59de2614abd7550b063058de96bb1",
+          "finish_reason": "length",
+          "completion_tokens": 16000,
+          "cost_usd": 0.168619
+        },
+        "task-16/attempt-1": {
+          "response_sha256": "2039f7a0de6077260c32d01351c5793fb52ac9e16b0c0860e390c4975c02d121",
+          "finish_reason": "length",
+          "completion_tokens": 16000,
+          "cost_usd": 0.1706325
+        },
+        "task-20/attempt-0": {
+          "response_sha256": "0ea1e93dbc7f2b74560933f04d734734bdc62548d9c3fa82ef424bcb9e850d26",
+          "finish_reason": "length",
+          "completion_tokens": 16000,
+          "cost_usd": 0.168619
+        },
+        "task-20/attempt-1": {
+          "response_sha256": "c3de4cf924806f9d5f0d1054eaf0830114bd4fb4ee73abcd2e75820728d55ca7",
+          "finish_reason": "length",
+          "completion_tokens": 16000,
+          "cost_usd": 0.17553625
+        },
+        "task-4/attempt-0": {
+          "response_sha256": "53ce85f84b0d32557edf5e3452a3cdf8b8023bc007ec30d5baaf699ecfb12b76",
+          "finish_reason": "stop",
+          "completion_tokens": 10341,
+          "cost_usd": 0.112029
+        },
+        "task-8/attempt-0": {
+          "response_sha256": "9ca0277ca7cbc2de4bbb0cc3bbea34203a558cbe370d0b64d048c70c57c2beb8",
+          "finish_reason": "stop",
+          "completion_tokens": 11699,
+          "cost_usd": 0.125609
+        }
+      }
+    },
+    "plan-1": {
+      "arm": "plan",
+      "repetition": 1,
+      "prepare_status": "invalid",
+      "prepare_sha256": null,
+      "planned": 5,
+      "observed": 5,
+      "passed": 0,
+      "calibrated_passes": 0,
+      "cost": {
+        "calls": 2,
+        "settled_usd": 0.335682,
+        "exposure_usd": 0.335682,
+        "unsettled_calls": 0,
+        "cap_usd": 4.0,
+        "stop_usd": 0.0,
+        "halted": 0
+      },
+      "receipts_usd": {
+        "prepare": 0.335682,
+        "target": 0.0
+      },
+      "settled_attempts": {
+        "prepare/attempt-0": {
+          "response_sha256": "7f27b43320fc97c1884518add562e1324348c313635623d64cd1c20b6deaa382",
+          "finish_reason": "length",
+          "completion_tokens": 16000,
+          "cost_usd": 0.16358
+        },
+        "prepare/attempt-1": {
+          "response_sha256": "890a9d20dac1d5e7147b4e3bc0e394950c500cf9c1bfb788eb8afba694f0c855",
+          "finish_reason": "length",
+          "completion_tokens": 16000,
+          "cost_usd": 0.172102
+        }
+      }
+    },
+    "plan-2": {
+      "arm": "plan",
+      "repetition": 2,
+      "prepare_status": "invalid",
+      "prepare_sha256": null,
+      "planned": 5,
+      "observed": 5,
+      "passed": 0,
+      "calibrated_passes": 0,
+      "cost": {
+        "calls": 2,
+        "settled_usd": 0.331069,
+        "exposure_usd": 0.331069,
+        "unsettled_calls": 0,
+        "cap_usd": 4.0,
+        "stop_usd": 0.0,
+        "halted": 0
+      },
+      "receipts_usd": {
+        "prepare": 0.331069,
+        "target": 0.0
+      },
+      "settled_attempts": {
+        "prepare/attempt-0": {
+          "response_sha256": "fbf1d1cd18c41cbbc7a6a797f311922b2b46e789940b69865fc0f1e95925a756",
+          "finish_reason": "length",
+          "completion_tokens": 16000,
+          "cost_usd": 0.160412
+        },
+        "prepare/attempt-1": {
+          "response_sha256": "ac2166540a13b334988464206df4aa70d655d6f2d58c4d6f3844e6dfe239e3c0",
+          "finish_reason": "length",
+          "completion_tokens": 16000,
+          "cost_usd": 0.170657
+        }
+      }
+    }
+  },
+  "paired": {
+    "1": {
+      "direct_only": 1,
+      "plan_only": 0,
+      "both_pass": 0,
+      "both_fail": 4
+    },
+    "2": {
+      "direct_only": 1,
+      "plan_only": 0,
+      "both_pass": 0,
+      "both_fail": 4
+    }
+  },
+  "rows": {
+    "free-1/task-4": {
+      "status": "accepted",
+      "passed": true,
+      "page": "artifacts/matched-canvas-20261118/free-1/task-4/attempt-0/page",
+      "report_sha256": "289ca143993b274855d2d27360022c347b78d3c2098055cf43c6a8c271e86393",
+      "first_failed_case": null
+    },
+    "free-1/task-8": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/matched-canvas-20261118/free-1/task-8/attempt-0/page",
+      "report_sha256": "9b128a8a7fa8814dbbaf3155f9eab6424b9623b6758dadb618e4957931ae1f7c",
+      "first_failed_case": "events module should handle user interactions"
+    },
+    "free-1/task-12": {
+      "status": "invalid",
+      "passed": false,
+      "page": "artifacts/matched-canvas-20261118/free-1/task-12/attempt-1/page",
+      "report_sha256": "255ec1be59663803c16db70de26c9d451ea70eba7e146eae25bb0d3462ece1af",
+      "first_failed_case": "collecting coin increases score count"
+    },
+    "free-1/task-16": {
+      "status": "invalid",
+      "passed": false,
+      "page": null
+    },
+    "free-1/task-20": {
+      "status": "invalid",
+      "passed": false,
+      "page": null
+    },
+    "free-2/task-4": {
+      "status": "accepted",
+      "passed": true,
+      "page": "artifacts/matched-canvas-20261118/free-2/task-4/attempt-0/page",
+      "report_sha256": "d5dd9977f0c62ad33e125a5c4811834d5188ea2e1aa0818804d5db3d8cabcfef",
+      "first_failed_case": null
+    },
+    "free-2/task-8": {
+      "status": "accepted",
+      "passed": false,
+      "page": "artifacts/matched-canvas-20261118/free-2/task-8/attempt-0/page",
+      "report_sha256": "09abf934f4645ccb4c3ba2ea01f24ba10623cfe94322033b8dd4ce75f5b104c4",
+      "first_failed_case": "events module should handle user interactions"
+    },
+    "free-2/task-12": {
+      "status": "invalid",
+      "passed": false,
+      "page": "artifacts/matched-canvas-20261118/free-2/task-12/attempt-1/page",
+      "report_sha256": "3e60716a43ad7d0d507cbfbe13f4937077e4a4ce204f2cf819d5e391510429ae",
+      "first_failed_case": "collecting coin increases score count"
+    },
+    "free-2/task-16": {
+      "status": "invalid",
+      "passed": false,
+      "page": null
+    },
+    "free-2/task-20": {
+      "status": "invalid",
+      "passed": false,
+      "page": null
+    },
+    "plan-1/task-4": {
+      "status": "build_failure",
+      "passed": false,
+      "page": null
+    },
+    "plan-1/task-8": {
+      "status": "build_failure",
+      "passed": false,
+      "page": null
+    },
+    "plan-1/task-12": {
+      "status": "build_failure",
+      "passed": false,
+      "page": null
+    },
+    "plan-1/task-16": {
+      "status": "build_failure",
+      "passed": false,
+      "page": null
+    },
+    "plan-1/task-20": {
+      "status": "build_failure",
+      "passed": false,
+      "page": null
+    },
+    "plan-2/task-4": {
+      "status": "build_failure",
+      "passed": false,
+      "page": null
+    },
+    "plan-2/task-8": {
+      "status": "build_failure",
+      "passed": false,
+      "page": null
+    },
+    "plan-2/task-12": {
+      "status": "build_failure",
+      "passed": false,
+      "page": null
+    },
+    "plan-2/task-16": {
+      "status": "build_failure",
+      "passed": false,
+      "page": null
+    },
+    "plan-2/task-20": {
+      "status": "build_failure",
+      "passed": false,
+      "page": null
+    }
+  },
+  "source_sha256": {
+    "protocol-freeze.json": "0a3d3d0677c5f4de041cb1c33e6e1b42a03a3ac440b35b1eeb4ad4f2e1fd0a18",
+    "calibration.json": "59ac035a93aad1d6e36cd10f65b814cee42b4dd8b315189a67af0d3a605c26f4",
+    "generated.json": "ce4f024b0d256654bd4550bcb01bd84a9fd5df9357e66efee0a863d9fcd28416",
+    "evaluation.json": "7cdfceee540e0529e48d31e5561fc7985be72b1d280995a63f679a4214923cae"
+  },
+  "scope": "Prospective matched full-public-scope, spending-cap pilot on one project. Two independent preparations per workflow. Passage refers to the official current task file."
+}

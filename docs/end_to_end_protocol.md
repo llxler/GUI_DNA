@@ -1,6 +1,6 @@
-# 端到端公开基准比较：下一阶段预备协议
+# 端到端公开基准比较设计
 
-状态：**设计草案，尚未生成新模型候选，尚未冻结为运行协议**。2026-11-17 的 `studies.end_to_end` 仅重算已有真实结果，不是新实验。新阶段须在付费前补齐项目、模型、种子、限额与时间；不修改任何旧阶段。
+此页保留 11 月 17 日的研究设计。11 月 18 日的实际运行分别以 [canvas 首批](../studies/matched_canvas/PROTOCOL.md)、[canvas 输出上限跟进](../studies/canvas_capacity/PROTOCOL.md)、[Claude 同模型复验](../studies/canvas_model_replication/PROTOCOL.md) 和 [flex 独立复验](../studies/matched_flex/PROTOCOL.md) 为准。两个流程各有一次准备调用，随后五个里程碑独立生成。每种条件都保留两次独立准备。
 
 ## 研究问题与比较方法
 
@@ -18,7 +18,7 @@
 - 两组享有相同**总**费用上限、同一推理强度/输出限制及公开反馈次数。GUI-DNA 的建库、失败和修复计入总额；基线可在自己的总额内自查/修复，但不能接收另一组产物。
 - 先指定一个生成模型、一个建库模型和五个等间隔官方里程碑，运行两次独立重复（支持 seed 则记录，不支持则称重复请求）。正式规模由余额与已观测单调用上界约束，不以历史廉价模型费用估计所有模型。
 - 每个重复单独建库；建库失败的预定目标仍纳入流程成功分母，另列失败原因。不得只报告成功建库后的条件概率。
-- 复用成本按预定目标集合分摊：`pipeline = build + sum(plan + repair)`，`baseline = sum(code + repair)`；同时报总额、单目标额、成功率和每次重复，不从多个库挑最优。
+- 复用成本按预定目标集合分摊：`pipeline = build + sum(plan + repair)`，`baseline = notes + sum(code + repair)`；同时报总额、单目标额、成功率和每次重复，不从多个库挑最优。
 
 ## 评分与锁定
 
@@ -34,4 +34,4 @@ uv run python -m studies.end_to_end --check
 uv run python -m studies.paper_end_to_end
 ```
 
-已有结果和成本边界已写入 `studies/results/end_to_end.json`。新的匹配信息/总预算实验、独立项目与重复仍在 [roadmap](roadmap.md)，没有可报告的新分数。
+主视图按项目、输出上限及重复保留真实配对和费用。结果见 [实验记录](results.md) 第 38 节，未覆盖的应用族及进一步重复见 [roadmap](roadmap.md)。

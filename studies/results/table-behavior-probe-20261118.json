@@ -1,0 +1,380 @@
+{
+  "project": "table",
+  "official_scores_used": false,
+  "new_api_cost_usd": 0,
+  "protocol_and_inputs": {
+    "studies/table_behavior_probe/PROTOCOL.md": "48ec81e00153dd9c13a40bf1f8fab4de309dcffcce51e83f0199276d7fcb5445",
+    "studies/table_behavior_probe/run.py": "416c07ac6097a82eba039fa5039c7ff7c0779f054615500f0ad2b110fbc74334",
+    "artifacts/web-bench/projects/table/tasks.jsonl": "f7be722b8dd370f3e2d856fc8f0e6e6512138ed3d3c93eb84daf74f032df2ebf",
+    "artifacts/webbench-expand-build/libraries/table/openai__gpt-5/package.json": "d4aa02e27ca720e08059eec64ecc0131463143c4c8fc10c19f595fe9e60e754f",
+    "artifacts/webbench-expand-build/libraries/table/anthropic__claude-sonnet-4.5/package.json": "2fdaa0ce2a4b4bb1438870a763fe30ae74a5266065ac7439df50b705cead59d1",
+    "studies/canvas_interface_probe/run.py": "f5ea124514df998d72ed48ce49ae3418895909ac4073b74c1d1d2955b8d64196",
+    "studies/webbench_expand/core.py": "6b29bc61e27b6aa896c30c7d4ac4e6798ceccd04830049dd3f30eec4843fdf15",
+    "studies/webbench_expand/schema.py": "42ca7cdb7b25638ecdb78623208947b42b221afad5683c19247981658dbd8ade",
+    "studies/interface_blind/core.py": "a44bf8fa8e500f58348fa5b99c85f9fbb82bb79cae58c6026a55ecee6a2b450f",
+    "studies/interface_blind/compile.cjs": "f92fb27de763451626226bcf646a0bd0d67da14a3596f6c551739636cb023191"
+  },
+  "reference_files": {
+    "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+    "index.css": "fbbc47cafe49a55bcf64edd2ccbb90148f87499fa4c02170041650103901a9d9",
+    "index.js": "8ffc4a998cc27f0ca0c706101af1450eb93e08d1895de124ff1c291780a17c00",
+    "common/table.js": "c41fc97cf938b6cde1bc012b54e1eb126311008140a22ed8e4925ac4dc1a6f7d",
+    "common/mouse.js": "44f8cf7aaac96185bf69a98b61d872a6b303fdc9ee7817f41ea0e8d4b2a60368",
+    "common/drag.js": "2c914e406e7cd5040f779310a4ad2fbe61ae9203c75e925b8988ca753bb3d9c5",
+    "common/util.js": "890e5c75c78e42c37e1209904b73c6949bb0aa48501e4299bf88f3c93881fbd2",
+    "common/key.js": "3d8d3e84bfcac8c541432a718281c979043f730f8272b3a1d9f2c951eabbb179",
+    "common/layout.js": "d9bad03d6db42f621f481c3b7499c7154693f33dca620e9618cb17b0474d923c",
+    "common/menu.js": "721e1e4c83f6158a1bdef9bf1441b3da59a4e791b73728d888682263dc74f231",
+    "common/util.spec.js": "6c797a816a1c4d53a98974401225c730c8ef27a9e72b5c562c721382bced299a"
+  },
+  "browser_version": "153.0.8010.12",
+  "observations_sha256": "68cc06fee9673f8768cdf7f03245c8cfdb1d7b19af485dc2f5641d5962202830",
+  "controls": {
+    "reference": {
+      "delete_row": [
+        true,
+        true
+      ],
+      "clear_cell": [
+        true,
+        true
+      ]
+    },
+    "blank": {
+      "delete_row": [
+        null,
+        null
+      ],
+      "clear_cell": [
+        null,
+        null
+      ]
+    }
+  },
+  "libraries": {
+    "openai/gpt-5": {
+      "package_sha256": "d4aa02e27ca720e08059eec64ecc0131463143c4c8fc10c19f595fe9e60e754f",
+      "variants": {
+        "example-0": {
+          "plan": {},
+          "source_digest": "0f69933596b15653aace3dc984054fc1e93f5afbab2ed6bffcb1871e6423ce84",
+          "responses": {
+            "delete_row": [
+              false,
+              false
+            ],
+            "clear_cell": [
+              false,
+              false
+            ]
+          }
+        },
+        "example-1": {
+          "plan": {
+            "theme": "dark",
+            "palette": "green",
+            "menuStyle": "solid",
+            "gridDensity": "comfortable",
+            "interactions": {
+              "contextMenu": true,
+              "resize": true,
+              "dragReorder": true,
+              "edit": true,
+              "copyPaste": true,
+              "filterSort": true,
+              "rectangleSelection": true
+            }
+          },
+          "source_digest": "13d5cda982a91e889cb35a99ce09bc5442d7266e4429f76669492164d0b61685",
+          "responses": {
+            "delete_row": [
+              false,
+              false
+            ],
+            "clear_cell": [
+              false,
+              false
+            ]
+          }
+        },
+        "field/gridDensity": {
+          "plan": {
+            "gridDensity": "comfortable"
+          },
+          "source_digest": "04c173379fef2df0079f18aa46b17b84b8ca6085a837a256979a7760e8db4a34",
+          "responses": {
+            "delete_row": [
+              false,
+              false
+            ],
+            "clear_cell": [
+              false,
+              false
+            ]
+          }
+        },
+        "field/interactions": {
+          "plan": {
+            "interactions": {
+              "contextMenu": true,
+              "resize": true,
+              "dragReorder": true,
+              "edit": true,
+              "copyPaste": true,
+              "filterSort": true,
+              "rectangleSelection": true
+            }
+          },
+          "source_digest": "b69c48b1643d53a00b861c5a337d0260b07ff14c10957145b1916e458eaab90f",
+          "responses": {
+            "delete_row": [
+              false,
+              false
+            ],
+            "clear_cell": [
+              false,
+              false
+            ]
+          }
+        },
+        "field/menuStyle": {
+          "plan": {
+            "menuStyle": "solid"
+          },
+          "source_digest": "14bae974cd1bd3a4bfc72f79767c6c6f91f4ab9d97823718f94653d75789324d",
+          "responses": {
+            "delete_row": [
+              false,
+              false
+            ],
+            "clear_cell": [
+              false,
+              false
+            ]
+          }
+        },
+        "field/palette": {
+          "plan": {
+            "palette": "green"
+          },
+          "source_digest": "d7e888763f0bc93ea199ee6c1dbd8fcd8176d60b3cfdcd3caf8483bd46160998",
+          "responses": {
+            "delete_row": [
+              false,
+              false
+            ],
+            "clear_cell": [
+              false,
+              false
+            ]
+          }
+        },
+        "field/theme": {
+          "plan": {
+            "theme": "dark"
+          },
+          "source_digest": "028b57da8f3769fad9de4db287e749045ac19c6d98e89d7da5e145853be0a89b",
+          "responses": {
+            "delete_row": [
+              false,
+              false
+            ],
+            "clear_cell": [
+              false,
+              false
+            ]
+          }
+        }
+      },
+      "witnesses": {
+        "delete_row": [],
+        "clear_cell": []
+      }
+    },
+    "anthropic/claude-sonnet-4.5": {
+      "package_sha256": "2fdaa0ce2a4b4bb1438870a763fe30ae74a5266065ac7439df50b705cead59d1",
+      "variants": {
+        "example-0": {
+          "plan": {
+            "table_structure": {
+              "initial_rows": 2,
+              "initial_cols": 3,
+              "cell_content_pattern": "cell_x_y"
+            },
+            "features": {
+              "context_menu": true,
+              "cell_selection": true,
+              "keyboard_navigation": true,
+              "cell_editing": true,
+              "clipboard_operations": true,
+              "row_operations": true,
+              "col_operations": true,
+              "resize_rows": true,
+              "resize_cols": true,
+              "drag_reorder_rows": true,
+              "drag_reorder_cols": true,
+              "filtering": true,
+              "sorting": true,
+              "range_selection": true,
+              "mouse_drag_select": true
+            },
+            "interaction_options": {
+              "min_row_height": 40,
+              "min_col_width": 80,
+              "enable_multiselect": true,
+              "enable_edit_on_single_click": true,
+              "enable_extend_on_paste": true
+            }
+          },
+          "source_digest": "65c90bb177abffe6db9851dd51028bf063c4605f057a1c7f538136033a087175",
+          "responses": {
+            "delete_row": [
+              true,
+              true
+            ],
+            "clear_cell": [
+              true,
+              true
+            ]
+          }
+        },
+        "example-1": {
+          "plan": {
+            "table_structure": {
+              "initial_rows": 5,
+              "initial_cols": 6,
+              "cell_content_pattern": "letter_number"
+            },
+            "features": {
+              "context_menu": true,
+              "cell_selection": true,
+              "keyboard_navigation": true,
+              "cell_editing": true,
+              "clipboard_operations": true,
+              "row_operations": true,
+              "col_operations": true,
+              "resize_rows": true,
+              "resize_cols": true,
+              "drag_reorder_rows": true,
+              "drag_reorder_cols": true,
+              "filtering": true,
+              "sorting": true,
+              "range_selection": true,
+              "mouse_drag_select": true
+            },
+            "interaction_options": {
+              "min_row_height": 50,
+              "min_col_width": 100,
+              "enable_multiselect": true,
+              "enable_edit_on_single_click": false,
+              "enable_extend_on_paste": true
+            }
+          },
+          "source_digest": "f90c18c9cf9eb886dbf7906d567585664d9ca4fb05f8336c08f7b46082fef2bd",
+          "responses": {
+            "delete_row": [
+              true,
+              true
+            ],
+            "clear_cell": [
+              true,
+              true
+            ]
+          }
+        },
+        "field/interaction_options": {
+          "plan": {
+            "table_structure": {
+              "initial_rows": 2,
+              "initial_cols": 3,
+              "cell_content_pattern": "cell_x_y"
+            },
+            "features": {
+              "context_menu": true,
+              "cell_selection": true,
+              "keyboard_navigation": true,
+              "cell_editing": true,
+              "clipboard_operations": true,
+              "row_operations": true,
+              "col_operations": true,
+              "resize_rows": true,
+              "resize_cols": true,
+              "drag_reorder_rows": true,
+              "drag_reorder_cols": true,
+              "filtering": true,
+              "sorting": true,
+              "range_selection": true,
+              "mouse_drag_select": true
+            },
+            "interaction_options": {
+              "min_row_height": 50,
+              "min_col_width": 100,
+              "enable_multiselect": true,
+              "enable_edit_on_single_click": false,
+              "enable_extend_on_paste": true
+            }
+          },
+          "source_digest": "b23d0c87acdd0dd1d686f0f70ae0dcd603f8356131a862c91d4f93411a1de73b",
+          "responses": {
+            "delete_row": [
+              true,
+              true
+            ],
+            "clear_cell": [
+              true,
+              true
+            ]
+          }
+        },
+        "field/table_structure": {
+          "plan": {
+            "table_structure": {
+              "initial_rows": 5,
+              "initial_cols": 6,
+              "cell_content_pattern": "letter_number"
+            },
+            "features": {
+              "context_menu": true,
+              "cell_selection": true,
+              "keyboard_navigation": true,
+              "cell_editing": true,
+              "clipboard_operations": true,
+              "row_operations": true,
+              "col_operations": true,
+              "resize_rows": true,
+              "resize_cols": true,
+              "drag_reorder_rows": true,
+              "drag_reorder_cols": true,
+              "filtering": true,
+              "sorting": true,
+              "range_selection": true,
+              "mouse_drag_select": true
+            },
+            "interaction_options": {
+              "min_row_height": 40,
+              "min_col_width": 80,
+              "enable_multiselect": true,
+              "enable_edit_on_single_click": true,
+              "enable_extend_on_paste": true
+            }
+          },
+          "source_digest": "84140225c0cf9af733f32bdd2ec3d5d8ac14312b20f3ba2d9fcdef96c6ea9c7a",
+          "responses": {
+            "delete_row": [
+              true,
+              true
+            ],
+            "clear_cell": [
+              true,
+              true
+            ]
+          }
+        }
+      },
+      "witnesses": {
+        "delete_row": [],
+        "clear_cell": []
+      }
+    }
+  }
+}

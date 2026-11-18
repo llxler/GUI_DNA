@@ -48,6 +48,44 @@ def builder_cells(groups, endpoint):
     return [cell(baseline), *(cell(groups[b][endpoint]["plan"]) for b in BUILDERS)]
 
 
+def matched_table(studies):
+    rows = []
+    for study in studies:
+        limit = f"{study['config']['max_tokens']:,}"
+        for rep in (1, 2):
+            direct, plan = [study['groups'][f'{arm}-{rep}'] for arm in ('free', 'plan')]
+            pairs = study["paired"][str(rep)]
+            total = sum(pairs.values())
+            rows.append([study["project"], MODELS[study["model"]], limit, str(rep),
+                         f"{pairs['direct_only'] + pairs['both_pass']}/{total}",
+                         f"{pairs['plan_only'] + pairs['both_pass']}/{total}",
+                         f"{direct['cost']['settled_usd']:.3f}", f"{plan['cost']['settled_usd']:.3f}"])
+    return table("tab:matched-workflows",
+        "Matched workflow experiments on two Web-Bench projects. Each row gives both workflows the full public requirements, the same model, one preparation and five targets. Denominators count jointly observed target positions. A failed build contributes five workflow failures. USD charges include preparation and repairs. The GPT-5 canvas follow-up raised both response limits after initial construction failures. Each repetition uses fresh preparations.",
+        ["Project", "Model", "Output cap", "Repeat", "Direct", "GUI-DNA", "Direct USD", "GUI-DNA USD"], rows, wide=True)
+
+
+def behavior_table(data):
+    rows = []
+    for label, stage in [("capacity_followup","canvas-capacity-20261118"), ("model_replication","canvas-sonnet-20261118")]:
+        for rep in (1,2):
+            shots = data["canvas_controls"][label][str(rep)]
+            speed = data["canvas_speed"]["libraries"][f"{stage}/plan-{rep}"]
+            assert speed["available"] and shots["variants_unobservable"] == 0
+            n = shots["variants_tested"]
+            assert n == len(speed["rows"]) and all(None not in r["values"] for r in speed["rows"].values())
+            changes = []
+            for name, delta in speed["witnesses"].items():
+                assert all(round(x,2)==round(delta[0],2) for x in delta)
+                field = name.removeprefix("field/").replace("_", r"\_")
+                changes.append(r"\texttt{" + field + "} $" + f"{delta[0]:+.2f}" + "$")
+            rows.append([MODELS[data["canvas_pilots"][label]["model"]],str(rep),str(n),
+                         str(shots["variants_with_shooting"]),", ".join(changes)])
+    return table("tab:canvas-behavior",
+        "Public behavior probes on the four 32,000-token canvas libraries. Configurations comprise two examples and every one-field substitution from the second into the first. Shooting counts configurations in which the firing key increased the bullet count relative to a neutral key. The last column lists every field that changed the acceleration response by at least two pixels in all three seeds. Values are changes from the first example in the extra distance traveled over 96 ms with the acceleration key held. Each row describes one library.",
+        ["Builder","Repeat","Configs tested","Shoot","Field and change (px)"],rows,wide=True)
+
+
 def render(data):
     columns = ["Direct", "GUI-DNA (GPT-5)", "GUI-DNA (Sonnet)"]
     rows = [[COHORTS[c], *builder_cells(value["by_builder"], endpoint)]
@@ -73,8 +111,10 @@ def render(data):
         rows.append([MODELS[value['generator']], MODELS[value['builder']], f"{value['direct_usd']:.6f}",
                      f"{value['pipeline_usd']:.6f}", f"{value['direct_per_target_usd']:.6f}", f"{value['pipeline_per_target_usd']:.6f}"])
     appendix.append(table("tab:draw-endtoend-cost", "Draw provider receipts in USD. Every comparison covers five direct targets and five GUI-DNA targets. Pipeline cost charges the indicated builder once plus that generator's five plan chains and repairs. Baseline receipts are shared across builder comparisons, and the same library is shared across generator scenarios; do not add these scenarios into an overall study bill. This is observed accounting, not an equal-budget experiment.", ["Generator", "Builder", "Direct / 5", "Build + plans / 5", "Direct / target", "Pipeline / target"], rows, spec="llrrrr"))
-    appendix.append(r"The original draw study's complete ledger remains \$3.285408 (provider receipts \$3.28538045), including conditions outside the current comparison. This is a historical billing total, not a pooled method comparison. Micro-dollar rounding occurs per request. The present revision incurs no model calls and does not rewrite historical bills.")
-    return {"end_to_end_table.tex": main, "end_to_end_details.tex": "\n\n".join(appendix) + "\n"}
+    appendix.append(r"The original draw study's complete ledger remains \$3.285408 (provider receipts \$3.28538045), including conditions outside the current comparison. This is a historical billing total, not a pooled method comparison. Micro-dollar rounding occurs per request. These are the original draw charges.")
+    return {"matched_workflow_table.tex": matched_table([*data["canvas_pilots"].values(), data["matched_flex"]]),
+            "canvas_behavior_table.tex":behavior_table(data), "end_to_end_table.tex": main,
+            "end_to_end_details.tex": "\n\n".join(appendix) + "\n"}
 
 
 def active_sources():
@@ -108,6 +148,8 @@ def audit(data, generated):
                    "all twenty public requirements", "not a matched total-budget", "retrospective"):
         assert phrase in content, f"Missing primary result/boundary: {phrase}"
     assert not re.search(r"complete.history|full.history|history replay", content, re.I)
+    assert not re.search(r"ABSTRACT_MATCHED|SONNET_RESULTS|CANVAS_RESULTS", content)
+    assert "tab:matched-workflows" in labels
     assert "current official task file" in content
     result = {"all_passed": True, "tables": expected_labels,
               "all_active_tables_generated_and_verified": True,
