@@ -1,0 +1,1640 @@
+{
+  "study": "compatible-chart-rebuild-20261123",
+  "project": "web-bench/svg-chart",
+  "model": "gpt-6.2-astra",
+  "planner": "Qwen/Qwen2.5-0.5B-Instruct",
+  "source": "Prior GPT-5 text interface and examples. Independent, tool-free first Codex builds from the same project requirements, starter, assets and contract instructions.",
+  "conditions": "Identical Qwen first responses per target, 20 current task files. On a received invalid/uncompilable response, deployed condition uses that backend’s first example. Missing responses remain missing.",
+  "independent_builds": {
+    "contract_1": {
+      "started": "2026-11-23T05:39:38.956029+00:00",
+      "status": "accepted",
+      "model": "gpt-6.2-astra",
+      "effort": "medium",
+      "usage": [
+        {
+          "input_tokens": 21305,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 4985,
+          "reasoning_output_tokens": 0
+        }
+      ],
+      "package_sha256": "20ec373d1e813e4e4d2a91bdbbc131cae8a4adb060e052238b8076da631f1f76",
+      "finished": "2026-11-23T05:43:40.782702+00:00",
+      "evidence": {
+        "events.jsonl": "d8d821af2a7448569fe9e701c40b9137c6439d92412e478779dee5aa9d991a4c",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reply.json": "d0ba50dc22e2fe273a4d98931330a75f24db3ef640344765df79186c19929dfa"
+      }
+    },
+    "contract_2": {
+      "started": "2026-11-23T05:39:38.957688+00:00",
+      "status": "accepted",
+      "model": "gpt-6.2-astra",
+      "effort": "medium",
+      "usage": [
+        {
+          "input_tokens": 24481,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 4549,
+          "reasoning_output_tokens": 0
+        }
+      ],
+      "package_sha256": "def6f7822a5ec48b687d799ac3f12cc798b18c34d7e6c3ee3e576ac532298df7",
+      "finished": "2026-11-23T05:42:47.751539+00:00",
+      "evidence": {
+        "events.jsonl": "9dba35c2ac00e521f5c8defcd3a64d52c95a034626da4e8de635f9ab60c3fcbf",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reply.json": "57f658324ac458b43188111c75f0a7fe43be4c43232a1579a026f030edaf86df"
+      }
+    }
+  },
+  "additional_openrouter_requests": 0,
+  "additional_openrouter_cost_usd": 0,
+  "summaries": {
+    "old_gpt5": {
+      "received": 20,
+      "valid_plans": 0,
+      "compiled": 0,
+      "fallback_used": 20,
+      "strict": {
+        "passed": 0,
+        "observed": 20,
+        "planned": 20
+      },
+      "fallback_deployment": {
+        "passed": 17,
+        "observed": 20,
+        "planned": 20
+      },
+      "fixed_example_1": {
+        "passed": 17,
+        "observed": 20,
+        "planned": 20
+      }
+    },
+    "contract_1": {
+      "received": 20,
+      "valid_plans": 0,
+      "compiled": 0,
+      "fallback_used": 20,
+      "strict": {
+        "passed": 0,
+        "observed": 20,
+        "planned": 20
+      },
+      "fallback_deployment": {
+        "passed": 18,
+        "observed": 20,
+        "planned": 20
+      },
+      "fixed_example_1": {
+        "passed": 18,
+        "observed": 20,
+        "planned": 20
+      }
+    },
+    "contract_2": {
+      "received": 20,
+      "valid_plans": 0,
+      "compiled": 0,
+      "fallback_used": 20,
+      "strict": {
+        "passed": 0,
+        "observed": 20,
+        "planned": 20
+      },
+      "fallback_deployment": {
+        "passed": 18,
+        "observed": 20,
+        "planned": 20
+      },
+      "fixed_example_1": {
+        "passed": 18,
+        "observed": 20,
+        "planned": 20
+      }
+    }
+  },
+  "paired_to_old": {
+    "contract_1": {
+      "strict": {
+        "gained": [],
+        "lost": [],
+        "both_pass": [],
+        "both_fail": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "unknown": []
+      },
+      "fallback_deployment": {
+        "gained": [
+          14
+        ],
+        "lost": [],
+        "both_pass": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          11,
+          12,
+          13,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "both_fail": [
+          10,
+          15
+        ],
+        "unknown": []
+      },
+      "fixed_example_1": {
+        "gained": [
+          14
+        ],
+        "lost": [],
+        "both_pass": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          11,
+          12,
+          13,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "both_fail": [
+          10,
+          15
+        ],
+        "unknown": []
+      }
+    },
+    "contract_2": {
+      "strict": {
+        "gained": [],
+        "lost": [],
+        "both_pass": [],
+        "both_fail": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "unknown": []
+      },
+      "fallback_deployment": {
+        "gained": [
+          14
+        ],
+        "lost": [],
+        "both_pass": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          11,
+          12,
+          13,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "both_fail": [
+          10,
+          15
+        ],
+        "unknown": []
+      },
+      "fixed_example_1": {
+        "gained": [
+          14
+        ],
+        "lost": [],
+        "both_pass": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          11,
+          12,
+          13,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "both_fail": [
+          10,
+          15
+        ],
+        "unknown": []
+      }
+    }
+  },
+  "targets": {
+    "old_gpt5": [
+      {
+        "task": 1,
+        "response": true,
+        "response_sha256": "26a58baa30fb344277958bd5b72d71b51ec4b8080492cfb716f1dd7f7c1cf2e4",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "3cb0b889ffefd1432045af4d42ff622adb2a5dd685e487a046a216972f7ca0ce"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "3cb0b889ffefd1432045af4d42ff622adb2a5dd685e487a046a216972f7ca0ce"
+        }
+      },
+      {
+        "task": 2,
+        "response": true,
+        "response_sha256": "4f1e6893ec7c8ca1565ebc4a1036e2eafe1704f3e66290b18fb53eae87bd0f8e",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "5128126a6a0f9ab33d6afede8e610ff122ad18558dc78eec76e1b9fd23cc81e3"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "5128126a6a0f9ab33d6afede8e610ff122ad18558dc78eec76e1b9fd23cc81e3"
+        }
+      },
+      {
+        "task": 3,
+        "response": true,
+        "response_sha256": "37e26b450371a4525bd732e8cff5025d951539651a5344ff972899e39416630c",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "d63b978d1583057e3adef2a7cf5ad3ee92ea8abe2bb1ef84ead3a7c91fbf3066"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "d63b978d1583057e3adef2a7cf5ad3ee92ea8abe2bb1ef84ead3a7c91fbf3066"
+        }
+      },
+      {
+        "task": 4,
+        "response": true,
+        "response_sha256": "3bf063ecb8facc3192d78e1ed3eb6b741332512a805b337744a489521c9c839e",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "d3c0dab844b9783c35e45d11440756ae3964b417caefcf6b4479796248dee59d"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "d3c0dab844b9783c35e45d11440756ae3964b417caefcf6b4479796248dee59d"
+        }
+      },
+      {
+        "task": 5,
+        "response": true,
+        "response_sha256": "87de55820f6d6f3512dc785491263768b38530df3215f350b4514a3bfd0bc87b",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "fcb8459ca8e407e818b17bf2f58af3dddfd242b1f72df3211e82d168620cc52a"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "fcb8459ca8e407e818b17bf2f58af3dddfd242b1f72df3211e82d168620cc52a"
+        }
+      },
+      {
+        "task": 6,
+        "response": true,
+        "response_sha256": "c9fb5276e5367235a5d27c40e191cede6b7ca7eba0515e961bfa69d2eaeab07b",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "8bcf69aab109d7234c56d674c428ed14e69f4f2dcaf3e7143d1cb75b2f8c75f3"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "8bcf69aab109d7234c56d674c428ed14e69f4f2dcaf3e7143d1cb75b2f8c75f3"
+        }
+      },
+      {
+        "task": 7,
+        "response": true,
+        "response_sha256": "11de7b42672282312aa7eb282bc0d73bee4d3136f3840cb6f4127eac0c474461",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "1f124a2bb8be43e26782967a824f46638f7263b1de3c64a75c979a4e8fe6a217"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "1f124a2bb8be43e26782967a824f46638f7263b1de3c64a75c979a4e8fe6a217"
+        }
+      },
+      {
+        "task": 8,
+        "response": true,
+        "response_sha256": "ca03b2e3b7baa448418cb4c19a449618cd633c6742774e82af4b6b678b468fb6",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "bd989118b64016d8f7c8a95e8a183f85e3c7dd4b9df1505e5295e7a968a54916"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "bd989118b64016d8f7c8a95e8a183f85e3c7dd4b9df1505e5295e7a968a54916"
+        }
+      },
+      {
+        "task": 9,
+        "response": true,
+        "response_sha256": "5c244fea147d061c447567a6b818101894ec113925a2d2638cefe86047a35e0b",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "f1b1ffa2243a6336ed8f516ffa825855080cca9361cf63ada22c41416011903e"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "f1b1ffa2243a6336ed8f516ffa825855080cca9361cf63ada22c41416011903e"
+        }
+      },
+      {
+        "task": 10,
+        "response": true,
+        "response_sha256": "e2001b073f9d024916520e72d06184fe37c654f09956422a98c002bf7bd9fe63",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": false,
+          "report_sha256": "72c9476e973ed23b13b851b9b7191f55453ed5c0ceb672085b56f48764dc1060"
+        },
+        "fixed_example_1": {
+          "passed": false,
+          "report_sha256": "72c9476e973ed23b13b851b9b7191f55453ed5c0ceb672085b56f48764dc1060"
+        }
+      },
+      {
+        "task": 11,
+        "response": true,
+        "response_sha256": "f323822ef4f972eb816db4f99b2eb3badb6e1e3cf1b3659be39600e7c441b109",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "4b8c2d1c5cbeb6ebdaa2baaa9403d04d7a4ca97f2b5bcab56260cbca49f7c5fb"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "4b8c2d1c5cbeb6ebdaa2baaa9403d04d7a4ca97f2b5bcab56260cbca49f7c5fb"
+        }
+      },
+      {
+        "task": 12,
+        "response": true,
+        "response_sha256": "c9682de214d612e814bdb5415fec682d0fa8d0ef9b0305b7468a43176e55c896",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "07607262afc36218b352e7136f2e37513f7098e30d27d99fc7653757084bd3ec"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "07607262afc36218b352e7136f2e37513f7098e30d27d99fc7653757084bd3ec"
+        }
+      },
+      {
+        "task": 13,
+        "response": true,
+        "response_sha256": "9802de41640dc6a8f586c2c67d5fffa635aaeb67c24525d8efa42974ed1798b5",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "09f9f8d2dfe2d08529b978c860c8a38f0ae7b459d74907869ad2c73ad135c410"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "09f9f8d2dfe2d08529b978c860c8a38f0ae7b459d74907869ad2c73ad135c410"
+        }
+      },
+      {
+        "task": 14,
+        "response": true,
+        "response_sha256": "0139dcdb45255dc614db30ee7f5843a3401056e014d3ef8cbb0de6b42855aac0",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": false,
+          "report_sha256": "ace29726d6b7076c81cbc0f6dc04bd0a6a0bf3f41788d329e1eef36578d8ddf2"
+        },
+        "fixed_example_1": {
+          "passed": false,
+          "report_sha256": "ace29726d6b7076c81cbc0f6dc04bd0a6a0bf3f41788d329e1eef36578d8ddf2"
+        }
+      },
+      {
+        "task": 15,
+        "response": true,
+        "response_sha256": "0f8f9a69eab2898c7ef78b7a7546bd81a6426b4c43d6ab80fc637f266413c373",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": false,
+          "report_sha256": "d0515182c86c0fb61b3e6735b4f81b42459ea9c0b7c8c6343f3bc73cb8d4ecc1"
+        },
+        "fixed_example_1": {
+          "passed": false,
+          "report_sha256": "d0515182c86c0fb61b3e6735b4f81b42459ea9c0b7c8c6343f3bc73cb8d4ecc1"
+        }
+      },
+      {
+        "task": 16,
+        "response": true,
+        "response_sha256": "5668dd919f6e1f7b247b6bdc661834cce3cc1291e95883e62ab03186375c0fde",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "f0c97777ab3000dd39b5a2690f7de9b8ebcdb316efcdc220f2ccf0d2621248ed"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "f0c97777ab3000dd39b5a2690f7de9b8ebcdb316efcdc220f2ccf0d2621248ed"
+        }
+      },
+      {
+        "task": 17,
+        "response": true,
+        "response_sha256": "bdaa8be9acd205a0040a6b74c9956add9bff64ff1e6dd082a74d9da7f5673d0f",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "169c337f7a790e29b3f5511367225bff788ee6416f937b22217f9aa3adf3ade0"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "169c337f7a790e29b3f5511367225bff788ee6416f937b22217f9aa3adf3ade0"
+        }
+      },
+      {
+        "task": 18,
+        "response": true,
+        "response_sha256": "355690d00f415cbe4ead984f453a9d3e59b727a89944f9f8a6b64ff656efa699",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "3e2deb12bf3bcbf6cfe82d9a382a107881774066cbd2baf2b4a613294d6a5760"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "3e2deb12bf3bcbf6cfe82d9a382a107881774066cbd2baf2b4a613294d6a5760"
+        }
+      },
+      {
+        "task": 19,
+        "response": true,
+        "response_sha256": "46ed35f9eacfc5c4547d7c2b90a6ce47ee4d27e64533214ca394f14a53a70f78",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "e1e4e15ece7b9c64faaba9164f23b2970efc099c387dded31e84d0f408135409"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "e1e4e15ece7b9c64faaba9164f23b2970efc099c387dded31e84d0f408135409"
+        }
+      },
+      {
+        "task": 20,
+        "response": true,
+        "response_sha256": "5a1c3f77c1ddf8259411a623ababf75a2d9b1646b4d404712ff6d487ec20eece",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "361360efe9409ed2f91b15e699600927af7402c001db5b26baddd5b6dcac1323"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "361360efe9409ed2f91b15e699600927af7402c001db5b26baddd5b6dcac1323"
+        }
+      }
+    ],
+    "contract_1": [
+      {
+        "task": 1,
+        "response": true,
+        "response_sha256": "26a58baa30fb344277958bd5b72d71b51ec4b8080492cfb716f1dd7f7c1cf2e4",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "277ed441d244f49ebda7baa82c32db500f3c5fb47cc92946227a535542124337"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "277ed441d244f49ebda7baa82c32db500f3c5fb47cc92946227a535542124337"
+        }
+      },
+      {
+        "task": 2,
+        "response": true,
+        "response_sha256": "4f1e6893ec7c8ca1565ebc4a1036e2eafe1704f3e66290b18fb53eae87bd0f8e",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "9ad75b6f26b4205ca81b471e17c83370dd205e06302dd66e48fe6d5610a518d4"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "9ad75b6f26b4205ca81b471e17c83370dd205e06302dd66e48fe6d5610a518d4"
+        }
+      },
+      {
+        "task": 3,
+        "response": true,
+        "response_sha256": "37e26b450371a4525bd732e8cff5025d951539651a5344ff972899e39416630c",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "5e64cb9a66c335c34afa44f06e9075fafe2704960c386d1cde1145a93d0a3687"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "5e64cb9a66c335c34afa44f06e9075fafe2704960c386d1cde1145a93d0a3687"
+        }
+      },
+      {
+        "task": 4,
+        "response": true,
+        "response_sha256": "3bf063ecb8facc3192d78e1ed3eb6b741332512a805b337744a489521c9c839e",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "551a245bc2c53f80a9e136bf70fe1e6c0d9af76d1daf732a6a8cd9b783570744"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "551a245bc2c53f80a9e136bf70fe1e6c0d9af76d1daf732a6a8cd9b783570744"
+        }
+      },
+      {
+        "task": 5,
+        "response": true,
+        "response_sha256": "87de55820f6d6f3512dc785491263768b38530df3215f350b4514a3bfd0bc87b",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "cd2f717e607265c0d19b97937a42d316dd12c70f44e429528b15b0919180730c"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "cd2f717e607265c0d19b97937a42d316dd12c70f44e429528b15b0919180730c"
+        }
+      },
+      {
+        "task": 6,
+        "response": true,
+        "response_sha256": "c9fb5276e5367235a5d27c40e191cede6b7ca7eba0515e961bfa69d2eaeab07b",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "5bfebc86e64dcb38f00f46fb33636e86c7d559d77be527759bf5e25ead89c43b"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "5bfebc86e64dcb38f00f46fb33636e86c7d559d77be527759bf5e25ead89c43b"
+        }
+      },
+      {
+        "task": 7,
+        "response": true,
+        "response_sha256": "11de7b42672282312aa7eb282bc0d73bee4d3136f3840cb6f4127eac0c474461",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "6ec0ca7200fe0873a62ac8f622858af7bce50ecdb08bf849eb14a3c53fdc0ee9"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "6ec0ca7200fe0873a62ac8f622858af7bce50ecdb08bf849eb14a3c53fdc0ee9"
+        }
+      },
+      {
+        "task": 8,
+        "response": true,
+        "response_sha256": "ca03b2e3b7baa448418cb4c19a449618cd633c6742774e82af4b6b678b468fb6",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "959c812be94377bf7668a588f07511a7f0039ef5cd0db023289816a48f993555"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "959c812be94377bf7668a588f07511a7f0039ef5cd0db023289816a48f993555"
+        }
+      },
+      {
+        "task": 9,
+        "response": true,
+        "response_sha256": "5c244fea147d061c447567a6b818101894ec113925a2d2638cefe86047a35e0b",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "4585a37cd85dd8844953306e094e3b14452a8c9d8cdf7bc093071f58d78bfb46"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "4585a37cd85dd8844953306e094e3b14452a8c9d8cdf7bc093071f58d78bfb46"
+        }
+      },
+      {
+        "task": 10,
+        "response": true,
+        "response_sha256": "e2001b073f9d024916520e72d06184fe37c654f09956422a98c002bf7bd9fe63",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": false,
+          "report_sha256": "8117eb6a457fabb6645432a96d5b92fb8d7c80c6b306e0aeeddbb04cdbe4224c"
+        },
+        "fixed_example_1": {
+          "passed": false,
+          "report_sha256": "8117eb6a457fabb6645432a96d5b92fb8d7c80c6b306e0aeeddbb04cdbe4224c"
+        }
+      },
+      {
+        "task": 11,
+        "response": true,
+        "response_sha256": "f323822ef4f972eb816db4f99b2eb3badb6e1e3cf1b3659be39600e7c441b109",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "af836ee9f526e9711a603cdb28c5e867945def3d36c7c35a6bd06d203b65562b"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "af836ee9f526e9711a603cdb28c5e867945def3d36c7c35a6bd06d203b65562b"
+        }
+      },
+      {
+        "task": 12,
+        "response": true,
+        "response_sha256": "c9682de214d612e814bdb5415fec682d0fa8d0ef9b0305b7468a43176e55c896",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "8ecc50f6af8a9661870f3af789758d6da2dc01734eb7978e4a3fcbcf297f4bcb"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "8ecc50f6af8a9661870f3af789758d6da2dc01734eb7978e4a3fcbcf297f4bcb"
+        }
+      },
+      {
+        "task": 13,
+        "response": true,
+        "response_sha256": "9802de41640dc6a8f586c2c67d5fffa635aaeb67c24525d8efa42974ed1798b5",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "629218a962228b1fd77dba786f499aeb1e1fb2f00d52ddc2d76a34c33c2b1932"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "629218a962228b1fd77dba786f499aeb1e1fb2f00d52ddc2d76a34c33c2b1932"
+        }
+      },
+      {
+        "task": 14,
+        "response": true,
+        "response_sha256": "0139dcdb45255dc614db30ee7f5843a3401056e014d3ef8cbb0de6b42855aac0",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "a7360044b4a4b3ee9c2f40b76e6d87e75f7a0e707941f9f2db2ddcc5f3acf983"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "a7360044b4a4b3ee9c2f40b76e6d87e75f7a0e707941f9f2db2ddcc5f3acf983"
+        }
+      },
+      {
+        "task": 15,
+        "response": true,
+        "response_sha256": "0f8f9a69eab2898c7ef78b7a7546bd81a6426b4c43d6ab80fc637f266413c373",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": false,
+          "report_sha256": "127aec4e3ae4c2a0e9c5846979e79bf6d0d8cf622f1e5f93a945607584ead841"
+        },
+        "fixed_example_1": {
+          "passed": false,
+          "report_sha256": "127aec4e3ae4c2a0e9c5846979e79bf6d0d8cf622f1e5f93a945607584ead841"
+        }
+      },
+      {
+        "task": 16,
+        "response": true,
+        "response_sha256": "5668dd919f6e1f7b247b6bdc661834cce3cc1291e95883e62ab03186375c0fde",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "69da669267bf6a80f6f7bccfe47bc39ae0051acb62b5d80edf9755ccc1291ebc"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "69da669267bf6a80f6f7bccfe47bc39ae0051acb62b5d80edf9755ccc1291ebc"
+        }
+      },
+      {
+        "task": 17,
+        "response": true,
+        "response_sha256": "bdaa8be9acd205a0040a6b74c9956add9bff64ff1e6dd082a74d9da7f5673d0f",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "846ae032bcbdf88a4a359a43f3e7eb3a9a70a8c7cadd0f23bc9d4a5a6cdcb7b2"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "846ae032bcbdf88a4a359a43f3e7eb3a9a70a8c7cadd0f23bc9d4a5a6cdcb7b2"
+        }
+      },
+      {
+        "task": 18,
+        "response": true,
+        "response_sha256": "355690d00f415cbe4ead984f453a9d3e59b727a89944f9f8a6b64ff656efa699",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "bb7eea991792bc3b2b7d6bc652ffb0b3be292b34d56d0f8dc7e42acc80ea5cfa"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "bb7eea991792bc3b2b7d6bc652ffb0b3be292b34d56d0f8dc7e42acc80ea5cfa"
+        }
+      },
+      {
+        "task": 19,
+        "response": true,
+        "response_sha256": "46ed35f9eacfc5c4547d7c2b90a6ce47ee4d27e64533214ca394f14a53a70f78",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "ab445da40f5a1ed19dc6c8e9c27d453750705a4ba6be539052d43941a6df04e1"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "ab445da40f5a1ed19dc6c8e9c27d453750705a4ba6be539052d43941a6df04e1"
+        }
+      },
+      {
+        "task": 20,
+        "response": true,
+        "response_sha256": "5a1c3f77c1ddf8259411a623ababf75a2d9b1646b4d404712ff6d487ec20eece",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "965f71541fe28346c60f4841a696de4d90503789e3cc97353b5907ee27ec3205"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "965f71541fe28346c60f4841a696de4d90503789e3cc97353b5907ee27ec3205"
+        }
+      }
+    ],
+    "contract_2": [
+      {
+        "task": 1,
+        "response": true,
+        "response_sha256": "26a58baa30fb344277958bd5b72d71b51ec4b8080492cfb716f1dd7f7c1cf2e4",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "8f02c871373a2fc62d718c693ed5c5cb9f34c57e849d6d4b40b4ebc6642f9f22"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "8f02c871373a2fc62d718c693ed5c5cb9f34c57e849d6d4b40b4ebc6642f9f22"
+        }
+      },
+      {
+        "task": 2,
+        "response": true,
+        "response_sha256": "4f1e6893ec7c8ca1565ebc4a1036e2eafe1704f3e66290b18fb53eae87bd0f8e",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "12e173af2dde70ba7650c5d2c1eba50270c814edea26216ad28c72fa22c38cf2"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "12e173af2dde70ba7650c5d2c1eba50270c814edea26216ad28c72fa22c38cf2"
+        }
+      },
+      {
+        "task": 3,
+        "response": true,
+        "response_sha256": "37e26b450371a4525bd732e8cff5025d951539651a5344ff972899e39416630c",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "d7fa36ab2515b1533319f572413745e80e3e4187bdcf99f449f5a2dc35c45b2d"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "d7fa36ab2515b1533319f572413745e80e3e4187bdcf99f449f5a2dc35c45b2d"
+        }
+      },
+      {
+        "task": 4,
+        "response": true,
+        "response_sha256": "3bf063ecb8facc3192d78e1ed3eb6b741332512a805b337744a489521c9c839e",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "a6bf6462b09136f33067703a526b8917fae81c388accccc4f81b4a17bd74ddad"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "a6bf6462b09136f33067703a526b8917fae81c388accccc4f81b4a17bd74ddad"
+        }
+      },
+      {
+        "task": 5,
+        "response": true,
+        "response_sha256": "87de55820f6d6f3512dc785491263768b38530df3215f350b4514a3bfd0bc87b",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "59e61a438571b6519619deb6f410e649aa6dd3e7ea41d746504ef8c2201f255e"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "59e61a438571b6519619deb6f410e649aa6dd3e7ea41d746504ef8c2201f255e"
+        }
+      },
+      {
+        "task": 6,
+        "response": true,
+        "response_sha256": "c9fb5276e5367235a5d27c40e191cede6b7ca7eba0515e961bfa69d2eaeab07b",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "492bc6d9c24dc297f989dc18b28593cdec1925177f6ab4c963a4e3ec047f7934"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "492bc6d9c24dc297f989dc18b28593cdec1925177f6ab4c963a4e3ec047f7934"
+        }
+      },
+      {
+        "task": 7,
+        "response": true,
+        "response_sha256": "11de7b42672282312aa7eb282bc0d73bee4d3136f3840cb6f4127eac0c474461",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "d51ebf3f8b6b26a34763003c28483f95935bc2d87d977f1cf859a401b1be74db"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "d51ebf3f8b6b26a34763003c28483f95935bc2d87d977f1cf859a401b1be74db"
+        }
+      },
+      {
+        "task": 8,
+        "response": true,
+        "response_sha256": "ca03b2e3b7baa448418cb4c19a449618cd633c6742774e82af4b6b678b468fb6",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "77cd6a70d7fdb8fb96211ebec32320b80684ebbfa85a435314e16b1efc549c44"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "77cd6a70d7fdb8fb96211ebec32320b80684ebbfa85a435314e16b1efc549c44"
+        }
+      },
+      {
+        "task": 9,
+        "response": true,
+        "response_sha256": "5c244fea147d061c447567a6b818101894ec113925a2d2638cefe86047a35e0b",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "e88c3fadc7ce2d9ffa13072b2fd6a1b9ced8c66fd7d98c68d93831775c393757"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "e88c3fadc7ce2d9ffa13072b2fd6a1b9ced8c66fd7d98c68d93831775c393757"
+        }
+      },
+      {
+        "task": 10,
+        "response": true,
+        "response_sha256": "e2001b073f9d024916520e72d06184fe37c654f09956422a98c002bf7bd9fe63",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": false,
+          "report_sha256": "e6a38e6370408aa9c198b82a18e8314ea57126edabec1a1ba78d7bdbe5126ea2"
+        },
+        "fixed_example_1": {
+          "passed": false,
+          "report_sha256": "e6a38e6370408aa9c198b82a18e8314ea57126edabec1a1ba78d7bdbe5126ea2"
+        }
+      },
+      {
+        "task": 11,
+        "response": true,
+        "response_sha256": "f323822ef4f972eb816db4f99b2eb3badb6e1e3cf1b3659be39600e7c441b109",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "c989fea73825aee9523819d25a1d4bdc37c39e6a39ff3a04a7317485ff1f7ab6"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "c989fea73825aee9523819d25a1d4bdc37c39e6a39ff3a04a7317485ff1f7ab6"
+        }
+      },
+      {
+        "task": 12,
+        "response": true,
+        "response_sha256": "c9682de214d612e814bdb5415fec682d0fa8d0ef9b0305b7468a43176e55c896",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "0b6e24137b3e97527382f4ac906251e747679a3fef3379bb47c33e47ca1dfa05"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "0b6e24137b3e97527382f4ac906251e747679a3fef3379bb47c33e47ca1dfa05"
+        }
+      },
+      {
+        "task": 13,
+        "response": true,
+        "response_sha256": "9802de41640dc6a8f586c2c67d5fffa635aaeb67c24525d8efa42974ed1798b5",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "e9fb6b24dce5c4382df868e7db9b29669796060f541a2655143045fe1a1ae3cf"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "e9fb6b24dce5c4382df868e7db9b29669796060f541a2655143045fe1a1ae3cf"
+        }
+      },
+      {
+        "task": 14,
+        "response": true,
+        "response_sha256": "0139dcdb45255dc614db30ee7f5843a3401056e014d3ef8cbb0de6b42855aac0",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "d2db5e6c7651d1b9528d54f146171a36f7c0b7a92be9b70372811e16f604d502"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "d2db5e6c7651d1b9528d54f146171a36f7c0b7a92be9b70372811e16f604d502"
+        }
+      },
+      {
+        "task": 15,
+        "response": true,
+        "response_sha256": "0f8f9a69eab2898c7ef78b7a7546bd81a6426b4c43d6ab80fc637f266413c373",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": false,
+          "report_sha256": "1e652b7ef2392695d977bebab8e54ca9135ce42c78db57403329f58d787ceaba"
+        },
+        "fixed_example_1": {
+          "passed": false,
+          "report_sha256": "1e652b7ef2392695d977bebab8e54ca9135ce42c78db57403329f58d787ceaba"
+        }
+      },
+      {
+        "task": 16,
+        "response": true,
+        "response_sha256": "5668dd919f6e1f7b247b6bdc661834cce3cc1291e95883e62ab03186375c0fde",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "3f1455219476d36fdb942bfc12e1b834d0e54e8308096b31048b40299f764973"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "3f1455219476d36fdb942bfc12e1b834d0e54e8308096b31048b40299f764973"
+        }
+      },
+      {
+        "task": 17,
+        "response": true,
+        "response_sha256": "bdaa8be9acd205a0040a6b74c9956add9bff64ff1e6dd082a74d9da7f5673d0f",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "6750bc3823ee62ac7e264edce60917f642967fbf0d2df77c6d6aa2b4335df35d"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "6750bc3823ee62ac7e264edce60917f642967fbf0d2df77c6d6aa2b4335df35d"
+        }
+      },
+      {
+        "task": 18,
+        "response": true,
+        "response_sha256": "355690d00f415cbe4ead984f453a9d3e59b727a89944f9f8a6b64ff656efa699",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "e28483dff4ce84596ec3e2d84fd3dc259cb55d5d586441f9ffd14ebc12a39761"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "e28483dff4ce84596ec3e2d84fd3dc259cb55d5d586441f9ffd14ebc12a39761"
+        }
+      },
+      {
+        "task": 19,
+        "response": true,
+        "response_sha256": "46ed35f9eacfc5c4547d7c2b90a6ce47ee4d27e64533214ca394f14a53a70f78",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "4a1d1eb87f3aacaa770769f1f1b09fb449d1ac139335ce2b959c221c573f4a27"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "4a1d1eb87f3aacaa770769f1f1b09fb449d1ac139335ce2b959c221c573f4a27"
+        }
+      },
+      {
+        "task": 20,
+        "response": true,
+        "response_sha256": "5a1c3f77c1ddf8259411a623ababf75a2d9b1646b4d404712ff6d487ec20eece",
+        "valid_plan": false,
+        "fallback": true,
+        "fixed_same_page": false,
+        "compiled": false,
+        "page_sha256": null,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "fallback_deployment": {
+          "passed": true,
+          "report_sha256": "096327b5514787ce0ec7d69dac107812e024df9f6da146f9f757f0db3448114b"
+        },
+        "fixed_example_1": {
+          "passed": true,
+          "report_sha256": "096327b5514787ce0ec7d69dac107812e024df9f6da146f9f757f0db3448114b"
+        }
+      }
+    ]
+  },
+  "repeated_backend_improvement": false,
+  "qualification": "Old versus new changes builder model and implementation. Two generated libraries reuse the same tasks and responses. The historical Mistral 3/20 and the old fixed first example are distinct endpoints.",
+  "hashes": {
+    "artifacts/compatible-chart-rebuild-20261123/registered.json": "50c85a8aba9d8be83c0c0379a1f9c0e585b682bc0450c5a7cb8c1028ec1f5aba",
+    "artifacts/compatible-chart-rebuild-20261123/sealed.json": "dbd9d725a0d820ab2d94aeda4b5317189afa14c0ee1f1c25c07d6bc52390b9be",
+    "artifacts/compatible-chart-rebuild-20261123/fixed-pages.json": "cf6b8578495c8fc6ff2f97a24df1586efe7a986f3eb1fa92915a0c36f7633803",
+    "artifacts/compatible-chart-rebuild-20261123/candidates.json": "90bf3654d00a686dfded8b4f81b642a79d792e78d7090cc44534de5a2adf8e8b",
+    "artifacts/svg-chart-compact-local-20261123/local-generation.json": "152523f8946bd62f70939606d1d300ec57a1c43dda13eb4b2036d02dc56acc2c"
+  }
+}

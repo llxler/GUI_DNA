@@ -1,0 +1,1331 @@
+{
+  "study": "compatible-chart-rebuild-fences-20261123",
+  "supplementary": true,
+  "planner": "Qwen/Qwen2.5-0.5B-Instruct",
+  "rule": "After first fenced output was observed and before grading new backends, accept one complete enclosing JSON Markdown fence and apply the same strict typed validator.",
+  "summaries": {
+    "old_gpt5": {
+      "new_valid": 10,
+      "valid": 10,
+      "fallback_used": 10,
+      "one_fence": {
+        "passed": 8,
+        "observed": 20,
+        "planned": 20
+      },
+      "one_fence_then_example": {
+        "passed": 16,
+        "observed": 20,
+        "planned": 20
+      }
+    },
+    "contract_1": {
+      "new_valid": 10,
+      "valid": 10,
+      "fallback_used": 10,
+      "one_fence": {
+        "passed": 8,
+        "observed": 20,
+        "planned": 20
+      },
+      "one_fence_then_example": {
+        "passed": 17,
+        "observed": 20,
+        "planned": 20
+      }
+    },
+    "contract_2": {
+      "new_valid": 10,
+      "valid": 10,
+      "fallback_used": 10,
+      "one_fence": {
+        "passed": 8,
+        "observed": 20,
+        "planned": 20
+      },
+      "one_fence_then_example": {
+        "passed": 17,
+        "observed": 20,
+        "planned": 20
+      }
+    }
+  },
+  "targets": {
+    "old_gpt5": [
+      {
+        "task": 1,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "27f7be2899fbbba6a9d7ee0249ff49d405fce0c3866e068f423ae6333f611cfd"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "27f7be2899fbbba6a9d7ee0249ff49d405fce0c3866e068f423ae6333f611cfd"
+        }
+      },
+      {
+        "task": 2,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "4ce7c9626880d40494f4440ef045ba4db6711c856f9f64a6b2804b5193554863"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "4ce7c9626880d40494f4440ef045ba4db6711c856f9f64a6b2804b5193554863"
+        }
+      },
+      {
+        "task": 3,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "d63b978d1583057e3adef2a7cf5ad3ee92ea8abe2bb1ef84ead3a7c91fbf3066"
+        }
+      },
+      {
+        "task": 4,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "d3c0dab844b9783c35e45d11440756ae3964b417caefcf6b4479796248dee59d"
+        }
+      },
+      {
+        "task": 5,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "fcb8459ca8e407e818b17bf2f58af3dddfd242b1f72df3211e82d168620cc52a"
+        }
+      },
+      {
+        "task": 6,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "8bcf69aab109d7234c56d674c428ed14e69f4f2dcaf3e7143d1cb75b2f8c75f3"
+        }
+      },
+      {
+        "task": 7,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "1f124a2bb8be43e26782967a824f46638f7263b1de3c64a75c979a4e8fe6a217"
+        }
+      },
+      {
+        "task": 8,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": "7e741392197cf596b2ff101cbdac929536e5f6ba984b044de7bcd19442ecc84c"
+        },
+        "one_fence_then_example": {
+          "passed": false,
+          "report_sha256": "7e741392197cf596b2ff101cbdac929536e5f6ba984b044de7bcd19442ecc84c"
+        }
+      },
+      {
+        "task": 9,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "f1b1ffa2243a6336ed8f516ffa825855080cca9361cf63ada22c41416011903e"
+        }
+      },
+      {
+        "task": 10,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": "77c61b42877a8e7711b78e4a940a5f406ab016307d9373c5609b8c49e798f6dd"
+        },
+        "one_fence_then_example": {
+          "passed": false,
+          "report_sha256": "77c61b42877a8e7711b78e4a940a5f406ab016307d9373c5609b8c49e798f6dd"
+        }
+      },
+      {
+        "task": 11,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "a722f6ab666bca14f0f8023694c295586a7e188354dbddc01ece93dca41d95c4"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "a722f6ab666bca14f0f8023694c295586a7e188354dbddc01ece93dca41d95c4"
+        }
+      },
+      {
+        "task": 12,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "07607262afc36218b352e7136f2e37513f7098e30d27d99fc7653757084bd3ec"
+        }
+      },
+      {
+        "task": 13,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "09f9f8d2dfe2d08529b978c860c8a38f0ae7b459d74907869ad2c73ad135c410"
+        }
+      },
+      {
+        "task": 14,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": false,
+          "report_sha256": "ace29726d6b7076c81cbc0f6dc04bd0a6a0bf3f41788d329e1eef36578d8ddf2"
+        }
+      },
+      {
+        "task": 15,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": false,
+          "report_sha256": "d0515182c86c0fb61b3e6735b4f81b42459ea9c0b7c8c6343f3bc73cb8d4ecc1"
+        }
+      },
+      {
+        "task": 16,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "d23f9208a55232c621f7b1733ab20e82aa6a06c1df4c8902cfd72496963f637b"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "d23f9208a55232c621f7b1733ab20e82aa6a06c1df4c8902cfd72496963f637b"
+        }
+      },
+      {
+        "task": 17,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "cecd65e792fe322907d485d53aa517018883cc6d407699906520684fc8d7f08d"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "cecd65e792fe322907d485d53aa517018883cc6d407699906520684fc8d7f08d"
+        }
+      },
+      {
+        "task": 18,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "17ffea81f8be0a5827c4a9ca40a763c352fdee62c49e709b5e838f0c113e55a3"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "17ffea81f8be0a5827c4a9ca40a763c352fdee62c49e709b5e838f0c113e55a3"
+        }
+      },
+      {
+        "task": 19,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "939c672c237f7eaed745f33f013625df65dd708b7475a174133e5f0cd66c9c0b"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "939c672c237f7eaed745f33f013625df65dd708b7475a174133e5f0cd66c9c0b"
+        }
+      },
+      {
+        "task": 20,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "cd826553bc26276013bf408833830bdbbe5db2b81abf78fdc572bae4d4d55cda"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "cd826553bc26276013bf408833830bdbbe5db2b81abf78fdc572bae4d4d55cda"
+        }
+      }
+    ],
+    "contract_1": [
+      {
+        "task": 1,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "28c7695694dcb9ebc97b01e785c6df02000f08afc32d140421474de4aee47457"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "28c7695694dcb9ebc97b01e785c6df02000f08afc32d140421474de4aee47457"
+        }
+      },
+      {
+        "task": 2,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "8c8110c4241a4ad7716a5c848dae0762a90a82f90f5852237f2f0779f9078303"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "8c8110c4241a4ad7716a5c848dae0762a90a82f90f5852237f2f0779f9078303"
+        }
+      },
+      {
+        "task": 3,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "5e64cb9a66c335c34afa44f06e9075fafe2704960c386d1cde1145a93d0a3687"
+        }
+      },
+      {
+        "task": 4,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "551a245bc2c53f80a9e136bf70fe1e6c0d9af76d1daf732a6a8cd9b783570744"
+        }
+      },
+      {
+        "task": 5,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "cd2f717e607265c0d19b97937a42d316dd12c70f44e429528b15b0919180730c"
+        }
+      },
+      {
+        "task": 6,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "5bfebc86e64dcb38f00f46fb33636e86c7d559d77be527759bf5e25ead89c43b"
+        }
+      },
+      {
+        "task": 7,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "6ec0ca7200fe0873a62ac8f622858af7bce50ecdb08bf849eb14a3c53fdc0ee9"
+        }
+      },
+      {
+        "task": 8,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": "9f978ec0447ba32aa9453e9865d183a78412200fefa9cb1adacf2a2985321cfd"
+        },
+        "one_fence_then_example": {
+          "passed": false,
+          "report_sha256": "9f978ec0447ba32aa9453e9865d183a78412200fefa9cb1adacf2a2985321cfd"
+        }
+      },
+      {
+        "task": 9,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "4585a37cd85dd8844953306e094e3b14452a8c9d8cdf7bc093071f58d78bfb46"
+        }
+      },
+      {
+        "task": 10,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": "5b852b26699f267b87848c626a24d8e61afcd6385233e284a9444423de3b9595"
+        },
+        "one_fence_then_example": {
+          "passed": false,
+          "report_sha256": "5b852b26699f267b87848c626a24d8e61afcd6385233e284a9444423de3b9595"
+        }
+      },
+      {
+        "task": 11,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "c05c23267d4e8eabeff060ea2b5b4c68bca876667c7e2236174871987926d702"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "c05c23267d4e8eabeff060ea2b5b4c68bca876667c7e2236174871987926d702"
+        }
+      },
+      {
+        "task": 12,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "8ecc50f6af8a9661870f3af789758d6da2dc01734eb7978e4a3fcbcf297f4bcb"
+        }
+      },
+      {
+        "task": 13,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "629218a962228b1fd77dba786f499aeb1e1fb2f00d52ddc2d76a34c33c2b1932"
+        }
+      },
+      {
+        "task": 14,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "a7360044b4a4b3ee9c2f40b76e6d87e75f7a0e707941f9f2db2ddcc5f3acf983"
+        }
+      },
+      {
+        "task": 15,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": false,
+          "report_sha256": "127aec4e3ae4c2a0e9c5846979e79bf6d0d8cf622f1e5f93a945607584ead841"
+        }
+      },
+      {
+        "task": 16,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "26f4761ab2360982273a403492ec95a720b0ddc0503e4d7d0341ca431676658c"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "26f4761ab2360982273a403492ec95a720b0ddc0503e4d7d0341ca431676658c"
+        }
+      },
+      {
+        "task": 17,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "d679cf8808866e77939712da2f9e70171cfbaf0f75a1fe40555f48c786ede00a"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "d679cf8808866e77939712da2f9e70171cfbaf0f75a1fe40555f48c786ede00a"
+        }
+      },
+      {
+        "task": 18,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "56a38a9ab8b3c29d511ab67b3cfe50bef67774627a9248632b9a19d83820b591"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "56a38a9ab8b3c29d511ab67b3cfe50bef67774627a9248632b9a19d83820b591"
+        }
+      },
+      {
+        "task": 19,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "521d5365fa37523859225fdcab08e1317c53d76e1d8e282afc7cae8c4d466c91"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "521d5365fa37523859225fdcab08e1317c53d76e1d8e282afc7cae8c4d466c91"
+        }
+      },
+      {
+        "task": 20,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "611119956195364599223ab716d3faa218a0e97439713b3b6d162647987f453b"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "611119956195364599223ab716d3faa218a0e97439713b3b6d162647987f453b"
+        }
+      }
+    ],
+    "contract_2": [
+      {
+        "task": 1,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "8dd18afea0fe6f1f49a70587ebe8a566e825f770fa7fba1a017355523f625416"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "8dd18afea0fe6f1f49a70587ebe8a566e825f770fa7fba1a017355523f625416"
+        }
+      },
+      {
+        "task": 2,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "e6d4782fea02f803a6a66b4a1bb6af20b95c485048be696712afdcd3679222d0"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "e6d4782fea02f803a6a66b4a1bb6af20b95c485048be696712afdcd3679222d0"
+        }
+      },
+      {
+        "task": 3,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "d7fa36ab2515b1533319f572413745e80e3e4187bdcf99f449f5a2dc35c45b2d"
+        }
+      },
+      {
+        "task": 4,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "a6bf6462b09136f33067703a526b8917fae81c388accccc4f81b4a17bd74ddad"
+        }
+      },
+      {
+        "task": 5,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "59e61a438571b6519619deb6f410e649aa6dd3e7ea41d746504ef8c2201f255e"
+        }
+      },
+      {
+        "task": 6,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "492bc6d9c24dc297f989dc18b28593cdec1925177f6ab4c963a4e3ec047f7934"
+        }
+      },
+      {
+        "task": 7,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "d51ebf3f8b6b26a34763003c28483f95935bc2d87d977f1cf859a401b1be74db"
+        }
+      },
+      {
+        "task": 8,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": "557b134e45de9ce088131b67f954cc63e54a074a648dfa5eb8818544be381fd7"
+        },
+        "one_fence_then_example": {
+          "passed": false,
+          "report_sha256": "557b134e45de9ce088131b67f954cc63e54a074a648dfa5eb8818544be381fd7"
+        }
+      },
+      {
+        "task": 9,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "e88c3fadc7ce2d9ffa13072b2fd6a1b9ced8c66fd7d98c68d93831775c393757"
+        }
+      },
+      {
+        "task": 10,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": "5248187ae01205709f28241dd952815489db6ea82c695c2aae6a9d4c01e0d65f"
+        },
+        "one_fence_then_example": {
+          "passed": false,
+          "report_sha256": "5248187ae01205709f28241dd952815489db6ea82c695c2aae6a9d4c01e0d65f"
+        }
+      },
+      {
+        "task": 11,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "59b9c9f8ba8ad38ddb8b86070674535f79da6456fb607c0440adeed82545554c"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "59b9c9f8ba8ad38ddb8b86070674535f79da6456fb607c0440adeed82545554c"
+        }
+      },
+      {
+        "task": 12,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "0b6e24137b3e97527382f4ac906251e747679a3fef3379bb47c33e47ca1dfa05"
+        }
+      },
+      {
+        "task": 13,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "e9fb6b24dce5c4382df868e7db9b29669796060f541a2655143045fe1a1ae3cf"
+        }
+      },
+      {
+        "task": 14,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "d2db5e6c7651d1b9528d54f146171a36f7c0b7a92be9b70372811e16f604d502"
+        }
+      },
+      {
+        "task": 15,
+        "action": "still_invalid",
+        "valid_after_unwrap": false,
+        "fallback_used": true,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence_then_example": {
+          "passed": false,
+          "report_sha256": "1e652b7ef2392695d977bebab8e54ca9135ce42c78db57403329f58d787ceaba"
+        }
+      },
+      {
+        "task": 16,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "8a897ba2169a9910c374cff0ae66082bdc16b3a69b8d5839d038e7e27867b2ca"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "8a897ba2169a9910c374cff0ae66082bdc16b3a69b8d5839d038e7e27867b2ca"
+        }
+      },
+      {
+        "task": 17,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "bdb12701f896385775830a63f63b43405768c123e2207312c499a12547c6efe6"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "bdb12701f896385775830a63f63b43405768c123e2207312c499a12547c6efe6"
+        }
+      },
+      {
+        "task": 18,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "8a834f7e3e7f03e06396f26d89e9d0d43be73786c61bbc1fb58f6b1ee9d882c4"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "8a834f7e3e7f03e06396f26d89e9d0d43be73786c61bbc1fb58f6b1ee9d882c4"
+        }
+      },
+      {
+        "task": 19,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "5bf758cfdb7768f1de5e13413bc51523eeeb1270fc11b6b6a44a46fb870ddac0"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "5bf758cfdb7768f1de5e13413bc51523eeeb1270fc11b6b6a44a46fb870ddac0"
+        }
+      },
+      {
+        "task": 20,
+        "action": "new_valid",
+        "valid_after_unwrap": true,
+        "fallback_used": false,
+        "response": true,
+        "strict": {
+          "passed": false,
+          "report_sha256": null
+        },
+        "one_fence": {
+          "passed": true,
+          "report_sha256": "a45e953d29ab5978ae919330bbc55c71203235808625cdf73bccbca118bac700"
+        },
+        "one_fence_then_example": {
+          "passed": true,
+          "report_sha256": "a45e953d29ab5978ae919330bbc55c71203235808625cdf73bccbca118bac700"
+        }
+      }
+    ]
+  },
+  "paired_to_old": {
+    "contract_1": {
+      "one_fence": {
+        "gained": [],
+        "lost": [],
+        "both_pass": [
+          1,
+          2,
+          11,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "both_fail": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          12,
+          13,
+          14,
+          15
+        ],
+        "unknown": []
+      },
+      "one_fence_then_example": {
+        "gained": [
+          14
+        ],
+        "lost": [],
+        "both_pass": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9,
+          11,
+          12,
+          13,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "both_fail": [
+          8,
+          10,
+          15
+        ],
+        "unknown": []
+      }
+    },
+    "contract_2": {
+      "one_fence": {
+        "gained": [],
+        "lost": [],
+        "both_pass": [
+          1,
+          2,
+          11,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "both_fail": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          12,
+          13,
+          14,
+          15
+        ],
+        "unknown": []
+      },
+      "one_fence_then_example": {
+        "gained": [
+          14
+        ],
+        "lost": [],
+        "both_pass": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9,
+          11,
+          12,
+          13,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "both_fail": [
+          8,
+          10,
+          15
+        ],
+        "unknown": []
+      }
+    }
+  },
+  "sha256": {
+    "artifacts/compatible-chart-rebuild-20261123/one-fence/registered.json": "d6b660a85cec7b9d282b3239c0111957f9ab4262905b2cf00e8ea3a07bac124c",
+    "artifacts/compatible-chart-rebuild-20261123/one-fence/candidates.json": "3313772d1ebd2e619e105c00c1877b2a72706fcee3e18af9f243b2c963e2a5d0",
+    "studies/results/compatible-chart-rebuild-20261123.json": "dff5f7faa77b9451c761eec14008a077513899f7792bf7fda4ac95f5d923edfc",
+    "artifacts/svg-chart-local-fences-20261123/compact/results.json": "45c9e7e195679e4fb7fe4e67ef234c99428238f5a83bb9bdfeba2ff1673bb770"
+  }
+}

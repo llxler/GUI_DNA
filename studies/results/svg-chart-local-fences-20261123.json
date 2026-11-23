@@ -1,0 +1,360 @@
+{
+  "project": "web-bench/svg-chart",
+  "local_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "local_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "freeze_sha256": "25806312bb4421498561efc06ffa6d42405428635f43ed2f3cf2264b1ab2f2f3",
+  "arms": {
+    "compact": {
+      "responses": 20,
+      "actions": {
+        "new_valid": 10,
+        "still_invalid": 10
+      },
+      "valid_with_fences": 10,
+      "passes": {
+        "strict": 0,
+        "fence_enabled": 8,
+        "fence_plus_default": 16
+      },
+      "rows": [
+        {
+          "task": 1,
+          "response": true,
+          "strict": false,
+          "action": "new_valid",
+          "fence_enabled": true,
+          "fence_plus_default": true
+        },
+        {
+          "task": 2,
+          "response": true,
+          "strict": false,
+          "action": "new_valid",
+          "fence_enabled": true,
+          "fence_plus_default": true
+        },
+        {
+          "task": 3,
+          "response": true,
+          "strict": false,
+          "action": "still_invalid",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 4,
+          "response": true,
+          "strict": false,
+          "action": "still_invalid",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 5,
+          "response": true,
+          "strict": false,
+          "action": "still_invalid",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 6,
+          "response": true,
+          "strict": false,
+          "action": "still_invalid",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 7,
+          "response": true,
+          "strict": false,
+          "action": "still_invalid",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 8,
+          "response": true,
+          "strict": false,
+          "action": "new_valid",
+          "fence_enabled": false,
+          "fence_plus_default": false
+        },
+        {
+          "task": 9,
+          "response": true,
+          "strict": false,
+          "action": "still_invalid",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 10,
+          "response": true,
+          "strict": false,
+          "action": "new_valid",
+          "fence_enabled": false,
+          "fence_plus_default": false
+        },
+        {
+          "task": 11,
+          "response": true,
+          "strict": false,
+          "action": "new_valid",
+          "fence_enabled": true,
+          "fence_plus_default": true
+        },
+        {
+          "task": 12,
+          "response": true,
+          "strict": false,
+          "action": "still_invalid",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 13,
+          "response": true,
+          "strict": false,
+          "action": "still_invalid",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 14,
+          "response": true,
+          "strict": false,
+          "action": "still_invalid",
+          "fence_enabled": false,
+          "fence_plus_default": false
+        },
+        {
+          "task": 15,
+          "response": true,
+          "strict": false,
+          "action": "still_invalid",
+          "fence_enabled": false,
+          "fence_plus_default": false
+        },
+        {
+          "task": 16,
+          "response": true,
+          "strict": false,
+          "action": "new_valid",
+          "fence_enabled": true,
+          "fence_plus_default": true
+        },
+        {
+          "task": 17,
+          "response": true,
+          "strict": false,
+          "action": "new_valid",
+          "fence_enabled": true,
+          "fence_plus_default": true
+        },
+        {
+          "task": 18,
+          "response": true,
+          "strict": false,
+          "action": "new_valid",
+          "fence_enabled": true,
+          "fence_plus_default": true
+        },
+        {
+          "task": 19,
+          "response": true,
+          "strict": false,
+          "action": "new_valid",
+          "fence_enabled": true,
+          "fence_plus_default": true
+        },
+        {
+          "task": 20,
+          "response": true,
+          "strict": false,
+          "action": "new_valid",
+          "fence_enabled": true,
+          "fence_plus_default": true
+        }
+      ],
+      "candidates_sha256": "f68b09b03008b8c8c0cc402ebc1d7bef21ce91b67ef9a6d7ed03991f6f17adff"
+    },
+    "full": {
+      "responses": 20,
+      "actions": {
+        "no_single_fence": 20
+      },
+      "valid_with_fences": 0,
+      "passes": {
+        "strict": 0,
+        "fence_enabled": 0,
+        "fence_plus_default": 17
+      },
+      "rows": [
+        {
+          "task": 1,
+          "response": true,
+          "strict": false,
+          "action": "no_single_fence",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 2,
+          "response": true,
+          "strict": false,
+          "action": "no_single_fence",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 3,
+          "response": true,
+          "strict": false,
+          "action": "no_single_fence",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 4,
+          "response": true,
+          "strict": false,
+          "action": "no_single_fence",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 5,
+          "response": true,
+          "strict": false,
+          "action": "no_single_fence",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 6,
+          "response": true,
+          "strict": false,
+          "action": "no_single_fence",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 7,
+          "response": true,
+          "strict": false,
+          "action": "no_single_fence",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 8,
+          "response": true,
+          "strict": false,
+          "action": "no_single_fence",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 9,
+          "response": true,
+          "strict": false,
+          "action": "no_single_fence",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 10,
+          "response": true,
+          "strict": false,
+          "action": "no_single_fence",
+          "fence_enabled": false,
+          "fence_plus_default": false
+        },
+        {
+          "task": 11,
+          "response": true,
+          "strict": false,
+          "action": "no_single_fence",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 12,
+          "response": true,
+          "strict": false,
+          "action": "no_single_fence",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 13,
+          "response": true,
+          "strict": false,
+          "action": "no_single_fence",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 14,
+          "response": true,
+          "strict": false,
+          "action": "no_single_fence",
+          "fence_enabled": false,
+          "fence_plus_default": false
+        },
+        {
+          "task": 15,
+          "response": true,
+          "strict": false,
+          "action": "no_single_fence",
+          "fence_enabled": false,
+          "fence_plus_default": false
+        },
+        {
+          "task": 16,
+          "response": true,
+          "strict": false,
+          "action": "no_single_fence",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 17,
+          "response": true,
+          "strict": false,
+          "action": "no_single_fence",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 18,
+          "response": true,
+          "strict": false,
+          "action": "no_single_fence",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 19,
+          "response": true,
+          "strict": false,
+          "action": "no_single_fence",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        },
+        {
+          "task": 20,
+          "response": true,
+          "strict": false,
+          "action": "no_single_fence",
+          "fence_enabled": false,
+          "fence_plus_default": true
+        }
+      ],
+      "candidates_sha256": "d9e037286c6c99911645f6f3d9b5fc8f6244fe10cd454e622b5a976813c90df3"
+    }
+  },
+  "interpretation": "A sensitivity prespecified after inspecting a fenced first local compact response, before official local candidate scoring."
+}

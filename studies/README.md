@@ -1,34 +1,31 @@
-# GUI-DNA Research Studies
+# GUI-DNA 论文研究
 
-本目录保存公开基准上的实验实现、冻结协议和可复算分析。工程回归测试在 [`tests/`](../tests/README.md)，本目录不再称作测试目录。历史 `test/...` 清单通过根目录兼容链接解析；冻结文件中的旧路径和方法名保持原样。
+`studies/` 保存论文的实验协议、生成与评分代码，以及可核验的结果。两个研究入口分别按研究问题和基准项目组织。
 
-## 当前论文入口
+| 研究入口 | 可以查到什么 |
+| --- | --- |
+| [公开需求建库与迁移](public_library_transfer/README.md) | 独立建库、无库生成、逐题配置与固定首例的配对结果。涵盖 Web-Bench、TodoMVC、WebApp1K-Duo，以及已登记的补充实验。 |
+| [Web-Bench 项目研究](webbench/README.md) | 按项目查找组件来源、库接口、可表达行为、配置穷举、官方断言与控制页诊断。 |
 
-- [研究设计与主比较](../docs/method.md)：AI 建库＋GUI-DNA 对无库代码。
-- [主比较 JSON](results/end_to_end.json)：按建库者分列，项目/目标生成模型另分层；共用唯一基线，每组目标和分母一致，当前任务成绩与建库费用分别报告；`free_lib` 只在历史记录中。
-- [重算与复现](../docs/reproducibility.md)、[匹配研究设计](../docs/end_to_end_protocol.md)、[任务清单](../docs/roadmap.md)。
+公开汇总位于 [results/](results)。Web-Bench 的通过数表示候选通过当前任务文件中的全部官方断言。比较时按项目、目标范围、建库者及部署模型读取同一组配对。完整二十项和五个里程碑的结果分别报告。[评分与数据边界](../docs/method.md)
 
 ```bash
-uv run python -m studies.end_to_end --check
-uv run python -m studies.paper_end_to_end       # 需要本地论文源
+uv run python -m studies.public_library_transfer --check
 ```
 
-## 实验索引
+## 既有研究与协议
 
-| 路径 | 作用 | 当前报告范围 |
-|---|---|---|
-| `interface_blind/` | Web-Bench dom1/form 的模型建库和整页生成 | `free` 与 `plan` |
-| `webbench_expand/` | calculator/table/bom 的模型建库和生成 | `free` 与 `plan`；无无库组的小试不补造比较 |
-| `webbench_draw/` | draw 的五里程碑实验 | `free` 与 `plan` |
-| `matched_canvas/`、`canvas_capacity/`、`canvas_model_replication/`、`matched_flex/` | 同需求、同准备机会与支出上限的两项目实验 | 每协议、每重复独立报告 |
-| `table_behavior_probe/`、`canvas_interface_probe/`、`canvas_fixed_reuse/`、`canvas_speed_probe/`、`input_controls/` | 单字段行为、固定页面与输入事件拦截 | 独立诊断，原候选不变 |
-| `current_bundle/` | 生成并核验当前报告材料的本地包 | 当前报告与浏览器抽样 |
-| `assertion_audit/` | 判据覆盖诊断 | 明确有限范围与事后性质 |
-| `todomvc_dna/`, `webbench_dna/` | 人工提供库的历史机制实验 | 单列背景，不称模型建库 |
-| `webapp1k_dna/` | WebApp1K-Duo 独立功能实验 | 历史公开基准证据 |
-| `heldout_composition/`, `interaction_*`, `development_feedback/` | 旧合成诊断 | 不进入当前公开基准论文 |
-| `results/` | 派生 JSON、历史审计快照 | 原快照不覆盖，主视图为 `end_to_end.json` |
+| 查阅主题 | 入口 |
+| --- | --- |
+| 人工行为库的来源与使用 | [TodoMVC](todomvc_dna/README.md)、[Web-Bench 文件管理器](webbench_dna/README.md)、[WebApp1K-Duo](webapp1k_dna/README.md) |
+| 早期 AI 建库与无库比较 | [端到端比较协议](../docs/end_to_end_protocol.md)、[各建库者的配对汇总](results/end_to_end.json) |
+| 同一目标上的人工库、AI 库与无库对照 | [三组配对结果及来源](results/library-sources-20261121.json) |
+| 按原版本复验 | [复现说明](../docs/reproducibility.md)、[历史实验索引](REVIEW.md)、[退役研究说明](../docs/archive/full-history-retirement.md) |
 
-其他目录的 README/PROTOCOL/manifest 记录原实验条件，不随论文删列改写。旧全量入口索引 [REVIEW.md](REVIEW.md) 用于查证历史；新的运行说明以 `docs/reproducibility.md` 为准。源码可公开不等于所有大型原始产物已公开，发布状态见根 README。
+工程回归测试的入口是仓库根目录的 [tests/](../tests/README.md)。旧清单中的 `test/` 通过兼容链接定位到本目录。
 
-累计前缀评分及其专用诊断、旧论文生成器已退役；代码版本与旧快照的复验边界见 [退役说明](../docs/archive/full-history-retirement.md)。共享报告解析在 `study_io.py`，显式文件评分工具在 `browser_jobs.py`。
+## 冻结路径复验
+
+日常查阅与 `python -m studies.public_library_transfer --check` 使用上面的正式目录。34 个新公开阶段在开始运行时已经记录了当时的模块路径。使用 `python -m studies.layout check` 可直接核对 170 个原文件的字节。复验需要按旧清单直接读取文件时，先运行 `python -m studies.layout prepare`。旧模块名也会在首次导入时恢复这些本地兼容文件；工程测试放在 `tests/`。
+
+例如，`uv run python -m studies.layout run public_library_transfer/diagnostics/table_configurations report` 会用该研究注册时的模块名核对原始浏览器收据。完成复验后，`python -m studies.layout tidy` 可将字节一致的兼容目录移入本地备份，保留正式目录作为浏览入口。[Web-Bench 路径映射](webbench/layout.json) · [跨项目路径映射](public_library_transfer/layout.json)

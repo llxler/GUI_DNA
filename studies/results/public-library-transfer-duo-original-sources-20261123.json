@@ -1,0 +1,2253 @@
+{
+  "study": "public-library-transfer-duo-original-sources-20261123",
+  "registered": "2026-11-23T06:56:43.973501+00:00",
+  "sealed": "2026-11-23T07:24:22.974992+00:00",
+  "scope": "Fresh source generation by each of two original model identities from public single tests; each deployer plans over each accepted category library; raw direct candidates shared with the historical-model transfer. One intended draw per two-feature target.",
+  "model_ids": {
+    "deepseek": "deepseek/deepseek-v4-pro-0813",
+    "qwen": "qwen/qwen3-coder"
+  },
+  "sources": {
+    "deepseek/blogging": {
+      "status": "returned",
+      "admission": "duo-original-sources/build/deepseek/blogging",
+      "raw_sha256": "a2dfaf63d0b34aca7a7c867ca9a1f836d01e6d26e36927ee2e0455788d869320",
+      "admission_status": "invalid",
+      "reason": "the JSON object must be str, bytes or bytearray, not NoneType",
+      "finish_reason": "length",
+      "completion_tokens": 8192,
+      "visible_content_characters": 0
+    },
+    "deepseek/taskmanagement": {
+      "status": "unresolved",
+      "reason": "No received response",
+      "http_status": null,
+      "admission_status": "missing"
+    },
+    "qwen/blogging": {
+      "status": "returned",
+      "admission": "duo-original-sources/build/qwen/blogging",
+      "raw_sha256": "2cbac5c1900837e9f7b9c67f8e3abd0927f10e2c04549435ebcba680dce76e33",
+      "admission_status": "accepted",
+      "menu": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "first": {
+              "type": "string",
+              "enum": [
+                "NONE",
+                "addAltTextToImage",
+                "postPerformanceReport",
+                "addCanonicalUrl",
+                "addComment",
+                "assignPostToCategory",
+                "editComment",
+                "editTag"
+              ]
+            },
+            "second": {
+              "type": "string",
+              "enum": [
+                "NONE",
+                "addAltTextToImage",
+                "postPerformanceReport",
+                "addCanonicalUrl",
+                "addComment",
+                "assignPostToCategory",
+                "editComment",
+                "editTag"
+              ]
+            }
+          },
+          "required": [
+            "first",
+            "second"
+          ],
+          "additionalProperties": false
+        },
+        "menu": [
+          {
+            "id": "addAltTextToImage",
+            "behavior": "Provides a form to add alternative text to an image. User enters alt text and clicks Save. On success, displays confirmation message. On failure, displays error message."
+          },
+          {
+            "id": "postPerformanceReport",
+            "behavior": "Generates a performance report for a specific post. User clicks 'Generate Report' button. On success, displays performance data. On failure, shows error message."
+          },
+          {
+            "id": "addCanonicalUrl",
+            "behavior": "Allows adding a canonical URL to a post. User inputs URL and saves. Shows success or error message based on API response."
+          },
+          {
+            "id": "addComment",
+            "behavior": "Provides a form to add comments to a post. User types comment and submits. Displays success or failure message after submission."
+          },
+          {
+            "id": "assignPostToCategory",
+            "behavior": "Lets users assign a post to a category using a dropdown selection. After selecting a category and clicking Assign, shows success or error feedback."
+          },
+          {
+            "id": "editComment",
+            "behavior": "Provides an interface to edit an existing comment. User modifies comment text and clicks Edit. Shows success or failure message upon submission."
+          },
+          {
+            "id": "editTag",
+            "behavior": "Enables editing of existing tags. User updates tag name and clicks Update Tag. Displays success confirmation or error message."
+          }
+        ],
+        "first": {
+          "first": "addAltTextToImage",
+          "second": "postPerformanceReport"
+        }
+      },
+      "package_sha256": "27da25d8cda0c0cb012fa1184c3f90037383d0a8617ed10e058b110939d5f4f8",
+      "finish_reason": "stop",
+      "completion_tokens": 2507,
+      "visible_content_characters": 9461
+    },
+    "qwen/taskmanagement": {
+      "status": "returned",
+      "admission": "duo-original-sources/build/qwen/taskmanagement",
+      "raw_sha256": "4e9a2dbd81d0c339e9f21321a535b03f49a269c1e0f18c9308a5e088a5ff2771",
+      "admission_status": "accepted",
+      "menu": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "first": {
+              "type": "string",
+              "enum": [
+                "NONE",
+                "TaskCommenter",
+                "TaskDeadlineSetter"
+              ]
+            },
+            "second": {
+              "type": "string",
+              "enum": [
+                "NONE",
+                "TaskCommenter",
+                "TaskDeadlineSetter"
+              ]
+            }
+          },
+          "required": [
+            "first",
+            "second"
+          ],
+          "additionalProperties": false
+        },
+        "menu": [
+          {
+            "id": "TaskCommenter",
+            "behavior": "Allows users to add comments to a task. On success, displays 'Comment added!'. On failure, shows 'Failed to add comment.'."
+          },
+          {
+            "id": "TaskDeadlineSetter",
+            "behavior": "Enables setting a deadline for a task. Displays the saved date on success or 'Failed to set deadline.' on error."
+          }
+        ],
+        "first": {
+          "first": "TaskCommenter",
+          "second": "TaskDeadlineSetter"
+        }
+      },
+      "package_sha256": "4070162bfab18b223d11a7daa6d6a9e764c205c50042684989e0d898cc95c39b",
+      "finish_reason": "stop",
+      "completion_tokens": 673,
+      "visible_content_characters": 2526
+    }
+  },
+  "panels": {
+    "deepseek/deepseek": {
+      "blogging": {
+        "direct": {
+          "passed": 0,
+          "scored": 5,
+          "scheduled": 5,
+          "statuses": {
+            "invalid": 5
+          }
+        },
+        "first": {
+          "passed": 0,
+          "scored": 5,
+          "scheduled": 5,
+          "statuses": {
+            "build_invalid": 5
+          }
+        },
+        "dna": {
+          "passed": 0,
+          "scored": 5,
+          "scheduled": 5,
+          "statuses": {
+            "build_invalid": 5
+          }
+        },
+        "paired": {
+          "direct": {
+            "n": 5,
+            "scheduled": 5,
+            "dna": 0,
+            "control": 0,
+            "only_dna": [],
+            "only_control": []
+          },
+          "first": {
+            "n": 5,
+            "scheduled": 5,
+            "dna": 0,
+            "control": 0,
+            "only_dna": [],
+            "only_control": []
+          }
+        }
+      },
+      "taskmanagement": {
+        "direct": {
+          "passed": 0,
+          "scored": 5,
+          "scheduled": 5,
+          "statuses": {
+            "invalid": 5
+          }
+        },
+        "first": {
+          "passed": 0,
+          "scored": 0,
+          "scheduled": 5,
+          "statuses": {
+            "build_missing": 5
+          }
+        },
+        "dna": {
+          "passed": 0,
+          "scored": 0,
+          "scheduled": 5,
+          "statuses": {
+            "build_missing": 5
+          }
+        },
+        "paired": {
+          "direct": {
+            "n": 0,
+            "scheduled": 5,
+            "dna": 0,
+            "control": 0,
+            "only_dna": [],
+            "only_control": []
+          },
+          "first": {
+            "n": 0,
+            "scheduled": 5,
+            "dna": 0,
+            "control": 0,
+            "only_dna": [],
+            "only_control": []
+          }
+        }
+      },
+      "webapp1k-duo": {
+        "direct": {
+          "passed": 0,
+          "scored": 10,
+          "scheduled": 10,
+          "statuses": {
+            "invalid": 10
+          }
+        },
+        "first": {
+          "passed": 0,
+          "scored": 5,
+          "scheduled": 10,
+          "statuses": {
+            "build_invalid": 5,
+            "build_missing": 5
+          }
+        },
+        "dna": {
+          "passed": 0,
+          "scored": 5,
+          "scheduled": 10,
+          "statuses": {
+            "build_invalid": 5,
+            "build_missing": 5
+          }
+        },
+        "paired": {
+          "direct": {
+            "n": 5,
+            "scheduled": 10,
+            "dna": 0,
+            "control": 0,
+            "only_dna": [],
+            "only_control": []
+          },
+          "first": {
+            "n": 5,
+            "scheduled": 10,
+            "dna": 0,
+            "control": 0,
+            "only_dna": [],
+            "only_control": []
+          }
+        }
+      }
+    },
+    "deepseek/qwen": {
+      "blogging": {
+        "direct": {
+          "passed": 2,
+          "scored": 5,
+          "scheduled": 5,
+          "statuses": {
+            "valid": 5
+          }
+        },
+        "first": {
+          "passed": 0,
+          "scored": 5,
+          "scheduled": 5,
+          "statuses": {
+            "build_invalid": 5
+          }
+        },
+        "dna": {
+          "passed": 0,
+          "scored": 5,
+          "scheduled": 5,
+          "statuses": {
+            "build_invalid": 5
+          }
+        },
+        "paired": {
+          "direct": {
+            "n": 5,
+            "scheduled": 5,
+            "dna": 0,
+            "control": 2,
+            "only_dna": [],
+            "only_control": [
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_editTag"
+            ]
+          },
+          "first": {
+            "n": 5,
+            "scheduled": 5,
+            "dna": 0,
+            "control": 0,
+            "only_dna": [],
+            "only_control": []
+          }
+        }
+      },
+      "taskmanagement": {
+        "direct": {
+          "passed": 5,
+          "scored": 5,
+          "scheduled": 5,
+          "statuses": {
+            "valid": 5
+          }
+        },
+        "first": {
+          "passed": 0,
+          "scored": 0,
+          "scheduled": 5,
+          "statuses": {
+            "build_missing": 5
+          }
+        },
+        "dna": {
+          "passed": 0,
+          "scored": 0,
+          "scheduled": 5,
+          "statuses": {
+            "build_missing": 5
+          }
+        },
+        "paired": {
+          "direct": {
+            "n": 0,
+            "scheduled": 5,
+            "dna": 0,
+            "control": 0,
+            "only_dna": [],
+            "only_control": []
+          },
+          "first": {
+            "n": 0,
+            "scheduled": 5,
+            "dna": 0,
+            "control": 0,
+            "only_dna": [],
+            "only_control": []
+          }
+        }
+      },
+      "webapp1k-duo": {
+        "direct": {
+          "passed": 7,
+          "scored": 10,
+          "scheduled": 10,
+          "statuses": {
+            "valid": 10
+          }
+        },
+        "first": {
+          "passed": 0,
+          "scored": 5,
+          "scheduled": 10,
+          "statuses": {
+            "build_invalid": 5,
+            "build_missing": 5
+          }
+        },
+        "dna": {
+          "passed": 0,
+          "scored": 5,
+          "scheduled": 10,
+          "statuses": {
+            "build_invalid": 5,
+            "build_missing": 5
+          }
+        },
+        "paired": {
+          "direct": {
+            "n": 5,
+            "scheduled": 10,
+            "dna": 0,
+            "control": 2,
+            "only_dna": [],
+            "only_control": [
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_editTag"
+            ]
+          },
+          "first": {
+            "n": 5,
+            "scheduled": 10,
+            "dna": 0,
+            "control": 0,
+            "only_dna": [],
+            "only_control": []
+          }
+        }
+      }
+    },
+    "qwen/deepseek": {
+      "blogging": {
+        "direct": {
+          "passed": 0,
+          "scored": 5,
+          "scheduled": 5,
+          "statuses": {
+            "invalid": 5
+          }
+        },
+        "first": {
+          "passed": 0,
+          "scored": 5,
+          "scheduled": 5,
+          "statuses": {
+            "valid": 5
+          }
+        },
+        "dna": {
+          "passed": 0,
+          "scored": 0,
+          "scheduled": 5,
+          "statuses": {
+            "unresolved": 5
+          }
+        },
+        "paired": {
+          "direct": {
+            "n": 0,
+            "scheduled": 5,
+            "dna": 0,
+            "control": 0,
+            "only_dna": [],
+            "only_control": []
+          },
+          "first": {
+            "n": 0,
+            "scheduled": 5,
+            "dna": 0,
+            "control": 0,
+            "only_dna": [],
+            "only_control": []
+          }
+        }
+      },
+      "taskmanagement": {
+        "direct": {
+          "passed": 0,
+          "scored": 5,
+          "scheduled": 5,
+          "statuses": {
+            "invalid": 5
+          }
+        },
+        "first": {
+          "passed": 1,
+          "scored": 5,
+          "scheduled": 5,
+          "statuses": {
+            "valid": 5
+          }
+        },
+        "dna": {
+          "passed": 0,
+          "scored": 4,
+          "scheduled": 5,
+          "statuses": {
+            "unresolved": 1,
+            "invalid": 4
+          }
+        },
+        "paired": {
+          "direct": {
+            "n": 4,
+            "scheduled": 5,
+            "dna": 0,
+            "control": 0,
+            "only_dna": [],
+            "only_control": []
+          },
+          "first": {
+            "n": 4,
+            "scheduled": 5,
+            "dna": 0,
+            "control": 0,
+            "only_dna": [],
+            "only_control": []
+          }
+        }
+      },
+      "webapp1k-duo": {
+        "direct": {
+          "passed": 0,
+          "scored": 10,
+          "scheduled": 10,
+          "statuses": {
+            "invalid": 10
+          }
+        },
+        "first": {
+          "passed": 1,
+          "scored": 10,
+          "scheduled": 10,
+          "statuses": {
+            "valid": 10
+          }
+        },
+        "dna": {
+          "passed": 0,
+          "scored": 4,
+          "scheduled": 10,
+          "statuses": {
+            "unresolved": 6,
+            "invalid": 4
+          }
+        },
+        "paired": {
+          "direct": {
+            "n": 4,
+            "scheduled": 10,
+            "dna": 0,
+            "control": 0,
+            "only_dna": [],
+            "only_control": []
+          },
+          "first": {
+            "n": 4,
+            "scheduled": 10,
+            "dna": 0,
+            "control": 0,
+            "only_dna": [],
+            "only_control": []
+          }
+        }
+      }
+    },
+    "qwen/qwen": {
+      "blogging": {
+        "direct": {
+          "passed": 2,
+          "scored": 5,
+          "scheduled": 5,
+          "statuses": {
+            "valid": 5
+          }
+        },
+        "first": {
+          "passed": 0,
+          "scored": 5,
+          "scheduled": 5,
+          "statuses": {
+            "valid": 5
+          }
+        },
+        "dna": {
+          "passed": 0,
+          "scored": 0,
+          "scheduled": 5,
+          "statuses": {
+            "unresolved": 5
+          }
+        },
+        "paired": {
+          "direct": {
+            "n": 0,
+            "scheduled": 5,
+            "dna": 0,
+            "control": 0,
+            "only_dna": [],
+            "only_control": []
+          },
+          "first": {
+            "n": 0,
+            "scheduled": 5,
+            "dna": 0,
+            "control": 0,
+            "only_dna": [],
+            "only_control": []
+          }
+        }
+      },
+      "taskmanagement": {
+        "direct": {
+          "passed": 5,
+          "scored": 5,
+          "scheduled": 5,
+          "statuses": {
+            "valid": 5
+          }
+        },
+        "first": {
+          "passed": 1,
+          "scored": 5,
+          "scheduled": 5,
+          "statuses": {
+            "valid": 5
+          }
+        },
+        "dna": {
+          "passed": 0,
+          "scored": 4,
+          "scheduled": 5,
+          "statuses": {
+            "unresolved": 1,
+            "valid": 4
+          }
+        },
+        "paired": {
+          "direct": {
+            "n": 4,
+            "scheduled": 5,
+            "dna": 0,
+            "control": 4,
+            "only_dna": [],
+            "only_control": [
+              "approveOrRejectTaskReview_compareTime",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ]
+          },
+          "first": {
+            "n": 4,
+            "scheduled": 5,
+            "dna": 0,
+            "control": 0,
+            "only_dna": [],
+            "only_control": []
+          }
+        }
+      },
+      "webapp1k-duo": {
+        "direct": {
+          "passed": 7,
+          "scored": 10,
+          "scheduled": 10,
+          "statuses": {
+            "valid": 10
+          }
+        },
+        "first": {
+          "passed": 1,
+          "scored": 10,
+          "scheduled": 10,
+          "statuses": {
+            "valid": 10
+          }
+        },
+        "dna": {
+          "passed": 0,
+          "scored": 4,
+          "scheduled": 10,
+          "statuses": {
+            "unresolved": 6,
+            "valid": 4
+          }
+        },
+        "paired": {
+          "direct": {
+            "n": 4,
+            "scheduled": 10,
+            "dna": 0,
+            "control": 4,
+            "only_dna": [],
+            "only_control": [
+              "approveOrRejectTaskReview_compareTime",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ]
+          },
+          "first": {
+            "n": 4,
+            "scheduled": 10,
+            "dna": 0,
+            "control": 0,
+            "only_dna": [],
+            "only_control": []
+          }
+        }
+      }
+    }
+  },
+  "rows": {
+    "deepseek/deepseek/addAltTextToImage_postPerformanceReport": {
+      "builder": "deepseek",
+      "deployer": "deepseek",
+      "task": "addAltTextToImage_postPerformanceReport",
+      "group": "blogging",
+      "direct": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "TypeError: the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "0314f4cbfa1fd8149bdcc0957d7476f02381f3483579059b1e344414139dc5a1",
+        "finish_reason": "length",
+        "visible_content_characters": 0,
+        "completion_tokens": 4000,
+        "admission": "deepseek/addAltTextToImage_postPerformanceReport/s0/direct"
+      },
+      "first": {
+        "status": "build_invalid",
+        "passed": false
+      },
+      "dna": {
+        "status": "build_invalid",
+        "passed": false
+      }
+    },
+    "deepseek/deepseek/addCanonicalUrl_addComment": {
+      "builder": "deepseek",
+      "deployer": "deepseek",
+      "task": "addCanonicalUrl_addComment",
+      "group": "blogging",
+      "direct": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "TypeError: the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "c7111e3616085a8d4a48ecac06bcfa1a489cb24eca92301986ee8a6e2811d8bc",
+        "finish_reason": "length",
+        "visible_content_characters": 0,
+        "completion_tokens": 4000,
+        "admission": "deepseek/addCanonicalUrl_addComment/s0/direct"
+      },
+      "first": {
+        "status": "build_invalid",
+        "passed": false
+      },
+      "dna": {
+        "status": "build_invalid",
+        "passed": false
+      }
+    },
+    "deepseek/deepseek/addCanonicalUrl_assignPostToCategory": {
+      "builder": "deepseek",
+      "deployer": "deepseek",
+      "task": "addCanonicalUrl_assignPostToCategory",
+      "group": "blogging",
+      "direct": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "TypeError: the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "492187f427bff839e0fe8d4c53a244d7c7a8d44599dc21ea9d8c41d893fdf241",
+        "finish_reason": "length",
+        "visible_content_characters": 0,
+        "completion_tokens": 4000,
+        "admission": "deepseek/addCanonicalUrl_assignPostToCategory/s0/direct"
+      },
+      "first": {
+        "status": "build_invalid",
+        "passed": false
+      },
+      "dna": {
+        "status": "build_invalid",
+        "passed": false
+      }
+    },
+    "deepseek/deepseek/addCanonicalUrl_editComment": {
+      "builder": "deepseek",
+      "deployer": "deepseek",
+      "task": "addCanonicalUrl_editComment",
+      "group": "blogging",
+      "direct": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "TypeError: the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "60d0faead77fa091a3cb2cf282c6545656700216c4536dbd1322e6c137624ad9",
+        "finish_reason": "length",
+        "visible_content_characters": 0,
+        "completion_tokens": 4000,
+        "admission": "deepseek/addCanonicalUrl_editComment/s0/direct"
+      },
+      "first": {
+        "status": "build_invalid",
+        "passed": false
+      },
+      "dna": {
+        "status": "build_invalid",
+        "passed": false
+      }
+    },
+    "deepseek/deepseek/addCanonicalUrl_editTag": {
+      "builder": "deepseek",
+      "deployer": "deepseek",
+      "task": "addCanonicalUrl_editTag",
+      "group": "blogging",
+      "direct": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "TypeError: the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "c81064552e4a805ccc9c96e915e62a44c9beb59bfa7b23a095d7796b7fc28ed5",
+        "finish_reason": "length",
+        "visible_content_characters": 0,
+        "completion_tokens": 4000,
+        "admission": "deepseek/addCanonicalUrl_editTag/s0/direct"
+      },
+      "first": {
+        "status": "build_invalid",
+        "passed": false
+      },
+      "dna": {
+        "status": "build_invalid",
+        "passed": false
+      }
+    },
+    "deepseek/deepseek/addCommentToTask_setTaskDeadline": {
+      "builder": "deepseek",
+      "deployer": "deepseek",
+      "task": "addCommentToTask_setTaskDeadline",
+      "group": "taskmanagement",
+      "direct": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "TypeError: the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "ad2d0240c2d054968317d208e2e104c3dc272c8122d930d4e559731c7878fb5e",
+        "finish_reason": "length",
+        "visible_content_characters": 0,
+        "completion_tokens": 4000,
+        "admission": "deepseek/addCommentToTask_setTaskDeadline/s0/direct"
+      },
+      "first": {
+        "status": "build_missing"
+      },
+      "dna": {
+        "status": "build_missing"
+      }
+    },
+    "deepseek/deepseek/approveOrRejectTaskReview_compareTime": {
+      "builder": "deepseek",
+      "deployer": "deepseek",
+      "task": "approveOrRejectTaskReview_compareTime",
+      "group": "taskmanagement",
+      "direct": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "TypeError: the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "34e8f5d06c0b247f62109e2d92ecee2dcbd3353bb11a0eef42a9d25106b09ab5",
+        "finish_reason": "length",
+        "visible_content_characters": 0,
+        "completion_tokens": 4000,
+        "admission": "deepseek/approveOrRejectTaskReview_compareTime/s0/direct"
+      },
+      "first": {
+        "status": "build_missing"
+      },
+      "dna": {
+        "status": "build_missing"
+      }
+    },
+    "deepseek/deepseek/approveOrRejectTaskReview_projectCustomWorkflows": {
+      "builder": "deepseek",
+      "deployer": "deepseek",
+      "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+      "group": "taskmanagement",
+      "direct": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "TypeError: the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "000e76effe1f9a99b4b41bfb91723da8d2da794f0353b24cc5e37e081b9356c1",
+        "finish_reason": "length",
+        "visible_content_characters": 0,
+        "completion_tokens": 4000,
+        "admission": "deepseek/approveOrRejectTaskReview_projectCustomWorkflows/s0/direct"
+      },
+      "first": {
+        "status": "build_missing"
+      },
+      "dna": {
+        "status": "build_missing"
+      }
+    },
+    "deepseek/deepseek/approveOrRejectTaskReview_setTaskPriority": {
+      "builder": "deepseek",
+      "deployer": "deepseek",
+      "task": "approveOrRejectTaskReview_setTaskPriority",
+      "group": "taskmanagement",
+      "direct": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "TypeError: the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "80641451964500546914f372f3854867139644484c5cb3f33c8d7e2ad131ce01",
+        "finish_reason": "length",
+        "visible_content_characters": 0,
+        "completion_tokens": 4000,
+        "admission": "deepseek/approveOrRejectTaskReview_setTaskPriority/s0/direct"
+      },
+      "first": {
+        "status": "build_missing"
+      },
+      "dna": {
+        "status": "build_missing"
+      }
+    },
+    "deepseek/deepseek/assignTaskToProject_assignTaskToUser": {
+      "builder": "deepseek",
+      "deployer": "deepseek",
+      "task": "assignTaskToProject_assignTaskToUser",
+      "group": "taskmanagement",
+      "direct": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "TypeError: the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "0914e98a9f4d35a9e62960f824a80d8c66174492e65a7405ada47df14d9d2156",
+        "finish_reason": "length",
+        "visible_content_characters": 0,
+        "completion_tokens": 4000,
+        "admission": "deepseek/assignTaskToProject_assignTaskToUser/s0/direct"
+      },
+      "first": {
+        "status": "build_missing"
+      },
+      "dna": {
+        "status": "build_missing"
+      }
+    },
+    "qwen/qwen/addAltTextToImage_postPerformanceReport": {
+      "builder": "qwen",
+      "deployer": "qwen",
+      "task": "addAltTextToImage_postPerformanceReport",
+      "group": "blogging",
+      "direct": {
+        "status": "valid",
+        "candidate_sha256": "1d66a5313c7b26a27a0d6ea233e9db76249644b9d606d0350165614412f151a4",
+        "raw_sha256": "18da687c199519d6ae1f3c4327ae816967f47c317b7a1700f1bf222347392fe4",
+        "finish_reason": "stop",
+        "visible_content_characters": 2055,
+        "completion_tokens": 573,
+        "admission": "qwen/addAltTextToImage_postPerformanceReport/s0/direct",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "passed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "4b96a77da03832dc5d1e883c6fb13be1256b9e67759f7fa1a5c52ce22b09c0ac"
+      },
+      "first": {
+        "status": "valid",
+        "configuration": {
+          "first": "addAltTextToImage",
+          "second": "postPerformanceReport"
+        },
+        "candidate_sha256": "db86424c7061c12a1945eb831e688d77b73063e2ac47c73faa6bcdf312878338",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "passed",
+          "passed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "4a99926941739e441e8ec9194cdddd25f611ad9852640481fc9c1c25fdd51187"
+      },
+      "dna": {
+        "status": "unresolved",
+        "reason": "ConnectError"
+      }
+    },
+    "qwen/qwen/addCanonicalUrl_addComment": {
+      "builder": "qwen",
+      "deployer": "qwen",
+      "task": "addCanonicalUrl_addComment",
+      "group": "blogging",
+      "direct": {
+        "status": "valid",
+        "candidate_sha256": "4a18ddc341bc6bf62cb97f7d1be06cd5377a752098083da732294e8b22a70f0f",
+        "raw_sha256": "981259ebd965de1758e964ec0fbf4fa13c266814a510b1214ae533bef2d33eb7",
+        "finish_reason": "stop",
+        "visible_content_characters": 2098,
+        "completion_tokens": 556,
+        "admission": "qwen/addCanonicalUrl_addComment/s0/direct",
+        "passed": true,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "suite_error": "",
+        "report_sha256": "cff16581dc7c3ce480c4217d281eb679a54528da4e1a208c1d60b4c31f8af06b"
+      },
+      "first": {
+        "status": "valid",
+        "configuration": {
+          "first": "addAltTextToImage",
+          "second": "postPerformanceReport"
+        },
+        "candidate_sha256": "9ba3371e23e420073f1a758e696ea9be5f66f9fab3e8ccb08139c5a93716a9d3",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "b5fb1aa08b6a4fd70cf61cfad129fb9c353d18fac09c2c94f1dfb6d800ff6aca"
+      },
+      "dna": {
+        "status": "unresolved",
+        "reason": "ConnectError"
+      }
+    },
+    "qwen/qwen/addCanonicalUrl_assignPostToCategory": {
+      "builder": "qwen",
+      "deployer": "qwen",
+      "task": "addCanonicalUrl_assignPostToCategory",
+      "group": "blogging",
+      "direct": {
+        "status": "valid",
+        "candidate_sha256": "38ba9f097e92d3f33887da7b303eb9986db38a9773afcdd958ed4d7aa64a3c41",
+        "raw_sha256": "c31ebbf767370a5847edfb84f09852223bd06df634c01d5a1ae420d5b608c676",
+        "finish_reason": "stop",
+        "visible_content_characters": 3176,
+        "completion_tokens": 813,
+        "admission": "qwen/addCanonicalUrl_assignPostToCategory/s0/direct",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [],
+        "suite_error": "  ● Test suite failed to run\n\n    SyntaxError: /home/lxler/work/GUI_DNA/artifacts/public-library-transfer-extra-remote-20261123/scoring/addCanonicalUrl_assignPostToCategory/38ba9f097e92d3f33887da7b303eb9986db38a9773afcdd958ed4d7aa64a3c41/staging/src/react/blogging/addCanonicalUrl_assignPostToCategory.js: Unexpected token, expected \",\" (23:32)\n\n      21 |     try {\n      22 |       const response = await fetch('/api/canonical-url', {\n    > 23 |         method: 'POST',n        headers: {\n         ",
+        "report_sha256": "fb34ec57b1d122f70c0f621bd8d9c31425aae61c2eed2352ec9b56b17098544e"
+      },
+      "first": {
+        "status": "valid",
+        "configuration": {
+          "first": "addAltTextToImage",
+          "second": "postPerformanceReport"
+        },
+        "candidate_sha256": "8010575c568972672e27adb10d4a2b9b0cdd8f42199627828413e45992869258",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "f072faa26a2bfce60516175a8d3d6773fd4faac53598ae5a299940a995ebce6c"
+      },
+      "dna": {
+        "status": "unresolved",
+        "reason": "ConnectError"
+      }
+    },
+    "qwen/qwen/addCanonicalUrl_editComment": {
+      "builder": "qwen",
+      "deployer": "qwen",
+      "task": "addCanonicalUrl_editComment",
+      "group": "blogging",
+      "direct": {
+        "status": "valid",
+        "candidate_sha256": "7b02f8af67eb5b0475c87ff54925b95b2c63099d24e95c6fe7771ada02a62504",
+        "raw_sha256": "1e209b3394fb51de7dfcc531f7045a04231a56756b59d81fe58fb4302de709a1",
+        "finish_reason": "stop",
+        "visible_content_characters": 1886,
+        "completion_tokens": 520,
+        "admission": "qwen/addCanonicalUrl_editComment/s0/direct",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "4740ff0a867e59c1fb0c3e2ec1d428e47d540237cb2bdcffdff26a254c375c67"
+      },
+      "first": {
+        "status": "valid",
+        "configuration": {
+          "first": "addAltTextToImage",
+          "second": "postPerformanceReport"
+        },
+        "candidate_sha256": "40c77dade98ab7d781b6e0657f7f8a836bca420dd928b77fd8c94decac2bd255",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "5914befe8028bcbf206c98adcbfe6f650f803e8d20d2267c5251ee54abe7fcaf"
+      },
+      "dna": {
+        "status": "unresolved",
+        "reason": "ConnectError"
+      }
+    },
+    "qwen/qwen/addCanonicalUrl_editTag": {
+      "builder": "qwen",
+      "deployer": "qwen",
+      "task": "addCanonicalUrl_editTag",
+      "group": "blogging",
+      "direct": {
+        "status": "valid",
+        "candidate_sha256": "82ff3e422c70c0291cfcb3d9eca59f421ecee9ffaadf860632ed0d85ea985718",
+        "raw_sha256": "975bc7d19a420b99e0fa492a17338f4035ff6b830c50a8e5925387717a4b093e",
+        "finish_reason": "stop",
+        "visible_content_characters": 2377,
+        "completion_tokens": 651,
+        "admission": "qwen/addCanonicalUrl_editTag/s0/direct",
+        "passed": true,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "suite_error": "",
+        "report_sha256": "040e82a29860c2da8d428862a0e96714be96f9f29af4784870f04151778bb437"
+      },
+      "first": {
+        "status": "valid",
+        "configuration": {
+          "first": "addAltTextToImage",
+          "second": "postPerformanceReport"
+        },
+        "candidate_sha256": "f2e108c4b5c6e436ae0f2bf470a8115f15687e9ecfefe045d1a1e24099b741a6",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "e17a9276655ea03eb5b295e63b9abfcba24027a7278eaae50f1bce01f8e2bf84"
+      },
+      "dna": {
+        "status": "unresolved",
+        "reason": "ConnectError"
+      }
+    },
+    "qwen/qwen/addCommentToTask_setTaskDeadline": {
+      "builder": "qwen",
+      "deployer": "qwen",
+      "task": "addCommentToTask_setTaskDeadline",
+      "group": "taskmanagement",
+      "direct": {
+        "status": "valid",
+        "candidate_sha256": "f0a7936376ff37562f70eae7a1ebcbe5ca117fa8828a54ef7497b76a9f733d09",
+        "raw_sha256": "52ec2e1aa38112f9b89cc942f5320fb4dee63b3dc4d96b08cbdc74266c674582",
+        "finish_reason": "stop",
+        "visible_content_characters": 2392,
+        "completion_tokens": 678,
+        "admission": "qwen/addCommentToTask_setTaskDeadline/s0/direct",
+        "passed": true,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "suite_error": "",
+        "report_sha256": "41bc0637c0a6846af0194c90a9f8f45618d18986df09822c780c8ac6eddd8345"
+      },
+      "first": {
+        "status": "valid",
+        "configuration": {
+          "first": "TaskCommenter",
+          "second": "TaskDeadlineSetter"
+        },
+        "candidate_sha256": "51db6c3d183d6fd6fdc0b1246b97cca1b3445f8d5840fdb764bedff1ec3c5e1a",
+        "passed": true,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "suite_error": "",
+        "report_sha256": "3edf758e3be266b325c4e6db090e40a656824c7e90cb950826e20ef8ba5805de"
+      },
+      "dna": {
+        "status": "unresolved",
+        "reason": "ConnectError"
+      }
+    },
+    "qwen/qwen/approveOrRejectTaskReview_compareTime": {
+      "builder": "qwen",
+      "deployer": "qwen",
+      "task": "approveOrRejectTaskReview_compareTime",
+      "group": "taskmanagement",
+      "direct": {
+        "status": "valid",
+        "candidate_sha256": "c3ccd79bd0d5d9f0a8cd8e596bfdbf472f2b52d1fddb3e0cb19439a9bdf48fe3",
+        "raw_sha256": "2bd740afa56a5bc8fc268e87194763839374701e1555b68e0f408136c0920e78",
+        "finish_reason": "stop",
+        "visible_content_characters": 2116,
+        "completion_tokens": 584,
+        "admission": "qwen/approveOrRejectTaskReview_compareTime/s0/direct/network-admission-1",
+        "passed": true,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "suite_error": "",
+        "report_sha256": "dd7ffa086a449259d20064e9f4cb53a7304f465f7becfdba1860d335d9e5c4f8"
+      },
+      "first": {
+        "status": "valid",
+        "configuration": {
+          "first": "TaskCommenter",
+          "second": "TaskDeadlineSetter"
+        },
+        "candidate_sha256": "9fc58e9342ccd60c6e9240f8597da8dabaa627bb3b1fd3e702c9efdf73ad2e9d",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "52411cd10a5095c6d17ba01986f3b939e8bac19bed8aa74590782fcc6b5f7c4c"
+      },
+      "dna": {
+        "status": "valid",
+        "configuration": {
+          "first": "NONE",
+          "second": "NONE"
+        },
+        "candidate_sha256": "b1d860be552bd46bb20bc7bec22aed73e1b5796dd29d9f564e026a97638a4ff3",
+        "raw_sha256": "0eb44be4125004c7d213a7ba5a85f3ad80e43bc46da20d3ece94e2f7b07e3f34",
+        "finish_reason": "stop",
+        "completion_tokens": 17,
+        "visible_content_characters": 41,
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "db080cb3b7be8b81f1a19a36a07e6c75b62ba836abcb5d73d9680750b7394dc6"
+      }
+    },
+    "qwen/qwen/approveOrRejectTaskReview_projectCustomWorkflows": {
+      "builder": "qwen",
+      "deployer": "qwen",
+      "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+      "group": "taskmanagement",
+      "direct": {
+        "status": "valid",
+        "candidate_sha256": "b0340c52d0e552b9219309e3d7684f2fa518fbb8075d8875a2c60fba661eb83e",
+        "raw_sha256": "0e46cd5222ebe8b8ca267b1af623ee7d2bee4fbefc675fcf16245fb8cf3e3d91",
+        "finish_reason": "stop",
+        "visible_content_characters": 2332,
+        "completion_tokens": 625,
+        "admission": "qwen/approveOrRejectTaskReview_projectCustomWorkflows/s0/direct/network-admission-1",
+        "passed": true,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "suite_error": "",
+        "report_sha256": "6f0cb5becdf047f66eb73708f747ad984ca97d796e6e86b01ca6aa20013ba080"
+      },
+      "first": {
+        "status": "valid",
+        "configuration": {
+          "first": "TaskCommenter",
+          "second": "TaskDeadlineSetter"
+        },
+        "candidate_sha256": "68d3c946bcdc2bacc9c7ce4c60fc7fa6a054f4cdf9cfb78c95555ea1c0b8baa2",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "4a103eb234bae3c3e9d002d28b8f752697ed8b340bf8856f24d989d87947b2ff"
+      },
+      "dna": {
+        "status": "valid",
+        "configuration": {
+          "first": "TaskCommenter",
+          "second": "TaskDeadlineSetter"
+        },
+        "candidate_sha256": "68d3c946bcdc2bacc9c7ce4c60fc7fa6a054f4cdf9cfb78c95555ea1c0b8baa2",
+        "raw_sha256": "4bc630b1d713ff217e4828775d6af8010ce2a4a137d5bf0f833a2a5bd3591d2a",
+        "finish_reason": "stop",
+        "completion_tokens": 21,
+        "visible_content_characters": 64,
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "4a103eb234bae3c3e9d002d28b8f752697ed8b340bf8856f24d989d87947b2ff"
+      }
+    },
+    "qwen/qwen/approveOrRejectTaskReview_setTaskPriority": {
+      "builder": "qwen",
+      "deployer": "qwen",
+      "task": "approveOrRejectTaskReview_setTaskPriority",
+      "group": "taskmanagement",
+      "direct": {
+        "status": "valid",
+        "candidate_sha256": "8a7c9902dca26a50ebb21682e503e59e1ed5aa1eb639809dd9b5a66b67ff3160",
+        "raw_sha256": "41fa2568bdb731dee2a277d1c01cb18029cc6bb0497b8dbe7142a493e66b000e",
+        "finish_reason": "stop",
+        "visible_content_characters": 2293,
+        "completion_tokens": 620,
+        "admission": "qwen/approveOrRejectTaskReview_setTaskPriority/s0/direct/network-admission-1",
+        "passed": true,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "suite_error": "",
+        "report_sha256": "8402c8120d2d9326d2736505c1bb191ac898c23ea0048e82d96d747ba5ad7e1e"
+      },
+      "first": {
+        "status": "valid",
+        "configuration": {
+          "first": "TaskCommenter",
+          "second": "TaskDeadlineSetter"
+        },
+        "candidate_sha256": "466161b79b6cb7c59c46ee12caa2b3bd16f963ecdae774d54a4b8d503ab7489b",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "b26f549a48edb3f6446e410d2ea87c32e53d58fe9bf1588e7126d8db85e30de5"
+      },
+      "dna": {
+        "status": "valid",
+        "configuration": {
+          "first": "TaskCommenter",
+          "second": "TaskDeadlineSetter"
+        },
+        "candidate_sha256": "466161b79b6cb7c59c46ee12caa2b3bd16f963ecdae774d54a4b8d503ab7489b",
+        "raw_sha256": "d1916323c114546d3d76ccbdd58cb6866071c59e100c76241e547a4e2bdbe184",
+        "finish_reason": "stop",
+        "completion_tokens": 21,
+        "visible_content_characters": 64,
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "b26f549a48edb3f6446e410d2ea87c32e53d58fe9bf1588e7126d8db85e30de5"
+      }
+    },
+    "qwen/qwen/assignTaskToProject_assignTaskToUser": {
+      "builder": "qwen",
+      "deployer": "qwen",
+      "task": "assignTaskToProject_assignTaskToUser",
+      "group": "taskmanagement",
+      "direct": {
+        "status": "valid",
+        "candidate_sha256": "b2266284bfd20d5f323500fbf9f8bac4d238122269654c605968ceda5b5c2970",
+        "raw_sha256": "55d81b349706dc4efe9f354faa153f9a15360262ea3fac7b57a116e81a802859",
+        "finish_reason": "stop",
+        "visible_content_characters": 3033,
+        "completion_tokens": 852,
+        "admission": "qwen/assignTaskToProject_assignTaskToUser/s0/direct/network-admission-1",
+        "passed": true,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "suite_error": "",
+        "report_sha256": "5bb72a49065cf1b7c6f63d164d0e8cf178294d118a3866cbae43606c11727e3e"
+      },
+      "first": {
+        "status": "valid",
+        "configuration": {
+          "first": "TaskCommenter",
+          "second": "TaskDeadlineSetter"
+        },
+        "candidate_sha256": "2a01c6a4e1384e94b9b75384d4d9aaf201d132f6f6d483b0e7348f7fffb31867",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "c51d71c103bc3ddebc3f81822ec5553e9d173a58180dcf8995090d3a4fc6f3f4"
+      },
+      "dna": {
+        "status": "valid",
+        "configuration": {
+          "first": "TaskCommenter",
+          "second": "TaskDeadlineSetter"
+        },
+        "candidate_sha256": "2a01c6a4e1384e94b9b75384d4d9aaf201d132f6f6d483b0e7348f7fffb31867",
+        "raw_sha256": "14fccdff4d17aa6525133d96e03f044b25006ed7c2446c93fb9a4d3e7b9650fc",
+        "finish_reason": "stop",
+        "completion_tokens": 21,
+        "visible_content_characters": 64,
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "c51d71c103bc3ddebc3f81822ec5553e9d173a58180dcf8995090d3a4fc6f3f4"
+      }
+    },
+    "deepseek/qwen/addAltTextToImage_postPerformanceReport": {
+      "builder": "deepseek",
+      "deployer": "qwen",
+      "task": "addAltTextToImage_postPerformanceReport",
+      "group": "blogging",
+      "direct": {
+        "status": "valid",
+        "candidate_sha256": "1d66a5313c7b26a27a0d6ea233e9db76249644b9d606d0350165614412f151a4",
+        "raw_sha256": "18da687c199519d6ae1f3c4327ae816967f47c317b7a1700f1bf222347392fe4",
+        "finish_reason": "stop",
+        "visible_content_characters": 2055,
+        "completion_tokens": 573,
+        "admission": "qwen/addAltTextToImage_postPerformanceReport/s0/direct",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "passed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "4b96a77da03832dc5d1e883c6fb13be1256b9e67759f7fa1a5c52ce22b09c0ac"
+      },
+      "first": {
+        "status": "build_invalid",
+        "passed": false
+      },
+      "dna": {
+        "status": "build_invalid",
+        "passed": false
+      }
+    },
+    "deepseek/qwen/addCanonicalUrl_addComment": {
+      "builder": "deepseek",
+      "deployer": "qwen",
+      "task": "addCanonicalUrl_addComment",
+      "group": "blogging",
+      "direct": {
+        "status": "valid",
+        "candidate_sha256": "4a18ddc341bc6bf62cb97f7d1be06cd5377a752098083da732294e8b22a70f0f",
+        "raw_sha256": "981259ebd965de1758e964ec0fbf4fa13c266814a510b1214ae533bef2d33eb7",
+        "finish_reason": "stop",
+        "visible_content_characters": 2098,
+        "completion_tokens": 556,
+        "admission": "qwen/addCanonicalUrl_addComment/s0/direct",
+        "passed": true,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "suite_error": "",
+        "report_sha256": "cff16581dc7c3ce480c4217d281eb679a54528da4e1a208c1d60b4c31f8af06b"
+      },
+      "first": {
+        "status": "build_invalid",
+        "passed": false
+      },
+      "dna": {
+        "status": "build_invalid",
+        "passed": false
+      }
+    },
+    "deepseek/qwen/addCanonicalUrl_assignPostToCategory": {
+      "builder": "deepseek",
+      "deployer": "qwen",
+      "task": "addCanonicalUrl_assignPostToCategory",
+      "group": "blogging",
+      "direct": {
+        "status": "valid",
+        "candidate_sha256": "38ba9f097e92d3f33887da7b303eb9986db38a9773afcdd958ed4d7aa64a3c41",
+        "raw_sha256": "c31ebbf767370a5847edfb84f09852223bd06df634c01d5a1ae420d5b608c676",
+        "finish_reason": "stop",
+        "visible_content_characters": 3176,
+        "completion_tokens": 813,
+        "admission": "qwen/addCanonicalUrl_assignPostToCategory/s0/direct",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [],
+        "suite_error": "  ● Test suite failed to run\n\n    SyntaxError: /home/lxler/work/GUI_DNA/artifacts/public-library-transfer-extra-remote-20261123/scoring/addCanonicalUrl_assignPostToCategory/38ba9f097e92d3f33887da7b303eb9986db38a9773afcdd958ed4d7aa64a3c41/staging/src/react/blogging/addCanonicalUrl_assignPostToCategory.js: Unexpected token, expected \",\" (23:32)\n\n      21 |     try {\n      22 |       const response = await fetch('/api/canonical-url', {\n    > 23 |         method: 'POST',n        headers: {\n         ",
+        "report_sha256": "fb34ec57b1d122f70c0f621bd8d9c31425aae61c2eed2352ec9b56b17098544e"
+      },
+      "first": {
+        "status": "build_invalid",
+        "passed": false
+      },
+      "dna": {
+        "status": "build_invalid",
+        "passed": false
+      }
+    },
+    "deepseek/qwen/addCanonicalUrl_editComment": {
+      "builder": "deepseek",
+      "deployer": "qwen",
+      "task": "addCanonicalUrl_editComment",
+      "group": "blogging",
+      "direct": {
+        "status": "valid",
+        "candidate_sha256": "7b02f8af67eb5b0475c87ff54925b95b2c63099d24e95c6fe7771ada02a62504",
+        "raw_sha256": "1e209b3394fb51de7dfcc531f7045a04231a56756b59d81fe58fb4302de709a1",
+        "finish_reason": "stop",
+        "visible_content_characters": 1886,
+        "completion_tokens": 520,
+        "admission": "qwen/addCanonicalUrl_editComment/s0/direct",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "4740ff0a867e59c1fb0c3e2ec1d428e47d540237cb2bdcffdff26a254c375c67"
+      },
+      "first": {
+        "status": "build_invalid",
+        "passed": false
+      },
+      "dna": {
+        "status": "build_invalid",
+        "passed": false
+      }
+    },
+    "deepseek/qwen/addCanonicalUrl_editTag": {
+      "builder": "deepseek",
+      "deployer": "qwen",
+      "task": "addCanonicalUrl_editTag",
+      "group": "blogging",
+      "direct": {
+        "status": "valid",
+        "candidate_sha256": "82ff3e422c70c0291cfcb3d9eca59f421ecee9ffaadf860632ed0d85ea985718",
+        "raw_sha256": "975bc7d19a420b99e0fa492a17338f4035ff6b830c50a8e5925387717a4b093e",
+        "finish_reason": "stop",
+        "visible_content_characters": 2377,
+        "completion_tokens": 651,
+        "admission": "qwen/addCanonicalUrl_editTag/s0/direct",
+        "passed": true,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "suite_error": "",
+        "report_sha256": "040e82a29860c2da8d428862a0e96714be96f9f29af4784870f04151778bb437"
+      },
+      "first": {
+        "status": "build_invalid",
+        "passed": false
+      },
+      "dna": {
+        "status": "build_invalid",
+        "passed": false
+      }
+    },
+    "deepseek/qwen/addCommentToTask_setTaskDeadline": {
+      "builder": "deepseek",
+      "deployer": "qwen",
+      "task": "addCommentToTask_setTaskDeadline",
+      "group": "taskmanagement",
+      "direct": {
+        "status": "valid",
+        "candidate_sha256": "f0a7936376ff37562f70eae7a1ebcbe5ca117fa8828a54ef7497b76a9f733d09",
+        "raw_sha256": "52ec2e1aa38112f9b89cc942f5320fb4dee63b3dc4d96b08cbdc74266c674582",
+        "finish_reason": "stop",
+        "visible_content_characters": 2392,
+        "completion_tokens": 678,
+        "admission": "qwen/addCommentToTask_setTaskDeadline/s0/direct",
+        "passed": true,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "suite_error": "",
+        "report_sha256": "41bc0637c0a6846af0194c90a9f8f45618d18986df09822c780c8ac6eddd8345"
+      },
+      "first": {
+        "status": "build_missing"
+      },
+      "dna": {
+        "status": "build_missing"
+      }
+    },
+    "deepseek/qwen/approveOrRejectTaskReview_compareTime": {
+      "builder": "deepseek",
+      "deployer": "qwen",
+      "task": "approveOrRejectTaskReview_compareTime",
+      "group": "taskmanagement",
+      "direct": {
+        "status": "valid",
+        "candidate_sha256": "c3ccd79bd0d5d9f0a8cd8e596bfdbf472f2b52d1fddb3e0cb19439a9bdf48fe3",
+        "raw_sha256": "2bd740afa56a5bc8fc268e87194763839374701e1555b68e0f408136c0920e78",
+        "finish_reason": "stop",
+        "visible_content_characters": 2116,
+        "completion_tokens": 584,
+        "admission": "qwen/approveOrRejectTaskReview_compareTime/s0/direct/network-admission-1",
+        "passed": true,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "suite_error": "",
+        "report_sha256": "dd7ffa086a449259d20064e9f4cb53a7304f465f7becfdba1860d335d9e5c4f8"
+      },
+      "first": {
+        "status": "build_missing"
+      },
+      "dna": {
+        "status": "build_missing"
+      }
+    },
+    "deepseek/qwen/approveOrRejectTaskReview_projectCustomWorkflows": {
+      "builder": "deepseek",
+      "deployer": "qwen",
+      "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+      "group": "taskmanagement",
+      "direct": {
+        "status": "valid",
+        "candidate_sha256": "b0340c52d0e552b9219309e3d7684f2fa518fbb8075d8875a2c60fba661eb83e",
+        "raw_sha256": "0e46cd5222ebe8b8ca267b1af623ee7d2bee4fbefc675fcf16245fb8cf3e3d91",
+        "finish_reason": "stop",
+        "visible_content_characters": 2332,
+        "completion_tokens": 625,
+        "admission": "qwen/approveOrRejectTaskReview_projectCustomWorkflows/s0/direct/network-admission-1",
+        "passed": true,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "suite_error": "",
+        "report_sha256": "6f0cb5becdf047f66eb73708f747ad984ca97d796e6e86b01ca6aa20013ba080"
+      },
+      "first": {
+        "status": "build_missing"
+      },
+      "dna": {
+        "status": "build_missing"
+      }
+    },
+    "deepseek/qwen/approveOrRejectTaskReview_setTaskPriority": {
+      "builder": "deepseek",
+      "deployer": "qwen",
+      "task": "approveOrRejectTaskReview_setTaskPriority",
+      "group": "taskmanagement",
+      "direct": {
+        "status": "valid",
+        "candidate_sha256": "8a7c9902dca26a50ebb21682e503e59e1ed5aa1eb639809dd9b5a66b67ff3160",
+        "raw_sha256": "41fa2568bdb731dee2a277d1c01cb18029cc6bb0497b8dbe7142a493e66b000e",
+        "finish_reason": "stop",
+        "visible_content_characters": 2293,
+        "completion_tokens": 620,
+        "admission": "qwen/approveOrRejectTaskReview_setTaskPriority/s0/direct/network-admission-1",
+        "passed": true,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "suite_error": "",
+        "report_sha256": "8402c8120d2d9326d2736505c1bb191ac898c23ea0048e82d96d747ba5ad7e1e"
+      },
+      "first": {
+        "status": "build_missing"
+      },
+      "dna": {
+        "status": "build_missing"
+      }
+    },
+    "deepseek/qwen/assignTaskToProject_assignTaskToUser": {
+      "builder": "deepseek",
+      "deployer": "qwen",
+      "task": "assignTaskToProject_assignTaskToUser",
+      "group": "taskmanagement",
+      "direct": {
+        "status": "valid",
+        "candidate_sha256": "b2266284bfd20d5f323500fbf9f8bac4d238122269654c605968ceda5b5c2970",
+        "raw_sha256": "55d81b349706dc4efe9f354faa153f9a15360262ea3fac7b57a116e81a802859",
+        "finish_reason": "stop",
+        "visible_content_characters": 3033,
+        "completion_tokens": 852,
+        "admission": "qwen/assignTaskToProject_assignTaskToUser/s0/direct/network-admission-1",
+        "passed": true,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "suite_error": "",
+        "report_sha256": "5bb72a49065cf1b7c6f63d164d0e8cf178294d118a3866cbae43606c11727e3e"
+      },
+      "first": {
+        "status": "build_missing"
+      },
+      "dna": {
+        "status": "build_missing"
+      }
+    },
+    "qwen/deepseek/addAltTextToImage_postPerformanceReport": {
+      "builder": "qwen",
+      "deployer": "deepseek",
+      "task": "addAltTextToImage_postPerformanceReport",
+      "group": "blogging",
+      "direct": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "TypeError: the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "0314f4cbfa1fd8149bdcc0957d7476f02381f3483579059b1e344414139dc5a1",
+        "finish_reason": "length",
+        "visible_content_characters": 0,
+        "completion_tokens": 4000,
+        "admission": "deepseek/addAltTextToImage_postPerformanceReport/s0/direct"
+      },
+      "first": {
+        "status": "valid",
+        "configuration": {
+          "first": "addAltTextToImage",
+          "second": "postPerformanceReport"
+        },
+        "candidate_sha256": "db86424c7061c12a1945eb831e688d77b73063e2ac47c73faa6bcdf312878338",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "passed",
+          "passed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "4a99926941739e441e8ec9194cdddd25f611ad9852640481fc9c1c25fdd51187"
+      },
+      "dna": {
+        "status": "unresolved",
+        "reason": "ConnectError"
+      }
+    },
+    "qwen/deepseek/addCanonicalUrl_addComment": {
+      "builder": "qwen",
+      "deployer": "deepseek",
+      "task": "addCanonicalUrl_addComment",
+      "group": "blogging",
+      "direct": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "TypeError: the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "c7111e3616085a8d4a48ecac06bcfa1a489cb24eca92301986ee8a6e2811d8bc",
+        "finish_reason": "length",
+        "visible_content_characters": 0,
+        "completion_tokens": 4000,
+        "admission": "deepseek/addCanonicalUrl_addComment/s0/direct"
+      },
+      "first": {
+        "status": "valid",
+        "configuration": {
+          "first": "addAltTextToImage",
+          "second": "postPerformanceReport"
+        },
+        "candidate_sha256": "9ba3371e23e420073f1a758e696ea9be5f66f9fab3e8ccb08139c5a93716a9d3",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "b5fb1aa08b6a4fd70cf61cfad129fb9c353d18fac09c2c94f1dfb6d800ff6aca"
+      },
+      "dna": {
+        "status": "unresolved",
+        "reason": "ConnectError"
+      }
+    },
+    "qwen/deepseek/addCanonicalUrl_assignPostToCategory": {
+      "builder": "qwen",
+      "deployer": "deepseek",
+      "task": "addCanonicalUrl_assignPostToCategory",
+      "group": "blogging",
+      "direct": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "TypeError: the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "492187f427bff839e0fe8d4c53a244d7c7a8d44599dc21ea9d8c41d893fdf241",
+        "finish_reason": "length",
+        "visible_content_characters": 0,
+        "completion_tokens": 4000,
+        "admission": "deepseek/addCanonicalUrl_assignPostToCategory/s0/direct"
+      },
+      "first": {
+        "status": "valid",
+        "configuration": {
+          "first": "addAltTextToImage",
+          "second": "postPerformanceReport"
+        },
+        "candidate_sha256": "8010575c568972672e27adb10d4a2b9b0cdd8f42199627828413e45992869258",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "f072faa26a2bfce60516175a8d3d6773fd4faac53598ae5a299940a995ebce6c"
+      },
+      "dna": {
+        "status": "unresolved",
+        "reason": "ConnectError"
+      }
+    },
+    "qwen/deepseek/addCanonicalUrl_editComment": {
+      "builder": "qwen",
+      "deployer": "deepseek",
+      "task": "addCanonicalUrl_editComment",
+      "group": "blogging",
+      "direct": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "TypeError: the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "60d0faead77fa091a3cb2cf282c6545656700216c4536dbd1322e6c137624ad9",
+        "finish_reason": "length",
+        "visible_content_characters": 0,
+        "completion_tokens": 4000,
+        "admission": "deepseek/addCanonicalUrl_editComment/s0/direct"
+      },
+      "first": {
+        "status": "valid",
+        "configuration": {
+          "first": "addAltTextToImage",
+          "second": "postPerformanceReport"
+        },
+        "candidate_sha256": "40c77dade98ab7d781b6e0657f7f8a836bca420dd928b77fd8c94decac2bd255",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "5914befe8028bcbf206c98adcbfe6f650f803e8d20d2267c5251ee54abe7fcaf"
+      },
+      "dna": {
+        "status": "unresolved",
+        "reason": "ConnectError"
+      }
+    },
+    "qwen/deepseek/addCanonicalUrl_editTag": {
+      "builder": "qwen",
+      "deployer": "deepseek",
+      "task": "addCanonicalUrl_editTag",
+      "group": "blogging",
+      "direct": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "TypeError: the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "c81064552e4a805ccc9c96e915e62a44c9beb59bfa7b23a095d7796b7fc28ed5",
+        "finish_reason": "length",
+        "visible_content_characters": 0,
+        "completion_tokens": 4000,
+        "admission": "deepseek/addCanonicalUrl_editTag/s0/direct"
+      },
+      "first": {
+        "status": "valid",
+        "configuration": {
+          "first": "addAltTextToImage",
+          "second": "postPerformanceReport"
+        },
+        "candidate_sha256": "f2e108c4b5c6e436ae0f2bf470a8115f15687e9ecfefe045d1a1e24099b741a6",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "e17a9276655ea03eb5b295e63b9abfcba24027a7278eaae50f1bce01f8e2bf84"
+      },
+      "dna": {
+        "status": "unresolved",
+        "reason": "ConnectError"
+      }
+    },
+    "qwen/deepseek/addCommentToTask_setTaskDeadline": {
+      "builder": "qwen",
+      "deployer": "deepseek",
+      "task": "addCommentToTask_setTaskDeadline",
+      "group": "taskmanagement",
+      "direct": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "TypeError: the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "ad2d0240c2d054968317d208e2e104c3dc272c8122d930d4e559731c7878fb5e",
+        "finish_reason": "length",
+        "visible_content_characters": 0,
+        "completion_tokens": 4000,
+        "admission": "deepseek/addCommentToTask_setTaskDeadline/s0/direct"
+      },
+      "first": {
+        "status": "valid",
+        "configuration": {
+          "first": "TaskCommenter",
+          "second": "TaskDeadlineSetter"
+        },
+        "candidate_sha256": "51db6c3d183d6fd6fdc0b1246b97cca1b3445f8d5840fdb764bedff1ec3c5e1a",
+        "passed": true,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "suite_error": "",
+        "report_sha256": "3edf758e3be266b325c4e6db090e40a656824c7e90cb950826e20ef8ba5805de"
+      },
+      "dna": {
+        "status": "unresolved",
+        "reason": "ConnectError"
+      }
+    },
+    "qwen/deepseek/approveOrRejectTaskReview_compareTime": {
+      "builder": "qwen",
+      "deployer": "deepseek",
+      "task": "approveOrRejectTaskReview_compareTime",
+      "group": "taskmanagement",
+      "direct": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "TypeError: the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "34e8f5d06c0b247f62109e2d92ecee2dcbd3353bb11a0eef42a9d25106b09ab5",
+        "finish_reason": "length",
+        "visible_content_characters": 0,
+        "completion_tokens": 4000,
+        "admission": "deepseek/approveOrRejectTaskReview_compareTime/s0/direct"
+      },
+      "first": {
+        "status": "valid",
+        "configuration": {
+          "first": "TaskCommenter",
+          "second": "TaskDeadlineSetter"
+        },
+        "candidate_sha256": "9fc58e9342ccd60c6e9240f8597da8dabaa627bb3b1fd3e702c9efdf73ad2e9d",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "52411cd10a5095c6d17ba01986f3b939e8bac19bed8aa74590782fcc6b5f7c4c"
+      },
+      "dna": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "9f4b2791e890b077bc58931dbfef743e77acd9000765b3fec8d7b5aa5ec577a1",
+        "finish_reason": "length",
+        "completion_tokens": 550,
+        "visible_content_characters": 0
+      }
+    },
+    "qwen/deepseek/approveOrRejectTaskReview_projectCustomWorkflows": {
+      "builder": "qwen",
+      "deployer": "deepseek",
+      "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+      "group": "taskmanagement",
+      "direct": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "TypeError: the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "000e76effe1f9a99b4b41bfb91723da8d2da794f0353b24cc5e37e081b9356c1",
+        "finish_reason": "length",
+        "visible_content_characters": 0,
+        "completion_tokens": 4000,
+        "admission": "deepseek/approveOrRejectTaskReview_projectCustomWorkflows/s0/direct"
+      },
+      "first": {
+        "status": "valid",
+        "configuration": {
+          "first": "TaskCommenter",
+          "second": "TaskDeadlineSetter"
+        },
+        "candidate_sha256": "68d3c946bcdc2bacc9c7ce4c60fc7fa6a054f4cdf9cfb78c95555ea1c0b8baa2",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "4a103eb234bae3c3e9d002d28b8f752697ed8b340bf8856f24d989d87947b2ff"
+      },
+      "dna": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "79534b7930773416c90b3adf320e1a4f1d60d61184b65523f76c59a5abed8f88",
+        "finish_reason": "length",
+        "completion_tokens": 550,
+        "visible_content_characters": 0
+      }
+    },
+    "qwen/deepseek/approveOrRejectTaskReview_setTaskPriority": {
+      "builder": "qwen",
+      "deployer": "deepseek",
+      "task": "approveOrRejectTaskReview_setTaskPriority",
+      "group": "taskmanagement",
+      "direct": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "TypeError: the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "80641451964500546914f372f3854867139644484c5cb3f33c8d7e2ad131ce01",
+        "finish_reason": "length",
+        "visible_content_characters": 0,
+        "completion_tokens": 4000,
+        "admission": "deepseek/approveOrRejectTaskReview_setTaskPriority/s0/direct"
+      },
+      "first": {
+        "status": "valid",
+        "configuration": {
+          "first": "TaskCommenter",
+          "second": "TaskDeadlineSetter"
+        },
+        "candidate_sha256": "466161b79b6cb7c59c46ee12caa2b3bd16f963ecdae774d54a4b8d503ab7489b",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "b26f549a48edb3f6446e410d2ea87c32e53d58fe9bf1588e7126d8db85e30de5"
+      },
+      "dna": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "2e6f9d21f3b4164667048e9995514ee4ffb14d02bd54d87b85ec042001d0f3ed",
+        "finish_reason": "length",
+        "completion_tokens": 550,
+        "visible_content_characters": 0
+      }
+    },
+    "qwen/deepseek/assignTaskToProject_assignTaskToUser": {
+      "builder": "qwen",
+      "deployer": "deepseek",
+      "task": "assignTaskToProject_assignTaskToUser",
+      "group": "taskmanagement",
+      "direct": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "TypeError: the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "0914e98a9f4d35a9e62960f824a80d8c66174492e65a7405ada47df14d9d2156",
+        "finish_reason": "length",
+        "visible_content_characters": 0,
+        "completion_tokens": 4000,
+        "admission": "deepseek/assignTaskToProject_assignTaskToUser/s0/direct"
+      },
+      "first": {
+        "status": "valid",
+        "configuration": {
+          "first": "TaskCommenter",
+          "second": "TaskDeadlineSetter"
+        },
+        "candidate_sha256": "2a01c6a4e1384e94b9b75384d4d9aaf201d132f6f6d483b0e7348f7fffb31867",
+        "passed": false,
+        "official_tests": 4,
+        "assertion_statuses": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "suite_error": "",
+        "report_sha256": "c51d71c103bc3ddebc3f81822ec5553e9d173a58180dcf8995090d3a4fc6f3f4"
+      },
+      "dna": {
+        "status": "invalid",
+        "passed": false,
+        "reason": "the JSON object must be str, bytes or bytearray, not NoneType",
+        "raw_sha256": "1aefcb25845f29681c78c43d3f7d1172dc0bf4e33eff6d9606034a6159e1a6ad",
+        "finish_reason": "length",
+        "completion_tokens": 550,
+        "visible_content_characters": 0
+      }
+    }
+  },
+  "cost_by_phase_and_model": {
+    "build/qwen": {
+      "calls": 2,
+      "settled_microusd": 5199,
+      "exposure_microusd": 5199,
+      "unsettled": 0
+    },
+    "build/deepseek": {
+      "calls": 5,
+      "settled_microusd": 31497,
+      "exposure_microusd": 286717,
+      "unsettled": 4
+    },
+    "plan/deepseek": {
+      "calls": 31,
+      "settled_microusd": 10769,
+      "exposure_microusd": 432300,
+      "unsettled": 27
+    },
+    "plan/qwen": {
+      "calls": 31,
+      "settled_microusd": 1348,
+      "exposure_microusd": 174912,
+      "unsettled": 27
+    }
+  },
+  "account": {
+    "calls": 69,
+    "settled_usd": 0.048813,
+    "exposure_usd": 0.899128,
+    "unsettled_calls": 58
+  },
+  "shared_ledger": {
+    "calls": 397,
+    "settled_usd": 0.504159,
+    "exposure_usd": 1.4642,
+    "unsettled_calls": 74,
+    "cap_usd": 2.0,
+    "stop_usd": 2.0,
+    "halted": 0
+  },
+  "first_response_only": true,
+  "direct_reference_sha256": "18f2475a57b9c77f3e358e1be9a266544cc94ca4964e3f1aece1bbc53d9eda8f",
+  "seal_sha256": "d1727e84059857dec5b1be0889e37a49234df57701f932db947dc0fe96cf48c0",
+  "stop_conditions": {}
+}

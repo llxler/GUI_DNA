@@ -1,0 +1,2123 @@
+{
+  "study": "expression-editor-sources-20261123",
+  "project": "expression-editor",
+  "upstream_revision": "7b31ca2b786eef120dd49ce63dd03d0c0006046d",
+  "planned_unique_targets": 20,
+  "model": "mistralai/mistral-small-3.2-24b-instruct",
+  "preparation_model": "openai/gpt-5",
+  "primary_endpoint": "first",
+  "task_unit": "individual current official file",
+  "protocol": "Project-wide public preparation for both AI workflows; independent requirement-prefix deployments and a single optional public format repair.",
+  "freeze_utc": "2026-11-23T03:27:47.467325+00:00",
+  "preparations_frozen_utc": "2026-11-23T03:34:19.982200+00:00",
+  "generation_closed_utc": "2026-11-23T03:50:51.347725+00:00",
+  "provenance": {
+    "reference": {
+      "inputs": "Six upstream production modules and study binding informed by the published reference entry, plus the public starter and requirement prefix.",
+      "production_modules": [
+        "parser",
+        "evaluate",
+        "editor",
+        "highlight",
+        "lint",
+        "autocomplete"
+      ],
+      "production_module_utf8_bytes": 34078,
+      "reference_files_sha256": {
+        "parser.js": "fbd308e81d2cfcf8faeb79f5bee545249c574ef0e64f04ce3c6ead04281273da",
+        "evaluate.js": "389ef8b42dba84ee88313e8c1804964b9a3c037dde732525ce43c7fe6feb515d",
+        "editor.js": "d49e4dac63b91eac87fa5bb815066a82f6317d585ed46c411c6aff86a5d6ba91",
+        "highlight.js": "567cbeb3c723011781b4d8ab21be475d654c1e1e0f3cf74f4807845b40ea1b15",
+        "lint.js": "65ddc4f987675f3c94551bd0516de03c3c3ba4390a1e14095a90c4fbdcb624e4",
+        "autocomplete.js": "a31af7e7e0b70814a621c044b0281a5e611f8d96c093c9732315b007e4b52330"
+      },
+      "binding_sha256": "e906f35da91014f705d4e62172ce126ff1bb87f26e538eccbd44c25040382101",
+      "binding_utf8_bytes": 5177,
+      "controls": {
+        "toolbar": [
+          "documentation",
+          "uppercase",
+          "snippet",
+          "run"
+        ],
+        "controllers": [
+          "pairParentheses",
+          "highlight",
+          "diagnosticTooltip",
+          "syntaxErrors",
+          "completion",
+          "history"
+        ]
+      },
+      "upstream_human_person_hours": null,
+      "observed_agent_preparation_wall_seconds_including_runner_protocol": 285.467325
+    },
+    "ai": {
+      "preparation_status": "returned_artifacts_failed_public_validation",
+      "deployment_positions_planned": 20,
+      "deployment_first_responses": 0,
+      "preparation_model": "openai/gpt-5",
+      "preparation_user_message_sha256": "783733ebcaa770768237827e0ed0e0c1d57cf0d5976f27500651a0a1bde2c881",
+      "preparation_inputs": "Complete public requirements and public starter; no official assertions or reference assets.",
+      "deployment_inputs": "Prefix and starter, plus own complete frozen package",
+      "artifact_sha256": null,
+      "artifact_utf8_bytes": null,
+      "preparation_attempts": [
+        {
+          "stage": "first",
+          "received": true,
+          "valid": false,
+          "public_failure": "Unterminated string starting at: line 80 column 15 (char 9304)"
+        },
+        {
+          "stage": "repair",
+          "received": true,
+          "valid": false,
+          "public_failure": "Unterminated string starting at: line 80 column 15 (char 9258)"
+        }
+      ],
+      "construction": {
+        "requests": 2,
+        "settled_usd": 0.337602,
+        "exposure_usd": 0.337602,
+        "unsettled_calls": 0,
+        "billed_tokens": {
+          "prompt_tokens": 18804,
+          "completion_tokens": 32000,
+          "reasoning_tokens": 13952
+        },
+        "providers": {
+          "OpenAI": 2
+        },
+        "finish_reasons": {
+          "length": 2
+        }
+      }
+    },
+    "direct": {
+      "preparation_status": "valid_artifact_frozen",
+      "deployment_positions_planned": 20,
+      "deployment_first_responses": 11,
+      "preparation_model": "openai/gpt-5",
+      "preparation_user_message_sha256": "783733ebcaa770768237827e0ed0e0c1d57cf0d5976f27500651a0a1bde2c881",
+      "preparation_inputs": "Complete public requirements and public starter; no official assertions or reference assets.",
+      "deployment_inputs": "Prefix and starter, plus own frozen non-executed technical memo",
+      "artifact_sha256": "e3229e02d271af4f7551e446f4f8be2e160a71bd34ecb6bfed5282c1f21b612d",
+      "artifact_utf8_bytes": 27111,
+      "preparation_attempts": [
+        {
+          "stage": "first",
+          "received": true,
+          "valid": true,
+          "public_failure": null
+        }
+      ],
+      "construction": {
+        "requests": 1,
+        "settled_usd": 0.136703,
+        "exposure_usd": 0.136703,
+        "unsettled_calls": 0,
+        "billed_tokens": {
+          "prompt_tokens": 5042,
+          "completion_tokens": 13040,
+          "reasoning_tokens": 6144
+        },
+        "providers": {
+          "OpenAI": 1
+        },
+        "finish_reasons": {
+          "stop": 1
+        }
+      }
+    }
+  },
+  "public_starter_sha256": {
+    "index.html": "42b5a77f458f5f5d6d006f60bc9fca82bf2251194bb1115de881d1e4eff4853e",
+    "index.js": "aafed813e51997cf0276c51207aa6d1b8f3ab4f2255089d0aa06f0244736274f"
+  },
+  "summaries": {
+    "first": {
+      "shared_observed_targets": [],
+      "by_arm_common": {
+        "reference": {
+          "passed": 0,
+          "valid_artifacts": 0,
+          "observed": 0
+        },
+        "ai": {
+          "passed": 0,
+          "valid_artifacts": 0,
+          "observed": 0
+        },
+        "direct": {
+          "passed": 0,
+          "valid_artifacts": 0,
+          "observed": 0
+        }
+      },
+      "by_arm_available": {
+        "reference": {
+          "passed": 0,
+          "valid_artifacts": 0,
+          "observed": 9
+        },
+        "ai": {
+          "passed": 0,
+          "valid_artifacts": 0,
+          "observed": 0
+        },
+        "direct": {
+          "passed": 6,
+          "valid_artifacts": 11,
+          "observed": 11
+        }
+      },
+      "paired": {
+        "reference_vs_ai": {
+          "observed": 0,
+          "left_pass": 0,
+          "right_pass": 0,
+          "both_pass": 0,
+          "left_only": [],
+          "right_only": [],
+          "both_fail": 0
+        },
+        "reference_vs_direct": {
+          "observed": 9,
+          "left_pass": 0,
+          "right_pass": 6,
+          "both_pass": 0,
+          "left_only": [],
+          "right_only": [
+            "task-1",
+            "task-3",
+            "task-4",
+            "task-5",
+            "task-6",
+            "task-7"
+          ],
+          "both_fail": 3
+        },
+        "ai_vs_direct": {
+          "observed": 0,
+          "left_pass": 0,
+          "right_pass": 0,
+          "both_pass": 0,
+          "left_only": [],
+          "right_only": [],
+          "both_fail": 0
+        }
+      },
+      "calibrated_shared_targets": [],
+      "by_arm_calibrated_common": {
+        "reference": {
+          "passed": 0,
+          "valid_artifacts": 0,
+          "observed": 0
+        },
+        "ai": {
+          "passed": 0,
+          "valid_artifacts": 0,
+          "observed": 0
+        },
+        "direct": {
+          "passed": 0,
+          "valid_artifacts": 0,
+          "observed": 0
+        }
+      },
+      "task_plan_vs_fixed_library_example": {
+        "reference": {
+          "observed": 9,
+          "left_pass": 0,
+          "right_pass": 9,
+          "both_pass": 0,
+          "left_only": [],
+          "right_only": [
+            "task-1",
+            "task-2",
+            "task-3",
+            "task-4",
+            "task-5",
+            "task-6",
+            "task-7",
+            "task-8",
+            "task-10"
+          ],
+          "both_fail": 0
+        },
+        "ai": {
+          "observed": 0,
+          "left_pass": 0,
+          "right_pass": 0,
+          "both_pass": 0,
+          "left_only": [],
+          "right_only": [],
+          "both_fail": 0
+        }
+      }
+    },
+    "after_public_repair": {
+      "shared_observed_targets": [],
+      "by_arm_common": {
+        "reference": {
+          "passed": 0,
+          "valid_artifacts": 0,
+          "observed": 0
+        },
+        "ai": {
+          "passed": 0,
+          "valid_artifacts": 0,
+          "observed": 0
+        },
+        "direct": {
+          "passed": 0,
+          "valid_artifacts": 0,
+          "observed": 0
+        }
+      },
+      "by_arm_available": {
+        "reference": {
+          "passed": 0,
+          "valid_artifacts": 0,
+          "observed": 0
+        },
+        "ai": {
+          "passed": 0,
+          "valid_artifacts": 0,
+          "observed": 0
+        },
+        "direct": {
+          "passed": 6,
+          "valid_artifacts": 11,
+          "observed": 11
+        }
+      },
+      "paired": {
+        "reference_vs_ai": {
+          "observed": 0,
+          "left_pass": 0,
+          "right_pass": 0,
+          "both_pass": 0,
+          "left_only": [],
+          "right_only": [],
+          "both_fail": 0
+        },
+        "reference_vs_direct": {
+          "observed": 0,
+          "left_pass": 0,
+          "right_pass": 0,
+          "both_pass": 0,
+          "left_only": [],
+          "right_only": [],
+          "both_fail": 0
+        },
+        "ai_vs_direct": {
+          "observed": 0,
+          "left_pass": 0,
+          "right_pass": 0,
+          "both_pass": 0,
+          "left_only": [],
+          "right_only": [],
+          "both_fail": 0
+        }
+      },
+      "calibrated_shared_targets": [],
+      "by_arm_calibrated_common": {
+        "reference": {
+          "passed": 0,
+          "valid_artifacts": 0,
+          "observed": 0
+        },
+        "ai": {
+          "passed": 0,
+          "valid_artifacts": 0,
+          "observed": 0
+        },
+        "direct": {
+          "passed": 0,
+          "valid_artifacts": 0,
+          "observed": 0
+        }
+      },
+      "task_plan_vs_fixed_library_example": {
+        "reference": {
+          "observed": 0,
+          "left_pass": 0,
+          "right_pass": 0,
+          "both_pass": 0,
+          "left_only": [],
+          "right_only": [],
+          "both_fail": 0
+        },
+        "ai": {
+          "observed": 0,
+          "left_pass": 0,
+          "right_pass": 0,
+          "both_pass": 0,
+          "left_only": [],
+          "right_only": [],
+          "both_fail": 0
+        }
+      }
+    }
+  },
+  "responses": {
+    "reference": {
+      "first": {
+        "scheduled_positions": 20,
+        "attempted_positions": 20,
+        "received": 9,
+        "valid": 0
+      },
+      "repair": {
+        "scheduled_positions": 9,
+        "attempted_positions": 9,
+        "received": 0,
+        "valid": 0
+      }
+    },
+    "ai": {
+      "first": {
+        "scheduled_positions": 20,
+        "attempted_positions": 0,
+        "received": 0,
+        "valid": 0
+      },
+      "repair": {
+        "scheduled_positions": 0,
+        "attempted_positions": 0,
+        "received": 0,
+        "valid": 0
+      }
+    },
+    "direct": {
+      "first": {
+        "scheduled_positions": 20,
+        "attempted_positions": 20,
+        "received": 11,
+        "valid": 11
+      },
+      "repair": {
+        "scheduled_positions": 0,
+        "attempted_positions": 0,
+        "received": 0,
+        "valid": 0
+      }
+    }
+  },
+  "fixed_page_controls": {
+    "starter": {
+      "observed": 20,
+      "passed": 0,
+      "page_manifest_sha256": "ea4b264d76ca9b6a4ea4d074bd2dfb6b33a56eb3b6c1ddac0fc31948d135757b"
+    },
+    "blank": {
+      "observed": 20,
+      "passed": 0,
+      "page_manifest_sha256": "248bbe91f7b8881ed26f2b5d6722ba7a9e7101ce901a400466b923ee79064609"
+    },
+    "upstream_final": {
+      "observed": 20,
+      "passed": 20,
+      "page_manifest_sha256": "67b60764cb4e4a45a6f9d62d9b328dd9c3593ce81d09deac8b1a539683c47f3a"
+    },
+    "reference_full": {
+      "observed": 20,
+      "passed": 20,
+      "page_manifest_sha256": "9ed78773d9f2c8838ee16ee5ca2cd31601595aeed4cf276482573a9cd91b8a46"
+    },
+    "ai_example2": {
+      "observed": 0,
+      "passed": 0,
+      "page_manifest_sha256": null
+    }
+  },
+  "stage_ledger": {
+    "calls": 52,
+    "settled_usd": 0.506744,
+    "exposure_usd": 1.042636,
+    "unsettled_calls": 29,
+    "cap_usd": 1.2,
+    "stop_usd": 1.2,
+    "halted": 0
+  },
+  "preparation_cost_by_arm": {
+    "ai": {
+      "requests": 2,
+      "settled_usd": 0.337602,
+      "exposure_usd": 0.337602,
+      "unsettled_calls": 0,
+      "billed_tokens": {
+        "prompt_tokens": 18804,
+        "completion_tokens": 32000,
+        "reasoning_tokens": 13952
+      },
+      "providers": {
+        "OpenAI": 2
+      },
+      "finish_reasons": {
+        "length": 2
+      }
+    },
+    "direct": {
+      "requests": 1,
+      "settled_usd": 0.136703,
+      "exposure_usd": 0.136703,
+      "unsettled_calls": 0,
+      "billed_tokens": {
+        "prompt_tokens": 5042,
+        "completion_tokens": 13040,
+        "reasoning_tokens": 6144
+      },
+      "providers": {
+        "OpenAI": 1
+      },
+      "finish_reasons": {
+        "stop": 1
+      }
+    }
+  },
+  "cost_by_arm": {
+    "reference": {
+      "requests": 29,
+      "settled_usd": 0.020347,
+      "exposure_usd": 0.417385,
+      "unsettled_calls": 20,
+      "billed_tokens": {
+        "prompt_tokens": 107313,
+        "completion_tokens": 61474,
+        "reasoning_tokens": 0
+      },
+      "providers": {
+        "DeepInfra": 9
+      },
+      "finish_reasons": {
+        "length": 7,
+        "stop": 2
+      }
+    },
+    "ai": {
+      "requests": 0,
+      "settled_usd": 0.0,
+      "exposure_usd": 0.0,
+      "unsettled_calls": 0,
+      "billed_tokens": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "providers": {},
+      "finish_reasons": {}
+    },
+    "direct": {
+      "requests": 20,
+      "settled_usd": 0.012092,
+      "exposure_usd": 0.150946,
+      "unsettled_calls": 9,
+      "billed_tokens": {
+        "prompt_tokens": 92100,
+        "completion_tokens": 25889,
+        "reasoning_tokens": 0
+      },
+      "providers": {
+        "DeepInfra": 11
+      },
+      "finish_reasons": {
+        "stop": 11
+      }
+    }
+  },
+  "planning_ledger": {
+    "requests": 49,
+    "settled_usd": 0.032439,
+    "exposure_usd": 0.568331,
+    "unsettled_calls": 29
+  },
+  "preparation_ledger": {
+    "requests": 3,
+    "settled_usd": 0.474305,
+    "exposure_usd": 0.474305,
+    "unsettled_calls": 0
+  },
+  "evaluation_runtime": {
+    "playwright": "1.57.0",
+    "tinycolor2": "1.6.0",
+    "runtime_lock_sha256": "0a01a2429577fa67a1646f0fec334bdbde52876090b26153a6b514165fb393a5",
+    "utility_sha256": {
+      "index.js": "7319676beceb1478e73f9c5a9f1571618bc39e94084017b14ae44807e81b06e7",
+      "package.json": "6c98de1a7641bf66599bd9b05083a736b4e027de734a400fa3c9150bbe5d6761",
+      "css.js": "f59d504d2b141c48b40e9907d03dae670efc23de7c1ebf800f72e7642c598fb7"
+    }
+  },
+  "targets": {
+    "task-1": {
+      "reference": {
+        "first": {
+          "response": true,
+          "valid": false,
+          "passed": false,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "repair",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "ai": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "direct": {
+        "first": {
+          "response": true,
+          "valid": true,
+          "passed": true,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "77ea01aeb8c28a5e2d73222f7211cea43961ea911e759cdf19fd1382bebcd8fe",
+          "official_report_sha256": "079345dc4fff8d3d22f59d225ef592304d3807ed98606abad54f7947d297e0b8"
+        },
+        "after_public_repair": {
+          "response": true,
+          "valid": true,
+          "passed": true,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "77ea01aeb8c28a5e2d73222f7211cea43961ea911e759cdf19fd1382bebcd8fe",
+          "official_report_sha256": "079345dc4fff8d3d22f59d225ef592304d3807ed98606abad54f7947d297e0b8"
+        }
+      },
+      "fixed_pages": {
+        "starter": {
+          "passed": false,
+          "official_report_sha256": "e5c5657b5609aeb2bc1ccf5c89d31e8670541bca130b98634026b81d30025816"
+        },
+        "blank": {
+          "passed": false,
+          "official_report_sha256": "e03427d23204a9e55d852125b5b7d38593c3cd010544c0569e4fc5db5ab2aad8"
+        },
+        "upstream_final": {
+          "passed": true,
+          "official_report_sha256": "ab2aa0cd09eb71f715df37e2989a54a2fa35bb9097ae50842c663a40299695a4"
+        },
+        "reference_full": {
+          "passed": true,
+          "official_report_sha256": "bb9e5addc9e36ce53d8d323b348a86494f5830bddb789487b0ddfd9ccf355298"
+        },
+        "ai_example2": {
+          "passed": null,
+          "official_report_sha256": null
+        }
+      }
+    },
+    "task-2": {
+      "reference": {
+        "first": {
+          "response": true,
+          "valid": false,
+          "passed": false,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "repair",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "ai": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "direct": {
+        "first": {
+          "response": true,
+          "valid": true,
+          "passed": false,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "fafffe602153b6e79c9bd47dacf0658d8b22788fc95395bc4195f6b6976a35e1",
+          "official_report_sha256": "d4aa8b2b2d6ce1568caa85823f5f3739bdd58fe57e155624bf62866756ea1f52"
+        },
+        "after_public_repair": {
+          "response": true,
+          "valid": true,
+          "passed": false,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "fafffe602153b6e79c9bd47dacf0658d8b22788fc95395bc4195f6b6976a35e1",
+          "official_report_sha256": "d4aa8b2b2d6ce1568caa85823f5f3739bdd58fe57e155624bf62866756ea1f52"
+        }
+      },
+      "fixed_pages": {
+        "starter": {
+          "passed": false,
+          "official_report_sha256": "904bcf5b20cf45897acf967265a2bc1360a001b7894ce1fcf473ad3ea00a5df0"
+        },
+        "blank": {
+          "passed": false,
+          "official_report_sha256": "0084c9802d2b50b116ff43ebc997a20719cc5e06f34437fc8c4e78d97540b55b"
+        },
+        "upstream_final": {
+          "passed": true,
+          "official_report_sha256": "21e77047ac18079aec901abd79a67ecc6bcec7f1ffaa51cdab70f205612b81ba"
+        },
+        "reference_full": {
+          "passed": true,
+          "official_report_sha256": "73fb2a6ad8a24f13adfb5db85bd5e24c89c8e7447f4012eb4ea7a34069cf158d"
+        },
+        "ai_example2": {
+          "passed": null,
+          "official_report_sha256": null
+        }
+      }
+    },
+    "task-3": {
+      "reference": {
+        "first": {
+          "response": true,
+          "valid": false,
+          "passed": false,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "repair",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "ai": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "direct": {
+        "first": {
+          "response": true,
+          "valid": true,
+          "passed": true,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "ba0873eb028395d958e590e5334adafddbf20e95e6e2b03d7a77938a8483089e",
+          "official_report_sha256": "e46e51bed0e99f1d830f817806b1aace8f9f4ca9743cb553990ee54f661d1522"
+        },
+        "after_public_repair": {
+          "response": true,
+          "valid": true,
+          "passed": true,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "ba0873eb028395d958e590e5334adafddbf20e95e6e2b03d7a77938a8483089e",
+          "official_report_sha256": "e46e51bed0e99f1d830f817806b1aace8f9f4ca9743cb553990ee54f661d1522"
+        }
+      },
+      "fixed_pages": {
+        "starter": {
+          "passed": false,
+          "official_report_sha256": "a4ad192766e51bbd6338412b250da8e1cc739dabad71f425c0285ea60a497fb2"
+        },
+        "blank": {
+          "passed": false,
+          "official_report_sha256": "f0f933249e957ecd872410c37ef8902ac57548f155e7d28e61bf8a509b3c9df3"
+        },
+        "upstream_final": {
+          "passed": true,
+          "official_report_sha256": "397478aede7f04e65f4517d5926689399505ba3399f1f7552ca818a8c5569800"
+        },
+        "reference_full": {
+          "passed": true,
+          "official_report_sha256": "08119ef33e65b3898afbeb7394df43c8b16bcd670a778fe580b3ac71ea66275e"
+        },
+        "ai_example2": {
+          "passed": null,
+          "official_report_sha256": null
+        }
+      }
+    },
+    "task-4": {
+      "reference": {
+        "first": {
+          "response": true,
+          "valid": false,
+          "passed": false,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "repair",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "ai": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "direct": {
+        "first": {
+          "response": true,
+          "valid": true,
+          "passed": true,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "34ca09591a1813e4f2ab4745748b8028a21f9929840171bab06b07f6b2494f0b",
+          "official_report_sha256": "f07edf88509b55165070d4ff0927221766debe1c743e9cf4214c3f4116a6b193"
+        },
+        "after_public_repair": {
+          "response": true,
+          "valid": true,
+          "passed": true,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "34ca09591a1813e4f2ab4745748b8028a21f9929840171bab06b07f6b2494f0b",
+          "official_report_sha256": "f07edf88509b55165070d4ff0927221766debe1c743e9cf4214c3f4116a6b193"
+        }
+      },
+      "fixed_pages": {
+        "starter": {
+          "passed": false,
+          "official_report_sha256": "3e2f2d37ab011493af688106b8a6417d0d25a9154c5f760c8c6b7d19e69afa82"
+        },
+        "blank": {
+          "passed": false,
+          "official_report_sha256": "7a39bb090c52bbe680785004d286c8457d94138681c51709aaa8161a78325ab4"
+        },
+        "upstream_final": {
+          "passed": true,
+          "official_report_sha256": "d7c33672fe0ab8ccd9a40fc09331251370a6315ffd35f5f4688d4e09de61d2b1"
+        },
+        "reference_full": {
+          "passed": true,
+          "official_report_sha256": "85299d03df6c631e858ee9839969f5b95d9edec322f33974b6008da6f17d790f"
+        },
+        "ai_example2": {
+          "passed": null,
+          "official_report_sha256": null
+        }
+      }
+    },
+    "task-5": {
+      "reference": {
+        "first": {
+          "response": true,
+          "valid": false,
+          "passed": false,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "repair",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "ai": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "direct": {
+        "first": {
+          "response": true,
+          "valid": true,
+          "passed": true,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "b8ab662ec13ca89286f18dadb542ad0f4f51f5e968a289ac702e84c95bd7f7b0",
+          "official_report_sha256": "d25d4667594410cfc4ba0e647ee4dc86dc91468384b8cd0ea46f52f1e3d912b7"
+        },
+        "after_public_repair": {
+          "response": true,
+          "valid": true,
+          "passed": true,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "b8ab662ec13ca89286f18dadb542ad0f4f51f5e968a289ac702e84c95bd7f7b0",
+          "official_report_sha256": "d25d4667594410cfc4ba0e647ee4dc86dc91468384b8cd0ea46f52f1e3d912b7"
+        }
+      },
+      "fixed_pages": {
+        "starter": {
+          "passed": false,
+          "official_report_sha256": "a69d459175867cfe27372b7d0d584a829476c0b525603689b5bba2c2b8981cee"
+        },
+        "blank": {
+          "passed": false,
+          "official_report_sha256": "bcbef7961ce20d8d0ad9da2b9e77f91428c8e40f551075b75f2e18f50c923a43"
+        },
+        "upstream_final": {
+          "passed": true,
+          "official_report_sha256": "741867514f9e947335434910e8b8dc0fee4fb562d751832746b31e5d08ba1bdc"
+        },
+        "reference_full": {
+          "passed": true,
+          "official_report_sha256": "4e19588ff1704e518f68803f8d64ee2e519a2e9ea045e2d4180bb3bb2b1cb01b"
+        },
+        "ai_example2": {
+          "passed": null,
+          "official_report_sha256": null
+        }
+      }
+    },
+    "task-6": {
+      "reference": {
+        "first": {
+          "response": true,
+          "valid": false,
+          "passed": false,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "repair",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "ai": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "direct": {
+        "first": {
+          "response": true,
+          "valid": true,
+          "passed": true,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "c2c3972a8307ff4d0a10a173291a10af32739e947706645e7eb69e7eff552b76",
+          "official_report_sha256": "95b0311b49a01bca101031f5efca3f963faa434c97c96c12f848e93d3dfb91f9"
+        },
+        "after_public_repair": {
+          "response": true,
+          "valid": true,
+          "passed": true,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "c2c3972a8307ff4d0a10a173291a10af32739e947706645e7eb69e7eff552b76",
+          "official_report_sha256": "95b0311b49a01bca101031f5efca3f963faa434c97c96c12f848e93d3dfb91f9"
+        }
+      },
+      "fixed_pages": {
+        "starter": {
+          "passed": false,
+          "official_report_sha256": "46fb0dce1e55eaf9504ecc04d4563dcfd57ff891249f518c255e7976f672d517"
+        },
+        "blank": {
+          "passed": false,
+          "official_report_sha256": "f1ecaa5bb5c689241a82341373ce79db8a082093e1240b504045e8754e20a3b7"
+        },
+        "upstream_final": {
+          "passed": true,
+          "official_report_sha256": "703d85f565f9b09d77385a469d70d88b60da4654b72af22e6ecf703b6ec95773"
+        },
+        "reference_full": {
+          "passed": true,
+          "official_report_sha256": "5e59c69ed98066f5a6e0c36e9cf52b9e581ff9cb0f30760ae5a3c779c1e85a15"
+        },
+        "ai_example2": {
+          "passed": null,
+          "official_report_sha256": null
+        }
+      }
+    },
+    "task-7": {
+      "reference": {
+        "first": {
+          "response": true,
+          "valid": false,
+          "passed": false,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "repair",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "ai": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "direct": {
+        "first": {
+          "response": true,
+          "valid": true,
+          "passed": true,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "c0d0530334a214e94a96345d238942a4efb4ae47e5c2ef379ed5713515b71a94",
+          "official_report_sha256": "0b52edefe0340162f00952e7cefa478e273b98edcd0e74d9dc24d3166c22d82b"
+        },
+        "after_public_repair": {
+          "response": true,
+          "valid": true,
+          "passed": true,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "c0d0530334a214e94a96345d238942a4efb4ae47e5c2ef379ed5713515b71a94",
+          "official_report_sha256": "0b52edefe0340162f00952e7cefa478e273b98edcd0e74d9dc24d3166c22d82b"
+        }
+      },
+      "fixed_pages": {
+        "starter": {
+          "passed": false,
+          "official_report_sha256": "e4b5033c61eefed718e520c7f9e90ff305879e66cd17f898a22a5133d41e7e2e"
+        },
+        "blank": {
+          "passed": false,
+          "official_report_sha256": "3a109fc745a0a7ae81e7bc4de62e07b7b9c63204d223c8a22eb01ca428bc42f2"
+        },
+        "upstream_final": {
+          "passed": true,
+          "official_report_sha256": "693853303fc654c1076813b588b28b4ef668608f19cb55151320b87d6e1df099"
+        },
+        "reference_full": {
+          "passed": true,
+          "official_report_sha256": "015604436929f27f18a05008e4e20123c3619b1082d1d6b9a139524c05a6d2ab"
+        },
+        "ai_example2": {
+          "passed": null,
+          "official_report_sha256": null
+        }
+      }
+    },
+    "task-8": {
+      "reference": {
+        "first": {
+          "response": true,
+          "valid": false,
+          "passed": false,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "repair",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "ai": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "direct": {
+        "first": {
+          "response": true,
+          "valid": true,
+          "passed": false,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "048a57a9c06db38e27948192a6a7fc3590569f9c7ba82c1f0ae8c449f382ede9",
+          "official_report_sha256": "d41a258b878cbe8b3f0e5ef69d0434830bfb537b1837ce5991fb3b09b4e30669"
+        },
+        "after_public_repair": {
+          "response": true,
+          "valid": true,
+          "passed": false,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "048a57a9c06db38e27948192a6a7fc3590569f9c7ba82c1f0ae8c449f382ede9",
+          "official_report_sha256": "d41a258b878cbe8b3f0e5ef69d0434830bfb537b1837ce5991fb3b09b4e30669"
+        }
+      },
+      "fixed_pages": {
+        "starter": {
+          "passed": false,
+          "official_report_sha256": "811ca8dd3e291c5722a7e64f8228640608035d50d3ae97dd8b3e6a1853a083d0"
+        },
+        "blank": {
+          "passed": false,
+          "official_report_sha256": "5cab79dc60dcba326e8782c73c9aea4d9acbae73fcb487534385202d3494dbef"
+        },
+        "upstream_final": {
+          "passed": true,
+          "official_report_sha256": "23e52f36e725e3e7c961fb1fc5f80ff12ef5c00720714bf9712c4243ad1260a0"
+        },
+        "reference_full": {
+          "passed": true,
+          "official_report_sha256": "c62a5cc45bf51a56df41dddbf80ccb6c4b9e6a1f5f9445cd8d984163fb325ca3"
+        },
+        "ai_example2": {
+          "passed": null,
+          "official_report_sha256": null
+        }
+      }
+    },
+    "task-9": {
+      "reference": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "ai": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "direct": {
+        "first": {
+          "response": true,
+          "valid": true,
+          "passed": false,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "026d2cc6389ba359aaabf9262c410aab2907b4b5b4b2fb33aa8ae85ca202b194",
+          "official_report_sha256": "25d35b2fc06ad88119dcc359984cca1ae8641e16e35e5e56e94ace67403018ba"
+        },
+        "after_public_repair": {
+          "response": true,
+          "valid": true,
+          "passed": false,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "026d2cc6389ba359aaabf9262c410aab2907b4b5b4b2fb33aa8ae85ca202b194",
+          "official_report_sha256": "25d35b2fc06ad88119dcc359984cca1ae8641e16e35e5e56e94ace67403018ba"
+        }
+      },
+      "fixed_pages": {
+        "starter": {
+          "passed": false,
+          "official_report_sha256": "835e046d717cafb0656c6c2704d1373ade7657a6a5f1c8ce3fc08c9166997db3"
+        },
+        "blank": {
+          "passed": false,
+          "official_report_sha256": "1b98f63f32e4f83b4085b9eb56bb420487a33e7d5b63366be534e3d89b52634b"
+        },
+        "upstream_final": {
+          "passed": true,
+          "official_report_sha256": "78f4cdbba7667a7ae0f0f163ba6b28f834d835edbf8c968e58370280a99c622a"
+        },
+        "reference_full": {
+          "passed": true,
+          "official_report_sha256": "57f615d7872032deff4b9608b704eaa2b410b33dbfee318887d3eb867b26b74a"
+        },
+        "ai_example2": {
+          "passed": null,
+          "official_report_sha256": null
+        }
+      }
+    },
+    "task-10": {
+      "reference": {
+        "first": {
+          "response": true,
+          "valid": false,
+          "passed": false,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "repair",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "ai": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "direct": {
+        "first": {
+          "response": true,
+          "valid": true,
+          "passed": false,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "955e82d5fe18c50fd799166f11a589b0dec9588d28c58aab2c5f57acd5c8d6a2",
+          "official_report_sha256": "96a326552dbb060ecdaaaa07a85ac32e60d657fe4170ea443116583c9acc1378"
+        },
+        "after_public_repair": {
+          "response": true,
+          "valid": true,
+          "passed": false,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "955e82d5fe18c50fd799166f11a589b0dec9588d28c58aab2c5f57acd5c8d6a2",
+          "official_report_sha256": "96a326552dbb060ecdaaaa07a85ac32e60d657fe4170ea443116583c9acc1378"
+        }
+      },
+      "fixed_pages": {
+        "starter": {
+          "passed": false,
+          "official_report_sha256": "8207c615ce6d8a64ab40e45ffe43e75d9a7a8163fd3d40466ca917955add7e67"
+        },
+        "blank": {
+          "passed": false,
+          "official_report_sha256": "f49a2a709f670375bf872eaabdd25818dbd444087b8e1ebede034bd0ba97b071"
+        },
+        "upstream_final": {
+          "passed": true,
+          "official_report_sha256": "d556a8783c9ff0a98b81f19314db99fd053040f7e819c39f3ecfd4393d5591d1"
+        },
+        "reference_full": {
+          "passed": true,
+          "official_report_sha256": "f300d4345850ee41b1f6a3096ca25c08da996cef080db6f9a589c00b86d969ef"
+        },
+        "ai_example2": {
+          "passed": null,
+          "official_report_sha256": null
+        }
+      }
+    },
+    "task-11": {
+      "reference": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "ai": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "direct": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "fixed_pages": {
+        "starter": {
+          "passed": false,
+          "official_report_sha256": "54c8210d7c8a2bc74a80f2be07af39cd6ba3f51e012700e818c168623d2ee408"
+        },
+        "blank": {
+          "passed": false,
+          "official_report_sha256": "2fbd1a843044dba42607506a9ecdf945384ac6b59ba5eb74a5b8fa7e3e29f464"
+        },
+        "upstream_final": {
+          "passed": true,
+          "official_report_sha256": "b1897b3203d0153b5b522fecfe456b4ef7fe431ff278a9155ab994c9b103e637"
+        },
+        "reference_full": {
+          "passed": true,
+          "official_report_sha256": "54ab2540e1f431e464c9bd75f271bace863c3e9887a919e91c0fc40a98b34570"
+        },
+        "ai_example2": {
+          "passed": null,
+          "official_report_sha256": null
+        }
+      }
+    },
+    "task-12": {
+      "reference": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "ai": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "direct": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "fixed_pages": {
+        "starter": {
+          "passed": false,
+          "official_report_sha256": "3ffe1585af9358bfc82095f0ab24223c33e8ddaf3e16e9271da5922a5c4f1c67"
+        },
+        "blank": {
+          "passed": false,
+          "official_report_sha256": "9c437809bda8cf55123811e6f050fa1aceec2dcebe80ceaf97bb877abe350495"
+        },
+        "upstream_final": {
+          "passed": true,
+          "official_report_sha256": "6cdf9e04a98e8ba7ebcef823ea98b7be5264b6dc3c075eba23be612594f67a57"
+        },
+        "reference_full": {
+          "passed": true,
+          "official_report_sha256": "3d106615bf726b29ed20b9940294ab20dae898e5874ee875d490f0c64b75c9ef"
+        },
+        "ai_example2": {
+          "passed": null,
+          "official_report_sha256": null
+        }
+      }
+    },
+    "task-13": {
+      "reference": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "ai": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "direct": {
+        "first": {
+          "response": true,
+          "valid": true,
+          "passed": false,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "46d18ef684c82c579c2142c2c2eb373fe1d7ffe1797e948d0e37fd2f162ed53c",
+          "official_report_sha256": "96cd1c66ab27b8e10403baea8f38a40415329fd428cd0cfefff71efb98094841"
+        },
+        "after_public_repair": {
+          "response": true,
+          "valid": true,
+          "passed": false,
+          "artifact_stage": "first",
+          "page_manifest_sha256": "46d18ef684c82c579c2142c2c2eb373fe1d7ffe1797e948d0e37fd2f162ed53c",
+          "official_report_sha256": "96cd1c66ab27b8e10403baea8f38a40415329fd428cd0cfefff71efb98094841"
+        }
+      },
+      "fixed_pages": {
+        "starter": {
+          "passed": false,
+          "official_report_sha256": "e7e835742ade711a715c66e583733b34b0766ea30c87737879accc2c178fd601"
+        },
+        "blank": {
+          "passed": false,
+          "official_report_sha256": "036c290ca7a018ff0769271e18d1ddc25c35f9fcdb241944cf14efda263b59b0"
+        },
+        "upstream_final": {
+          "passed": true,
+          "official_report_sha256": "b8c29b5f35c93dca048520fb9b2bd58625da31d5ecead2cb40fe9a1aad4e3401"
+        },
+        "reference_full": {
+          "passed": true,
+          "official_report_sha256": "74dadcdc53017d592784a90258cacc60ac94db7ba44c36e1e3959fc02793d9e7"
+        },
+        "ai_example2": {
+          "passed": null,
+          "official_report_sha256": null
+        }
+      }
+    },
+    "task-14": {
+      "reference": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "ai": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "direct": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "fixed_pages": {
+        "starter": {
+          "passed": false,
+          "official_report_sha256": "58465aa2d309201ace365ce9b56894ee39f55705b17a5128d9028517427e0f71"
+        },
+        "blank": {
+          "passed": false,
+          "official_report_sha256": "a23b2d3f9a153422be3ac79bbd334143a8f6bf201cdee01b1878e37b6a00a0e1"
+        },
+        "upstream_final": {
+          "passed": true,
+          "official_report_sha256": "d08dbda42f9c7f3c7f44862cebb8d5820de261653b19f36039f08226b2f51a2e"
+        },
+        "reference_full": {
+          "passed": true,
+          "official_report_sha256": "398082ea0f1859db3b2578b3cc2ad4f0b6bfdc4e9a8d701c4faa8cb4969e011c"
+        },
+        "ai_example2": {
+          "passed": null,
+          "official_report_sha256": null
+        }
+      }
+    },
+    "task-15": {
+      "reference": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "ai": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "direct": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "fixed_pages": {
+        "starter": {
+          "passed": false,
+          "official_report_sha256": "2d301f361abb94314d0d23c71cb1f72869066ac2767c073f90d5d23f804d02ea"
+        },
+        "blank": {
+          "passed": false,
+          "official_report_sha256": "dab713a643ead72cfe18ebac6e121a8db28a7f95a68b88d43e77061e2bb1b0e8"
+        },
+        "upstream_final": {
+          "passed": true,
+          "official_report_sha256": "ed0aec4784cf2f5fe28c3b9f16037b2700c0a8fe721fc82cb9741473dcddbb01"
+        },
+        "reference_full": {
+          "passed": true,
+          "official_report_sha256": "0790688f381c7bf63d21d6c2775f1fbe46f90df66aa6f356011e87286e706a24"
+        },
+        "ai_example2": {
+          "passed": null,
+          "official_report_sha256": null
+        }
+      }
+    },
+    "task-16": {
+      "reference": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "ai": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "direct": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "fixed_pages": {
+        "starter": {
+          "passed": false,
+          "official_report_sha256": "3930b7fe8dbb715261ca5620745a651d76bf87ac6229d14ba261062663b1a8ce"
+        },
+        "blank": {
+          "passed": false,
+          "official_report_sha256": "fe5953a21a75b7c64821de7c6228b22d1d80dd74e07ab09f63ce425494e26bc8"
+        },
+        "upstream_final": {
+          "passed": true,
+          "official_report_sha256": "cdc4a53bc9ab6719ede96661cf84153fdac62b1d62772152276fb438e851b99f"
+        },
+        "reference_full": {
+          "passed": true,
+          "official_report_sha256": "9e4a3717825169ae5b8daa8a003d03260ded1608104b35dc648bda72229d96d0"
+        },
+        "ai_example2": {
+          "passed": null,
+          "official_report_sha256": null
+        }
+      }
+    },
+    "task-17": {
+      "reference": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "ai": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "direct": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "fixed_pages": {
+        "starter": {
+          "passed": false,
+          "official_report_sha256": "cfbfcf31740f8be25f1d97960f523e47c30ee8fe73b452954dce111a2da5adc4"
+        },
+        "blank": {
+          "passed": false,
+          "official_report_sha256": "8f3737a49ef8427dbdb319b91ef78bfd970858624f2a7b3895feb51d6855fa02"
+        },
+        "upstream_final": {
+          "passed": true,
+          "official_report_sha256": "696584e270f2f5dc23b34901bcd28eab58e4c18ef9c8940854160a60873bf5d8"
+        },
+        "reference_full": {
+          "passed": true,
+          "official_report_sha256": "b13092ac5b6b210865092efa3a10be2f8338e1dd8ad90706af56ce623a1d1c78"
+        },
+        "ai_example2": {
+          "passed": null,
+          "official_report_sha256": null
+        }
+      }
+    },
+    "task-18": {
+      "reference": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "ai": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "direct": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "fixed_pages": {
+        "starter": {
+          "passed": false,
+          "official_report_sha256": "d7efd0515b6e1bbe55c20f2a8d858b0bdd38c5b7d80ad7715669777c60bebb31"
+        },
+        "blank": {
+          "passed": false,
+          "official_report_sha256": "7e5fee2fa3ac253a7515f6dc338d875c7f1dd3dc1c3e333d5c0c0dd3493707d1"
+        },
+        "upstream_final": {
+          "passed": true,
+          "official_report_sha256": "05601210afd72c015206aef003dc33326ee18b0a2680e1d31fa72cc713d09148"
+        },
+        "reference_full": {
+          "passed": true,
+          "official_report_sha256": "c9ab402b7d7c7612644b4bac0704931d9a9348c0856c2a52c8eb11ccb96d7c8c"
+        },
+        "ai_example2": {
+          "passed": null,
+          "official_report_sha256": null
+        }
+      }
+    },
+    "task-19": {
+      "reference": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "ai": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "direct": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "fixed_pages": {
+        "starter": {
+          "passed": false,
+          "official_report_sha256": "dff88dbf077e37d6758971dc70d7a5a77ad5a21380e4725a4322b6474c600cee"
+        },
+        "blank": {
+          "passed": false,
+          "official_report_sha256": "9b5af583c93c3c175cf0b4eda42e70275dcc71a4402dde10291c7649642ffb54"
+        },
+        "upstream_final": {
+          "passed": true,
+          "official_report_sha256": "71eb7aaf2330400f8b1f2e1b48882f315889431ae8365a6dbcee950419fb3fe1"
+        },
+        "reference_full": {
+          "passed": true,
+          "official_report_sha256": "07595b8e2be325113ff81749409eb25ddcc673e88007ef6fc3f6c184f6aacbb4"
+        },
+        "ai_example2": {
+          "passed": null,
+          "official_report_sha256": null
+        }
+      }
+    },
+    "task-20": {
+      "reference": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "ai": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "direct": {
+        "first": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        },
+        "after_public_repair": {
+          "response": false,
+          "valid": false,
+          "passed": null,
+          "artifact_stage": "first",
+          "page_manifest_sha256": null,
+          "official_report_sha256": null
+        }
+      },
+      "fixed_pages": {
+        "starter": {
+          "passed": false,
+          "official_report_sha256": "873d5a91f78f6d38a444c0896b6812132ca00eda3d9edf95046af3b8cb79c923"
+        },
+        "blank": {
+          "passed": false,
+          "official_report_sha256": "66c83a65ac5b3eb74f0c2e0e5aeb8745841d011a9dad5a33f9ac930a18a87380"
+        },
+        "upstream_final": {
+          "passed": true,
+          "official_report_sha256": "4fa62e65a69ca84418855499d932fd277869398997f1ccf33781b369a97e161d"
+        },
+        "reference_full": {
+          "passed": true,
+          "official_report_sha256": "9f1fed7188083552a0e367f7b9c6838d0da297a190e34e4acb9b46b279e90a15"
+        },
+        "ai_example2": {
+          "passed": null,
+          "official_report_sha256": null
+        }
+      }
+    }
+  },
+  "audit_sha256": {
+    "freeze.json": "b2b0091f3ce760e48a252f30c1aea389738e57752e981ad2364df59f3787fc78",
+    "planning-freeze.json": "df64bf1daf86dbadb7f12ede90b4568bbd30c5e027db690effdfd9e33b72b65c",
+    "generation-complete.json": "dc38b083a5db438117876e21e5a000dcb4b5fbbac990d7f0217e7949a4e6c8a2",
+    "controls-complete.json": "e0923947dcac851bc366c5f88140d8635d69ae67f694a1d6e8c09198b857f3f6",
+    "ai-control-complete.json": "de6c0afa03a1c6a2ed336853407ff7f33fa21186962478fbbdfb2702dcc09081",
+    "scores-complete.json": "57e4a65516d0cd00237458809f310e28079fa4ee170f83e388aaceebdf8a5293"
+  }
+}

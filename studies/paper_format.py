@@ -8,6 +8,7 @@ import argparse
 import json
 from pathlib import Path
 import re
+import unicodedata
 
 import pymupdf
 
@@ -22,6 +23,12 @@ def sha(path):
 def expand(text):
     return re.sub(r'\\input\{([^}]+)\}',
                   lambda m: expand((PAPER / (m.group(1) + '.tex')).read_text()), text)
+
+
+def search_text(text):
+    # PDF extraction may retain ligatures such as the fl in "workflow".
+    text = unicodedata.normalize('NFKC', text).replace('’', "'").replace('-\n', '')
+    return ' '.join(text.split())
 
 
 def main():
@@ -42,8 +49,7 @@ def main():
     conclusion_source = re.sub(r'%[^\n]*|\\label\{[^}]+\}', '', conclusion_source)
     ending = ' '.join(conclusion_source.split()[-12:])
     assert '\\' not in ending, 'Update the conclusion-ending check for new LaTeX commands'
-    ending_pages = [i + 1 for i, text in enumerate(pages)
-                    if ending in ' '.join(text.replace('-\n', '').split())]
+    ending_pages = [i + 1 for i, text in enumerate(pages) if search_text(ending) in search_text(text)]
     assert len(ending_pages) == 1, 'Locate the end, not just the heading, of the main text'
     float_pages = {}
     for kind, count in [('Table', table_count), ('Figure', figure_count)]:

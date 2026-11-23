@@ -1,0 +1,59 @@
+{
+  "models": {
+    "mistralai/mistral-small-3.2-24b-instruct": {
+      "ledger": "artifacts/public-library-transfer-remote-20261123/mistral/budget.sqlite3",
+      "totals": {
+        "calls": 420,
+        "settled_usd": 0.134394,
+        "exposure_usd": 0.226233,
+        "unsettled_calls": 26,
+        "cap_usd": 3.5,
+        "stop_usd": 3.5,
+        "halted": 0
+      },
+      "by_purpose": {
+        "direct": {
+          "calls": 140,
+          "settled_microusd": 96908,
+          "exposure_microusd": 162980,
+          "unsettled": 13
+        },
+        "subscription_library_planning": {
+          "calls": 280,
+          "settled_microusd": 37486,
+          "exposure_microusd": 63253,
+          "unsettled": 13
+        }
+      }
+    },
+    "openai/gpt-oss-120b": {
+      "ledger": "artifacts/public-library-transfer-remote-20261123/oss/budget.sqlite3",
+      "totals": {
+        "calls": 315,
+        "settled_usd": 0.052358,
+        "exposure_usd": 0.084041,
+        "unsettled_calls": 9,
+        "cap_usd": 3.5,
+        "stop_usd": 3.5,
+        "halted": 0
+      },
+      "by_purpose": {
+        "direct": {
+          "calls": 105,
+          "settled_microusd": 43148,
+          "exposure_microusd": 70843,
+          "unsettled": 6
+        },
+        "subscription_library_planning": {
+          "calls": 210,
+          "settled_microusd": 9210,
+          "exposure_microusd": 13198,
+          "unsettled": 3
+        }
+      }
+    }
+  },
+  "construction": "Accounted in the parent study; no construction charge in these deployment ledgers.",
+  "registration_sha256": "f29c4e15416b7eebf5c8a520db4a2b06c710c022d68eed25e4cc7067e01285e8",
+  "generation_sha256": "a83259ba522e298c7ec552a61c9c4ce2a338b3f3ff313df69f9b98c651c0bf85"
+}

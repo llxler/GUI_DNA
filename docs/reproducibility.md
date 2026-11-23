@@ -2,6 +2,14 @@
 
 研究代码在 `studies/`，工程测试在 `tests/`。旧记录的 `test/...` 路径仍有效；当前分支已移除累计前缀评分入口；原始实验 JSON 和账本不重新解释。
 
+## 公开目录与历史模块
+
+`python -m studies.layout check` 从公开源码核对迁移前的 170 份文件。仅在直接校验旧路径清单或执行冻结运行器时使用 `python -m studies.layout prepare`。按正式目录执行的语法是 `python -m studies.layout run <阶段目录> <模块> [参数]`；它使用当时记录的模块名和文件深度。核对完成后可用 `python -m studies.layout tidy` 收起兼容文件。旧版源码专用快照仍按各阶段的协议使用。[目录与归档](../studies/README.md)
+
+## 新建行为库的跨项目复验
+
+主研究保留每个生成请求、页面文件哈希、当前官方文件报告和建库者固定首例；原模型对照、两个其他基准、留出与交付敏感性均有独立登记。历史清单可用 `uv run python -m studies.public_library_transfer.history --check` 从旧冻结结果离线恢复。其余复验入口及本地原始产物位置见[研究说明](../studies/public_library_transfer/README.md)。
+
 ## 零 API 复算
 
 ```bash
@@ -10,11 +18,59 @@ uv run pytest -q
 uv run python -m experiments.audit_scale
 ```
 
+11 月 23 日的建库改进使用独立清单和产物目录。在保留对应回执的本机，可用下列命令逐条复算。表格的两批归档响应与新的 Qwen 计划分别验收。每个后端都按当前任务和整套页面文件哈希取官方回执。
+
+```bash
+uv run python -m studies.layout run webbench/table/starter_binding run check
+uv run python -m studies.layout run webbench/table/shared_state_contract evaluate check
+uv run python -m studies.layout run webbench/table/compatible_rebuild evaluate check
+uv run python -m studies.layout run webbench/table/local_planning evaluate check
+uv run python -m studies.layout run webbench/table/controller_build evaluate check
+uv run python -m studies.layout run webbench/table/schema_decoding evaluate check
+uv run python -m studies.library_refinement_accounting --check
+```
+
+SVG 的原始规划、固定示例与部署回退可按[图表冻结实验](../studies/webbench/svg_chart/interface_refinement/README.md)复核；本地模型、解码条件与新图表库分别见[规划协议](../studies/webbench/svg_chart/local_planning/PROTOCOL.md)及[重建协议](../studies/webbench/svg_chart/compatible_rebuild/PROTOCOL.md)。
+
 主视图的默认展示按建库者分列，项目/生成模型另分层，原合并字段只供对账。`studies.builder_costs` 从本地账本和 draw 回执重建逐建库者费用索引；没有原始产物时，主视图可从已登记索引复算。
 
 主视图脚本直接读取两项目/三项目的原当前成绩与 draw 的 current 行，按真实候选去重；保留 BOM 敏感性和建库费用。它不读取累计前缀复验结果，不重新运行浏览器。完整旧研究命令见 [历史索引](../studies/REVIEW.md)。
 
 本地拥有完整 `artifacts/` 时可进一步复验研究快照与原报告。旧快照必须在登记的源码版本复算，见 [退役说明](archive/full-history-retirement.md)。当前分支不再提供已删除实验的复验入口；不要修改旧清单来迁就新源码。代码 checkout 不包含被忽略的响应、页面、账本、浏览器缓存或上游 checkout；仅有源码不能重放全部历史结果。
+
+## 人工库与 AI 库的同目标比较
+
+在保留 11 月 21 日原始产物的工作区，运行 `uv run python -m studies.layout run webbench/form/library_sources report` 可只读核对两阶段的输入哈希、目标、页面、官方报告、建库与生成费用以及续跑边界。论文三组配对行来自 [逐目标记录](../studies/results/library-sources-20261121.json)；附录另列每组全体可观察结果和缺失。表单公开修复的独立复核命令为 `uv run python -m studies.layout run webbench/form/public_repair report`，逐项确认所有反馈只含原解析或编译错误。两个项目不共用分母。[问卷协议](../studies/webbench/form/library_sources/PROTOCOL.md) · [图表协议](../studies/webbench/svg_chart/library_sources/PROTOCOL.md)
+
+11 月 23 日的表格编辑器、SVG 图表与表达式编辑器各有独立协议、账本与目标目录。下列命令读取冻结响应和官方报告，核对各研究本身的分母与来源。图表协议保留了空白页通过第 1 项时，在正式生成前登记的校准修订。
+
+```bash
+uv run python -m studies.layout run webbench/table/library_sources report --check
+uv run python -m studies.layout run webbench/svg_chart/interface_documentation report
+uv run python -m studies.layout run webbench/svg_chart/fixture_audit audit
+uv run python -m studies.layout run webbench/flex/column_count run check
+uv run python -m studies.layout run webbench/svg_chart/plot_geometry run check
+uv run python -m studies.layout run webbench/expression_editor/library_sources report --check
+uv run python -m studies.layout run webbench/expression_editor/held_out_requirements report
+uv run python -m studies.layout run webbench/expression_editor/preparation_notes report
+uv run python -m studies.layout run webbench/expression_editor/preparation_window report
+uv run python -m studies.layout run webbench/expression_editor/empty_plan run check-public
+uv run python -m studies.layout run webbench/expression_editor/interface_examples run check-public
+uv run python -m studies.layout run webbench/expression_editor/interface_examples audit
+uv run python -m studies.layout run webbench/table/controller_enumeration report --check
+uv run python -m studies.layout run webbench/table/controller_enumeration selection
+uv run python -m studies.layout run webbench/draw/pointer_transition run check
+uv run python -m studies.layout run webbench/draw/pointer_transition length_sensitivity
+uv run python -m studies.layout run webbench/react_blog/runtime_calibration run check
+uv run python -m studies.webbench_coverage
+uv run python -m studies.reuse_costs_20261123
+```
+
+32k 编辑器阶段第 7 个无库输出包含超长文件名。独立恢复入口复用原请求回执，将操作系统的路径长度错误计为不可交付的输出，再走已登记的一次公开修复。上面的只读核对可直接验证恢复后的原始记录。[恢复入口](../studies/webbench/expression_editor/preparation_window/resume.py)
+
+在含有固定上游快照、Chromium 与 Node 的环境，可依次运行 `uv run python -m studies.layout run webbench/react_blog/runtime_calibration run setup`、同入口的 `evaluate` 和 `report` 三个阶段，以原 Rush 锁重建 React 运行时并生成 60 份当前文件观察。校准报告中不含模型候选。[React 校准协议](../studies/webbench/react_blog/runtime_calibration/PROTOCOL.md)
+
+核对本日费用可直接运行 `uv run python -m studies.ledger_read artifacts/*20261123/budget.sqlite3`。各账本的 `settled_usd` 只含已结算请求，`exposure_usd` 另含尚未定价的预留；历史建库账本不在这七项中。
 
 ## 匹配工作流与交互诊断
 

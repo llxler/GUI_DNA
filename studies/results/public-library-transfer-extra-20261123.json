@@ -1,0 +1,1884 @@
+{
+  "study": "public-library-transfer-extra-20261123",
+  "scope": "First response, exact historical target files, each source paired to one shared direct target generation. WebApp1K public Jest; TodoMVC official feature-selected tests.",
+  "model": "gpt-6.2-astra",
+  "settings": {
+    "model": "gpt-6.2-astra",
+    "effort": "medium",
+    "auth": "chatgpt",
+    "sample": 1
+  },
+  "registered": "2026-11-23T06:28:57.101753+00:00",
+  "sealed": "2026-11-23T06:35:52.118899+00:00",
+  "artifact_dir": "artifacts/public-library-transfer-extra-20261123",
+  "protocol_sha256": "d485e97972b1db3c301cc7cd705ebf351e7375c8b6cab96ed8a34f285baaf137",
+  "sealed_sha256": "d0c028b3c31b9d50b41449032753e7adca42bcb3aed97fe7b522dbb4a5f52a8b",
+  "subscription": {
+    "incremental_api_usd": 0,
+    "subscription_price_allocation": null,
+    "stage_and_domain_usage": {
+      "build/blogging": {
+        "requests": 2,
+        "returned": 2,
+        "input_tokens": 45048,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5746,
+        "reasoning_output_tokens": 51
+      },
+      "build/taskmanagement": {
+        "requests": 2,
+        "returned": 2,
+        "input_tokens": 46214,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 6809,
+        "reasoning_output_tokens": 0
+      },
+      "build/todomvc": {
+        "requests": 2,
+        "returned": 2,
+        "input_tokens": 40584,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3021,
+        "reasoning_output_tokens": 18
+      },
+      "direct/blogging": {
+        "requests": 5,
+        "returned": 5,
+        "input_tokens": 85903,
+        "cached_input_tokens": 27392,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3168,
+        "reasoning_output_tokens": 0
+      },
+      "direct/taskmanagement": {
+        "requests": 5,
+        "returned": 5,
+        "input_tokens": 89064,
+        "cached_input_tokens": 32256,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 4198,
+        "reasoning_output_tokens": 0
+      },
+      "direct/todomvc": {
+        "requests": 8,
+        "returned": 8,
+        "input_tokens": 135625,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 6514,
+        "reasoning_output_tokens": 0
+      },
+      "plan/blogging": {
+        "requests": 10,
+        "returned": 10,
+        "input_tokens": 188466,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 220,
+        "reasoning_output_tokens": 0
+      },
+      "plan/taskmanagement": {
+        "requests": 10,
+        "returned": 10,
+        "input_tokens": 180390,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 220,
+        "reasoning_output_tokens": 0
+      },
+      "plan/todomvc": {
+        "requests": 16,
+        "returned": 16,
+        "input_tokens": 327208,
+        "cached_input_tokens": 18560,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 827,
+        "reasoning_output_tokens": 0
+      }
+    }
+  },
+  "builds": {
+    "todomvc/a": {
+      "status": "accepted",
+      "menu": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "toggleItem": {
+              "type": "boolean"
+            },
+            "toggleAll": {
+              "type": "boolean"
+            },
+            "editTitle": {
+              "type": "boolean"
+            },
+            "showCounter": {
+              "type": "boolean"
+            },
+            "clearCompleted": {
+              "type": "boolean"
+            },
+            "filterRoutes": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "toggleItem",
+            "toggleAll",
+            "editTitle",
+            "showCounter",
+            "clearCompleted",
+            "filterRoutes"
+          ],
+          "additionalProperties": false
+        },
+        "menu": [
+          {
+            "id": "toggleItem",
+            "behavior": "A toggle event reverses the targeted todo's completed value. Enabled filters, counters, and completion controls immediately reflect the change.",
+            "default": true
+          },
+          {
+            "id": "toggleAll",
+            "behavior": "A toggleAll event completes every todo if any are active, or makes every todo active if all are complete. The checkbox reflects the full list, including hidden todos. When disabled, allCompleted is false.",
+            "default": true
+          },
+          {
+            "id": "editTitle",
+            "behavior": "Double-clicking a label starts editing that todo. Enter or blur saves the trimmed title and deletes the todo if the title is empty. Escape discards the draft. The view reports the editing ID during the edit and null otherwise.",
+            "default": true
+          },
+          {
+            "id": "showCounter",
+            "behavior": "countText displays the active count across the full list, using 'item' for one and 'items' otherwise. When disabled, countText is empty.",
+            "default": true
+          },
+          {
+            "id": "clearCompleted",
+            "behavior": "hasCompleted shows the Clear completed button when any todo is complete. Clicking it removes every completed todo, including those hidden by the current filter. When disabled, hasCompleted is false.",
+            "default": true
+          },
+          {
+            "id": "filterRoutes",
+            "behavior": "Route events select the all, active, or completed filter. The view reports the selected filter and recomputes visible todos in list order after each change. When disabled, the view stays on all.",
+            "default": true
+          }
+        ],
+        "first": {
+          "toggleItem": true,
+          "toggleAll": true,
+          "editTitle": true,
+          "showCounter": true,
+          "clearCompleted": true,
+          "filterRoutes": true
+        }
+      },
+      "reply_sha256": "3f6209d889e43968fd0ae255c08cfdee29d2a10911021978603bbc47c15541c9"
+    },
+    "todomvc/b": {
+      "status": "accepted",
+      "menu": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "itemToggle": {
+              "type": "boolean"
+            },
+            "toggleAll": {
+              "type": "boolean"
+            },
+            "editing": {
+              "type": "boolean"
+            },
+            "counter": {
+              "type": "boolean"
+            },
+            "clearCompleted": {
+              "type": "boolean"
+            },
+            "routing": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "itemToggle",
+            "toggleAll",
+            "editing",
+            "counter",
+            "clearCompleted",
+            "routing"
+          ],
+          "additionalProperties": false
+        },
+        "menu": [
+          {
+            "id": "itemToggle",
+            "behavior": "Clicking an item's checkbox flips that todo's completed value. Enabled views immediately reflect the change.",
+            "default": true
+          },
+          {
+            "id": "toggleAll",
+            "behavior": "Clicking the master checkbox completes every todo if any are active, or reactivates every todo if all are complete. Its checked state reflects the entire list, including filtered-out items. When disabled, allCompleted is false.",
+            "default": true
+          },
+          {
+            "id": "editing",
+            "behavior": "Double-clicking a label starts editing that item. Enter or blur saves its trimmed title, deleting the item if the title is empty. Escape discards the draft. When disabled, the view reports no editing item.",
+            "default": true
+          },
+          {
+            "id": "counter",
+            "behavior": "Shows the pluralized count of active todos across all routes. When disabled, countText is an empty string.",
+            "default": true
+          },
+          {
+            "id": "clearCompleted",
+            "behavior": "Shows the Clear completed button whenever any todo is complete. Clicking it removes every completed todo, including filtered-out items. When disabled, hasCompleted is false.",
+            "default": true
+          },
+          {
+            "id": "routing",
+            "behavior": "Route events select the all, active, or completed filter. The visible list reflects both the selected filter and subsequent todo changes. When disabled, the view stays on all.",
+            "default": true
+          }
+        ],
+        "first": {
+          "itemToggle": true,
+          "toggleAll": true,
+          "editing": true,
+          "counter": true,
+          "clearCompleted": true,
+          "routing": true
+        }
+      },
+      "reply_sha256": "bc31f70463c96d0f5a03bc7655eb44a34f3aeaf78ce44fa45ed13091a943552e"
+    },
+    "blogging/a": {
+      "status": "accepted",
+      "menu": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "first": {
+              "type": "string",
+              "enum": [
+                "NONE",
+                "ImageAltTextForm",
+                "PostPerformanceReport",
+                "CanonicalUrlForm",
+                "CommentComposer",
+                "PostCategoryForm",
+                "CommentEditor",
+                "TagNameForm"
+              ]
+            },
+            "second": {
+              "type": "string",
+              "enum": [
+                "NONE",
+                "ImageAltTextForm",
+                "PostPerformanceReport",
+                "CanonicalUrlForm",
+                "CommentComposer",
+                "PostCategoryForm",
+                "CommentEditor",
+                "TagNameForm"
+              ]
+            }
+          },
+          "required": [
+            "first",
+            "second"
+          ],
+          "additionalProperties": false
+        },
+        "menu": [
+          {
+            "id": "ImageAltTextForm",
+            "behavior": "Edit the Alt Text field and choose Save Alt Text to POST its value to /api/alt-text. The form keeps the entered text and displays “Alt text updated successfully” on success or “Failed to update alt text” on failure."
+          },
+          {
+            "id": "PostPerformanceReport",
+            "behavior": "Choose Generate Report to request /api/generatePostPerformanceReport with the forwarded postId as a query parameter. The report displays “Performance: ” followed by the returned performance value, or “Error generating report” if the request or response fails."
+          },
+          {
+            "id": "CanonicalUrlForm",
+            "behavior": "Edit the Canonical URL field and choose Save Canonical URL to POST its value to /api/canonical-url. The form keeps the entered URL and displays “Canonical URL updated successfully” on success or “Failed to update canonical URL” on failure."
+          },
+          {
+            "id": "CommentComposer",
+            "behavior": "Enter text in Add a comment and choose Submit to POST the comment to /api/comments. A forwarded postId is included when supplied. The form displays “Comment added successfully” on success or “Failed to add comment” on failure."
+          },
+          {
+            "id": "PostCategoryForm",
+            "behavior": "Choose a category in Category Select and click Assign Category to POST its ID to /posts/{postId}/categories. The default post and category IDs are both 1. The form displays “Post assigned to category successfully” on success or “Error: ” followed by the server error, with “Unable to assign category” as the fallback."
+          },
+          {
+            "id": "CommentEditor",
+            "behavior": "Change the text in Edit your comment and choose Edit to PUT the updated comment to /api/comments/{commentId}. The comment ID defaults to 1. The form displays “Comment updated successfully” on success or “Failed to update comment” on failure."
+          },
+          {
+            "id": "TagNameForm",
+            "behavior": "Edit Tag Name and choose Update Tag to PUT the name to /tags/{tagId}. The tag ID defaults to 1. The form displays “Tag updated successfully” on success or “Error: ” followed by the server error, with “Unable to update tag” as the fallback."
+          }
+        ],
+        "first": {
+          "first": "PostPerformanceReport",
+          "second": "CommentComposer"
+        }
+      },
+      "reply_sha256": "42077cd84f2dea499c4045d2521a7b5d678e9fd47e252dece5f4b680ac24bc61"
+    },
+    "blogging/b": {
+      "status": "accepted",
+      "menu": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "first": {
+              "type": "string",
+              "enum": [
+                "NONE",
+                "ImageAltText",
+                "PostPerformance",
+                "CanonicalUrl",
+                "NewComment",
+                "PostCategory",
+                "CommentRevision",
+                "TagRename"
+              ]
+            },
+            "second": {
+              "type": "string",
+              "enum": [
+                "NONE",
+                "ImageAltText",
+                "PostPerformance",
+                "CanonicalUrl",
+                "NewComment",
+                "PostCategory",
+                "CommentRevision",
+                "TagRename"
+              ]
+            }
+          },
+          "required": [
+            "first",
+            "second"
+          ],
+          "additionalProperties": false
+        },
+        "menu": [
+          {
+            "id": "ImageAltText",
+            "behavior": "The Alt Text field accepts an image description. Save Alt Text posts it to /api/alt-text. The form displays “Alt text updated successfully” on success or “Failed to update alt text” on failure and keeps the entered description."
+          },
+          {
+            "id": "PostPerformance",
+            "behavior": "Generate Report requests /api/generatePostPerformanceReport with the forwarded postId as a query parameter. It displays “Performance: ” followed by the returned performance value, or “Error generating report” if the request or response fails."
+          },
+          {
+            "id": "CanonicalUrl",
+            "behavior": "Save Canonical URL posts the Canonical URL field to /api/canonical-url. The form displays “Canonical URL updated successfully” on success or “Failed to update canonical URL” on failure and keeps the entered URL."
+          },
+          {
+            "id": "NewComment",
+            "behavior": "Submit posts the text from “Add a comment” to /api/comments. The form displays “Comment added successfully” on success or “Failed to add comment” on failure."
+          },
+          {
+            "id": "PostCategory",
+            "behavior": "Category Select lets the user choose a category. Assign Category posts its ID to /posts/{postId}/categories. The defaults are post 1 and a menu containing category 1. Success displays “Post assigned to category successfully”. Failure displays “Error: ” followed by the server’s error or the fallback “Unable to assign category”."
+          },
+          {
+            "id": "CommentRevision",
+            "behavior": "Edit sends the text from “Edit your comment” by PUT to /api/comments/{commentId}, defaulting to comment 1. The form displays “Comment updated successfully” on success or “Failed to update comment” on failure."
+          },
+          {
+            "id": "TagRename",
+            "behavior": "Update Tag sends the Tag Name field by PUT to /tags/{tagId}, defaulting to tag 1. Success displays “Tag updated successfully”. Failure displays “Error: ” followed by the server’s error or the fallback “Unable to update tag”."
+          }
+        ],
+        "first": {
+          "first": "ImageAltText",
+          "second": "NewComment"
+        }
+      },
+      "reply_sha256": "6f8e76782ab8f8abdef59314751e3f23c6ae92081170018ebf14454eb8b53848"
+    },
+    "taskmanagement/a": {
+      "status": "accepted",
+      "menu": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "first": {
+              "type": "string",
+              "enum": [
+                "NONE",
+                "TaskComment",
+                "TaskDeadline",
+                "ReviewApproval",
+                "TimeComparison",
+                "WorkflowDefinition",
+                "TaskPriority",
+                "ProjectAssignment",
+                "UserAssignment"
+              ]
+            },
+            "second": {
+              "type": "string",
+              "enum": [
+                "NONE",
+                "TaskComment",
+                "TaskDeadline",
+                "ReviewApproval",
+                "TimeComparison",
+                "WorkflowDefinition",
+                "TaskPriority",
+                "ProjectAssignment",
+                "UserAssignment"
+              ]
+            }
+          },
+          "required": [
+            "first",
+            "second"
+          ],
+          "additionalProperties": false
+        },
+        "menu": [
+          {
+            "id": "TaskComment",
+            "behavior": "Enter a comment and click Add Comment to POST the task ID and comment to /api/addComment. The task ID defaults to 1. Empty comments reach the server. The form reports “Comment added!” on success or “Failed to add comment.” on failure."
+          },
+          {
+            "id": "TaskDeadline",
+            "behavior": "Choose a date and click Save Deadline to POST dueDate to /api/tasks/{taskId}/deadline. The task ID defaults to 1. The form displays the due date returned by the server or “Failed to set deadline.”"
+          },
+          {
+            "id": "ReviewApproval",
+            "behavior": "Select Task1 and click Approve Review to POST the selected task to /approve-review. The form displays “Review approved successfully” when the server confirms approval or “Error approving review” on failure. Its task selector and ProjectAssignment’s task selector both use the specified task-select test ID. Each belongs to a separately named form."
+          },
+          {
+            "id": "TimeComparison",
+            "behavior": "On mount and when taskId changes, GET /api/tasks/{taskId}/time-comparison. The task ID defaults to 1. Display the estimated and actual hours on separate lines, or “Failed to load time comparison.” if the request fails."
+          },
+          {
+            "id": "WorkflowDefinition",
+            "behavior": "Enter a Workflow Name and click Define Workflow to POST the name to /api/projects/workflows. The form displays “Workflow defined successfully” for a successful HTTP response, including an empty response body, or “Failed to define workflow” on failure."
+          },
+          {
+            "id": "TaskPriority",
+            "behavior": "Choose a priority and click Set Priority to POST the task ID and priority to /api/setPriority. The task ID defaults to 1. An empty selection reaches the server. The form reports “Task priority updated!” on success or “Failed to set task priority.” on failure."
+          },
+          {
+            "id": "ProjectAssignment",
+            "behavior": "Choose a task and project and click Assign to POST their IDs to /api/assignTask. An empty project selection reaches the server. The form displays “Task assigned successfully!” on success or “Failed to assign task.” on failure."
+          },
+          {
+            "id": "UserAssignment",
+            "behavior": "Enter a task name, select User1, and click Assign Task to POST the task and user to /assign-task. The form displays “Task assigned successfully” when the server confirms the assignment or “Error assigning task” on failure."
+          }
+        ],
+        "first": {
+          "first": "TaskDeadline",
+          "second": "TaskComment"
+        }
+      },
+      "reply_sha256": "bd4a4c61073fa2a41eb02a916b9a787a7837ca5e143cec15a2b448b5be145f00"
+    },
+    "taskmanagement/b": {
+      "status": "accepted",
+      "menu": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "first": {
+              "type": "string",
+              "enum": [
+                "NONE",
+                "TaskCommentForm",
+                "TaskDeadlineForm",
+                "TaskReviewApproval",
+                "TaskTimeComparison",
+                "ProjectWorkflowForm",
+                "TaskPriorityForm",
+                "ProjectTaskAssignment",
+                "UserTaskAssignment"
+              ]
+            },
+            "second": {
+              "type": "string",
+              "enum": [
+                "NONE",
+                "TaskCommentForm",
+                "TaskDeadlineForm",
+                "TaskReviewApproval",
+                "TaskTimeComparison",
+                "ProjectWorkflowForm",
+                "TaskPriorityForm",
+                "ProjectTaskAssignment",
+                "UserTaskAssignment"
+              ]
+            }
+          },
+          "required": [
+            "first",
+            "second"
+          ],
+          "additionalProperties": false
+        },
+        "menu": [
+          {
+            "id": "TaskCommentForm",
+            "behavior": "Enter a comment and click Add Comment to POST the task ID and comment to /api/addComment. The task ID defaults to 1. Empty comments also reach the server. The form displays “Comment added!” on success or “Failed to add comment.” on failure."
+          },
+          {
+            "id": "TaskDeadlineForm",
+            "behavior": "Choose a date in Set deadline and click Save Deadline to POST the due date to /api/tasks/{taskId}/deadline. A successful save displays the date returned by the server. A failed save displays “Failed to set deadline.” and preserves the previously saved date."
+          },
+          {
+            "id": "TaskReviewApproval",
+            "behavior": "Select Task1 and click Approve Review to POST the selection to /approve-review. The form displays “Review approved successfully” when the server confirms approval or “Error approving review” on failure. The supplied specification covers approval only. The task selector is scoped to the Task review approval form because project assignment also requires the task-select test ID."
+          },
+          {
+            "id": "TaskTimeComparison",
+            "behavior": "Load /api/tasks/{taskId}/time-comparison on mount and whenever the task ID changes. Display estimated and actual hours on separate lines, including zero values. A request failure displays “Failed to load time comparison.”"
+          },
+          {
+            "id": "ProjectWorkflowForm",
+            "behavior": "Enter a Workflow name and click Define Workflow to POST the name to /api/projects/workflows. The form displays “Workflow defined successfully” for a successful HTTP response, including an empty response body, or “Failed to define workflow” on failure."
+          },
+          {
+            "id": "TaskPriorityForm",
+            "behavior": "Select a priority and click Set Priority to POST the task ID and priority to /api/setPriority. An empty selection can also be submitted. The form displays “Task priority updated!” on success or “Failed to set task priority.” on failure."
+          },
+          {
+            "id": "ProjectTaskAssignment",
+            "behavior": "Select a task and a project and click Assign to POST their IDs to /api/assignTask. The form allows an empty project selection and displays “Task assigned successfully!” on success or “Failed to assign task.” on failure. When composed with review approval, query task-select within the Project task assignment form."
+          },
+          {
+            "id": "UserTaskAssignment",
+            "behavior": "Enter a task name, select User1 and click Assign Task to POST the task and user to /assign-task. The form displays “Task assigned successfully” when the server confirms assignment or “Error assigning task” on failure."
+          }
+        ],
+        "first": {
+          "first": "TaskCommentForm",
+          "second": "TaskDeadlineForm"
+        }
+      },
+      "reply_sha256": "0b55d1ab7d20ac7889c6468f09d9b5a0eab4a71c2a0db66a7e5e48294e9f9200"
+    }
+  },
+  "totals": {
+    "todomvc": {
+      "targets": 8,
+      "passed": {
+        "direct": 8,
+        "dna-a": 8,
+        "first-a": 8,
+        "dna-b": 8,
+        "first-b": 8
+      },
+      "paired": {
+        "a": {
+          "direct": {
+            "only_dna": [],
+            "only_control": [],
+            "both": 8,
+            "neither": 0
+          },
+          "first-a": {
+            "only_dna": [],
+            "only_control": [],
+            "both": 8,
+            "neither": 0
+          }
+        },
+        "b": {
+          "direct": {
+            "only_dna": [],
+            "only_control": [],
+            "both": 8,
+            "neither": 0
+          },
+          "first-b": {
+            "only_dna": [],
+            "only_control": [],
+            "both": 8,
+            "neither": 0
+          }
+        }
+      }
+    },
+    "blogging": {
+      "targets": 5,
+      "passed": {
+        "direct": 4,
+        "dna-a": 0,
+        "first-a": 0,
+        "dna-b": 4,
+        "first-b": 0
+      },
+      "paired": {
+        "a": {
+          "direct": {
+            "only_dna": [],
+            "only_control": [
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_assignPostToCategory",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag"
+            ],
+            "both": 0,
+            "neither": 1
+          },
+          "first-a": {
+            "only_dna": [],
+            "only_control": [],
+            "both": 0,
+            "neither": 5
+          }
+        },
+        "b": {
+          "direct": {
+            "only_dna": [],
+            "only_control": [],
+            "both": 4,
+            "neither": 1
+          },
+          "first-b": {
+            "only_dna": [
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_assignPostToCategory",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag"
+            ],
+            "only_control": [],
+            "both": 0,
+            "neither": 1
+          }
+        }
+      }
+    },
+    "taskmanagement": {
+      "targets": 5,
+      "passed": {
+        "direct": 5,
+        "dna-a": 5,
+        "first-a": 1,
+        "dna-b": 5,
+        "first-b": 1
+      },
+      "paired": {
+        "a": {
+          "direct": {
+            "only_dna": [],
+            "only_control": [],
+            "both": 5,
+            "neither": 0
+          },
+          "first-a": {
+            "only_dna": [
+              "approveOrRejectTaskReview_compareTime",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "only_control": [],
+            "both": 1,
+            "neither": 0
+          }
+        },
+        "b": {
+          "direct": {
+            "only_dna": [],
+            "only_control": [],
+            "both": 5,
+            "neither": 0
+          },
+          "first-b": {
+            "only_dna": [
+              "approveOrRejectTaskReview_compareTime",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "only_control": [],
+            "both": 1,
+            "neither": 0
+          }
+        }
+      }
+    },
+    "webapp1k-duo": {
+      "targets": 10,
+      "passed": {
+        "direct": 9,
+        "dna-a": 5,
+        "first-a": 1,
+        "dna-b": 9,
+        "first-b": 1
+      },
+      "paired": {
+        "a": {
+          "direct": {
+            "only_dna": [],
+            "only_control": [
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_assignPostToCategory",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag"
+            ],
+            "both": 5,
+            "neither": 1
+          },
+          "first-a": {
+            "only_dna": [
+              "approveOrRejectTaskReview_compareTime",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "only_control": [],
+            "both": 1,
+            "neither": 5
+          }
+        },
+        "b": {
+          "direct": {
+            "only_dna": [],
+            "only_control": [],
+            "both": 9,
+            "neither": 1
+          },
+          "first-b": {
+            "only_dna": [
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_assignPostToCategory",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "approveOrRejectTaskReview_compareTime",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "only_control": [],
+            "both": 1,
+            "neither": 1
+          }
+        }
+      }
+    }
+  },
+  "rows": {
+    "todo-01": {
+      "group": "todomvc",
+      "arms": {
+        "direct": {
+          "passed": true,
+          "official_tests": 4,
+          "short_circuit": true,
+          "report_sha256": "d720ff5ad6e119b8cd817e7af18280dbdc2454019a53583fa9c6b4db22f7cdf6",
+          "candidate_sha256": "f64bcfb951a112b2af8c314a5cf2f0ba9183b0703667e20549948517b361bbb6"
+        },
+        "dna-a": {
+          "passed": true,
+          "official_tests": 4,
+          "short_circuit": true,
+          "report_sha256": "2da8105b260de7e5a23716de2c6abb3828c39b1ffa76dc8ac5cc4438ccfa3416",
+          "candidate_sha256": "9789e7105eaa740b09e946551a40a0c5cfdf96dec5f35db1bb25e83b88a059ce"
+        },
+        "first-a": {
+          "passed": true,
+          "official_tests": 4,
+          "short_circuit": true,
+          "report_sha256": "3a725dffce8bcd6125382346751cdfe1f20cb1577e90156d8eb9fc04650aab44",
+          "candidate_sha256": "2a9608266fc10b51231f55603d1df775759f041f886dfbbc8fc1a3e3270c47c3"
+        },
+        "dna-b": {
+          "passed": true,
+          "official_tests": 4,
+          "short_circuit": true,
+          "report_sha256": "ae4db4b1b29bed52b00d6bc54d5e37345d45ccf7ce93bb42f4bb9bb598114086",
+          "candidate_sha256": "ffa22ae9247197ec15e3e7b1605980429d9f63760d28d69baed9568825478be0"
+        },
+        "first-b": {
+          "passed": true,
+          "official_tests": 4,
+          "short_circuit": true,
+          "report_sha256": "4d5def1db21f8938d4466716a50860642c3eac825b8728d9605e9ebba81d2638",
+          "candidate_sha256": "fbdb492533ae988b57e9fbf3f46a19bb25ae488edb68f894080672705c1c3343"
+        }
+      }
+    },
+    "todo-02": {
+      "group": "todomvc",
+      "arms": {
+        "direct": {
+          "passed": true,
+          "official_tests": 5,
+          "short_circuit": true,
+          "report_sha256": "33c4eda8b8f3b2a2700a61e437122323303235248617ea70e74672f3985ed286",
+          "candidate_sha256": "f15308e52d30dae92ab2a25d36c2ab58060cad808e46780bba9a5e82562d9e0b"
+        },
+        "dna-a": {
+          "passed": true,
+          "official_tests": 5,
+          "short_circuit": true,
+          "report_sha256": "7115e4b2e5bc6e18745cc985175148f4ed1abbd846ab16ee7fabb6972658bd52",
+          "candidate_sha256": "29d4ba9fd13208e75577b99584674dafc72a127ee29f9723ce14cfd70d12e717"
+        },
+        "first-a": {
+          "passed": true,
+          "official_tests": 5,
+          "short_circuit": true,
+          "report_sha256": "c1e4b50e7b91ba7add33762f37456163076729b567bdcef62e4d74d440027808",
+          "candidate_sha256": "2a9608266fc10b51231f55603d1df775759f041f886dfbbc8fc1a3e3270c47c3"
+        },
+        "dna-b": {
+          "passed": true,
+          "official_tests": 5,
+          "short_circuit": true,
+          "report_sha256": "dba6af24e9f0a55820421605f4e1e53f837d03cf0f33648af7c92452f71b4a65",
+          "candidate_sha256": "16982eeba02273da750b534cb4336238f28469c66f9215dc432d23cbf25a8da9"
+        },
+        "first-b": {
+          "passed": true,
+          "official_tests": 5,
+          "short_circuit": true,
+          "report_sha256": "04298612e98bb25b71d54555c9713679a39b8bd540b516d668c0c0d42d67e242",
+          "candidate_sha256": "fbdb492533ae988b57e9fbf3f46a19bb25ae488edb68f894080672705c1c3343"
+        }
+      }
+    },
+    "todo-03": {
+      "group": "todomvc",
+      "arms": {
+        "direct": {
+          "passed": true,
+          "official_tests": 8,
+          "short_circuit": true,
+          "report_sha256": "e3eeed86326ff4124717a6a1d37975a63575548fbd8a041171eb655148e26c4f",
+          "candidate_sha256": "8744f6c290fd4ed3f7872dec015086b6c8da5207a45014f6e6606423b5960389"
+        },
+        "dna-a": {
+          "passed": true,
+          "official_tests": 8,
+          "short_circuit": true,
+          "report_sha256": "bbd36b83cf56af524f5b95bfe648f2c5408ab6af7d06c2fed6901605b585f6d6",
+          "candidate_sha256": "26bb63bb304f4e31e060472493551d678d0dc3718e5192f034bebdeca3cc9c6c"
+        },
+        "first-a": {
+          "passed": true,
+          "official_tests": 8,
+          "short_circuit": true,
+          "report_sha256": "8ec7a9c854ebc70a11b061142f231f3a63e24c3c0ed49e65c2cbfe41a6f30b2d",
+          "candidate_sha256": "2a9608266fc10b51231f55603d1df775759f041f886dfbbc8fc1a3e3270c47c3"
+        },
+        "dna-b": {
+          "passed": true,
+          "official_tests": 8,
+          "short_circuit": true,
+          "report_sha256": "061a01c3dfd94ddee3f9969ce11756bffbecb0a70f009d99dc8c0d34e66f7581",
+          "candidate_sha256": "4688c10c584335aa90266100d510d54efa695f2cbca014d2dcffb30c6ce56e79"
+        },
+        "first-b": {
+          "passed": true,
+          "official_tests": 8,
+          "short_circuit": true,
+          "report_sha256": "c6d0bc404f0289e481bfebbcd400047344cf2ff3935b918ae468c8a0419cd6fc",
+          "candidate_sha256": "fbdb492533ae988b57e9fbf3f46a19bb25ae488edb68f894080672705c1c3343"
+        }
+      }
+    },
+    "todo-04": {
+      "group": "todomvc",
+      "arms": {
+        "direct": {
+          "passed": true,
+          "official_tests": 8,
+          "short_circuit": true,
+          "report_sha256": "b6151b370656bbb21d1747bd07220e51f3d27844978ed470fbc67982b7bc02e7",
+          "candidate_sha256": "e76905649e9a8f7734a3f23bd2e459455c82723c4cc98e6eee9db913d2cc2b4a"
+        },
+        "dna-a": {
+          "passed": true,
+          "official_tests": 8,
+          "short_circuit": true,
+          "report_sha256": "009df51d7ca35fa730928163e83ffd4e58ce69fa64aaefd3c97b040a3595a30d",
+          "candidate_sha256": "83a69269d0b5dc3a53cad699c7cd1ae7e757153648a061df2522b1c487bb4bd7"
+        },
+        "first-a": {
+          "passed": true,
+          "official_tests": 8,
+          "short_circuit": true,
+          "report_sha256": "9c6945d88d39c9e6d6c7882615df910f265b305760d29764563e56f679092b82",
+          "candidate_sha256": "2a9608266fc10b51231f55603d1df775759f041f886dfbbc8fc1a3e3270c47c3"
+        },
+        "dna-b": {
+          "passed": true,
+          "official_tests": 8,
+          "short_circuit": true,
+          "report_sha256": "6b8885b65fb7e91d9cac67db3fa4dd1b1b9a7a04784b603d10b21fa44c7b0250",
+          "candidate_sha256": "8bda1d5afbf4831998f0f1ae432e0036011ce0023404a3e19868e7f72c3dbcd7"
+        },
+        "first-b": {
+          "passed": true,
+          "official_tests": 8,
+          "short_circuit": true,
+          "report_sha256": "5cb87fea0ad86be8597bdd050e1041a3d307d85d53fc5b91e7c5135760039741",
+          "candidate_sha256": "fbdb492533ae988b57e9fbf3f46a19bb25ae488edb68f894080672705c1c3343"
+        }
+      }
+    },
+    "todo-05": {
+      "group": "todomvc",
+      "arms": {
+        "direct": {
+          "passed": true,
+          "official_tests": 8,
+          "short_circuit": true,
+          "report_sha256": "1b3e35c517f0291851efcc84ea9dff7ed616976c55261dc0fef3fc6ac3f3ea63",
+          "candidate_sha256": "a17e864c1d682050d93f4cc63dca14d660f077634d89624bead32d4d723e63e2"
+        },
+        "dna-a": {
+          "passed": true,
+          "official_tests": 8,
+          "short_circuit": true,
+          "report_sha256": "27d3a6e34b952c61607774ff00f1116e7754723942aa40598a3150282eed37f8",
+          "candidate_sha256": "6fefd1508194ba2cfd9ae4f1e742ec226bef5445ba03042da7cc6257c7119590"
+        },
+        "first-a": {
+          "passed": true,
+          "official_tests": 8,
+          "short_circuit": true,
+          "report_sha256": "4fd040949989635debce0a963b899b97fa152e075d74f3613d5ccecb92b05218",
+          "candidate_sha256": "2a9608266fc10b51231f55603d1df775759f041f886dfbbc8fc1a3e3270c47c3"
+        },
+        "dna-b": {
+          "passed": true,
+          "official_tests": 8,
+          "short_circuit": true,
+          "report_sha256": "c7d2592b5ed025c982c3823756f15b5d23f37646b9da254586c5fbc1cc1cfdbc",
+          "candidate_sha256": "dd1c55c067629c053db255168a9a488dad26d37fd081b2047634d9622863c7fb"
+        },
+        "first-b": {
+          "passed": true,
+          "official_tests": 8,
+          "short_circuit": true,
+          "report_sha256": "d2d525e1e80a75b625b7a6bcbc79bdd6daad089c791b4cbc66e3e5fd03deb5d8",
+          "candidate_sha256": "fbdb492533ae988b57e9fbf3f46a19bb25ae488edb68f894080672705c1c3343"
+        }
+      }
+    },
+    "todo-06": {
+      "group": "todomvc",
+      "arms": {
+        "direct": {
+          "passed": true,
+          "official_tests": 10,
+          "short_circuit": true,
+          "report_sha256": "25dbdfcdc9617d55bc96d08b12cfdb72a4c842c31b221ab9f4f65c1c81f54997",
+          "candidate_sha256": "76a086a7858dc2b4e97dc1ce787a5dce7a6107511540c6b671441d92391813b4"
+        },
+        "dna-a": {
+          "passed": true,
+          "official_tests": 10,
+          "short_circuit": true,
+          "report_sha256": "81ba1da53b071a4c7cb5bb1b0b453207be7cda910401c62918cf04ef36d39bf2",
+          "candidate_sha256": "cae1659d4d87eff401dd92a826dd2d0d62d672ff09ef4049c0eb06a69c1e4b39"
+        },
+        "first-a": {
+          "passed": true,
+          "official_tests": 10,
+          "short_circuit": true,
+          "report_sha256": "cf5c738ee556deab67385d3b385fbf29097635649275e02f147a9534db24e8b6",
+          "candidate_sha256": "2a9608266fc10b51231f55603d1df775759f041f886dfbbc8fc1a3e3270c47c3"
+        },
+        "dna-b": {
+          "passed": true,
+          "official_tests": 10,
+          "short_circuit": true,
+          "report_sha256": "eb9e1d6eef23a0b116b85a04b77406ebcc026d62b3ac4a1c8f16589b62779a47",
+          "candidate_sha256": "43dcbb2c103995a545a80d7670ac0e2da265e68a80ef477b43f73d62be240fdd"
+        },
+        "first-b": {
+          "passed": true,
+          "official_tests": 10,
+          "short_circuit": true,
+          "report_sha256": "b76ac5b92aa792a7a14a58417744e3d67cbbafd4bd522d755079709316bf65b2",
+          "candidate_sha256": "fbdb492533ae988b57e9fbf3f46a19bb25ae488edb68f894080672705c1c3343"
+        }
+      }
+    },
+    "todo-07": {
+      "group": "todomvc",
+      "arms": {
+        "direct": {
+          "passed": true,
+          "official_tests": 16,
+          "short_circuit": true,
+          "report_sha256": "554fc6248f08cd4a23fdefa0812a68db3bf4c6f0aef36d426fa8fab63d1a0b54",
+          "candidate_sha256": "31fce2025dee6746f1486c9d9f2e66365df6e0e7285b2adaac38c9f76af7ddbd"
+        },
+        "dna-a": {
+          "passed": true,
+          "official_tests": 16,
+          "short_circuit": true,
+          "report_sha256": "2f08e2769341773c960bb0c8208d4c3f35e48da6d46391b2551c31392a1b285c",
+          "candidate_sha256": "bc367bea35946725f5bc3299c595b6d92faf0030cc993913d0bd36e7f79592c3"
+        },
+        "first-a": {
+          "passed": true,
+          "official_tests": 16,
+          "short_circuit": true,
+          "report_sha256": "0de1272b68c7652d1d8d1908454f4a3d87dca9fd36dd86b55f67fd262e07191d",
+          "candidate_sha256": "2a9608266fc10b51231f55603d1df775759f041f886dfbbc8fc1a3e3270c47c3"
+        },
+        "dna-b": {
+          "passed": true,
+          "official_tests": 16,
+          "short_circuit": true,
+          "report_sha256": "12ad3821687d8c6d4e02299b6137a3b60ec18752f6f383a517a9ac49581b55a0",
+          "candidate_sha256": "af8355f8752dc9b0e726817c0ba8d39c1d8e7d830a5aecb54f7760d320f015f6"
+        },
+        "first-b": {
+          "passed": true,
+          "official_tests": 16,
+          "short_circuit": true,
+          "report_sha256": "b05cfc392c53cd0cf82f54bafb5c215f5ebd46e3616b8c0bda50a04af54506cd",
+          "candidate_sha256": "fbdb492533ae988b57e9fbf3f46a19bb25ae488edb68f894080672705c1c3343"
+        }
+      }
+    },
+    "todo-08": {
+      "group": "todomvc",
+      "arms": {
+        "direct": {
+          "passed": true,
+          "official_tests": 24,
+          "short_circuit": true,
+          "report_sha256": "ee63a065628de780f2e49603b7a53b3027ea127308c9a94c9f0f4fbc9b28b72a",
+          "candidate_sha256": "ed22ee2e70f450620557b0cbefa80df04fef364dfc44fead8f014a7ad9db798f"
+        },
+        "dna-a": {
+          "passed": true,
+          "official_tests": 24,
+          "short_circuit": true,
+          "report_sha256": "580dd86dbe0bc832e5de7ed23b82b636f46450e9202944cee08b82df174df287",
+          "candidate_sha256": "2a9608266fc10b51231f55603d1df775759f041f886dfbbc8fc1a3e3270c47c3"
+        },
+        "first-a": {
+          "passed": true,
+          "official_tests": 24,
+          "short_circuit": true,
+          "report_sha256": "580dd86dbe0bc832e5de7ed23b82b636f46450e9202944cee08b82df174df287",
+          "candidate_sha256": "2a9608266fc10b51231f55603d1df775759f041f886dfbbc8fc1a3e3270c47c3"
+        },
+        "dna-b": {
+          "passed": true,
+          "official_tests": 24,
+          "short_circuit": true,
+          "report_sha256": "30117a7fbc9bb02aef817c1edd026a2b9380f3a42c3fafd2ed60cfd3a7a4a9be",
+          "candidate_sha256": "fbdb492533ae988b57e9fbf3f46a19bb25ae488edb68f894080672705c1c3343"
+        },
+        "first-b": {
+          "passed": true,
+          "official_tests": 24,
+          "short_circuit": true,
+          "report_sha256": "30117a7fbc9bb02aef817c1edd026a2b9380f3a42c3fafd2ed60cfd3a7a4a9be",
+          "candidate_sha256": "fbdb492533ae988b57e9fbf3f46a19bb25ae488edb68f894080672705c1c3343"
+        }
+      }
+    },
+    "addAltTextToImage_postPerformanceReport": {
+      "group": "blogging",
+      "arms": {
+        "direct": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "failed",
+            "failed"
+          ],
+          "suite_error": "",
+          "report_sha256": "2c1dbf1984db716d81c7bd7709f8a91485c3fc1a6c1349145c56d0415ffd7ddc",
+          "candidate_sha256": "700000ce2931190ca398406afff74183ab2bdf682fd23b9cd00ffdbc210cef79"
+        },
+        "dna-a": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "failed",
+            "failed"
+          ],
+          "suite_error": "",
+          "report_sha256": "4a3f91754e882e438968dc0275272b696710a0c7449a412ce1195cba93e034f5",
+          "candidate_sha256": "307292b23424d10f9e7a657c35624ccb2a2533db52bedebcd06b77adf711fb85"
+        },
+        "first-a": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "failed",
+            "failed"
+          ],
+          "suite_error": "",
+          "report_sha256": "caaf55b3d6b421beb908cb92d3a3d89e1ba329b27906ae3974e8b6ead9aab831",
+          "candidate_sha256": "e5712cc90eef90c02196763d1413d21b9029d84b40cbe5c3fa792b53dc22fa2d"
+        },
+        "dna-b": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "failed",
+            "failed"
+          ],
+          "suite_error": "",
+          "report_sha256": "3b3dd59a36d012ee4043283c56a1af82dcdc4aa98ff3f4f77abb2c55d4c91896",
+          "candidate_sha256": "7ca9467d8aca08bc51dcfa8cdd9ffb288480de8da470c92654494fb95a71f406"
+        },
+        "first-b": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "failed",
+            "failed"
+          ],
+          "suite_error": "",
+          "report_sha256": "2e88863dede57943dd396d204642bfc824f8298775f57b5f1f00c6355cde0a58",
+          "candidate_sha256": "5583bf96170f67b55fa0c304956b5c0d39363149e089ff65fda0c4383e6d7fc1"
+        }
+      }
+    },
+    "addCanonicalUrl_addComment": {
+      "group": "blogging",
+      "arms": {
+        "direct": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "d5e984a9460fafa5a2aba1a635938c6d139ffdbe83d4debb986851edca6d1941",
+          "candidate_sha256": "a6eb8b05358370ffaf6286e1685d137ea5af607acf8b7396a4b64e42b4a5f475"
+        },
+        "dna-a": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "6834136dfa872cf4b2c4a2bf8184be80054bcb5227485f461f845124453a578a",
+          "candidate_sha256": "b00a6bc23d79ec7590f8314d369a4d718d64e53027d0c7c79a776cb2aa54db2d"
+        },
+        "first-a": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "3f796f2ad57f1c583ba8054300cebde3d807dbd4c042e22692db90c72a94ae3f",
+          "candidate_sha256": "0df095617a16c153711ecd253c49adcacef5d281182de8c69bb41cfb6b239aa6"
+        },
+        "dna-b": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "60d22f935a262a94218c57a55b9e16603da0bac5fdedbce7b566faeb913a6598",
+          "candidate_sha256": "275bab9228180b364a93c0013087570ca9ab8d9550de9116c1efbffba413711c"
+        },
+        "first-b": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "2134b9fa86a80462a4d337726d424e3c39544eccd3dc89177b43562a75969cb8",
+          "candidate_sha256": "32dec09c58ebb281977d27c611d9f641d33f256633a46acad10ab9c828ba3b26"
+        }
+      }
+    },
+    "addCanonicalUrl_assignPostToCategory": {
+      "group": "blogging",
+      "arms": {
+        "direct": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "775205118a06efa4ff4bb06864a7af8e3ec0aab446e9270a9af949827698da00",
+          "candidate_sha256": "bf9154e1f34d1e4f62edf278a84bcd2c3fde81b374134d0d49b3f27e2f24a29e"
+        },
+        "dna-a": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "631ca94d7778feda5d52572c41391b663f6295fba12652c06b416ccaaccf6215",
+          "candidate_sha256": "83332790233890a19793da96543a279bd82dfb325f4f2045c135e28f1f9bb72c"
+        },
+        "first-a": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "failed",
+            "failed"
+          ],
+          "suite_error": "",
+          "report_sha256": "e4fe0a6e254948471218e93c8c2a18e41c8a6b4a93e8539437de4546c44bf567",
+          "candidate_sha256": "2985a5990614698879eff313596a1f23818ed756375e413783b76d0c41b544e2"
+        },
+        "dna-b": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "f3ec3161abe787d3836c0883309e8779a89086dbafcc7ca4c7d0323594a2667c",
+          "candidate_sha256": "a553dc18335e2246f8097bb56b4d4ad5ed41db5efc22fd313844c9dbd5c447d1"
+        },
+        "first-b": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "failed",
+            "failed"
+          ],
+          "suite_error": "",
+          "report_sha256": "8832c8ab032ca726ee5861f11238b7f46800548d4fe41a8cab5fcfde2b0d350f",
+          "candidate_sha256": "020917f413fd878effc7203ded3d7315225a05a236280269e62ecd770cc36f5f"
+        }
+      }
+    },
+    "addCanonicalUrl_editComment": {
+      "group": "blogging",
+      "arms": {
+        "direct": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "987048a17ad1362989ce132afe4e9f33602e471f6f8fdfbe927c3063e3735b00",
+          "candidate_sha256": "86ff1160d45994edd5ad89f2127184ffa73b3755096a12c66ee77be7ec573ea9"
+        },
+        "dna-a": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "5741ac81146ef7d2a19dd3f4394fcdf5213eca1f87c76e681eb52742e0324803",
+          "candidate_sha256": "33cc03fda341206938428af2f5a973d49061688a797793f735430dc9da4ddc63"
+        },
+        "first-a": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "failed",
+            "failed"
+          ],
+          "suite_error": "",
+          "report_sha256": "86a3fcd5b116fc32644b26f789fa36b72c6c79f5ece2014604d514f01ef2042c",
+          "candidate_sha256": "1b92d9a973f098f7bbcb821ca0824ed52f8ee799cf3ba5c369d1af6ec3a3169b"
+        },
+        "dna-b": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "0cdf7bb94869dc37c8cbd3b4cf6eec212de059ffe8fdbca4a0537ee1179ea1a0",
+          "candidate_sha256": "f1dce7a19f195ef274e39b77b299a78b77168ca5b8d0fafb1c2b33d3cd4b82e5"
+        },
+        "first-b": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "failed",
+            "failed"
+          ],
+          "suite_error": "",
+          "report_sha256": "7b1d5fa15fbb6db2ea76d82b5027fa53ca3abc9f82fe0a4903dccf59fb6e3428",
+          "candidate_sha256": "fe4fc5edae5fd2d3d16a31fe5be99e91c3096f528a9fba19a9296a8abec929de"
+        }
+      }
+    },
+    "addCanonicalUrl_editTag": {
+      "group": "blogging",
+      "arms": {
+        "direct": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "7bd4cf4491571600ce24da42d094dead90efcb6fc396f628aba5f7b9acaaf811",
+          "candidate_sha256": "a04f62998f60b6d060d1683951fde2e4fa3f03d289887ac4457ea39a6bcda1f0"
+        },
+        "dna-a": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "19dc6a9b2636cea220b1ec29eca3ef87593ab46f8397c04f71e8bb94c1168664",
+          "candidate_sha256": "79208a4dc7dce77e54452b082641fd498e395284521e77c5fd648a3c520f102b"
+        },
+        "first-a": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "failed",
+            "failed"
+          ],
+          "suite_error": "",
+          "report_sha256": "9030c658e78991931cf7034a0ada59a473b511114292417a94e7aefefe49fdfb",
+          "candidate_sha256": "7ceb986b02f947dc9c6259059448d69b8196ffddce548b086b3f2ca5926db2f6"
+        },
+        "dna-b": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "654276b9f608f7da9ccc36915f9608b318fd5035d99cd39e973c55156faedfcb",
+          "candidate_sha256": "d8c2c88d7344dbee5ea958c4aa79c3ae173d502f4413b3e6c389298d030543d3"
+        },
+        "first-b": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "failed",
+            "failed"
+          ],
+          "suite_error": "",
+          "report_sha256": "7f464f1d783e9871a827002df1ae5f1a3c57f3c821b07927037e85b3d3d100c9",
+          "candidate_sha256": "9a283714829238d67fe28cb0d6b67437d43e263af9723fad9d754d5ce4fef227"
+        }
+      }
+    },
+    "addCommentToTask_setTaskDeadline": {
+      "group": "taskmanagement",
+      "arms": {
+        "direct": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "3b51217c6bc6f65caeb298678fa93edfd3643e16cf0e4a3db9dbf298b23266dd",
+          "candidate_sha256": "90a2d3d81a27c4f372b71fffb143ca74bd18952243ce28a2ef04bb206d4ca0bf"
+        },
+        "dna-a": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "41c76c78531c010b1b10859d03b6f5a6903f3ea02c42f950138e794df815c263",
+          "candidate_sha256": "164fd0679722cd4f1b10c83248bda2a70a7acb2681f07f9d98d9650ad3206ebe"
+        },
+        "first-a": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "c03d20551e2c06c12f1aa852d529218f009857db15d1fb56a678fedc2e0082e1",
+          "candidate_sha256": "fb5bea3d3c2b02bdef77e81746bc439fe6c9f177bbe82c339de554f6e2137272"
+        },
+        "dna-b": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "764e0a75a6d1d4df8e80af3fd5fcbc75cc17b36859429d7bf5abd5eadcc17a7e",
+          "candidate_sha256": "7b8c6bca50b635307f6e96cf2980c40606bc08c97a281f398e740ba286aa1d2a"
+        },
+        "first-b": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "764e0a75a6d1d4df8e80af3fd5fcbc75cc17b36859429d7bf5abd5eadcc17a7e",
+          "candidate_sha256": "7b8c6bca50b635307f6e96cf2980c40606bc08c97a281f398e740ba286aa1d2a"
+        }
+      }
+    },
+    "approveOrRejectTaskReview_compareTime": {
+      "group": "taskmanagement",
+      "arms": {
+        "direct": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "f1c03e3371f6440d670264865064188f020a5a4935a687e19128858e27624ecc",
+          "candidate_sha256": "62782ca048c16a9992ad527ccf01dcd9db4b89902b98998f24f2a06acdd5eba4"
+        },
+        "dna-a": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "33a96b515c981f8cf7a3a98263b8ab5b4285c7539054f19e160036c1e0d34e6f",
+          "candidate_sha256": "b72eaf3d9c53d65eb38e54f69b20f59d3ef65f35da8984401c78cf49c6b5c268"
+        },
+        "first-a": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "failed",
+            "failed"
+          ],
+          "suite_error": "",
+          "report_sha256": "c118c02d658a4d33997f34a92be1e12c15c6a8e8de9fabdf96f2b335b6a6cfd1",
+          "candidate_sha256": "9ff768be0923998629cd12d15b5f37bdadfeb0eabef192a0c495136fdcec64bb"
+        },
+        "dna-b": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "1dac5cef1eacae530b75d4c7ec7e46ee679c0ba017443e52ae919e0e9fa7a14b",
+          "candidate_sha256": "ca8d59fe8a4c47d745fa633d1dc8326951415e8cbace2730e9b0c44cd0f89a79"
+        },
+        "first-b": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "failed",
+            "failed"
+          ],
+          "suite_error": "",
+          "report_sha256": "986e460164113210ccad66c7e4b3bd246fe4205e850599c91313cdc075f0dd98",
+          "candidate_sha256": "ad4b677a12c86bddf195410e4e947496050b50e4c9c5a4851dff7c31a2ef836a"
+        }
+      }
+    },
+    "approveOrRejectTaskReview_projectCustomWorkflows": {
+      "group": "taskmanagement",
+      "arms": {
+        "direct": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "3073fae7d19250ae1b4096aec47fea3c17a9b6de7cfc4c5e11cb96b33f725cca",
+          "candidate_sha256": "70bc55dcbc372b4ee16144bff08d1a11570e8a49a5e54a2082bdd77bb89de50a"
+        },
+        "dna-a": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "37b3f9d488b9fac2faa0dd1356bdb86f0d5c892c1cc75b34c00874452e1cb04f",
+          "candidate_sha256": "2f17ea747d09a8f86d91dd804d3b0ca2d26eee8d662cc62a312778833553e6d6"
+        },
+        "first-a": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "failed",
+            "failed"
+          ],
+          "suite_error": "",
+          "report_sha256": "3e1a63c1bd4fe2e3b8fd32b78a14c1f0827d73c2e637120b7772555d5d5e1d30",
+          "candidate_sha256": "1643392b38ae7381879c46c3368e668648d30d4634d08a7efad27046893df3a9"
+        },
+        "dna-b": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "a3174f30b22c31cc50695931dcbf8d5b5d616d23f2cfb8f07c755b53124355c0",
+          "candidate_sha256": "0d059f28e5f36238dbf3ca5ab4eb5ee56f3589c117c119473b214895522e3916"
+        },
+        "first-b": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "failed",
+            "failed"
+          ],
+          "suite_error": "",
+          "report_sha256": "1536b5a8eab3353f3d9676fe044d333b731d775d3ac3acb4f7263250ad1a1daa",
+          "candidate_sha256": "17502c498d0969ce96c4c3b02e7e410516371bda4e2fe82305e3a676265fa788"
+        }
+      }
+    },
+    "approveOrRejectTaskReview_setTaskPriority": {
+      "group": "taskmanagement",
+      "arms": {
+        "direct": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "cbf33885350ce09b550354baa8180980aade2a0f503be0400a5811e83258cb69",
+          "candidate_sha256": "2cda0e00795ac6a11938c8907aee041d5a03bf0e86976daad309c0a22396f4a9"
+        },
+        "dna-a": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "825ce0dfdaf7ab3c31cc67ac06516afe28c2318bb7f809c3de3704344f6c191f",
+          "candidate_sha256": "d8989513c2e80ee5cda6d60f2fb36ff32fcdee2665a380187f6497950cde9c23"
+        },
+        "first-a": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "failed",
+            "failed"
+          ],
+          "suite_error": "",
+          "report_sha256": "8eee77c9790c31fbe44e7129dea08688b6e25aaeced137e4f8c39c6db1eb2bbc",
+          "candidate_sha256": "84f5290e4aceccb447c93dc3efa1ce1670058b724b79e31c5118ef687ea59de1"
+        },
+        "dna-b": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "292f036edd50e949225e8aee48cd683a2941607263ac37baece80bc5a875810e",
+          "candidate_sha256": "7815ad607e28e1d1e2e0b26e01a00786c2138b2708f2fdc35596cb8ee452244f"
+        },
+        "first-b": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "failed",
+            "failed"
+          ],
+          "suite_error": "",
+          "report_sha256": "1b8eedd626a0c11a53d02b32cf3bc120adf6fa0cd9bac3e00ce4568e68c59c8c",
+          "candidate_sha256": "5c4191299fa1ffb1d0c8d5e85bc00b6f436c5dc1478969befc0c8e33a93a09e9"
+        }
+      }
+    },
+    "assignTaskToProject_assignTaskToUser": {
+      "group": "taskmanagement",
+      "arms": {
+        "direct": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "536aaaa980f45a9982140e9dcdaecd1eed7ecaa8fc149ebf0a680d7ea3aaa083",
+          "candidate_sha256": "caeef5ea5c1da9d0eff10d61d695d98c0c74b200ab55cc41f5458db755d533e5"
+        },
+        "dna-a": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "2d6cde06c517e348d12dfe9474a797566db8a68f2c486c46b2fabe3048293071",
+          "candidate_sha256": "f7c18df6e6fa13bdaa468d16afd63651271f40ce7d662dfc5facc2a31bc3c725"
+        },
+        "first-a": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "failed",
+            "failed"
+          ],
+          "suite_error": "",
+          "report_sha256": "37c6a65110e3934b441d733f681c2c61c197a997f319ec440fbde458109efd58",
+          "candidate_sha256": "ed24d48c7c751d66528744e172577911cd31d27368d8efac177d82d6ea11f1c2"
+        },
+        "dna-b": {
+          "passed": true,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "passed",
+            "passed",
+            "passed",
+            "passed"
+          ],
+          "suite_error": "",
+          "report_sha256": "0d400bbc5de55c684ed5b0091cc2d288e2fb5e2dda93791016951c86ca362350",
+          "candidate_sha256": "10f9c3634cd2bd4f0a2e32706c639c391b99afeb06d272a3d34527dba44b9c3f"
+        },
+        "first-b": {
+          "passed": false,
+          "official_tests": 4,
+          "assertion_statuses": [
+            "failed",
+            "failed",
+            "failed",
+            "failed"
+          ],
+          "suite_error": "",
+          "report_sha256": "8a81c5b507a47f7be472dcab89179988c045e1b3f42d8e5210de253f9a40a008",
+          "candidate_sha256": "5ce510b9192bf7e7bed18277f7297af45f050bf9e9dd93873da08c4eca9e2e4f"
+        }
+      }
+    }
+  },
+  "historical_reference": {
+    "reason_for_separate_reporting": "These are the same target IDs under earlier models, libraries and protocols. No historical model-matched comparison to the new subscription model.",
+    "todomvc": {
+      "openai/gpt-5": {
+        "qwen/qwen3-coder-30b-a3b-instruct": {
+          "dna_first": 16,
+          "dna_n": 16,
+          "direct_first": 13,
+          "direct_n": 16
+        },
+        "mistralai/mistral-small-3.2-24b-instruct": {
+          "dna_first": 16,
+          "dna_n": 16,
+          "direct_first": 9,
+          "direct_n": 16
+        },
+        "deepseek/deepseek-v4-pro-0813": {
+          "dna_first": 16,
+          "dna_n": 16,
+          "direct_first": 16,
+          "direct_n": 16
+        },
+        "openai/gpt-oss-120b": {
+          "dna_first": 16,
+          "dna_n": 16,
+          "direct_first": 16,
+          "direct_n": 16
+        }
+      },
+      "anthropic/claude-sonnet-4.5": {
+        "qwen/qwen3-coder-30b-a3b-instruct": {
+          "dna_first": 16,
+          "dna_n": 16,
+          "direct_first": 13,
+          "direct_n": 16
+        },
+        "mistralai/mistral-small-3.2-24b-instruct": {
+          "dna_first": 16,
+          "dna_n": 16,
+          "direct_first": 9,
+          "direct_n": 16
+        },
+        "deepseek/deepseek-v4-pro-0813": {
+          "dna_first": 16,
+          "dna_n": 16,
+          "direct_first": 16,
+          "direct_n": 16
+        },
+        "openai/gpt-oss-120b": {
+          "dna_first": 16,
+          "dna_n": 16,
+          "direct_first": 16,
+          "direct_n": 16
+        }
+      }
+    },
+    "webapp1k_duo": {
+      "deepseek/deepseek-v4-pro-0813": {
+        "dna": {
+          "first": 9,
+          "n": 10
+        },
+        "free": {
+          "first": 9,
+          "n": 10
+        }
+      },
+      "qwen/qwen3-coder": {
+        "dna": {
+          "first": 7,
+          "n": 10
+        },
+        "free": {
+          "first": 8,
+          "n": 10
+        }
+      }
+    },
+    "sources": {
+      "studies/todomvc_dna/results/summary.json": "126ac28423420d8d678bbdc025977a96ad7429cca438db2f75a95fb4d2e0eb95",
+      "studies/results/blind-library.json": "dd84827ec53ab3314d6a6f6249289f14eaa790977f3459c2ff7d55f4263f5e43",
+      "studies/webapp1k_dna/results/summary.json": "607d468ebfb13fffa702f224c11dc29250ed9c0a2e794636e5221ae45fcb7379"
+    }
+  }
+}

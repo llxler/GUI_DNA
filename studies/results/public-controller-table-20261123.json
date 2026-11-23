@@ -1,0 +1,1046 @@
+{
+  "study": "public-controller-table-20261123",
+  "project": "table",
+  "library_builder": "gpt-6.2-astra",
+  "planner": "Qwen/Qwen2.5-0.5B-Instruct",
+  "planner_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "builds": {
+    "rep-1": {
+      "status": "accepted",
+      "started": "2026-11-23T05:51:06.614618+00:00",
+      "model": "gpt-6.2-astra",
+      "effort": "medium",
+      "prompt_sha256": "9b54622b43605d0ced39bfa603eb1c2d4e02331900916a861aeac1eb4225989e",
+      "usage": [
+        {
+          "input_tokens": 18261,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5323,
+          "reasoning_output_tokens": 170
+        }
+      ],
+      "session": "01a206f5-4562-75a0-a2a2-52c3035935ff",
+      "package_sha256": "6bd10de5223ba7d9e3731c15dc3f2ab229d1e253cc4f304c6e96b628cf673608",
+      "reply.json_sha256": "21d5e340a87c598963bca6e185d8994bee626feca4294a64b78b7b08744ea811",
+      "events.jsonl_sha256": "ea996b5f4775e83c4cdd94595a91982d22cb97fd52cf322869661dd851e67b74",
+      "finished": "2026-11-23T05:53:19.110019+00:00"
+    },
+    "rep-2": {
+      "status": "accepted",
+      "started": "2026-11-23T05:51:06.615135+00:00",
+      "model": "gpt-6.2-astra",
+      "effort": "medium",
+      "prompt_sha256": "9b54622b43605d0ced39bfa603eb1c2d4e02331900916a861aeac1eb4225989e",
+      "usage": [
+        {
+          "input_tokens": 21444,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 4263,
+          "reasoning_output_tokens": 18
+        }
+      ],
+      "session": "01a206f5-4562-71a1-9eb1-6c37b2043289",
+      "package_sha256": "9a4f2755a0d2ebd55450ff2258bf0888734e504fca98eebef203c6a50b2129ef",
+      "reply.json_sha256": "1aea947980ddf09921c48fc0b601ecf646ae99a7271a062ccb255fbd5fb56406",
+      "events.jsonl_sha256": "9bfa8f19ffe2eb527c90859e3192b690953a7bbc51d69626ffa9f59638a738ee",
+      "finished": "2026-11-23T05:53:02.794758+00:00"
+    }
+  },
+  "repeats": {
+    "rep-1": {
+      "targets": {
+        "task-1": {
+          "status": "invalid",
+          "receipt_sha256": "75c83fad0cbe4257db0be39df2e4c7c78ee391862fbd2f05b1bcbb73d389c59b",
+          "finish_reason": "stop",
+          "reason": "$: unknown keys ['additionalProperties', 'properties', 'type'], missing keys []",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "02a2318dda43338fce81d4182f2301f54c26424786b50996bb21fa351cdbea98",
+          "fixed_report_sha256": "e2eaa55ff94ecebe01e300ff3cfdd6d08ea52e3800abd6a77a1ad9cb8c6628ca",
+          "plan_report_sha256": null
+        },
+        "task-2": {
+          "status": "invalid",
+          "receipt_sha256": "93ab44ee08eee636537e1c80490484b46d38ba69d29fddb6637ce00b29e86083",
+          "finish_reason": "stop",
+          "reason": "$: unknown keys ['configuration'], missing keys []",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "02a2318dda43338fce81d4182f2301f54c26424786b50996bb21fa351cdbea98",
+          "fixed_report_sha256": "b71e71b84d1b2c4d2f2c4a8be69139d632cedcc170e1389cc6884c429c7f5110",
+          "plan_report_sha256": null
+        },
+        "task-3": {
+          "status": "invalid",
+          "receipt_sha256": "def9730ae924c911771c4525e8035896b8066a0ad853b70afe9e58b5d4e4ad0d",
+          "finish_reason": "stop",
+          "reason": "$: unknown keys ['additionalProperties', 'starter'], missing keys []",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "02a2318dda43338fce81d4182f2301f54c26424786b50996bb21fa351cdbea98",
+          "fixed_report_sha256": "ec4b40c708c0cf920ef126595ef6464169db3b735ba82004bc6f88bd3cfde43a",
+          "plan_report_sha256": null
+        },
+        "task-4": {
+          "status": "invalid",
+          "receipt_sha256": "f0e9c3792d380f9b47f9942f01771d258d0d406d830de52184c9047d9529135d",
+          "finish_reason": "stop",
+          "reason": "$: unknown keys ['additionalProperties', 'starter'], missing keys []",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "02a2318dda43338fce81d4182f2301f54c26424786b50996bb21fa351cdbea98",
+          "fixed_report_sha256": "4a1a65611420fe40595ba328a812bfef175826d47d9d630f2198ce4343737e19",
+          "plan_report_sha256": null
+        },
+        "task-5": {
+          "status": "invalid",
+          "receipt_sha256": "f88ece6353c9a8018c4db904b50b37440aea23795eb9ed7f0cf2f4fe9b71c1e3",
+          "finish_reason": "stop",
+          "reason": "$: unknown keys ['configuration'], missing keys []",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "02a2318dda43338fce81d4182f2301f54c26424786b50996bb21fa351cdbea98",
+          "fixed_report_sha256": "f534b915c219fa2283e978282221cae461e57b2b03c5293c1b31c20c1f0e4f5d",
+          "plan_report_sha256": null
+        },
+        "task-6": {
+          "status": "invalid",
+          "receipt_sha256": "27eed49e4ef47959c6e52d5bcd4f0f02b6f05ef48fe7a7c82075ca0acff55a52",
+          "finish_reason": "stop",
+          "reason": "Expecting ',' delimiter: line 1 column 1332 (char 1331)",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "02a2318dda43338fce81d4182f2301f54c26424786b50996bb21fa351cdbea98",
+          "fixed_report_sha256": "ed208174feb0f3af2b3f5c7f55f50acb4d328b8098a02a2924b43530d0744654",
+          "plan_report_sha256": null
+        },
+        "task-7": {
+          "status": "invalid",
+          "receipt_sha256": "7a5c5f91495ee98a9dde392dc012cd01c4cf84cb5a4f17aee5b943edab69091e",
+          "finish_reason": "stop",
+          "reason": "Expecting ',' delimiter: line 1 column 1332 (char 1331)",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "02a2318dda43338fce81d4182f2301f54c26424786b50996bb21fa351cdbea98",
+          "fixed_report_sha256": "16a7e30d61327fc1b55b3826cf05c7d0a1224995ae252617e02f8c2ba9e63b08",
+          "plan_report_sha256": null
+        },
+        "task-8": {
+          "status": "invalid",
+          "receipt_sha256": "fd42fd91c9a7dae83969589cffa07aa83da7c4e4029e4a3a186ea5be7fbc037e",
+          "finish_reason": "stop",
+          "reason": "Expecting ',' delimiter: line 1 column 1332 (char 1331)",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": false,
+          "fixed": false,
+          "fixed_page": "02a2318dda43338fce81d4182f2301f54c26424786b50996bb21fa351cdbea98",
+          "fixed_report_sha256": "375126e66c1222fc4deb76721d6f0fdf7de899e055e7dac53accee367bfa5b16",
+          "plan_report_sha256": null
+        },
+        "task-9": {
+          "status": "invalid",
+          "receipt_sha256": "f01a1d8a5c31da2daea72a31c5dbf6431a45387c103615dbc82952b8067f8492",
+          "finish_reason": "stop",
+          "reason": "Expecting ',' delimiter: line 1 column 1332 (char 1331)",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": false,
+          "fixed": false,
+          "fixed_page": "02a2318dda43338fce81d4182f2301f54c26424786b50996bb21fa351cdbea98",
+          "fixed_report_sha256": "d3bfee42b1b6e6c1108a6c145ac2abcf3d8d72ef1d25715373b7fe902ae06356",
+          "plan_report_sha256": null
+        },
+        "task-10": {
+          "status": "invalid",
+          "receipt_sha256": "71c4aef27a9fbd37c09785e0010629862eb8aa9fcdfa100f57cd2736bc6fe4da",
+          "finish_reason": "stop",
+          "reason": "$: unknown keys ['additionalProperties', 'plan_schema'], missing keys []",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "02a2318dda43338fce81d4182f2301f54c26424786b50996bb21fa351cdbea98",
+          "fixed_report_sha256": "d51a7652319b7e4f98ecdd77b46fcd6bc9c47466f74c9c507652b5c1f777b7be",
+          "plan_report_sha256": null
+        },
+        "task-11": {
+          "status": "invalid",
+          "receipt_sha256": "a0af05677111738b0fad46176cafe65b52dc00dbfa6e26da69837f704eefe3e8",
+          "finish_reason": "stop",
+          "reason": "Expecting ',' delimiter: line 1 column 1332 (char 1331)",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "02a2318dda43338fce81d4182f2301f54c26424786b50996bb21fa351cdbea98",
+          "fixed_report_sha256": "77f2d70bdac7902bb4e810b1afb68321fc13d04a8e9ec51652fb38bf80bc24e8",
+          "plan_report_sha256": null
+        },
+        "task-12": {
+          "status": "invalid",
+          "receipt_sha256": "1f5bf753af65c9f531e4b0647559e65f150561e55a06ff2210cf516596e03efd",
+          "finish_reason": "stop",
+          "reason": "$: unknown keys ['configuration'], missing keys []",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "02a2318dda43338fce81d4182f2301f54c26424786b50996bb21fa351cdbea98",
+          "fixed_report_sha256": "48a4e1950fa418855e72caf2b7e9c673b0bf46a465981880ac76d7b9230cd612",
+          "plan_report_sha256": null
+        },
+        "task-13": {
+          "status": "invalid",
+          "receipt_sha256": "ca9b81b9be9ce3c1366575b647f81f9949011325552b6c7df794b3f17945b809",
+          "finish_reason": "stop",
+          "reason": "$: unknown keys ['configuration'], missing keys []",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "02a2318dda43338fce81d4182f2301f54c26424786b50996bb21fa351cdbea98",
+          "fixed_report_sha256": "92d9d129f2373aed5694984df23babcb8c3a82fcbfce80e29fb273cc311370c7",
+          "plan_report_sha256": null
+        },
+        "task-14": {
+          "status": "invalid",
+          "receipt_sha256": "91679b43d8adfbcee7373719ce15a6b5abd2deae5ac01055d6726e04562464d3",
+          "finish_reason": "stop",
+          "reason": "Expecting ',' delimiter: line 1 column 1332 (char 1331)",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "02a2318dda43338fce81d4182f2301f54c26424786b50996bb21fa351cdbea98",
+          "fixed_report_sha256": "19e1cc229df8c78f3dc50fb3a1b0cb08a8795778aa80ffba367d953a51a5e180",
+          "plan_report_sha256": null
+        },
+        "task-15": {
+          "status": "invalid",
+          "receipt_sha256": "75d50895b279a1b553fe06a09e4d661bab1a1a97035b16c7effd63b0fa621fd3",
+          "finish_reason": "stop",
+          "reason": "$: unknown keys ['configuration'], missing keys []",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "02a2318dda43338fce81d4182f2301f54c26424786b50996bb21fa351cdbea98",
+          "fixed_report_sha256": "7dc517c00b3e0223a4bc899d80b257ae15b1f0c599245426b51b2616646e47ae",
+          "plan_report_sha256": null
+        },
+        "task-16": {
+          "status": "invalid",
+          "receipt_sha256": "8ba5d842de023dd39922d0ff285cc45cbf6211d3aa0f8b8901c3d90f1b9f5908",
+          "finish_reason": "stop",
+          "reason": "$: unknown keys ['configuration'], missing keys []",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "02a2318dda43338fce81d4182f2301f54c26424786b50996bb21fa351cdbea98",
+          "fixed_report_sha256": "d4a015719994b0fe4ef06f63fc72a1e7e030e5ed8600ab23a82f6d8a2b798519",
+          "plan_report_sha256": null
+        },
+        "task-17": {
+          "status": "invalid",
+          "receipt_sha256": "5cd874ddc445b6f721856e3b3d8b5354628c801ba4680913febaa07efe077334",
+          "finish_reason": "stop",
+          "reason": "$: unknown keys ['configuration'], missing keys []",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "02a2318dda43338fce81d4182f2301f54c26424786b50996bb21fa351cdbea98",
+          "fixed_report_sha256": "b1bda86fe3b39e68c167ad268cb6127847bb5551d2628dc2a36a96d68b2faae0",
+          "plan_report_sha256": null
+        },
+        "task-18": {
+          "status": "invalid",
+          "receipt_sha256": "f4cb547c3feb29a729c7e8be1fa3d13e2a908bf177f119999123306b0ed7e534",
+          "finish_reason": "stop",
+          "reason": "$: unknown keys ['configuration'], missing keys []",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "02a2318dda43338fce81d4182f2301f54c26424786b50996bb21fa351cdbea98",
+          "fixed_report_sha256": "21aa6acec7138b568a9f826f85eb5502c539b47ca836762818d28247f39a35ca",
+          "plan_report_sha256": null
+        },
+        "task-19": {
+          "status": "invalid",
+          "receipt_sha256": "42709c51d5b07372a2d77fa35a0187221317c24393e3b2a3b819cbc66a5d3dd8",
+          "finish_reason": "stop",
+          "reason": "$: unknown keys ['configuration'], missing keys []",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "02a2318dda43338fce81d4182f2301f54c26424786b50996bb21fa351cdbea98",
+          "fixed_report_sha256": "b860bd1bc4be8149be2b31c0d09a7a263c3dc425321bf210fac5ee23fe2994d3",
+          "plan_report_sha256": null
+        },
+        "task-20": {
+          "status": "invalid",
+          "receipt_sha256": "bee1b3d569f56b9ca251601c85af6c04e92482cb7ab8fae1e4815fe848aa019f",
+          "finish_reason": "stop",
+          "reason": "$: unknown keys ['configuration'], missing keys []",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "02a2318dda43338fce81d4182f2301f54c26424786b50996bb21fa351cdbea98",
+          "fixed_report_sha256": "d0776977d092226edc4e7f3baee2e06e162f25f818a0b76002e800d5838793a0",
+          "plan_report_sha256": null
+        }
+      },
+      "summary": {
+        "strict": {
+          "passed": 0,
+          "observed": 20
+        },
+        "recovered": {
+          "passed": 18,
+          "observed": 20
+        },
+        "fixed": {
+          "passed": 18,
+          "observed": 20
+        }
+      },
+      "planned": 20,
+      "valid": 0,
+      "invalid_used_fallback": 20,
+      "missing_response": 0,
+      "preparation_blocked": 0,
+      "distinct_valid_plans": 0,
+      "paired_vs_original_qwen": {
+        "strict": {
+          "matched": 20,
+          "counts": {
+            "gained": 0,
+            "lost": 2,
+            "both_pass": 0,
+            "both_fail": 18,
+            "unknown": 0
+          },
+          "tasks": {
+            "gained": [],
+            "lost": [
+              "task-4",
+              "task-12"
+            ],
+            "both_pass": [],
+            "both_fail": [
+              "task-1",
+              "task-2",
+              "task-3",
+              "task-5",
+              "task-6",
+              "task-7",
+              "task-8",
+              "task-9",
+              "task-10",
+              "task-11",
+              "task-13",
+              "task-14",
+              "task-15",
+              "task-16",
+              "task-17",
+              "task-18",
+              "task-19",
+              "task-20"
+            ],
+            "unknown": []
+          }
+        },
+        "recovered": {
+          "matched": 20,
+          "counts": {
+            "gained": 15,
+            "lost": 0,
+            "both_pass": 3,
+            "both_fail": 2,
+            "unknown": 0
+          },
+          "tasks": {
+            "gained": [
+              "task-1",
+              "task-2",
+              "task-3",
+              "task-5",
+              "task-6",
+              "task-7",
+              "task-10",
+              "task-13",
+              "task-14",
+              "task-15",
+              "task-16",
+              "task-17",
+              "task-18",
+              "task-19",
+              "task-20"
+            ],
+            "lost": [],
+            "both_pass": [
+              "task-4",
+              "task-11",
+              "task-12"
+            ],
+            "both_fail": [
+              "task-8",
+              "task-9"
+            ],
+            "unknown": []
+          }
+        },
+        "fixed": {
+          "matched": 20,
+          "counts": {
+            "gained": 15,
+            "lost": 0,
+            "both_pass": 3,
+            "both_fail": 2,
+            "unknown": 0
+          },
+          "tasks": {
+            "gained": [
+              "task-1",
+              "task-2",
+              "task-3",
+              "task-5",
+              "task-6",
+              "task-7",
+              "task-10",
+              "task-13",
+              "task-14",
+              "task-15",
+              "task-16",
+              "task-17",
+              "task-18",
+              "task-19",
+              "task-20"
+            ],
+            "lost": [],
+            "both_pass": [
+              "task-4",
+              "task-11",
+              "task-12"
+            ],
+            "both_fail": [
+              "task-8",
+              "task-9"
+            ],
+            "unknown": []
+          }
+        }
+      },
+      "eligible": false
+    },
+    "rep-2": {
+      "targets": {
+        "task-1": {
+          "status": "invalid",
+          "receipt_sha256": "2923321f2569c09f100a33238d15645f578cc5ea7580daeeee079f55128fd58e",
+          "finish_reason": "stop",
+          "reason": "$: unknown keys ['additionalProperties'], missing keys []",
+          "strict": false,
+          "used_fallback": true,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "fixed_report_sha256": "f93fc2843c02435bb7c9671270b9826064c6479ee82f69f447637fbae333448c",
+          "plan_report_sha256": null
+        },
+        "task-2": {
+          "status": "valid",
+          "receipt_sha256": "acd3aa71f70af2e08689ae9a3e4974fb74f33dd313f52c8925ee7e536e7e20a2",
+          "finish_reason": "stop",
+          "plan": {
+            "structure": true,
+            "editing": true,
+            "clipboard": true,
+            "resizing": true,
+            "reordering": true,
+            "querying": true
+          },
+          "page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "strict": true,
+          "used_fallback": false,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "fixed_report_sha256": "c138ef2d78edb5c4ec2841cf96dc595a7113ecf2fb3cea0edec8e6401f65d3c3",
+          "plan_report_sha256": "c138ef2d78edb5c4ec2841cf96dc595a7113ecf2fb3cea0edec8e6401f65d3c3"
+        },
+        "task-3": {
+          "status": "valid",
+          "receipt_sha256": "53c32dd3c736dde03106b33b5dc4b7c8bb780c6b4158abd4b082df26f08516ff",
+          "finish_reason": "stop",
+          "plan": {
+            "structure": true,
+            "editing": true,
+            "clipboard": true,
+            "resizing": true,
+            "reordering": true,
+            "querying": true
+          },
+          "page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "strict": true,
+          "used_fallback": false,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "fixed_report_sha256": "273881c917cbf574c1a1b1414842b8c28b9e0fe1264485621472c5164dc5150e",
+          "plan_report_sha256": "273881c917cbf574c1a1b1414842b8c28b9e0fe1264485621472c5164dc5150e"
+        },
+        "task-4": {
+          "status": "valid",
+          "receipt_sha256": "b47655bd2cb06fb2f08ae197ea96f1d454fa89798ca5a7a35113430a4cce2c70",
+          "finish_reason": "stop",
+          "plan": {
+            "structure": true,
+            "editing": true,
+            "clipboard": true,
+            "resizing": true,
+            "reordering": true,
+            "querying": true
+          },
+          "page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "strict": true,
+          "used_fallback": false,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "fixed_report_sha256": "2ef1d182c64b79c8e0bc680952b026d106588a6a88eac0a6455e8c90a5425655",
+          "plan_report_sha256": "2ef1d182c64b79c8e0bc680952b026d106588a6a88eac0a6455e8c90a5425655"
+        },
+        "task-5": {
+          "status": "valid",
+          "receipt_sha256": "1dca41ef78061931d079c5c6770cba61296d0f0c2e35dc4abd9a12762197d125",
+          "finish_reason": "stop",
+          "plan": {
+            "structure": true,
+            "editing": true,
+            "clipboard": true,
+            "resizing": true,
+            "reordering": true,
+            "querying": true
+          },
+          "page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "strict": true,
+          "used_fallback": false,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "fixed_report_sha256": "ae644347b0f72acf7644c9c8b5d8b72dd96b70b090cc58ba9ff86160d1b5d7e6",
+          "plan_report_sha256": "ae644347b0f72acf7644c9c8b5d8b72dd96b70b090cc58ba9ff86160d1b5d7e6"
+        },
+        "task-6": {
+          "status": "valid",
+          "receipt_sha256": "cb6e61b2b71c5894296879eb167f13ea329030ff562db97318dab283f4252877",
+          "finish_reason": "stop",
+          "plan": {
+            "structure": true,
+            "editing": true,
+            "clipboard": true,
+            "resizing": true,
+            "reordering": true,
+            "querying": true
+          },
+          "page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "strict": true,
+          "used_fallback": false,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "fixed_report_sha256": "1579e6742acf50556806cab32410581d9e51651a03d6dc7802855a749f602402",
+          "plan_report_sha256": "1579e6742acf50556806cab32410581d9e51651a03d6dc7802855a749f602402"
+        },
+        "task-7": {
+          "status": "valid",
+          "receipt_sha256": "6cf3fd89e93fb05dd795cacf1badf3da71f5ca8234b72eca957c1c4ba68e1de0",
+          "finish_reason": "stop",
+          "plan": {
+            "structure": true,
+            "editing": true,
+            "clipboard": true,
+            "resizing": true,
+            "reordering": true,
+            "querying": true
+          },
+          "page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "strict": true,
+          "used_fallback": false,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "fixed_report_sha256": "57b8569fb126339ea678d4a0ec61965087f19a6059849724533111c6673ae32f",
+          "plan_report_sha256": "57b8569fb126339ea678d4a0ec61965087f19a6059849724533111c6673ae32f"
+        },
+        "task-8": {
+          "status": "valid",
+          "receipt_sha256": "cd00819e53fbf8a85dd850e4cf0435b8c7d221d2419d054747a0a0b5a41a1ad5",
+          "finish_reason": "stop",
+          "plan": {
+            "structure": true,
+            "editing": true,
+            "clipboard": true,
+            "resizing": true,
+            "reordering": true,
+            "querying": true
+          },
+          "page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "strict": false,
+          "used_fallback": false,
+          "recovered": false,
+          "fixed": false,
+          "fixed_page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "fixed_report_sha256": "764bf14144ade2529d8a2bbcee423e189878dc0d1f71a2327a5f96a3b0afc50c",
+          "plan_report_sha256": "764bf14144ade2529d8a2bbcee423e189878dc0d1f71a2327a5f96a3b0afc50c"
+        },
+        "task-9": {
+          "status": "valid",
+          "receipt_sha256": "f4ebca55ed2a2033b62238145bca8ea51f825bd0a263db98306b19b575d11ff3",
+          "finish_reason": "stop",
+          "plan": {
+            "structure": true,
+            "editing": true,
+            "clipboard": true,
+            "resizing": true,
+            "reordering": true,
+            "querying": true
+          },
+          "page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "strict": false,
+          "used_fallback": false,
+          "recovered": false,
+          "fixed": false,
+          "fixed_page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "fixed_report_sha256": "3c26d40f40ac0f248a8a8246c8ec66350d8254677b391d91c07d0c11794b210e",
+          "plan_report_sha256": "3c26d40f40ac0f248a8a8246c8ec66350d8254677b391d91c07d0c11794b210e"
+        },
+        "task-10": {
+          "status": "valid",
+          "receipt_sha256": "c330c59d4eed0446575125f2566d7f0bbce8fd988c5355455affb071ba0586e5",
+          "finish_reason": "stop",
+          "plan": {
+            "structure": true,
+            "editing": true,
+            "clipboard": true,
+            "resizing": true,
+            "reordering": true,
+            "querying": true
+          },
+          "page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "strict": true,
+          "used_fallback": false,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "fixed_report_sha256": "f59e43f675c13c19f9cc3332700b3a60067a840e3bf7b396a3efaa77343f33a3",
+          "plan_report_sha256": "f59e43f675c13c19f9cc3332700b3a60067a840e3bf7b396a3efaa77343f33a3"
+        },
+        "task-11": {
+          "status": "valid",
+          "receipt_sha256": "7231fa26ee6587e97e75c10b72230b193aa702592ccaf4f28e4114e3dd00d1c1",
+          "finish_reason": "stop",
+          "plan": {
+            "structure": true,
+            "editing": true,
+            "clipboard": true,
+            "resizing": true,
+            "reordering": true,
+            "querying": true
+          },
+          "page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "strict": true,
+          "used_fallback": false,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "fixed_report_sha256": "0fc816ec7d3e5961e17dc89891dcb5458db39d7a8bab5471922114ae34225118",
+          "plan_report_sha256": "0fc816ec7d3e5961e17dc89891dcb5458db39d7a8bab5471922114ae34225118"
+        },
+        "task-12": {
+          "status": "valid",
+          "receipt_sha256": "3d89517453976f35fe046019b6eac24923a36e3bb6bb387e2e3412691bf2947d",
+          "finish_reason": "stop",
+          "plan": {
+            "structure": true,
+            "editing": true,
+            "clipboard": true,
+            "resizing": true,
+            "reordering": true,
+            "querying": true
+          },
+          "page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "strict": true,
+          "used_fallback": false,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "fixed_report_sha256": "7e6bf856746b86d9ec27241d71a01d07afc31a8e389548bd5c867fea3a52b534",
+          "plan_report_sha256": "7e6bf856746b86d9ec27241d71a01d07afc31a8e389548bd5c867fea3a52b534"
+        },
+        "task-13": {
+          "status": "valid",
+          "receipt_sha256": "51eb0edbf74bd7c968bf7a31e366bbb5bc59bc677a8d1624540a10585b17023c",
+          "finish_reason": "stop",
+          "plan": {
+            "structure": true,
+            "editing": true,
+            "clipboard": true,
+            "resizing": true,
+            "reordering": true,
+            "querying": true
+          },
+          "page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "strict": true,
+          "used_fallback": false,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "fixed_report_sha256": "0ff1d15e22e0f88c7dceb8e627d97aeeadcd90b87931be34d072e6ff1c94b673",
+          "plan_report_sha256": "0ff1d15e22e0f88c7dceb8e627d97aeeadcd90b87931be34d072e6ff1c94b673"
+        },
+        "task-14": {
+          "status": "valid",
+          "receipt_sha256": "e3e9ebcde92dc94274161ccef66ef7abb6e8fb1024ad61e5935366698864fd97",
+          "finish_reason": "stop",
+          "plan": {
+            "structure": true,
+            "editing": true,
+            "clipboard": true,
+            "resizing": true,
+            "reordering": true,
+            "querying": true
+          },
+          "page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "strict": true,
+          "used_fallback": false,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "fixed_report_sha256": "595340ffe640deaa43d0c46f196bda52a6489131d9c2dd774fa4c30edc6c70de",
+          "plan_report_sha256": "595340ffe640deaa43d0c46f196bda52a6489131d9c2dd774fa4c30edc6c70de"
+        },
+        "task-15": {
+          "status": "valid",
+          "receipt_sha256": "9f4f6b1f8b70250ac8aa0c7b474cee4f1d5a6a05afe08d03bd84f0623a81b4c9",
+          "finish_reason": "stop",
+          "plan": {
+            "structure": true,
+            "editing": true,
+            "clipboard": true,
+            "resizing": true,
+            "reordering": true,
+            "querying": true
+          },
+          "page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "strict": true,
+          "used_fallback": false,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "fixed_report_sha256": "1fcda39fa991876e03d9d9c85e649abad5f7a189a87a416db20e6074dfd139aa",
+          "plan_report_sha256": "1fcda39fa991876e03d9d9c85e649abad5f7a189a87a416db20e6074dfd139aa"
+        },
+        "task-16": {
+          "status": "valid",
+          "receipt_sha256": "92081b0ab36a85b27243db1af996d65713f7af4ced52b95136fbeb41ec00d6a3",
+          "finish_reason": "stop",
+          "plan": {
+            "structure": true,
+            "editing": true,
+            "clipboard": true,
+            "resizing": true,
+            "reordering": true,
+            "querying": true
+          },
+          "page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "strict": true,
+          "used_fallback": false,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "fixed_report_sha256": "c0f376dcd1a8697e9ae6a24f3e847d15ef6aed1b8a524218cf8d2962a6998466",
+          "plan_report_sha256": "c0f376dcd1a8697e9ae6a24f3e847d15ef6aed1b8a524218cf8d2962a6998466"
+        },
+        "task-17": {
+          "status": "valid",
+          "receipt_sha256": "64c63812d547dd9bc2befeea0548198f4eff532efbadb1d3e8bf90d280e0280c",
+          "finish_reason": "stop",
+          "plan": {
+            "structure": true,
+            "editing": true,
+            "clipboard": true,
+            "resizing": true,
+            "reordering": true,
+            "querying": true
+          },
+          "page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "strict": true,
+          "used_fallback": false,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "fixed_report_sha256": "b9abb3c28ab9ebf5be118209e232a072c490198cd496e451ca32b6d41cd733c4",
+          "plan_report_sha256": "b9abb3c28ab9ebf5be118209e232a072c490198cd496e451ca32b6d41cd733c4"
+        },
+        "task-18": {
+          "status": "valid",
+          "receipt_sha256": "432268d88e89321a8ee35fd4a0dc7130fec16543fb475f57bae3a2dacd79d715",
+          "finish_reason": "stop",
+          "plan": {
+            "structure": true,
+            "editing": true,
+            "clipboard": true,
+            "resizing": true,
+            "reordering": true,
+            "querying": true
+          },
+          "page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "strict": true,
+          "used_fallback": false,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "fixed_report_sha256": "eed03dc307e41e37c7bebbb5f91f791bbdc8544393e250209a212a67e3591c31",
+          "plan_report_sha256": "eed03dc307e41e37c7bebbb5f91f791bbdc8544393e250209a212a67e3591c31"
+        },
+        "task-19": {
+          "status": "valid",
+          "receipt_sha256": "b7a0b499b1c82f1e09bfc0fcc8eee2ceef87e6ea8895812a736a59c9b6d8121e",
+          "finish_reason": "stop",
+          "plan": {
+            "structure": true,
+            "editing": true,
+            "clipboard": true,
+            "resizing": true,
+            "reordering": true,
+            "querying": true
+          },
+          "page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "strict": true,
+          "used_fallback": false,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "fixed_report_sha256": "cd77824c90e8decd1e41a1d3679f105c82fc90025d830375dc3c4609af5f9426",
+          "plan_report_sha256": "cd77824c90e8decd1e41a1d3679f105c82fc90025d830375dc3c4609af5f9426"
+        },
+        "task-20": {
+          "status": "valid",
+          "receipt_sha256": "68b3183fdd76b51c315dc32ab13ab9dbb4443952a67ea0c8df75e5823e3be993",
+          "finish_reason": "stop",
+          "plan": {
+            "structure": true,
+            "editing": true,
+            "clipboard": true,
+            "resizing": true,
+            "reordering": true,
+            "querying": true
+          },
+          "page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "strict": true,
+          "used_fallback": false,
+          "recovered": true,
+          "fixed": true,
+          "fixed_page": "72fc0c76b362879b5461d8d15ce692fe3bc7bf5bec829b4ae7e31a4f76cb2028",
+          "fixed_report_sha256": "7c08dd1565a0d6e16b5f493be5af88577901606208f6d26b136f481e4153aee1",
+          "plan_report_sha256": "7c08dd1565a0d6e16b5f493be5af88577901606208f6d26b136f481e4153aee1"
+        }
+      },
+      "summary": {
+        "strict": {
+          "passed": 17,
+          "observed": 20
+        },
+        "recovered": {
+          "passed": 18,
+          "observed": 20
+        },
+        "fixed": {
+          "passed": 18,
+          "observed": 20
+        }
+      },
+      "planned": 20,
+      "valid": 19,
+      "invalid_used_fallback": 1,
+      "missing_response": 0,
+      "preparation_blocked": 0,
+      "distinct_valid_plans": 1,
+      "paired_vs_original_qwen": {
+        "strict": {
+          "matched": 20,
+          "counts": {
+            "gained": 15,
+            "lost": 0,
+            "both_pass": 2,
+            "both_fail": 3,
+            "unknown": 0
+          },
+          "tasks": {
+            "gained": [
+              "task-2",
+              "task-3",
+              "task-5",
+              "task-6",
+              "task-7",
+              "task-10",
+              "task-11",
+              "task-13",
+              "task-14",
+              "task-15",
+              "task-16",
+              "task-17",
+              "task-18",
+              "task-19",
+              "task-20"
+            ],
+            "lost": [],
+            "both_pass": [
+              "task-4",
+              "task-12"
+            ],
+            "both_fail": [
+              "task-1",
+              "task-8",
+              "task-9"
+            ],
+            "unknown": []
+          }
+        },
+        "recovered": {
+          "matched": 20,
+          "counts": {
+            "gained": 15,
+            "lost": 0,
+            "both_pass": 3,
+            "both_fail": 2,
+            "unknown": 0
+          },
+          "tasks": {
+            "gained": [
+              "task-1",
+              "task-2",
+              "task-3",
+              "task-5",
+              "task-6",
+              "task-7",
+              "task-10",
+              "task-13",
+              "task-14",
+              "task-15",
+              "task-16",
+              "task-17",
+              "task-18",
+              "task-19",
+              "task-20"
+            ],
+            "lost": [],
+            "both_pass": [
+              "task-4",
+              "task-11",
+              "task-12"
+            ],
+            "both_fail": [
+              "task-8",
+              "task-9"
+            ],
+            "unknown": []
+          }
+        },
+        "fixed": {
+          "matched": 20,
+          "counts": {
+            "gained": 15,
+            "lost": 0,
+            "both_pass": 3,
+            "both_fail": 2,
+            "unknown": 0
+          },
+          "tasks": {
+            "gained": [
+              "task-1",
+              "task-2",
+              "task-3",
+              "task-5",
+              "task-6",
+              "task-7",
+              "task-10",
+              "task-13",
+              "task-14",
+              "task-15",
+              "task-16",
+              "task-17",
+              "task-18",
+              "task-19",
+              "task-20"
+            ],
+            "lost": [],
+            "both_pass": [
+              "task-4",
+              "task-11",
+              "task-12"
+            ],
+            "both_fail": [
+              "task-8",
+              "task-9"
+            ],
+            "unknown": []
+          }
+        }
+      },
+      "eligible": true
+    }
+  },
+  "original_qwen": {
+    "observed": 20,
+    "totals": {
+      "strict": 2,
+      "use_example": 6,
+      "fixed": 3,
+      "recovered": 3
+    },
+    "source_sha256": "23ea570be8851dc5d08467c6908d7e86df0fd7969bf9e21f5814008cf24ce0a4"
+  },
+  "historical_mistral": {
+    "passed": 3,
+    "observed": 20,
+    "source_sha256": "6b20fb347ff9a0b15c1472f766a54c2d5039f50d81710a320845f054ae0b42e9"
+  },
+  "confirmation": {
+    "qualified_for_retesting": false,
+    "rule": "Both independent accepted public-only builds must receive 20 plans, each strict count above both 3 and the original Qwen count, and recovered count above the original Qwen recovery."
+  },
+  "limitations": "Registered after observing prior compatible-backend totals. Both repetitions use identical project targets. The builder model, upstream information, interface and implementation changed; default-example, recovered, and strict selection outcomes are distinct.",
+  "verification": {
+    "build_seal_sha256": "9b42b1d53ac53bcc3595932d83680afc59f67bed2f752484642f7e8b20a000ff",
+    "candidate_seal_sha256": "7dd7da46d10e223f804471e921c619f00d7f7f2b35873d75d0ee9644e2c0d961",
+    "score_seal_sha256": "ba51f7d1b1b3221891b701f553257f212eca9074959a8377364338efec89d59d",
+    "score_sealed_utc": "2026-11-23T05:56:09.746787+00:00",
+    "unique_official_reports": 40,
+    "remote_api_requests": 0
+  }
+}

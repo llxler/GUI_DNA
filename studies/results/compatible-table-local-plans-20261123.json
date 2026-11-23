@@ -1,0 +1,693 @@
+{
+  "project": "table",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "planned": 20,
+  "received": 20,
+  "strictly_valid": 14,
+  "distinct_valid_plans": 2,
+  "new_planning": "One independent, source-blind local greedy response per public target prefix, shared across every compatible backend.",
+  "totals": {
+    "original": {
+      "observed": 20,
+      "passed": 2,
+      "gained_vs_original": [],
+      "lost_vs_original": []
+    },
+    "plain-1": {
+      "observed": 20,
+      "passed": 12,
+      "gained_vs_original": [
+        "task-1",
+        "task-2",
+        "task-5",
+        "task-6",
+        "task-7",
+        "task-10",
+        "task-13",
+        "task-14",
+        "task-16",
+        "task-17"
+      ],
+      "lost_vs_original": []
+    },
+    "contract-1": {
+      "observed": 20,
+      "passed": 12,
+      "gained_vs_original": [
+        "task-1",
+        "task-2",
+        "task-5",
+        "task-6",
+        "task-7",
+        "task-10",
+        "task-13",
+        "task-14",
+        "task-16",
+        "task-17"
+      ],
+      "lost_vs_original": []
+    },
+    "plain-2": {
+      "observed": 20,
+      "passed": 12,
+      "gained_vs_original": [
+        "task-1",
+        "task-2",
+        "task-5",
+        "task-6",
+        "task-7",
+        "task-10",
+        "task-13",
+        "task-14",
+        "task-16",
+        "task-17"
+      ],
+      "lost_vs_original": []
+    },
+    "contract-2": {
+      "observed": 20,
+      "passed": 13,
+      "gained_vs_original": [
+        "task-1",
+        "task-2",
+        "task-5",
+        "task-6",
+        "task-7",
+        "task-8",
+        "task-10",
+        "task-13",
+        "task-14",
+        "task-16",
+        "task-17"
+      ],
+      "lost_vs_original": []
+    }
+  },
+  "targets": {
+    "task-1": {
+      "received": true,
+      "valid": true,
+      "format_error": null,
+      "plan": {
+        "theme": "system",
+        "palette": "gray",
+        "menuStyle": "solid",
+        "gridDensity": "comfortable",
+        "interactions": {
+          "contextMenu": true,
+          "resize": true,
+          "dragReorder": true,
+          "edit": true,
+          "copyPaste": true,
+          "filterSort": true,
+          "rectangleSelection": true
+        }
+      },
+      "pages": {
+        "original": "4c87b4f3003a80490ac17e3f41f3119b3ab103dfcd7df923910979e961c59938",
+        "plain-1": "5ab56db1232cefbf4d2852f2148d22a262734454146368023c74cda710b509f2",
+        "contract-1": "9848d9fc04cc1bb660528bf911e944938a11ce22dd9438cbbb872f2daf149736",
+        "plain-2": "3cd504f737405707f36c5eecf24424b66a28a54e33345304064c427cb92f2321",
+        "contract-2": "c5eb66f7ffbf47b33cc55c3ce0953ca7123b55e6aa71434c1c285551621b4006"
+      },
+      "input_tokens": 1173,
+      "output_tokens": 73,
+      "passed": {
+        "original": false,
+        "plain-1": true,
+        "contract-1": true,
+        "plain-2": true,
+        "contract-2": true
+      }
+    },
+    "task-2": {
+      "received": true,
+      "valid": true,
+      "format_error": null,
+      "plan": {
+        "theme": "system",
+        "palette": "gray",
+        "menuStyle": "solid",
+        "gridDensity": "comfortable",
+        "interactions": {
+          "contextMenu": true,
+          "resize": true,
+          "dragReorder": true,
+          "edit": true,
+          "copyPaste": true,
+          "filterSort": true,
+          "rectangleSelection": true
+        }
+      },
+      "pages": {
+        "original": "4c87b4f3003a80490ac17e3f41f3119b3ab103dfcd7df923910979e961c59938",
+        "plain-1": "5ab56db1232cefbf4d2852f2148d22a262734454146368023c74cda710b509f2",
+        "contract-1": "9848d9fc04cc1bb660528bf911e944938a11ce22dd9438cbbb872f2daf149736",
+        "plain-2": "3cd504f737405707f36c5eecf24424b66a28a54e33345304064c427cb92f2321",
+        "contract-2": "c5eb66f7ffbf47b33cc55c3ce0953ca7123b55e6aa71434c1c285551621b4006"
+      },
+      "input_tokens": 1248,
+      "output_tokens": 73,
+      "passed": {
+        "original": false,
+        "plain-1": true,
+        "contract-1": true,
+        "plain-2": true,
+        "contract-2": true
+      }
+    },
+    "task-3": {
+      "received": true,
+      "valid": false,
+      "format_error": "$: unknown keys ['configuration'], missing keys []",
+      "plan": null,
+      "pages": {},
+      "input_tokens": 1325,
+      "output_tokens": 75,
+      "passed": {
+        "original": false,
+        "plain-1": false,
+        "contract-1": false,
+        "plain-2": false,
+        "contract-2": false
+      }
+    },
+    "task-4": {
+      "received": true,
+      "valid": true,
+      "format_error": null,
+      "plan": {
+        "theme": "system",
+        "palette": "gray",
+        "menuStyle": "solid",
+        "gridDensity": "comfortable",
+        "interactions": {
+          "contextMenu": true,
+          "resize": true,
+          "dragReorder": true,
+          "edit": true,
+          "copyPaste": true,
+          "filterSort": true,
+          "rectangleSelection": true
+        }
+      },
+      "pages": {
+        "original": "4c87b4f3003a80490ac17e3f41f3119b3ab103dfcd7df923910979e961c59938",
+        "plain-1": "5ab56db1232cefbf4d2852f2148d22a262734454146368023c74cda710b509f2",
+        "contract-1": "9848d9fc04cc1bb660528bf911e944938a11ce22dd9438cbbb872f2daf149736",
+        "plain-2": "3cd504f737405707f36c5eecf24424b66a28a54e33345304064c427cb92f2321",
+        "contract-2": "c5eb66f7ffbf47b33cc55c3ce0953ca7123b55e6aa71434c1c285551621b4006"
+      },
+      "input_tokens": 1367,
+      "output_tokens": 73,
+      "passed": {
+        "original": true,
+        "plain-1": true,
+        "contract-1": true,
+        "plain-2": true,
+        "contract-2": true
+      }
+    },
+    "task-5": {
+      "received": true,
+      "valid": true,
+      "format_error": null,
+      "plan": {
+        "theme": "system",
+        "palette": "gray",
+        "menuStyle": "solid",
+        "gridDensity": "comfortable",
+        "interactions": {
+          "contextMenu": true,
+          "resize": true,
+          "dragReorder": true,
+          "edit": true,
+          "copyPaste": true,
+          "filterSort": true,
+          "rectangleSelection": true
+        }
+      },
+      "pages": {
+        "original": "4c87b4f3003a80490ac17e3f41f3119b3ab103dfcd7df923910979e961c59938",
+        "plain-1": "5ab56db1232cefbf4d2852f2148d22a262734454146368023c74cda710b509f2",
+        "contract-1": "9848d9fc04cc1bb660528bf911e944938a11ce22dd9438cbbb872f2daf149736",
+        "plain-2": "3cd504f737405707f36c5eecf24424b66a28a54e33345304064c427cb92f2321",
+        "contract-2": "c5eb66f7ffbf47b33cc55c3ce0953ca7123b55e6aa71434c1c285551621b4006"
+      },
+      "input_tokens": 1426,
+      "output_tokens": 73,
+      "passed": {
+        "original": false,
+        "plain-1": true,
+        "contract-1": true,
+        "plain-2": true,
+        "contract-2": true
+      }
+    },
+    "task-6": {
+      "received": true,
+      "valid": true,
+      "format_error": null,
+      "plan": {
+        "theme": "system",
+        "palette": "gray",
+        "menuStyle": "solid",
+        "gridDensity": "comfortable",
+        "interactions": {
+          "contextMenu": true,
+          "resize": true,
+          "dragReorder": true,
+          "edit": true,
+          "copyPaste": true,
+          "filterSort": true,
+          "rectangleSelection": true
+        }
+      },
+      "pages": {
+        "original": "4c87b4f3003a80490ac17e3f41f3119b3ab103dfcd7df923910979e961c59938",
+        "plain-1": "5ab56db1232cefbf4d2852f2148d22a262734454146368023c74cda710b509f2",
+        "contract-1": "9848d9fc04cc1bb660528bf911e944938a11ce22dd9438cbbb872f2daf149736",
+        "plain-2": "3cd504f737405707f36c5eecf24424b66a28a54e33345304064c427cb92f2321",
+        "contract-2": "c5eb66f7ffbf47b33cc55c3ce0953ca7123b55e6aa71434c1c285551621b4006"
+      },
+      "input_tokens": 1527,
+      "output_tokens": 73,
+      "passed": {
+        "original": false,
+        "plain-1": true,
+        "contract-1": true,
+        "plain-2": true,
+        "contract-2": true
+      }
+    },
+    "task-7": {
+      "received": true,
+      "valid": true,
+      "format_error": null,
+      "plan": {
+        "theme": "system",
+        "palette": "gray",
+        "menuStyle": "solid",
+        "gridDensity": "comfortable",
+        "interactions": {
+          "contextMenu": true,
+          "resize": true,
+          "dragReorder": true,
+          "edit": true,
+          "copyPaste": true,
+          "filterSort": true,
+          "rectangleSelection": true
+        }
+      },
+      "pages": {
+        "original": "4c87b4f3003a80490ac17e3f41f3119b3ab103dfcd7df923910979e961c59938",
+        "plain-1": "5ab56db1232cefbf4d2852f2148d22a262734454146368023c74cda710b509f2",
+        "contract-1": "9848d9fc04cc1bb660528bf911e944938a11ce22dd9438cbbb872f2daf149736",
+        "plain-2": "3cd504f737405707f36c5eecf24424b66a28a54e33345304064c427cb92f2321",
+        "contract-2": "c5eb66f7ffbf47b33cc55c3ce0953ca7123b55e6aa71434c1c285551621b4006"
+      },
+      "input_tokens": 1601,
+      "output_tokens": 73,
+      "passed": {
+        "original": false,
+        "plain-1": true,
+        "contract-1": true,
+        "plain-2": true,
+        "contract-2": true
+      }
+    },
+    "task-8": {
+      "received": true,
+      "valid": true,
+      "format_error": null,
+      "plan": {
+        "theme": "system",
+        "palette": "gray",
+        "menuStyle": "solid",
+        "gridDensity": "comfortable",
+        "interactions": {
+          "contextMenu": true,
+          "resize": true,
+          "dragReorder": true,
+          "edit": true,
+          "copyPaste": true,
+          "filterSort": true,
+          "rectangleSelection": true
+        }
+      },
+      "pages": {
+        "original": "4c87b4f3003a80490ac17e3f41f3119b3ab103dfcd7df923910979e961c59938",
+        "plain-1": "5ab56db1232cefbf4d2852f2148d22a262734454146368023c74cda710b509f2",
+        "contract-1": "9848d9fc04cc1bb660528bf911e944938a11ce22dd9438cbbb872f2daf149736",
+        "plain-2": "3cd504f737405707f36c5eecf24424b66a28a54e33345304064c427cb92f2321",
+        "contract-2": "c5eb66f7ffbf47b33cc55c3ce0953ca7123b55e6aa71434c1c285551621b4006"
+      },
+      "input_tokens": 1631,
+      "output_tokens": 73,
+      "passed": {
+        "original": false,
+        "plain-1": false,
+        "contract-1": false,
+        "plain-2": false,
+        "contract-2": true
+      }
+    },
+    "task-9": {
+      "received": true,
+      "valid": true,
+      "format_error": null,
+      "plan": {
+        "theme": "system",
+        "palette": "gray",
+        "menuStyle": "solid",
+        "gridDensity": "comfortable",
+        "interactions": {
+          "contextMenu": true,
+          "resize": true,
+          "dragReorder": true,
+          "edit": true,
+          "copyPaste": true,
+          "filterSort": true,
+          "rectangleSelection": true
+        }
+      },
+      "pages": {
+        "original": "4c87b4f3003a80490ac17e3f41f3119b3ab103dfcd7df923910979e961c59938",
+        "plain-1": "5ab56db1232cefbf4d2852f2148d22a262734454146368023c74cda710b509f2",
+        "contract-1": "9848d9fc04cc1bb660528bf911e944938a11ce22dd9438cbbb872f2daf149736",
+        "plain-2": "3cd504f737405707f36c5eecf24424b66a28a54e33345304064c427cb92f2321",
+        "contract-2": "c5eb66f7ffbf47b33cc55c3ce0953ca7123b55e6aa71434c1c285551621b4006"
+      },
+      "input_tokens": 1676,
+      "output_tokens": 73,
+      "passed": {
+        "original": false,
+        "plain-1": false,
+        "contract-1": false,
+        "plain-2": false,
+        "contract-2": false
+      }
+    },
+    "task-10": {
+      "received": true,
+      "valid": true,
+      "format_error": null,
+      "plan": {
+        "theme": "system",
+        "palette": "gray",
+        "menuStyle": "solid",
+        "gridDensity": "comfortable",
+        "interactions": {
+          "contextMenu": true,
+          "resize": true,
+          "dragReorder": true,
+          "edit": true,
+          "copyPaste": true,
+          "filterSort": true,
+          "rectangleSelection": true
+        }
+      },
+      "pages": {
+        "original": "4c87b4f3003a80490ac17e3f41f3119b3ab103dfcd7df923910979e961c59938",
+        "plain-1": "5ab56db1232cefbf4d2852f2148d22a262734454146368023c74cda710b509f2",
+        "contract-1": "9848d9fc04cc1bb660528bf911e944938a11ce22dd9438cbbb872f2daf149736",
+        "plain-2": "3cd504f737405707f36c5eecf24424b66a28a54e33345304064c427cb92f2321",
+        "contract-2": "c5eb66f7ffbf47b33cc55c3ce0953ca7123b55e6aa71434c1c285551621b4006"
+      },
+      "input_tokens": 1721,
+      "output_tokens": 73,
+      "passed": {
+        "original": false,
+        "plain-1": true,
+        "contract-1": true,
+        "plain-2": true,
+        "contract-2": true
+      }
+    },
+    "task-11": {
+      "received": true,
+      "valid": false,
+      "format_error": "$: unknown keys ['plan_schema'], missing keys []",
+      "plan": null,
+      "pages": {},
+      "input_tokens": 1760,
+      "output_tokens": 76,
+      "passed": {
+        "original": false,
+        "plain-1": false,
+        "contract-1": false,
+        "plain-2": false,
+        "contract-2": false
+      }
+    },
+    "task-12": {
+      "received": true,
+      "valid": true,
+      "format_error": null,
+      "plan": {
+        "theme": "system",
+        "palette": "gray",
+        "menuStyle": "solid",
+        "gridDensity": "comfortable",
+        "interactions": {
+          "contextMenu": true,
+          "resize": true,
+          "dragReorder": true,
+          "edit": true,
+          "copyPaste": true,
+          "filterSort": true,
+          "rectangleSelection": true
+        }
+      },
+      "pages": {
+        "original": "4c87b4f3003a80490ac17e3f41f3119b3ab103dfcd7df923910979e961c59938",
+        "plain-1": "5ab56db1232cefbf4d2852f2148d22a262734454146368023c74cda710b509f2",
+        "contract-1": "9848d9fc04cc1bb660528bf911e944938a11ce22dd9438cbbb872f2daf149736",
+        "plain-2": "3cd504f737405707f36c5eecf24424b66a28a54e33345304064c427cb92f2321",
+        "contract-2": "c5eb66f7ffbf47b33cc55c3ce0953ca7123b55e6aa71434c1c285551621b4006"
+      },
+      "input_tokens": 1798,
+      "output_tokens": 73,
+      "passed": {
+        "original": true,
+        "plain-1": true,
+        "contract-1": true,
+        "plain-2": true,
+        "contract-2": true
+      }
+    },
+    "task-13": {
+      "received": true,
+      "valid": true,
+      "format_error": null,
+      "plan": {
+        "theme": "light",
+        "palette": "gray",
+        "menuStyle": "solid",
+        "gridDensity": "compact",
+        "interactions": {
+          "contextMenu": true,
+          "resize": true,
+          "dragReorder": true,
+          "edit": true,
+          "copyPaste": true,
+          "filterSort": true,
+          "rectangleSelection": true
+        }
+      },
+      "pages": {
+        "original": "8cd28ec430e37e45d2f8f4cee9d93c14a0b7d4cd32901a47a5a2aebe0e65472c",
+        "plain-1": "0a89c04e9e5d8cb84c239f9098593dcf0fff2d5f60f3005a68d88437d38c77a4",
+        "contract-1": "f99498363bd649c95a71576e7dc58409e1cc869d9cefc93bd15f30fbe9298550",
+        "plain-2": "ea71fa19f5574a6e364eeb92843eb44cd31351ac65e407f400978719261243c9",
+        "contract-2": "504d5b7625c4e5b105162fab5a62e490990c6a92a101ce27ef8295f8efa8f356"
+      },
+      "input_tokens": 1842,
+      "output_tokens": 72,
+      "passed": {
+        "original": false,
+        "plain-1": true,
+        "contract-1": true,
+        "plain-2": true,
+        "contract-2": true
+      }
+    },
+    "task-14": {
+      "received": true,
+      "valid": true,
+      "format_error": null,
+      "plan": {
+        "theme": "light",
+        "palette": "gray",
+        "menuStyle": "solid",
+        "gridDensity": "compact",
+        "interactions": {
+          "contextMenu": true,
+          "resize": true,
+          "dragReorder": true,
+          "edit": true,
+          "copyPaste": true,
+          "filterSort": true,
+          "rectangleSelection": true
+        }
+      },
+      "pages": {
+        "original": "8cd28ec430e37e45d2f8f4cee9d93c14a0b7d4cd32901a47a5a2aebe0e65472c",
+        "plain-1": "0a89c04e9e5d8cb84c239f9098593dcf0fff2d5f60f3005a68d88437d38c77a4",
+        "contract-1": "f99498363bd649c95a71576e7dc58409e1cc869d9cefc93bd15f30fbe9298550",
+        "plain-2": "ea71fa19f5574a6e364eeb92843eb44cd31351ac65e407f400978719261243c9",
+        "contract-2": "504d5b7625c4e5b105162fab5a62e490990c6a92a101ce27ef8295f8efa8f356"
+      },
+      "input_tokens": 1883,
+      "output_tokens": 72,
+      "passed": {
+        "original": false,
+        "plain-1": true,
+        "contract-1": true,
+        "plain-2": true,
+        "contract-2": true
+      }
+    },
+    "task-15": {
+      "received": true,
+      "valid": false,
+      "format_error": "$: unknown keys ['plan_schema'], missing keys []",
+      "plan": null,
+      "pages": {},
+      "input_tokens": 1931,
+      "output_tokens": 76,
+      "passed": {
+        "original": false,
+        "plain-1": false,
+        "contract-1": false,
+        "plain-2": false,
+        "contract-2": false
+      }
+    },
+    "task-16": {
+      "received": true,
+      "valid": true,
+      "format_error": null,
+      "plan": {
+        "theme": "light",
+        "palette": "gray",
+        "menuStyle": "solid",
+        "gridDensity": "compact",
+        "interactions": {
+          "contextMenu": true,
+          "resize": true,
+          "dragReorder": true,
+          "edit": true,
+          "copyPaste": true,
+          "filterSort": true,
+          "rectangleSelection": true
+        }
+      },
+      "pages": {
+        "original": "8cd28ec430e37e45d2f8f4cee9d93c14a0b7d4cd32901a47a5a2aebe0e65472c",
+        "plain-1": "0a89c04e9e5d8cb84c239f9098593dcf0fff2d5f60f3005a68d88437d38c77a4",
+        "contract-1": "f99498363bd649c95a71576e7dc58409e1cc869d9cefc93bd15f30fbe9298550",
+        "plain-2": "ea71fa19f5574a6e364eeb92843eb44cd31351ac65e407f400978719261243c9",
+        "contract-2": "504d5b7625c4e5b105162fab5a62e490990c6a92a101ce27ef8295f8efa8f356"
+      },
+      "input_tokens": 1974,
+      "output_tokens": 72,
+      "passed": {
+        "original": false,
+        "plain-1": true,
+        "contract-1": true,
+        "plain-2": true,
+        "contract-2": true
+      }
+    },
+    "task-17": {
+      "received": true,
+      "valid": true,
+      "format_error": null,
+      "plan": {
+        "theme": "light",
+        "palette": "gray",
+        "menuStyle": "solid",
+        "gridDensity": "compact",
+        "interactions": {
+          "contextMenu": true,
+          "resize": true,
+          "dragReorder": true,
+          "edit": true,
+          "copyPaste": true,
+          "filterSort": true,
+          "rectangleSelection": true
+        }
+      },
+      "pages": {
+        "original": "8cd28ec430e37e45d2f8f4cee9d93c14a0b7d4cd32901a47a5a2aebe0e65472c",
+        "plain-1": "0a89c04e9e5d8cb84c239f9098593dcf0fff2d5f60f3005a68d88437d38c77a4",
+        "contract-1": "f99498363bd649c95a71576e7dc58409e1cc869d9cefc93bd15f30fbe9298550",
+        "plain-2": "ea71fa19f5574a6e364eeb92843eb44cd31351ac65e407f400978719261243c9",
+        "contract-2": "504d5b7625c4e5b105162fab5a62e490990c6a92a101ce27ef8295f8efa8f356"
+      },
+      "input_tokens": 2045,
+      "output_tokens": 72,
+      "passed": {
+        "original": false,
+        "plain-1": true,
+        "contract-1": true,
+        "plain-2": true,
+        "contract-2": true
+      }
+    },
+    "task-18": {
+      "received": true,
+      "valid": false,
+      "format_error": "$: unknown keys ['plan_schema'], missing keys []",
+      "plan": null,
+      "pages": {},
+      "input_tokens": 2097,
+      "output_tokens": 76,
+      "passed": {
+        "original": false,
+        "plain-1": false,
+        "contract-1": false,
+        "plain-2": false,
+        "contract-2": false
+      }
+    },
+    "task-19": {
+      "received": true,
+      "valid": false,
+      "format_error": "$: unknown keys ['plan_schema'], missing keys []",
+      "plan": null,
+      "pages": {},
+      "input_tokens": 2151,
+      "output_tokens": 76,
+      "passed": {
+        "original": false,
+        "plain-1": false,
+        "contract-1": false,
+        "plain-2": false,
+        "contract-2": false
+      }
+    },
+    "task-20": {
+      "received": true,
+      "valid": false,
+      "format_error": "$: unknown keys ['plan_schema'], missing keys []",
+      "plan": null,
+      "pages": {},
+      "input_tokens": 2211,
+      "output_tokens": 76,
+      "passed": {
+        "original": false,
+        "plain-1": false,
+        "contract-1": false,
+        "plain-2": false,
+        "contract-2": false
+      }
+    }
+  },
+  "fixed_control_report": "compatible-library-rebuild-20261123.json#fixed_documentation_example_1",
+  "score_manifest_sha256": "77d632ff7b9b7ab00cdd0390b58accf52beb1e1f297325115184a149b39d6c74",
+  "candidate_seal_sha256": "b8d44121a588586227df29ceb1816b0f47510e2634728b3c3061ca4dc52e661c",
+  "remote_planning_calls": 0
+}

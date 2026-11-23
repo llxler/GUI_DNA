@@ -1,0 +1,3293 @@
+{
+  "planner": "Qwen/Qwen2.5-0.5B-Instruct",
+  "registered_sha256": "997e53b96a4847ca138de85988b7a36170b0fc84a839d43fde9e3eb4c1fdb4b2",
+  "new_api_calls": 0,
+  "projects": [
+    {
+      "project": "table",
+      "groups": [
+        {
+          "builder": "openai/gpt-oss-120b",
+          "public_admission": {
+            "status": "build_failed",
+            "old_status": "build_failed",
+            "attempts": [
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/table/oss/attempt-1/response.json",
+                "sha256": "6a70f7a4a8eccea60669ddc4733895f9a9321c9895cba78d8476db35d279aa5b",
+                "admitted": false,
+                "reason": "Expected a unique lowercase semantic id and behavior"
+              },
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/table/oss/attempt-2/response.json",
+                "sha256": "f189dc017e4a598c10dd13c75aaebc0c488a185d4d3b86023fdf5029ec9da19f",
+                "admitted": false,
+                "reason": "Fragment anchor must occur exactly once in starter index.html"
+              }
+            ]
+          },
+          "plan_vs_direct": {
+            "planned": 20,
+            "paired": 20,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 20,
+            "same_valid_page": 0
+          },
+          "plan_vs_fixed": {
+            "planned": 20,
+            "paired": 20,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 20,
+            "same_valid_page": 0
+          }
+        },
+        {
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "public_admission": {
+            "status": "valid",
+            "old_status": "build_failed",
+            "attempts": [
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/table/mistral/attempt-1/response.json",
+                "sha256": "8abad6afe9a01a1107f44562adb7353648f40dd50fe57efd02ce5b3ec832ae20",
+                "canonicalized": [
+                  "context-menu",
+                  "cell-actions",
+                  "cell-navigation",
+                  "cell-editing",
+                  "cell-copy-paste",
+                  "cell-drag"
+                ],
+                "admitted": true
+              }
+            ]
+          },
+          "plan_vs_direct": {
+            "planned": 20,
+            "paired": 20,
+            "missing_tasks": [],
+            "plan_passed": 3,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 3,
+            "comparator_only": 0,
+            "neither": 17,
+            "same_valid_page": 0
+          },
+          "plan_vs_fixed": {
+            "planned": 20,
+            "paired": 20,
+            "missing_tasks": [],
+            "plan_passed": 3,
+            "comparator_passed": 3,
+            "both": 3,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 17,
+            "same_valid_page": 20
+          }
+        }
+      ],
+      "targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "seal_sha256": "1ce0f50837d026fb4a80170f7a565fbe620f19f6d690490ea692648d7a73891c",
+      "rows": [
+        {
+          "task": 1,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 2,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 3,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "03e765503889e1cf312b0ca7727691db0227fb48e399efd5dd371c6851d6e091"
+        },
+        {
+          "task": 4,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 5,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "732ee3adcbd7ed6cee6f18360553d9eb1bc85515dfb852ec4e9c8309003d0de9"
+        },
+        {
+          "task": 6,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "8e679ccc103eef6f82e344ff333ce7be9dafa26d70e37937028561effd4d32d3"
+        },
+        {
+          "task": 7,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "28b85872404b0c0e1d93d6d8e5444db211c9eb679cb0f70084644e247ddd297c"
+        },
+        {
+          "task": 8,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 9,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "17b5d92eaa92378c9ff13a6009761a836d2222cabcf7bf69df507573a3c2f482"
+        },
+        {
+          "task": 10,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b13e64d990f02a1be9e89f61dbc62f27d63e8966518b27bc06598a7492c230be"
+        },
+        {
+          "task": 11,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b9d0c91ab701b8d3571faf5726cf8ac44b27f5155f617a4a98ec18acf7f5043b"
+        },
+        {
+          "task": 12,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 13,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "45cb4c4192d72c6513b480e45a31cefb899554bcdbaa927d63e88a3b0b533ee9"
+        },
+        {
+          "task": 14,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 15,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c5951a49a72daec4b13a22c003157d40e4a78e024f121df0a72baa5c19cebf12"
+        },
+        {
+          "task": 16,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "18f745c11b68c7033e8aeba8fe65684f8b237a1bfed63e4183ac4f9832c2c8e8"
+        },
+        {
+          "task": 17,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0993b2033ea343e9fee819b803cd02863fe71567c7b093fee22926b0ec7fff42"
+        },
+        {
+          "task": 18,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e6730181c31d13b4c831ea2d4aa32c4115df1b676773ea26e1cd68acf9e56f03"
+        },
+        {
+          "task": 19,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 1,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 1,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 2,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 2,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 3,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 3,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 4,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 4,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 5,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 5,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 6,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 6,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 7,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 7,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 9,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 9,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 10,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 10,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 11,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 11,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 13,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 13,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 14,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 14,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 15,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 15,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 17,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 17,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 18,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 18,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 19,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 19,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 1,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "ede250ebe38803c28cd0158989b54adb95ae79e6c82b13926f0cc26adb788d0b"
+        },
+        {
+          "task": 1,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "ede250ebe38803c28cd0158989b54adb95ae79e6c82b13926f0cc26adb788d0b"
+        },
+        {
+          "task": 2,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "2936282a75cfe345174245b27edbf4cd78fd1b716ca0c24270f7fdc68ab8c38f"
+        },
+        {
+          "task": 2,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "2936282a75cfe345174245b27edbf4cd78fd1b716ca0c24270f7fdc68ab8c38f"
+        },
+        {
+          "task": 3,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "cc5b3f15d390a87620ce1524eb2e7a86a8356be334c100ea17e4bfd991703350"
+        },
+        {
+          "task": 3,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "cc5b3f15d390a87620ce1524eb2e7a86a8356be334c100ea17e4bfd991703350"
+        },
+        {
+          "task": 4,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "5e9ea4f6327d91b589743cea524e552e3bc1817b46c3fd6410efea1ba6741db9"
+        },
+        {
+          "task": 4,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "5e9ea4f6327d91b589743cea524e552e3bc1817b46c3fd6410efea1ba6741db9"
+        },
+        {
+          "task": 5,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "f005581a7e37f2d425e1a9580bd4f89a9da541a7a3e0791e7be0f9fa2195d3c2"
+        },
+        {
+          "task": 5,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "f005581a7e37f2d425e1a9580bd4f89a9da541a7a3e0791e7be0f9fa2195d3c2"
+        },
+        {
+          "task": 6,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ed06880a0336343c75a505c63f53d99b77abc3840ae7e17b0527550da22b4d87"
+        },
+        {
+          "task": 6,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ed06880a0336343c75a505c63f53d99b77abc3840ae7e17b0527550da22b4d87"
+        },
+        {
+          "task": 7,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "69c97577d9400077d071b8a990ddd751633b0cafa9809d2a957106b741b8cfac"
+        },
+        {
+          "task": 7,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "69c97577d9400077d071b8a990ddd751633b0cafa9809d2a957106b741b8cfac"
+        },
+        {
+          "task": 8,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d49c8bdecc39863ad7b6869a70cba2fb40335517fd1a741e6983540bd32cb627"
+        },
+        {
+          "task": 8,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d49c8bdecc39863ad7b6869a70cba2fb40335517fd1a741e6983540bd32cb627"
+        },
+        {
+          "task": 9,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "4f5df0301c9439d1a844be12a5c923f82f9cc6d02898a042f061dce966bdf33b"
+        },
+        {
+          "task": 9,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "4f5df0301c9439d1a844be12a5c923f82f9cc6d02898a042f061dce966bdf33b"
+        },
+        {
+          "task": 10,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "9b8aad38bb4d0edf10780c49703ba4af613a7631b56928577d2c0d818c53c596"
+        },
+        {
+          "task": 10,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "9b8aad38bb4d0edf10780c49703ba4af613a7631b56928577d2c0d818c53c596"
+        },
+        {
+          "task": 11,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ce33d42291d980f11a48f550994bbe2f740d316e0627dd9369ce206fe11cd56b"
+        },
+        {
+          "task": 11,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ce33d42291d980f11a48f550994bbe2f740d316e0627dd9369ce206fe11cd56b"
+        },
+        {
+          "task": 12,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "67b8d9c5a1a4914247897fa6cee0348918e0c4e5b34f6e452fea71c8fe619431"
+        },
+        {
+          "task": 12,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "67b8d9c5a1a4914247897fa6cee0348918e0c4e5b34f6e452fea71c8fe619431"
+        },
+        {
+          "task": 13,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "3a225c4b496683f3eae659a5b2184f24ebbd972d0cdb1a305f4086c1be42e543"
+        },
+        {
+          "task": 13,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "3a225c4b496683f3eae659a5b2184f24ebbd972d0cdb1a305f4086c1be42e543"
+        },
+        {
+          "task": 14,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "f39791efe6764fdf53bdd21caf1e716a233c49c72b152d67af59d17fbcb748d5"
+        },
+        {
+          "task": 14,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "f39791efe6764fdf53bdd21caf1e716a233c49c72b152d67af59d17fbcb748d5"
+        },
+        {
+          "task": 15,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "9378286017d19c6c7d35b1fb6ce9d249ea9c3b9482204025883cc7ed33eb08ad"
+        },
+        {
+          "task": 15,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "9378286017d19c6c7d35b1fb6ce9d249ea9c3b9482204025883cc7ed33eb08ad"
+        },
+        {
+          "task": 16,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d799b0fa108df6fd374461dc9fb473b2244ad8266276aec01a2ee0346e62cfdb"
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d799b0fa108df6fd374461dc9fb473b2244ad8266276aec01a2ee0346e62cfdb"
+        },
+        {
+          "task": 17,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ad86eeeca4f12b05094f5a8ed66c89d5a8922094ab9a46d63339055289ec4f96"
+        },
+        {
+          "task": 17,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ad86eeeca4f12b05094f5a8ed66c89d5a8922094ab9a46d63339055289ec4f96"
+        },
+        {
+          "task": 18,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ca73c5e80630433d0a614898fce33dbc254709f4c33f5b3d4b382619029a6bfd"
+        },
+        {
+          "task": 18,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ca73c5e80630433d0a614898fce33dbc254709f4c33f5b3d4b382619029a6bfd"
+        },
+        {
+          "task": 19,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b3b558a3fdaa9acb79241727cc2da24108c2bab831a7b5d54810adb58feaabde"
+        },
+        {
+          "task": 19,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b3b558a3fdaa9acb79241727cc2da24108c2bab831a7b5d54810adb58feaabde"
+        },
+        {
+          "task": 20,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "635605839104d315d1b414c7584124709c111c82de953ec50e9f06d2c33505a2"
+        },
+        {
+          "task": 20,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "635605839104d315d1b414c7584124709c111c82de953ec50e9f06d2c33505a2"
+        }
+      ]
+    },
+    {
+      "project": "svg-chart",
+      "groups": [
+        {
+          "builder": "openai/gpt-oss-120b",
+          "public_admission": {
+            "status": "build_failed",
+            "old_status": "build_failed",
+            "attempts": [
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/svg-chart/oss/attempt-1/response.json",
+                "sha256": "ee749e4d9a34f9f7e6eae6a562937b471d81e5e138515ba89b532cefa43b9b99",
+                "admitted": false,
+                "reason": "Expected a unique lowercase semantic id and behavior"
+              },
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/svg-chart/oss/attempt-2/response.json",
+                "sha256": "843e7229667b7ffe52cd5d38eafcd353738dc95d77524d85963bf018c445ccd7",
+                "admitted": false,
+                "reason": "Expected a unique lowercase semantic id and behavior"
+              }
+            ]
+          },
+          "plan_vs_direct": {
+            "planned": 20,
+            "paired": 20,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 1,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 1,
+            "neither": 19,
+            "same_valid_page": 0
+          },
+          "plan_vs_fixed": {
+            "planned": 20,
+            "paired": 20,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 20,
+            "same_valid_page": 0
+          }
+        },
+        {
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "public_admission": {
+            "status": "build_failed",
+            "old_status": "build_failed",
+            "attempts": [
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/svg-chart/mistral/attempt-1/response.json",
+                "sha256": "63f77dd35a0a22c1d63d1614a94cc0cac5846fe22d405f4857cf9323ea9469da",
+                "admitted": false,
+                "reason": "Expected 1-6 semantic controls"
+              },
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/svg-chart/mistral/attempt-2/response.json",
+                "sha256": "a708a616ced5567f55f6be772e80620147ee276cfba7e11ea8d419fac20767f7",
+                "admitted": false,
+                "reason": "[\"TypeError: Cannot read properties of null (reading 'appendChild')\"]"
+              }
+            ]
+          },
+          "plan_vs_direct": {
+            "planned": 20,
+            "paired": 20,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 1,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 1,
+            "neither": 19,
+            "same_valid_page": 0
+          },
+          "plan_vs_fixed": {
+            "planned": 20,
+            "paired": 20,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 20,
+            "same_valid_page": 0
+          }
+        }
+      ],
+      "targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "seal_sha256": "3664ce5419a5ca90acd66ba1ecd612f463dae2b804943c1d2019096f129a0657",
+      "rows": [
+        {
+          "task": 1,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "957d2dd8ac9694e80b0b2393b00abc1b557491838831a14eef7f421b1afe9fbc"
+        },
+        {
+          "task": 2,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a4d170caebc69ecb73076fd0a3c8845ca1f230a60d93641e821c091a19e6d162"
+        },
+        {
+          "task": 3,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "faaa3545b8e5818506d1ac249c1b01f607fdf291d6fe11e2c2d4c58d998be981"
+        },
+        {
+          "task": 4,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b7f1d498ea5bec4e00419afc374626f7402f915a92d4285476dccf3b94272eb6"
+        },
+        {
+          "task": 5,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2c06bc0f7b4ae132c8772b952595939b9d046bd024a935bf1d63a40281b78972"
+        },
+        {
+          "task": 6,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "1fc1c9f662e84ab21234dbd908a152a1b8985b68c9a68eb72a1169a83f0373ef"
+        },
+        {
+          "task": 7,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "f3ec58c8486bc3993ee9783f07d11130b9067d04e1d29b9e2de3f66ee6a928f2"
+        },
+        {
+          "task": 8,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 9,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0675d4759eada0d1801a63b9e86e301e672ab659c90ffccf1249e1825d3e0c24"
+        },
+        {
+          "task": 10,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a1657f662df7c93466fd4e6308df53bfac4a41f0f1ae864d01799d4c3a08f40c"
+        },
+        {
+          "task": 11,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 13,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 14,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 15,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 17,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 18,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 19,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 1,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 1,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 2,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 2,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 3,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 3,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 4,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 4,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 5,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 5,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 6,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 6,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 7,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 7,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 9,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 9,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 10,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 10,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 11,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 11,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 13,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 13,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 14,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 14,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 15,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 15,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 17,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 17,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 18,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 18,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 19,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 19,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 1,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 1,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 2,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 2,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 3,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 3,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 4,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 4,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 5,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 5,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 6,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 6,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 7,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 7,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 9,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 9,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 10,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 10,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 11,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 11,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 13,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 13,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 14,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 14,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 15,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 15,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 17,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 17,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 18,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 18,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 19,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 19,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "plan",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "fixed",
+          "builder": "mistralai/mistral-small-3.2-24b-instruct",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        }
+      ]
+    },
+    {
+      "project": "dom1",
+      "groups": [
+        {
+          "builder": "openai/gpt-oss-120b",
+          "public_admission": {
+            "status": "valid",
+            "old_status": "build_failed",
+            "attempts": [
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/dom1/oss/attempt-1/response.json",
+                "sha256": "da16b0c53bc16e567cf0e0b326aa6514abf4d89eeb8c96727f4304e50fa3f9b1",
+                "admitted": false,
+                "reason": "[\"TypeError: Cannot read properties of null (reading 'addEventListener')\"]"
+              },
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/dom1/oss/attempt-2/response.json",
+                "sha256": "7b02732f3fd6e4d10dde85e1c265acdf30b815dc3769fa919293a30ce1eea493",
+                "canonicalized": [
+                  "resizable"
+                ],
+                "admitted": true
+              }
+            ]
+          },
+          "plan_vs_direct": {
+            "planned": 5,
+            "paired": 5,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 5,
+            "same_valid_page": 0
+          },
+          "plan_vs_fixed": {
+            "planned": 5,
+            "paired": 5,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 5,
+            "same_valid_page": 0
+          }
+        }
+      ],
+      "targets": [
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "seal_sha256": "76e011a7808e697160d3cc020d4ef65009dd8f380ee2555e3042f3a85d565e9b",
+      "rows": [
+        {
+          "task": 4,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 4,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b96e1720607de7e97347291579bf1e39724327ebf5c31049031f8a4cc3abccea"
+        },
+        {
+          "task": 4,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "4f145ee1ae898cb55cd0dbdc501e80a95011daa64c25ca67b9876756986329af"
+        },
+        {
+          "task": 8,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "20ff191d692028a6bfc6f946463ac18a11f6c307c5013b16974512bdf0672dd0"
+        },
+        {
+          "task": 8,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a27bdd48a6dd27b54780288133760c0d6c7db5383c366fe0afd56319e95d5a01"
+        },
+        {
+          "task": 12,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "df90572d7859a7809c794c74fab8bd235d0e33d03300faeae30a279f28980ffb"
+        },
+        {
+          "task": 12,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ba3126332c3da158f28c3a6127d3a9b1918e37f68cd36a9a9c4561d1f06d745d"
+        },
+        {
+          "task": 16,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "33ed32a3d339a685c0564893cd8a277db3f1a126487508180470622c8ff15dd6"
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "4dd26c795c32bcde66bbec2b2881cd539fe1cc826593f751afd335fb70e720ea"
+        },
+        {
+          "task": 20,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "7138d07c5c22af9ab57d463b49ac0325dc110cc01cb0eb24479ae5ef721aac0b"
+        },
+        {
+          "task": 20,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c7a1b7ffbc7420c4f007d52ec3e788de4089ab3cdafb318835441ab10823d810"
+        }
+      ]
+    },
+    {
+      "project": "form",
+      "groups": [
+        {
+          "builder": "openai/gpt-oss-120b",
+          "public_admission": {
+            "status": "build_failed",
+            "old_status": "build_failed",
+            "attempts": [
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/form/oss/attempt-1/response.json",
+                "sha256": "a3c1ea99f878106ba58a271647da16b3f3cacd897a8c0297d939b6c8089ed396",
+                "admitted": false,
+                "reason": "['SyntaxError: Cannot use import statement outside a module']"
+              },
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/form/oss/attempt-2/response.json",
+                "sha256": "aa9c7acac00be3617a6dc9df752d95241c81ee8129660dc8e83428e8b876f760",
+                "admitted": false,
+                "reason": "['SyntaxError: Cannot use import statement outside a module']"
+              }
+            ]
+          },
+          "plan_vs_direct": {
+            "planned": 5,
+            "paired": 5,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 5,
+            "same_valid_page": 0
+          },
+          "plan_vs_fixed": {
+            "planned": 5,
+            "paired": 5,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 5,
+            "same_valid_page": 0
+          }
+        }
+      ],
+      "targets": [
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "seal_sha256": "03bdcec76ad67b1874f422a22b24e3623055b4b6a8ce1c2a50640d41c8c6515e",
+      "rows": [
+        {
+          "task": 4,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "34be77742d098463e3b930944dea818ec2e2809f416c072e0ef2e234dec4340f"
+        },
+        {
+          "task": 8,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a671f5c13fd6b6eabf20d338a92c7294da40356ad4b9630d51c4e886762ec6cb"
+        },
+        {
+          "task": 4,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 4,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        }
+      ]
+    },
+    {
+      "project": "calculator",
+      "groups": [
+        {
+          "builder": "openai/gpt-oss-120b",
+          "public_admission": {
+            "status": "build_failed",
+            "old_status": "build_failed",
+            "attempts": [
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/calculator/oss/attempt-1/response.json",
+                "sha256": "6ac07f421d098938824cd0bcdec416c262903ab741b33771f984b11386c94fc0",
+                "admitted": false,
+                "reason": "[\"TypeError: Cannot read properties of null (reading 'addEventListener')\"]"
+              },
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/calculator/oss/attempt-2/response.json",
+                "sha256": "02040440d52c22a958faff8ac4b5f5f554f72f2c980d3ceb419e476d84f7098f",
+                "admitted": false,
+                "reason": "Fragment anchor must occur exactly once in starter index.html"
+              }
+            ]
+          },
+          "plan_vs_direct": {
+            "planned": 5,
+            "paired": 5,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 5,
+            "same_valid_page": 0
+          },
+          "plan_vs_fixed": {
+            "planned": 5,
+            "paired": 5,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 5,
+            "same_valid_page": 0
+          }
+        }
+      ],
+      "targets": [
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "seal_sha256": "b84fb55de57253a772665fda42ef6a77d230b6ef72d7ab78d2c34219e0478330",
+      "rows": [
+        {
+          "task": 4,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "de27a70ac14faebd46923ac9f74faee7dfa1264080d6b73c8e72cd57776e8adf"
+        },
+        {
+          "task": 12,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "134095d1c5c6ec42a7ef45ed8ff9a66b3e10bba17dd92b6c42e2e495b8e78489"
+        },
+        {
+          "task": 16,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 4,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 4,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        }
+      ]
+    },
+    {
+      "project": "bom",
+      "groups": [
+        {
+          "builder": "openai/gpt-oss-120b",
+          "public_admission": {
+            "status": "build_failed",
+            "old_status": "build_failed",
+            "attempts": [
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/bom/oss/attempt-1/response.json",
+                "sha256": "bf15fdc38b6024f85589b3f3be1e0c42168ee8d5e99c36f0be8868e8ef5b440c",
+                "admitted": false,
+                "reason": "index.html is assembled from the public starter"
+              },
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/bom/oss/attempt-2/response.json",
+                "sha256": "e67b47c1695cbebc0cf94494ece77132dc2dd61e389687c6ef709c035fbc2efa",
+                "admitted": false,
+                "reason": "index.html is assembled from the public starter"
+              }
+            ]
+          },
+          "plan_vs_direct": {
+            "planned": 5,
+            "paired": 5,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 5,
+            "same_valid_page": 0
+          },
+          "plan_vs_fixed": {
+            "planned": 5,
+            "paired": 5,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 5,
+            "same_valid_page": 0
+          }
+        }
+      ],
+      "targets": [
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "seal_sha256": "150f3de60f102d5a4cfdef32c043fb4a125872c90d1fef4b919bad7de7afec4a",
+      "rows": [
+        {
+          "task": 4,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "5d737d73d1749888f64b8040d94f787a7aefbe7d0c05dd87f4c5e902aef24030"
+        },
+        {
+          "task": 8,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 4,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 4,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        }
+      ]
+    },
+    {
+      "project": "draw",
+      "groups": [
+        {
+          "builder": "openai/gpt-oss-120b",
+          "public_admission": {
+            "status": "build_failed",
+            "old_status": "build_failed",
+            "attempts": [
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/draw/oss/attempt-1/response.json",
+                "sha256": "116eac84a24edeae666ca8b6635e9c0db403ec1f5b0754e953d08d6bf3f8a99d",
+                "admitted": false,
+                "reason": "Invalid control type/domain"
+              },
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/draw/oss/attempt-2/response.json",
+                "sha256": "27916f03a4d96ec7729ccbccf5a0ea045024c98ba6c05bc79971b6e46bc89693",
+                "admitted": false,
+                "reason": "Invalid enum value"
+              }
+            ]
+          },
+          "plan_vs_direct": {
+            "planned": 5,
+            "paired": 5,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 5,
+            "same_valid_page": 0
+          },
+          "plan_vs_fixed": {
+            "planned": 5,
+            "paired": 5,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 5,
+            "same_valid_page": 0
+          }
+        }
+      ],
+      "targets": [
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "seal_sha256": "afcfcd2d7052ffafb3ac570c4713539eeb0761914c0c8e64356868468a6d467e",
+      "rows": [
+        {
+          "task": 4,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 4,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 4,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        }
+      ]
+    },
+    {
+      "project": "canvas",
+      "groups": [
+        {
+          "builder": "openai/gpt-oss-120b",
+          "public_admission": {
+            "status": "build_failed",
+            "old_status": "build_failed",
+            "attempts": [
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/canvas/oss/attempt-1/response.json",
+                "sha256": "60e7f68f4cbabdae2921c303c5899d4df602d1fd75e0f0eb55a3d4ae3fa4c907",
+                "admitted": false,
+                "reason": "Expected a unique lowercase semantic id and behavior"
+              },
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/canvas/oss/attempt-2/response.json",
+                "sha256": "151855fc0cbc468385aa6d232c573ea0973c0da1c48a1381719c65b979fb0306",
+                "admitted": false,
+                "reason": "Invalid enum value"
+              }
+            ]
+          },
+          "plan_vs_direct": {
+            "planned": 5,
+            "paired": 5,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 5,
+            "same_valid_page": 0
+          },
+          "plan_vs_fixed": {
+            "planned": 5,
+            "paired": 5,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 5,
+            "same_valid_page": 0
+          }
+        }
+      ],
+      "targets": [
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "seal_sha256": "84031a9a6648dad3cf24082026897d60460512d717d0c616b827233749f42766",
+      "rows": [
+        {
+          "task": 4,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 4,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 4,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        }
+      ]
+    },
+    {
+      "project": "flex",
+      "groups": [
+        {
+          "builder": "openai/gpt-oss-120b",
+          "public_admission": {
+            "status": "valid",
+            "old_status": "build_failed",
+            "attempts": [
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/flex/oss/attempt-1/response.json",
+                "sha256": "732bf7547aa8ef3625c35815e9293a5509f385a94c466761de2d380afbc97eb0",
+                "admitted": false,
+                "reason": "Expected 1-6 semantic controls"
+              },
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/flex/oss/attempt-2/response.json",
+                "sha256": "4ed25964e727a2de4129c91466534d8d83ff2ffdcc9984f8e2b52428d828d674",
+                "canonicalized": [
+                  "leftbar-visible",
+                  "rightbar-visible"
+                ],
+                "admitted": true
+              }
+            ]
+          },
+          "plan_vs_direct": {
+            "planned": 5,
+            "paired": 5,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 5,
+            "same_valid_page": 0
+          },
+          "plan_vs_fixed": {
+            "planned": 5,
+            "paired": 5,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 5,
+            "same_valid_page": 0
+          }
+        }
+      ],
+      "targets": [
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "seal_sha256": "c85f1945fc8dbda56752209db229dcc13586ea867ce04a6414d3d560d14ac8fb",
+      "rows": [
+        {
+          "task": 4,
+          "arm": "direct",
+          "builder": null,
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "cae256917d58d4bc90d68bd843e8de357e82b9273fc8f4226b71cc548fa4f4cd"
+        },
+        {
+          "task": 8,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 4,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "bdc265c8cddb7ca44348cad8bbce6f3a94623e424d651e2e0bbf9e0a62878494"
+        },
+        {
+          "task": 4,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "32b613545189a691caf2fed17e5f2f211a712e5c1659fcf7c715e10b282b83ac"
+        },
+        {
+          "task": 8,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d4f64446831de1976d4f360671ebd0957962ecf05161a44c0bcb72a797ede7c4"
+        },
+        {
+          "task": 8,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "4f202fe74e63d8dd8b5cff4c794c610c61a2afd7266122baf9d7d8f032eedd00"
+        },
+        {
+          "task": 12,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "855f92815c914335b6c4651d1766e614c85fcad97eb468f1c14e37c420685407"
+        },
+        {
+          "task": 12,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d4bad3d35a6689d0c7add20c306765f9bfed529214b040941303f55df720d582"
+        },
+        {
+          "task": 16,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "89632da77c1421a85ff02be7c06ed6d7e7a2e6399ea9480791091dfa7aa552ee"
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b6e039be5fd7cd181f43504856023747f36b290a33af5f106e76663725c2ac12"
+        },
+        {
+          "task": 20,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "8fe870622e2e5a96210323cb7a3efbeb144f13b810309e4f54bf5205191ab87b"
+        },
+        {
+          "task": 20,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "fcd3cc18fbf09c3280337daf69cea5d428e9d1106db3301ce3b2bac1eb15fbaa"
+        }
+      ]
+    },
+    {
+      "project": "expression-editor",
+      "groups": [
+        {
+          "builder": "openai/gpt-oss-120b",
+          "public_admission": {
+            "status": "build_failed",
+            "old_status": "build_failed",
+            "attempts": [
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/expression-editor/oss/attempt-1/response.json",
+                "sha256": "8c388f3f7e71ce60da8826d0965c92391d18797702ffea6aebeb27bb2cdcf40d",
+                "admitted": false,
+                "reason": "Fragment anchor must occur exactly once in starter index.html"
+              },
+              {
+                "response": "artifacts/public-library-transfer-open-20261123/builds/expression-editor/oss/attempt-2/response.json",
+                "sha256": "ff8a5a17d56959bb64d3ee2992cb424cd7f2c9554c4599bc0f58866c8107528e",
+                "admitted": false,
+                "reason": "Fragment anchor must occur exactly once in starter index.html"
+              }
+            ]
+          },
+          "plan_vs_direct": {
+            "planned": 5,
+            "paired": 5,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 5,
+            "same_valid_page": 0
+          },
+          "plan_vs_fixed": {
+            "planned": 5,
+            "paired": 5,
+            "missing_tasks": [],
+            "plan_passed": 0,
+            "comparator_passed": 0,
+            "both": 0,
+            "plan_only": 0,
+            "comparator_only": 0,
+            "neither": 5,
+            "same_valid_page": 0
+          }
+        }
+      ],
+      "targets": [
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "seal_sha256": "ee179e6ea6ddb8d82f1979b14650d6feef6e9effae9c3305eaa07982239a617f",
+      "rows": [
+        {
+          "task": 4,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "direct",
+          "builder": null,
+          "status": "invalid",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 4,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 4,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 8,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 12,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "plan",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        },
+        {
+          "task": 20,
+          "arm": "fixed",
+          "builder": "openai/gpt-oss-120b",
+          "status": "build_failed",
+          "passed": null,
+          "report_sha256": null
+        }
+      ]
+    }
+  ]
+}

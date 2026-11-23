@@ -1,6 +1,8 @@
-# Software Regression Tests
+# 工程回归测试
 
-本目录仅保存工程回归测试：协议边界、编译器、账本、导出器、结果重算及浏览器运行行为。研究实验位于 [`studies/`](../studies/README.md)。
+`tests/` 是 `pytest` 的默认测试目录，覆盖编译器、协议校验、预算账本、结果汇总和浏览器评分逻辑。论文研究及其正式实验结果从 [studies/](../studies/README.md) 查阅。
+
+以下命令在仓库根目录安装依赖并运行测试。
 
 ```bash
 uv sync --extra dev
@@ -8,4 +10,6 @@ uv run playwright install chromium
 uv run pytest -q
 ```
 
-部分测试需要 Chromium 和系统运行库。安装说明见根 README；测试成功不等于重新生成模型输出、复跑全部历史浏览器页面或完成论文复现。旧测试中的 `test.*` 导入通过兼容链接加载同一份研究源码，新增测试使用 `studies.*`。
+运行单个文件时可使用 `uv run pytest -q tests/test_protocol.py`。部分测试需要 Chromium 的系统运行库，具体环境见[复现说明](../docs/reproducibility.md)。
+
+根目录的 `test/` 指向 `studies/`，用于解析旧研究导入和冻结清单。新增工程用例放在 `tests/`，引用研究源码时使用 `studies.*`。

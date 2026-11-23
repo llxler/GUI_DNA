@@ -1,0 +1,655 @@
+{
+  "project": "expression-editor",
+  "preparation_scope": "All twenty public requirements and public starter",
+  "preparation_max_tokens": 32000,
+  "preparation_attempts_per_arm": 1,
+  "preparations": {
+    "ai": {
+      "received": false,
+      "valid": false,
+      "error": "HTTPStatusError: HTTP 402"
+    },
+    "direct": {
+      "received": true,
+      "valid": true,
+      "error": null
+    }
+  },
+  "builder": "openai/gpt-5",
+  "generator": "mistralai/mistral-small-3.2-24b-instruct",
+  "targets": {
+    "task-1": {
+      "ai": {
+        "first": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        },
+        "final": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        }
+      },
+      "direct": {
+        "first": {
+          "received": true,
+          "valid": true,
+          "passed": true,
+          "report_sha256": "27f7f48fa50c8a4ebde76bdce75ee428d0dd34a675749d353ff3bbafb5294ce8"
+        },
+        "final": {
+          "received": true,
+          "valid": true,
+          "passed": true,
+          "report_sha256": "27f7f48fa50c8a4ebde76bdce75ee428d0dd34a675749d353ff3bbafb5294ce8"
+        }
+      }
+    },
+    "task-2": {
+      "ai": {
+        "first": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        },
+        "final": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        }
+      },
+      "direct": {
+        "first": {
+          "received": true,
+          "valid": true,
+          "passed": true,
+          "report_sha256": "aa3e1fd388575c6573065103c87b0800f05f13c8c7764bea119a0077224a4bbd"
+        },
+        "final": {
+          "received": true,
+          "valid": true,
+          "passed": true,
+          "report_sha256": "aa3e1fd388575c6573065103c87b0800f05f13c8c7764bea119a0077224a4bbd"
+        }
+      }
+    },
+    "task-3": {
+      "ai": {
+        "first": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        },
+        "final": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        }
+      },
+      "direct": {
+        "first": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "6f8a24666501f9aa7ce2b69fb2a09b5a907607fea2a55ff62d9faec9c605b175"
+        },
+        "final": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "6f8a24666501f9aa7ce2b69fb2a09b5a907607fea2a55ff62d9faec9c605b175"
+        }
+      }
+    },
+    "task-4": {
+      "ai": {
+        "first": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        },
+        "final": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        }
+      },
+      "direct": {
+        "first": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "caba72e5437e3949866cfce3c1668489c639bb7daadc40b55a600b61c22ad375"
+        },
+        "final": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "caba72e5437e3949866cfce3c1668489c639bb7daadc40b55a600b61c22ad375"
+        }
+      }
+    },
+    "task-5": {
+      "ai": {
+        "first": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        },
+        "final": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        }
+      },
+      "direct": {
+        "first": {
+          "received": true,
+          "valid": true,
+          "passed": true,
+          "report_sha256": "88bcdf877b8423190e1313fdad8d17a27cd8a8ae53ac606d7296894a1bf63de3"
+        },
+        "final": {
+          "received": true,
+          "valid": true,
+          "passed": true,
+          "report_sha256": "88bcdf877b8423190e1313fdad8d17a27cd8a8ae53ac606d7296894a1bf63de3"
+        }
+      }
+    },
+    "task-6": {
+      "ai": {
+        "first": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        },
+        "final": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        }
+      },
+      "direct": {
+        "first": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "ddde2c66d26d42d4b0e177a25952e605a8aba0806a70ba5149b24e125be24509"
+        },
+        "final": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "ddde2c66d26d42d4b0e177a25952e605a8aba0806a70ba5149b24e125be24509"
+        }
+      }
+    },
+    "task-7": {
+      "ai": {
+        "first": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        },
+        "final": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        }
+      },
+      "direct": {
+        "first": {
+          "received": true,
+          "valid": false,
+          "passed": false
+        },
+        "final": {
+          "received": true,
+          "valid": false,
+          "passed": false
+        }
+      }
+    },
+    "task-8": {
+      "ai": {
+        "first": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        },
+        "final": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        }
+      },
+      "direct": {
+        "first": {
+          "received": true,
+          "valid": false,
+          "passed": false
+        },
+        "final": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "3a787cbeecc9ef8ed57d36c4a98f32ce4ea347c53a815eb51f5e3400354db32a"
+        }
+      }
+    },
+    "task-9": {
+      "ai": {
+        "first": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        },
+        "final": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        }
+      },
+      "direct": {
+        "first": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "da647703cabf43799ed685da273c8603acc62f48e578b7b48d28b635129a6bfa"
+        },
+        "final": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "da647703cabf43799ed685da273c8603acc62f48e578b7b48d28b635129a6bfa"
+        }
+      }
+    },
+    "task-10": {
+      "ai": {
+        "first": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        },
+        "final": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        }
+      },
+      "direct": {
+        "first": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "b0b8ac93b33e430f973c7f17a78535c7076ce61f0ce9a38b9d5d5165839e6c5b"
+        },
+        "final": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "b0b8ac93b33e430f973c7f17a78535c7076ce61f0ce9a38b9d5d5165839e6c5b"
+        }
+      }
+    },
+    "task-11": {
+      "ai": {
+        "first": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        },
+        "final": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        }
+      },
+      "direct": {
+        "first": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "0ef0108e4bd36f6885291d83a0a541525189cd857583c93a0900c3e35799f9a4"
+        },
+        "final": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "0ef0108e4bd36f6885291d83a0a541525189cd857583c93a0900c3e35799f9a4"
+        }
+      }
+    },
+    "task-12": {
+      "ai": {
+        "first": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        },
+        "final": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        }
+      },
+      "direct": {
+        "first": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "0751c1c462172a53fee864e76bb5ee993c0be3ecf2f5fb764a3536a50ac5defd"
+        },
+        "final": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "0751c1c462172a53fee864e76bb5ee993c0be3ecf2f5fb764a3536a50ac5defd"
+        }
+      }
+    },
+    "task-13": {
+      "ai": {
+        "first": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        },
+        "final": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        }
+      },
+      "direct": {
+        "first": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "e212db1c091b59c5d38b64b2a80b24362b65212766af673bf44dcca899f24878"
+        },
+        "final": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "e212db1c091b59c5d38b64b2a80b24362b65212766af673bf44dcca899f24878"
+        }
+      }
+    },
+    "task-14": {
+      "ai": {
+        "first": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        },
+        "final": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        }
+      },
+      "direct": {
+        "first": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "ae7ec3f80abffab64c403207cb0f81f38cb1dd81775eab31fd0c206c9762a3e3"
+        },
+        "final": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "ae7ec3f80abffab64c403207cb0f81f38cb1dd81775eab31fd0c206c9762a3e3"
+        }
+      }
+    },
+    "task-15": {
+      "ai": {
+        "first": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        },
+        "final": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        }
+      },
+      "direct": {
+        "first": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "e53b419f08c67ad595b93b947ae3974635becb331f58a4ced4ffd4f5310e7b6e"
+        },
+        "final": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "e53b419f08c67ad595b93b947ae3974635becb331f58a4ced4ffd4f5310e7b6e"
+        }
+      }
+    },
+    "task-16": {
+      "ai": {
+        "first": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        },
+        "final": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        }
+      },
+      "direct": {
+        "first": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "df90e8dc139471c760d87674a41c5a761c626d1a5976b97b90a7ce73e2f330ea"
+        },
+        "final": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "df90e8dc139471c760d87674a41c5a761c626d1a5976b97b90a7ce73e2f330ea"
+        }
+      }
+    },
+    "task-17": {
+      "ai": {
+        "first": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        },
+        "final": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        }
+      },
+      "direct": {
+        "first": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "4aa09a8bbfb686806e6ac65799702ab17b3244efed6f7af23cfb1859bff8347a"
+        },
+        "final": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "4aa09a8bbfb686806e6ac65799702ab17b3244efed6f7af23cfb1859bff8347a"
+        }
+      }
+    },
+    "task-18": {
+      "ai": {
+        "first": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        },
+        "final": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        }
+      },
+      "direct": {
+        "first": {
+          "received": true,
+          "valid": false,
+          "passed": false
+        },
+        "final": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "945e7ab2209bf1fab12ab14b2b2741992c3ece80803bc14b90d34f5d6bb093b9"
+        }
+      }
+    },
+    "task-19": {
+      "ai": {
+        "first": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        },
+        "final": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        }
+      },
+      "direct": {
+        "first": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "378b191758fab7ba312220e1ca6f2b52f998e0ac1a6fe0591716e5be4fed3ecf"
+        },
+        "final": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "378b191758fab7ba312220e1ca6f2b52f998e0ac1a6fe0591716e5be4fed3ecf"
+        }
+      }
+    },
+    "task-20": {
+      "ai": {
+        "first": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        },
+        "final": {
+          "received": false,
+          "valid": false,
+          "passed": null
+        }
+      },
+      "direct": {
+        "first": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "8904b06e5e0e5fdf4b1ff7884373861c9a77269d64de433b341f76a81057cf32"
+        },
+        "final": {
+          "received": true,
+          "valid": true,
+          "passed": false,
+          "report_sha256": "8904b06e5e0e5fdf4b1ff7884373861c9a77269d64de433b341f76a81057cf32"
+        }
+      }
+    }
+  },
+  "summaries": {
+    "first": {
+      "common": [],
+      "passed": {
+        "ai": 0,
+        "direct": 0
+      },
+      "all_observed": {
+        "ai": 0,
+        "direct": 20
+      },
+      "all_passed": {
+        "ai": 0,
+        "direct": 3
+      }
+    },
+    "final": {
+      "common": [],
+      "passed": {
+        "ai": 0,
+        "direct": 0
+      },
+      "all_observed": {
+        "ai": 0,
+        "direct": 20
+      },
+      "all_passed": {
+        "ai": 0,
+        "direct": 3
+      }
+    }
+  },
+  "fixed_ai_example": {},
+  "billing": {
+    "ai": {
+      "preparation": {
+        "calls": 1,
+        "settled_usd": 0.0,
+        "exposure_usd": 0.347133
+      },
+      "target": {
+        "calls": 0,
+        "settled_usd": 0.0,
+        "exposure_usd": 0.0
+      }
+    },
+    "direct": {
+      "preparation": {
+        "calls": 1,
+        "settled_usd": 0.118907,
+        "exposure_usd": 0.118907
+      },
+      "target": {
+        "calls": 23,
+        "settled_usd": 0.035992,
+        "exposure_usd": 0.035992
+      }
+    }
+  },
+  "ledger": {
+    "calls": 25,
+    "settled_usd": 0.154899,
+    "exposure_usd": 0.502032,
+    "unsettled_calls": 1,
+    "cap_usd": 0.57,
+    "stop_usd": 0.57,
+    "halted": 0
+  },
+  "stage_sha256": {
+    "registration": "7851dfe49cdfb17a9dc6dcfc80e6d89deecf6d4a6253edf461d56b0d7152eb98",
+    "freeze": "aaa3196071704ea824ce75746a44968d79919691e1b53d976f530b720a35d12b",
+    "preparation-complete": "d029928e779687b1e0de668a218094fe4bb1deb7c99942d331daa9eec2c64653",
+    "planning-freeze": "8757def46bb06fba2251229243d2b37bccfa5989e3888acfa88b387683bd1309",
+    "generation-complete": "3f10415ffb4aa88629cdac9265722e7cf8750a8be143268c9c5c358984ea6d3e",
+    "scores-complete": "5773d9c4bafc923a9d01efadde8a9b51ccb11b09fce22039ccc5a12bf853cb20"
+  },
+  "parent_calibration": "e0923947dcac851bc366c5f88140d8635d69ae67f694a1d6e8c09198b857f3f6"
+}

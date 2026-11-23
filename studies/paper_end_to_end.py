@@ -12,6 +12,31 @@ import re
 from studies.end_to_end import ROOT, OUTPUT, reconstruct, sha
 
 PAPER = ROOT / "DNA_latex"
+SOURCE_TRIALS = ROOT / "studies/results/library-sources-20261121.json"
+FORM_REPAIR = ROOT / "studies/results/form-public-repair-20261121.json"
+NOVEMBER_RESULTS = {key: ROOT / "studies/results" / (name + "-20261123.json") for key, name in {
+    "chart": "svg-chart-interfaces", "table": "table-library-sources", "editor": "expression-editor-sources",
+    "flex_conflict": "flex-requirement-conflict", "chart_conflict": "svg-chart-requirement-conflict",
+    "fixture": "svg-chart-fixture", "react_calibration": "react-blog-calibration", "coverage": "webbench-coverage", "reuse_costs": "reuse-costs",
+    "editor_empty": "expression-editor-empty-plan", "unseen": "expression-editor-unseen",
+    "window": "expression-editor-window", "admission": "expression-editor-unseen-notes-admission",
+    "enumeration": "table-controller-enumeration", "selection": "table-controller-selection", "interface_examples": "expression-editor-interface-examples",
+    "chart_recovery": "svg-chart-library-refinement", "table_shell": "library-refinement-table",
+    "contract_preparation": "contract-library-table", "rebuilt": "compatible-library-rebuild",
+    "fresh_plans": "compatible-table-local-plans", "chart_backends": "compatible-chart-rebuild",
+    "chart_backend_fences": "compatible-chart-rebuild-fences", "local_chart": "svg-chart-compact-local",
+    "chart_local_comparison": "svg-chart-local-prompt-comparison", "chart_local_fences": "svg-chart-local-fences",
+    "public_controllers": "public-controller-table", "refinement_costs": "library-refinement-accounting",
+    "constrained_table": "schema-constrained-table",
+    "transfer_overview": "public-library-transfer-overview", "transfer_delivery": "public-library-transfer-delivery",
+    "transfer_remote": "public-library-transfer-remote", "transfer_milestones": "public-library-transfer-remote-milestones",
+    "transfer_archive_deployers": "public-library-transfer-historical-models",
+    "transfer_original_duo": "public-library-transfer-duo-original-sources",
+    "transfer_table_space": "public-library-transfer-table-space",
+    "transfer_extra": "public-library-transfer-extra", "transfer_holdout": "public-library-transfer-holdout",
+    "transfer_open": "public-library-transfer-open", "transfer_boolean": "public-library-transfer-boolean",
+    "transfer_prompt": "public-library-transfer-prompt", "transfer_public_checks": "public-library-transfer-duo-public-admission",
+    "drag": "draw-pointer-transition", "drag_length": "draw-pointer-length"}.items()}
 COHORTS = {"interface": "dom1 / form", "expansion": "calculator / table / bom", "draw": "draw (milestones)"}
 MODELS = {"openai/gpt-5": "GPT-5", "anthropic/claude-sonnet-4.5": "Claude Sonnet 4.5",
           "openai/gpt-oss-120b": "GPT-OSS-120B", "mistralai/mistral-small-3.2-24b-instruct": "Mistral Small"}
@@ -90,19 +115,194 @@ def render(data):
     columns = ["Direct", "GUI-DNA (GPT-5)", "GUI-DNA (Sonnet)"]
     rows = [[COHORTS[c], *builder_cells(value["by_builder"], endpoint)]
             for c, value in data["cohorts"].items() for endpoint in ("current",)]
-    main = table("tab:endtoend", "Current-task Web-Bench results separated by library builder. The two GUI-DNA columns identify GPT-5-built and Claude-Sonnet-4.5-built libraries, not target generators. Each row uses identical target keys and denominators. Direct is one shared no-library baseline, shown once; it is not an additional sample for each library. Cells are final passes / candidates (percent). Target generators are pooled within each explicitly named study; their separate results appear in Appendix~\\ref{app:details}. Construction adds information and compute (Section~\\ref{sec:setup}).", ["Study", *columns], rows, wide=True)
+    replay = json.loads((ROOT / "studies/results/primary-replay.json").read_text())
+    supplied = []
+    for suite in replay["suites"]:
+        is_dom = suite["suite"] == "webbench"
+        counts = [model["counts"] for model in suite["models"]
+                  if not (is_dom and model["model"] == "google/gemma-3-12b-it")]
+        scores = []
+        for method in ("free", "dna"):
+            passed = sum(row[method]["final_all"] for row in counts)
+            total = sum(row[method]["n"] for row in counts)
+            scores.append(cell({"passed": passed, "total": total, "rate_percent": 100 * passed / total}))
+        supplied.append(["dom1 (supplied)" if is_dom else "TodoMVC (supplied)", *scores, "---", "---"])
+    trials = json.loads(SOURCE_TRIALS.read_text())
+    paired_rows = []
+    for project, study in trials.items():
+        arms = ("direct", "reference", "ai")
+        paired = [str(n) for n in study["targets"]
+                  if all(study["cells"][arm][str(n)]["passed"] is not None for arm in arms)]
+        scores = []
+        for arm in arms:
+            passed = sum(study["cells"][arm][n]["passed"] for n in paired)
+            scores.append(cell({"passed": passed, "total": len(paired), "rate_percent": 100 * passed / len(paired)})
+                          if paired else "---")
+        paired_rows.append([project + " (paired)", *scores, "---"])
+    today = {k: json.loads(v.read_text()) for k, v in NOVEMBER_RESULTS.items()}
+    arms = ("direct", "reference", "ai")
+
+    def workflow_row(label, observations):
+        available = [a for a in arms if any(r[a] is not None for r in observations.values())]
+        keys = ([k for k in observations if all(observations[k][a] is not None for a in available)]
+                if len(available) >= 2 else [])
+        return [label, *(f"{sum(observations[k][a] for k in keys)}/{len(keys)}"
+                         if keys and a in available else "---" for a in arms)]
+
+    def staged(study, stage):
+        return {k: {a: row[a][stage]["passed"] for a in arms} for k, row in study["targets"].items()}
+
+    chart = today["chart"]
+    chart_cells = {n: {a: chart["cells"]["reference_typed" if a == "reference" else a][str(n)]["passed"]
+                       for a in arms} for n in chart["targets"]}
+    source_rows = [workflow_row("Table editor", staged(today["table"], "first")),
+                   workflow_row("SVG charts (typed guide)", chart_cells),
+                   workflow_row("Expression editor (prepared)", staged(today["editor"], "first"))]
+    main = table("tab:endtoend",
+                 "Current official files passed. Within each row all displayed fractions share exactly the same observed targets. The supplied-library studies retain their original final-output and sampling protocols. The lower three rows compare the first Mistral responses available for the named workflows. The editor's direct workflow has its own GPT-5 preparation notes. The three-way editor intersection is empty after failed GPT-5 preparation. Its two displayed workflows share nine first responses. Dashes indicate missing comparisons.",
+                 ["Project / protocol", "No library", "Human library + DNA", "GPT-5 library + DNA"],
+                 [[r[0], *(x.split(" (")[0] for x in r[1:3]), "---"] for r in supplied] + source_rows, wide=True)
     appendix = [r"\section{Detailed End-to-End Results}", r"\label{app:details}",
-                "Library builders remain separate in every comparison. The shared direct baseline appears once per row. Generator and project breakdowns retain the same target keys for all three columns; no best-library selection or independent replication of shared baselines is performed."]
+                "Library builders remain separate in every comparison. The shared direct baseline appears once per row. Each row uses only its own generator and target protocol."]
+    appendix.append(table("tab:previous-workflows", "Earlier three-workflow pilots and retrospective AI-only studies. Entries are current files passed / jointly observed targets (percent). The direct comparator for the original SVG milestones had to return a complete file map. Builders share one direct comparator in each retrospective row.",
+                          ["Study", "No library", "Human + DNA", "GPT-5 + DNA", "Sonnet + DNA"],
+                          paired_rows + [[study, direct, "---", gpt, sonnet] for study, direct, gpt, sonnet in rows], wide=True))
+    sensitivity_rows = [workflow_row("Table editor, one repair", staged(today["table"], "after_public_repair")),
+                        workflow_row("Editor, one repair", staged(today["editor"], "after_public_repair")),
+                        workflow_row("Charts, asset test excluded", {n: chart_cells[n] for n in chart["blank_discriminating"]["tasks"]})]
+    appendix.append(table("tab:new-source-sensitivity", "Each row uses its own common observed targets. Repairs use only public validation feedback. The chart row removes the predeclared file passed by the blank control after calibration and before generation.",
+                          ["Protocol", "Direct", "Human", "GPT-5"], sensitivity_rows))
     rows = [[p, *builder_cells(groups, endpoint)] for value in data["cohorts"].values()
             for p, groups in value["by_project_builder"].items() for endpoint in ("current",)]
     appendix.append(table("tab:endtoend-project", "Per-project results, with library builders in separate columns. Target generators are pooled only within each project. Draw uses five milestones; the other studies use all twenty prefixes.", ["Project", *columns], rows))
     names = {"interface":"dom1/form", "expansion":"Three-project", "draw":"draw"}
-    rows = [[names[c], MODELS[model], *builder_cells(groups, endpoint)]
-            for c, value in data["cohorts"].items() for model, groups in value["by_generator_builder"].items()
-            for endpoint in ("current",)]
+    generators = sorted({model for cohort in data["cohorts"].values() for model in cohort["by_generator_builder"]})
+    rows = []
+    for cohort, value in data["cohorts"].items():
+        for model in generators:
+            groups = value["by_generator_builder"].get(model)
+            scores = builder_cells(groups, "current") if groups else ["---"] * 3
+            rows.append([names[cohort], MODELS[model], *scores])
     appendix.append(table("tab:endtoend-generator", "Separate target-generator and library-builder results. Three-project denotes calculator/table/bom; projects remain pooled within that row, and individual project results appear above. The header's model names identify library builders; the Generator column identifies the model producing target code or plans.", ["Study", "Generator", *columns], rows, spec="llrrr"))
-    appendix += [r"\clearpage", r"\section{Construction and Generation Accounting}", r"\label{app:cost}",
+    # Keep absent generators visible across the two supplied-library protocols.
+    model_scores = {}
+    for suite in replay["suites"]:
+        for record in suite["models"]:
+            model = record["model"]
+            scores = model_scores.setdefault(model, {})
+            if suite["suite"] == "webbench" and model == "google/gemma-3-12b-it":
+                continue
+            counts = record["counts"]
+            scores[suite["suite"]] = [f"{counts[m]['final_all']}/{counts[m]['n']}" for m in ("free", "dna")]
+    rows = [[model.split("/")[-1], *scores.get("todomvc", ["---"] * 2),
+             *scores.get("webbench", ["---"] * 2)] for model, scores in sorted(model_scores.items())]
+    appendix.append(table("tab:supplied-models", "Supplied libraries by target generator. Each pair shows no library and human-library assembly. Dashes mark absent or excluded observations; the seven-model dom1 analysis excludes Gemma uniformly.",
+                          ["Generator", "Todo direct", "Todo DNA", "dom1 direct", "dom1 DNA"], rows))
+    rows = []
+    for project, study in trials.items():
+        for arm, name in (("reference", "Human + DNA"), ("ai", "GPT-5 + DNA"), ("direct", "No library")):
+            entries = list(study["cells"][arm].values())
+            rows.append([project, name, str(len(entries)), str(sum(e["passed"] is None for e in entries)),
+                         str(sum(e["status"] == "invalid_output" for e in entries)),
+                         str(sum(e["passed"] is True for e in entries))])
+    appendix.append(table("tab:three-arm-coverage", "All scheduled positions in the single-response Mistral comparisons. Invalid counts format and compile failures. Missing responses have unknown outcomes. The main table uses matched observations; passes here count every observed position.",
+                          ["Project", "Workflow", "Planned", "Missing", "Invalid", "Passed"], rows))
+    enum = today["enumeration"]
+    assert enum["uniform"]["settled_positions"] == 64 * 20
+    fraction_rows = []
+    for offset in range(1, 6):
+        cells = []
+        for start in (0, 5, 10, 15):
+            target = start + offset
+            values = enum["targets"][f"task-{target}"]
+            assert values["observed"] == values["possible"] == 64
+            cells.extend([str(target), f"{values['passing']}/64"])
+        fraction_rows.append(cells)
+    appendix.append(r"The table-editor interface has six independent enable/disable choices. For a current file $k$ and controller subset $m$, let $A_k(m)$ denote its binary official score. The exact expected number of files passed by uniform choices is $\sum_{k=1}^{20}\sum_{m=1}^{64} A_k(m)/64$. Each setting has equal weight. Every cell uses one observed browser outcome, including hash-matched retained reports. The expectation is exact for this finite observed matrix. By linearity it also applies to one uniformly sampled configuration reused for all twenty files; the probability of passing every file can differ between these two sampling schemes.")
+    appendix.append(table("tab:table-random", "Exact probability that a uniform controller configuration passes each table-editor file. All 64 executable controller subsets were evaluated. A probability refers to configurations on one official current file. There were no new model requests.",
+                          ["Task", "Pass", "Task", "Pass", "Task", "Pass", "Task", "Pass"], fraction_rows, spec="rrrrrrrr"))
+    select = today["selection"]["summary"]
+    appendix.append(f"Matching checksums of the twenty first-response pages to the enumerated configurations recovers the exact model choices. "
+                    f"The planner enabled {select['chosen_bindings']} controller bindings in total "
+                    f"({select['mean_chosen']:.2f} per target). The smallest single configuration passing every file enabled "
+                    f"{select['smallest_perfect_fixed_cardinality']} per target. On {select['chosen_globally_minimal_on_current_file']} of twenty "
+                    "current files, the planner selected a minimum-cardinality passing configuration. "
+                    "All pages shipped the same implementation modules. These counts describe enabled bindings, without measuring runtime.")
+    drag, relative = today["drag"], today["drag_length"]
+    assert relative["primary_sha256"] == sha(NOVEMBER_RESULTS["drag"])
+    assert drag["settings"] == relative["settings"] == {"minimum length": 162}
+    abbreviations = {"release position": "E", "release displacement": "E", "minimum length": "L",
+                     "long control unavailable": "---"}
+    drag_rows = []
+    for model, generator_label in (("openai__gpt-5", "GPT-5"), ("openai__gpt-oss-120b", "GPT-OSS")):
+        for builder, workflow_name in (("direct", "No library"), ("openai__gpt-5", "GPT-5 library"),
+                                       ("anthropic__claude-sonnet-4.5", "Claude library")):
+            group_key = model + "/" + builder
+            observations = [arm["pairs"][group_key][k] for arm in (drag, relative) for k in ("task_8", "task_12")]
+            drag_rows.append([generator_label, workflow_name, *(abbreviations[v] for v in observations)])
+    appendix.append(table("tab:drag-endpoints", "Drawing editor, identical three-unit mouse drag with a nine-unit brush. Columns 3--4 use the registered absolute-coordinate control. Columns 5--6 are a post-hoc analysis allowing a translation of both endpoints. E denotes a line ending at the three-unit release displacement, L a line extended to nine units. The expected pair is E at milestone 8 and L at 12. A dash marks a failed eighteen-unit control or unavailable public widget. Each measurement uses two fresh contexts.",
+                          ["Generator", "Workflow", "Absolute 8", "Absolute 12", "Relative 8", "Relative 12"],
+                          drag_rows, spec="llcccc"))
+    repair = json.loads(FORM_REPAIR.read_text())
+    repair_rows = []
+    for arm, name in (("reference", "Human + DNA"), ("ai", "GPT-5 + DNA"), ("direct", "No library")):
+        positions = [r for r in repair["rows"] if r["arm"] == arm]
+        retried = [r for r in positions if not r["reused"]]
+        repair_rows.append([name, str(len(retried)), str(sum(r["after"] is None for r in retried)),
+                            str(sum(r["after"] is True for r in retried)),
+                            str(sum(r["after"] is True for r in positions)) + "/" +
+                            str(sum(r["after"] is not None for r in positions))])
+    appendix.append(table("tab:public-form-repair", "Post-hoc form diagnostic. A public parse or compile error triggers one repair. Executable first pages retain their original score. Missing counts interrupted repairs; the final column uses each arm's observable positions.",
+                          ["Workflow", "Repairs", "Missing", "Recovered", "Final"], repair_rows))
+    appendix += [r"\clearpage", r"\subsection{Independent Library Rebuilds}", r"\input{library_rebuild_notes}"]
+    rebuilt, fresh = today["rebuilt"], today["fresh_plans"]
+    arms = [("original", "Original GPT-5"), ("plain-1", "Codex ordinary 1"), ("plain-2", "Codex ordinary 2"),
+            ("contract-1", "Codex state contract 1"), ("contract-2", "Codex state contract 2")]
+    replay = rebuilt["cohorts"]
+    replacement_rows = []
+    for arm, label in arms:
+        cells = [replay["primary_20261123"]["summary"][arm], replay["independent_archive"]["summary"][arm],
+                 fresh["totals"].get(arm, {}), rebuilt["fixed_documentation_example_1"]["summary"][arm]]
+        replacement_rows.append([label, *(f"{c['passed']}/{c['observed']}" if c.get('observed') else "---" for c in cells)])
+    appendix.append(table("tab:backend-rebuild", "Compatible table libraries evaluated on the same twenty targets in each column. "
+                          "The two Mistral columns replay independent archived first responses made with the original GPT-5 library. "
+                          "The Qwen2.5-0.5B column uses fresh source-blind plans. All five backends expose the same public interface, so each target uses one shared response per column. "
+                          "The last column deploys the first documentation example everywhere. Each Codex row is an independent first build.",
+                          ["Table backend", "Mistral (Nov. 23)", "Mistral (earlier)", "Fresh Qwen", "Fixed example"], replacement_rows))
+    new_interfaces = today["constrained_table"]["arms"]
+    public_builds = today["public_controllers"]["repeats"]
+    public_rows = []
+    for arm, label in (("original", "Original GPT-5"), ("rep-1", "Public Codex 1"), ("rep-2", "Public Codex 2")):
+        group = new_interfaces[arm]
+        admitted = fresh["strictly_valid"] if arm == "original" else sum(
+            row["status"] == "valid" for row in public_builds[arm]["targets"].values())
+        assert group["received"] == group["valid"] == 20
+        public_rows.append([label, f"{admitted}/20", *(f"{group['passed'][k]}/20" for k in ("free_strict", "strict", "fixed"))])
+    appendix.append(table("tab:public-controller-decoding", "Table libraries evaluated with Qwen on identical current targets. "
+                          "The two new builders each designed a fresh interface from public requirements and starter files. "
+                          "Free plans are first text responses. Constrained plans use the same input messages and weights, "
+                          "with legal field values selected during decoding. The fixed control deploys the first example on every target.",
+                          ["Table backend", "Free plans valid", "Free plans passed", "Constrained passed", "Fixed passed"], public_rows))
+    appendix += [r"\section{Construction and Generation Accounting}", r"\label{app:cost}",
                  r"Table~\ref{tab:construction} separates library builders' recorded construction charges, including unsuccessful attempts. Each row covers that builder's libraries for the named study. Exposure includes unresolved transport reservations. Local compute and unlogged human preparation time are excluded."]
+    bills = []
+    names = {"direct": "Direct", "reference": "Reference", "ai": "GPT-5 library"}
+    labels = {"svg-chart": "SVG charts", "table": "Table editor", "expression-editor": "Expression editor"}
+    for project, record in today["reuse_costs"]["projects"].items():
+        for arm, group in record["workflows"].items():
+            end = group["ordered"][-1]
+            observed = group["observed_current_files"]
+            bills.append([labels[project], names[arm],
+                          f"{group['passed_current_files']}/{observed}" if observed else "---",
+                          f"{group['preparation_settled_microusd'] / 1e6:.6f}",
+                          f"{end['cumulative_settled_microusd'] / 1e6:.6f}",
+                          f"{end['cumulative_exposure_microusd'] / 1e6:.6f}"])
+    appendix.append(table("tab:twenty-costs",
+                          "Provider charges in USD across each twenty-target schedule. Preparation is charged once. "
+                          "Total includes allowed public repairs. Exposure adds unresolved reservations. "
+                          "Upstream human labor and local compute are unpriced. A dash means no observable final target endpoints. "
+                          "This table covers the original two-attempt editor preparation and the enumerated reference guide for charts.",
+                          ["Project", "Workflow", "Passed/obs.", "Prepare", "Total", "Exposure"], bills))
     rows = [[COHORTS[c], MODELS[b], f"{values[b]['settled_usd']:.6f}", f"{values[b]['exposure_usd']:.6f}"]
             for c, values in data["costs"]["construction_by_builder"].items() for b in BUILDERS]
     appendix.append(table("tab:construction", "Library construction in USD, separated by builder. No two builders' bills are pooled into a method comparison.", ["Study", "Builder", "Settled", "Exposure"], rows, spec="llrr"))
@@ -112,6 +312,8 @@ def render(data):
                      f"{value['pipeline_usd']:.6f}", f"{value['direct_per_target_usd']:.6f}", f"{value['pipeline_per_target_usd']:.6f}"])
     appendix.append(table("tab:draw-endtoend-cost", "Draw provider receipts in USD. Every comparison covers five direct targets and five GUI-DNA targets. Pipeline cost charges the indicated builder once plus that generator's five plan chains and repairs. Baseline receipts are shared across builder comparisons, and the same library is shared across generator scenarios; do not add these scenarios into an overall study bill. This is observed accounting, not an equal-budget experiment.", ["Generator", "Builder", "Direct / 5", "Build + plans / 5", "Direct / target", "Pipeline / target"], rows, spec="llrrrr"))
     appendix.append(r"The original draw study's complete ledger remains \$3.285408 (provider receipts \$3.28538045), including conditions outside the current comparison. This is a historical billing total, not a pooled method comparison. Micro-dollar rounding occurs per request. These are the original draw charges.")
+    from studies.public_library_transfer.paper import tables as transfer_tables
+    appendix.extend(transfer_tables(today, table))
     return {"matched_workflow_table.tex": matched_table([*data["canvas_pilots"].values(), data["matched_flex"]]),
             "canvas_behavior_table.tex":behavior_table(data), "end_to_end_table.tex": main,
             "end_to_end_details.tex": "\n\n".join(appendix) + "\n"}
@@ -138,7 +340,7 @@ def audit(data, generated):
     content = "\n".join(v for p, v in active.items() if p.name != "preamble.tex")
     for forbidden in (r"\freelib", "same-library code", "Free+Lib", "free_lib", "90/240", "67/160"):
         assert forbidden not in content, f"Archived comparator still active: {forbidden}"
-    for pooled in ("86/160", "93/240", "36/160", "26/240", "14/20", "79/216", "Build + plans / 10"):
+    for pooled in ("86/160", "93/240", "36/160", "26/240", "79/216", "Build + plans / 10"):
         assert pooled not in content, f"Pooled builder comparison still active: {pooled}"
     labels = re.findall(r"\\label\{(tab:[^}]+)\}", content)
     expected_labels = re.findall(r"\\label\{(tab:[^}]+)\}", "\n".join(generated.values()))
@@ -153,7 +355,9 @@ def audit(data, generated):
     assert "current official task file" in content
     result = {"all_passed": True, "tables": expected_labels,
               "all_active_tables_generated_and_verified": True,
-              "primary_view_sha256": sha(OUTPUT), "source_sha256": data["source_sha256"],
+              "primary_view_sha256": sha(OUTPUT), "source_sha256": {**data["source_sha256"], str(SOURCE_TRIALS.relative_to(ROOT)): sha(SOURCE_TRIALS),
+                                    str(FORM_REPAIR.relative_to(ROOT)): sha(FORM_REPAIR),
+                                    **{str(p.relative_to(ROOT)): sha(p) for p in NOVEMBER_RESULTS.values()}},
               "manuscript_sources_sha256": {p.relative_to(ROOT).as_posix(): sha(p) for p in active},
               "scope": "Reconstructs primary candidates, checks complete generated table text and active manuscript scope; not independent human review or verification of every prose claim."}
     (ROOT / "studies/results/paper_end_to_end_audit.json").write_text(json.dumps(result, indent=2) + "\n")

@@ -1,0 +1,2420 @@
+{
+  "study": "compatible-library-rebuild-20261123",
+  "project": "table",
+  "planner": "mistralai/mistral-small-3.2-24b-instruct",
+  "estimand": "Counterfactual backend substitution on two archived first-response cohorts. Planners originally saw the GPT-5 package; the rebuilt packages share its plan interface.",
+  "build_statuses": {
+    "plain-1": "accepted",
+    "contract-1": "accepted",
+    "plain-2": "accepted",
+    "contract-2": "accepted"
+  },
+  "new_library_builder": "gpt-6.2-astra",
+  "build_compute": {
+    "billing": "ChatGPT subscription, separate from metered OpenRouter calls",
+    "usage_by_build": {
+      "plain-1": [
+        {
+          "input_tokens": 21873,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 6084,
+          "reasoning_output_tokens": 55
+        }
+      ],
+      "contract-1": [
+        {
+          "input_tokens": 18785,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 6344,
+          "reasoning_output_tokens": 158
+        }
+      ],
+      "plain-2": [
+        {
+          "input_tokens": 21871,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 6047,
+          "reasoning_output_tokens": 50
+        }
+      ],
+      "contract-2": [
+        {
+          "input_tokens": 18785,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 6004,
+          "reasoning_output_tokens": 127
+        }
+      ]
+    }
+  },
+  "library_package_sha256": {
+    "original": "d4aa02e27ca720e08059eec64ecc0131463143c4c8fc10c19f595fe9e60e754f",
+    "plain-1": "d9035ddba2d002e0e3f5051f73d0a4cf2aa89e6e94e70acbd9cac49b52715256",
+    "contract-1": "cc66968d5b116cea07bd49381ba4751766962f14dae7befe1a32fbe7a407b292",
+    "plain-2": "fbed05f0698b13764e5a58ef4f5933125e85f39c804425920a93af79015cdd8e",
+    "contract-2": "38ef44929c19107e93713ea87f69f90b63dcecc15a09189d8622f1e404e295b9"
+  },
+  "cohorts": {
+    "primary_20261123": {
+      "summary": {
+        "original": {
+          "planned": 20,
+          "preparation_blocked": 0,
+          "missing_response": 0,
+          "invalid_original_response": 2,
+          "compiler_failure": 0,
+          "valid": 18,
+          "observed": 20,
+          "passed": 3
+        },
+        "plain-1": {
+          "planned": 20,
+          "preparation_blocked": 0,
+          "missing_response": 0,
+          "invalid_original_response": 2,
+          "compiler_failure": 0,
+          "valid": 18,
+          "observed": 20,
+          "passed": 16
+        },
+        "contract-1": {
+          "planned": 20,
+          "preparation_blocked": 0,
+          "missing_response": 0,
+          "invalid_original_response": 2,
+          "compiler_failure": 0,
+          "valid": 18,
+          "observed": 20,
+          "passed": 16
+        },
+        "plain-2": {
+          "planned": 20,
+          "preparation_blocked": 0,
+          "missing_response": 0,
+          "invalid_original_response": 2,
+          "compiler_failure": 0,
+          "valid": 18,
+          "observed": 20,
+          "passed": 16
+        },
+        "contract-2": {
+          "planned": 20,
+          "preparation_blocked": 0,
+          "missing_response": 0,
+          "invalid_original_response": 2,
+          "compiler_failure": 0,
+          "valid": 18,
+          "observed": 20,
+          "passed": 16
+        }
+      },
+      "targets": {
+        "original": {
+          "task-1": {
+            "status": "executable",
+            "page_manifest_sha256": "e92021c98ebe20679f4e54c238c31adecf18fdc29637393b6800ff6570a02779",
+            "passed": false,
+            "official_report_sha256": "eab67ced2a021f431269ac8ed642b6c308ead31b685bc17f2c2d817f24b5ca18"
+          },
+          "task-2": {
+            "status": "executable",
+            "page_manifest_sha256": "1c053ac073f55d1bbea404a39219f8867625c190bdc440060365ae93abd59c88",
+            "passed": false,
+            "official_report_sha256": "aa9a57b36142ecd724f358f7a1b2fe1ec0cd1294063eb2d5fa31ea48c9720d7b"
+          },
+          "task-3": {
+            "status": "executable",
+            "page_manifest_sha256": "f446fd7ee4af67aa8611347224bdfc083e4f019750d5ed3febf2b94937e74b24",
+            "passed": false,
+            "official_report_sha256": "4e5287259ff3e3e22ffe1fa277f99837b64ff1a476af4f7973b504fa961bbe6e"
+          },
+          "task-4": {
+            "status": "executable",
+            "page_manifest_sha256": "9421a51eb62dbb6d65db03ac8269c8e8d3e2d25b3f631cf2aa7514d22683e3f6",
+            "passed": true,
+            "official_report_sha256": "4fc46f062492ff5d742a8323c825566d08fc4e2fabb73d596c23a6648ce8498b"
+          },
+          "task-5": {
+            "status": "executable",
+            "page_manifest_sha256": "5c51fb3998e782b3da13e7fe8fa29ae0f715e3738e5093d76148c93479d61178",
+            "passed": false,
+            "official_report_sha256": "5dc4ab97e0c495c6251c8ef8e61cd4d19ba83cf776c13fecea520cde148c36d1"
+          },
+          "task-6": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-7": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-8": {
+            "status": "executable",
+            "page_manifest_sha256": "f446fd7ee4af67aa8611347224bdfc083e4f019750d5ed3febf2b94937e74b24",
+            "passed": false,
+            "official_report_sha256": "126350648c824e6bda54870090efff5811e40c3dc307e52ec0cbbd6c1b869110"
+          },
+          "task-9": {
+            "status": "executable",
+            "page_manifest_sha256": "65d0469265091aa4277c882308ed5de8cf3da2c6cc061710c692f36a5a7bfc41",
+            "passed": false,
+            "official_report_sha256": "f44c97b8e229259df4610c02a7d694857ade4a8115ae7bf3344ebea55863ba96"
+          },
+          "task-10": {
+            "status": "executable",
+            "page_manifest_sha256": "65d0469265091aa4277c882308ed5de8cf3da2c6cc061710c692f36a5a7bfc41",
+            "passed": false,
+            "official_report_sha256": "7644423448194761869df5159726f52821cfbb42e79c8aa2d1cb94d0027f413f"
+          },
+          "task-11": {
+            "status": "executable",
+            "page_manifest_sha256": "31773f28a5a88def504c508aff29b75fc4debcf590acafaa77edee934a97c025",
+            "passed": true,
+            "official_report_sha256": "f5374aa517689227280c147a52b776e991d291b59687f45d7e80c89c81de2881"
+          },
+          "task-12": {
+            "status": "executable",
+            "page_manifest_sha256": "5acf8372251ffd4ecd64315dd14ba996f27cf89d3e5b7d882250a3c527bda741",
+            "passed": true,
+            "official_report_sha256": "e8c0638de73cf03ea17f0b89689fa3877bf9e7d53a29d29b5ff8224401d46f1f"
+          },
+          "task-13": {
+            "status": "executable",
+            "page_manifest_sha256": "dd5e283ebe54fafce0d0b298a225d51464175279cf11cba9516f641b08ed2e63",
+            "passed": false,
+            "official_report_sha256": "279c86a01c744540fe0b4bbff51f5bc25a2ee0f8ded3c60ae2c6afae7b3d0cea"
+          },
+          "task-14": {
+            "status": "executable",
+            "page_manifest_sha256": "dd5e283ebe54fafce0d0b298a225d51464175279cf11cba9516f641b08ed2e63",
+            "passed": false,
+            "official_report_sha256": "7ac3a030c924f056d0460e26b7dd7f7caa884db2de074e064d2a659e7d106be3"
+          },
+          "task-15": {
+            "status": "executable",
+            "page_manifest_sha256": "dc8ef176195420724015926c67745700cfa9c7ff476a45f20830293395fd8828",
+            "passed": false,
+            "official_report_sha256": "8def189b405d5c3effc3ba79f687f4659c50203f5401315ccbda679782477789"
+          },
+          "task-16": {
+            "status": "executable",
+            "page_manifest_sha256": "dc8ef176195420724015926c67745700cfa9c7ff476a45f20830293395fd8828",
+            "passed": false,
+            "official_report_sha256": "5d02fb5b62990d43e1998674e39b21ca7ed5125d7bc72882a34ab62914712748"
+          },
+          "task-17": {
+            "status": "executable",
+            "page_manifest_sha256": "dc8ef176195420724015926c67745700cfa9c7ff476a45f20830293395fd8828",
+            "passed": false,
+            "official_report_sha256": "5f540b50bb27e0bd20abc129c0ccc4f356790de8f1e5cbc1f049794898abd8e7"
+          },
+          "task-18": {
+            "status": "executable",
+            "page_manifest_sha256": "dc8ef176195420724015926c67745700cfa9c7ff476a45f20830293395fd8828",
+            "passed": false,
+            "official_report_sha256": "05d761e088f56730afac9019418a50996114cef7a94e473b03fcb566ee8cd6e9"
+          },
+          "task-19": {
+            "status": "executable",
+            "page_manifest_sha256": "dc8ef176195420724015926c67745700cfa9c7ff476a45f20830293395fd8828",
+            "passed": false,
+            "official_report_sha256": "b30edca12354eb5ae22f4f3983007c9e9103adbfc5b96d6a4d6abc5dd83aa174"
+          },
+          "task-20": {
+            "status": "executable",
+            "page_manifest_sha256": "dc8ef176195420724015926c67745700cfa9c7ff476a45f20830293395fd8828",
+            "passed": false,
+            "official_report_sha256": "495b72c1273ca1339f8cebd8007be0c8fb28c930c0b70b8140bc05869c5427e9"
+          }
+        },
+        "plain-1": {
+          "task-1": {
+            "status": "executable",
+            "page_manifest_sha256": "8ee51e1e28dc884dd372d590a3afdb3252711d7b2133f14b2690ffc496b65a32",
+            "passed": true,
+            "official_report_sha256": "6a661daaee2fd08cf0d4074b4c9b1a0fe7ec4309e5f9fba99e1fe3462f0ff8d3"
+          },
+          "task-2": {
+            "status": "executable",
+            "page_manifest_sha256": "d6f9fe67bf7bfdc572eb3ee0a5483a3f0489169f927c84f3c4c38dc2fa34d087",
+            "passed": true,
+            "official_report_sha256": "403e320f69d162569430b3ff82aa6883ef532a09124d85fddc6973d92a9dd01e"
+          },
+          "task-3": {
+            "status": "executable",
+            "page_manifest_sha256": "3a7bf6dc790e42253b17148a9ab8f28fbd2ea0b7527d054aac85d56c534c87e3",
+            "passed": true,
+            "official_report_sha256": "e802514ccaa7e176e6284a7140db224869a52482d91219627a6a0c84d6586f4c"
+          },
+          "task-4": {
+            "status": "executable",
+            "page_manifest_sha256": "51a5370c6a6f6a74cfdba547a0bc994d4ea6494708efe60eb334fc604d95de3c",
+            "passed": true,
+            "official_report_sha256": "86cff5a5298fff1863df250eff35a57d2ab2a4bd710cc1a604a1c8cb362d36a3"
+          },
+          "task-5": {
+            "status": "executable",
+            "page_manifest_sha256": "1597245f6f7f0a6afa125ea32c71a03088414379291f85c123d645a2a514b5f0",
+            "passed": true,
+            "official_report_sha256": "d13038d13ab208a56606573b9549d5c283ffcbcc78b96bd17e5f5c3779ca7fb5"
+          },
+          "task-6": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-7": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-8": {
+            "status": "executable",
+            "page_manifest_sha256": "3a7bf6dc790e42253b17148a9ab8f28fbd2ea0b7527d054aac85d56c534c87e3",
+            "passed": false,
+            "official_report_sha256": "fea83cbfd64da844b3351b5d75e7b314bed3484bfe255f26f3cb69cf3f4cf139"
+          },
+          "task-9": {
+            "status": "executable",
+            "page_manifest_sha256": "91dd994867ef9f1ceb633d7f1aafb1697da9e418072f7a040cd5d488439b45b0",
+            "passed": false,
+            "official_report_sha256": "271ae7daeb067b29e893eea653ba691537b4a3b0d5b09cfce894e1de9678b123"
+          },
+          "task-10": {
+            "status": "executable",
+            "page_manifest_sha256": "91dd994867ef9f1ceb633d7f1aafb1697da9e418072f7a040cd5d488439b45b0",
+            "passed": true,
+            "official_report_sha256": "d7c8b2c92c67d04fc10305a9a60be2d264195a038b6935a1876f1c52f76436c3"
+          },
+          "task-11": {
+            "status": "executable",
+            "page_manifest_sha256": "9a619decfda7d3ac1a99fa819f79b0aff9551acd07e630ccebc2bfb9d9e5d408",
+            "passed": true,
+            "official_report_sha256": "8eb4cfdc71244ae4ec925fe7d76dda0964b5f59ee83a312a01cea33456d49b2f"
+          },
+          "task-12": {
+            "status": "executable",
+            "page_manifest_sha256": "d262003199515138bda84dae73c566625ecc65ec0ab57f9db35294c79ab8a7c1",
+            "passed": true,
+            "official_report_sha256": "d6a6405951277e7e6b2658db86456f9fe014281ad48929d574290cd082a680f2"
+          },
+          "task-13": {
+            "status": "executable",
+            "page_manifest_sha256": "616dd710e23e6498076bb600ab9bf10f65daa7025675c00e1cd357e890463cd7",
+            "passed": true,
+            "official_report_sha256": "b792cf51b700ab798ceba650aacaecbdb3842268f47e8f71ecacbc8eeeb6698c"
+          },
+          "task-14": {
+            "status": "executable",
+            "page_manifest_sha256": "616dd710e23e6498076bb600ab9bf10f65daa7025675c00e1cd357e890463cd7",
+            "passed": true,
+            "official_report_sha256": "c763b9bcd12ca0324d101241e7564cc91377ef2aa803c552b97013a1c4779194"
+          },
+          "task-15": {
+            "status": "executable",
+            "page_manifest_sha256": "957f2e7cd785d03de6523ab51b3bef82af912c64882f9ba373574c33b8d35246",
+            "passed": true,
+            "official_report_sha256": "2029140daa78cd9a2d74285b1dabffb565ade6c69e75aa0bcb9d9876065aab29"
+          },
+          "task-16": {
+            "status": "executable",
+            "page_manifest_sha256": "957f2e7cd785d03de6523ab51b3bef82af912c64882f9ba373574c33b8d35246",
+            "passed": true,
+            "official_report_sha256": "c8e6df5f66b2b556fa336158eea2f258bfadce3e49b1c2da7717ef5bfec97812"
+          },
+          "task-17": {
+            "status": "executable",
+            "page_manifest_sha256": "957f2e7cd785d03de6523ab51b3bef82af912c64882f9ba373574c33b8d35246",
+            "passed": true,
+            "official_report_sha256": "4ee4deeedf58b91b0caf127a97cf754f0a3ef337216c403972f2ffbfbfb2d642"
+          },
+          "task-18": {
+            "status": "executable",
+            "page_manifest_sha256": "957f2e7cd785d03de6523ab51b3bef82af912c64882f9ba373574c33b8d35246",
+            "passed": true,
+            "official_report_sha256": "22c8fe1dc94215fd8d9c277eeaf9b6f95268168f9dc7fffb23113636ebfc36fb"
+          },
+          "task-19": {
+            "status": "executable",
+            "page_manifest_sha256": "957f2e7cd785d03de6523ab51b3bef82af912c64882f9ba373574c33b8d35246",
+            "passed": true,
+            "official_report_sha256": "6c932543aa6a9de28bbe432db35d8701dbe678e8d3388ba720ac6f85c972444d"
+          },
+          "task-20": {
+            "status": "executable",
+            "page_manifest_sha256": "957f2e7cd785d03de6523ab51b3bef82af912c64882f9ba373574c33b8d35246",
+            "passed": true,
+            "official_report_sha256": "cba3ee6daef93afd542dbbae4402387cc188c6dd32d37bcd46e53b5b1ac82ba5"
+          }
+        },
+        "contract-1": {
+          "task-1": {
+            "status": "executable",
+            "page_manifest_sha256": "d5b9798ad0c271ffd5ef2d1904954434920f9df4dd50f3c218ada4523e3acd45",
+            "passed": true,
+            "official_report_sha256": "cae80e711c394f163502e6b1190c6468f7723aa05c814391b4aaf5e6ba64d2e5"
+          },
+          "task-2": {
+            "status": "executable",
+            "page_manifest_sha256": "ef91b988e584ac57825c4c299f508b9ad1d9565660e37a6f34723a2f2519cd31",
+            "passed": true,
+            "official_report_sha256": "73b52fae0357dcc13d9aace5517d72d46c21656bcf11551f5452189f674bf742"
+          },
+          "task-3": {
+            "status": "executable",
+            "page_manifest_sha256": "30ac112258d359d3a7847e27bbf4460ea7494f5951c54a7c5b23545b089a4659",
+            "passed": true,
+            "official_report_sha256": "68299dce0474e385b1a466921fd14166414261f368ef28b311aeed836b28aab1"
+          },
+          "task-4": {
+            "status": "executable",
+            "page_manifest_sha256": "04543404ab78db23501ac05d43360d846440f30efe878169ed820524282c8002",
+            "passed": true,
+            "official_report_sha256": "89c5b36e35fb82c95ab0cfeffc85b83a25049011bd17f8cd89dc96dcea84b9c4"
+          },
+          "task-5": {
+            "status": "executable",
+            "page_manifest_sha256": "7e41f359db5d30137bd187fef0067c93072212719cdbaa04fe18571d9ba27359",
+            "passed": true,
+            "official_report_sha256": "448dc5bef4c438351d5c51fbed80eea34c37da9db140b830060cc9fa1bef3505"
+          },
+          "task-6": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-7": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-8": {
+            "status": "executable",
+            "page_manifest_sha256": "30ac112258d359d3a7847e27bbf4460ea7494f5951c54a7c5b23545b089a4659",
+            "passed": false,
+            "official_report_sha256": "378bcf6b89056c3dbf1fc29b5ff80bdd78a6bafa3b97ed564c92540aa398195c"
+          },
+          "task-9": {
+            "status": "executable",
+            "page_manifest_sha256": "754241e5b09eeea3eab4f23be4f513c48565c5c6b0896672cf1c6069f629a179",
+            "passed": false,
+            "official_report_sha256": "e1a7bec45f64269747388386d4e04c198cd3a1ae00a4257fb0fded1d7c5128c7"
+          },
+          "task-10": {
+            "status": "executable",
+            "page_manifest_sha256": "754241e5b09eeea3eab4f23be4f513c48565c5c6b0896672cf1c6069f629a179",
+            "passed": true,
+            "official_report_sha256": "41275946a2b82e277ec3e231d0c6f7dbe171503766a0d846f864df28e67d4ab0"
+          },
+          "task-11": {
+            "status": "executable",
+            "page_manifest_sha256": "34ad5f40e5a8f7c736566736c886c87773d49d2b7252da4c89da04a99a7c8a93",
+            "passed": true,
+            "official_report_sha256": "6cff44b4a6b956ba6bb57f86b2f8de2a9bbe8a63534ec6e039ccdd355d9c8a90"
+          },
+          "task-12": {
+            "status": "executable",
+            "page_manifest_sha256": "b733cc7c22b7d1bfc469315022d0d48049dbd25ca280366da326c9f2dd5e886a",
+            "passed": true,
+            "official_report_sha256": "82621ed3b01d646ecdb1628a0157abfdb23bb575f8c96950f535bbf2fd5c0930"
+          },
+          "task-13": {
+            "status": "executable",
+            "page_manifest_sha256": "17aed6db684d2d9782f166d0313a12241adc931c34d67839a39651685de8978b",
+            "passed": true,
+            "official_report_sha256": "89e7e6f95cb198a963f80f28a18246ef1d1ec21bdc2cb28a45e866819c546149"
+          },
+          "task-14": {
+            "status": "executable",
+            "page_manifest_sha256": "17aed6db684d2d9782f166d0313a12241adc931c34d67839a39651685de8978b",
+            "passed": true,
+            "official_report_sha256": "9fdbf1470597b5a50698e79885100a85b77289422bf4c7c6659e1d688a61c0ac"
+          },
+          "task-15": {
+            "status": "executable",
+            "page_manifest_sha256": "6157fc87f8d35372cf3a29cb29134a811ca110e11012db821847b86c4ad1248b",
+            "passed": true,
+            "official_report_sha256": "60e30038407de318455c2d507ffdf503afbd15237f0652763b5d7fee6834ac55"
+          },
+          "task-16": {
+            "status": "executable",
+            "page_manifest_sha256": "6157fc87f8d35372cf3a29cb29134a811ca110e11012db821847b86c4ad1248b",
+            "passed": true,
+            "official_report_sha256": "6a40b89e415dbf8a95913d059800e94aedb1a5c195edea88a1c7b223731a5b7d"
+          },
+          "task-17": {
+            "status": "executable",
+            "page_manifest_sha256": "6157fc87f8d35372cf3a29cb29134a811ca110e11012db821847b86c4ad1248b",
+            "passed": true,
+            "official_report_sha256": "c5665ba19a3151e08801edc89ecb2fe8fc22f1ec28cfc9a576c977864d0b073e"
+          },
+          "task-18": {
+            "status": "executable",
+            "page_manifest_sha256": "6157fc87f8d35372cf3a29cb29134a811ca110e11012db821847b86c4ad1248b",
+            "passed": true,
+            "official_report_sha256": "d14b1aae2f0e84e150f4af6ce3cb5a718b9cbf8e86bd77f889c966a46c1eaeab"
+          },
+          "task-19": {
+            "status": "executable",
+            "page_manifest_sha256": "6157fc87f8d35372cf3a29cb29134a811ca110e11012db821847b86c4ad1248b",
+            "passed": true,
+            "official_report_sha256": "e80c08cb95b29ee0c406d12e99097c4e3ae82896a9eefa93d76a89a33b7081e2"
+          },
+          "task-20": {
+            "status": "executable",
+            "page_manifest_sha256": "6157fc87f8d35372cf3a29cb29134a811ca110e11012db821847b86c4ad1248b",
+            "passed": true,
+            "official_report_sha256": "38f74875cbd4eca1f3c765b9d7ed850ee007c4180fd06092c8da3c4f8afe31e0"
+          }
+        },
+        "plain-2": {
+          "task-1": {
+            "status": "executable",
+            "page_manifest_sha256": "36c6eab6206f38d25dfc03d7df9bcf63b0902ad277b6acff26c186ae59cd845f",
+            "passed": true,
+            "official_report_sha256": "1a933e811726e7d67004b7fa22b42de73dba055964f8c1bcc59e33bb6e5e793f"
+          },
+          "task-2": {
+            "status": "executable",
+            "page_manifest_sha256": "4885a2f9f46a05f73cf057458dbf4a6279d0eeb9e388c875fb78f65a0a79b349",
+            "passed": true,
+            "official_report_sha256": "b345b26034705bda94355b2acfb80f65aa7f563fbb21667dd660534304611a5b"
+          },
+          "task-3": {
+            "status": "executable",
+            "page_manifest_sha256": "7a342dee57bb3f9397c02d9d963d66dfd3e02643e968a59576d9ebf41c866559",
+            "passed": true,
+            "official_report_sha256": "5515c2210fc8c2787e3023e31cb9b5c66368ced9a9a2b07732e88eeb59714112"
+          },
+          "task-4": {
+            "status": "executable",
+            "page_manifest_sha256": "8736a22956b947128253da6ce9719e44142cdeaed1013fbcce18cffb6ee78627",
+            "passed": true,
+            "official_report_sha256": "dea4742560ef5d3bd04836889dea3cea3f7dc33e31bad0501e75000b89c04a7e"
+          },
+          "task-5": {
+            "status": "executable",
+            "page_manifest_sha256": "28ac61cfa25010444046c0527f721d04a15181e38751830cad66af43e89844a3",
+            "passed": true,
+            "official_report_sha256": "6be40dee2923cf55cc2b071f4abb779b7f61e4f74d2bf93ece7cabd328d969f2"
+          },
+          "task-6": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-7": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-8": {
+            "status": "executable",
+            "page_manifest_sha256": "7a342dee57bb3f9397c02d9d963d66dfd3e02643e968a59576d9ebf41c866559",
+            "passed": false,
+            "official_report_sha256": "4c7839855e92162652952d13f1735bd48ee4c6cabe086c3e0c0ba9ce9027d547"
+          },
+          "task-9": {
+            "status": "executable",
+            "page_manifest_sha256": "f9190508e2f1614a218a45fed7dbcb59a2f0105774c0b84a925144bb2d777e62",
+            "passed": false,
+            "official_report_sha256": "a3147329e2624efa9094d6df67f4213476f3364d281af23f19d98f0ed73d1586"
+          },
+          "task-10": {
+            "status": "executable",
+            "page_manifest_sha256": "f9190508e2f1614a218a45fed7dbcb59a2f0105774c0b84a925144bb2d777e62",
+            "passed": true,
+            "official_report_sha256": "24a58dcb9d46ef914ce6bf1f04fdc9fd19d2e13fb4d5172c6ec4029dccd1eee8"
+          },
+          "task-11": {
+            "status": "executable",
+            "page_manifest_sha256": "c5ac65e102488898e28bb4e049395b069f02d74e23c300587d9365e42da68a07",
+            "passed": true,
+            "official_report_sha256": "1114889c8fa3b9f678920876c0f568273ffeb59829ef1a18b35bce512e5b5bf7"
+          },
+          "task-12": {
+            "status": "executable",
+            "page_manifest_sha256": "200db25c1501707fbe7e6b215f6a3da5c99aba782958494401d884ca66c1c8e4",
+            "passed": true,
+            "official_report_sha256": "92c60b3d5cd91306638c3b06b669223c3de771ac813d4c30673dd759eae0ed21"
+          },
+          "task-13": {
+            "status": "executable",
+            "page_manifest_sha256": "cebce7ee2aaf1365b003860c9f497c84d23cdf17ccc3a50d5d9103159e9f7097",
+            "passed": true,
+            "official_report_sha256": "c27f558e61689131b7d15401e4b7a857cfddc8f6a5b94e0e0bf5b4ac3f86c971"
+          },
+          "task-14": {
+            "status": "executable",
+            "page_manifest_sha256": "cebce7ee2aaf1365b003860c9f497c84d23cdf17ccc3a50d5d9103159e9f7097",
+            "passed": true,
+            "official_report_sha256": "7d6e9e361a40debd574c391bd01354a7ee4180ed12b41a41d962365d8e9a7c14"
+          },
+          "task-15": {
+            "status": "executable",
+            "page_manifest_sha256": "45516678dca6e7680aa61e47636bfc1a98ef1c07ffcc27aad7ed0818c095b9ee",
+            "passed": true,
+            "official_report_sha256": "b48356ab04dbb044a7b8bbb99f74fb5c479761d8c074d9984b5fb35d631123d6"
+          },
+          "task-16": {
+            "status": "executable",
+            "page_manifest_sha256": "45516678dca6e7680aa61e47636bfc1a98ef1c07ffcc27aad7ed0818c095b9ee",
+            "passed": true,
+            "official_report_sha256": "18e3e4c2f5020ba8f1ffee464f100c9b2cdce900bfcc7bfa4ad4f19f2226f9de"
+          },
+          "task-17": {
+            "status": "executable",
+            "page_manifest_sha256": "45516678dca6e7680aa61e47636bfc1a98ef1c07ffcc27aad7ed0818c095b9ee",
+            "passed": true,
+            "official_report_sha256": "6a02eede1e48c5fb4e72230f635edb7454e662e45e473ba987d7ddd27f2e282a"
+          },
+          "task-18": {
+            "status": "executable",
+            "page_manifest_sha256": "45516678dca6e7680aa61e47636bfc1a98ef1c07ffcc27aad7ed0818c095b9ee",
+            "passed": true,
+            "official_report_sha256": "729bef5c629b37d91f996e8aa3fd3fd183432cd3db30eb0f8abcc465eadcbe7d"
+          },
+          "task-19": {
+            "status": "executable",
+            "page_manifest_sha256": "45516678dca6e7680aa61e47636bfc1a98ef1c07ffcc27aad7ed0818c095b9ee",
+            "passed": true,
+            "official_report_sha256": "b749a7119586669606c139af2659b47c4e59cf6d986209c6d34538fc16af0820"
+          },
+          "task-20": {
+            "status": "executable",
+            "page_manifest_sha256": "45516678dca6e7680aa61e47636bfc1a98ef1c07ffcc27aad7ed0818c095b9ee",
+            "passed": true,
+            "official_report_sha256": "11cebe0a2f9bc1c88db997a2e3ce0ba093fce8088460c03804480d11b9751386"
+          }
+        },
+        "contract-2": {
+          "task-1": {
+            "status": "executable",
+            "page_manifest_sha256": "18f898d3a550d30ef4da0f812774b21e3f3eeb11d482a5a46eba772dcd5482ca",
+            "passed": true,
+            "official_report_sha256": "fd7f355f86583c8f67ee6e5488388db298b55802df6388154c446fcc255cc32e"
+          },
+          "task-2": {
+            "status": "executable",
+            "page_manifest_sha256": "60f3a57d17e7ea89a9d76ac64b9346876eeaeb8d68d3e2e093de20fb5fea1ce5",
+            "passed": true,
+            "official_report_sha256": "fa895eba2b1f87b852b40569b78b83ff337c071b6b3697ca863a4538f15bf438"
+          },
+          "task-3": {
+            "status": "executable",
+            "page_manifest_sha256": "8125e082c8b4499b8bb54feff3de2f8d2ee21610228ae1f3f7985fd897faf441",
+            "passed": true,
+            "official_report_sha256": "06becaf7d40d59a472d434802d81f8dacf8d571bec47acb7eada387595736a80"
+          },
+          "task-4": {
+            "status": "executable",
+            "page_manifest_sha256": "e890815a3da9b45f0d1f7b9f4515a4db225089750242153864fad7001338a7a4",
+            "passed": true,
+            "official_report_sha256": "ee97b85e34ae0a4a235123d44c8664a310b5dec75f6aaaac3db11079f7030e37"
+          },
+          "task-5": {
+            "status": "executable",
+            "page_manifest_sha256": "aed1efebee1739ebe1d0e943a4d8e2238da109d8a0bea8ba19bfbe9da038235e",
+            "passed": true,
+            "official_report_sha256": "0cadcc4ab7a93f14fc4b9e44f6026da26077a6659e51bf22fa254d2e59fde493"
+          },
+          "task-6": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-7": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-8": {
+            "status": "executable",
+            "page_manifest_sha256": "8125e082c8b4499b8bb54feff3de2f8d2ee21610228ae1f3f7985fd897faf441",
+            "passed": true,
+            "official_report_sha256": "fec45b50977fad11815ff0e0dc447c2fbc1ba33a4a9d7862f1677c50686e6822"
+          },
+          "task-9": {
+            "status": "executable",
+            "page_manifest_sha256": "545b9288c6ab88cfdedc4541bf4536ab4f1b24f148df3fde452a6243e6ae48e5",
+            "passed": false,
+            "official_report_sha256": "eb26af422316fde308c98d5d9ada4efd6e1876a7b962b3e9121b7b54dfb33b3b"
+          },
+          "task-10": {
+            "status": "executable",
+            "page_manifest_sha256": "545b9288c6ab88cfdedc4541bf4536ab4f1b24f148df3fde452a6243e6ae48e5",
+            "passed": false,
+            "official_report_sha256": "fd808881999ab330b1bd2b8935f2ba082aef8bb6854e585b198ad346f787e3c3"
+          },
+          "task-11": {
+            "status": "executable",
+            "page_manifest_sha256": "5eb8b61b28726b623167e8a5f7b4e3f6f8065df8fa7b26992d64de3aca65b36e",
+            "passed": true,
+            "official_report_sha256": "b8072ad9ff8f0740b8c631c026ab6be5e8542c19dc92d974adf65cc79703120c"
+          },
+          "task-12": {
+            "status": "executable",
+            "page_manifest_sha256": "bde12755a1fa4d41997c452e0a62801a31839cb425f05c141469d465ac708471",
+            "passed": true,
+            "official_report_sha256": "699684f8a0007975d93eca7e15dad7676946e33bbd9da6a8ad6fdd72df103cda"
+          },
+          "task-13": {
+            "status": "executable",
+            "page_manifest_sha256": "d419c79950e008b2611ee3a199bec119034c12d74ac4622d731040e551f9aadd",
+            "passed": true,
+            "official_report_sha256": "940ffd3e9e25853928898ffd7014854c359dfcf7f30e84e796b1807369201d1c"
+          },
+          "task-14": {
+            "status": "executable",
+            "page_manifest_sha256": "d419c79950e008b2611ee3a199bec119034c12d74ac4622d731040e551f9aadd",
+            "passed": true,
+            "official_report_sha256": "60e4597e6eeadbf3a8f432dfa1fbecca9d6b0b4e46a03d42e9e348941bc83153"
+          },
+          "task-15": {
+            "status": "executable",
+            "page_manifest_sha256": "d3dfe4cc6c587239e5a034166d9a2c746cd6cc4264b5d04e401a6c4efd06f280",
+            "passed": true,
+            "official_report_sha256": "cc816e5f5879a5cb4a1b05da780fe67a6f637f2cac960260c6f8c0e30b0fb0cd"
+          },
+          "task-16": {
+            "status": "executable",
+            "page_manifest_sha256": "d3dfe4cc6c587239e5a034166d9a2c746cd6cc4264b5d04e401a6c4efd06f280",
+            "passed": true,
+            "official_report_sha256": "347c617842b487c8db8c600db5cea707ed69b140dea1a46d25c7c7ede067777b"
+          },
+          "task-17": {
+            "status": "executable",
+            "page_manifest_sha256": "d3dfe4cc6c587239e5a034166d9a2c746cd6cc4264b5d04e401a6c4efd06f280",
+            "passed": true,
+            "official_report_sha256": "f89b73ac72ca87c9b906035734a7ad47f5f4acec48c5e12a6ded655506fdf5f0"
+          },
+          "task-18": {
+            "status": "executable",
+            "page_manifest_sha256": "d3dfe4cc6c587239e5a034166d9a2c746cd6cc4264b5d04e401a6c4efd06f280",
+            "passed": true,
+            "official_report_sha256": "318a498b2647b9d1e850ca7d9d78178434f87cb76aec504a1dc60fbcc7738ed9"
+          },
+          "task-19": {
+            "status": "executable",
+            "page_manifest_sha256": "d3dfe4cc6c587239e5a034166d9a2c746cd6cc4264b5d04e401a6c4efd06f280",
+            "passed": true,
+            "official_report_sha256": "4af1b499a6615793a22c56385c8904ab7751a58f38b88935021773369ef06870"
+          },
+          "task-20": {
+            "status": "executable",
+            "page_manifest_sha256": "d3dfe4cc6c587239e5a034166d9a2c746cd6cc4264b5d04e401a6c4efd06f280",
+            "passed": true,
+            "official_report_sha256": "b9cfbf42e96d34f95da10001e0db72cf24d9708b795555c7f1096f7606c327b8"
+          }
+        }
+      },
+      "paired": {
+        "plain-1_vs_original": {
+          "matched": 20,
+          "counts": {
+            "gained": 13,
+            "lost": 0,
+            "both_pass": 3,
+            "both_fail": 4,
+            "unknown": 0
+          },
+          "tasks": {
+            "gained": [
+              "task-1",
+              "task-2",
+              "task-3",
+              "task-5",
+              "task-10",
+              "task-13",
+              "task-14",
+              "task-15",
+              "task-16",
+              "task-17",
+              "task-18",
+              "task-19",
+              "task-20"
+            ],
+            "lost": [],
+            "both_pass": [
+              "task-4",
+              "task-11",
+              "task-12"
+            ],
+            "both_fail": [
+              "task-6",
+              "task-7",
+              "task-8",
+              "task-9"
+            ],
+            "unknown": []
+          }
+        },
+        "contract-1_vs_original": {
+          "matched": 20,
+          "counts": {
+            "gained": 13,
+            "lost": 0,
+            "both_pass": 3,
+            "both_fail": 4,
+            "unknown": 0
+          },
+          "tasks": {
+            "gained": [
+              "task-1",
+              "task-2",
+              "task-3",
+              "task-5",
+              "task-10",
+              "task-13",
+              "task-14",
+              "task-15",
+              "task-16",
+              "task-17",
+              "task-18",
+              "task-19",
+              "task-20"
+            ],
+            "lost": [],
+            "both_pass": [
+              "task-4",
+              "task-11",
+              "task-12"
+            ],
+            "both_fail": [
+              "task-6",
+              "task-7",
+              "task-8",
+              "task-9"
+            ],
+            "unknown": []
+          }
+        },
+        "plain-2_vs_original": {
+          "matched": 20,
+          "counts": {
+            "gained": 13,
+            "lost": 0,
+            "both_pass": 3,
+            "both_fail": 4,
+            "unknown": 0
+          },
+          "tasks": {
+            "gained": [
+              "task-1",
+              "task-2",
+              "task-3",
+              "task-5",
+              "task-10",
+              "task-13",
+              "task-14",
+              "task-15",
+              "task-16",
+              "task-17",
+              "task-18",
+              "task-19",
+              "task-20"
+            ],
+            "lost": [],
+            "both_pass": [
+              "task-4",
+              "task-11",
+              "task-12"
+            ],
+            "both_fail": [
+              "task-6",
+              "task-7",
+              "task-8",
+              "task-9"
+            ],
+            "unknown": []
+          }
+        },
+        "contract-2_vs_original": {
+          "matched": 20,
+          "counts": {
+            "gained": 13,
+            "lost": 0,
+            "both_pass": 3,
+            "both_fail": 4,
+            "unknown": 0
+          },
+          "tasks": {
+            "gained": [
+              "task-1",
+              "task-2",
+              "task-3",
+              "task-5",
+              "task-8",
+              "task-13",
+              "task-14",
+              "task-15",
+              "task-16",
+              "task-17",
+              "task-18",
+              "task-19",
+              "task-20"
+            ],
+            "lost": [],
+            "both_pass": [
+              "task-4",
+              "task-11",
+              "task-12"
+            ],
+            "both_fail": [
+              "task-6",
+              "task-7",
+              "task-9",
+              "task-10"
+            ],
+            "unknown": []
+          }
+        },
+        "contract-1_vs_plain-1": {
+          "matched": 20,
+          "counts": {
+            "gained": 0,
+            "lost": 0,
+            "both_pass": 16,
+            "both_fail": 4,
+            "unknown": 0
+          },
+          "tasks": {
+            "gained": [],
+            "lost": [],
+            "both_pass": [
+              "task-1",
+              "task-2",
+              "task-3",
+              "task-4",
+              "task-5",
+              "task-10",
+              "task-11",
+              "task-12",
+              "task-13",
+              "task-14",
+              "task-15",
+              "task-16",
+              "task-17",
+              "task-18",
+              "task-19",
+              "task-20"
+            ],
+            "both_fail": [
+              "task-6",
+              "task-7",
+              "task-8",
+              "task-9"
+            ],
+            "unknown": []
+          }
+        },
+        "contract-2_vs_plain-2": {
+          "matched": 20,
+          "counts": {
+            "gained": 1,
+            "lost": 1,
+            "both_pass": 15,
+            "both_fail": 3,
+            "unknown": 0
+          },
+          "tasks": {
+            "gained": [
+              "task-8"
+            ],
+            "lost": [
+              "task-10"
+            ],
+            "both_pass": [
+              "task-1",
+              "task-2",
+              "task-3",
+              "task-4",
+              "task-5",
+              "task-11",
+              "task-12",
+              "task-13",
+              "task-14",
+              "task-15",
+              "task-16",
+              "task-17",
+              "task-18",
+              "task-19",
+              "task-20"
+            ],
+            "both_fail": [
+              "task-6",
+              "task-7",
+              "task-9"
+            ],
+            "unknown": []
+          }
+        }
+      }
+    },
+    "independent_archive": {
+      "summary": {
+        "original": {
+          "planned": 20,
+          "preparation_blocked": 0,
+          "missing_response": 0,
+          "invalid_original_response": 14,
+          "compiler_failure": 0,
+          "valid": 6,
+          "observed": 20,
+          "passed": 3
+        },
+        "plain-1": {
+          "planned": 20,
+          "preparation_blocked": 0,
+          "missing_response": 0,
+          "invalid_original_response": 14,
+          "compiler_failure": 0,
+          "valid": 6,
+          "observed": 20,
+          "passed": 6
+        },
+        "contract-1": {
+          "planned": 20,
+          "preparation_blocked": 0,
+          "missing_response": 0,
+          "invalid_original_response": 14,
+          "compiler_failure": 0,
+          "valid": 6,
+          "observed": 20,
+          "passed": 6
+        },
+        "plain-2": {
+          "planned": 20,
+          "preparation_blocked": 0,
+          "missing_response": 0,
+          "invalid_original_response": 14,
+          "compiler_failure": 0,
+          "valid": 6,
+          "observed": 20,
+          "passed": 6
+        },
+        "contract-2": {
+          "planned": 20,
+          "preparation_blocked": 0,
+          "missing_response": 0,
+          "invalid_original_response": 14,
+          "compiler_failure": 0,
+          "valid": 6,
+          "observed": 20,
+          "passed": 6
+        }
+      },
+      "targets": {
+        "original": {
+          "task-1": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-2": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-3": {
+            "status": "executable",
+            "page_manifest_sha256": "ec4259ad1bcc1df0577a7163600f29631d36391135d857d412967d96251add60",
+            "passed": false,
+            "official_report_sha256": "6d13e03eac6869870b636dd7616f694e1f79623982c9f9f1eae4e152180559a9"
+          },
+          "task-4": {
+            "status": "executable",
+            "page_manifest_sha256": "ec4259ad1bcc1df0577a7163600f29631d36391135d857d412967d96251add60",
+            "passed": true,
+            "official_report_sha256": "2e670b4eb432d2d8d0716bb2197967e139de99477dd48c65e66c298e04d70a24"
+          },
+          "task-5": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-6": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-7": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-8": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-9": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-10": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-11": {
+            "status": "executable",
+            "page_manifest_sha256": "3d49f3c0070475498610ecbdddd1cbeedfd49bd6eb57b5ed2b93d1967c00013c",
+            "passed": true,
+            "official_report_sha256": "193900c0fd0fad94b1a076499e34ac34a802e16fc383afb17cc693f09e2f9a0c"
+          },
+          "task-12": {
+            "status": "executable",
+            "page_manifest_sha256": "ec4259ad1bcc1df0577a7163600f29631d36391135d857d412967d96251add60",
+            "passed": true,
+            "official_report_sha256": "413688bb7adaebbc48544f9fc124868c016ce0063cc324ebae44b3972509ac34"
+          },
+          "task-13": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-14": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-15": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-16": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-17": {
+            "status": "executable",
+            "page_manifest_sha256": "ec4259ad1bcc1df0577a7163600f29631d36391135d857d412967d96251add60",
+            "passed": false,
+            "official_report_sha256": "63eb35c2c6be58155f324c54b8795b755c38f58ffd9731479664e54037ac6388"
+          },
+          "task-18": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-19": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-20": {
+            "status": "executable",
+            "page_manifest_sha256": "ec4259ad1bcc1df0577a7163600f29631d36391135d857d412967d96251add60",
+            "passed": false,
+            "official_report_sha256": "042e92bb3ae2787221f4a87a870d2a5f1230f9e59ba83291b8a91dafdea37229"
+          }
+        },
+        "plain-1": {
+          "task-1": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-2": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-3": {
+            "status": "executable",
+            "page_manifest_sha256": "b9c42ff10a36b25e7ffc5c7b9927abde1b08488d3d89b05bf679f7691405bbf1",
+            "passed": true,
+            "official_report_sha256": "c4271fb627ce72cab10b2d263eb897de62875cb31dcc6d011074e03ad698b0cc"
+          },
+          "task-4": {
+            "status": "executable",
+            "page_manifest_sha256": "b9c42ff10a36b25e7ffc5c7b9927abde1b08488d3d89b05bf679f7691405bbf1",
+            "passed": true,
+            "official_report_sha256": "dc6a6ee398f55b151662da1f3b6869d96bf4c4c79197944c85de818ca355c7d8"
+          },
+          "task-5": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-6": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-7": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-8": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-9": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-10": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-11": {
+            "status": "executable",
+            "page_manifest_sha256": "735479b7ca5d35f5669687baf59cbd4da184b4d5066a70d3b16831f15d9f78ff",
+            "passed": true,
+            "official_report_sha256": "67cf3b00c8097337db29579afc6da2937e333639a5cbd8c0cf6dd843e265565b"
+          },
+          "task-12": {
+            "status": "executable",
+            "page_manifest_sha256": "b9c42ff10a36b25e7ffc5c7b9927abde1b08488d3d89b05bf679f7691405bbf1",
+            "passed": true,
+            "official_report_sha256": "780b1bd1c03acc28751c1dcb6409fef3c96facaa3603c871a2999d0700d79fe0"
+          },
+          "task-13": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-14": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-15": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-16": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-17": {
+            "status": "executable",
+            "page_manifest_sha256": "b9c42ff10a36b25e7ffc5c7b9927abde1b08488d3d89b05bf679f7691405bbf1",
+            "passed": true,
+            "official_report_sha256": "1c3c2173cd284a00d9b58d5d73992d6bdd84c4e7a5f35e63e4798b7a09e40a48"
+          },
+          "task-18": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-19": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-20": {
+            "status": "executable",
+            "page_manifest_sha256": "b9c42ff10a36b25e7ffc5c7b9927abde1b08488d3d89b05bf679f7691405bbf1",
+            "passed": true,
+            "official_report_sha256": "8902e3574105e8b3cee060b35644ac8ff07114609b0b205b21caae3f9f7bfd01"
+          }
+        },
+        "contract-1": {
+          "task-1": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-2": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-3": {
+            "status": "executable",
+            "page_manifest_sha256": "5260463946377bf33bfbcdf17da0b916efce4b8724cc6de0658ee4ad4dcec6f2",
+            "passed": true,
+            "official_report_sha256": "ea6050964aed7678344abe897619a4a7e83d2720c010996e81540a4d02b30281"
+          },
+          "task-4": {
+            "status": "executable",
+            "page_manifest_sha256": "5260463946377bf33bfbcdf17da0b916efce4b8724cc6de0658ee4ad4dcec6f2",
+            "passed": true,
+            "official_report_sha256": "1cc8a9572b9a38ca42f74e7bb879570a56437f9cc34c9279e242114e3ab9c5ee"
+          },
+          "task-5": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-6": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-7": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-8": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-9": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-10": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-11": {
+            "status": "executable",
+            "page_manifest_sha256": "0fe340a993bb5e07dca888c234256cfc001903112a0b81ee9967a7ba102422df",
+            "passed": true,
+            "official_report_sha256": "a97f9bfd9a415bc194fd14d9667afc81949867e1fd7de40571d484e8c205de93"
+          },
+          "task-12": {
+            "status": "executable",
+            "page_manifest_sha256": "5260463946377bf33bfbcdf17da0b916efce4b8724cc6de0658ee4ad4dcec6f2",
+            "passed": true,
+            "official_report_sha256": "8eb2b40a86b14f9e014f53bc917310eb3edfd9d754aacc3cf3abe5d38d1cf374"
+          },
+          "task-13": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-14": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-15": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-16": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-17": {
+            "status": "executable",
+            "page_manifest_sha256": "5260463946377bf33bfbcdf17da0b916efce4b8724cc6de0658ee4ad4dcec6f2",
+            "passed": true,
+            "official_report_sha256": "7b77394f54b4cdf74ad425b39b637134fd39d7a7050ac3b9751ba6da0f8f4ba2"
+          },
+          "task-18": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-19": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-20": {
+            "status": "executable",
+            "page_manifest_sha256": "5260463946377bf33bfbcdf17da0b916efce4b8724cc6de0658ee4ad4dcec6f2",
+            "passed": true,
+            "official_report_sha256": "0af1accebb0e60995883429cbf05c09487a4345ad509112c104ea99c801d0b70"
+          }
+        },
+        "plain-2": {
+          "task-1": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-2": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-3": {
+            "status": "executable",
+            "page_manifest_sha256": "5b6fd27271991d0a8cf1162710f91ad60634bb860f65cfd731b69930fe80bffd",
+            "passed": true,
+            "official_report_sha256": "d9d33d2088f75d1f01c4d5e7036ed65526264c9277e3f0dca5f9318d83359474"
+          },
+          "task-4": {
+            "status": "executable",
+            "page_manifest_sha256": "5b6fd27271991d0a8cf1162710f91ad60634bb860f65cfd731b69930fe80bffd",
+            "passed": true,
+            "official_report_sha256": "f48ffc5c1a242540e638fe87e1d96bac43ba82c754c2c60a2818e611f71d78b7"
+          },
+          "task-5": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-6": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-7": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-8": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-9": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-10": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-11": {
+            "status": "executable",
+            "page_manifest_sha256": "dcc96c67e5986ad8461b4f10e430f85a812cb73872622b653d9cbfa83baac300",
+            "passed": true,
+            "official_report_sha256": "06e32a11b9078b504eb40a300ccf6c7c985c3f303b7fcafb1348c4d9d7483455"
+          },
+          "task-12": {
+            "status": "executable",
+            "page_manifest_sha256": "5b6fd27271991d0a8cf1162710f91ad60634bb860f65cfd731b69930fe80bffd",
+            "passed": true,
+            "official_report_sha256": "f011327ce9c7ba588d4e45919a8ec2c68d86fd3ae24cfd2135d65635a18da9cb"
+          },
+          "task-13": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-14": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-15": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-16": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-17": {
+            "status": "executable",
+            "page_manifest_sha256": "5b6fd27271991d0a8cf1162710f91ad60634bb860f65cfd731b69930fe80bffd",
+            "passed": true,
+            "official_report_sha256": "482735625cdc9b7ea75f1a989a483f7e0cf960537aa5cc82e163fae3b43ae037"
+          },
+          "task-18": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-19": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-20": {
+            "status": "executable",
+            "page_manifest_sha256": "5b6fd27271991d0a8cf1162710f91ad60634bb860f65cfd731b69930fe80bffd",
+            "passed": true,
+            "official_report_sha256": "17cdf71c87b9db1866ab90dff2285a6f20a204ab1894873fd7c6e2fee004cee9"
+          }
+        },
+        "contract-2": {
+          "task-1": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-2": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-3": {
+            "status": "executable",
+            "page_manifest_sha256": "feabca74b2de67e9f0cac6fe8442ae6f9eec46f566a26cb9f26d2f9b72b35b7c",
+            "passed": true,
+            "official_report_sha256": "fadfd43dafbec92649bdb26a1fd07d7bd53a21cc2fb8b028579d762a847a485f"
+          },
+          "task-4": {
+            "status": "executable",
+            "page_manifest_sha256": "feabca74b2de67e9f0cac6fe8442ae6f9eec46f566a26cb9f26d2f9b72b35b7c",
+            "passed": true,
+            "official_report_sha256": "ff1d7ed518c126f44fc4bfbd3c9589d165b082af3269a6fc9855cfa8ad775ff7"
+          },
+          "task-5": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-6": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-7": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-8": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-9": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-10": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-11": {
+            "status": "executable",
+            "page_manifest_sha256": "bc866322a37b2496a5aa3a88cbaa50f37175e39d8cea461c3c4b841e616e322f",
+            "passed": true,
+            "official_report_sha256": "6f35c394d8cd4b0a710d97ba99bc84155acf1f75467146e4a0a51f7d95a52d31"
+          },
+          "task-12": {
+            "status": "executable",
+            "page_manifest_sha256": "feabca74b2de67e9f0cac6fe8442ae6f9eec46f566a26cb9f26d2f9b72b35b7c",
+            "passed": true,
+            "official_report_sha256": "53d502964393935fe0f96488cea8035d77d93736aa15f5587324c01e8dd2066e"
+          },
+          "task-13": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-14": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-15": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-16": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-17": {
+            "status": "executable",
+            "page_manifest_sha256": "feabca74b2de67e9f0cac6fe8442ae6f9eec46f566a26cb9f26d2f9b72b35b7c",
+            "passed": true,
+            "official_report_sha256": "085099aa8b594e0d65efbf4ba69da414fc5168ebd026431f94e28c65686ab064"
+          },
+          "task-18": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-19": {
+            "status": "invalid_original_response",
+            "passed": false
+          },
+          "task-20": {
+            "status": "executable",
+            "page_manifest_sha256": "feabca74b2de67e9f0cac6fe8442ae6f9eec46f566a26cb9f26d2f9b72b35b7c",
+            "passed": true,
+            "official_report_sha256": "bc6ee809a2469feb92c1b268790a313a893ebf4d7598e4258c43207a2879db34"
+          }
+        }
+      },
+      "paired": {
+        "plain-1_vs_original": {
+          "matched": 20,
+          "counts": {
+            "gained": 3,
+            "lost": 0,
+            "both_pass": 3,
+            "both_fail": 14,
+            "unknown": 0
+          },
+          "tasks": {
+            "gained": [
+              "task-3",
+              "task-17",
+              "task-20"
+            ],
+            "lost": [],
+            "both_pass": [
+              "task-4",
+              "task-11",
+              "task-12"
+            ],
+            "both_fail": [
+              "task-1",
+              "task-2",
+              "task-5",
+              "task-6",
+              "task-7",
+              "task-8",
+              "task-9",
+              "task-10",
+              "task-13",
+              "task-14",
+              "task-15",
+              "task-16",
+              "task-18",
+              "task-19"
+            ],
+            "unknown": []
+          }
+        },
+        "contract-1_vs_original": {
+          "matched": 20,
+          "counts": {
+            "gained": 3,
+            "lost": 0,
+            "both_pass": 3,
+            "both_fail": 14,
+            "unknown": 0
+          },
+          "tasks": {
+            "gained": [
+              "task-3",
+              "task-17",
+              "task-20"
+            ],
+            "lost": [],
+            "both_pass": [
+              "task-4",
+              "task-11",
+              "task-12"
+            ],
+            "both_fail": [
+              "task-1",
+              "task-2",
+              "task-5",
+              "task-6",
+              "task-7",
+              "task-8",
+              "task-9",
+              "task-10",
+              "task-13",
+              "task-14",
+              "task-15",
+              "task-16",
+              "task-18",
+              "task-19"
+            ],
+            "unknown": []
+          }
+        },
+        "plain-2_vs_original": {
+          "matched": 20,
+          "counts": {
+            "gained": 3,
+            "lost": 0,
+            "both_pass": 3,
+            "both_fail": 14,
+            "unknown": 0
+          },
+          "tasks": {
+            "gained": [
+              "task-3",
+              "task-17",
+              "task-20"
+            ],
+            "lost": [],
+            "both_pass": [
+              "task-4",
+              "task-11",
+              "task-12"
+            ],
+            "both_fail": [
+              "task-1",
+              "task-2",
+              "task-5",
+              "task-6",
+              "task-7",
+              "task-8",
+              "task-9",
+              "task-10",
+              "task-13",
+              "task-14",
+              "task-15",
+              "task-16",
+              "task-18",
+              "task-19"
+            ],
+            "unknown": []
+          }
+        },
+        "contract-2_vs_original": {
+          "matched": 20,
+          "counts": {
+            "gained": 3,
+            "lost": 0,
+            "both_pass": 3,
+            "both_fail": 14,
+            "unknown": 0
+          },
+          "tasks": {
+            "gained": [
+              "task-3",
+              "task-17",
+              "task-20"
+            ],
+            "lost": [],
+            "both_pass": [
+              "task-4",
+              "task-11",
+              "task-12"
+            ],
+            "both_fail": [
+              "task-1",
+              "task-2",
+              "task-5",
+              "task-6",
+              "task-7",
+              "task-8",
+              "task-9",
+              "task-10",
+              "task-13",
+              "task-14",
+              "task-15",
+              "task-16",
+              "task-18",
+              "task-19"
+            ],
+            "unknown": []
+          }
+        },
+        "contract-1_vs_plain-1": {
+          "matched": 20,
+          "counts": {
+            "gained": 0,
+            "lost": 0,
+            "both_pass": 6,
+            "both_fail": 14,
+            "unknown": 0
+          },
+          "tasks": {
+            "gained": [],
+            "lost": [],
+            "both_pass": [
+              "task-3",
+              "task-4",
+              "task-11",
+              "task-12",
+              "task-17",
+              "task-20"
+            ],
+            "both_fail": [
+              "task-1",
+              "task-2",
+              "task-5",
+              "task-6",
+              "task-7",
+              "task-8",
+              "task-9",
+              "task-10",
+              "task-13",
+              "task-14",
+              "task-15",
+              "task-16",
+              "task-18",
+              "task-19"
+            ],
+            "unknown": []
+          }
+        },
+        "contract-2_vs_plain-2": {
+          "matched": 20,
+          "counts": {
+            "gained": 0,
+            "lost": 0,
+            "both_pass": 6,
+            "both_fail": 14,
+            "unknown": 0
+          },
+          "tasks": {
+            "gained": [],
+            "lost": [],
+            "both_pass": [
+              "task-3",
+              "task-4",
+              "task-11",
+              "task-12",
+              "task-17",
+              "task-20"
+            ],
+            "both_fail": [
+              "task-1",
+              "task-2",
+              "task-5",
+              "task-6",
+              "task-7",
+              "task-8",
+              "task-9",
+              "task-10",
+              "task-13",
+              "task-14",
+              "task-15",
+              "task-16",
+              "task-18",
+              "task-19"
+            ],
+            "unknown": []
+          }
+        }
+      }
+    }
+  },
+  "fixed_documentation_example_1": {
+    "plan": {},
+    "deployment_contract": "primary_20261123",
+    "summary": {
+      "original": {
+        "planned": 20,
+        "preparation_blocked": 0,
+        "missing_response": 0,
+        "invalid_original_response": 0,
+        "compiler_failure": 0,
+        "valid": 20,
+        "observed": 20,
+        "passed": 3
+      },
+      "plain-1": {
+        "planned": 20,
+        "preparation_blocked": 0,
+        "missing_response": 0,
+        "invalid_original_response": 0,
+        "compiler_failure": 0,
+        "valid": 20,
+        "observed": 20,
+        "passed": 18
+      },
+      "contract-1": {
+        "planned": 20,
+        "preparation_blocked": 0,
+        "missing_response": 0,
+        "invalid_original_response": 0,
+        "compiler_failure": 0,
+        "valid": 20,
+        "observed": 20,
+        "passed": 18
+      },
+      "plain-2": {
+        "planned": 20,
+        "preparation_blocked": 0,
+        "missing_response": 0,
+        "invalid_original_response": 0,
+        "compiler_failure": 0,
+        "valid": 20,
+        "observed": 20,
+        "passed": 18
+      },
+      "contract-2": {
+        "planned": 20,
+        "preparation_blocked": 0,
+        "missing_response": 0,
+        "invalid_original_response": 0,
+        "compiler_failure": 0,
+        "valid": 20,
+        "observed": 20,
+        "passed": 19
+      }
+    },
+    "targets": {
+      "original": {
+        "task-1": {
+          "status": "executable",
+          "page_manifest_sha256": "d8b0d76dfc98e62e3329c853020f3303b31b8e2c5a966e05a40f93f98511fc77",
+          "passed": false,
+          "official_report_sha256": "b61a1f8a06367d49679c595ae057b6c2a62594f2509b3ae7b336605c6de3153b"
+        },
+        "task-2": {
+          "status": "executable",
+          "page_manifest_sha256": "d8b0d76dfc98e62e3329c853020f3303b31b8e2c5a966e05a40f93f98511fc77",
+          "passed": false,
+          "official_report_sha256": "e7bb300e0d4819f525dd05c57fe68a429bd32101674551888f11ac5b60210714"
+        },
+        "task-3": {
+          "status": "executable",
+          "page_manifest_sha256": "d8b0d76dfc98e62e3329c853020f3303b31b8e2c5a966e05a40f93f98511fc77",
+          "passed": false,
+          "official_report_sha256": "34785a9999d20bd49868a7706dbba9c80e4df2bdb9c3c495defc3f07379e0a29"
+        },
+        "task-4": {
+          "status": "executable",
+          "page_manifest_sha256": "d8b0d76dfc98e62e3329c853020f3303b31b8e2c5a966e05a40f93f98511fc77",
+          "passed": true,
+          "official_report_sha256": "46db11872ae34d524e5f41f5ccccfa6367cf74f8159cd5ae7141a4db14f6fbc7"
+        },
+        "task-5": {
+          "status": "executable",
+          "page_manifest_sha256": "d8b0d76dfc98e62e3329c853020f3303b31b8e2c5a966e05a40f93f98511fc77",
+          "passed": false,
+          "official_report_sha256": "1e8d8c264bf550bc4b813278e66c6be52f58a5b9d8fca125d8a6ab45f834c579"
+        },
+        "task-6": {
+          "status": "executable",
+          "page_manifest_sha256": "d8b0d76dfc98e62e3329c853020f3303b31b8e2c5a966e05a40f93f98511fc77",
+          "passed": false,
+          "official_report_sha256": "8a88d9f86042f54331b8a6ceb47e749b5b09f74132b3e8cff0f07b4ef376d564"
+        },
+        "task-7": {
+          "status": "executable",
+          "page_manifest_sha256": "d8b0d76dfc98e62e3329c853020f3303b31b8e2c5a966e05a40f93f98511fc77",
+          "passed": false,
+          "official_report_sha256": "0a1ed83b51ff7b5cdedc16d88b5def735f6260d3f236274c0a0e2fa6e1a2b1a0"
+        },
+        "task-8": {
+          "status": "executable",
+          "page_manifest_sha256": "d8b0d76dfc98e62e3329c853020f3303b31b8e2c5a966e05a40f93f98511fc77",
+          "passed": false,
+          "official_report_sha256": "df5be4aebeabe1f4ce3535d1877d0e3c81198c5c88288ef4b2a344166662c0a6"
+        },
+        "task-9": {
+          "status": "executable",
+          "page_manifest_sha256": "d8b0d76dfc98e62e3329c853020f3303b31b8e2c5a966e05a40f93f98511fc77",
+          "passed": false,
+          "official_report_sha256": "9801b40e64ec0d2c8244a1ffcac03884fae02dc2449971fdba5fb0dfc5d4ed92"
+        },
+        "task-10": {
+          "status": "executable",
+          "page_manifest_sha256": "d8b0d76dfc98e62e3329c853020f3303b31b8e2c5a966e05a40f93f98511fc77",
+          "passed": false,
+          "official_report_sha256": "1d3d117779ddca9c6e578dba4d5a1b1827c77600c61c6c3966985567e5c172a7"
+        },
+        "task-11": {
+          "status": "executable",
+          "page_manifest_sha256": "d8b0d76dfc98e62e3329c853020f3303b31b8e2c5a966e05a40f93f98511fc77",
+          "passed": true,
+          "official_report_sha256": "2a094f279e58c3b3ef2a4be06cd9d20f19704fdcebdc42f20e10e4d48fc3c9cd"
+        },
+        "task-12": {
+          "status": "executable",
+          "page_manifest_sha256": "d8b0d76dfc98e62e3329c853020f3303b31b8e2c5a966e05a40f93f98511fc77",
+          "passed": true,
+          "official_report_sha256": "8b89257047c02fb1f023e5c1010d8c64bf51333ff705e8e56a98dde212a1b0b8"
+        },
+        "task-13": {
+          "status": "executable",
+          "page_manifest_sha256": "d8b0d76dfc98e62e3329c853020f3303b31b8e2c5a966e05a40f93f98511fc77",
+          "passed": false,
+          "official_report_sha256": "9f564db690e609072e78ebd227a5aa1b0146ec87e98be559c2b4d38183bf5794"
+        },
+        "task-14": {
+          "status": "executable",
+          "page_manifest_sha256": "d8b0d76dfc98e62e3329c853020f3303b31b8e2c5a966e05a40f93f98511fc77",
+          "passed": false,
+          "official_report_sha256": "f42a25111b37f17ea36cd89a43fbe994af7b271bdf0811d9a9f003009f45b0a7"
+        },
+        "task-15": {
+          "status": "executable",
+          "page_manifest_sha256": "d8b0d76dfc98e62e3329c853020f3303b31b8e2c5a966e05a40f93f98511fc77",
+          "passed": false,
+          "official_report_sha256": "a6ab4a175f9c7a9f2198dc57ac8873a77716be33577972ea1e8a59397390730b"
+        },
+        "task-16": {
+          "status": "executable",
+          "page_manifest_sha256": "d8b0d76dfc98e62e3329c853020f3303b31b8e2c5a966e05a40f93f98511fc77",
+          "passed": false,
+          "official_report_sha256": "3d65d0d1c16bccd68026ae67f024c7061005f5111cc79fddd0a870875dca4b1c"
+        },
+        "task-17": {
+          "status": "executable",
+          "page_manifest_sha256": "d8b0d76dfc98e62e3329c853020f3303b31b8e2c5a966e05a40f93f98511fc77",
+          "passed": false,
+          "official_report_sha256": "f51b06625c9ab8f92312201a6d8e165806948b99d9d2028ea195f0e40bc37cbe"
+        },
+        "task-18": {
+          "status": "executable",
+          "page_manifest_sha256": "d8b0d76dfc98e62e3329c853020f3303b31b8e2c5a966e05a40f93f98511fc77",
+          "passed": false,
+          "official_report_sha256": "27fb124769d4363cc732d0d6cb6b70a151cf7df168a68fa1ffcde094f4db7d5f"
+        },
+        "task-19": {
+          "status": "executable",
+          "page_manifest_sha256": "d8b0d76dfc98e62e3329c853020f3303b31b8e2c5a966e05a40f93f98511fc77",
+          "passed": false,
+          "official_report_sha256": "32f402be7593586eddf82cb331d146ba64cd5c50da683dfa9651a7a5668c4a8a"
+        },
+        "task-20": {
+          "status": "executable",
+          "page_manifest_sha256": "d8b0d76dfc98e62e3329c853020f3303b31b8e2c5a966e05a40f93f98511fc77",
+          "passed": false,
+          "official_report_sha256": "634abfc7636ab569e98063899c3ce8c4a54143548c8bee9aebd741d192ff3cbb"
+        }
+      },
+      "plain-1": {
+        "task-1": {
+          "status": "executable",
+          "page_manifest_sha256": "64fecf3f3171a780821508ed843652839e8f6462600521c7bc8c692fc9c6e139",
+          "passed": true,
+          "official_report_sha256": "5ceced0808adc432989186c814f360e263a37197cbb99e6e2fac558a16930d73"
+        },
+        "task-2": {
+          "status": "executable",
+          "page_manifest_sha256": "64fecf3f3171a780821508ed843652839e8f6462600521c7bc8c692fc9c6e139",
+          "passed": true,
+          "official_report_sha256": "2e0adce6d84088180e51bed6e6a3b818c31e2d0b3aa661aaa68a50ce0dc6547d"
+        },
+        "task-3": {
+          "status": "executable",
+          "page_manifest_sha256": "64fecf3f3171a780821508ed843652839e8f6462600521c7bc8c692fc9c6e139",
+          "passed": true,
+          "official_report_sha256": "00b6c4af2100d17f47363fba9912f7f12fcc24d612998d07547135b8564a93c0"
+        },
+        "task-4": {
+          "status": "executable",
+          "page_manifest_sha256": "64fecf3f3171a780821508ed843652839e8f6462600521c7bc8c692fc9c6e139",
+          "passed": true,
+          "official_report_sha256": "dc28a2fdf33bbf9e45caf290a82f5647eae3f3533905a6b86f3f9a67c246f525"
+        },
+        "task-5": {
+          "status": "executable",
+          "page_manifest_sha256": "64fecf3f3171a780821508ed843652839e8f6462600521c7bc8c692fc9c6e139",
+          "passed": true,
+          "official_report_sha256": "c170a1b3baab8f9292364c6e054a050c3e12d5326b6722bfcd233d456d7f88a6"
+        },
+        "task-6": {
+          "status": "executable",
+          "page_manifest_sha256": "64fecf3f3171a780821508ed843652839e8f6462600521c7bc8c692fc9c6e139",
+          "passed": true,
+          "official_report_sha256": "00ebe8bff39f3882ca85d3e7e3c03cb2d93b8544959587a0575b73d2f9ea32e7"
+        },
+        "task-7": {
+          "status": "executable",
+          "page_manifest_sha256": "64fecf3f3171a780821508ed843652839e8f6462600521c7bc8c692fc9c6e139",
+          "passed": true,
+          "official_report_sha256": "0c3d772874e9d7dd02a786eb55e21edfaaf478793cc5ca6a3929458a5c4f5960"
+        },
+        "task-8": {
+          "status": "executable",
+          "page_manifest_sha256": "64fecf3f3171a780821508ed843652839e8f6462600521c7bc8c692fc9c6e139",
+          "passed": false,
+          "official_report_sha256": "5bb0c4a7c2bd47644be98344ac3c4c3d82257fa4db57c1f7d033b12a555995de"
+        },
+        "task-9": {
+          "status": "executable",
+          "page_manifest_sha256": "64fecf3f3171a780821508ed843652839e8f6462600521c7bc8c692fc9c6e139",
+          "passed": false,
+          "official_report_sha256": "65cbe9b889a230fa9999b2d9fc30eefc378162b9aba72a75246f98eede9c1c2e"
+        },
+        "task-10": {
+          "status": "executable",
+          "page_manifest_sha256": "64fecf3f3171a780821508ed843652839e8f6462600521c7bc8c692fc9c6e139",
+          "passed": true,
+          "official_report_sha256": "8bf33acb028a7c25e158f9bdefcfd36adbec422d672a756012fe6fd51f56de49"
+        },
+        "task-11": {
+          "status": "executable",
+          "page_manifest_sha256": "64fecf3f3171a780821508ed843652839e8f6462600521c7bc8c692fc9c6e139",
+          "passed": true,
+          "official_report_sha256": "d8e18fd89381eebc3d8a7e0d3999c83d051ed085df68b25c5a04606fc98ba148"
+        },
+        "task-12": {
+          "status": "executable",
+          "page_manifest_sha256": "64fecf3f3171a780821508ed843652839e8f6462600521c7bc8c692fc9c6e139",
+          "passed": true,
+          "official_report_sha256": "e5886b5e6c0808fde8adda441b3dd2e1e989568a50b0f6a9326e3150d895dfee"
+        },
+        "task-13": {
+          "status": "executable",
+          "page_manifest_sha256": "64fecf3f3171a780821508ed843652839e8f6462600521c7bc8c692fc9c6e139",
+          "passed": true,
+          "official_report_sha256": "ca623cc0fe45d4c9598c5b5e102066e53d075e54236e2932396b2b6b8d638f56"
+        },
+        "task-14": {
+          "status": "executable",
+          "page_manifest_sha256": "64fecf3f3171a780821508ed843652839e8f6462600521c7bc8c692fc9c6e139",
+          "passed": true,
+          "official_report_sha256": "89d70dfaef940a90828d5892efe209f27afce756115e1293c5de17ee48a978fc"
+        },
+        "task-15": {
+          "status": "executable",
+          "page_manifest_sha256": "64fecf3f3171a780821508ed843652839e8f6462600521c7bc8c692fc9c6e139",
+          "passed": true,
+          "official_report_sha256": "496e51b1ec8b6403ab92b02e1a2b91200be480258b1d427b127491304a9ab68d"
+        },
+        "task-16": {
+          "status": "executable",
+          "page_manifest_sha256": "64fecf3f3171a780821508ed843652839e8f6462600521c7bc8c692fc9c6e139",
+          "passed": true,
+          "official_report_sha256": "b10650ea8d94bdaf465b97a0c7d544eb9d3194ded9f2e489efcdc183678e69ec"
+        },
+        "task-17": {
+          "status": "executable",
+          "page_manifest_sha256": "64fecf3f3171a780821508ed843652839e8f6462600521c7bc8c692fc9c6e139",
+          "passed": true,
+          "official_report_sha256": "aef7f2ad581fcdc56f5ed8282a332c585bee4d084bf192df2a13f6a207df1b07"
+        },
+        "task-18": {
+          "status": "executable",
+          "page_manifest_sha256": "64fecf3f3171a780821508ed843652839e8f6462600521c7bc8c692fc9c6e139",
+          "passed": true,
+          "official_report_sha256": "0d0d522feacde19c9dd0a6cd0b8256218a8c9b069aecaa447c8a9872b5d67bb2"
+        },
+        "task-19": {
+          "status": "executable",
+          "page_manifest_sha256": "64fecf3f3171a780821508ed843652839e8f6462600521c7bc8c692fc9c6e139",
+          "passed": true,
+          "official_report_sha256": "12bbfd67de1752e1119d7f9afa9cc5aa9c8dbe7c9afdf1d38d0f2e82d45ee1af"
+        },
+        "task-20": {
+          "status": "executable",
+          "page_manifest_sha256": "64fecf3f3171a780821508ed843652839e8f6462600521c7bc8c692fc9c6e139",
+          "passed": true,
+          "official_report_sha256": "86916ae16f15d26af90e574bb35b18505b534396d1fbd480bbd010f58d8e6d6e"
+        }
+      },
+      "contract-1": {
+        "task-1": {
+          "status": "executable",
+          "page_manifest_sha256": "95a070bcfe18432e62bc0375d9991b4204215c79f88362fb255b82c5892367b0",
+          "passed": true,
+          "official_report_sha256": "b5aec8b145a396b8e37732bafe135c1cce0c504705712dc53bff79bcdfa9b5c9"
+        },
+        "task-2": {
+          "status": "executable",
+          "page_manifest_sha256": "95a070bcfe18432e62bc0375d9991b4204215c79f88362fb255b82c5892367b0",
+          "passed": true,
+          "official_report_sha256": "3ec42f413dbced716dab236fe8da0008fecc1d9def5737118aae6e668c3340ae"
+        },
+        "task-3": {
+          "status": "executable",
+          "page_manifest_sha256": "95a070bcfe18432e62bc0375d9991b4204215c79f88362fb255b82c5892367b0",
+          "passed": true,
+          "official_report_sha256": "39b4b40152630654bfe6241c4a4993744ce9817b90387137c6612a77068f909c"
+        },
+        "task-4": {
+          "status": "executable",
+          "page_manifest_sha256": "95a070bcfe18432e62bc0375d9991b4204215c79f88362fb255b82c5892367b0",
+          "passed": true,
+          "official_report_sha256": "e714bdc39a6836fcbb242e048feda8fc4c1c76f7f046ecac207297af3a061e5f"
+        },
+        "task-5": {
+          "status": "executable",
+          "page_manifest_sha256": "95a070bcfe18432e62bc0375d9991b4204215c79f88362fb255b82c5892367b0",
+          "passed": true,
+          "official_report_sha256": "a2d1e9161b09fd4282e8c28c508a49b05a447299ce7bdbf57604a197d77bb9d4"
+        },
+        "task-6": {
+          "status": "executable",
+          "page_manifest_sha256": "95a070bcfe18432e62bc0375d9991b4204215c79f88362fb255b82c5892367b0",
+          "passed": true,
+          "official_report_sha256": "87550ef9ef493b04af27cd3353d0f22e88e2fe2f914ad3f231c98aeb797ebe5a"
+        },
+        "task-7": {
+          "status": "executable",
+          "page_manifest_sha256": "95a070bcfe18432e62bc0375d9991b4204215c79f88362fb255b82c5892367b0",
+          "passed": true,
+          "official_report_sha256": "3c53803ae6d488f79eea99a76e09670992394241a40bf6cd250c40cabae4e030"
+        },
+        "task-8": {
+          "status": "executable",
+          "page_manifest_sha256": "95a070bcfe18432e62bc0375d9991b4204215c79f88362fb255b82c5892367b0",
+          "passed": false,
+          "official_report_sha256": "813e9a7172d5a21a0b7bb5ce074b42154b002323ae5b9c30251490e2b1ff548c"
+        },
+        "task-9": {
+          "status": "executable",
+          "page_manifest_sha256": "95a070bcfe18432e62bc0375d9991b4204215c79f88362fb255b82c5892367b0",
+          "passed": false,
+          "official_report_sha256": "0baeff68e2f356649864857a05cf90dc2be43c335ad5c664f340d6b53bb56f9d"
+        },
+        "task-10": {
+          "status": "executable",
+          "page_manifest_sha256": "95a070bcfe18432e62bc0375d9991b4204215c79f88362fb255b82c5892367b0",
+          "passed": true,
+          "official_report_sha256": "5aa66676ef2016667799bbd0e048e648f848963afa637fb4060c8acfde972a4c"
+        },
+        "task-11": {
+          "status": "executable",
+          "page_manifest_sha256": "95a070bcfe18432e62bc0375d9991b4204215c79f88362fb255b82c5892367b0",
+          "passed": true,
+          "official_report_sha256": "d5a30bd1faf72c4a62e1f82b5656cef9f6a567d5b22516fd8ab2e4ee2a06a28c"
+        },
+        "task-12": {
+          "status": "executable",
+          "page_manifest_sha256": "95a070bcfe18432e62bc0375d9991b4204215c79f88362fb255b82c5892367b0",
+          "passed": true,
+          "official_report_sha256": "d3c27548c080615210447d22158c577c3ab1388d2247c2025d7ab620bac6d1ca"
+        },
+        "task-13": {
+          "status": "executable",
+          "page_manifest_sha256": "95a070bcfe18432e62bc0375d9991b4204215c79f88362fb255b82c5892367b0",
+          "passed": true,
+          "official_report_sha256": "5e249f642f9e45c570eca54ddbdb6bad63942825d5d212ade293c58891012d75"
+        },
+        "task-14": {
+          "status": "executable",
+          "page_manifest_sha256": "95a070bcfe18432e62bc0375d9991b4204215c79f88362fb255b82c5892367b0",
+          "passed": true,
+          "official_report_sha256": "26a7286e5d324da32fa699b74300e1cc2e2581ad7c5337c295209f682443338d"
+        },
+        "task-15": {
+          "status": "executable",
+          "page_manifest_sha256": "95a070bcfe18432e62bc0375d9991b4204215c79f88362fb255b82c5892367b0",
+          "passed": true,
+          "official_report_sha256": "de2e138ccc15731ac2d6ab3e3321ebf56f6ba2a8b163381d7d41267854120ec2"
+        },
+        "task-16": {
+          "status": "executable",
+          "page_manifest_sha256": "95a070bcfe18432e62bc0375d9991b4204215c79f88362fb255b82c5892367b0",
+          "passed": true,
+          "official_report_sha256": "6665804dc453d1a4141ec02a367597f205dc01ab718099fc0a74b9b1de1b53ee"
+        },
+        "task-17": {
+          "status": "executable",
+          "page_manifest_sha256": "95a070bcfe18432e62bc0375d9991b4204215c79f88362fb255b82c5892367b0",
+          "passed": true,
+          "official_report_sha256": "f072a8301f6e1de7cab7caadb2d24a7d6c27ec38582e915d94624700207bfe6a"
+        },
+        "task-18": {
+          "status": "executable",
+          "page_manifest_sha256": "95a070bcfe18432e62bc0375d9991b4204215c79f88362fb255b82c5892367b0",
+          "passed": true,
+          "official_report_sha256": "4625c123921ad76652a4085e050ecef5babb05ae4ec5349c314c36df2ae49824"
+        },
+        "task-19": {
+          "status": "executable",
+          "page_manifest_sha256": "95a070bcfe18432e62bc0375d9991b4204215c79f88362fb255b82c5892367b0",
+          "passed": true,
+          "official_report_sha256": "a8a38271733b14cfd81681cc992e8eb709f20416948e229d6b9ad526485d0b4b"
+        },
+        "task-20": {
+          "status": "executable",
+          "page_manifest_sha256": "95a070bcfe18432e62bc0375d9991b4204215c79f88362fb255b82c5892367b0",
+          "passed": true,
+          "official_report_sha256": "9bff96849bfd99a7fa6e8c4338dde10c0de925a57a277fd6bf27c0f96dfcde70"
+        }
+      },
+      "plain-2": {
+        "task-1": {
+          "status": "executable",
+          "page_manifest_sha256": "7c64daa5b890e105368acaca2efc1fb2a9a54dbcba3524333dff2f0ac42ebcb8",
+          "passed": true,
+          "official_report_sha256": "9d25f558afdfdcba515fe3a902971c3e5cb9ec9ca77dd840f0fc15ae9d729dfe"
+        },
+        "task-2": {
+          "status": "executable",
+          "page_manifest_sha256": "7c64daa5b890e105368acaca2efc1fb2a9a54dbcba3524333dff2f0ac42ebcb8",
+          "passed": true,
+          "official_report_sha256": "5560b24e3bafba6ad513f8178f7e325a89f91684fdd3e5bfd5be3f62cf6cb2ba"
+        },
+        "task-3": {
+          "status": "executable",
+          "page_manifest_sha256": "7c64daa5b890e105368acaca2efc1fb2a9a54dbcba3524333dff2f0ac42ebcb8",
+          "passed": true,
+          "official_report_sha256": "c8d91b1eeb098afae6cf59dc51c632961108c7231641ddf851749d824600e134"
+        },
+        "task-4": {
+          "status": "executable",
+          "page_manifest_sha256": "7c64daa5b890e105368acaca2efc1fb2a9a54dbcba3524333dff2f0ac42ebcb8",
+          "passed": true,
+          "official_report_sha256": "2e55c94d82ac5acfd65168654ddb81d65f990bde7a93cf2cf37b1f344ede3616"
+        },
+        "task-5": {
+          "status": "executable",
+          "page_manifest_sha256": "7c64daa5b890e105368acaca2efc1fb2a9a54dbcba3524333dff2f0ac42ebcb8",
+          "passed": true,
+          "official_report_sha256": "915be3e6d223acd788d1017f7bd3bf1e0c76e234c6455b5f1d94f6cd246982a8"
+        },
+        "task-6": {
+          "status": "executable",
+          "page_manifest_sha256": "7c64daa5b890e105368acaca2efc1fb2a9a54dbcba3524333dff2f0ac42ebcb8",
+          "passed": true,
+          "official_report_sha256": "577a95134bcc658d4e45197a3577797a79a7b556512cdbb3dd7d4981400acdec"
+        },
+        "task-7": {
+          "status": "executable",
+          "page_manifest_sha256": "7c64daa5b890e105368acaca2efc1fb2a9a54dbcba3524333dff2f0ac42ebcb8",
+          "passed": true,
+          "official_report_sha256": "b2653f0fd08f7491e0cda295886a92243942491575982fedc41fb00433db6a27"
+        },
+        "task-8": {
+          "status": "executable",
+          "page_manifest_sha256": "7c64daa5b890e105368acaca2efc1fb2a9a54dbcba3524333dff2f0ac42ebcb8",
+          "passed": false,
+          "official_report_sha256": "ad4cd687561e6b58b03c7bd4e1377027f5ea90b94d756c3dffcc29f4db280af6"
+        },
+        "task-9": {
+          "status": "executable",
+          "page_manifest_sha256": "7c64daa5b890e105368acaca2efc1fb2a9a54dbcba3524333dff2f0ac42ebcb8",
+          "passed": false,
+          "official_report_sha256": "ab4b75c5ab413b3a9821f25c74e0031d6df875106bb812802b19b0d3f5d45076"
+        },
+        "task-10": {
+          "status": "executable",
+          "page_manifest_sha256": "7c64daa5b890e105368acaca2efc1fb2a9a54dbcba3524333dff2f0ac42ebcb8",
+          "passed": true,
+          "official_report_sha256": "b7cd1263cdfa879facf5dbb83fab64782312c6f6c791d587002c853b1f835a63"
+        },
+        "task-11": {
+          "status": "executable",
+          "page_manifest_sha256": "7c64daa5b890e105368acaca2efc1fb2a9a54dbcba3524333dff2f0ac42ebcb8",
+          "passed": true,
+          "official_report_sha256": "d0745ced3dd7d0c694851053b80865ba58981d55c8f04a13a24242a17eecc976"
+        },
+        "task-12": {
+          "status": "executable",
+          "page_manifest_sha256": "7c64daa5b890e105368acaca2efc1fb2a9a54dbcba3524333dff2f0ac42ebcb8",
+          "passed": true,
+          "official_report_sha256": "42ad915a9470f217e533803117d6431c1563e3f1c7e847bc85d5e16ddfc7f962"
+        },
+        "task-13": {
+          "status": "executable",
+          "page_manifest_sha256": "7c64daa5b890e105368acaca2efc1fb2a9a54dbcba3524333dff2f0ac42ebcb8",
+          "passed": true,
+          "official_report_sha256": "7eadf0c5675f138a8c4a22c7e723989064704f3610296358cb563d43b4579c48"
+        },
+        "task-14": {
+          "status": "executable",
+          "page_manifest_sha256": "7c64daa5b890e105368acaca2efc1fb2a9a54dbcba3524333dff2f0ac42ebcb8",
+          "passed": true,
+          "official_report_sha256": "6d90fd4bd56905cb0a94aa24396292e42e21087a6d519b0f61c3f88de67343f8"
+        },
+        "task-15": {
+          "status": "executable",
+          "page_manifest_sha256": "7c64daa5b890e105368acaca2efc1fb2a9a54dbcba3524333dff2f0ac42ebcb8",
+          "passed": true,
+          "official_report_sha256": "35604ed72aa1b3c98779ad4ea70537fa4d37429ccb82d91835c6de1ba86e8e49"
+        },
+        "task-16": {
+          "status": "executable",
+          "page_manifest_sha256": "7c64daa5b890e105368acaca2efc1fb2a9a54dbcba3524333dff2f0ac42ebcb8",
+          "passed": true,
+          "official_report_sha256": "213e49904f5e826a593719eba478d0d56492df8d3e4eea4c072c4b039a0775ba"
+        },
+        "task-17": {
+          "status": "executable",
+          "page_manifest_sha256": "7c64daa5b890e105368acaca2efc1fb2a9a54dbcba3524333dff2f0ac42ebcb8",
+          "passed": true,
+          "official_report_sha256": "8f14ac78d9761033fa7f27971fb068d408f5f8413ae68699f798009b238d2eb4"
+        },
+        "task-18": {
+          "status": "executable",
+          "page_manifest_sha256": "7c64daa5b890e105368acaca2efc1fb2a9a54dbcba3524333dff2f0ac42ebcb8",
+          "passed": true,
+          "official_report_sha256": "3682f0e475d7a08068ccf1e22f490d76ebd073509f1bbf75410cc99823a3dc2a"
+        },
+        "task-19": {
+          "status": "executable",
+          "page_manifest_sha256": "7c64daa5b890e105368acaca2efc1fb2a9a54dbcba3524333dff2f0ac42ebcb8",
+          "passed": true,
+          "official_report_sha256": "ab72e3103f785053966ff8040b8c68f1baff7831f8436752fabe6c62df806236"
+        },
+        "task-20": {
+          "status": "executable",
+          "page_manifest_sha256": "7c64daa5b890e105368acaca2efc1fb2a9a54dbcba3524333dff2f0ac42ebcb8",
+          "passed": true,
+          "official_report_sha256": "49659aa66febc387733abd564c9322215032011abb28f59214ef9a42926876b3"
+        }
+      },
+      "contract-2": {
+        "task-1": {
+          "status": "executable",
+          "page_manifest_sha256": "5e05aca114800aa7bdf558ecacc56f10d4cf62f2f5859a218ff39aef9cd82d1c",
+          "passed": true,
+          "official_report_sha256": "f782f65e024822e6b49c12fbcd071f75fa169efc2c08665154f4a90611892363"
+        },
+        "task-2": {
+          "status": "executable",
+          "page_manifest_sha256": "5e05aca114800aa7bdf558ecacc56f10d4cf62f2f5859a218ff39aef9cd82d1c",
+          "passed": true,
+          "official_report_sha256": "98f2708c334d29f14290195f926756ac473a3114ab4243bd3587597073c5248f"
+        },
+        "task-3": {
+          "status": "executable",
+          "page_manifest_sha256": "5e05aca114800aa7bdf558ecacc56f10d4cf62f2f5859a218ff39aef9cd82d1c",
+          "passed": true,
+          "official_report_sha256": "08d8f75bd81fde7a5e6df60cfdc39c7008c5bc7a4b66c1bed2f07f3b6fd03c82"
+        },
+        "task-4": {
+          "status": "executable",
+          "page_manifest_sha256": "5e05aca114800aa7bdf558ecacc56f10d4cf62f2f5859a218ff39aef9cd82d1c",
+          "passed": true,
+          "official_report_sha256": "f90d5223623f65987077499845e44e76e6e89a9543287bff9ef1a026ec507e39"
+        },
+        "task-5": {
+          "status": "executable",
+          "page_manifest_sha256": "5e05aca114800aa7bdf558ecacc56f10d4cf62f2f5859a218ff39aef9cd82d1c",
+          "passed": true,
+          "official_report_sha256": "9b384d51e242c1438b6b5305a93d7ab663bd4ec271e94a507420489429516d83"
+        },
+        "task-6": {
+          "status": "executable",
+          "page_manifest_sha256": "5e05aca114800aa7bdf558ecacc56f10d4cf62f2f5859a218ff39aef9cd82d1c",
+          "passed": true,
+          "official_report_sha256": "76a04404ad46df4149c833b5df409b174e106e7d6b4a69b79ebce79e8893c39e"
+        },
+        "task-7": {
+          "status": "executable",
+          "page_manifest_sha256": "5e05aca114800aa7bdf558ecacc56f10d4cf62f2f5859a218ff39aef9cd82d1c",
+          "passed": true,
+          "official_report_sha256": "7e1a29f8a8fff9ac588c0e2b3f42edde413f74b0cb77d76fb7ffb952aa65942d"
+        },
+        "task-8": {
+          "status": "executable",
+          "page_manifest_sha256": "5e05aca114800aa7bdf558ecacc56f10d4cf62f2f5859a218ff39aef9cd82d1c",
+          "passed": true,
+          "official_report_sha256": "1ba780a501727afefe0e78f49bee5f35166ca0a5a92f20dc4a10f2272dcf814f"
+        },
+        "task-9": {
+          "status": "executable",
+          "page_manifest_sha256": "5e05aca114800aa7bdf558ecacc56f10d4cf62f2f5859a218ff39aef9cd82d1c",
+          "passed": false,
+          "official_report_sha256": "e1aecf5e78af7ad86f1d58dc4c60c6bcd24ec91455bb626caf6963ae032821f5"
+        },
+        "task-10": {
+          "status": "executable",
+          "page_manifest_sha256": "5e05aca114800aa7bdf558ecacc56f10d4cf62f2f5859a218ff39aef9cd82d1c",
+          "passed": true,
+          "official_report_sha256": "bbf80dc8d969843ab0b8ba858324d6b8bc0098078f5d737f36c33305e6ebaf40"
+        },
+        "task-11": {
+          "status": "executable",
+          "page_manifest_sha256": "5e05aca114800aa7bdf558ecacc56f10d4cf62f2f5859a218ff39aef9cd82d1c",
+          "passed": true,
+          "official_report_sha256": "95c007de2c39aecf90b025abfff48ade2c925234755d1f6b56c19a9b2d372de6"
+        },
+        "task-12": {
+          "status": "executable",
+          "page_manifest_sha256": "5e05aca114800aa7bdf558ecacc56f10d4cf62f2f5859a218ff39aef9cd82d1c",
+          "passed": true,
+          "official_report_sha256": "cd4c4b8dd8e59be37968ceb4d8d8f15612667478fa51265e7cd5421e18dbb0d9"
+        },
+        "task-13": {
+          "status": "executable",
+          "page_manifest_sha256": "5e05aca114800aa7bdf558ecacc56f10d4cf62f2f5859a218ff39aef9cd82d1c",
+          "passed": true,
+          "official_report_sha256": "603d6fcddea2111ddff0b596cb164952e6fbc6cf6d184ea91a974ec3d2b1a3a9"
+        },
+        "task-14": {
+          "status": "executable",
+          "page_manifest_sha256": "5e05aca114800aa7bdf558ecacc56f10d4cf62f2f5859a218ff39aef9cd82d1c",
+          "passed": true,
+          "official_report_sha256": "b8d5e840101358697f113407072a20cd8fadafa7abc9e1b5da47716c86a85fb3"
+        },
+        "task-15": {
+          "status": "executable",
+          "page_manifest_sha256": "5e05aca114800aa7bdf558ecacc56f10d4cf62f2f5859a218ff39aef9cd82d1c",
+          "passed": true,
+          "official_report_sha256": "cc918b2cb917a8a889af8539a64d5efe854663d45dbcb0db18989a627c55efdc"
+        },
+        "task-16": {
+          "status": "executable",
+          "page_manifest_sha256": "5e05aca114800aa7bdf558ecacc56f10d4cf62f2f5859a218ff39aef9cd82d1c",
+          "passed": true,
+          "official_report_sha256": "5dc1f52597badb585dc64d3ff81f98045d2dd8c0cf4b9161e9beb36d37a36fe5"
+        },
+        "task-17": {
+          "status": "executable",
+          "page_manifest_sha256": "5e05aca114800aa7bdf558ecacc56f10d4cf62f2f5859a218ff39aef9cd82d1c",
+          "passed": true,
+          "official_report_sha256": "ce32d7e041718353377373f1a990dff6a0216f53ff09ab2ef357dc620410bb50"
+        },
+        "task-18": {
+          "status": "executable",
+          "page_manifest_sha256": "5e05aca114800aa7bdf558ecacc56f10d4cf62f2f5859a218ff39aef9cd82d1c",
+          "passed": true,
+          "official_report_sha256": "d96c8fcf3f106fd5755e8f87f6a1181b70be78d9cfc4b651001b69b95a70b3ab"
+        },
+        "task-19": {
+          "status": "executable",
+          "page_manifest_sha256": "5e05aca114800aa7bdf558ecacc56f10d4cf62f2f5859a218ff39aef9cd82d1c",
+          "passed": true,
+          "official_report_sha256": "41906fe644f24120ff582b216511a52eec4c5e00cf9b9b264eab7aad64398d91"
+        },
+        "task-20": {
+          "status": "executable",
+          "page_manifest_sha256": "5e05aca114800aa7bdf558ecacc56f10d4cf62f2f5859a218ff39aef9cd82d1c",
+          "passed": true,
+          "official_report_sha256": "3797f24a9edc3a0062a566342975ece19af5c76ee20437a3528773f870bf0d7a"
+        }
+      }
+    }
+  },
+  "confirmation": {
+    "rule": "Within each repeat compare contract with its ordinary-prompt sibling and the original library on all 20 primary targets (strict increases). The held-out response cohort must also have all 20 observed, no net decline versus original, and at least one newly passed target in each contract repeat.",
+    "backend_vs_original_primary_up_archive_nondecline_and_gain": {
+      "plain-1": true,
+      "contract-1": true,
+      "plain-2": true,
+      "contract-2": true
+    },
+    "primary_contract_strictly_above_its_plain_sibling": {
+      "contract-1": false,
+      "contract-2": false
+    },
+    "qualified_for_retesting": false
+  },
+  "verification": {
+    "candidate_seal_utc": "2026-11-23T05:36:48.497470+00:00",
+    "candidate_seal_sha256": "51e1a768d704394315a978bb1dd24edbf11b93c10960de757eb430166ed76edd",
+    "builder_seal_sha256": "f4025e68a1538d38922de8c484e368389d7f8a7b56ca69ef4f8c5488a0bdd517",
+    "official_evaluation_complete_utc": "2026-11-23T05:47:23.546472+00:00",
+    "original_source_summary_sha256": "6b20fb347ff9a0b15c1472f766a54c2d5039f50d81710a320845f054ae0b42e9",
+    "official_reports": 220,
+    "reused_reports": 0,
+    "runtime": {
+      "playwright": "1.57.0",
+      "browser": "chromium",
+      "runtime_lock_sha256": "8fa4eafc6d9ac3b1e4080c42696e80c3ac544b091f8432afef23d5b4e7d0cf1f",
+      "test_utility_sha256": {
+        "index.js": "7319676beceb1478e73f9c5a9f1571618bc39e94084017b14ae44807e81b06e7",
+        "css.js": "f59d504d2b141c48b40e9907d03dae670efc23de7c1ebf800f72e7642c598fb7"
+      },
+      "prior_runtime_manifest_sha256": "2414d09a5b8379a8ccbe0643a50f63d88ae532af2b9040f1e03e3d9634ee0565"
+    },
+    "new_planner_api_calls": 0
+  },
+  "limitations": "The original builder used a different model and information. A primary gain shared by both new prompts supports a rebuilt backend, not a prompt-specific advantage. Both cohorts cover the same project and the same task IDs. Fixed example 1 is a separate control."
+}

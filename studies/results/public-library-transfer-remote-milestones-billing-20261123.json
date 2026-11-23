@@ -1,0 +1,72 @@
+{
+  "deployment": {
+    "mistralai/mistral-small-3.2-24b-instruct": {
+      "only_milestones": {
+        "direct": {
+          "calls": 10,
+          "settled_microusd": 6376,
+          "exposure_microusd": 6376,
+          "unsettled_calls": 0
+        },
+        "codex-1": {
+          "calls": 10,
+          "settled_microusd": 1316,
+          "exposure_microusd": 1316,
+          "unsettled_calls": 0
+        },
+        "codex-2": {
+          "calls": 10,
+          "settled_microusd": 1306,
+          "exposure_microusd": 1306,
+          "unsettled_calls": 0
+        }
+      },
+      "whole_shared_ledger": {
+        "calls": 450,
+        "settled_usd": 0.143392,
+        "exposure_usd": 0.235231,
+        "unsettled_calls": 26,
+        "cap_usd": 3.5,
+        "stop_usd": 3.5,
+        "halted": 0
+      },
+      "ledger": "artifacts/public-library-transfer-remote-20261123/mistral/budget.sqlite3"
+    },
+    "openai/gpt-oss-120b": {
+      "only_milestones": {
+        "direct": {
+          "calls": 10,
+          "settled_microusd": 4065,
+          "exposure_microusd": 4065,
+          "unsettled_calls": 0
+        },
+        "codex-1": {
+          "calls": 10,
+          "settled_microusd": 539,
+          "exposure_microusd": 539,
+          "unsettled_calls": 0
+        },
+        "codex-2": {
+          "calls": 10,
+          "settled_microusd": 529,
+          "exposure_microusd": 529,
+          "unsettled_calls": 0
+        }
+      },
+      "whole_shared_ledger": {
+        "calls": 345,
+        "settled_usd": 0.057491,
+        "exposure_usd": 0.089174,
+        "unsettled_calls": 9,
+        "cap_usd": 3.5,
+        "stop_usd": 3.5,
+        "halted": 0
+      },
+      "ledger": "artifacts/public-library-transfer-remote-20261123/oss/budget.sqlite3"
+    }
+  },
+  "previous_eight_project_snapshot": "studies/results/public-library-transfer-remote-billing-20261123.json",
+  "snapshot_sha256": "b7a315d3a4fff08724156b2eadeb76c580d05d4560ec626f4f1640b2349dff2d",
+  "registration_sha256": "50f4e33c0eea09c392d42a656c766e755721c645b8d28ddf6e7802b4e1d99cd2",
+  "construction": "Counted once in parent study, shared across all deployers."
+}

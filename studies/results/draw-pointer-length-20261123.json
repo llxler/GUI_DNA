@@ -1,0 +1,809 @@
+{
+  "project": "draw",
+  "post_hoc": true,
+  "new_browser_runs": 0,
+  "new_api_calls": 0,
+  "reason": "Both direct GPT-OSS pages drew lines, but missed the preregistered absolute location in the long-drag control.",
+  "rule": "Ignore common translation of both endpoints; retain 0.6 tolerance, an 18-unit horizontal positive control, both repeats and all pages. The early goal is 3 units horizontally; the later goal is length 9.",
+  "primary_sha256": "be05b5b98af3ef4e181baeb9b81f64779406fe682f99e7b66f2ff0f1ae99e703",
+  "analysis_sha256": "1cd1589c1144f6a09cd10e945bb56eded613a46bf0d3ab66f4312af6af31853e",
+  "settings": {
+    "minimum length": 162
+  },
+  "pairs": {
+    "openai__gpt-5/direct": {
+      "task_8": "release displacement",
+      "task_12": "long control unavailable",
+      "length_goals_met": 1
+    },
+    "openai__gpt-5/anthropic__claude-sonnet-4.5": {
+      "task_8": "minimum length",
+      "task_12": "minimum length",
+      "length_goals_met": 1
+    },
+    "openai__gpt-5/openai__gpt-5": {
+      "task_8": "minimum length",
+      "task_12": "minimum length",
+      "length_goals_met": 1
+    },
+    "openai__gpt-oss-120b/direct": {
+      "task_8": "release displacement",
+      "task_12": "minimum length",
+      "length_goals_met": 2
+    },
+    "openai__gpt-oss-120b/anthropic__claude-sonnet-4.5": {
+      "task_8": "minimum length",
+      "task_12": "minimum length",
+      "length_goals_met": 1
+    },
+    "openai__gpt-oss-120b/openai__gpt-5": {
+      "task_8": "minimum length",
+      "task_12": "minimum length",
+      "length_goals_met": 1
+    }
+  },
+  "workflow_and_control_measurements": {
+    "control/reference": {
+      "strict": "minimum length",
+      "relative": "minimum length",
+      "raw": {
+        "3": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              89,
+              80
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              89,
+              80
+            ],
+            "width": "9px"
+          }
+        ],
+        "18": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              98,
+              80
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              98,
+              80
+            ],
+            "width": "9px"
+          }
+        ]
+      }
+    },
+    "control/starter": {
+      "strict": "long control unavailable",
+      "relative": "long control unavailable",
+      "raw": {
+        "3": [
+          {
+            "status": "missing public SVG or controls"
+          },
+          {
+            "status": "missing public SVG or controls"
+          }
+        ],
+        "18": [
+          {
+            "status": "missing public SVG or controls"
+          },
+          {
+            "status": "missing public SVG or controls"
+          }
+        ]
+      }
+    },
+    "control/blank": {
+      "strict": "long control unavailable",
+      "relative": "long control unavailable",
+      "raw": {
+        "3": [
+          {
+            "status": "missing public SVG or controls"
+          },
+          {
+            "status": "missing public SVG or controls"
+          }
+        ],
+        "18": [
+          {
+            "status": "missing public SVG or controls"
+          },
+          {
+            "status": "missing public SVG or controls"
+          }
+        ]
+      }
+    },
+    "candidate/openai__gpt-5/direct/task-8": {
+      "strict": "release position",
+      "relative": "release displacement",
+      "raw": {
+        "3": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              83,
+              80
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              83,
+              80
+            ],
+            "width": "9px"
+          }
+        ],
+        "18": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              98,
+              80
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              98,
+              80
+            ],
+            "width": "9px"
+          }
+        ]
+      }
+    },
+    "candidate/openai__gpt-5/direct/task-12": {
+      "strict": "long control unavailable",
+      "relative": "long control unavailable",
+      "raw": {
+        "3": [
+          {
+            "status": "missing public SVG or controls"
+          },
+          {
+            "status": "missing public SVG or controls"
+          }
+        ],
+        "18": [
+          {
+            "status": "missing public SVG or controls"
+          },
+          {
+            "status": "missing public SVG or controls"
+          }
+        ]
+      }
+    },
+    "candidate/openai__gpt-5/anthropic__claude-sonnet-4.5/task-8": {
+      "strict": "minimum length",
+      "relative": "minimum length",
+      "raw": {
+        "3": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              89,
+              80
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              89,
+              80
+            ],
+            "width": "9px"
+          }
+        ],
+        "18": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              98,
+              80
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              98,
+              80
+            ],
+            "width": "9px"
+          }
+        ]
+      }
+    },
+    "candidate/openai__gpt-5/anthropic__claude-sonnet-4.5/task-12": {
+      "strict": "minimum length",
+      "relative": "minimum length",
+      "raw": {
+        "3": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              89,
+              80
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              89,
+              80
+            ],
+            "width": "9px"
+          }
+        ],
+        "18": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              98,
+              80
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              98,
+              80
+            ],
+            "width": "9px"
+          }
+        ]
+      }
+    },
+    "candidate/openai__gpt-5/openai__gpt-5/task-8": {
+      "strict": "minimum length",
+      "relative": "minimum length",
+      "raw": {
+        "3": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              89,
+              80
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              89,
+              80
+            ],
+            "width": "9px"
+          }
+        ],
+        "18": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              98,
+              80
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              98,
+              80
+            ],
+            "width": "9px"
+          }
+        ]
+      }
+    },
+    "candidate/openai__gpt-5/openai__gpt-5/task-12": {
+      "strict": "minimum length",
+      "relative": "minimum length",
+      "raw": {
+        "3": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              89,
+              80
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              89,
+              80
+            ],
+            "width": "9px"
+          }
+        ],
+        "18": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              98,
+              80
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              98,
+              80
+            ],
+            "width": "9px"
+          }
+        ]
+      }
+    },
+    "candidate/openai__gpt-oss-120b/direct/task-8": {
+      "strict": "long control unavailable",
+      "relative": "release displacement",
+      "raw": {
+        "3": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              79.109375
+            ],
+            "end": [
+              83,
+              79.109375
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              79.109375
+            ],
+            "end": [
+              83,
+              79.109375
+            ],
+            "width": "9px"
+          }
+        ],
+        "18": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              79.109375
+            ],
+            "end": [
+              98,
+              79.109375
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              79.109375
+            ],
+            "end": [
+              98,
+              79.109375
+            ],
+            "width": "9px"
+          }
+        ]
+      }
+    },
+    "candidate/openai__gpt-oss-120b/direct/task-12": {
+      "strict": "long control unavailable",
+      "relative": "minimum length",
+      "raw": {
+        "3": [
+          {
+            "status": "line",
+            "start": [
+              81,
+              81
+            ],
+            "end": [
+              90,
+              81
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              81,
+              81
+            ],
+            "end": [
+              90,
+              81
+            ],
+            "width": "9px"
+          }
+        ],
+        "18": [
+          {
+            "status": "line",
+            "start": [
+              81,
+              81
+            ],
+            "end": [
+              99,
+              81
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              81,
+              81
+            ],
+            "end": [
+              99,
+              81
+            ],
+            "width": "9px"
+          }
+        ]
+      }
+    },
+    "candidate/openai__gpt-oss-120b/anthropic__claude-sonnet-4.5/task-8": {
+      "strict": "minimum length",
+      "relative": "minimum length",
+      "raw": {
+        "3": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              89,
+              80
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              89,
+              80
+            ],
+            "width": "9px"
+          }
+        ],
+        "18": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              98,
+              80
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              98,
+              80
+            ],
+            "width": "9px"
+          }
+        ]
+      }
+    },
+    "candidate/openai__gpt-oss-120b/anthropic__claude-sonnet-4.5/task-12": {
+      "strict": "minimum length",
+      "relative": "minimum length",
+      "raw": {
+        "3": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              89,
+              80
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              89,
+              80
+            ],
+            "width": "9px"
+          }
+        ],
+        "18": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              98,
+              80
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              98,
+              80
+            ],
+            "width": "9px"
+          }
+        ]
+      }
+    },
+    "candidate/openai__gpt-oss-120b/openai__gpt-5/task-8": {
+      "strict": "minimum length",
+      "relative": "minimum length",
+      "raw": {
+        "3": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              89,
+              80
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              89,
+              80
+            ],
+            "width": "9px"
+          }
+        ],
+        "18": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              98,
+              80
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              98,
+              80
+            ],
+            "width": "9px"
+          }
+        ]
+      }
+    },
+    "candidate/openai__gpt-oss-120b/openai__gpt-5/task-12": {
+      "strict": "minimum length",
+      "relative": "minimum length",
+      "raw": {
+        "3": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              89,
+              80
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              89,
+              80
+            ],
+            "width": "9px"
+          }
+        ],
+        "18": [
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              98,
+              80
+            ],
+            "width": "9px"
+          },
+          {
+            "status": "line",
+            "start": [
+              80,
+              80
+            ],
+            "end": [
+              98,
+              80
+            ],
+            "width": "9px"
+          }
+        ]
+      }
+    }
+  }
+}
