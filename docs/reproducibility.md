@@ -125,3 +125,5 @@ artifacts/presentation-build/venv/bin/python artifacts/presentation-build/render
 - 仓库保留上游许可证和来源说明。数据与匿名下载地址仍待作者审核，见 [roadmap](roadmap.md)。
 
 2026-11-18 的当前报告包为 `current-report-20261118.zip`，使用 [导出与解包说明](../studies/current_bundle/README.md)。在本机另行解包后，正式、兼容两个入口重算一致，核对 80 个预定位置、147 条精简浏览器报告（127 份不同原件），两个项目共七次真实浏览器抽查与原判定一致。哈希与逐页结果见 [验收记录](../studies/results/current-report-validation-20261118.json)。
+
+Table 1 B 区的离线绑定列可从公开的逐题 JSON 直接重建：运行 `uv run python -m studies.public_library_transfer.self_refinement.suite_comparisons` 核对两个套件的六个模型、每格目标与从零差集。逐个浏览器/Jest 收据的本机检查见 [TodoMVC](../studies/public_library_transfer/self_refinement/todomvc/source_binding/README.md) 和 [Duo](../studies/public_library_transfer/self_refinement/duo_composition/README.md)。人工库的来源、项目差异与建库模型的已知交付问题单列在[设计依据](library-preparation-design.md)。

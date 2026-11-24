@@ -1,0 +1,355 @@
+{
+  "kind": "Offline deterministic deployment of previously model-written source",
+  "direct": {
+    "todomvc": "same source extraction as construction",
+    "duo": "source extraction and default-export declaration repair"
+  },
+  "models": {
+    "deepseek/deepseek-v4-flash": {
+      "todomvc": {
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "n": 8,
+        "passed": {
+          "direct": 2,
+          "bound": 8,
+          "fixed": 8,
+          "strict_direct": 2,
+          "strict_self": 8
+        },
+        "bound_only": [
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "direct_only": []
+      },
+      "duo": {
+        "targets": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "n": 10,
+        "passed": {
+          "bound": 0,
+          "fixed": 0,
+          "strict_self": 0,
+          "strict_direct": 6,
+          "direct": 6
+        },
+        "bound_only": [],
+        "direct_only": [
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "assignTaskToProject_assignTaskToUser"
+        ]
+      }
+    },
+    "google/gemma-3-12b-it": {
+      "todomvc": {
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "n": 8,
+        "passed": {
+          "direct": 4,
+          "bound": 6,
+          "fixed": 6,
+          "strict_direct": 4,
+          "strict_self": 0
+        },
+        "bound_only": [
+          "todo-06",
+          "todo-07"
+        ],
+        "direct_only": []
+      },
+      "duo": {
+        "targets": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "n": 10,
+        "passed": {
+          "bound": 0,
+          "fixed": 0,
+          "strict_self": 0,
+          "strict_direct": 1,
+          "direct": 1
+        },
+        "bound_only": [],
+        "direct_only": [
+          "addCanonicalUrl_addComment"
+        ]
+      }
+    },
+    "mistralai/mistral-small-3.2-24b-instruct": {
+      "todomvc": {
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "n": 8,
+        "passed": {
+          "direct": 8,
+          "bound": 1,
+          "fixed": 1,
+          "strict_direct": 8,
+          "strict_self": 0
+        },
+        "bound_only": [],
+        "direct_only": [
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ]
+      },
+      "duo": {
+        "targets": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "n": 10,
+        "passed": {
+          "bound": 4,
+          "fixed": 0,
+          "strict_self": 0,
+          "strict_direct": 0,
+          "direct": 4
+        },
+        "bound_only": [
+          "approveOrRejectTaskReview_projectCustomWorkflows"
+        ],
+        "direct_only": [
+          "addCommentToTask_setTaskDeadline"
+        ]
+      }
+    },
+    "openai/gpt-oss-120b": {
+      "todomvc": {
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "n": 8,
+        "passed": {
+          "direct": 8,
+          "bound": 8,
+          "fixed": 8,
+          "strict_direct": 8,
+          "strict_self": 8
+        },
+        "bound_only": [],
+        "direct_only": []
+      },
+      "duo": {
+        "targets": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "n": 10,
+        "passed": {
+          "bound": 6,
+          "fixed": 1,
+          "strict_self": 0,
+          "strict_direct": 5,
+          "direct": 5
+        },
+        "bound_only": [
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_setTaskPriority"
+        ],
+        "direct_only": [
+          "addCanonicalUrl_assignPostToCategory"
+        ]
+      }
+    },
+    "qwen/qwen3-coder-30b-a3b-instruct": {
+      "todomvc": {
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "n": 8,
+        "passed": {
+          "direct": 8,
+          "bound": 8,
+          "fixed": 8,
+          "strict_direct": 8,
+          "strict_self": 0
+        },
+        "bound_only": [],
+        "direct_only": []
+      },
+      "duo": {
+        "targets": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "n": 10,
+        "passed": {
+          "bound": 2,
+          "fixed": 1,
+          "strict_self": 1,
+          "strict_direct": 4,
+          "direct": 4
+        },
+        "bound_only": [
+          "addCommentToTask_setTaskDeadline",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "direct_only": [
+          "addCanonicalUrl_addComment",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority"
+        ]
+      }
+    },
+    "qwen/qwen3.5-9b": {
+      "todomvc": {
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "n": 8,
+        "passed": {
+          "direct": 1,
+          "bound": 0,
+          "fixed": 0,
+          "strict_direct": 1,
+          "strict_self": 0
+        },
+        "bound_only": [],
+        "direct_only": [
+          "todo-02"
+        ]
+      },
+      "duo": {
+        "targets": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "n": 10,
+        "passed": {
+          "bound": 3,
+          "fixed": 0,
+          "strict_self": 1,
+          "strict_direct": 2,
+          "direct": 2
+        },
+        "bound_only": [
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows"
+        ],
+        "direct_only": [
+          "addCanonicalUrl_editTag"
+        ]
+      }
+    }
+  },
+  "sources_sha256": {
+    "studies/public_library_transfer/self_refinement/todomvc/source_binding/result.json": "7d9328ea93b4257a4ad3615f39c53f3eb605c6ad0a4c4436c2dcc43b08bcaae8",
+    "studies/public_library_transfer/self_refinement/duo_composition/result.json": "5ecce803e7ade443e89fd1296700f1429820c7941f3f18c19df45c62a52597f0",
+    "studies/public_library_transfer/self_refinement/duo_composition/declaration-result.json": "6d546ac665b7613287a435317b73e1bca5cdd4fdcbf48e198686f4d5b045398d",
+    "studies/public_library_transfer/self_refinement/duo_composition/direct-result.json": "b5844bda0f586f2dd3207d2ce7c895a6a9282fe21c221db1868efa776a017136",
+    "studies/public_library_transfer/self_refinement/duo_composition/single-result.json": "178e1943f8c4fae5f0b07daf9a6667829ada2993257649cde81522433ec001b7"
+  }
+}

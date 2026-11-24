@@ -1,0 +1,908 @@
+{
+  "registered_utc": "2026-11-24T10:23:38.905606+00:00",
+  "registered_sha256": "eaa65aa73b56907a38fdaadd6129382d95d7921cccd7941971bd076d58953536",
+  "sources": {
+    "studies/public_library_transfer/self_refinement/duo_composition/SINGLE.md": "dbea56744c7b16eeaf31f0af05020559c9dd0a6c5937888628dd466d50110ebb",
+    "studies/public_library_transfer/self_refinement/duo_composition/single.py": "92bdb6a575dba6f08eab2c0d2ea13fa0d754385f01b7a941602fa520e3276b13",
+    "studies/public_library_transfer/other_benchmarks/duo_admission.py": "faffdd44285063d4f42bf5b66b67793faedfebb60cca6b7c377013468734be7d",
+    "studies/public_library_transfer/self_refinement/duo_composition/result.json": "5ecce803e7ade443e89fd1296700f1429820c7941f3f18c19df45c62a52597f0",
+    "artifacts/duo-component-replay-20261124/seal.json": "b9042c39571dd6ddefd60292fac9a25080e48df50085bd1b09c30ffa772c74d8"
+  },
+  "rows": {
+    "qwen/qwen3-coder-30b-a3b-instruct": {
+      "addAltTextToImage": {
+        "group": "blogging",
+        "test_sha256": "5084139d4b378bcc15ab0b3fce763eec421aca0c2ccbee3b86b3a178f3732e44",
+        "component": "altTextEditor",
+        "source_sha256": "7f6e1c528bc50bb30ed6a22ebeaaeee6a17da6ae90b4906a2a301136a125a498",
+        "passed": false,
+        "cases_passed": 1,
+        "report_sha256": "8cde0e5402972a46b21f71b4305785ebe2e7efe06e3bc1a08957a6921bacb7f9"
+      },
+      "addCanonicalUrl": {
+        "group": "blogging",
+        "test_sha256": "18b9cf4abfedd5d002960da21ebbd201c19c255b29ec160e1f0a0c747385df65",
+        "component": "canonicalUrlEditor",
+        "source_sha256": "45a6f95ba696ef753bf69e9c0a2a7a1797b2ce26bdfa13c32985e698737d4cd6",
+        "passed": false,
+        "cases_passed": 1,
+        "report_sha256": "91dcf49984c14a8df8ae8b7afdd069f23fffbbb57492a2ad9c538248c0a36364"
+      },
+      "addComment": {
+        "group": "blogging",
+        "test_sha256": "d7c26368f0bc0185a8981b904ccc4c3131ab7dc7cac083adb960636d30826645",
+        "component": "commentManager",
+        "source_sha256": "8763ad4d11f7b905847fc150e4e3cdb5a0d4609e34abf842640f2f34ee99e866",
+        "passed": false,
+        "cases_passed": 1,
+        "report_sha256": "a9e1e96fe18e564cd8924c9d1413de9775d3003d1d96d4e9e6cb1bc6f5a59146"
+      },
+      "assignPostToCategory": {
+        "group": "blogging",
+        "test_sha256": "980c512ed8ab0a9a38a8fbe701edbd3f21fdadb38f90a7de64fe9937ae518fd5",
+        "component": "categoryAssigner",
+        "source_sha256": "81723096d23b5f1361a3f09e6481080a6223c904db71098a25c3df4208f476b3",
+        "passed": false,
+        "cases_passed": 0,
+        "report_sha256": "1a0d1adebce1915889335cdc45349a304870b768dc04214b61e8ba97679feddf"
+      },
+      "editComment": {
+        "group": "blogging",
+        "test_sha256": "e34d853e100c07f455023f34ac9befb7c6af32da1ee47819dd89562754f2a963",
+        "component": null
+      },
+      "editTag": {
+        "group": "blogging",
+        "test_sha256": "515d1efc6045b86f89914b5b6aa6099a26950141c0e66c7feefa26f49a86aa32",
+        "component": "tagEditor",
+        "source_sha256": "5a5de4650d30a53de9472d4e9d9da2f3a811cda4ff8b6289683faee4fad4ca3c",
+        "passed": false,
+        "cases_passed": 0,
+        "report_sha256": "60fcfbf9e3a86cb3909179529f6c37ba2a403923e68db363758ed360b01679da"
+      },
+      "postPerformanceReport": {
+        "group": "blogging",
+        "test_sha256": "8e85f6a421ce14112f1ef83ddfba7569ba21c3e19b3362eab7c9e9b94c5cb37b",
+        "component": "postPerformanceReporter",
+        "source_sha256": "922789d0aae22706f7fbf56f87cbebeb077340092b2e2f482fb41b4532aacce2",
+        "passed": false,
+        "cases_passed": 0,
+        "report_sha256": "d07c94f45c5c29edacb07723e8c5dd73e7988e2cae3d8ede7fd79c905aa09eba"
+      },
+      "addCommentToTask": {
+        "group": "taskmanagement",
+        "test_sha256": "d57ab382f6bb6219c8f6516e1f0e28c8e83c6a969da2c5d88b3c20eab855db6b",
+        "component": "addCommentToTask",
+        "source_sha256": "184c665c2617d495646981afd88ba77931d794117c12d3971cb852cc7d2fab20",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "2bc907886064c4415c6855fd226949905856ed73c83a6197338d683af8815c55"
+      },
+      "approveOrRejectTaskReview": {
+        "group": "taskmanagement",
+        "test_sha256": "58471f1aa537ed65b00712248ce1623b3f3d44b441a9153a299c7dbfa58ec6e5",
+        "component": "approveOrRejectTaskReview",
+        "source_sha256": "354c5ccbb52090750fdb89308f50e1f3a4f86cbdcf47d6360780233e983e16b0",
+        "passed": false,
+        "cases_passed": 1,
+        "report_sha256": "68d62ca97e4fc546a7638c42cef792c68612c389bd5e6652a0284a4fe0f3192e"
+      },
+      "assignTaskToProject": {
+        "group": "taskmanagement",
+        "test_sha256": "e24aa6e9dd5d0bef1ec598bebc375528c88fa95b044bf42a402b70b1130b5c5a",
+        "component": "assignTaskToProject",
+        "source_sha256": "2957bd86a34c35a099436e1f83ebb65ca38d917aa9a950698ec4e22724f48fa1",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "2fedd6acd0ec389fda0e25c025b98b4ecc64ade046c7f900f685368adc0477db"
+      },
+      "assignTaskToUser": {
+        "group": "taskmanagement",
+        "test_sha256": "14072e74b661393446ffb4202b0947d0cc9e42636d947fcd4dc902ce5401504d",
+        "component": "assignTaskToUser",
+        "source_sha256": "939ac6d50e1e8572d5a9f68f39931c34b12c6982912b4ef0105b01d2cbd1c4be",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "0c25d1c1ae0a42bd10fc91cc452674fe38bcf4dd5469c29cb8112b5bf51817b8"
+      },
+      "compareTime": {
+        "group": "taskmanagement",
+        "test_sha256": "6dc25359c6214e6ec2fce3aa7ee1190eaa96d51ecb3659bcdbba05b32de93e3b",
+        "component": "compareTime",
+        "source_sha256": "2a0a899c090573ac120c477ef131c6d1a134210639901bcd6eb372e95a28cccb",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "3740f7f65c3329e9b7c50c95dccd189f5fd02966e14674b7b36cf8e3561c1f0b"
+      },
+      "projectCustomWorkflows": {
+        "group": "taskmanagement",
+        "test_sha256": "47262a7c7cc99d42995dc41e4a849a3579df395a4c54af5ffb793999999236ea",
+        "component": "projectCustomWorkflows",
+        "source_sha256": "1be13ff11d1f7459a9b15e7586efc3ec1942fe78d8a2ba7e45bb3ed44cce217e",
+        "passed": false,
+        "cases_passed": 0,
+        "report_sha256": "678d9725ec577e71983d4b51906f949fc46ddda0d62e8a10f3d55635835cf5f0"
+      },
+      "setTaskDeadline": {
+        "group": "taskmanagement",
+        "test_sha256": "479b53f5249ff4da31f84f59a5b827e25cc33cefadedc239f58503b820329a78",
+        "component": "setTaskDeadline",
+        "source_sha256": "bf8fa99c85ba093dcd2b3c1e6eadb6f931919ea59e1a0455fdeaa24282ca200d",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "dd0a3d877312a85ab9e5f91454aee04de7acb9b0792fc0ca47f0f83a523b0a48"
+      },
+      "setTaskPriority": {
+        "group": "taskmanagement",
+        "test_sha256": "036ec3a87407b8571b9883d1190654509a70b33396a1642b7ed8a9322a5a0722",
+        "component": "setTaskPriority",
+        "source_sha256": "d740322d16ddeb4c9be86341069400cf83ec3a3a85cff646d1921c14544a35db",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "9e9722fa79aaec8dd939c2ee7eaf0cc52035f9c327cd588d2211fd6eca0af6f2"
+      }
+    },
+    "qwen/qwen3.5-9b": {
+      "addAltTextToImage": {
+        "group": "blogging",
+        "test_sha256": "5084139d4b378bcc15ab0b3fce763eec421aca0c2ccbee3b86b3a178f3732e44",
+        "component": "AddAltText",
+        "source_sha256": "03e898e39dedadf06b69d3478e4ae980907f4afaf8ce63722c3a176cafb2f072",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "3074c2430c381ece1ddd75e1db33ee09f6d4dbc994fbe803f96926112caba7e8"
+      },
+      "addCanonicalUrl": {
+        "group": "blogging",
+        "test_sha256": "18b9cf4abfedd5d002960da21ebbd201c19c255b29ec160e1f0a0c747385df65",
+        "component": "AddCanonicalUrl",
+        "source_sha256": "72bb7d77bff6082eb509c5e994d9591695f7445ed6e1ffbf5e9baacae1d67611",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "c554f76d5dd47708af812a3eb1eaa710f96fa432351dbecece9e7dc04d623aa0"
+      },
+      "addComment": {
+        "group": "blogging",
+        "test_sha256": "d7c26368f0bc0185a8981b904ccc4c3131ab7dc7cac083adb960636d30826645",
+        "component": "AddComment",
+        "source_sha256": "6d9957bd775c31a77bd6e4125df6e2410f7649a0fd6078f1f8380b8081bcb38f",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "46855ff99549e9c54327e5e8f227f6c7f07d21a8443a8cd353f380308e4d8f43"
+      },
+      "assignPostToCategory": {
+        "group": "blogging",
+        "test_sha256": "980c512ed8ab0a9a38a8fbe701edbd3f21fdadb38f90a7de64fe9937ae518fd5",
+        "component": "AssignCategory",
+        "source_sha256": "a13409a0ef0a35478d623c0f1f3e0acbe9263b9afe54e39c1637beb940f01eca",
+        "passed": false,
+        "cases_passed": 0,
+        "report_sha256": "3a9359eb6998ef7027bc69b354aef1e78eb68155a0f2cb27eb449058a4152fe5"
+      },
+      "editComment": {
+        "group": "blogging",
+        "test_sha256": "e34d853e100c07f455023f34ac9befb7c6af32da1ee47819dd89562754f2a963",
+        "component": "EditComment",
+        "source_sha256": "9970aa475909715fedb3546f005625e66be8b168a873606b89562904b989c24c",
+        "passed": false,
+        "cases_passed": 0,
+        "report_sha256": "2794ec2b028bdac8dd187180bf49fb9144c4b0e31933e2185ebceb45a935d1a5"
+      },
+      "editTag": {
+        "group": "blogging",
+        "test_sha256": "515d1efc6045b86f89914b5b6aa6099a26950141c0e66c7feefa26f49a86aa32",
+        "component": "EditTag",
+        "source_sha256": "52cbd1f27fa49b8fe4c092bd47522cde15e0a3420fa1026b609618baddb99fc5",
+        "passed": false,
+        "cases_passed": 0,
+        "report_sha256": "affe7a63f43429afb04b0e2c9902c71c1d8652e1b54f6a593918b5c586035080"
+      },
+      "postPerformanceReport": {
+        "group": "blogging",
+        "test_sha256": "8e85f6a421ce14112f1ef83ddfba7569ba21c3e19b3362eab7c9e9b94c5cb37b",
+        "component": "PostPerformanceReport",
+        "source_sha256": "2b007a93dac1e508f8497b6f9c0443249fec83ce80df1bb84d8d6849d7432b46",
+        "passed": false,
+        "cases_passed": 0,
+        "report_sha256": "4562012471cc26edc1ef00e103b11c78b4cbd9030245249b8b80a1dc98b562bf"
+      },
+      "addCommentToTask": {
+        "group": "taskmanagement",
+        "test_sha256": "d57ab382f6bb6219c8f6516e1f0e28c8e83c6a969da2c5d88b3c20eab855db6b",
+        "component": "AddCommentToTask",
+        "source_sha256": "887f647742c73823c52192ff4850ca1d9dbbc05cc3edc502a411b80238db3c35",
+        "passed": false,
+        "cases_passed": 1,
+        "report_sha256": "f0106e35e8b2e4db3509b1ad26e51be174b90d147495e6bbb2e1fd5a0b84e748"
+      },
+      "approveOrRejectTaskReview": {
+        "group": "taskmanagement",
+        "test_sha256": "58471f1aa537ed65b00712248ce1623b3f3d44b441a9153a299c7dbfa58ec6e5",
+        "component": "ApproveOrRejectTaskReview",
+        "source_sha256": "9c0fde0c259e3bc326fcc34f3b9f6b27799e53c901cf124bdc8193b8e98a738d",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "0918b1102eb7cd234f322e1e55f072783f498c5d1ceea092068108a574b2d8b0"
+      },
+      "assignTaskToProject": {
+        "group": "taskmanagement",
+        "test_sha256": "e24aa6e9dd5d0bef1ec598bebc375528c88fa95b044bf42a402b70b1130b5c5a",
+        "component": "AssignTaskToProject",
+        "source_sha256": "7e3a577aef9bb9ffed249f889a094ae49b34dd1d61605a3f713359a358ef8eb9",
+        "passed": false,
+        "cases_passed": 0,
+        "report_sha256": "a38def040984a063276914453f1253a908f83b2893c4c651965a4f2bea66c215"
+      },
+      "assignTaskToUser": {
+        "group": "taskmanagement",
+        "test_sha256": "14072e74b661393446ffb4202b0947d0cc9e42636d947fcd4dc902ce5401504d",
+        "component": "AssignTaskToUser",
+        "source_sha256": "06c1b2cbbe86d804667c60d9126de745d1fb5305ab4f585384f8e761ed69cbb8",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "48f003efe079e8d881fd6b3b94e2df22f7a9641e2c03dc2286af13317642844d"
+      },
+      "compareTime": {
+        "group": "taskmanagement",
+        "test_sha256": "6dc25359c6214e6ec2fce3aa7ee1190eaa96d51ecb3659bcdbba05b32de93e3b",
+        "component": "CompareTime",
+        "source_sha256": "762dd6b80be5c8d89c5a76e7fbace12cbfd933d270e6be7cc9cc3108676ef8e6",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "950293926eebbd42f96860fd8306d482c7a0ec97425e4ac1df57a5586fcd6f38"
+      },
+      "projectCustomWorkflows": {
+        "group": "taskmanagement",
+        "test_sha256": "47262a7c7cc99d42995dc41e4a849a3579df395a4c54af5ffb793999999236ea",
+        "component": "ProjectCustomWorkflows",
+        "source_sha256": "496b794c7d3e50feac07d32b02f197227b149ee993ab210cc2dda7e2205b29be",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "f2f600abd601fc0514cc381adc283228576b65c4914a679a3869f5db333b1fbb"
+      },
+      "setTaskDeadline": {
+        "group": "taskmanagement",
+        "test_sha256": "479b53f5249ff4da31f84f59a5b827e25cc33cefadedc239f58503b820329a78",
+        "component": "SetTaskDeadline",
+        "source_sha256": "96c04e37d75debd2701e17ace5051b603b8d473668e7709ab2bb2a24c394d38c",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "110e5ced926ee6acbc40f28bdde84e4dfb78f2421270488f97cb984ca8c93d05"
+      },
+      "setTaskPriority": {
+        "group": "taskmanagement",
+        "test_sha256": "036ec3a87407b8571b9883d1190654509a70b33396a1642b7ed8a9322a5a0722",
+        "component": "SetTaskPriority",
+        "source_sha256": "c8beace44ad90faba9da1b05c8e78fd5721da46e9499e0b8c26c560c1e41fb1b",
+        "passed": false,
+        "cases_passed": 1,
+        "report_sha256": "33f3373cf9f1ca4e87d76397b4d7dcea4c97798e174c7cbf4e701b85cd5b6a01"
+      }
+    },
+    "openai/gpt-oss-120b": {
+      "addAltTextToImage": {
+        "group": "blogging",
+        "test_sha256": "5084139d4b378bcc15ab0b3fce763eec421aca0c2ccbee3b86b3a178f3732e44",
+        "component": "AddAltText",
+        "source_sha256": "28f9b686d1f6027a885bf044da1104794d47c45563731fb45423aecfe0f22e18",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "3f485a46507ae3fe53a0d84a8732f1dbd82ba8c6588c00c40d78398cf17d2605"
+      },
+      "addCanonicalUrl": {
+        "group": "blogging",
+        "test_sha256": "18b9cf4abfedd5d002960da21ebbd201c19c255b29ec160e1f0a0c747385df65",
+        "component": "AddCanonicalUrl",
+        "source_sha256": "56409172ce6f11459d336c129d6a85b0c5d16ee579e7441f82c1b53df19324dd",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "5ad11fe535ab7c9031c3a9f8719dc69ee61afd9f9f3d4e5ca447585469481bed"
+      },
+      "addComment": {
+        "group": "blogging",
+        "test_sha256": "d7c26368f0bc0185a8981b904ccc4c3131ab7dc7cac083adb960636d30826645",
+        "component": "AddComment",
+        "source_sha256": "83d24293ea5f27db68e789be147be751a3a615a211b700a3be102c165b36ff28",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "deba92f0a9d6f02deab63d4fa2be1b34384228db3a96146a9d5bd5f4463f9759"
+      },
+      "assignPostToCategory": {
+        "group": "blogging",
+        "test_sha256": "980c512ed8ab0a9a38a8fbe701edbd3f21fdadb38f90a7de64fe9937ae518fd5",
+        "component": "AssignCategory",
+        "source_sha256": "aefa88c775a57f7415ff949cc79f9ed557a3686e1e98e95280e95a2adf6688fc",
+        "passed": false,
+        "cases_passed": 0,
+        "report_sha256": "77fa963d0fc51d91eb228a0d1c60790bcee9593326ba053b9b5c4b66bac1348b"
+      },
+      "editComment": {
+        "group": "blogging",
+        "test_sha256": "e34d853e100c07f455023f34ac9befb7c6af32da1ee47819dd89562754f2a963",
+        "component": "EditComment",
+        "source_sha256": "c3df141f02400ae5d02c6b79356f9ccffb6e053658a66fd1c510603e924c64a2",
+        "passed": false,
+        "cases_passed": 0,
+        "report_sha256": "899f5bbcf05875a86470d778c2d4c644ab014883f9fe47f6a57970d2e31de6f3"
+      },
+      "editTag": {
+        "group": "blogging",
+        "test_sha256": "515d1efc6045b86f89914b5b6aa6099a26950141c0e66c7feefa26f49a86aa32",
+        "component": "EditTag",
+        "source_sha256": "8b24e82487c083b1d928db633f0bcae20b7685d6767d8eafb07c1b7f9e42a4e5",
+        "passed": false,
+        "cases_passed": 0,
+        "report_sha256": "b12b61cd44f7cc07bfddf31a1f9b4431136bfa7b1bee6eb58d52b064cb73c82a"
+      },
+      "postPerformanceReport": {
+        "group": "blogging",
+        "test_sha256": "8e85f6a421ce14112f1ef83ddfba7569ba21c3e19b3362eab7c9e9b94c5cb37b",
+        "component": "PostPerformanceReport",
+        "source_sha256": "ee38013e0c62c236e052a896ae366ba96cf88761842442b313b0621676f71e98",
+        "passed": false,
+        "cases_passed": 0,
+        "report_sha256": "8fc58f1bcfe8310d09e6d70e37d37efc33d2ed4f021786f4ac169e3015887f4f"
+      },
+      "addCommentToTask": {
+        "group": "taskmanagement",
+        "test_sha256": "d57ab382f6bb6219c8f6516e1f0e28c8e83c6a969da2c5d88b3c20eab855db6b",
+        "component": "AddComment",
+        "source_sha256": "2bac748f899ed2d2bde01bacbb6ff1337dbd28122ad218553c52ab85c59627d1",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "403ee96ca8f4748bc921579f469389c55dcb1363641014fe268d16fc75c4e61b"
+      },
+      "approveOrRejectTaskReview": {
+        "group": "taskmanagement",
+        "test_sha256": "58471f1aa537ed65b00712248ce1623b3f3d44b441a9153a299c7dbfa58ec6e5",
+        "component": "ReviewDecision",
+        "source_sha256": "ae4911f56149c7cdf69f4f4fe719abaf835afae0926305da403d9ad8169cab3d",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "8aa9885cc3900d6b61ae29cd634caa97f6bc7d52836915841e48701bb847cbe6"
+      },
+      "assignTaskToProject": {
+        "group": "taskmanagement",
+        "test_sha256": "e24aa6e9dd5d0bef1ec598bebc375528c88fa95b044bf42a402b70b1130b5c5a",
+        "component": "AssignProject",
+        "source_sha256": "8e4d3e7df48e2eb9afdc47f8b4e46c1051f77b02bf31b1a0be1d609d33951870",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "6ec6fb8cbfab67ce553e4db483937f99118fbb23837d627f35a498f7d4b941df"
+      },
+      "assignTaskToUser": {
+        "group": "taskmanagement",
+        "test_sha256": "14072e74b661393446ffb4202b0947d0cc9e42636d947fcd4dc902ce5401504d",
+        "component": "AssignUser",
+        "source_sha256": "7fe0c01616888efaa85617b651c191676d95966951c82374ccadb28e82d91b96",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "3b83f5d45ad60f15077591c29741a9bada8a3dd06a9b14d8fe3a4feab895ac7c"
+      },
+      "compareTime": {
+        "group": "taskmanagement",
+        "test_sha256": "6dc25359c6214e6ec2fce3aa7ee1190eaa96d51ecb3659bcdbba05b32de93e3b",
+        "component": "TimeComparison",
+        "source_sha256": "01ad708d5d89243c5c901267d142d183d5f97849f903a908d2dcb4670de29c38",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "8af40658f7e297a5f20a8aabe71887aafd22301e884a53b39c9c67aaaa09b60d"
+      },
+      "projectCustomWorkflows": {
+        "group": "taskmanagement",
+        "test_sha256": "47262a7c7cc99d42995dc41e4a849a3579df395a4c54af5ffb793999999236ea",
+        "component": "ProjectWorkflow",
+        "source_sha256": "f71cb2f66c4d9d26214a9d5b9bf7d971ff463792c04b05af005b13f28dbe5547",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "c79cd3bd20e5190d6f123a19410401546dafb8ba3400bb3bd63f4765c38e087f"
+      },
+      "setTaskDeadline": {
+        "group": "taskmanagement",
+        "test_sha256": "479b53f5249ff4da31f84f59a5b827e25cc33cefadedc239f58503b820329a78",
+        "component": "SetDeadline",
+        "source_sha256": "5273c7b65d83d1cbef92369e2fc8a86fdfd57145de169f3190e63ae66aed7310",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "0bc96a44518b8316518992ba4b11e1938b2d9c6945a5f0681ea4652df769c6cc"
+      },
+      "setTaskPriority": {
+        "group": "taskmanagement",
+        "test_sha256": "036ec3a87407b8571b9883d1190654509a70b33396a1642b7ed8a9322a5a0722",
+        "component": "SetPriority",
+        "source_sha256": "9a7afdeae9ba2da49233e9e912e7abc13f04bb582ec2067e18fe3af389be488c",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "ebfd811268b3bcada06e79154de13ad359a85573b2df5cfd64b7c23c52fc6c46"
+      }
+    },
+    "mistralai/mistral-small-3.2-24b-instruct": {
+      "addAltTextToImage": {
+        "group": "blogging",
+        "test_sha256": "5084139d4b378bcc15ab0b3fce763eec421aca0c2ccbee3b86b3a178f3732e44",
+        "component": "altTextEditor",
+        "source_sha256": "5df0c2e909bb2e57cfb6af0c70fe619528d2fa3aee63fb29e7d2c4405e84e69c",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "db4afc53d00860c27e98444fe8f5515e0a224d65558dcc8f14b6e5a405f15633"
+      },
+      "addCanonicalUrl": {
+        "group": "blogging",
+        "test_sha256": "18b9cf4abfedd5d002960da21ebbd201c19c255b29ec160e1f0a0c747385df65",
+        "component": "canonicalUrlAdder",
+        "source_sha256": "1acd1fb11cc866d50e968b45d5602f36f2d48da4b9ef3cad2ed657d8c4572863",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "b8079ab85c971ec05bc8badff04cf723a5a9ab26fcf40764e3ce5a94ce5d545d"
+      },
+      "addComment": {
+        "group": "blogging",
+        "test_sha256": "d7c26368f0bc0185a8981b904ccc4c3131ab7dc7cac083adb960636d30826645",
+        "component": "commentAdder",
+        "source_sha256": "efbacdc31362b4021f7b6955e72f0ab03207215643632a502c34130f4c3d2b9e",
+        "passed": false,
+        "cases_passed": 0,
+        "report_sha256": "846fbf3d7785b3d8f629d0ea235e359484078480c3323a4ee2924d990a089ea7"
+      },
+      "assignPostToCategory": {
+        "group": "blogging",
+        "test_sha256": "980c512ed8ab0a9a38a8fbe701edbd3f21fdadb38f90a7de64fe9937ae518fd5",
+        "component": "categoryAssigner",
+        "source_sha256": "c6e188bfdc9e2d76f041c38a556012b05c9e674119c52ceb697459a6f6c6b1af",
+        "passed": false,
+        "cases_passed": 0,
+        "report_sha256": "cdd4e6065520b39879d40a88f9c920fc9bd8740c9245bf8c0d771ed892a55313"
+      },
+      "editComment": {
+        "group": "blogging",
+        "test_sha256": "e34d853e100c07f455023f34ac9befb7c6af32da1ee47819dd89562754f2a963",
+        "component": "commentEditor",
+        "source_sha256": "6ac8023ae22a16440c9c1fcfc1f768d3b6c3c27b4bae9b480b3cb17652091f85",
+        "passed": false,
+        "cases_passed": 0,
+        "report_sha256": "68bb6c7bbffa75b47875bf2800ce715de52f78e08ace33d6508e22388664bffa"
+      },
+      "editTag": {
+        "group": "blogging",
+        "test_sha256": "515d1efc6045b86f89914b5b6aa6099a26950141c0e66c7feefa26f49a86aa32",
+        "component": "tagEditor",
+        "source_sha256": "2b87d7e8d51e1b40f7deb3c50090fe54b8bd38f97abc567c14bebd81437ff57f",
+        "passed": false,
+        "cases_passed": 0,
+        "report_sha256": "75ce1cd4fb74d73f1b03bbbf80727c2e63015a65bddb585ae19427693030411e"
+      },
+      "postPerformanceReport": {
+        "group": "blogging",
+        "test_sha256": "8e85f6a421ce14112f1ef83ddfba7569ba21c3e19b3362eab7c9e9b94c5cb37b",
+        "component": "postPerformanceReporter",
+        "source_sha256": "a2c787a79f21ac32fa79ee14074a2b583896d878b233adf07a9aaf559b4fb8c2",
+        "passed": false,
+        "cases_passed": 0,
+        "report_sha256": "816c42bab8a332af1ac07e802395852d1c359392a6dbfc6cecc2d088a0bedfbe"
+      },
+      "addCommentToTask": {
+        "group": "taskmanagement",
+        "test_sha256": "d57ab382f6bb6219c8f6516e1f0e28c8e83c6a969da2c5d88b3c20eab855db6b",
+        "component": "addComment",
+        "source_sha256": "2482a9758200bbe1279a213e5abd6ddf1eb263750d826e51444b79bc4b1e2400",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "376c47b1ad8fc9965b157ad3d176d61ac2a9c67e2db011541f7d02accd368433"
+      },
+      "approveOrRejectTaskReview": {
+        "group": "taskmanagement",
+        "test_sha256": "58471f1aa537ed65b00712248ce1623b3f3d44b441a9153a299c7dbfa58ec6e5",
+        "component": "approveRejectReview",
+        "source_sha256": "1d2472962a10284ec60d75731adb10537db6412b1b137f2b6f4327405885f620",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "7268f7716f98be7729c89c34a4926b9f2880f2dafd7bd9397d0e43c4d300c2d3"
+      },
+      "assignTaskToProject": {
+        "group": "taskmanagement",
+        "test_sha256": "e24aa6e9dd5d0bef1ec598bebc375528c88fa95b044bf42a402b70b1130b5c5a",
+        "component": "assignTaskProject",
+        "source_sha256": "fc6c733063f53b27dd4bddbd192c1f05da584207e7f82a399c40ada941698f94",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "618a978e07e060153da388d4232d2bb4c013b2a46a17db7c7478fcb71d6442b8"
+      },
+      "assignTaskToUser": {
+        "group": "taskmanagement",
+        "test_sha256": "14072e74b661393446ffb4202b0947d0cc9e42636d947fcd4dc902ce5401504d",
+        "component": "assignTaskUser",
+        "source_sha256": "4d8411c2d5de3cf0f499c41d8f6097d468c8c034717a50f1bd7ac9ba12e24ffa",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "4939cac818803f8dcaeb79e27e4897cb1c1084e934ed857b2704a81c1e27e199"
+      },
+      "compareTime": {
+        "group": "taskmanagement",
+        "test_sha256": "6dc25359c6214e6ec2fce3aa7ee1190eaa96d51ecb3659bcdbba05b32de93e3b",
+        "component": "compareTime",
+        "source_sha256": "a7b4e5fb9253e63af38f2198e31a521c787b5186cc0e2cbeb12a9c37e33a283d",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "4c4d1ef6aa642c509278473e59a68255731eaaf9ce6a3e0cfb0751d327d29fde"
+      },
+      "projectCustomWorkflows": {
+        "group": "taskmanagement",
+        "test_sha256": "47262a7c7cc99d42995dc41e4a849a3579df395a4c54af5ffb793999999236ea",
+        "component": "customWorkflows",
+        "source_sha256": "03d06e00f799b444dedcb5f7e672ea6be2ce1a4d11c6ea95dece86a0022af955",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "0b6dffa91935ac84e4cef8f66ba539ef4211744f2a94c592721e50aae7e66c25"
+      },
+      "setTaskDeadline": {
+        "group": "taskmanagement",
+        "test_sha256": "479b53f5249ff4da31f84f59a5b827e25cc33cefadedc239f58503b820329a78",
+        "component": "setDeadline",
+        "source_sha256": "edd436aaebe7a96e59e320c700bd2191e7496e5ddc23a57c84e8a0bae15acc6e",
+        "passed": false,
+        "cases_passed": 1,
+        "report_sha256": "39fd15c039130f2615b6aaed14ab55c7f4649ae031db3d7895b1de5d54814120"
+      },
+      "setTaskPriority": {
+        "group": "taskmanagement",
+        "test_sha256": "036ec3a87407b8571b9883d1190654509a70b33396a1642b7ed8a9322a5a0722",
+        "component": "setPriority",
+        "source_sha256": "ed7f5e2d34d1e07a3ba2c333dd567cd147cae5c0b915c7c190ff8f2ef903b453",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "a9f1c54d7ad3725069bf82283cb316a9cce1b8d555188302227a7e75b60af397"
+      }
+    },
+    "google/gemma-3-12b-it": {
+      "addAltTextToImage": {
+        "group": "blogging",
+        "test_sha256": "5084139d4b378bcc15ab0b3fce763eec421aca0c2ccbee3b86b3a178f3732e44",
+        "component": null
+      },
+      "addCanonicalUrl": {
+        "group": "blogging",
+        "test_sha256": "18b9cf4abfedd5d002960da21ebbd201c19c255b29ec160e1f0a0c747385df65",
+        "component": null
+      },
+      "addComment": {
+        "group": "blogging",
+        "test_sha256": "d7c26368f0bc0185a8981b904ccc4c3131ab7dc7cac083adb960636d30826645",
+        "component": null
+      },
+      "assignPostToCategory": {
+        "group": "blogging",
+        "test_sha256": "980c512ed8ab0a9a38a8fbe701edbd3f21fdadb38f90a7de64fe9937ae518fd5",
+        "component": null
+      },
+      "editComment": {
+        "group": "blogging",
+        "test_sha256": "e34d853e100c07f455023f34ac9befb7c6af32da1ee47819dd89562754f2a963",
+        "component": null
+      },
+      "editTag": {
+        "group": "blogging",
+        "test_sha256": "515d1efc6045b86f89914b5b6aa6099a26950141c0e66c7feefa26f49a86aa32",
+        "component": null
+      },
+      "postPerformanceReport": {
+        "group": "blogging",
+        "test_sha256": "8e85f6a421ce14112f1ef83ddfba7569ba21c3e19b3362eab7c9e9b94c5cb37b",
+        "component": null
+      },
+      "addCommentToTask": {
+        "group": "taskmanagement",
+        "test_sha256": "d57ab382f6bb6219c8f6516e1f0e28c8e83c6a969da2c5d88b3c20eab855db6b",
+        "component": null
+      },
+      "approveOrRejectTaskReview": {
+        "group": "taskmanagement",
+        "test_sha256": "58471f1aa537ed65b00712248ce1623b3f3d44b441a9153a299c7dbfa58ec6e5",
+        "component": null
+      },
+      "assignTaskToProject": {
+        "group": "taskmanagement",
+        "test_sha256": "e24aa6e9dd5d0bef1ec598bebc375528c88fa95b044bf42a402b70b1130b5c5a",
+        "component": null
+      },
+      "assignTaskToUser": {
+        "group": "taskmanagement",
+        "test_sha256": "14072e74b661393446ffb4202b0947d0cc9e42636d947fcd4dc902ce5401504d",
+        "component": null
+      },
+      "compareTime": {
+        "group": "taskmanagement",
+        "test_sha256": "6dc25359c6214e6ec2fce3aa7ee1190eaa96d51ecb3659bcdbba05b32de93e3b",
+        "component": null
+      },
+      "projectCustomWorkflows": {
+        "group": "taskmanagement",
+        "test_sha256": "47262a7c7cc99d42995dc41e4a849a3579df395a4c54af5ffb793999999236ea",
+        "component": null
+      },
+      "setTaskDeadline": {
+        "group": "taskmanagement",
+        "test_sha256": "479b53f5249ff4da31f84f59a5b827e25cc33cefadedc239f58503b820329a78",
+        "component": null
+      },
+      "setTaskPriority": {
+        "group": "taskmanagement",
+        "test_sha256": "036ec3a87407b8571b9883d1190654509a70b33396a1642b7ed8a9322a5a0722",
+        "component": null
+      }
+    },
+    "deepseek/deepseek-v4-flash": {
+      "addAltTextToImage": {
+        "group": "blogging",
+        "test_sha256": "5084139d4b378bcc15ab0b3fce763eec421aca0c2ccbee3b86b3a178f3732e44",
+        "component": "AddAltTextToImage",
+        "source_sha256": "f02256d36e7f6e6c81426d6ead88870d806fd1265511fdeb238d0b3c7b3a727d",
+        "passed": true,
+        "cases_passed": 2,
+        "report_sha256": "479d4088e644b83f70dcaa85b9c195b1644d6b19c5408b4a434375dedb7c78e6"
+      },
+      "addCanonicalUrl": {
+        "group": "blogging",
+        "test_sha256": "18b9cf4abfedd5d002960da21ebbd201c19c255b29ec160e1f0a0c747385df65",
+        "component": null
+      },
+      "addComment": {
+        "group": "blogging",
+        "test_sha256": "d7c26368f0bc0185a8981b904ccc4c3131ab7dc7cac083adb960636d30826645",
+        "component": null
+      },
+      "assignPostToCategory": {
+        "group": "blogging",
+        "test_sha256": "980c512ed8ab0a9a38a8fbe701edbd3f21fdadb38f90a7de64fe9937ae518fd5",
+        "component": null
+      },
+      "editComment": {
+        "group": "blogging",
+        "test_sha256": "e34d853e100c07f455023f34ac9befb7c6af32da1ee47819dd89562754f2a963",
+        "component": null
+      },
+      "editTag": {
+        "group": "blogging",
+        "test_sha256": "515d1efc6045b86f89914b5b6aa6099a26950141c0e66c7feefa26f49a86aa32",
+        "component": null
+      },
+      "postPerformanceReport": {
+        "group": "blogging",
+        "test_sha256": "8e85f6a421ce14112f1ef83ddfba7569ba21c3e19b3362eab7c9e9b94c5cb37b",
+        "component": null
+      },
+      "addCommentToTask": {
+        "group": "taskmanagement",
+        "test_sha256": "d57ab382f6bb6219c8f6516e1f0e28c8e83c6a969da2c5d88b3c20eab855db6b",
+        "component": null
+      },
+      "approveOrRejectTaskReview": {
+        "group": "taskmanagement",
+        "test_sha256": "58471f1aa537ed65b00712248ce1623b3f3d44b441a9153a299c7dbfa58ec6e5",
+        "component": null
+      },
+      "assignTaskToProject": {
+        "group": "taskmanagement",
+        "test_sha256": "e24aa6e9dd5d0bef1ec598bebc375528c88fa95b044bf42a402b70b1130b5c5a",
+        "component": null
+      },
+      "assignTaskToUser": {
+        "group": "taskmanagement",
+        "test_sha256": "14072e74b661393446ffb4202b0947d0cc9e42636d947fcd4dc902ce5401504d",
+        "component": null
+      },
+      "compareTime": {
+        "group": "taskmanagement",
+        "test_sha256": "6dc25359c6214e6ec2fce3aa7ee1190eaa96d51ecb3659bcdbba05b32de93e3b",
+        "component": null
+      },
+      "projectCustomWorkflows": {
+        "group": "taskmanagement",
+        "test_sha256": "47262a7c7cc99d42995dc41e4a849a3579df395a4c54af5ffb793999999236ea",
+        "component": null
+      },
+      "setTaskDeadline": {
+        "group": "taskmanagement",
+        "test_sha256": "479b53f5249ff4da31f84f59a5b827e25cc33cefadedc239f58503b820329a78",
+        "component": null
+      },
+      "setTaskPriority": {
+        "group": "taskmanagement",
+        "test_sha256": "036ec3a87407b8571b9883d1190654509a70b33396a1642b7ed8a9322a5a0722",
+        "component": null
+      }
+    }
+  },
+  "summary": {
+    "qwen/qwen3-coder-30b-a3b-instruct": {
+      "single_available": 14,
+      "single_passed": 6,
+      "n_singles": 15,
+      "n_pairs": 10,
+      "pair_counts": {
+        "incomplete_pair": 1,
+        "both_singles_pass_pair_pass": 2,
+        "both_singles_pass_pair_fail": 0,
+        "single_failure_pair_fail": 7,
+        "single_failure_pair_pass": 0
+      },
+      "pair_ids": {
+        "incomplete_pair": [
+          "addCanonicalUrl_editComment"
+        ],
+        "both_singles_pass_pair_pass": [
+          "addCommentToTask_setTaskDeadline",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "both_singles_pass_pair_fail": [],
+        "single_failure_pair_fail": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editTag",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority"
+        ],
+        "single_failure_pair_pass": []
+      }
+    },
+    "qwen/qwen3.5-9b": {
+      "single_available": 15,
+      "single_passed": 8,
+      "n_singles": 15,
+      "n_pairs": 10,
+      "pair_counts": {
+        "incomplete_pair": 0,
+        "both_singles_pass_pair_pass": 3,
+        "both_singles_pass_pair_fail": 0,
+        "single_failure_pair_fail": 7,
+        "single_failure_pair_pass": 0
+      },
+      "pair_ids": {
+        "incomplete_pair": [],
+        "both_singles_pass_pair_pass": [
+          "addCanonicalUrl_addComment",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows"
+        ],
+        "both_singles_pass_pair_fail": [],
+        "single_failure_pair_fail": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "single_failure_pair_pass": []
+      }
+    },
+    "openai/gpt-oss-120b": {
+      "single_available": 15,
+      "single_passed": 11,
+      "n_singles": 15,
+      "n_pairs": 10,
+      "pair_counts": {
+        "incomplete_pair": 0,
+        "both_singles_pass_pair_pass": 6,
+        "both_singles_pass_pair_fail": 0,
+        "single_failure_pair_fail": 4,
+        "single_failure_pair_pass": 0
+      },
+      "pair_ids": {
+        "incomplete_pair": [],
+        "both_singles_pass_pair_pass": [
+          "addCanonicalUrl_addComment",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "both_singles_pass_pair_fail": [],
+        "single_failure_pair_fail": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag"
+        ],
+        "single_failure_pair_pass": []
+      }
+    },
+    "mistralai/mistral-small-3.2-24b-instruct": {
+      "single_available": 15,
+      "single_passed": 9,
+      "n_singles": 15,
+      "n_pairs": 10,
+      "pair_counts": {
+        "incomplete_pair": 0,
+        "both_singles_pass_pair_pass": 4,
+        "both_singles_pass_pair_fail": 0,
+        "single_failure_pair_fail": 6,
+        "single_failure_pair_pass": 0
+      },
+      "pair_ids": {
+        "incomplete_pair": [],
+        "both_singles_pass_pair_pass": [
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "both_singles_pass_pair_fail": [],
+        "single_failure_pair_fail": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline"
+        ],
+        "single_failure_pair_pass": []
+      }
+    },
+    "google/gemma-3-12b-it": {
+      "single_available": 0,
+      "single_passed": 0,
+      "n_singles": 15,
+      "n_pairs": 10,
+      "pair_counts": {
+        "incomplete_pair": 10,
+        "both_singles_pass_pair_pass": 0,
+        "both_singles_pass_pair_fail": 0,
+        "single_failure_pair_fail": 0,
+        "single_failure_pair_pass": 0
+      },
+      "pair_ids": {
+        "incomplete_pair": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "both_singles_pass_pair_pass": [],
+        "both_singles_pass_pair_fail": [],
+        "single_failure_pair_fail": [],
+        "single_failure_pair_pass": []
+      }
+    },
+    "deepseek/deepseek-v4-flash": {
+      "single_available": 1,
+      "single_passed": 1,
+      "n_singles": 15,
+      "n_pairs": 10,
+      "pair_counts": {
+        "incomplete_pair": 10,
+        "both_singles_pass_pair_pass": 0,
+        "both_singles_pass_pair_fail": 0,
+        "single_failure_pair_fail": 0,
+        "single_failure_pair_pass": 0
+      },
+      "pair_ids": {
+        "incomplete_pair": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "both_singles_pass_pair_pass": [],
+        "both_singles_pass_pair_fail": [],
+        "single_failure_pair_fail": [],
+        "single_failure_pair_pass": []
+      }
+    }
+  }
+}

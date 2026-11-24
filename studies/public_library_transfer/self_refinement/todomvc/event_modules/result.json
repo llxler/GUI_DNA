@@ -1,0 +1,1002 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "seeds": {
+    "A": 2711,
+    "B": 4513
+  },
+  "budget_usd": 0,
+  "registration_sha256": "c29a8684ef6260de3fed9899a265425d9a5f46851341f318bfcf6517e9afda95",
+  "seal_sha256": "93f9299a50ce83f2fdb25afdbd61336299d362479e359080b7876abffb435d41",
+  "protocol_sha256": "b6bc6a10380d1915a0cb3899090f1cdb4bba624c2f55799f32bce54620850643",
+  "builds": {
+    "A": {
+      "valid": true,
+      "functions": [
+        "init",
+        "persist",
+        "select",
+        "add",
+        "destroy",
+        "toggle",
+        "toggleAll",
+        "edit",
+        "save",
+        "cancel",
+        "clearCompleted",
+        "route"
+      ],
+      "available_options": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "library_sha256": "1f2288900b1f9588b7005d189f637fa58a33f0e5cd9201b009b6165c96d9d3b2"
+    },
+    "B": {
+      "valid": true,
+      "functions": [
+        "init",
+        "persist",
+        "select",
+        "add",
+        "destroy",
+        "toggle",
+        "toggleAll",
+        "edit",
+        "save",
+        "cancel",
+        "clearCompleted",
+        "route"
+      ],
+      "available_options": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "library_sha256": "bf1da1f62a75a6feb27a712c5720f72ae6eefa9c799e9579d0693bfbb88a61f9"
+    }
+  },
+  "usage": {
+    "A/build": {
+      "input_tokens": 8807,
+      "output_tokens": 1967,
+      "calls": 15
+    },
+    "A/deploy": {
+      "input_tokens": 7023,
+      "output_tokens": 192,
+      "calls": 8
+    },
+    "B/build": {
+      "input_tokens": 7677,
+      "output_tokens": 1837,
+      "calls": 13
+    },
+    "B/deploy": {
+      "input_tokens": 7023,
+      "output_tokens": 192,
+      "calls": 8
+    },
+    "direct/deploy": {
+      "input_tokens": 4799,
+      "output_tokens": 5790,
+      "calls": 8
+    }
+  },
+  "rows": [
+    {
+      "group": "A",
+      "arm": "self",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "ccc3626203c991dc2b8e90fb4b876da12c465e67bf2da168f8b1b4ad75f73fed"
+    },
+    {
+      "group": "A",
+      "arm": "fixed_on",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "ccc3626203c991dc2b8e90fb4b876da12c465e67bf2da168f8b1b4ad75f73fed"
+    },
+    {
+      "group": "A",
+      "arm": "fixed_off",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "80fcc9a497cf5b965de4e1dfae53e3c8bba8462d140a3554dee4267e78612e69",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "805518c955d73d6485c6be190c733929cd619812a5be08b8e9622700dc85528b"
+    },
+    {
+      "group": "A",
+      "arm": "self",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "b6c76373d4a5d3f8173b52dd228ef66b394350b8c500919ce5ba8b1504f686bf"
+    },
+    {
+      "group": "A",
+      "arm": "fixed_on",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "b6c76373d4a5d3f8173b52dd228ef66b394350b8c500919ce5ba8b1504f686bf"
+    },
+    {
+      "group": "A",
+      "arm": "fixed_off",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "80fcc9a497cf5b965de4e1dfae53e3c8bba8462d140a3554dee4267e78612e69",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "599512f182488e648b9f0c518b19f443862c75f05f6e1492864533dbae712911"
+    },
+    {
+      "group": "A",
+      "arm": "self",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "80fcc9a497cf5b965de4e1dfae53e3c8bba8462d140a3554dee4267e78612e69",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "e63bca3b2fb49d9cae04199e856cc5680546afffe4331c9c451d06101a495910"
+    },
+    {
+      "group": "A",
+      "arm": "fixed_on",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "ff755615536be45641b803e51fda0afe43b04dacfb115ec9e05e102853d99e6e"
+    },
+    {
+      "group": "A",
+      "arm": "fixed_off",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "80fcc9a497cf5b965de4e1dfae53e3c8bba8462d140a3554dee4267e78612e69",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "e63bca3b2fb49d9cae04199e856cc5680546afffe4331c9c451d06101a495910"
+    },
+    {
+      "group": "A",
+      "arm": "self",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "2ca7733bdd242cdc8c9d4d054aac945b7edcb79c032a84c71a4db13aa0d2652d"
+    },
+    {
+      "group": "A",
+      "arm": "fixed_on",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "2ca7733bdd242cdc8c9d4d054aac945b7edcb79c032a84c71a4db13aa0d2652d"
+    },
+    {
+      "group": "A",
+      "arm": "fixed_off",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "80fcc9a497cf5b965de4e1dfae53e3c8bba8462d140a3554dee4267e78612e69",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "bb7089c47a070f169ac2ecd026c02490193daee4c5c3e6fdb579e79535ca9a55"
+    },
+    {
+      "group": "A",
+      "arm": "self",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "69c9c2c8e3bd60ad9b86875b25204afafa353c2bf59102be174543c6ec72cb92"
+    },
+    {
+      "group": "A",
+      "arm": "fixed_on",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "69c9c2c8e3bd60ad9b86875b25204afafa353c2bf59102be174543c6ec72cb92"
+    },
+    {
+      "group": "A",
+      "arm": "fixed_off",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "80fcc9a497cf5b965de4e1dfae53e3c8bba8462d140a3554dee4267e78612e69",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "511a1e44c54d8c17cdfa050d07b53b7b5f17bd1478bd556036a7a878930b9de2"
+    },
+    {
+      "group": "A",
+      "arm": "self",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "dea938b4cef2c7511971fbab8ca792160c3f998c3ee66477039efd0aba06b1a8"
+    },
+    {
+      "group": "A",
+      "arm": "fixed_on",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "dea938b4cef2c7511971fbab8ca792160c3f998c3ee66477039efd0aba06b1a8"
+    },
+    {
+      "group": "A",
+      "arm": "fixed_off",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "80fcc9a497cf5b965de4e1dfae53e3c8bba8462d140a3554dee4267e78612e69",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "f8da00be81739c56db1d6cc8d616f34042f3a9c4423d22e1d5da7a6633c03241"
+    },
+    {
+      "group": "A",
+      "arm": "self",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "80fcc9a497cf5b965de4e1dfae53e3c8bba8462d140a3554dee4267e78612e69",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "75514c5a34b593914746faa55b5c8043c7c484a62822054163957f57f530a88d"
+    },
+    {
+      "group": "A",
+      "arm": "fixed_on",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "93af5e81335c460c8e68ab7ba5f9f05aa85b48c3dd38245519553e0d545302d1"
+    },
+    {
+      "group": "A",
+      "arm": "fixed_off",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "80fcc9a497cf5b965de4e1dfae53e3c8bba8462d140a3554dee4267e78612e69",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "75514c5a34b593914746faa55b5c8043c7c484a62822054163957f57f530a88d"
+    },
+    {
+      "group": "A",
+      "arm": "self",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "44f127fc44bf1313b5a2f50365d307ca6f0cc5ce34f8ba4e80a43a0ff99768ec"
+    },
+    {
+      "group": "A",
+      "arm": "fixed_on",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "44f127fc44bf1313b5a2f50365d307ca6f0cc5ce34f8ba4e80a43a0ff99768ec"
+    },
+    {
+      "group": "A",
+      "arm": "fixed_off",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "80fcc9a497cf5b965de4e1dfae53e3c8bba8462d140a3554dee4267e78612e69",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "4c55b14141fe12481038ea9d5684f4cab0d7358ac688bd76bf6902e480dbe206"
+    },
+    {
+      "group": "B",
+      "arm": "self",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "d86931a3a68040242313460ebc271489b5663ca858a250cb21f6e108ffdef8f3"
+    },
+    {
+      "group": "B",
+      "arm": "fixed_on",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "d86931a3a68040242313460ebc271489b5663ca858a250cb21f6e108ffdef8f3"
+    },
+    {
+      "group": "B",
+      "arm": "fixed_off",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "6b5844faf67a32c4cc259c97529aae7266ce8c065a51db88e106f4ee3e1c9d1f"
+    },
+    {
+      "group": "B",
+      "arm": "self",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "9490fb81208ed12feb16a46852f66ab2fd47062a50525a2810aa98c2d3e1d564"
+    },
+    {
+      "group": "B",
+      "arm": "fixed_on",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "9490fb81208ed12feb16a46852f66ab2fd47062a50525a2810aa98c2d3e1d564"
+    },
+    {
+      "group": "B",
+      "arm": "fixed_off",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "05cfb9fc236435deaafe6346fe58ac640f7abb7017cc73c1a5af98bb1d777372"
+    },
+    {
+      "group": "B",
+      "arm": "self",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "27c0546f2f37a2156e56f5e467d2e56a123435d4a810cb9a53bca8de03458cf8"
+    },
+    {
+      "group": "B",
+      "arm": "fixed_on",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "520f48df8f7288136f5626355c7b5180309a1f1232c371619776f44b8d697589"
+    },
+    {
+      "group": "B",
+      "arm": "fixed_off",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "27c0546f2f37a2156e56f5e467d2e56a123435d4a810cb9a53bca8de03458cf8"
+    },
+    {
+      "group": "B",
+      "arm": "self",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "7a6d6205761a534c3ef567f86038be8fcd2009ab97d0a507015f8346a49ebaff"
+    },
+    {
+      "group": "B",
+      "arm": "fixed_on",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "7a6d6205761a534c3ef567f86038be8fcd2009ab97d0a507015f8346a49ebaff"
+    },
+    {
+      "group": "B",
+      "arm": "fixed_off",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "3760bec8997373c6df9e4bbb1ec6a8ab2dd8788ae1dee0b5c977b5c2dd760055"
+    },
+    {
+      "group": "B",
+      "arm": "self",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "ab0fe6caa7b96b0470b91eca27beb21453d0cf520619084218a09e4ffbf9bd4c"
+    },
+    {
+      "group": "B",
+      "arm": "fixed_on",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "ab0fe6caa7b96b0470b91eca27beb21453d0cf520619084218a09e4ffbf9bd4c"
+    },
+    {
+      "group": "B",
+      "arm": "fixed_off",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "39f59cd11b81b1c6c0966e3be78608c1e90eb95a973479348be0eb3c3bca80a4"
+    },
+    {
+      "group": "B",
+      "arm": "self",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "191cbca20099cba161d88f63cb079356f33c5c68dbe33f975218c9ad80df9bee"
+    },
+    {
+      "group": "B",
+      "arm": "fixed_on",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "191cbca20099cba161d88f63cb079356f33c5c68dbe33f975218c9ad80df9bee"
+    },
+    {
+      "group": "B",
+      "arm": "fixed_off",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "073e30b056fa3ad0a9a2519d8dc194922cdc53c58f55dfb5138fdc4ed0fc6d9c"
+    },
+    {
+      "group": "B",
+      "arm": "self",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "089ae0242d204fdf5740b40ee4dcc7b2a7fea598ae63ab164eaf62c5b0134d1c"
+    },
+    {
+      "group": "B",
+      "arm": "fixed_on",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "d56b47fe0641a87c190de350ab48ab67bbe917f4bdc147ddaf58efc85bc57e33"
+    },
+    {
+      "group": "B",
+      "arm": "fixed_off",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "089ae0242d204fdf5740b40ee4dcc7b2a7fea598ae63ab164eaf62c5b0134d1c"
+    },
+    {
+      "group": "B",
+      "arm": "self",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "5ea52307e4fb048fe197b9b0f16c1eac238aedf861d8a911fc7f77c8fd3d4101"
+    },
+    {
+      "group": "B",
+      "arm": "fixed_on",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "5ea52307e4fb048fe197b9b0f16c1eac238aedf861d8a911fc7f77c8fd3d4101"
+    },
+    {
+      "group": "B",
+      "arm": "fixed_off",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "979a79594dbc2df462730cab57c1622332805e830731b9ecf0170f62628b2d5a"
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-01",
+      "status": "valid",
+      "files_sha256": "b2612a23c3e9fb8ded032acc7c84a707e4ad1ee437d0c495460c9e26333af674",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "3255b7f6d5edd492b032b2b11b1834577e9abd092dd62aa15df0c1fdbce98287"
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-02",
+      "status": "valid",
+      "files_sha256": "fce7d370f9690d360933f662e1022dcc4f5b16d1b41d9b26a3e416a350b6e06b",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "cab2e286a7a1663c2d4da73864c24c96582ddec53836ed6936b6eb71ec37115f"
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-03",
+      "status": "valid",
+      "files_sha256": "1353e9f0e8ff53560cd56543fbc010dd1fef1c394d384aa97e306c4c50f4156f",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "a378034be7102325497d2cee48e444ad1e045e968eb58d5eb9ea7029d6892179"
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-04",
+      "status": "valid",
+      "files_sha256": "519d9e55b5b9417b81aa56323894aef2563a3ea69e1f20a35d8c5b596c921d57",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "7b56b2a83e5de6de284d5ad4068e5015bde25ff0261e289611103c2843c6e68a"
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-05",
+      "status": "valid",
+      "files_sha256": "fce7d370f9690d360933f662e1022dcc4f5b16d1b41d9b26a3e416a350b6e06b",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "e4898ff2ff87a23ececee3d98251500405b40b482209812e67c41f54e870502e"
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-06",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-07",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-08",
+      "status": "invalid",
+      "passed": false
+    }
+  ],
+  "paired": {
+    "A": {
+      "passed": {
+        "self": [],
+        "fixed_on": [],
+        "fixed_off": [],
+        "direct": []
+      },
+      "self_only": [],
+      "direct_only": []
+    },
+    "B": {
+      "passed": {
+        "self": [],
+        "fixed_on": [],
+        "fixed_off": [],
+        "direct": []
+      },
+      "self_only": [],
+      "direct_only": []
+    }
+  }
+}

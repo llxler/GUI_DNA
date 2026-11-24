@@ -21,6 +21,8 @@ GUI-DNA 把「点击后怎样改变应用状态」写进可复用的行为库，
 
 **从公开需求建库。** DeepSeek V4 Flash 在 TodoMVC 的从零代码为 2/8，自建库组装为 8/8。固定复用建库时的首例同样为 8/8。在 Duo 的十个双功能组合上，同一模型从零为 6/10，自建库为 0/10。每个实验分别报告哪份实现能工作，以及逐题更改配置增加了哪些通过项。[多模型实验](studies/webbench/backbone_matrix/README.md) · [完整记录](docs/results.md)
 
+六模型的离线复测按已交付的源码重建接口。TodoMVC 的 Gemma 控制器通过 6/8，从零通过 4/8，固定该实现也通过相同六题。Duo 按公开功能名组装两个模型组件，GPT-OSS 通过 6/10（从零 5/10），Qwen3.5 通过 3/10（从零 2/10）。修正从零代码的默认导出后，Mistral 两者都为 4/10，另外三模型仍以从零更高。论文 Table 1 B 区的 Bind 单列此规则，Self 列保留模型自己的原方案。[两套件完整对照](studies/results/library-domain-replay-20261124.json)
+
 Qwen3-Coder 按依赖顺序生成的两个表格库分别通过 5/20、1/20，同设置从零为 3/20，两个固定首例分别过相同的题。[代码模型逐题结果](studies/results/self-dependency-resume-20261124.json)
 
 建库质量与逐题选配置可以分别检验。保持 Qwen3.5-9B 和同一组 20 个表格任务不变，换用两份独立 GPT-6 Astra 库，原配置协议分别通过 9/20 和 12/20。两份库直接复用首例各通过 13/20。关闭额外推理并约束配置输出后，Qwen 为两份库分别选了 20 次首例。原 GPT-5 库在原协议通过 1/20。[论文总表 D 区与同目标人工对照](studies/results/paper-library-followups-20261124.json) · [同目标结果与逐题标识](studies/public_library_transfer/strong_builder/result.json) · [受约束配置](studies/public_library_transfer/strong_builder/native/result.json)

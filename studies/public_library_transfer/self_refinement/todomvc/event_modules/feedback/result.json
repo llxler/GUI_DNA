@@ -1,0 +1,4063 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "new_external_api_calls": 0,
+  "new_api_cost_usd": 0,
+  "public_design_utc": "2026-11-24T10:34:15.760274+00:00",
+  "registered_utc": "2026-11-24T10:35:30.002364+00:00",
+  "sealed_utc": "2026-11-24T10:37:33.979913+00:00",
+  "seal_sha256": "b02086a731a4ef41683ff2e40d5c634eaba37b423d355fdcf2d1fef42255ab1e",
+  "parent_seal_sha256": "93f9299a50ce83f2fdb25afdbd61336299d362479e359080b7876abffb435d41",
+  "parent_repair_calls_included": false,
+  "sources": {
+    "studies/public_library_transfer/self_refinement/todomvc/event_modules/feedback/PROTOCOL.md": "ed679a19d28746ad4abe44b25c725e6931f3beddedafc387ca77c4734ad525aa",
+    "studies/public_library_transfer/self_refinement/todomvc/event_modules/feedback/probes.cjs": "b114f39c48551c1888a9674c46162e34cac75c11c681480d5f985a1f1b070a00",
+    "studies/public_library_transfer/self_refinement/todomvc/event_modules/feedback/run.py": "aecbad5d10e694f2be449d76cfa4216f13c19504856a9ae832d44aa328956455",
+    "studies/public_library_transfer/self_refinement/todomvc/event_modules/modules.py": "8ec9ed33c0114b05f2229a85f374d2c7c0d55069955ffa2829ee389c684a6ef8",
+    "studies/public_library_transfer/self_refinement/todomvc/event_modules/run.py": "b6ca0292b8e5cc753fdc9fde93c7e0922d45576fe4eebbdccf29b8cf7893d679",
+    "studies/public_library_transfer/self_refinement/todomvc/source_binding/extract.cjs": "796a7dd9bb8552716c16518fd4383723af8be0d4d06fb9f574e39166a65027fe",
+    "artifacts/benchmark-probe/WebApp1k/staging/node_modules/acorn/dist/acorn.js": "b95392d79457d0357555c5ed3e56302d074b92dff119bcf3b44179500b10e9df",
+    "studies/public_library_transfer/self_refinement/todomvc/event_modules/function.cjs": "83cce35ce3ff39fdb5c949dfbbd615b51603198f1febb3792845b03366eae88d",
+    "studies/public_library_transfer/self_refinement/local_domain/run.py": "19dbcc1e9235a56624b887321938528af8902fca4ab3bd9d0fb04dad381357ae",
+    "artifacts/todomvc-local-events-20261124/public.json": "ae4b66f78d4cf106ff14a6523e8d04205ca1c70fd4d7eda92275513950c2dd10",
+    "artifacts/todomvc-local-events-20261124/seal.json": "93f9299a50ce83f2fdb25afdbd61336299d362479e359080b7876abffb435d41",
+    "artifacts/todomvc-event-feedback-20261124/public-design.json": "0382e4f99b2266bb0ae47ccf73d96160f8d68713fc775932c63dfa6187049614"
+  },
+  "usage": {
+    "A": {
+      "calls": 11,
+      "input_tokens": 8738,
+      "output_tokens": 1366
+    },
+    "B": {
+      "calls": 11,
+      "input_tokens": 9012,
+      "output_tokens": 1470
+    },
+    "direct": {
+      "calls": 8,
+      "input_tokens": 14802,
+      "output_tokens": 6301
+    }
+  },
+  "public": {
+    "A": {
+      "initial": {
+        "initial-state": {
+          "owners": [
+            "init"
+          ],
+          "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+          "passed": true,
+          "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":0}"
+        },
+        "restore": {
+          "owners": [
+            "init"
+          ],
+          "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+          "passed": false,
+          "actual": "[]"
+        },
+        "append": {
+          "owners": [
+            "add"
+          ],
+          "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+          "passed": false,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+        },
+        "blank": {
+          "owners": [
+            "add"
+          ],
+          "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+        },
+        "persist": {
+          "owners": [
+            "persist",
+            "add"
+          ],
+          "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+          "passed": false,
+          "actual": "null"
+        },
+        "view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+          "passed": false,
+          "actual": "TypeError: todo.completed.trim is not a function"
+        },
+        "empty-view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "For an empty state, visible is empty and hasTodos is false.",
+          "passed": false,
+          "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":12}"
+        },
+        "count": {
+          "owners": [
+            "select"
+          ],
+          "expected": "With one active item the countText is 1 item left.",
+          "passed": false,
+          "actual": "TypeError: todo.completed.trim is not a function"
+        },
+        "toggle": {
+          "owners": [
+            "toggle"
+          ],
+          "expected": "Toggling id 7 marks it complete and leaves id 11 complete.",
+          "passed": false,
+          "actual": "TypeError: Cannot destructure property 'hasTodos' of 'state.view' as it is undefined."
+        },
+        "toggle-all": {
+          "owners": [
+            "toggleAll"
+          ],
+          "expected": "With one active and one completed item, toggleAll marks both complete.",
+          "passed": false,
+          "actual": "TypeError: state.persist is not a function"
+        },
+        "edit": {
+          "owners": [
+            "edit"
+          ],
+          "expected": "Starting to edit id 7 sets state.editing to that id.",
+          "passed": false,
+          "actual": "TypeError: todo.id.trim is not a function"
+        },
+        "save": {
+          "owners": [
+            "save"
+          ],
+          "expected": "Saving id 7 with a padded nonempty title trims its title and exits editing.",
+          "passed": false,
+          "actual": "[\"First note\",7]"
+        },
+        "cancel": {
+          "owners": [
+            "cancel"
+          ],
+          "expected": "Cancelling edit keeps the original title and exits editing.",
+          "passed": false,
+          "actual": "[\"First note\",7]"
+        },
+        "clear": {
+          "owners": [
+            "clearCompleted"
+          ],
+          "expected": "Clearing completed todos leaves only id 7.",
+          "passed": false,
+          "actual": "[7,11]"
+        },
+        "route": {
+          "owners": [
+            "route"
+          ],
+          "expected": "The completed route is recorded in the state filter.",
+          "passed": false,
+          "actual": "\"all\""
+        },
+        "filtered-view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "Selecting the completed route shows only the completed item.",
+          "passed": false,
+          "actual": "TypeError: todo.completed.trim is not a function"
+        }
+      },
+      "final": {
+        "initial-state": {
+          "owners": [
+            "init"
+          ],
+          "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+          "passed": true,
+          "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":0}"
+        },
+        "restore": {
+          "owners": [
+            "init"
+          ],
+          "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+          "passed": false,
+          "actual": "[]"
+        },
+        "append": {
+          "owners": [
+            "add"
+          ],
+          "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+          "passed": false,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+        },
+        "blank": {
+          "owners": [
+            "add"
+          ],
+          "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+        },
+        "persist": {
+          "owners": [
+            "persist",
+            "add"
+          ],
+          "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+          "passed": false,
+          "actual": "null"
+        },
+        "view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+          "passed": false,
+          "actual": "TypeError: todo.completed.trim is not a function"
+        },
+        "empty-view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "For an empty state, visible is empty and hasTodos is false.",
+          "passed": false,
+          "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":12}"
+        },
+        "count": {
+          "owners": [
+            "select"
+          ],
+          "expected": "With one active item the countText is 1 item left.",
+          "passed": false,
+          "actual": "TypeError: todo.completed.trim is not a function"
+        },
+        "toggle": {
+          "owners": [
+            "toggle"
+          ],
+          "expected": "Toggling id 7 marks it complete and leaves id 11 complete.",
+          "passed": false,
+          "actual": "TypeError: Cannot destructure property 'hasTodos' of 'state.view' as it is undefined."
+        },
+        "toggle-all": {
+          "owners": [
+            "toggleAll"
+          ],
+          "expected": "With one active and one completed item, toggleAll marks both complete.",
+          "passed": false,
+          "actual": "TypeError: state.persist is not a function"
+        },
+        "edit": {
+          "owners": [
+            "edit"
+          ],
+          "expected": "Starting to edit id 7 sets state.editing to that id.",
+          "passed": false,
+          "actual": "TypeError: todo.id.trim is not a function"
+        },
+        "save": {
+          "owners": [
+            "save"
+          ],
+          "expected": "Saving id 7 with a padded nonempty title trims its title and exits editing.",
+          "passed": false,
+          "actual": "[\"First note\",7]"
+        },
+        "cancel": {
+          "owners": [
+            "cancel"
+          ],
+          "expected": "Cancelling edit keeps the original title and exits editing.",
+          "passed": false,
+          "actual": "[\"First note\",7]"
+        },
+        "clear": {
+          "owners": [
+            "clearCompleted"
+          ],
+          "expected": "Clearing completed todos leaves only id 7.",
+          "passed": true,
+          "actual": "[7]"
+        },
+        "route": {
+          "owners": [
+            "route"
+          ],
+          "expected": "The completed route is recorded in the state filter.",
+          "passed": false,
+          "actual": "\"all\""
+        },
+        "filtered-view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "Selecting the completed route shows only the completed item.",
+          "passed": false,
+          "actual": "TypeError: todo.completed.trim is not a function"
+        }
+      },
+      "attempts": [
+        {
+          "name": "init",
+          "outcome": "no_public_gain",
+          "before": [
+            "blank",
+            "initial-state"
+          ],
+          "proposed": [
+            "blank",
+            "initial-state"
+          ],
+          "proposed_source_sha256": "66a2992ef296c84bc2fb46aacc852a742192a6d9e97bd5a9117a17dea8d00f77"
+        },
+        {
+          "name": "persist",
+          "outcome": "no_public_gain",
+          "before": [
+            "blank",
+            "initial-state"
+          ],
+          "proposed": [
+            "blank",
+            "initial-state"
+          ],
+          "proposed_source_sha256": "015ce8670bf968f163fe7e9bb5a189507b4eeefdcbfc855ed02bd163443b483c"
+        },
+        {
+          "name": "select",
+          "outcome": "no_public_gain",
+          "before": [
+            "blank",
+            "initial-state"
+          ],
+          "proposed": [
+            "blank",
+            "initial-state"
+          ],
+          "proposed_source_sha256": "012424c8a0ea64c16bacc820d591d3ffe695ec0d4b4262aa71dbf1b30b43de6b"
+        },
+        {
+          "name": "add",
+          "outcome": "public_regression",
+          "before": [
+            "blank",
+            "initial-state"
+          ],
+          "proposed": [
+            "initial-state"
+          ],
+          "proposed_source_sha256": "aaee4235c2facbeeebe168383eb64e34609c95291bce608b20829c6a8b975eaf"
+        },
+        {
+          "name": "toggle",
+          "outcome": "no_public_gain",
+          "before": [
+            "blank",
+            "initial-state"
+          ],
+          "proposed": [
+            "blank",
+            "initial-state"
+          ],
+          "proposed_source_sha256": "76b9bb1f5a1c60db74b812182c8a87ce01bbd35b606656c14bb66b8236b9d937"
+        },
+        {
+          "name": "toggleAll",
+          "outcome": "no_public_gain",
+          "before": [
+            "blank",
+            "initial-state"
+          ],
+          "proposed": [
+            "blank",
+            "initial-state"
+          ],
+          "proposed_source_sha256": "f60d6b7802fa5c4cbd866f94f80004c49a8d92d09b12f9bfbecd2e4464c93f23"
+        },
+        {
+          "name": "edit",
+          "outcome": "no_public_gain",
+          "before": [
+            "blank",
+            "initial-state"
+          ],
+          "proposed": [
+            "blank",
+            "initial-state"
+          ],
+          "proposed_source_sha256": "5ec1fc0908e2c78a824c8ef4cd26a75cc796492077eebdc11f14373c6432654b"
+        },
+        {
+          "name": "save",
+          "outcome": "no_public_gain",
+          "before": [
+            "blank",
+            "initial-state"
+          ],
+          "proposed": [
+            "blank",
+            "initial-state"
+          ],
+          "proposed_source_sha256": "9df90a0d04d2d2cd62a62c39e40b2cc6813a155715019625552a8f044f987e64"
+        },
+        {
+          "name": "cancel",
+          "outcome": "no_public_gain",
+          "before": [
+            "blank",
+            "initial-state"
+          ],
+          "proposed": [
+            "blank",
+            "initial-state"
+          ],
+          "proposed_source_sha256": "cfdcbec2e9ff7c2f8c65e553f10104a048417a6fd2d84ed6c51c0f506187fcab"
+        },
+        {
+          "name": "clearCompleted",
+          "outcome": "accepted",
+          "before": [
+            "blank",
+            "initial-state"
+          ],
+          "proposed": [
+            "blank",
+            "clear",
+            "initial-state"
+          ],
+          "proposed_source_sha256": "396db1aa25b76463066980ca361c11306aee2dd9d9635e82be24522d36a9c1fd"
+        },
+        {
+          "name": "route",
+          "outcome": "no_public_gain",
+          "before": [
+            "blank",
+            "clear",
+            "initial-state"
+          ],
+          "proposed": [
+            "blank",
+            "clear",
+            "initial-state"
+          ],
+          "proposed_source_sha256": "4d064b275fed7dd61c9d276894f364c843f37ef81230fcf8a964d27d86a0d5bd"
+        }
+      ]
+    },
+    "B": {
+      "initial": {
+        "initial-state": {
+          "owners": [
+            "init"
+          ],
+          "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+          "passed": false,
+          "actual": "null"
+        },
+        "restore": {
+          "owners": [
+            "init"
+          ],
+          "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+          "passed": false,
+          "actual": "TypeError: Cannot read properties of undefined (reading 'todos')"
+        },
+        "append": {
+          "owners": [
+            "add"
+          ],
+          "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+          "passed": false,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+        },
+        "blank": {
+          "owners": [
+            "add"
+          ],
+          "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+        },
+        "persist": {
+          "owners": [
+            "persist",
+            "add"
+          ],
+          "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+          "passed": false,
+          "actual": "null"
+        },
+        "view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+          "passed": false,
+          "actual": "null"
+        },
+        "empty-view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "For an empty state, visible is empty and hasTodos is false.",
+          "passed": false,
+          "actual": "null"
+        },
+        "count": {
+          "owners": [
+            "select"
+          ],
+          "expected": "With one active item the countText is 1 item left.",
+          "passed": false,
+          "actual": "TypeError: Cannot read properties of undefined (reading 'countText')"
+        },
+        "toggle": {
+          "owners": [
+            "toggle"
+          ],
+          "expected": "Toggling id 7 marks it complete and leaves id 11 complete.",
+          "passed": false,
+          "actual": "TypeError: Cannot read properties of undefined (reading 'countText')"
+        },
+        "toggle-all": {
+          "owners": [
+            "toggleAll"
+          ],
+          "expected": "With one active and one completed item, toggleAll marks both complete.",
+          "passed": false,
+          "actual": "[false,true]"
+        },
+        "edit": {
+          "owners": [
+            "edit"
+          ],
+          "expected": "Starting to edit id 7 sets state.editing to that id.",
+          "passed": false,
+          "actual": "null"
+        },
+        "save": {
+          "owners": [
+            "save"
+          ],
+          "expected": "Saving id 7 with a padded nonempty title trims its title and exits editing.",
+          "passed": false,
+          "actual": "[\"First note\",7]"
+        },
+        "cancel": {
+          "owners": [
+            "cancel"
+          ],
+          "expected": "Cancelling edit keeps the original title and exits editing.",
+          "passed": false,
+          "actual": "TypeError: Cannot read properties of undefined (reading 'title')"
+        },
+        "clear": {
+          "owners": [
+            "clearCompleted"
+          ],
+          "expected": "Clearing completed todos leaves only id 7.",
+          "passed": false,
+          "actual": "TypeError: Cannot set properties of undefined (setting 'hasTodos')"
+        },
+        "route": {
+          "owners": [
+            "route"
+          ],
+          "expected": "The completed route is recorded in the state filter.",
+          "passed": false,
+          "actual": "\"all\""
+        },
+        "filtered-view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "Selecting the completed route shows only the completed item.",
+          "passed": false,
+          "actual": "TypeError: Cannot read properties of undefined (reading 'visible')"
+        }
+      },
+      "final": {
+        "initial-state": {
+          "owners": [
+            "init"
+          ],
+          "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+          "passed": false,
+          "actual": "null"
+        },
+        "restore": {
+          "owners": [
+            "init"
+          ],
+          "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+          "passed": false,
+          "actual": "TypeError: Cannot read properties of undefined (reading 'todos')"
+        },
+        "append": {
+          "owners": [
+            "add"
+          ],
+          "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+          "passed": false,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+        },
+        "blank": {
+          "owners": [
+            "add"
+          ],
+          "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+        },
+        "persist": {
+          "owners": [
+            "persist",
+            "add"
+          ],
+          "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+          "passed": false,
+          "actual": "null"
+        },
+        "view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+          "passed": false,
+          "actual": "null"
+        },
+        "empty-view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "For an empty state, visible is empty and hasTodos is false.",
+          "passed": false,
+          "actual": "null"
+        },
+        "count": {
+          "owners": [
+            "select"
+          ],
+          "expected": "With one active item the countText is 1 item left.",
+          "passed": false,
+          "actual": "TypeError: Cannot read properties of undefined (reading 'countText')"
+        },
+        "toggle": {
+          "owners": [
+            "toggle"
+          ],
+          "expected": "Toggling id 7 marks it complete and leaves id 11 complete.",
+          "passed": false,
+          "actual": "TypeError: Cannot read properties of undefined (reading 'countText')"
+        },
+        "toggle-all": {
+          "owners": [
+            "toggleAll"
+          ],
+          "expected": "With one active and one completed item, toggleAll marks both complete.",
+          "passed": false,
+          "actual": "[false,true]"
+        },
+        "edit": {
+          "owners": [
+            "edit"
+          ],
+          "expected": "Starting to edit id 7 sets state.editing to that id.",
+          "passed": false,
+          "actual": "null"
+        },
+        "save": {
+          "owners": [
+            "save"
+          ],
+          "expected": "Saving id 7 with a padded nonempty title trims its title and exits editing.",
+          "passed": false,
+          "actual": "[\"First note\",7]"
+        },
+        "cancel": {
+          "owners": [
+            "cancel"
+          ],
+          "expected": "Cancelling edit keeps the original title and exits editing.",
+          "passed": false,
+          "actual": "TypeError: Cannot read properties of undefined (reading 'title')"
+        },
+        "clear": {
+          "owners": [
+            "clearCompleted"
+          ],
+          "expected": "Clearing completed todos leaves only id 7.",
+          "passed": false,
+          "actual": "TypeError: Cannot set properties of undefined (setting 'hasTodos')"
+        },
+        "route": {
+          "owners": [
+            "route"
+          ],
+          "expected": "The completed route is recorded in the state filter.",
+          "passed": false,
+          "actual": "\"all\""
+        },
+        "filtered-view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "Selecting the completed route shows only the completed item.",
+          "passed": false,
+          "actual": "TypeError: Cannot read properties of undefined (reading 'visible')"
+        }
+      },
+      "attempts": [
+        {
+          "name": "init",
+          "outcome": "no_public_gain",
+          "before": [
+            "blank"
+          ],
+          "proposed": [
+            "blank"
+          ],
+          "proposed_source_sha256": "a4b0675a1cf66b91bdbc91163d1e5e807d5ad2e1d85a43e5ea634c13d0949443"
+        },
+        {
+          "name": "persist",
+          "outcome": "no_public_gain",
+          "before": [
+            "blank"
+          ],
+          "proposed": [
+            "blank"
+          ],
+          "proposed_source_sha256": "07d54f0b023444a11474bf25302864ac6c35ff6a77cb42022b62b62280ca2e9e"
+        },
+        {
+          "name": "select",
+          "outcome": "no_public_gain",
+          "before": [
+            "blank"
+          ],
+          "proposed": [
+            "blank"
+          ],
+          "proposed_source_sha256": "d73b54ee5788d0ce34b580e88de66e9b3101d8ccd272511dfdefddaa580e5820"
+        },
+        {
+          "name": "add",
+          "outcome": "public_regression",
+          "before": [
+            "blank"
+          ],
+          "proposed": [],
+          "proposed_source_sha256": "a47ffccdffe8d59e2a02cb75bf38564c9f606fc7935112da8f54e41c9d4b389c"
+        },
+        {
+          "name": "toggle",
+          "outcome": "no_public_gain",
+          "before": [
+            "blank"
+          ],
+          "proposed": [
+            "blank"
+          ],
+          "proposed_source_sha256": "d7055d90204dade50347b59009082c3dcff790ac1f940ae7bd24a4239cd11bab"
+        },
+        {
+          "name": "toggleAll",
+          "outcome": "no_public_gain",
+          "before": [
+            "blank"
+          ],
+          "proposed": [
+            "blank"
+          ],
+          "proposed_source_sha256": "33943859c7e360d2894a91cb6fe2492c580ed27e89b17fd76a20f21a358eb2a3"
+        },
+        {
+          "name": "edit",
+          "outcome": "no_public_gain",
+          "before": [
+            "blank"
+          ],
+          "proposed": [
+            "blank"
+          ],
+          "proposed_source_sha256": "e1bcb8866a2913af5569fa5a0b7a57e3e7560c0735c88b9bdbff86c78f4bbb56"
+        },
+        {
+          "name": "save",
+          "outcome": "no_public_gain",
+          "before": [
+            "blank"
+          ],
+          "proposed": [
+            "blank"
+          ],
+          "proposed_source_sha256": "e6b0ff6559d5cfaf3570afa446f379b3647c829c71fe2808399dc8425a9d0aab"
+        },
+        {
+          "name": "cancel",
+          "outcome": "no_public_gain",
+          "before": [
+            "blank"
+          ],
+          "proposed": [
+            "blank"
+          ],
+          "proposed_source_sha256": "9532403e838a07438260db84badb3d1d3fb3c0259404433f01321a3f3448a7da"
+        },
+        {
+          "name": "clearCompleted",
+          "outcome": "no_public_gain",
+          "before": [
+            "blank"
+          ],
+          "proposed": [
+            "blank"
+          ],
+          "proposed_source_sha256": "a898298a4bab8ff3ce6e83dd9d890d6d6276e993efcd81a8f9107a985942d8d1"
+        },
+        {
+          "name": "route",
+          "outcome": "no_public_gain",
+          "before": [
+            "blank"
+          ],
+          "proposed": [
+            "blank"
+          ],
+          "proposed_source_sha256": "462340512df0d1d54f93aba5eb5acc30d15e9d33f27249630734166b242197c1"
+        }
+      ]
+    },
+    "direct": {
+      "todo-01": {
+        "initial": {
+          "initial-state": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+            "passed": true,
+            "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":0}"
+          },
+          "restore": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+            "passed": false,
+            "actual": "[]"
+          },
+          "append": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+            "passed": false,
+            "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+          },
+          "blank": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+            "passed": true,
+            "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+          },
+          "persist": {
+            "owners": [
+              "persist",
+              "add"
+            ],
+            "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+            "passed": false,
+            "actual": "null"
+          },
+          "view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+            "passed": false,
+            "actual": "{\"todos\":[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}],\"filter\":\"all\",\"editing\":null,\"nextId\":12}"
+          },
+          "empty-view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "For an empty state, visible is empty and hasTodos is false.",
+            "passed": false,
+            "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":12}"
+          },
+          "count": {
+            "owners": [
+              "select"
+            ],
+            "expected": "With one active item the countText is 1 item left.",
+            "passed": false,
+            "actual": "null"
+          }
+        },
+        "final": {
+          "initial-state": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+            "passed": true,
+            "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":0}"
+          },
+          "restore": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+            "passed": false,
+            "actual": "[]"
+          },
+          "append": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+            "passed": false,
+            "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+          },
+          "blank": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+            "passed": true,
+            "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+          },
+          "persist": {
+            "owners": [
+              "persist",
+              "add"
+            ],
+            "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+            "passed": false,
+            "actual": "null"
+          },
+          "view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+            "passed": false,
+            "actual": "{\"todos\":[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}],\"filter\":\"all\",\"editing\":null,\"nextId\":12}"
+          },
+          "empty-view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "For an empty state, visible is empty and hasTodos is false.",
+            "passed": false,
+            "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":12}"
+          },
+          "count": {
+            "owners": [
+              "select"
+            ],
+            "expected": "With one active item the countText is 1 item left.",
+            "passed": false,
+            "actual": "null"
+          }
+        },
+        "outcome": "no_public_gain",
+        "proposed": [
+          "blank",
+          "initial-state"
+        ],
+        "proposed_source_sha256": "c25359e768a06fa9b3c03e8456e3395cc97dd26d98bf514f356b2eb608e09604"
+      },
+      "todo-02": {
+        "initial": {
+          "initial-state": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+            "passed": true,
+            "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":0}"
+          },
+          "restore": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+            "passed": false,
+            "actual": "[]"
+          },
+          "append": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+            "passed": false,
+            "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+          },
+          "blank": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+            "passed": true,
+            "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+          },
+          "persist": {
+            "owners": [
+              "persist",
+              "add"
+            ],
+            "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+            "passed": false,
+            "actual": "null"
+          },
+          "view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+            "passed": false,
+            "actual": "{\"todos\":[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}],\"filter\":\"all\",\"editing\":null,\"nextId\":12}"
+          },
+          "empty-view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "For an empty state, visible is empty and hasTodos is false.",
+            "passed": false,
+            "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":12}"
+          },
+          "toggle": {
+            "owners": [
+              "toggle"
+            ],
+            "expected": "Toggling id 7 marks it complete and leaves id 11 complete.",
+            "passed": false,
+            "actual": "[false,true]"
+          }
+        },
+        "final": {
+          "initial-state": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+            "passed": true,
+            "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":0}"
+          },
+          "restore": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+            "passed": false,
+            "actual": "[]"
+          },
+          "append": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+            "passed": false,
+            "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+          },
+          "blank": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+            "passed": true,
+            "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+          },
+          "persist": {
+            "owners": [
+              "persist",
+              "add"
+            ],
+            "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+            "passed": false,
+            "actual": "null"
+          },
+          "view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+            "passed": false,
+            "actual": "{\"todos\":[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}],\"filter\":\"all\",\"editing\":null,\"nextId\":12}"
+          },
+          "empty-view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "For an empty state, visible is empty and hasTodos is false.",
+            "passed": false,
+            "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":12}"
+          },
+          "toggle": {
+            "owners": [
+              "toggle"
+            ],
+            "expected": "Toggling id 7 marks it complete and leaves id 11 complete.",
+            "passed": false,
+            "actual": "[false,true]"
+          }
+        },
+        "outcome": "no_public_gain",
+        "proposed": [
+          "blank",
+          "initial-state"
+        ],
+        "proposed_source_sha256": "70c5abb983af4f9952bf0ba0e975cfa9dbd597d08c0926eb01287122766f2643"
+      },
+      "todo-03": {
+        "initial": {
+          "initial-state": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+            "passed": false,
+            "actual": "{}"
+          },
+          "restore": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+            "passed": false,
+            "actual": "null"
+          },
+          "append": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+            "passed": false,
+            "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+          },
+          "blank": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+            "passed": true,
+            "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+          },
+          "persist": {
+            "owners": [
+              "persist",
+              "add"
+            ],
+            "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+            "passed": false,
+            "actual": "null"
+          },
+          "view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+            "passed": false,
+            "actual": "null"
+          },
+          "empty-view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "For an empty state, visible is empty and hasTodos is false.",
+            "passed": false,
+            "actual": "null"
+          },
+          "edit": {
+            "owners": [
+              "edit"
+            ],
+            "expected": "Starting to edit id 7 sets state.editing to that id.",
+            "passed": false,
+            "actual": "null"
+          },
+          "save": {
+            "owners": [
+              "save"
+            ],
+            "expected": "Saving id 7 with a padded nonempty title trims its title and exits editing.",
+            "passed": false,
+            "actual": "[\"First note\",7]"
+          },
+          "cancel": {
+            "owners": [
+              "cancel"
+            ],
+            "expected": "Cancelling edit keeps the original title and exits editing.",
+            "passed": false,
+            "actual": "[\"First note\",7]"
+          }
+        },
+        "final": {
+          "initial-state": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+            "passed": false,
+            "actual": "{}"
+          },
+          "restore": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+            "passed": false,
+            "actual": "null"
+          },
+          "append": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+            "passed": false,
+            "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+          },
+          "blank": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+            "passed": true,
+            "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+          },
+          "persist": {
+            "owners": [
+              "persist",
+              "add"
+            ],
+            "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+            "passed": false,
+            "actual": "null"
+          },
+          "view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+            "passed": false,
+            "actual": "null"
+          },
+          "empty-view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "For an empty state, visible is empty and hasTodos is false.",
+            "passed": false,
+            "actual": "null"
+          },
+          "edit": {
+            "owners": [
+              "edit"
+            ],
+            "expected": "Starting to edit id 7 sets state.editing to that id.",
+            "passed": false,
+            "actual": "null"
+          },
+          "save": {
+            "owners": [
+              "save"
+            ],
+            "expected": "Saving id 7 with a padded nonempty title trims its title and exits editing.",
+            "passed": false,
+            "actual": "[\"First note\",7]"
+          },
+          "cancel": {
+            "owners": [
+              "cancel"
+            ],
+            "expected": "Cancelling edit keeps the original title and exits editing.",
+            "passed": false,
+            "actual": "[\"First note\",7]"
+          }
+        },
+        "outcome": "invalid",
+        "proposed": null,
+        "proposed_source_sha256": null
+      },
+      "todo-04": {
+        "initial": {
+          "initial-state": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+            "passed": false,
+            "actual": "ReferenceError: select is not defined"
+          },
+          "restore": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+            "passed": false,
+            "actual": "ReferenceError: select is not defined"
+          },
+          "append": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+            "passed": false,
+            "actual": "ReferenceError: select is not defined"
+          },
+          "blank": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+            "passed": false,
+            "actual": "ReferenceError: select is not defined"
+          },
+          "persist": {
+            "owners": [
+              "persist",
+              "add"
+            ],
+            "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+            "passed": false,
+            "actual": "ReferenceError: select is not defined"
+          },
+          "view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+            "passed": false,
+            "actual": "ReferenceError: select is not defined"
+          },
+          "empty-view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "For an empty state, visible is empty and hasTodos is false.",
+            "passed": false,
+            "actual": "ReferenceError: select is not defined"
+          },
+          "toggle": {
+            "owners": [
+              "toggle"
+            ],
+            "expected": "Toggling id 7 marks it complete and leaves id 11 complete.",
+            "passed": false,
+            "actual": "ReferenceError: select is not defined"
+          },
+          "toggle-all": {
+            "owners": [
+              "toggleAll"
+            ],
+            "expected": "With one active and one completed item, toggleAll marks both complete.",
+            "passed": false,
+            "actual": "ReferenceError: select is not defined"
+          }
+        },
+        "final": {
+          "initial-state": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+            "passed": false,
+            "actual": "ReferenceError: select is not defined"
+          },
+          "restore": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+            "passed": false,
+            "actual": "ReferenceError: select is not defined"
+          },
+          "append": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+            "passed": false,
+            "actual": "ReferenceError: select is not defined"
+          },
+          "blank": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+            "passed": false,
+            "actual": "ReferenceError: select is not defined"
+          },
+          "persist": {
+            "owners": [
+              "persist",
+              "add"
+            ],
+            "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+            "passed": false,
+            "actual": "ReferenceError: select is not defined"
+          },
+          "view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+            "passed": false,
+            "actual": "ReferenceError: select is not defined"
+          },
+          "empty-view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "For an empty state, visible is empty and hasTodos is false.",
+            "passed": false,
+            "actual": "ReferenceError: select is not defined"
+          },
+          "toggle": {
+            "owners": [
+              "toggle"
+            ],
+            "expected": "Toggling id 7 marks it complete and leaves id 11 complete.",
+            "passed": false,
+            "actual": "ReferenceError: select is not defined"
+          },
+          "toggle-all": {
+            "owners": [
+              "toggleAll"
+            ],
+            "expected": "With one active and one completed item, toggleAll marks both complete.",
+            "passed": false,
+            "actual": "ReferenceError: select is not defined"
+          }
+        },
+        "outcome": "invalid",
+        "proposed": null,
+        "proposed_source_sha256": null
+      },
+      "todo-05": {
+        "initial": {
+          "initial-state": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+            "passed": true,
+            "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":0}"
+          },
+          "restore": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+            "passed": false,
+            "actual": "[]"
+          },
+          "append": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+            "passed": false,
+            "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+          },
+          "blank": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+            "passed": true,
+            "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+          },
+          "persist": {
+            "owners": [
+              "persist",
+              "add"
+            ],
+            "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+            "passed": false,
+            "actual": "null"
+          },
+          "view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+            "passed": false,
+            "actual": "{\"todos\":[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}],\"filter\":\"all\",\"editing\":null,\"nextId\":12}"
+          },
+          "empty-view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "For an empty state, visible is empty and hasTodos is false.",
+            "passed": false,
+            "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":12}"
+          },
+          "toggle": {
+            "owners": [
+              "toggle"
+            ],
+            "expected": "Toggling id 7 marks it complete and leaves id 11 complete.",
+            "passed": false,
+            "actual": "[false,true]"
+          },
+          "clear": {
+            "owners": [
+              "clearCompleted"
+            ],
+            "expected": "Clearing completed todos leaves only id 7.",
+            "passed": false,
+            "actual": "[7,11]"
+          }
+        },
+        "final": {
+          "initial-state": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+            "passed": true,
+            "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":0}"
+          },
+          "restore": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+            "passed": false,
+            "actual": "[]"
+          },
+          "append": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+            "passed": false,
+            "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+          },
+          "blank": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+            "passed": true,
+            "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+          },
+          "persist": {
+            "owners": [
+              "persist",
+              "add"
+            ],
+            "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+            "passed": false,
+            "actual": "null"
+          },
+          "view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+            "passed": false,
+            "actual": "{\"todos\":[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}],\"filter\":\"all\",\"editing\":null,\"nextId\":12}"
+          },
+          "empty-view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "For an empty state, visible is empty and hasTodos is false.",
+            "passed": false,
+            "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":12}"
+          },
+          "toggle": {
+            "owners": [
+              "toggle"
+            ],
+            "expected": "Toggling id 7 marks it complete and leaves id 11 complete.",
+            "passed": false,
+            "actual": "[false,true]"
+          },
+          "clear": {
+            "owners": [
+              "clearCompleted"
+            ],
+            "expected": "Clearing completed todos leaves only id 7.",
+            "passed": false,
+            "actual": "[7,11]"
+          }
+        },
+        "outcome": "public_regression",
+        "proposed": [],
+        "proposed_source_sha256": "7c4622de668a17c53b7ed877952852a987ed0d60aa689ec4a0d4f516f0d93345"
+      },
+      "todo-06": {
+        "initial": {
+          "initial-state": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "restore": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "append": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "blank": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "persist": {
+            "owners": [
+              "persist",
+              "add"
+            ],
+            "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "empty-view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "For an empty state, visible is empty and hasTodos is false.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "toggle": {
+            "owners": [
+              "toggle"
+            ],
+            "expected": "Toggling id 7 marks it complete and leaves id 11 complete.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "route": {
+            "owners": [
+              "route"
+            ],
+            "expected": "The completed route is recorded in the state filter.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "filtered-view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "Selecting the completed route shows only the completed item.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          }
+        },
+        "final": {
+          "initial-state": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "restore": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "append": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "blank": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "persist": {
+            "owners": [
+              "persist",
+              "add"
+            ],
+            "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "empty-view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "For an empty state, visible is empty and hasTodos is false.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "toggle": {
+            "owners": [
+              "toggle"
+            ],
+            "expected": "Toggling id 7 marks it complete and leaves id 11 complete.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "route": {
+            "owners": [
+              "route"
+            ],
+            "expected": "The completed route is recorded in the state filter.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "filtered-view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "Selecting the completed route shows only the completed item.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          }
+        },
+        "outcome": "invalid",
+        "proposed": null,
+        "proposed_source_sha256": null
+      },
+      "todo-07": {
+        "initial": {
+          "initial-state": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "restore": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "append": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "blank": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "persist": {
+            "owners": [
+              "persist",
+              "add"
+            ],
+            "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "empty-view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "For an empty state, visible is empty and hasTodos is false.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "count": {
+            "owners": [
+              "select"
+            ],
+            "expected": "With one active item the countText is 1 item left.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "toggle": {
+            "owners": [
+              "toggle"
+            ],
+            "expected": "Toggling id 7 marks it complete and leaves id 11 complete.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "edit": {
+            "owners": [
+              "edit"
+            ],
+            "expected": "Starting to edit id 7 sets state.editing to that id.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "save": {
+            "owners": [
+              "save"
+            ],
+            "expected": "Saving id 7 with a padded nonempty title trims its title and exits editing.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "cancel": {
+            "owners": [
+              "cancel"
+            ],
+            "expected": "Cancelling edit keeps the original title and exits editing.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "clear": {
+            "owners": [
+              "clearCompleted"
+            ],
+            "expected": "Clearing completed todos leaves only id 7.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          }
+        },
+        "final": {
+          "initial-state": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "restore": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "append": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "blank": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "persist": {
+            "owners": [
+              "persist",
+              "add"
+            ],
+            "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "empty-view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "For an empty state, visible is empty and hasTodos is false.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "count": {
+            "owners": [
+              "select"
+            ],
+            "expected": "With one active item the countText is 1 item left.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "toggle": {
+            "owners": [
+              "toggle"
+            ],
+            "expected": "Toggling id 7 marks it complete and leaves id 11 complete.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "edit": {
+            "owners": [
+              "edit"
+            ],
+            "expected": "Starting to edit id 7 sets state.editing to that id.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "save": {
+            "owners": [
+              "save"
+            ],
+            "expected": "Saving id 7 with a padded nonempty title trims its title and exits editing.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "cancel": {
+            "owners": [
+              "cancel"
+            ],
+            "expected": "Cancelling edit keeps the original title and exits editing.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "clear": {
+            "owners": [
+              "clearCompleted"
+            ],
+            "expected": "Clearing completed todos leaves only id 7.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          }
+        },
+        "outcome": "invalid",
+        "proposed": null,
+        "proposed_source_sha256": null
+      },
+      "todo-08": {
+        "initial": {
+          "initial-state": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "restore": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "append": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "blank": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "persist": {
+            "owners": [
+              "persist",
+              "add"
+            ],
+            "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "empty-view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "For an empty state, visible is empty and hasTodos is false.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "count": {
+            "owners": [
+              "select"
+            ],
+            "expected": "With one active item the countText is 1 item left.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "toggle": {
+            "owners": [
+              "toggle"
+            ],
+            "expected": "Toggling id 7 marks it complete and leaves id 11 complete.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "toggle-all": {
+            "owners": [
+              "toggleAll"
+            ],
+            "expected": "With one active and one completed item, toggleAll marks both complete.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "edit": {
+            "owners": [
+              "edit"
+            ],
+            "expected": "Starting to edit id 7 sets state.editing to that id.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "save": {
+            "owners": [
+              "save"
+            ],
+            "expected": "Saving id 7 with a padded nonempty title trims its title and exits editing.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "cancel": {
+            "owners": [
+              "cancel"
+            ],
+            "expected": "Cancelling edit keeps the original title and exits editing.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "clear": {
+            "owners": [
+              "clearCompleted"
+            ],
+            "expected": "Clearing completed todos leaves only id 7.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "route": {
+            "owners": [
+              "route"
+            ],
+            "expected": "The completed route is recorded in the state filter.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "filtered-view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "Selecting the completed route shows only the completed item.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          }
+        },
+        "final": {
+          "initial-state": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "restore": {
+            "owners": [
+              "init"
+            ],
+            "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "append": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "blank": {
+            "owners": [
+              "add"
+            ],
+            "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "persist": {
+            "owners": [
+              "persist",
+              "add"
+            ],
+            "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "empty-view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "For an empty state, visible is empty and hasTodos is false.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "count": {
+            "owners": [
+              "select"
+            ],
+            "expected": "With one active item the countText is 1 item left.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "toggle": {
+            "owners": [
+              "toggle"
+            ],
+            "expected": "Toggling id 7 marks it complete and leaves id 11 complete.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "toggle-all": {
+            "owners": [
+              "toggleAll"
+            ],
+            "expected": "With one active and one completed item, toggleAll marks both complete.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "edit": {
+            "owners": [
+              "edit"
+            ],
+            "expected": "Starting to edit id 7 sets state.editing to that id.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "save": {
+            "owners": [
+              "save"
+            ],
+            "expected": "Saving id 7 with a padded nonempty title trims its title and exits editing.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "cancel": {
+            "owners": [
+              "cancel"
+            ],
+            "expected": "Cancelling edit keeps the original title and exits editing.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "clear": {
+            "owners": [
+              "clearCompleted"
+            ],
+            "expected": "Clearing completed todos leaves only id 7.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "route": {
+            "owners": [
+              "route"
+            ],
+            "expected": "The completed route is recorded in the state filter.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          },
+          "filtered-view": {
+            "owners": [
+              "select"
+            ],
+            "expected": "Selecting the completed route shows only the completed item.",
+            "passed": false,
+            "actual": "Error: No complete controller"
+          }
+        },
+        "outcome": "invalid",
+        "proposed": null,
+        "proposed_source_sha256": null
+      }
+    }
+  },
+  "rows": [
+    {
+      "group": "A",
+      "arm": "before_self",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "36779c6f972cbff06847ad4157b0a39b7523b722c543920a130d606cb090ae7f"
+    },
+    {
+      "group": "A",
+      "arm": "after_self",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "3db149c621afc13d0d49912407da09be22c7a1f12b8c870e969449fcf75cb57a",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "0052f87eab6eb92a852958acdb5c635066163f6a9bfad9578aeb1fe707596755"
+    },
+    {
+      "group": "A",
+      "arm": "before_fixed_on",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "36779c6f972cbff06847ad4157b0a39b7523b722c543920a130d606cb090ae7f"
+    },
+    {
+      "group": "A",
+      "arm": "after_fixed_on",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "3db149c621afc13d0d49912407da09be22c7a1f12b8c870e969449fcf75cb57a",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "0052f87eab6eb92a852958acdb5c635066163f6a9bfad9578aeb1fe707596755"
+    },
+    {
+      "group": "A",
+      "arm": "before_fixed_off",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "80fcc9a497cf5b965de4e1dfae53e3c8bba8462d140a3554dee4267e78612e69",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "757b32c18b0b9c3c6fdc96c04f02dd2601bfb126492b0e5633becc676710c236"
+    },
+    {
+      "group": "A",
+      "arm": "after_fixed_off",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "df525bfebdc1acf8a4be7f9961e29ddda369bc19b839c7f507df621f41f3d531",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "1db6f1830b15d161084975561f011fe553e3a3a72acd71bcbb413cc40c5363ff"
+    },
+    {
+      "group": "A",
+      "arm": "before_self",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "6865f53cb01641603fe0992fd13def17e4f1ce273b2209f992a1fb6d5f553e89"
+    },
+    {
+      "group": "A",
+      "arm": "after_self",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "3db149c621afc13d0d49912407da09be22c7a1f12b8c870e969449fcf75cb57a",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "e4657d50020458c1e4edb24e455b47fda5e5d45aa7a104c808068fea31383ba1"
+    },
+    {
+      "group": "A",
+      "arm": "before_fixed_on",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "6865f53cb01641603fe0992fd13def17e4f1ce273b2209f992a1fb6d5f553e89"
+    },
+    {
+      "group": "A",
+      "arm": "after_fixed_on",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "3db149c621afc13d0d49912407da09be22c7a1f12b8c870e969449fcf75cb57a",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "e4657d50020458c1e4edb24e455b47fda5e5d45aa7a104c808068fea31383ba1"
+    },
+    {
+      "group": "A",
+      "arm": "before_fixed_off",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "80fcc9a497cf5b965de4e1dfae53e3c8bba8462d140a3554dee4267e78612e69",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "b80b435f4e5ca835bb54a1dad5d89213f0cb2eb7f14c13afa83de467c7aaa920"
+    },
+    {
+      "group": "A",
+      "arm": "after_fixed_off",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "df525bfebdc1acf8a4be7f9961e29ddda369bc19b839c7f507df621f41f3d531",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "daef03c569f2e7302c4c842a290d94a300a20c441b61fc631d2b890e7441065e"
+    },
+    {
+      "group": "A",
+      "arm": "before_self",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "80fcc9a497cf5b965de4e1dfae53e3c8bba8462d140a3554dee4267e78612e69",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "e63bca3b2fb49d9cae04199e856cc5680546afffe4331c9c451d06101a495910"
+    },
+    {
+      "group": "A",
+      "arm": "after_self",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "df525bfebdc1acf8a4be7f9961e29ddda369bc19b839c7f507df621f41f3d531",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "d8edb5b14cf9d304deb0cfa26f32ff5ec79a4a6222234a9c23c81ca39e01489d"
+    },
+    {
+      "group": "A",
+      "arm": "before_fixed_on",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "ff755615536be45641b803e51fda0afe43b04dacfb115ec9e05e102853d99e6e"
+    },
+    {
+      "group": "A",
+      "arm": "after_fixed_on",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "3db149c621afc13d0d49912407da09be22c7a1f12b8c870e969449fcf75cb57a",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "0265c9e45dd4e6574ed7184c672d962fde4718a30d8f4a7a141f838a4ce1ad41"
+    },
+    {
+      "group": "A",
+      "arm": "before_fixed_off",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "80fcc9a497cf5b965de4e1dfae53e3c8bba8462d140a3554dee4267e78612e69",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "e63bca3b2fb49d9cae04199e856cc5680546afffe4331c9c451d06101a495910"
+    },
+    {
+      "group": "A",
+      "arm": "after_fixed_off",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "df525bfebdc1acf8a4be7f9961e29ddda369bc19b839c7f507df621f41f3d531",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "d8edb5b14cf9d304deb0cfa26f32ff5ec79a4a6222234a9c23c81ca39e01489d"
+    },
+    {
+      "group": "A",
+      "arm": "before_self",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "2ca7733bdd242cdc8c9d4d054aac945b7edcb79c032a84c71a4db13aa0d2652d"
+    },
+    {
+      "group": "A",
+      "arm": "after_self",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "3db149c621afc13d0d49912407da09be22c7a1f12b8c870e969449fcf75cb57a",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "27208395c3bc87213c8e94619d21e4c8a9b7fec7003f16ef3cae5585307bbae6"
+    },
+    {
+      "group": "A",
+      "arm": "before_fixed_on",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "2ca7733bdd242cdc8c9d4d054aac945b7edcb79c032a84c71a4db13aa0d2652d"
+    },
+    {
+      "group": "A",
+      "arm": "after_fixed_on",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "3db149c621afc13d0d49912407da09be22c7a1f12b8c870e969449fcf75cb57a",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "27208395c3bc87213c8e94619d21e4c8a9b7fec7003f16ef3cae5585307bbae6"
+    },
+    {
+      "group": "A",
+      "arm": "before_fixed_off",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "80fcc9a497cf5b965de4e1dfae53e3c8bba8462d140a3554dee4267e78612e69",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "bb7089c47a070f169ac2ecd026c02490193daee4c5c3e6fdb579e79535ca9a55"
+    },
+    {
+      "group": "A",
+      "arm": "after_fixed_off",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "df525bfebdc1acf8a4be7f9961e29ddda369bc19b839c7f507df621f41f3d531",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "b3a6a72723f58c719cd6346202362c80324f89abe3f07dde32488df3a6652e31"
+    },
+    {
+      "group": "A",
+      "arm": "before_self",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "69c9c2c8e3bd60ad9b86875b25204afafa353c2bf59102be174543c6ec72cb92"
+    },
+    {
+      "group": "A",
+      "arm": "after_self",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "3db149c621afc13d0d49912407da09be22c7a1f12b8c870e969449fcf75cb57a",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "2f3982725b2cadc5a236ff9d2710df57976aa0b4d126c237eb7b160b03eb2b73"
+    },
+    {
+      "group": "A",
+      "arm": "before_fixed_on",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "69c9c2c8e3bd60ad9b86875b25204afafa353c2bf59102be174543c6ec72cb92"
+    },
+    {
+      "group": "A",
+      "arm": "after_fixed_on",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "3db149c621afc13d0d49912407da09be22c7a1f12b8c870e969449fcf75cb57a",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "2f3982725b2cadc5a236ff9d2710df57976aa0b4d126c237eb7b160b03eb2b73"
+    },
+    {
+      "group": "A",
+      "arm": "before_fixed_off",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "80fcc9a497cf5b965de4e1dfae53e3c8bba8462d140a3554dee4267e78612e69",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "511a1e44c54d8c17cdfa050d07b53b7b5f17bd1478bd556036a7a878930b9de2"
+    },
+    {
+      "group": "A",
+      "arm": "after_fixed_off",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "df525bfebdc1acf8a4be7f9961e29ddda369bc19b839c7f507df621f41f3d531",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "3c31f7569468b04c9f0eda1e26803904849d1826d3a24e75d620f1fd5c9399a1"
+    },
+    {
+      "group": "A",
+      "arm": "before_self",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "dea938b4cef2c7511971fbab8ca792160c3f998c3ee66477039efd0aba06b1a8"
+    },
+    {
+      "group": "A",
+      "arm": "after_self",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "3db149c621afc13d0d49912407da09be22c7a1f12b8c870e969449fcf75cb57a",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "ad383252316112ea176c2b3aa150da720d0d9f916335383892d93cb4074f332c"
+    },
+    {
+      "group": "A",
+      "arm": "before_fixed_on",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "dea938b4cef2c7511971fbab8ca792160c3f998c3ee66477039efd0aba06b1a8"
+    },
+    {
+      "group": "A",
+      "arm": "after_fixed_on",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "3db149c621afc13d0d49912407da09be22c7a1f12b8c870e969449fcf75cb57a",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "ad383252316112ea176c2b3aa150da720d0d9f916335383892d93cb4074f332c"
+    },
+    {
+      "group": "A",
+      "arm": "before_fixed_off",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "80fcc9a497cf5b965de4e1dfae53e3c8bba8462d140a3554dee4267e78612e69",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "f8da00be81739c56db1d6cc8d616f34042f3a9c4423d22e1d5da7a6633c03241"
+    },
+    {
+      "group": "A",
+      "arm": "after_fixed_off",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "df525bfebdc1acf8a4be7f9961e29ddda369bc19b839c7f507df621f41f3d531",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "bf6109ec6f790826672366f50059efe54ae78081a19c4a6f656dec221c3faaf8"
+    },
+    {
+      "group": "A",
+      "arm": "before_self",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "80fcc9a497cf5b965de4e1dfae53e3c8bba8462d140a3554dee4267e78612e69",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "75514c5a34b593914746faa55b5c8043c7c484a62822054163957f57f530a88d"
+    },
+    {
+      "group": "A",
+      "arm": "after_self",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "df525bfebdc1acf8a4be7f9961e29ddda369bc19b839c7f507df621f41f3d531",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "8552cf1c356dcb05fce111303f7a63bb594e05cf421c7dd945b5f2a3f0f35058"
+    },
+    {
+      "group": "A",
+      "arm": "before_fixed_on",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "93af5e81335c460c8e68ab7ba5f9f05aa85b48c3dd38245519553e0d545302d1"
+    },
+    {
+      "group": "A",
+      "arm": "after_fixed_on",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "3db149c621afc13d0d49912407da09be22c7a1f12b8c870e969449fcf75cb57a",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "d51e0316d2c91ea74571befbbf3d3d3eaae2587008ff50e55d2755321a49f367"
+    },
+    {
+      "group": "A",
+      "arm": "before_fixed_off",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "80fcc9a497cf5b965de4e1dfae53e3c8bba8462d140a3554dee4267e78612e69",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "75514c5a34b593914746faa55b5c8043c7c484a62822054163957f57f530a88d"
+    },
+    {
+      "group": "A",
+      "arm": "after_fixed_off",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "df525bfebdc1acf8a4be7f9961e29ddda369bc19b839c7f507df621f41f3d531",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "8552cf1c356dcb05fce111303f7a63bb594e05cf421c7dd945b5f2a3f0f35058"
+    },
+    {
+      "group": "A",
+      "arm": "before_self",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "44f127fc44bf1313b5a2f50365d307ca6f0cc5ce34f8ba4e80a43a0ff99768ec"
+    },
+    {
+      "group": "A",
+      "arm": "after_self",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "3db149c621afc13d0d49912407da09be22c7a1f12b8c870e969449fcf75cb57a",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "447fbe89153f1bf04d42038173daedc1b3abf038ae8abcbb9a4a8e35dc462b4d"
+    },
+    {
+      "group": "A",
+      "arm": "before_fixed_on",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "8c10774c8db48f879b0aa2b05174cedf3483093f7417859d90c6bb8a5f4b2196",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "44f127fc44bf1313b5a2f50365d307ca6f0cc5ce34f8ba4e80a43a0ff99768ec"
+    },
+    {
+      "group": "A",
+      "arm": "after_fixed_on",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "3db149c621afc13d0d49912407da09be22c7a1f12b8c870e969449fcf75cb57a",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "447fbe89153f1bf04d42038173daedc1b3abf038ae8abcbb9a4a8e35dc462b4d"
+    },
+    {
+      "group": "A",
+      "arm": "before_fixed_off",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "80fcc9a497cf5b965de4e1dfae53e3c8bba8462d140a3554dee4267e78612e69",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "4c55b14141fe12481038ea9d5684f4cab0d7358ac688bd76bf6902e480dbe206"
+    },
+    {
+      "group": "A",
+      "arm": "after_fixed_off",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "df525bfebdc1acf8a4be7f9961e29ddda369bc19b839c7f507df621f41f3d531",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "639cbae9776f8ab76e3655b7aa4e557e1b7022031294fdad291b2232b4a7e8e1"
+    },
+    {
+      "group": "B",
+      "arm": "before_self",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "d86931a3a68040242313460ebc271489b5663ca858a250cb21f6e108ffdef8f3"
+    },
+    {
+      "group": "B",
+      "arm": "after_self",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "d86931a3a68040242313460ebc271489b5663ca858a250cb21f6e108ffdef8f3"
+    },
+    {
+      "group": "B",
+      "arm": "before_fixed_on",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "d86931a3a68040242313460ebc271489b5663ca858a250cb21f6e108ffdef8f3"
+    },
+    {
+      "group": "B",
+      "arm": "after_fixed_on",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "d86931a3a68040242313460ebc271489b5663ca858a250cb21f6e108ffdef8f3"
+    },
+    {
+      "group": "B",
+      "arm": "before_fixed_off",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "6b5844faf67a32c4cc259c97529aae7266ce8c065a51db88e106f4ee3e1c9d1f"
+    },
+    {
+      "group": "B",
+      "arm": "after_fixed_off",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "6b5844faf67a32c4cc259c97529aae7266ce8c065a51db88e106f4ee3e1c9d1f"
+    },
+    {
+      "group": "B",
+      "arm": "before_self",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "9490fb81208ed12feb16a46852f66ab2fd47062a50525a2810aa98c2d3e1d564"
+    },
+    {
+      "group": "B",
+      "arm": "after_self",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "9490fb81208ed12feb16a46852f66ab2fd47062a50525a2810aa98c2d3e1d564"
+    },
+    {
+      "group": "B",
+      "arm": "before_fixed_on",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "9490fb81208ed12feb16a46852f66ab2fd47062a50525a2810aa98c2d3e1d564"
+    },
+    {
+      "group": "B",
+      "arm": "after_fixed_on",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "9490fb81208ed12feb16a46852f66ab2fd47062a50525a2810aa98c2d3e1d564"
+    },
+    {
+      "group": "B",
+      "arm": "before_fixed_off",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "05cfb9fc236435deaafe6346fe58ac640f7abb7017cc73c1a5af98bb1d777372"
+    },
+    {
+      "group": "B",
+      "arm": "after_fixed_off",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "05cfb9fc236435deaafe6346fe58ac640f7abb7017cc73c1a5af98bb1d777372"
+    },
+    {
+      "group": "B",
+      "arm": "before_self",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "27c0546f2f37a2156e56f5e467d2e56a123435d4a810cb9a53bca8de03458cf8"
+    },
+    {
+      "group": "B",
+      "arm": "after_self",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "27c0546f2f37a2156e56f5e467d2e56a123435d4a810cb9a53bca8de03458cf8"
+    },
+    {
+      "group": "B",
+      "arm": "before_fixed_on",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "520f48df8f7288136f5626355c7b5180309a1f1232c371619776f44b8d697589"
+    },
+    {
+      "group": "B",
+      "arm": "after_fixed_on",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "520f48df8f7288136f5626355c7b5180309a1f1232c371619776f44b8d697589"
+    },
+    {
+      "group": "B",
+      "arm": "before_fixed_off",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "27c0546f2f37a2156e56f5e467d2e56a123435d4a810cb9a53bca8de03458cf8"
+    },
+    {
+      "group": "B",
+      "arm": "after_fixed_off",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "27c0546f2f37a2156e56f5e467d2e56a123435d4a810cb9a53bca8de03458cf8"
+    },
+    {
+      "group": "B",
+      "arm": "before_self",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "7a6d6205761a534c3ef567f86038be8fcd2009ab97d0a507015f8346a49ebaff"
+    },
+    {
+      "group": "B",
+      "arm": "after_self",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "7a6d6205761a534c3ef567f86038be8fcd2009ab97d0a507015f8346a49ebaff"
+    },
+    {
+      "group": "B",
+      "arm": "before_fixed_on",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "7a6d6205761a534c3ef567f86038be8fcd2009ab97d0a507015f8346a49ebaff"
+    },
+    {
+      "group": "B",
+      "arm": "after_fixed_on",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "7a6d6205761a534c3ef567f86038be8fcd2009ab97d0a507015f8346a49ebaff"
+    },
+    {
+      "group": "B",
+      "arm": "before_fixed_off",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "3760bec8997373c6df9e4bbb1ec6a8ab2dd8788ae1dee0b5c977b5c2dd760055"
+    },
+    {
+      "group": "B",
+      "arm": "after_fixed_off",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "3760bec8997373c6df9e4bbb1ec6a8ab2dd8788ae1dee0b5c977b5c2dd760055"
+    },
+    {
+      "group": "B",
+      "arm": "before_self",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "ab0fe6caa7b96b0470b91eca27beb21453d0cf520619084218a09e4ffbf9bd4c"
+    },
+    {
+      "group": "B",
+      "arm": "after_self",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "ab0fe6caa7b96b0470b91eca27beb21453d0cf520619084218a09e4ffbf9bd4c"
+    },
+    {
+      "group": "B",
+      "arm": "before_fixed_on",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "ab0fe6caa7b96b0470b91eca27beb21453d0cf520619084218a09e4ffbf9bd4c"
+    },
+    {
+      "group": "B",
+      "arm": "after_fixed_on",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "ab0fe6caa7b96b0470b91eca27beb21453d0cf520619084218a09e4ffbf9bd4c"
+    },
+    {
+      "group": "B",
+      "arm": "before_fixed_off",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "39f59cd11b81b1c6c0966e3be78608c1e90eb95a973479348be0eb3c3bca80a4"
+    },
+    {
+      "group": "B",
+      "arm": "after_fixed_off",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "39f59cd11b81b1c6c0966e3be78608c1e90eb95a973479348be0eb3c3bca80a4"
+    },
+    {
+      "group": "B",
+      "arm": "before_self",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "191cbca20099cba161d88f63cb079356f33c5c68dbe33f975218c9ad80df9bee"
+    },
+    {
+      "group": "B",
+      "arm": "after_self",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "191cbca20099cba161d88f63cb079356f33c5c68dbe33f975218c9ad80df9bee"
+    },
+    {
+      "group": "B",
+      "arm": "before_fixed_on",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "191cbca20099cba161d88f63cb079356f33c5c68dbe33f975218c9ad80df9bee"
+    },
+    {
+      "group": "B",
+      "arm": "after_fixed_on",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "191cbca20099cba161d88f63cb079356f33c5c68dbe33f975218c9ad80df9bee"
+    },
+    {
+      "group": "B",
+      "arm": "before_fixed_off",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "073e30b056fa3ad0a9a2519d8dc194922cdc53c58f55dfb5138fdc4ed0fc6d9c"
+    },
+    {
+      "group": "B",
+      "arm": "after_fixed_off",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "073e30b056fa3ad0a9a2519d8dc194922cdc53c58f55dfb5138fdc4ed0fc6d9c"
+    },
+    {
+      "group": "B",
+      "arm": "before_self",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "b0efc104b85ad1da44b7c145af23f6b932e59d40020193cc6fbeb378f68dd151"
+    },
+    {
+      "group": "B",
+      "arm": "after_self",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "b0efc104b85ad1da44b7c145af23f6b932e59d40020193cc6fbeb378f68dd151"
+    },
+    {
+      "group": "B",
+      "arm": "before_fixed_on",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "bc00563970e71b41aa73c7dc37680aebe32b682deb19258f47c99e0ed3f1621a"
+    },
+    {
+      "group": "B",
+      "arm": "after_fixed_on",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "bc00563970e71b41aa73c7dc37680aebe32b682deb19258f47c99e0ed3f1621a"
+    },
+    {
+      "group": "B",
+      "arm": "before_fixed_off",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "b0efc104b85ad1da44b7c145af23f6b932e59d40020193cc6fbeb378f68dd151"
+    },
+    {
+      "group": "B",
+      "arm": "after_fixed_off",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "b0efc104b85ad1da44b7c145af23f6b932e59d40020193cc6fbeb378f68dd151"
+    },
+    {
+      "group": "B",
+      "arm": "before_self",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "179dd88a85bf2318fcbb3ab299444be079df62cb2a988bd854903a7f46a2867d"
+    },
+    {
+      "group": "B",
+      "arm": "after_self",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "179dd88a85bf2318fcbb3ab299444be079df62cb2a988bd854903a7f46a2867d"
+    },
+    {
+      "group": "B",
+      "arm": "before_fixed_on",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "179dd88a85bf2318fcbb3ab299444be079df62cb2a988bd854903a7f46a2867d"
+    },
+    {
+      "group": "B",
+      "arm": "after_fixed_on",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "519bb181891378259b918a16e550ab7a19d478e4cb5d234e032661567c320b5c",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "179dd88a85bf2318fcbb3ab299444be079df62cb2a988bd854903a7f46a2867d"
+    },
+    {
+      "group": "B",
+      "arm": "before_fixed_off",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "d72b39d3763727f0b2cf26242f0d7a20a93d59ea5444f8786a5cb68aa24f49c4"
+    },
+    {
+      "group": "B",
+      "arm": "after_fixed_off",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b5a936819e0d6ec3820db28b1e2e091c12bffc26e7e6bd52bcb19b08f4a29be8",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "d72b39d3763727f0b2cf26242f0d7a20a93d59ea5444f8786a5cb68aa24f49c4"
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-01",
+      "status": "valid",
+      "files_sha256": "b2612a23c3e9fb8ded032acc7c84a707e4ad1ee437d0c495460c9e26333af674",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "6af63a9c7ba947e0d191c00f88e4268fb55aa76546bb376500890b439484a778"
+    },
+    {
+      "group": "direct",
+      "arm": "feedback_direct",
+      "task": "todo-01",
+      "status": "valid",
+      "files_sha256": "b2612a23c3e9fb8ded032acc7c84a707e4ad1ee437d0c495460c9e26333af674",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "6af63a9c7ba947e0d191c00f88e4268fb55aa76546bb376500890b439484a778"
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-02",
+      "status": "valid",
+      "files_sha256": "fce7d370f9690d360933f662e1022dcc4f5b16d1b41d9b26a3e416a350b6e06b",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "0a9dff879ddf24f53e4a974eb8ab3e408c82b9a1750bd7d2d27bec8d7c2e8ae7"
+    },
+    {
+      "group": "direct",
+      "arm": "feedback_direct",
+      "task": "todo-02",
+      "status": "valid",
+      "files_sha256": "fce7d370f9690d360933f662e1022dcc4f5b16d1b41d9b26a3e416a350b6e06b",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "0a9dff879ddf24f53e4a974eb8ab3e408c82b9a1750bd7d2d27bec8d7c2e8ae7"
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-03",
+      "status": "valid",
+      "files_sha256": "1353e9f0e8ff53560cd56543fbc010dd1fef1c394d384aa97e306c4c50f4156f",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "55ecb200ba51a5b925ae123fa2b9216ee68f0d28baf7a4480addee1b92137ba1"
+    },
+    {
+      "group": "direct",
+      "arm": "feedback_direct",
+      "task": "todo-03",
+      "status": "valid",
+      "files_sha256": "1353e9f0e8ff53560cd56543fbc010dd1fef1c394d384aa97e306c4c50f4156f",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "55ecb200ba51a5b925ae123fa2b9216ee68f0d28baf7a4480addee1b92137ba1"
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-04",
+      "status": "valid",
+      "files_sha256": "519d9e55b5b9417b81aa56323894aef2563a3ea69e1f20a35d8c5b596c921d57",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "752e4d06b1df029b8170905b6238627783f1c905cd2e572eca591fc95cf58b59"
+    },
+    {
+      "group": "direct",
+      "arm": "feedback_direct",
+      "task": "todo-04",
+      "status": "valid",
+      "files_sha256": "519d9e55b5b9417b81aa56323894aef2563a3ea69e1f20a35d8c5b596c921d57",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "752e4d06b1df029b8170905b6238627783f1c905cd2e572eca591fc95cf58b59"
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-05",
+      "status": "valid",
+      "files_sha256": "fce7d370f9690d360933f662e1022dcc4f5b16d1b41d9b26a3e416a350b6e06b",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "7903c7e10739e9633c20846233dfa3150b887ecb1f39f9ce54ffb71d95d6811a"
+    },
+    {
+      "group": "direct",
+      "arm": "feedback_direct",
+      "task": "todo-05",
+      "status": "valid",
+      "files_sha256": "fce7d370f9690d360933f662e1022dcc4f5b16d1b41d9b26a3e416a350b6e06b",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "7903c7e10739e9633c20846233dfa3150b887ecb1f39f9ce54ffb71d95d6811a"
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-06",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "feedback_direct",
+      "task": "todo-06",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-07",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "feedback_direct",
+      "task": "todo-07",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-08",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "feedback_direct",
+      "task": "todo-08",
+      "status": "invalid",
+      "passed": false
+    }
+  ],
+  "paired": {
+    "A": {
+      "before_self": [],
+      "before_fixed_on": [],
+      "before_fixed_off": [],
+      "after_self": [],
+      "after_fixed_on": [],
+      "after_fixed_off": [],
+      "direct": [],
+      "feedback_direct": []
+    },
+    "B": {
+      "before_self": [],
+      "before_fixed_on": [],
+      "before_fixed_off": [],
+      "after_self": [],
+      "after_fixed_on": [],
+      "after_fixed_off": [],
+      "direct": [],
+      "feedback_direct": []
+    }
+  }
+}

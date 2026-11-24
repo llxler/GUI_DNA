@@ -1,0 +1,2510 @@
+{
+  "study": "Offline public-feature recovery and explicit composition",
+  "fresh_model_calls": 0,
+  "registered_utc": "2026-11-24T10:20:30.477570+00:00",
+  "seal_sha256": "b9042c39571dd6ddefd60292fac9a25080e48df50085bd1b09c30ffa772c74d8",
+  "sources": {
+    "studies/public_library_transfer/self_refinement/duo_composition/run.py": "71f1431d7d516268d70108fd5112735f79fe79d279b022aa574c38140ffc7d37",
+    "studies/public_library_transfer/self_refinement/duo_composition/extract.cjs": "76aa9d5e202dff18ee8defce0cf5582960ba734d0f604d8876f8186b04935905",
+    "studies/public_library_transfer/self_refinement/duo_composition/PROTOCOL.md": "1c1b19ddb26f0cd566c49b282cb3bd4ee2cf43679c694594f63df53b11082c9c",
+    "studies/results/backbone-suites-20261124.json": "e565bac496c4a56162304b2dc8c947ced2af90f598ad15c0da26d3538935ff85",
+    "studies/results/public-library-transfer-duo-public-admission-20261123.json": "f77e6fcaaecef2a753aa936e8210677ddcb9351ff70cae8c5da8873613a4d7b7",
+    "studies/public_library_transfer/other_benchmarks/evaluate.py": "6828edcf23bb6ab07e8565ebefad28e343a0b2458952db4308178d89f48eab65",
+    "studies/public_library_transfer/other_benchmarks/duo_original_results.py": "43b6965201809942d46ac382603783e9029a46ed728162fe424e047ae8f8d41c",
+    "artifacts/public-library-transfer-extra-20261123/build-inputs.json": "e5726568feb41c5b17feeee90146587c58fe7e901194c76662825ad5bfc7afc0",
+    "artifacts/public-library-transfer-extra-20261123/targets.json": "dbf13df51230747788d3c92a8149003f6c89a5ef351ac8a74443b18b98c84242",
+    "artifacts/backbone-suites-20261124/registered.json": "94c8a705181fb8ea35abe4c7dc45dfa7bd86424bf24e4732a8bd8f6eaf33252f",
+    "artifacts/backbone-suites-20261124/qwen/build/blogging/call/response.json": "61d24e621af7915a5bf791f33a6287cf97a7baec05920ea9de823e526da4c984",
+    "artifacts/backbone-suites-20261124/qwen/build/taskmanagement/call/response.json": "e7cd59e985d571700f0c96f591539b30546c2d6af013909f90c93dbcea0f0833",
+    "artifacts/backbone-suites-20261124/qwen9/build/blogging/call/response.json": "e343114299479d76cce4345619ac0a7bcfaa17d028564243846ea06e5f692897",
+    "artifacts/backbone-suites-20261124/qwen9/build/taskmanagement/call/response.json": "2d5b51b3c19234b6e5ec69ca1888df6a825c19e27a2395e7e632ac61c992f167",
+    "artifacts/backbone-suites-20261124/oss/build/blogging/call/response.json": "71b9b971bbef108c9a75d7e203a3c4d8739bd0e80cbc3dd85ed865ee5172a010",
+    "artifacts/backbone-suites-20261124/oss/build/taskmanagement/call/response.json": "8e27ffdbb372a00a58dffe98db28e4d35c56a414c4a64802e303a88632154524",
+    "artifacts/backbone-suites-20261124/mistral/build/blogging/call/response.json": "e34e0a30d75aaea6bb4d27f98f4dbc6cae596f454cd15cd3d1039753256effaa",
+    "artifacts/backbone-suites-20261124/mistral/build/taskmanagement/call/response.json": "0fea9229ae95b5147fc43ed9645ffbc47d68aa83a25e9a7119e7c55338ce1cff",
+    "artifacts/backbone-suites-20261124/gemma/build/blogging/call/response.json": "faac27da8ab6897388759297cd0a11609899b03306bbd37ce9441cf6c502704f",
+    "artifacts/backbone-suites-20261124/gemma/build/taskmanagement/call/response.json": "b6a1c0e4d0cf4ab0d3232fc49ab59b09f197fe0b0e9978d64a24d5f0f9333c7f",
+    "artifacts/backbone-suites-20261124/deepseek-flash/build/blogging/call/response.json": "190adeff62a6afb810347d7e41adef3d375282cd5dff8eadf41a0073369e02b2",
+    "artifacts/backbone-suites-20261124/deepseek-flash/build/taskmanagement/call/response.json": "da6835357a088ac0d303be4638455bd3095761608e3cbad779cc6c1c78a5ad07"
+  },
+  "libraries": {
+    "qwen/qwen3-coder-30b-a3b-instruct": {
+      "blogging": {
+        "mapping": {
+          "addAltTextToImage": "altTextEditor",
+          "addCanonicalUrl": "canonicalUrlEditor",
+          "addComment": "commentManager",
+          "assignPostToCategory": "categoryAssigner",
+          "editComment": null,
+          "editTag": "tagEditor",
+          "postPerformanceReport": "postPerformanceReporter"
+        },
+        "rejected": [],
+        "components": [
+          {
+            "id": "altTextEditor",
+            "format": "json",
+            "source_sha256": "7f6e1c528bc50bb30ed6a22ebeaaeee6a17da6ae90b4906a2a301136a125a498"
+          },
+          {
+            "id": "canonicalUrlEditor",
+            "format": "json",
+            "source_sha256": "45a6f95ba696ef753bf69e9c0a2a7a1797b2ce26bdfa13c32985e698737d4cd6"
+          },
+          {
+            "id": "postPerformanceReporter",
+            "format": "json",
+            "source_sha256": "922789d0aae22706f7fbf56f87cbebeb077340092b2e2f482fb41b4532aacce2"
+          },
+          {
+            "id": "commentManager",
+            "format": "json",
+            "source_sha256": "8763ad4d11f7b905847fc150e4e3cdb5a0d4609e34abf842640f2f34ee99e866"
+          },
+          {
+            "id": "categoryAssigner",
+            "format": "json",
+            "source_sha256": "81723096d23b5f1361a3f09e6481080a6223c904db71098a25c3df4208f476b3"
+          },
+          {
+            "id": "tagEditor",
+            "format": "json",
+            "source_sha256": "5a5de4650d30a53de9472d4e9d9da2f3a811cda4ff8b6289683faee4fad4ca3c"
+          }
+        ]
+      },
+      "taskmanagement": {
+        "mapping": {
+          "addCommentToTask": "addCommentToTask",
+          "approveOrRejectTaskReview": "approveOrRejectTaskReview",
+          "assignTaskToProject": "assignTaskToProject",
+          "assignTaskToUser": "assignTaskToUser",
+          "compareTime": "compareTime",
+          "projectCustomWorkflows": "projectCustomWorkflows",
+          "setTaskDeadline": "setTaskDeadline",
+          "setTaskPriority": "setTaskPriority"
+        },
+        "rejected": [],
+        "components": [
+          {
+            "id": "addCommentToTask",
+            "format": "json",
+            "source_sha256": "184c665c2617d495646981afd88ba77931d794117c12d3971cb852cc7d2fab20"
+          },
+          {
+            "id": "setTaskDeadline",
+            "format": "json",
+            "source_sha256": "bf8fa99c85ba093dcd2b3c1e6eadb6f931919ea59e1a0455fdeaa24282ca200d"
+          },
+          {
+            "id": "approveOrRejectTaskReview",
+            "format": "json",
+            "source_sha256": "354c5ccbb52090750fdb89308f50e1f3a4f86cbdcf47d6360780233e983e16b0"
+          },
+          {
+            "id": "compareTime",
+            "format": "json",
+            "source_sha256": "2a0a899c090573ac120c477ef131c6d1a134210639901bcd6eb372e95a28cccb"
+          },
+          {
+            "id": "projectCustomWorkflows",
+            "format": "json",
+            "source_sha256": "1be13ff11d1f7459a9b15e7586efc3ec1942fe78d8a2ba7e45bb3ed44cce217e"
+          },
+          {
+            "id": "setTaskPriority",
+            "format": "json",
+            "source_sha256": "d740322d16ddeb4c9be86341069400cf83ec3a3a85cff646d1921c14544a35db"
+          },
+          {
+            "id": "assignTaskToProject",
+            "format": "json",
+            "source_sha256": "2957bd86a34c35a099436e1f83ebb65ca38d917aa9a950698ec4e22724f48fa1"
+          },
+          {
+            "id": "assignTaskToUser",
+            "format": "json",
+            "source_sha256": "939ac6d50e1e8572d5a9f68f39931c34b12c6982912b4ef0105b01d2cbd1c4be"
+          }
+        ]
+      }
+    },
+    "qwen/qwen3.5-9b": {
+      "blogging": {
+        "mapping": {
+          "addAltTextToImage": "AddAltText",
+          "addCanonicalUrl": "AddCanonicalUrl",
+          "addComment": "AddComment",
+          "assignPostToCategory": "AssignCategory",
+          "editComment": "EditComment",
+          "editTag": "EditTag",
+          "postPerformanceReport": "PostPerformanceReport"
+        },
+        "rejected": [],
+        "components": [
+          {
+            "id": "AddAltText",
+            "format": "json",
+            "source_sha256": "03e898e39dedadf06b69d3478e4ae980907f4afaf8ce63722c3a176cafb2f072"
+          },
+          {
+            "id": "PostPerformanceReport",
+            "format": "json",
+            "source_sha256": "2b007a93dac1e508f8497b6f9c0443249fec83ce80df1bb84d8d6849d7432b46"
+          },
+          {
+            "id": "AddCanonicalUrl",
+            "format": "json",
+            "source_sha256": "72bb7d77bff6082eb509c5e994d9591695f7445ed6e1ffbf5e9baacae1d67611"
+          },
+          {
+            "id": "AddComment",
+            "format": "json",
+            "source_sha256": "6d9957bd775c31a77bd6e4125df6e2410f7649a0fd6078f1f8380b8081bcb38f"
+          },
+          {
+            "id": "AssignCategory",
+            "format": "json",
+            "source_sha256": "a13409a0ef0a35478d623c0f1f3e0acbe9263b9afe54e39c1637beb940f01eca"
+          },
+          {
+            "id": "EditComment",
+            "format": "json",
+            "source_sha256": "9970aa475909715fedb3546f005625e66be8b168a873606b89562904b989c24c"
+          },
+          {
+            "id": "EditTag",
+            "format": "json",
+            "source_sha256": "52cbd1f27fa49b8fe4c092bd47522cde15e0a3420fa1026b609618baddb99fc5"
+          }
+        ]
+      },
+      "taskmanagement": {
+        "mapping": {
+          "addCommentToTask": "AddCommentToTask",
+          "approveOrRejectTaskReview": "ApproveOrRejectTaskReview",
+          "assignTaskToProject": "AssignTaskToProject",
+          "assignTaskToUser": "AssignTaskToUser",
+          "compareTime": "CompareTime",
+          "projectCustomWorkflows": "ProjectCustomWorkflows",
+          "setTaskDeadline": "SetTaskDeadline",
+          "setTaskPriority": "SetTaskPriority"
+        },
+        "rejected": [
+          {
+            "id": "index",
+            "format": "named-jsx-file",
+            "reason": "no-default-export"
+          }
+        ],
+        "components": [
+          {
+            "id": "AddCommentToTask",
+            "format": "named-jsx-file",
+            "source_sha256": "887f647742c73823c52192ff4850ca1d9dbbc05cc3edc502a411b80238db3c35"
+          },
+          {
+            "id": "SetTaskDeadline",
+            "format": "named-jsx-file",
+            "source_sha256": "96c04e37d75debd2701e17ace5051b603b8d473668e7709ab2bb2a24c394d38c"
+          },
+          {
+            "id": "ApproveOrRejectTaskReview",
+            "format": "named-jsx-file",
+            "source_sha256": "9c0fde0c259e3bc326fcc34f3b9f6b27799e53c901cf124bdc8193b8e98a738d"
+          },
+          {
+            "id": "CompareTime",
+            "format": "named-jsx-file",
+            "source_sha256": "762dd6b80be5c8d89c5a76e7fbace12cbfd933d270e6be7cc9cc3108676ef8e6"
+          },
+          {
+            "id": "ProjectCustomWorkflows",
+            "format": "named-jsx-file",
+            "source_sha256": "496b794c7d3e50feac07d32b02f197227b149ee993ab210cc2dda7e2205b29be"
+          },
+          {
+            "id": "SetTaskPriority",
+            "format": "named-jsx-file",
+            "source_sha256": "c8beace44ad90faba9da1b05c8e78fd5721da46e9499e0b8c26c560c1e41fb1b"
+          },
+          {
+            "id": "AssignTaskToProject",
+            "format": "named-jsx-file",
+            "source_sha256": "7e3a577aef9bb9ffed249f889a094ae49b34dd1d61605a3f713359a358ef8eb9"
+          },
+          {
+            "id": "AssignTaskToUser",
+            "format": "named-jsx-file",
+            "source_sha256": "06c1b2cbbe86d804667c60d9126de745d1fb5305ab4f585384f8e761ed69cbb8"
+          }
+        ]
+      }
+    },
+    "openai/gpt-oss-120b": {
+      "blogging": {
+        "mapping": {
+          "addAltTextToImage": "AddAltText",
+          "addCanonicalUrl": "AddCanonicalUrl",
+          "addComment": "AddComment",
+          "assignPostToCategory": "AssignCategory",
+          "editComment": "EditComment",
+          "editTag": "EditTag",
+          "postPerformanceReport": "PostPerformanceReport"
+        },
+        "rejected": [],
+        "components": [
+          {
+            "id": "AddAltText",
+            "format": "complete-json-record",
+            "source_sha256": "28f9b686d1f6027a885bf044da1104794d47c45563731fb45423aecfe0f22e18"
+          },
+          {
+            "id": "PostPerformanceReport",
+            "format": "complete-json-record",
+            "source_sha256": "ee38013e0c62c236e052a896ae366ba96cf88761842442b313b0621676f71e98"
+          },
+          {
+            "id": "AddCanonicalUrl",
+            "format": "complete-json-record",
+            "source_sha256": "56409172ce6f11459d336c129d6a85b0c5d16ee579e7441f82c1b53df19324dd"
+          },
+          {
+            "id": "AddComment",
+            "format": "complete-json-record",
+            "source_sha256": "83d24293ea5f27db68e789be147be751a3a615a211b700a3be102c165b36ff28"
+          },
+          {
+            "id": "AssignCategory",
+            "format": "complete-json-record",
+            "source_sha256": "aefa88c775a57f7415ff949cc79f9ed557a3686e1e98e95280e95a2adf6688fc"
+          },
+          {
+            "id": "EditComment",
+            "format": "complete-json-record",
+            "source_sha256": "c3df141f02400ae5d02c6b79356f9ccffb6e053658a66fd1c510603e924c64a2"
+          },
+          {
+            "id": "EditTag",
+            "format": "complete-json-record",
+            "source_sha256": "8b24e82487c083b1d928db633f0bcae20b7685d6767d8eafb07c1b7f9e42a4e5"
+          }
+        ]
+      },
+      "taskmanagement": {
+        "mapping": {
+          "addCommentToTask": "AddComment",
+          "approveOrRejectTaskReview": "ReviewDecision",
+          "assignTaskToProject": "AssignProject",
+          "assignTaskToUser": "AssignUser",
+          "compareTime": "TimeComparison",
+          "projectCustomWorkflows": "ProjectWorkflow",
+          "setTaskDeadline": "SetDeadline",
+          "setTaskPriority": "SetPriority"
+        },
+        "rejected": [],
+        "components": [
+          {
+            "id": "AddComment",
+            "format": "complete-json-record",
+            "source_sha256": "2bac748f899ed2d2bde01bacbb6ff1337dbd28122ad218553c52ab85c59627d1"
+          },
+          {
+            "id": "SetDeadline",
+            "format": "complete-json-record",
+            "source_sha256": "5273c7b65d83d1cbef92369e2fc8a86fdfd57145de169f3190e63ae66aed7310"
+          },
+          {
+            "id": "ReviewDecision",
+            "format": "complete-json-record",
+            "source_sha256": "ae4911f56149c7cdf69f4f4fe719abaf835afae0926305da403d9ad8169cab3d"
+          },
+          {
+            "id": "TimeComparison",
+            "format": "complete-json-record",
+            "source_sha256": "01ad708d5d89243c5c901267d142d183d5f97849f903a908d2dcb4670de29c38"
+          },
+          {
+            "id": "ProjectWorkflow",
+            "format": "complete-json-record",
+            "source_sha256": "f71cb2f66c4d9d26214a9d5b9bf7d971ff463792c04b05af005b13f28dbe5547"
+          },
+          {
+            "id": "SetPriority",
+            "format": "complete-json-record",
+            "source_sha256": "9a7afdeae9ba2da49233e9e912e7abc13f04bb582ec2067e18fe3af389be488c"
+          },
+          {
+            "id": "AssignProject",
+            "format": "complete-json-record",
+            "source_sha256": "8e4d3e7df48e2eb9afdc47f8b4e46c1051f77b02bf31b1a0be1d609d33951870"
+          },
+          {
+            "id": "AssignUser",
+            "format": "complete-json-record",
+            "source_sha256": "7fe0c01616888efaa85617b651c191676d95966951c82374ccadb28e82d91b96"
+          }
+        ]
+      }
+    },
+    "mistralai/mistral-small-3.2-24b-instruct": {
+      "blogging": {
+        "mapping": {
+          "addAltTextToImage": "altTextEditor",
+          "addCanonicalUrl": "canonicalUrlAdder",
+          "addComment": "commentAdder",
+          "assignPostToCategory": "categoryAssigner",
+          "editComment": "commentEditor",
+          "editTag": "tagEditor",
+          "postPerformanceReport": "postPerformanceReporter"
+        },
+        "rejected": [],
+        "components": [
+          {
+            "id": "altTextEditor",
+            "format": "json",
+            "source_sha256": "5df0c2e909bb2e57cfb6af0c70fe619528d2fa3aee63fb29e7d2c4405e84e69c"
+          },
+          {
+            "id": "postPerformanceReporter",
+            "format": "json",
+            "source_sha256": "a2c787a79f21ac32fa79ee14074a2b583896d878b233adf07a9aaf559b4fb8c2"
+          },
+          {
+            "id": "canonicalUrlAdder",
+            "format": "json",
+            "source_sha256": "1acd1fb11cc866d50e968b45d5602f36f2d48da4b9ef3cad2ed657d8c4572863"
+          },
+          {
+            "id": "commentAdder",
+            "format": "json",
+            "source_sha256": "efbacdc31362b4021f7b6955e72f0ab03207215643632a502c34130f4c3d2b9e"
+          },
+          {
+            "id": "categoryAssigner",
+            "format": "json",
+            "source_sha256": "c6e188bfdc9e2d76f041c38a556012b05c9e674119c52ceb697459a6f6c6b1af"
+          },
+          {
+            "id": "commentEditor",
+            "format": "json",
+            "source_sha256": "6ac8023ae22a16440c9c1fcfc1f768d3b6c3c27b4bae9b480b3cb17652091f85"
+          },
+          {
+            "id": "tagEditor",
+            "format": "json",
+            "source_sha256": "2b87d7e8d51e1b40f7deb3c50090fe54b8bd38f97abc567c14bebd81437ff57f"
+          }
+        ]
+      },
+      "taskmanagement": {
+        "mapping": {
+          "addCommentToTask": "addComment",
+          "approveOrRejectTaskReview": "approveRejectReview",
+          "assignTaskToProject": "assignTaskProject",
+          "assignTaskToUser": "assignTaskUser",
+          "compareTime": "compareTime",
+          "projectCustomWorkflows": "customWorkflows",
+          "setTaskDeadline": "setDeadline",
+          "setTaskPriority": "setPriority"
+        },
+        "rejected": [],
+        "components": [
+          {
+            "id": "addComment",
+            "format": "js-literal",
+            "source_sha256": "2482a9758200bbe1279a213e5abd6ddf1eb263750d826e51444b79bc4b1e2400"
+          },
+          {
+            "id": "setDeadline",
+            "format": "js-literal",
+            "source_sha256": "edd436aaebe7a96e59e320c700bd2191e7496e5ddc23a57c84e8a0bae15acc6e"
+          },
+          {
+            "id": "approveRejectReview",
+            "format": "js-literal",
+            "source_sha256": "1d2472962a10284ec60d75731adb10537db6412b1b137f2b6f4327405885f620"
+          },
+          {
+            "id": "compareTime",
+            "format": "js-literal",
+            "source_sha256": "a7b4e5fb9253e63af38f2198e31a521c787b5186cc0e2cbeb12a9c37e33a283d"
+          },
+          {
+            "id": "customWorkflows",
+            "format": "js-literal",
+            "source_sha256": "03d06e00f799b444dedcb5f7e672ea6be2ce1a4d11c6ea95dece86a0022af955"
+          },
+          {
+            "id": "setPriority",
+            "format": "js-literal",
+            "source_sha256": "ed7f5e2d34d1e07a3ba2c333dd567cd147cae5c0b915c7c190ff8f2ef903b453"
+          },
+          {
+            "id": "assignTaskProject",
+            "format": "js-literal",
+            "source_sha256": "fc6c733063f53b27dd4bddbd192c1f05da584207e7f82a399c40ada941698f94"
+          },
+          {
+            "id": "assignTaskUser",
+            "format": "js-literal",
+            "source_sha256": "4d8411c2d5de3cf0f499c41d8f6097d468c8c034717a50f1bd7ac9ba12e24ffa"
+          }
+        ]
+      }
+    },
+    "google/gemma-3-12b-it": {
+      "blogging": {
+        "mapping": {
+          "addAltTextToImage": null,
+          "addCanonicalUrl": null,
+          "addComment": null,
+          "assignPostToCategory": null,
+          "editComment": null,
+          "editTag": null,
+          "postPerformanceReport": null
+        },
+        "rejected": [],
+        "components": []
+      },
+      "taskmanagement": {
+        "mapping": {
+          "addCommentToTask": null,
+          "approveOrRejectTaskReview": null,
+          "assignTaskToProject": null,
+          "assignTaskToUser": null,
+          "compareTime": null,
+          "projectCustomWorkflows": null,
+          "setTaskDeadline": null,
+          "setTaskPriority": null
+        },
+        "rejected": [
+          {
+            "id": "addCommentToTask",
+            "format": "json",
+            "reason": "no-default-export"
+          },
+          {
+            "id": "setTaskDeadline",
+            "format": "json",
+            "reason": "no-default-export"
+          },
+          {
+            "id": "addCommentToTask",
+            "format": "complete-json-record",
+            "reason": "no-default-export"
+          },
+          {
+            "id": "setTaskDeadline",
+            "format": "complete-json-record",
+            "reason": "no-default-export"
+          }
+        ],
+        "components": []
+      }
+    },
+    "deepseek/deepseek-v4-flash": {
+      "blogging": {
+        "mapping": {
+          "addAltTextToImage": "AddAltTextToImage",
+          "addCanonicalUrl": null,
+          "addComment": null,
+          "assignPostToCategory": null,
+          "editComment": null,
+          "editTag": null,
+          "postPerformanceReport": null
+        },
+        "rejected": [],
+        "components": [
+          {
+            "id": "AddAltTextToImage",
+            "format": "complete-json-record",
+            "source_sha256": "f02256d36e7f6e6c81426d6ead88870d806fd1265511fdeb238d0b3c7b3a727d"
+          }
+        ]
+      },
+      "taskmanagement": {
+        "mapping": {
+          "addCommentToTask": null,
+          "approveOrRejectTaskReview": null,
+          "assignTaskToProject": null,
+          "assignTaskToUser": null,
+          "compareTime": null,
+          "projectCustomWorkflows": null,
+          "setTaskDeadline": null,
+          "setTaskPriority": null
+        },
+        "rejected": [],
+        "components": []
+      }
+    }
+  },
+  "rows": {
+    "qwen/qwen3-coder-30b-a3b-instruct": {
+      "addAltTextToImage_postPerformanceReport": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "18566d248d5de337a60c8d2d73c9695e1372743ed1d91c6ca51fda5527cbc119"
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "9ce7e0f671d3f22b664b579e916acb087ba6726ce09c3e9445c8060b63ab3296"
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "altTextEditor",
+            "second": "postPerformanceReporter"
+          },
+          "files_sha256": "ada35dd72e4fcbac8cfe6934b04c85b6fec06e65b09275f4b36752471a550b86",
+          "passed": false,
+          "report_sha256": "886407434dcc5d1cc0619c90205bd6a032a7fc2893685306562b38858b00a145",
+          "official_cases_passed": 1
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "altTextEditor",
+            "second": "canonicalUrlEditor"
+          },
+          "files_sha256": "5f74d229c40f2f005dbfc3ff439c2d374ada6a2a9b0c0e23e39dbbcac9edaed1",
+          "passed": false,
+          "report_sha256": "e893a2b7c9ec674d0667abf9b9e4878e0e6f7de54ebc861e647eaae04d8485f8",
+          "official_cases_passed": 0
+        }
+      },
+      "addCanonicalUrl_addComment": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "f60ea30d507c80fda1300b5d36fec457f8073b80898ab7b27fb5574aa7da3d1f"
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "37ac3c7063cd16c81b104bc56ce773ca00fe7d7ae4ab0ccea5f0754dcf117558"
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "canonicalUrlEditor",
+            "second": "commentManager"
+          },
+          "files_sha256": "29098a9faa83e2dcd4305aa9284e97a14b93ece17c450553de0c0a34cdfdb31d",
+          "passed": false,
+          "report_sha256": "8962e62b1699feaca32a24f8b685a64096493b99a06db93601a6916c9d3de3c0",
+          "official_cases_passed": 2
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "altTextEditor",
+            "second": "canonicalUrlEditor"
+          },
+          "files_sha256": "3041a43cea0005576794c6effaaf81538ffead0f1953faead75139b24bb3a457",
+          "passed": false,
+          "report_sha256": "606a3f92a5d37987cfad171e4d524a939b2cec0384c6f62a7ffd2738980628e3",
+          "official_cases_passed": 0
+        }
+      },
+      "addCanonicalUrl_assignPostToCategory": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ee176bd6743015b9f25b4ed76216ab94e60196d4eda87fe2dbfd01451414e69d"
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b64770f3643f6cf8f0a54003e549823ef5ccf31661bc269718af88f89389a712"
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "canonicalUrlEditor",
+            "second": "categoryAssigner"
+          },
+          "files_sha256": "ea525c67476e97e7f5251508bfcd7b5b5e1185641dc7905f5ae9005b277eda00",
+          "passed": false,
+          "report_sha256": "ac5601e1717c769bd67d22cdd8563caf5aff99fd921f725da240f25b685a9959",
+          "official_cases_passed": 1
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "altTextEditor",
+            "second": "canonicalUrlEditor"
+          },
+          "files_sha256": "0d0cd55a9b43137855b8e4b0b006abb3dd195e9e3439bac5a88f5920399fe3f8",
+          "passed": false,
+          "report_sha256": "f3388de4f7b8698d1fafa6dc177faadad6bf436082b1ce59df9a6924f5939f24",
+          "official_cases_passed": 0
+        }
+      },
+      "addCanonicalUrl_editComment": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "efd6b3443758ec43b624cf75809134511bf3ef6b6b929468865767dadf811ae7"
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "bda68db1fa7b5c9daabd070c21c4647b581702fc2b64654014f2ad4b0b86fda1"
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "altTextEditor",
+            "second": "canonicalUrlEditor"
+          },
+          "files_sha256": "75e757b92cfdc98b6f8c67096c1ac1b10921941f66fe2e3f8955b7c83b97ba5f",
+          "passed": false,
+          "report_sha256": "fbd73011ec7b6c6d00afccc37d676e395747682f2ac81e8a1ea97efe42c5857d",
+          "official_cases_passed": 0
+        }
+      },
+      "addCanonicalUrl_editTag": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "4d1408dd05df3cab1835962c192a1717991f872bba2e97a8f3ee4ad385164e2c"
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "8eed35917ce89c82c10aea46b218c924b88d13c64d8ab29d9d59e7c4521abcf9"
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "canonicalUrlEditor",
+            "second": "tagEditor"
+          },
+          "files_sha256": "df30be62a673001739d3f099437e502df2746e71d2557d0f5367c96a58328ffe",
+          "passed": false,
+          "report_sha256": "b834a6b317467a0001c7ff9cea5ab80ae29b21ae507b44a76263139c82df81e8",
+          "official_cases_passed": 1
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "altTextEditor",
+            "second": "canonicalUrlEditor"
+          },
+          "files_sha256": "8c60773fa6be50f9df21ad9dc27d3da066adf59408a686b39cbda947131694b8",
+          "passed": false,
+          "report_sha256": "fc95dc79cc8c560f9907174be63f125a27297b39b8dab0f3a69d499bd12c3c3a",
+          "official_cases_passed": 0
+        }
+      },
+      "addCommentToTask_setTaskDeadline": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "37024017507fceecae29e2bb47bafeb6183ad6d9231fbad4b3dc97404adae6a8"
+        },
+        "self": {
+          "status": "invalid",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "addCommentToTask",
+            "second": "setTaskDeadline"
+          },
+          "files_sha256": "e5764ebe4bd60073de7b94ca26b65a423656f2cf19f008cac4961d2d315e4567",
+          "passed": true,
+          "report_sha256": "e73561d71b0ae659ab521d0f8c81dfd97625a6f722869bb759edb83b87604c8e",
+          "official_cases_passed": 4
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "addCommentToTask",
+            "second": "setTaskDeadline"
+          },
+          "files_sha256": "e5764ebe4bd60073de7b94ca26b65a423656f2cf19f008cac4961d2d315e4567",
+          "passed": true,
+          "report_sha256": "e73561d71b0ae659ab521d0f8c81dfd97625a6f722869bb759edb83b87604c8e",
+          "official_cases_passed": 4
+        }
+      },
+      "approveOrRejectTaskReview_compareTime": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "4a6853505ce6e710df7a41776460bef305aa290a9e1121a91c34c9ddfc4c94b7"
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e4d18c126906bd4314870d13e9d07f4ccda80f0fc15b220fd633dbf1b4b63f81"
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "approveOrRejectTaskReview",
+            "second": "compareTime"
+          },
+          "files_sha256": "020a408aad23c528bb49331d4d49040a374f0ec57c17a1940de015ecfa7e9bbc",
+          "passed": false,
+          "report_sha256": "03dfec5ea6c8f5457f9b41597531592c3fdd6c6d89079649399ea3196472eb1b",
+          "official_cases_passed": 3
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "addCommentToTask",
+            "second": "setTaskDeadline"
+          },
+          "files_sha256": "eb9af08156926cc53441620c06d0cd0da73e6f913fe3c5c8954702e910242f7d",
+          "passed": false,
+          "report_sha256": "f25f1ad22e6f60fca0790b1c6259e4bc3a9936362d34a9bc8a0a158acd75a27f",
+          "official_cases_passed": 0
+        }
+      },
+      "approveOrRejectTaskReview_projectCustomWorkflows": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "9be63a17cb6d6ba6859c58277127793950972d1738435827fedab202cf6423a0"
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ede48acca423b2f138745533b80761e9dc4be291574d08df83e4c8c041366ac6"
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "approveOrRejectTaskReview",
+            "second": "projectCustomWorkflows"
+          },
+          "files_sha256": "ad7724e41c46177f0707602b51e68fd1ab113266840056d352b28c995b646c85",
+          "passed": false,
+          "report_sha256": "ebd3031603dedcc63d1b31afca4efdcdd657809d62ccb2e7d465b32c31c31aaa",
+          "official_cases_passed": 1
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "addCommentToTask",
+            "second": "setTaskDeadline"
+          },
+          "files_sha256": "f89d50749a99f9171b6f5fb5df69b797b4bafa806e2316894fe0e4c54534b032",
+          "passed": false,
+          "report_sha256": "9a99b52ba36c1e4633c00a9d38e08e461e6614ed5a44230fa56830660e282d88",
+          "official_cases_passed": 0
+        }
+      },
+      "approveOrRejectTaskReview_setTaskPriority": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "50d8266eddbe038852be26a03c8b57377ff1ad86346c0aa27065f894912584f9"
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "7dd6b471f1e7773bddf3f968e1c63483130c5654edcf3f38104624022a01aa1d"
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "approveOrRejectTaskReview",
+            "second": "setTaskPriority"
+          },
+          "files_sha256": "37257fba3e94f2318728bf458c7b39283f7d7360b169bfa7a27348bf654904d0",
+          "passed": false,
+          "report_sha256": "2b38cf2896dbf55857a2696702b59e34b6c99ce8d2433eb091e81332beb6728e",
+          "official_cases_passed": 3
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "addCommentToTask",
+            "second": "setTaskDeadline"
+          },
+          "files_sha256": "cb15de592bc2fbe0bfce4e5f8439aaecb3792b88e46d6a5690251c00f588d1bc",
+          "passed": false,
+          "report_sha256": "e7864914a96ad2c11eabd71ec9ef61f5e30e89dea427dd47b192e03187e10197",
+          "official_cases_passed": 0
+        }
+      },
+      "assignTaskToProject_assignTaskToUser": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "656c324b4c0f6ee243f2f43021ee0f2acb30809e1fa5db6b79a2f44fde464748"
+        },
+        "self": {
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "79208703735de832502541a0d09be42c608c5ea4a6853547588057ed802ce14b"
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "assignTaskToProject",
+            "second": "assignTaskToUser"
+          },
+          "files_sha256": "cca6fce689fe9f001bc121d6d2f350055442febc80097ed6842baf08637040db",
+          "passed": true,
+          "report_sha256": "fdae6eb3c032ec7a712ca10b1021c4c4933d6385bef22f9eb00c6c52abf445a9",
+          "official_cases_passed": 4
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "addCommentToTask",
+            "second": "setTaskDeadline"
+          },
+          "files_sha256": "0528847adbb920702fc1886e441eae74eb1bba46ab7d81f731481f2bfb504ead",
+          "passed": false,
+          "report_sha256": "ee700bad08a7ea608af4d48aaa455bf4fa271271eca54f9a6b9352aca26ff6b3",
+          "official_cases_passed": 0
+        }
+      }
+    },
+    "qwen/qwen3.5-9b": {
+      "addAltTextToImage_postPerformanceReport": {
+        "group": "blogging",
+        "direct": {
+          "status": "invalid",
+          "passed": false
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "af9512181b99966c10989475c9e6a34ddb2be6f38f4e62ab78cf28409d533d1c"
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "AddAltText",
+            "second": "PostPerformanceReport"
+          },
+          "files_sha256": "983371d517b5b348af9220c5c057b1b29f3a41a34e2c37f48b1fbb7059bc3700",
+          "passed": false,
+          "report_sha256": "9152f23db7b9e02f44ba8a3ca831198c567925add6a8cc855d38d13a21ae8558",
+          "official_cases_passed": 2
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddAltText",
+            "second": "PostPerformanceReport"
+          },
+          "files_sha256": "983371d517b5b348af9220c5c057b1b29f3a41a34e2c37f48b1fbb7059bc3700",
+          "passed": false,
+          "report_sha256": "9152f23db7b9e02f44ba8a3ca831198c567925add6a8cc855d38d13a21ae8558",
+          "official_cases_passed": 2
+        }
+      },
+      "addCanonicalUrl_addComment": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "b69415c527d14cf6a00a1e1c4a13bf3fdc0d96167addb299c7195f3ab804eed6"
+        },
+        "self": {
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "4f7063049d53895cdf7a28af64a2dcd185b659a0c10b4abf9c219a96c6e3a028"
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "AddCanonicalUrl",
+            "second": "AddComment"
+          },
+          "files_sha256": "b11799fb40e4bdaf901abe1b557e49d0641c6af93aa205e95bca68fc23b3c21c",
+          "passed": true,
+          "report_sha256": "84b633add686e21cdc6bdf0b9206604c4463c928c7ce4ed85d272f3a1c072d2e",
+          "official_cases_passed": 4
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddAltText",
+            "second": "PostPerformanceReport"
+          },
+          "files_sha256": "e4e32f3ca9b112bfda26530b0946d168c6719ae737f957d9a3c9c2c25229a40d",
+          "passed": false,
+          "report_sha256": "d19b56f5b871eaace6f05c98ce4b7fb62e1f55e0b7f3480ac8c94c82dd79de87",
+          "official_cases_passed": 0
+        }
+      },
+      "addCanonicalUrl_assignPostToCategory": {
+        "group": "blogging",
+        "direct": {
+          "status": "invalid",
+          "passed": false
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "5b507a722b010b71fe3dd003f5f4f966dd4bf01cd2acb4d0519c844111106aeb"
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "AddCanonicalUrl",
+            "second": "AssignCategory"
+          },
+          "files_sha256": "aa824220f8acc1a0398e9d3ccc3905dcf0b1fbbdb10b3ede1702f409a015991b",
+          "passed": false,
+          "report_sha256": "da50998640bc7b5b068cd292aa87cb3afc9afe9fd899b095f51ef4544bef6d0d",
+          "official_cases_passed": 2
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddAltText",
+            "second": "PostPerformanceReport"
+          },
+          "files_sha256": "75ae82c3afe51edf374fc44d591c7b0f12e6f39f86f7b1210585e1064cf138a2",
+          "passed": false,
+          "report_sha256": "71a60e6a040d40ad6416431c79baa28a8e04a4119de34e39172dbf67a0cfee7d",
+          "official_cases_passed": 0
+        }
+      },
+      "addCanonicalUrl_editComment": {
+        "group": "blogging",
+        "direct": {
+          "status": "invalid",
+          "passed": false
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b8a7d1d67de26d7f8f69032e51272741aef573486b25ca21d58d6b7a099f8e87"
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "AddCanonicalUrl",
+            "second": "EditComment"
+          },
+          "files_sha256": "8bfa9fce609d6f62b5588a58280064b7617975cf825a38698be8382c088b1e5b",
+          "passed": false,
+          "report_sha256": "40903aee65ff9ca7ff859a6cda516fa8857817f3bb8e3c0d72138deec657d898",
+          "official_cases_passed": 2
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddAltText",
+            "second": "PostPerformanceReport"
+          },
+          "files_sha256": "d82be95074230ee538c77ba29c908cebb5d2245293dd7c08b081d539392d8486",
+          "passed": false,
+          "report_sha256": "a1765d1a48009b4deb1ee7b979521d4f304cc12d492ec628db595cf7a71b679f",
+          "official_cases_passed": 0
+        }
+      },
+      "addCanonicalUrl_editTag": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "239f27225eef6d998297293729a6b0b63ae5d155fcb26a21bf1c83ac1cf87895"
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d917fc84b7a4bb056ab178e6800dcd218dfce26b33afadb502164e3f9383f281"
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "AddCanonicalUrl",
+            "second": "EditTag"
+          },
+          "files_sha256": "7cf46a78d6d27d119dbadc23ae377272b341e99c0641429614f4e7e63cb2cee8",
+          "passed": false,
+          "report_sha256": "e8fb75ebe9cbb62525634e6235bd83e51cf92305b947c2c33d2059e99c5d40ab",
+          "official_cases_passed": 2
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddAltText",
+            "second": "PostPerformanceReport"
+          },
+          "files_sha256": "c48a95fe2bee1de6a84ff4d7438a10ceaddd87b77453af8660426a3f3265cc24",
+          "passed": false,
+          "report_sha256": "c66a969ec3c4132a85aa0aa5e931eec61eb433a35d216385a4c9daf6e072bccd",
+          "official_cases_passed": 0
+        }
+      },
+      "addCommentToTask_setTaskDeadline": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "invalid",
+          "passed": false
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "AddCommentToTask",
+            "second": "SetTaskDeadline"
+          },
+          "files_sha256": "b18b88c0a116fafd3b8303a0d506acc05287932e40eac6d73259ea753317b68c",
+          "passed": false,
+          "report_sha256": "c373d61d7520f445e0a213d9c94a972f8bab505c8b06f7fa39e04f0369ff8488",
+          "official_cases_passed": 3
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddCommentToTask",
+            "second": "SetTaskDeadline"
+          },
+          "files_sha256": "b18b88c0a116fafd3b8303a0d506acc05287932e40eac6d73259ea753317b68c",
+          "passed": false,
+          "report_sha256": "c373d61d7520f445e0a213d9c94a972f8bab505c8b06f7fa39e04f0369ff8488",
+          "official_cases_passed": 3
+        }
+      },
+      "approveOrRejectTaskReview_compareTime": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "invalid",
+          "passed": false
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "ApproveOrRejectTaskReview",
+            "second": "CompareTime"
+          },
+          "files_sha256": "c228f3e6253148b4acc948a49679b68fdeeee515af68143aceeddfd108a14d57",
+          "passed": true,
+          "report_sha256": "25ba12e827e73f232633c64feca72cf46523874f0950acc45116fec22a3e16f9",
+          "official_cases_passed": 4
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddCommentToTask",
+            "second": "SetTaskDeadline"
+          },
+          "files_sha256": "6886dbed40e87c93df6c17be9b13f622bf56600143800d1a262bf200873b7dec",
+          "passed": false,
+          "report_sha256": "99dfca4ddf4710d1ff55d8a70a7e506bdbe568365b8a92250a2ab3450a6e6ad8",
+          "official_cases_passed": 0
+        }
+      },
+      "approveOrRejectTaskReview_projectCustomWorkflows": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "invalid",
+          "passed": false
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "ApproveOrRejectTaskReview",
+            "second": "ProjectCustomWorkflows"
+          },
+          "files_sha256": "ae94fd5898eb76fa4873741eb027c928dbe7697b5c86a29b33aef26b607cff4c",
+          "passed": true,
+          "report_sha256": "ff62c08520f1b15e3a1b8197e4eb427dffa6c2351da1e6309b90f4ddbd127cb6",
+          "official_cases_passed": 4
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddCommentToTask",
+            "second": "SetTaskDeadline"
+          },
+          "files_sha256": "cc02776c22b481e57c643b0c0425561186e1cc61fcef8c932e80ec0781057c1a",
+          "passed": false,
+          "report_sha256": "52754345d44ae851e80a4a478e0b4b94966e1f4f274069d3089eb7a7a0b287db",
+          "official_cases_passed": 0
+        }
+      },
+      "approveOrRejectTaskReview_setTaskPriority": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "invalid",
+          "passed": false
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "ApproveOrRejectTaskReview",
+            "second": "SetTaskPriority"
+          },
+          "files_sha256": "730cfadc5a4756d495a07bf5b07ba5c3b0ae2159762733a0748a33160f5c4674",
+          "passed": false,
+          "report_sha256": "e8482a4b6209b3b57f75f654e837014be3f0347fcc3767e7db53fd47ef6e9431",
+          "official_cases_passed": 3
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddCommentToTask",
+            "second": "SetTaskDeadline"
+          },
+          "files_sha256": "1634ffb274fea6f8ee867fc34d3ef1e1179af3343f7b919377c79e0519a32d3b",
+          "passed": false,
+          "report_sha256": "56e76d8ac897b32878e3d9f1641d405b5fea97cee1dee53ce4b471e88e73cd00",
+          "official_cases_passed": 0
+        }
+      },
+      "assignTaskToProject_assignTaskToUser": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "invalid",
+          "passed": false
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "AssignTaskToProject",
+            "second": "AssignTaskToUser"
+          },
+          "files_sha256": "bdc48403ead583d0cabd9447d0fe64206fdcf8128b3c8ecdfad86ca4a8390cec",
+          "passed": false,
+          "report_sha256": "d90dc841625c93186ff814939a68ab1e784139e0fd3973a9169c51974b9fc739",
+          "official_cases_passed": 2
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddCommentToTask",
+            "second": "SetTaskDeadline"
+          },
+          "files_sha256": "4e3cf0fca61a4f44e01c1e3ddd7dcb5b6f72d140de9e5adb47f31ff69abe68dc",
+          "passed": false,
+          "report_sha256": "070912ba120a50feacd7bcbe1c40dd66da0af50326e3f89b638c4faad4d5f230",
+          "official_cases_passed": 0
+        }
+      }
+    },
+    "openai/gpt-oss-120b": {
+      "addAltTextToImage_postPerformanceReport": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "565b9a2e4e391883d36297081f462fb9a1aa40e3cd7c687436805586a7a3c83e"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "AddAltText",
+            "second": "PostPerformanceReport"
+          },
+          "files_sha256": "9639caf8bf533446089c34445f34f14afbe0fcdcdd8c1a0624c0f06d438b9ce9",
+          "passed": false,
+          "report_sha256": "56f4e03db85499e4244b02481cecbc56d68ef4657ddcad7e58c4acea7c11488d",
+          "official_cases_passed": 2
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddAltText",
+            "second": "PostPerformanceReport"
+          },
+          "files_sha256": "9639caf8bf533446089c34445f34f14afbe0fcdcdd8c1a0624c0f06d438b9ce9",
+          "passed": false,
+          "report_sha256": "56f4e03db85499e4244b02481cecbc56d68ef4657ddcad7e58c4acea7c11488d",
+          "official_cases_passed": 2
+        }
+      },
+      "addCanonicalUrl_addComment": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "70486ffcd9fceac42b1c19ed0b1cfb1af757853807c70db6d2512510ead57eb5"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "AddCanonicalUrl",
+            "second": "AddComment"
+          },
+          "files_sha256": "549a64ce0abea0de84d2efb23955f299c290433bc779cc2f9810df0f2776c94b",
+          "passed": true,
+          "report_sha256": "5080b7d59849c389e35fa5ea3b15520e2332ed82655c0e4f0e78afdca4feefb2",
+          "official_cases_passed": 4
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddAltText",
+            "second": "PostPerformanceReport"
+          },
+          "files_sha256": "2780785b3db928e8f09778585a47a681238c2bf49961c83a7972796d3adfe3cc",
+          "passed": false,
+          "report_sha256": "c1966b89ae378777aebc4da10e4b8cef033a1d7d04fe8a4be5a9154e906b0080",
+          "official_cases_passed": 0
+        }
+      },
+      "addCanonicalUrl_assignPostToCategory": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "8f1040018c10f5a46b99ccec19358e40061c407ea6d97350ea3a0f3e6dff4ef9"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "AddCanonicalUrl",
+            "second": "AssignCategory"
+          },
+          "files_sha256": "3ebb88fdff9643ebe7447eab36f1440974d79cd667cd49cccbbf0a00bd36b6b3",
+          "passed": false,
+          "report_sha256": "20f1555f98bbceb61f3ccd358130b8afa65d9be63c0178a2d32ffd0c7cfffacf",
+          "official_cases_passed": 2
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddAltText",
+            "second": "PostPerformanceReport"
+          },
+          "files_sha256": "606c944808cd9b2afa39a3c7a87e47e262682d401cacaa659f2ef8a3cc9c8449",
+          "passed": false,
+          "report_sha256": "b0d5215d2c9a01a2c32ae393fc5828b2147039860cc24487a574a117583e0835",
+          "official_cases_passed": 0
+        }
+      },
+      "addCanonicalUrl_editComment": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e029ff7164eccbd2014006ee7123528fc6ffc7557b3751209f790acc5c51bc11"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "AddCanonicalUrl",
+            "second": "EditComment"
+          },
+          "files_sha256": "e8418f66efdebf7e217e617bdd8a7fc955820029fce5e235104eca1df5822137",
+          "passed": false,
+          "report_sha256": "438d90cf7e8430f2a45cc10efc5a993269f0c5ca80ace4f88c7bd3fd800b3c16",
+          "official_cases_passed": 2
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddAltText",
+            "second": "PostPerformanceReport"
+          },
+          "files_sha256": "27fde5b447407c7b8241efed53c0a7f9473d69f417479900319c40387c94b8a5",
+          "passed": false,
+          "report_sha256": "1a34dc1457663621c7c635db8bd1d4f5f8da51d3f44cabf334bbe4339d3081ab",
+          "official_cases_passed": 0
+        }
+      },
+      "addCanonicalUrl_editTag": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "32c0b74ba410fe33d0659d7c93e49cd4e6f069aebedf5a1d1ad2a6b789c2ea29"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "AddCanonicalUrl",
+            "second": "EditTag"
+          },
+          "files_sha256": "51a9f626683b28c681fe7d0e1fe2090ec412a4af470fa066fe82782c8420c5c8",
+          "passed": false,
+          "report_sha256": "fece1f27e59063eb20891d6ada3c93e0d72b83e598768818fa2fafacd5e07a6d",
+          "official_cases_passed": 2
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddAltText",
+            "second": "PostPerformanceReport"
+          },
+          "files_sha256": "02567b7b3d1b75b1ad04fcaaaf40f3fd33ae1de96e226ac16152866e7ecc6ed4",
+          "passed": false,
+          "report_sha256": "7fcaef490df377063b1227230028d22f9353ed3f1d51b6c73c6f9fbea5351e61",
+          "official_cases_passed": 0
+        }
+      },
+      "addCommentToTask_setTaskDeadline": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "87e0d512ed05eeaef170f7287b1b252d65ea5f5ca8a899d5062ceea0c3ccea3c"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "AddComment",
+            "second": "SetDeadline"
+          },
+          "files_sha256": "42cf5b2a214633cdcc1fce23edec8b0fbb192d148bfcf7cb4cb77135c2c8e6e0",
+          "passed": true,
+          "report_sha256": "44e42b5b852ed2c7e64417cf3c5ed77b74b3e0e903148ae32eff938b8738cd0b",
+          "official_cases_passed": 4
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddComment",
+            "second": "SetDeadline"
+          },
+          "files_sha256": "42cf5b2a214633cdcc1fce23edec8b0fbb192d148bfcf7cb4cb77135c2c8e6e0",
+          "passed": true,
+          "report_sha256": "44e42b5b852ed2c7e64417cf3c5ed77b74b3e0e903148ae32eff938b8738cd0b",
+          "official_cases_passed": 4
+        }
+      },
+      "approveOrRejectTaskReview_compareTime": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a6bdf4a28eb50b247fdb2b2e92e037f129284d1b7866c6dec8bda39da1d55011"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "ReviewDecision",
+            "second": "TimeComparison"
+          },
+          "files_sha256": "723fb50e3036a29b17b175531150ba44e5e0ee202a74855ea1aee4f203ca2b93",
+          "passed": true,
+          "report_sha256": "b7b5f7b875008aadb36f5279745ce5a3b64f6ea337a721330161639d52d752e7",
+          "official_cases_passed": 4
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddComment",
+            "second": "SetDeadline"
+          },
+          "files_sha256": "586100bdd0fac1537d1ceb0e2ad367a31448f07a7676315894eadca5d439f3d7",
+          "passed": false,
+          "report_sha256": "f9db98977208a7fa407ab9b536b62b18e962c9db6cbc992071d5182445695b93",
+          "official_cases_passed": 0
+        }
+      },
+      "approveOrRejectTaskReview_projectCustomWorkflows": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "e10cd46f19890533b464ba7108515533c138430cf0de80d1d89c5b57eba141ee"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "ReviewDecision",
+            "second": "ProjectWorkflow"
+          },
+          "files_sha256": "839085eae20c72f8469c50b0abf1f7df91017fd437842e7cc1e332995257a148",
+          "passed": true,
+          "report_sha256": "2dbdde80350681f3cfe592e72590dabde1dec52b0f6115970d7b0247760870df",
+          "official_cases_passed": 4
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddComment",
+            "second": "SetDeadline"
+          },
+          "files_sha256": "d5e93a94e7ce9f461a47c3136ad4ecd0f3a90de42623772755592b14fb243923",
+          "passed": false,
+          "report_sha256": "9a3f6f76ef1b405db049e5802a5a56a49e103354f634a2d532e4b274c48a4c72",
+          "official_cases_passed": 0
+        }
+      },
+      "approveOrRejectTaskReview_setTaskPriority": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2f6ec39c0af3f9e1c15bd77dff23342d80353fed80fbd12fc1f557bae44d0055"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "ReviewDecision",
+            "second": "SetPriority"
+          },
+          "files_sha256": "b1490a04f7ebcb4381873c29991e7b1deaaf58ef3d76e3ac0d5334e09dc18e2a",
+          "passed": true,
+          "report_sha256": "90af44d74145b40c3cbcc3bbb47a65d1290953448051b324c9aad08e21842b04",
+          "official_cases_passed": 4
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddComment",
+            "second": "SetDeadline"
+          },
+          "files_sha256": "a25a26850a5644fd96c76b815f4af85112abaf3360654864eea452a9276163b8",
+          "passed": false,
+          "report_sha256": "cf053d1774d05790d8894a5ffee3e4f26d6e93726650423596b850e461b3d62a",
+          "official_cases_passed": 0
+        }
+      },
+      "assignTaskToProject_assignTaskToUser": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "44fb75328c0d5676c5febb9f38ea32120067c114226218ce2bf421f42c828d98"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "AssignProject",
+            "second": "AssignUser"
+          },
+          "files_sha256": "413d2e2a527f8d4f0fa5026b7cd811d3250c033cd520b8b07a7e5e99ca0321f2",
+          "passed": true,
+          "report_sha256": "374f45955ec6b233cfd49bc4da218ba1f27db71bf0e91d2a81fa2b080cb3f48d",
+          "official_cases_passed": 4
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddComment",
+            "second": "SetDeadline"
+          },
+          "files_sha256": "ee28af94c911298101edc8b14403687ff82cd2868cdfd58efc704c017f38ceb2",
+          "passed": false,
+          "report_sha256": "1a61300ef654c8ef79cb7e51c3addb5b223e2e1612d0cc0f5a40f59ee7789bdd",
+          "official_cases_passed": 0
+        }
+      }
+    },
+    "mistralai/mistral-small-3.2-24b-instruct": {
+      "addAltTextToImage_postPerformanceReport": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "309d6a3e25794eded0898d6e9896cf95af544d944136f57e4f9b9d06f293ad2d"
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "41b75d57d677308b88069e7451c94845f98aeef82a3d895d88afff5263b8dafa"
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "altTextEditor",
+            "second": "postPerformanceReporter"
+          },
+          "files_sha256": "979ecf79a40e6fbddf3326cea7f7dda0d09a96224284559174b3e5cff0edd365",
+          "passed": false,
+          "report_sha256": "478c04122041570f133963a9d727eef71037aa077f993a40e6617e7ad4020221",
+          "official_cases_passed": 2
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "altTextEditor",
+            "second": "postPerformanceReporter"
+          },
+          "files_sha256": "979ecf79a40e6fbddf3326cea7f7dda0d09a96224284559174b3e5cff0edd365",
+          "passed": false,
+          "report_sha256": "478c04122041570f133963a9d727eef71037aa077f993a40e6617e7ad4020221",
+          "official_cases_passed": 2
+        }
+      },
+      "addCanonicalUrl_addComment": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "5a0cfd5bded153031c4f6ff024578fc6f5aff0d65f8d7bf0fb43ea84cd4903d5"
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "987b9423cc6f0318145c0fe9aa380445a3a05e8f8b640702064cf379e8e718fb"
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "canonicalUrlAdder",
+            "second": "commentAdder"
+          },
+          "files_sha256": "7fe2f5c5c762217f73d223f4b2c7b41d9c3affa91c6bd3ac33d40e456bb02b35",
+          "passed": false,
+          "report_sha256": "ed9b056c17461367f2ce65eef7c4286747023a9386b1fa72cee99c83c92ab78d",
+          "official_cases_passed": 2
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "altTextEditor",
+            "second": "postPerformanceReporter"
+          },
+          "files_sha256": "aedbae8306687b82cc20ccd404fc8df8dcbf5e1efe359acbcc4d8112dd87f0e7",
+          "passed": false,
+          "report_sha256": "803fd54ab4bef55037a689d58dba7e3c1c6585abcf2feeafa0965d183b850c78",
+          "official_cases_passed": 0
+        }
+      },
+      "addCanonicalUrl_assignPostToCategory": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c5304c6e19fc568b1c6957a87d4f8e96e01b4633fe204ee7fda7feb5f434e370"
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "fa3ec8bc5b84cc6d1db37b568f7a5f6e30c0894dfa14ffebc92c75727372c313"
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "canonicalUrlAdder",
+            "second": "categoryAssigner"
+          },
+          "files_sha256": "22067cbaf42994a52ef863b9946874f7587ea49667cfe95ea7c0b760407350f1",
+          "passed": false,
+          "report_sha256": "311d8c4724d9b1ad77bfa961a49c138e188240ef1c0a2b6d075e60a5684bb8f4",
+          "official_cases_passed": 2
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "altTextEditor",
+            "second": "postPerformanceReporter"
+          },
+          "files_sha256": "98943f95118f1e76773640b716c25728cefb5fde465f6c409dc6ca9efa133241",
+          "passed": false,
+          "report_sha256": "eed508acaaa3d7607aff713d6d97b8ecf23c301908d16affa693b917053ca8e6",
+          "official_cases_passed": 0
+        }
+      },
+      "addCanonicalUrl_editComment": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0c47f46a5e46c1aafd27b8e8f32f2afed234f38e08cf15b4a1751fe0ee8c82ea"
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "afab92bd5c8ea0827d2ee013405f7e9e40293ee28de0fa454f98609f3366045b"
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "canonicalUrlAdder",
+            "second": "commentEditor"
+          },
+          "files_sha256": "882975ece1167b0a47ad14cd9d230eb2474a0c986e75221da8a4617f78b618fc",
+          "passed": false,
+          "report_sha256": "5f92caae506d639608bf69533ed2f24c1f5282c780c96b80417d532a5e9e329f",
+          "official_cases_passed": 2
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "altTextEditor",
+            "second": "postPerformanceReporter"
+          },
+          "files_sha256": "53154f88d050a172214f0ff6007433e43d71256029d4897c55123db6dd9f7cde",
+          "passed": false,
+          "report_sha256": "9e1cb6aa6a56eda2a6a21b614c30601298231cd6c275f343240d40e4b18654c5",
+          "official_cases_passed": 0
+        }
+      },
+      "addCanonicalUrl_editTag": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "28e8c31df1f105dc7f67b90c58ea660532dc35f9a62969b8bde0e1622b749055"
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d871ef8bd7fe5fe172dafb9e7c64463760a24973b022b9ae7c761fe6faf1691c"
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "canonicalUrlAdder",
+            "second": "tagEditor"
+          },
+          "files_sha256": "6a8d65eff8d5fe823e84dcf36df56c07cf7989630e2956228bddf97bff049df6",
+          "passed": false,
+          "report_sha256": "3760cce7a9e59fbafbfe51d17df775054db163b896cf48c1f35bba4da79a6a00",
+          "official_cases_passed": 2
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "altTextEditor",
+            "second": "postPerformanceReporter"
+          },
+          "files_sha256": "07509e587abd496f9240c393edc5aab3088b3c5851296d6321ca61fbd7f133be",
+          "passed": false,
+          "report_sha256": "07c5c3d749aa9d158365853f09e6bd1aefb51a7e084b642e70fd3cac6398b4b2",
+          "official_cases_passed": 0
+        }
+      },
+      "addCommentToTask_setTaskDeadline": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "705b8fbb60bd4a5b150063322574f2c968b915b087c2804def7225ab175688c0"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "addComment",
+            "second": "setDeadline"
+          },
+          "files_sha256": "c945a363634565cd4bd51317673334f51229020ca28e95da6750d7eef957eead",
+          "passed": false,
+          "report_sha256": "1d907716cbde39f3179319cf7746542b0cf2dc99bf16c0e2a8865c20a238c53a",
+          "official_cases_passed": 3
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "addComment",
+            "second": "setDeadline"
+          },
+          "files_sha256": "c945a363634565cd4bd51317673334f51229020ca28e95da6750d7eef957eead",
+          "passed": false,
+          "report_sha256": "1d907716cbde39f3179319cf7746542b0cf2dc99bf16c0e2a8865c20a238c53a",
+          "official_cases_passed": 3
+        }
+      },
+      "approveOrRejectTaskReview_compareTime": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c08c499d7565698ce70d703af16348196266783208983b55cc382db28fc58111"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "approveRejectReview",
+            "second": "compareTime"
+          },
+          "files_sha256": "cd88818311d6db308b1d30c8dfbbdd3b1935f5c36025cf9ee12c92db1ef5d041",
+          "passed": true,
+          "report_sha256": "ca2b0489f796b97417dc8864d9a4f66ef59ec8c5d5733139c66ead34e02a4866",
+          "official_cases_passed": 4
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "addComment",
+            "second": "setDeadline"
+          },
+          "files_sha256": "8b1a856aec0dc7bff287a1c80748b8ae019e9a6090ebea701b325610f0d5a0a6",
+          "passed": false,
+          "report_sha256": "1ed7cea5fe7451003a6432b80a8a001b04af9fbb2358031d7a717fb6590febd7",
+          "official_cases_passed": 0
+        }
+      },
+      "approveOrRejectTaskReview_projectCustomWorkflows": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "dd7ba478887f7c2685fa269d69e4a13dcb057e3759bc5be06873d8fa7f65d2c1"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "approveRejectReview",
+            "second": "customWorkflows"
+          },
+          "files_sha256": "74c1123e26b04ab4335ae3e4f834a5fae99852b9a966b9cfca55026ebde6fa8e",
+          "passed": true,
+          "report_sha256": "b5b90bb7d0578c330d934690d0d5814197b00d31b749f1d88cf78b5253abd32a",
+          "official_cases_passed": 4
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "addComment",
+            "second": "setDeadline"
+          },
+          "files_sha256": "80e3d72f224609d92537d16d4f3665130a75d4ee029be0433ea52b704f5650be",
+          "passed": false,
+          "report_sha256": "e9b5c9e6d7c80e4397820fdd511ff8258768df3d66933bf512bdedd91405f0ff",
+          "official_cases_passed": 0
+        }
+      },
+      "approveOrRejectTaskReview_setTaskPriority": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0431fd3ecd7294e6dc43da1eff9258db7fa9a4aa01e92207056f6d33d5dc9d27"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "approveRejectReview",
+            "second": "setPriority"
+          },
+          "files_sha256": "d53972423ee88c02587260e3eddd6572632305cea16669c59f040fe1a47a8bac",
+          "passed": true,
+          "report_sha256": "5682e1f21f8ca9e6cd0a8061a0a77332b7312d5103745f0890cc739cba97721a",
+          "official_cases_passed": 4
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "addComment",
+            "second": "setDeadline"
+          },
+          "files_sha256": "e0275886a6e97255fbc6c58f16ea91707cbba09d4078740e5dcea4a0465b5de3",
+          "passed": false,
+          "report_sha256": "03c5027960987cbe3423f5beb582c6dc09e77d860b036c4e270e1f60bc4eb7b9",
+          "official_cases_passed": 0
+        }
+      },
+      "assignTaskToProject_assignTaskToUser": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "263cda41763ecb50071461e7eb25b4df0ccc4635db59cde6bee311b011abb878"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "assembled",
+          "config": {
+            "first": "assignTaskProject",
+            "second": "assignTaskUser"
+          },
+          "files_sha256": "231106161611d095c6afaf5dab3839ea487e69f0e26c4ec08979c384af7a21da",
+          "passed": true,
+          "report_sha256": "db8b452c4fca2c4dfa357010caeb31d6543be47ca24f231ceb0245ca44b18f32",
+          "official_cases_passed": 4
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "addComment",
+            "second": "setDeadline"
+          },
+          "files_sha256": "abb41d0038e2fc8db5eaf8e05201178792f31b290076572a929edc9f8044383a",
+          "passed": false,
+          "report_sha256": "416fb4efed31b67a55d08e73e9f99241569133bb720a3bf89b70b79d8607be65",
+          "official_cases_passed": 0
+        }
+      }
+    },
+    "google/gemma-3-12b-it": {
+      "addAltTextToImage_postPerformanceReport": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2ddff52ba974d317f62c3a7408ae02ffefe2054f509dd1078d074285b28ab7c9"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "missing_component",
+          "passed": false
+        }
+      },
+      "addCanonicalUrl_addComment": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "1839f55b23de647b4a90302b71acd889a66ab1612f976f93fc45440a8befebd7"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "missing_component",
+          "passed": false
+        }
+      },
+      "addCanonicalUrl_assignPostToCategory": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "8e8919f6513842de4b08c5c99b53050cdb0cc2d177825ea9332bb0eef1fc4480"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "missing_component",
+          "passed": false
+        }
+      },
+      "addCanonicalUrl_editComment": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0579a93033485f1947b27f5021c113620ce39943d9c4553b0f3458be00daf3b6"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "missing_component",
+          "passed": false
+        }
+      },
+      "addCanonicalUrl_editTag": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "adf7e1d6cf6d5849aff2ac8435e9038eba85a6b5dd8392887d7dc48373dae9b9"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "missing_component",
+          "passed": false
+        }
+      },
+      "addCommentToTask_setTaskDeadline": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "6c1ed880e89f226e31dae5afe904e2a15bb1c688a0afc180f9c95d9e8e5cb2a5"
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "355ffe6afa7ac1cd03174e091698dec17123eba8270cb86c7194531b840183eb"
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "missing_component",
+          "passed": false
+        }
+      },
+      "approveOrRejectTaskReview_compareTime": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "5ef44adb3cabf276b25e480c61a87ac3706e19673c6c21ea02ddd683efd190b3"
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "7e8e68812ba30f63873ef20b97db4b97ed3895ea5972ae141732203388df37c4"
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "missing_component",
+          "passed": false
+        }
+      },
+      "approveOrRejectTaskReview_projectCustomWorkflows": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b03807d02d465f8bc9840026847dde5b6dc9923917f46bb7721cad1f24b2812e"
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b41b9580435ea85e20ed5820b9b3aa7daf1cb9c2ae87fc2f966cab669853414e"
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "missing_component",
+          "passed": false
+        }
+      },
+      "approveOrRejectTaskReview_setTaskPriority": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c2837763d42987cc06653da67e6ee38e1b5df449debed4db433d2759d50f3f64"
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "bfc681e71baaa6294c3dbb7d1bab13d3555f16624dc9accd0b635c08525601ba"
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "missing_component",
+          "passed": false
+        }
+      },
+      "assignTaskToProject_assignTaskToUser": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c55fc0c7dbf25d15185eadadfabc60caf0f646915e67a2f7d87a198f1cf34591"
+        },
+        "self": {
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0c5df571f52eee5f3bb5002a952fcc502ddd250302104660b7269bad22c3b598"
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "missing_component",
+          "passed": false
+        }
+      }
+    },
+    "deepseek/deepseek-v4-flash": {
+      "addAltTextToImage_postPerformanceReport": {
+        "group": "blogging",
+        "direct": {
+          "status": "invalid",
+          "passed": false
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddAltTextToImage",
+            "second": "NONE"
+          },
+          "files_sha256": "419fda128eb6534c8386755977acd2847022abd49ee1091c995a9d2ceda152c4",
+          "passed": false,
+          "report_sha256": "3420d9c582d01057ba3e719fe54cf74c6f4dbc3419966fba44e7e1aebdc80928",
+          "official_cases_passed": 2
+        }
+      },
+      "addCanonicalUrl_addComment": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "96f4772b5d21fdf76d2cde5c1e4cf5ff035a3f18662c96c372ff660e0950b210"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddAltTextToImage",
+            "second": "NONE"
+          },
+          "files_sha256": "8d5fe2e2c1a10442ddd88d66d06854ebce172d713fd7890e6df94da4e8f2e290",
+          "passed": false,
+          "report_sha256": "b733cf7544a0f69502b7be5c5da2287f34c73426f6d909fda8996e4ffec3c5d4",
+          "official_cases_passed": 0
+        }
+      },
+      "addCanonicalUrl_assignPostToCategory": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "e1fea8fd8d9aab788d122d12fae8822d8dee4f2e2dcbf2d3d621aea83cb8981e"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddAltTextToImage",
+            "second": "NONE"
+          },
+          "files_sha256": "40ebeeabea68efde677bb37b57e818e924346e850c5065434088c000828c29a5",
+          "passed": false,
+          "report_sha256": "4930acc5445d03c6c2f9da14e2070f0423de3cd455c253ea605f38ebdef22ff8",
+          "official_cases_passed": 0
+        }
+      },
+      "addCanonicalUrl_editComment": {
+        "group": "blogging",
+        "direct": {
+          "status": "invalid",
+          "passed": false
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddAltTextToImage",
+            "second": "NONE"
+          },
+          "files_sha256": "262abc03f1935177c1f0880a52334ae1a7a86b3386ee19962d59c0ce4f2728fb",
+          "passed": false,
+          "report_sha256": "305cc38810f52465f5fd68989e16f6d6e19b355e202d088cf3b3b302f0699d25",
+          "official_cases_passed": 0
+        }
+      },
+      "addCanonicalUrl_editTag": {
+        "group": "blogging",
+        "direct": {
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "0a13bc010fa922558fdc76f5e4c0dec6d7cfb1c652ef0df7ed99054a0ee641c8"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "assembled",
+          "config": {
+            "first": "AddAltTextToImage",
+            "second": "NONE"
+          },
+          "files_sha256": "ef8c432b202009b2047eec4cf00037f3549c1950fea4bbd38db273fc6720f136",
+          "passed": false,
+          "report_sha256": "83cbb3975f7d240a9f11555ba492cc73a02ca63e4fa98c940e418a76739a303e",
+          "official_cases_passed": 0
+        }
+      },
+      "addCommentToTask_setTaskDeadline": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "4b84961b231abf933f4d9b3dd3a80a7ba4b46e71b3d04d4f2afe245d7260f942"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "missing_component",
+          "passed": false
+        }
+      },
+      "approveOrRejectTaskReview_compareTime": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "invalid",
+          "passed": false
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "missing_component",
+          "passed": false
+        }
+      },
+      "approveOrRejectTaskReview_projectCustomWorkflows": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "e0d5c337535d2a5895f442dfc2f48e365c127c8a8b2c2d41525c9bfc222194d1"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "missing_component",
+          "passed": false
+        }
+      },
+      "approveOrRejectTaskReview_setTaskPriority": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "invalid",
+          "passed": false
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "missing_component",
+          "passed": false
+        }
+      },
+      "assignTaskToProject_assignTaskToUser": {
+        "group": "taskmanagement",
+        "direct": {
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "d49f3f4f176cb2bdd03c3a96f2ca7e89367bfc8bb4e345b00767cc9e67b27ad0"
+        },
+        "self": {
+          "status": "build_failed",
+          "passed": false
+        },
+        "matched": {
+          "status": "missing_component",
+          "passed": false
+        },
+        "fixed": {
+          "status": "missing_component",
+          "passed": false
+        }
+      }
+    }
+  },
+  "totals": {
+    "qwen/qwen3-coder-30b-a3b-instruct": {
+      "common_targets": [
+        "addAltTextToImage_postPerformanceReport",
+        "addCanonicalUrl_addComment",
+        "addCanonicalUrl_assignPostToCategory",
+        "addCanonicalUrl_editComment",
+        "addCanonicalUrl_editTag",
+        "addCommentToTask_setTaskDeadline",
+        "approveOrRejectTaskReview_compareTime",
+        "approveOrRejectTaskReview_projectCustomWorkflows",
+        "approveOrRejectTaskReview_setTaskPriority",
+        "assignTaskToProject_assignTaskToUser"
+      ],
+      "direct": 4,
+      "self": 1,
+      "matched": 2,
+      "fixed": 1,
+      "only_matched": [
+        "addCommentToTask_setTaskDeadline",
+        "assignTaskToProject_assignTaskToUser"
+      ],
+      "only_direct": [
+        "addCanonicalUrl_addComment",
+        "approveOrRejectTaskReview_compareTime",
+        "approveOrRejectTaskReview_projectCustomWorkflows",
+        "approveOrRejectTaskReview_setTaskPriority"
+      ]
+    },
+    "qwen/qwen3.5-9b": {
+      "common_targets": [
+        "addAltTextToImage_postPerformanceReport",
+        "addCanonicalUrl_addComment",
+        "addCanonicalUrl_assignPostToCategory",
+        "addCanonicalUrl_editComment",
+        "addCanonicalUrl_editTag",
+        "addCommentToTask_setTaskDeadline",
+        "approveOrRejectTaskReview_compareTime",
+        "approveOrRejectTaskReview_projectCustomWorkflows",
+        "approveOrRejectTaskReview_setTaskPriority",
+        "assignTaskToProject_assignTaskToUser"
+      ],
+      "direct": 2,
+      "self": 1,
+      "matched": 3,
+      "fixed": 0,
+      "only_matched": [
+        "approveOrRejectTaskReview_compareTime",
+        "approveOrRejectTaskReview_projectCustomWorkflows"
+      ],
+      "only_direct": [
+        "addCanonicalUrl_editTag"
+      ]
+    },
+    "openai/gpt-oss-120b": {
+      "common_targets": [
+        "addAltTextToImage_postPerformanceReport",
+        "addCanonicalUrl_addComment",
+        "addCanonicalUrl_assignPostToCategory",
+        "addCanonicalUrl_editComment",
+        "addCanonicalUrl_editTag",
+        "addCommentToTask_setTaskDeadline",
+        "approveOrRejectTaskReview_compareTime",
+        "approveOrRejectTaskReview_projectCustomWorkflows",
+        "approveOrRejectTaskReview_setTaskPriority",
+        "assignTaskToProject_assignTaskToUser"
+      ],
+      "direct": 5,
+      "self": 0,
+      "matched": 6,
+      "fixed": 1,
+      "only_matched": [
+        "approveOrRejectTaskReview_compareTime",
+        "approveOrRejectTaskReview_setTaskPriority"
+      ],
+      "only_direct": [
+        "addCanonicalUrl_assignPostToCategory"
+      ]
+    },
+    "mistralai/mistral-small-3.2-24b-instruct": {
+      "common_targets": [
+        "addAltTextToImage_postPerformanceReport",
+        "addCanonicalUrl_addComment",
+        "addCanonicalUrl_assignPostToCategory",
+        "addCanonicalUrl_editComment",
+        "addCanonicalUrl_editTag",
+        "addCommentToTask_setTaskDeadline",
+        "approveOrRejectTaskReview_compareTime",
+        "approveOrRejectTaskReview_projectCustomWorkflows",
+        "approveOrRejectTaskReview_setTaskPriority",
+        "assignTaskToProject_assignTaskToUser"
+      ],
+      "direct": 0,
+      "self": 0,
+      "matched": 4,
+      "fixed": 0,
+      "only_matched": [
+        "approveOrRejectTaskReview_compareTime",
+        "approveOrRejectTaskReview_projectCustomWorkflows",
+        "approveOrRejectTaskReview_setTaskPriority",
+        "assignTaskToProject_assignTaskToUser"
+      ],
+      "only_direct": []
+    },
+    "google/gemma-3-12b-it": {
+      "common_targets": [
+        "addAltTextToImage_postPerformanceReport",
+        "addCanonicalUrl_addComment",
+        "addCanonicalUrl_assignPostToCategory",
+        "addCanonicalUrl_editComment",
+        "addCanonicalUrl_editTag",
+        "addCommentToTask_setTaskDeadline",
+        "approveOrRejectTaskReview_compareTime",
+        "approveOrRejectTaskReview_projectCustomWorkflows",
+        "approveOrRejectTaskReview_setTaskPriority",
+        "assignTaskToProject_assignTaskToUser"
+      ],
+      "direct": 1,
+      "self": 0,
+      "matched": 0,
+      "fixed": 0,
+      "only_matched": [],
+      "only_direct": [
+        "addCanonicalUrl_addComment"
+      ]
+    },
+    "deepseek/deepseek-v4-flash": {
+      "common_targets": [
+        "addAltTextToImage_postPerformanceReport",
+        "addCanonicalUrl_addComment",
+        "addCanonicalUrl_assignPostToCategory",
+        "addCanonicalUrl_editComment",
+        "addCanonicalUrl_editTag",
+        "addCommentToTask_setTaskDeadline",
+        "approveOrRejectTaskReview_compareTime",
+        "approveOrRejectTaskReview_projectCustomWorkflows",
+        "approveOrRejectTaskReview_setTaskPriority",
+        "assignTaskToProject_assignTaskToUser"
+      ],
+      "direct": 6,
+      "self": 0,
+      "matched": 0,
+      "fixed": 0,
+      "only_matched": [],
+      "only_direct": [
+        "addCanonicalUrl_addComment",
+        "addCanonicalUrl_assignPostToCategory",
+        "addCanonicalUrl_editTag",
+        "addCommentToTask_setTaskDeadline",
+        "approveOrRejectTaskReview_projectCustomWorkflows",
+        "assignTaskToProject_assignTaskToUser"
+      ]
+    }
+  }
+}

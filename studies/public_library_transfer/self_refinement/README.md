@@ -43,3 +43,8 @@ uv run python -m studies.public_library_transfer.self_refinement.line_contract.n
 ```
 
 [按依赖顺序建库的代码模型复验](dependency_order/README.md)采用 Qwen3-Coder-30B-A3B-Instruct，独立建两份库，重新生成相同路由和解码设置下的从零对照。两份重复与各自的固定首例分别报告。
+
+### 按公开宿主与组件改进
+
+- [TodoMVC 源码绑定](todomvc/source_binding/README.md)与 [Duo 组件装配](duo_composition/README.md)从六个模型原始输出检验哪些实现能直接使用。两项都核对从零回复，Duo 还独立核验默认导出声明和每个单功能组件。
+- [问卷题型](form_registry/README.md)逐模型核对已有类能否导出、挂载及呈现所要求控件，单位是九种公开类型。[表格与 SVG 行为选择](target_selection/README.md)分别测原模型方案、确定性选择和固定页。

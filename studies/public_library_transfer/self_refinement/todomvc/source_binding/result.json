@@ -1,0 +1,3490 @@
+{
+  "protocol_sha256": "9f15131d98a8cfd89d51a56272d362e3371f7a5a95eda010dd58c31ec4332522",
+  "strict_source_sha256": "e565bac496c4a56162304b2dc8c947ced2af90f598ad15c0da26d3538935ff85",
+  "registered_utc": "2026-11-24T10:20:50.142958+00:00",
+  "sealed_utc": "2026-11-24T10:20:52.674473+00:00",
+  "registration_sha256": "707d01a2d81c914e464fa5b1ad839f58ce76f11c6e73a121dde4653aabc4a4d8",
+  "seal_sha256": "58119f2cb4800dd20b20d8c74c28a516f5bf2e5639f34b14b02e16c889587b12",
+  "new_model_calls": 0,
+  "builds": {
+    "deepseek-flash": {
+      "status": "valid",
+      "envelope": "json",
+      "first": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "config_identifier_referenced": true,
+      "truncated_tail": false,
+      "extracted_source_sha256": "0192f9bc7030f2b7d01301b9f1081a48218989e2f0de9bc12fd7bbf705c8783a"
+    },
+    "gemma": {
+      "status": "valid",
+      "envelope": "fenced",
+      "first": {
+        "enable_core": true,
+        "enable_toggle": true,
+        "enable_toggleAll": true,
+        "enable_edit": true,
+        "enable_counter": true,
+        "enable_clearCompleted": true,
+        "enable_routing": true
+      },
+      "config_identifier_referenced": false,
+      "truncated_tail": true,
+      "extracted_source_sha256": "ad3f9f1a8540f6e794a3b925b789c98b0df4e1211d55789317a105e6402d2a71"
+    },
+    "mistral": {
+      "status": "valid",
+      "envelope": "fenced",
+      "first": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "config_identifier_referenced": false,
+      "truncated_tail": false,
+      "extracted_source_sha256": "56fbf87d65adff5c78b74c805ac103fd1c80dbc105eb9eb78339db78d358dc82"
+    },
+    "oss": {
+      "status": "valid",
+      "envelope": "json",
+      "first": {
+        "enableCore": true,
+        "enableToggle": true,
+        "enableToggleAll": true,
+        "enableEdit": true,
+        "enableClearCompleted": true,
+        "enableRouting": true
+      },
+      "config_identifier_referenced": true,
+      "truncated_tail": false,
+      "extracted_source_sha256": "fe8949be62a7ef43196c9e64f824cdd12ddc655ff88155f1c31928394becc381"
+    },
+    "qwen": {
+      "status": "valid",
+      "envelope": "fenced",
+      "first": {
+        "core": true,
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "config_identifier_referenced": false,
+      "truncated_tail": false,
+      "extracted_source_sha256": "38423591d517eba671faa8e75a72ea520f7061cce1a9d02659d9169de9b52d01"
+    },
+    "qwen9": {
+      "status": "invalid",
+      "reason": "Empty source"
+    }
+  },
+  "rows": [
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-01",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "0397c23c5926e7f365e3990338171598e401d8a50e6d77561afedbfd09e05cb2",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "f598731c56280656745e888360951d025ec3585c223925d87b569ed1dffed5f6",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-01",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "counter": true,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "8f541c68552762b0545fddec55cc4ff84153523386f5c9f16cf84b4dc0def416",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "951a12ce0f4aad9a942dd43c9a732d1d3a6cbca582087324b3c1967f4d229c87",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-01",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "70490abb7376d8e1c463b137eebadb58cd7e99c9708e5d4eccad55147f0f1fd5",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "791c42a1d892d7be4977b6a6068a70efcd97097c7abddbd3c92b0efae86dafbb",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-02",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "3cd38f87b85d03b2188667828537fb0c05adf6d388badb40562c5d79c5e80251",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "5daaf34cef6dc4579f36f32275ffceff237430a4d1a556dd5eb71c90a4de178e",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-02",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": false,
+        "edit": false,
+        "counter": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "986f0c9f47803eb3e075ce1b6c0414dc75606b9d6bec79b448570ec0fad4c99b",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "ee735cbe9dab2c0cdd3d3c1f401eebdf3888bf175509723e234dd10ce7cc1ba4",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-02",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "70490abb7376d8e1c463b137eebadb58cd7e99c9708e5d4eccad55147f0f1fd5",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "e6e06721d92df87fce8a370b9de9d6f511f05532c4c1dbd7d244b496e230e5da",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-03",
+      "arm": "direct",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-03",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": true,
+        "counter": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "c383bfc7b89d1c71b30806f9f965ef4c07a5f778999024f277987fc68619de66",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "64d86b769be61316f1b5ac30a0c5bd289108285488853cbd2f664cca9dea5556",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-03",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "70490abb7376d8e1c463b137eebadb58cd7e99c9708e5d4eccad55147f0f1fd5",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "2919e45f2c471532f9aa91cb3e65324bc5c2c526f874bd316b696f273487ba41",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-04",
+      "arm": "direct",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-04",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": false,
+        "counter": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "41eeb8f9066ca712d6304826130d10e78c9cf3e5e232b93f70df8f83a3ce2e57",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "70601058969f6778ea9e49355c4f41883eeee04fdbdad27e0b0555b8d8827239",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-04",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "70490abb7376d8e1c463b137eebadb58cd7e99c9708e5d4eccad55147f0f1fd5",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "8edca0f9ebea5ddc1c29c20abcaee92a840edbbf6a81b22f251f14d5e60f4cf7",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-05",
+      "arm": "direct",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-05",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": false,
+        "edit": false,
+        "counter": false,
+        "clearCompleted": true,
+        "routing": false
+      },
+      "files_sha256": "321dfa573e50d6ae24be61a155e73ee44ca265de1e6148400df63c2aa2bf30da",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "7f6e2e1068f1dfaeac5e81d26bc1641d5f12f9a7348c0b572709284ac0bd34c7",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-05",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "70490abb7376d8e1c463b137eebadb58cd7e99c9708e5d4eccad55147f0f1fd5",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "e63f6d2324355f0f3667969da7ed9935cca8268c9c7b7e82638ad1532e0d058b",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-06",
+      "arm": "direct",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-06",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": false,
+        "edit": false,
+        "counter": false,
+        "clearCompleted": false,
+        "routing": true
+      },
+      "files_sha256": "dd4d69dc3f368461238346d7cb96d323645846982387aa33b4e1acccabea3a1d",
+      "passed": true,
+      "official_tests": 10,
+      "report_sha256": "28973ae729eddce51a482a1d2a9df79e464f4448bc741faba8316b7a01d28477",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-06",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "70490abb7376d8e1c463b137eebadb58cd7e99c9708e5d4eccad55147f0f1fd5",
+      "passed": true,
+      "official_tests": 10,
+      "report_sha256": "86328a291e35f0f5f50fe540bad092ce1922c85aa001aec79e3ca967646c42ef",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-07",
+      "arm": "direct",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-07",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": false,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": false
+      },
+      "files_sha256": "7c5553c97de45658cd9b4281dc764e38143921ae79e1b20d845178e31e2a94b2",
+      "passed": true,
+      "official_tests": 16,
+      "report_sha256": "15d93a2427639aed90463e8a987e143812a8486da04dd040017a6a420b75d4fe",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-07",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "70490abb7376d8e1c463b137eebadb58cd7e99c9708e5d4eccad55147f0f1fd5",
+      "passed": true,
+      "official_tests": 16,
+      "report_sha256": "b0207329029d01f988923cae7d96a9a82cc255700c2b9f7d3468876d0adc2c4b",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-08",
+      "arm": "direct",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-08",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "70490abb7376d8e1c463b137eebadb58cd7e99c9708e5d4eccad55147f0f1fd5",
+      "passed": true,
+      "official_tests": 24,
+      "report_sha256": "b29a0df01730b8c42042043099526bd3b5aa7e00e8111df10b56d2bf5370becf",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-08",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "70490abb7376d8e1c463b137eebadb58cd7e99c9708e5d4eccad55147f0f1fd5",
+      "passed": true,
+      "official_tests": 24,
+      "report_sha256": "b29a0df01730b8c42042043099526bd3b5aa7e00e8111df10b56d2bf5370becf",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-01",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "4de051cc4d8896f6650279633ab4a6eac1bd94c482a706488274807f8055be20",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "ecfe0cc41b642b37b159182d900e673063943ed9b7e10327f3a6abd35571ddd3",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-01",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "enable_core": true,
+        "enable_toggle": false,
+        "enable_toggleAll": false,
+        "enable_edit": false,
+        "enable_counter": true,
+        "enable_clearCompleted": false,
+        "enable_routing": false
+      },
+      "files_sha256": "d06454e47eea9cef678379eee8e5a0aac93fd5294f0268c0570972aa6703bfe3",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "2a6ef5aad345a08338a56da36c17bbfaf2345e815b66af916163dc5cdb76953c",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-01",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "enable_core": true,
+        "enable_toggle": true,
+        "enable_toggleAll": true,
+        "enable_edit": true,
+        "enable_counter": true,
+        "enable_clearCompleted": true,
+        "enable_routing": true
+      },
+      "files_sha256": "df27a0fa3955dc7a6be49a24f57aa1b5486ab0e4078a92ffcd4e709948b0541b",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "c7ae77708753b728264cb8b37d7d17f91f480bf101120f4f0a8a099438d61555",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-02",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "e675ca407f61846e57248f24c2447e0a1ebf4d46346f46a1fc9580a42c8e30f9",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "98993bbf0f35b680ab94f66f34893b5083ab27d814e83b6ac6d261dcdb723a33",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-02",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "enable_core": true,
+        "enable_toggle": true,
+        "enable_toggleAll": false,
+        "enable_edit": false,
+        "enable_counter": false,
+        "enable_clearCompleted": false,
+        "enable_routing": false
+      },
+      "files_sha256": "d563844d04d47f36a884e4bf434068618811a5c3dd7f90e260a0724a6c0c6afb",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "751a69b9187446c3f74b09ed796e2e5e776abcbd14473fd4d0ff0dadec7e2c8e",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-02",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "enable_core": true,
+        "enable_toggle": true,
+        "enable_toggleAll": true,
+        "enable_edit": true,
+        "enable_counter": true,
+        "enable_clearCompleted": true,
+        "enable_routing": true
+      },
+      "files_sha256": "df27a0fa3955dc7a6be49a24f57aa1b5486ab0e4078a92ffcd4e709948b0541b",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "8e846542c4c2896cdc7b88a95ff068500e2fccbdb7fff2433065844c2efc06f0",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-03",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "e6cd06f0175db8bf5c06f6b37265806a675753972fb48af811d2cf7690e17913",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "412c9122936e640d629260e1c031c30c94acbd0bdaa12b83b6f70f92217d0425",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-03",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "enable_core": true,
+        "enable_toggle": false,
+        "enable_toggleAll": false,
+        "enable_edit": true,
+        "enable_counter": false,
+        "enable_clearCompleted": false,
+        "enable_routing": false
+      },
+      "files_sha256": "3bb5d55dacb300c0dcd124cdc2b47a344f6a4054f14dcbaaf587a038a162596c",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "3004654812a13a23f28f3a0967dced632ffd134a2758153ced4634b047437595",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-03",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "enable_core": true,
+        "enable_toggle": true,
+        "enable_toggleAll": true,
+        "enable_edit": true,
+        "enable_counter": true,
+        "enable_clearCompleted": true,
+        "enable_routing": true
+      },
+      "files_sha256": "df27a0fa3955dc7a6be49a24f57aa1b5486ab0e4078a92ffcd4e709948b0541b",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "4d7891bd539c34bab2543c8fa8ebc4801767ebd3526efe49e3eb1fe6407d172d",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-04",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "dfcab303ca6c4ecc16f91f4ab501b51e6fa3cf6ebc6056d220a85fda9c460305",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "4f5b635c39f7c0f098f79af8e4193290e33baaf84f461f7e5d07faac97e4eaae",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-04",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "enable_core": true,
+        "enable_toggle": true,
+        "enable_toggleAll": true,
+        "enable_edit": false,
+        "enable_counter": false,
+        "enable_clearCompleted": false,
+        "enable_routing": false
+      },
+      "files_sha256": "5d23b84335f83788b21c156eacbc4c253cd16d2742aebf96449e5f3d296cd4ae",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "d328cbef091dc15dde99f166915507075855b7dc3a2d1f8f9302829feaa6f047",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-04",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "enable_core": true,
+        "enable_toggle": true,
+        "enable_toggleAll": true,
+        "enable_edit": true,
+        "enable_counter": true,
+        "enable_clearCompleted": true,
+        "enable_routing": true
+      },
+      "files_sha256": "df27a0fa3955dc7a6be49a24f57aa1b5486ab0e4078a92ffcd4e709948b0541b",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "ca05a4d9fc7c1f7561f6d3f2d2f81de4a74a134a748b2eab37e5bf44361acfb0",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-05",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "554718a9e04a313e8fa9a94c6b61ebf13042b42234f0c817109490b3afc526a7",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "26dee1c2a051517270b34be5ee77ebf1aaeb4f007196da656daac2db3584a5b8",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-05",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "enable_core": true,
+        "enable_toggle": true,
+        "enable_toggleAll": false,
+        "enable_edit": false,
+        "enable_counter": false,
+        "enable_clearCompleted": true,
+        "enable_routing": false
+      },
+      "files_sha256": "1285129cb6452ec37e56f1bd3df821ae2a0e8fbde5a434818fb52a89b7090620",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "9e31d0ddb46f686cfe1d3561c07db90627f4cb6f6725f6dc120a688495d240bf",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-05",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "enable_core": true,
+        "enable_toggle": true,
+        "enable_toggleAll": true,
+        "enable_edit": true,
+        "enable_counter": true,
+        "enable_clearCompleted": true,
+        "enable_routing": true
+      },
+      "files_sha256": "df27a0fa3955dc7a6be49a24f57aa1b5486ab0e4078a92ffcd4e709948b0541b",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "c0ed2fb45065937b2e179f4879528d6a091bd9e03a9391b78ec5f6e7117e72b9",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-06",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "ca833d4d4ef95c7cbda35513e0d1de07a12a38159dd296e1e8124a0cf2c613c1",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "980933d5e7722b4a53f3c68f9325346b203316175398e568e1d06de71e95a836",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-06",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "enable_core": true,
+        "enable_toggle": true,
+        "enable_toggleAll": false,
+        "enable_edit": false,
+        "enable_counter": false,
+        "enable_clearCompleted": false,
+        "enable_routing": true
+      },
+      "files_sha256": "9bd7553d903c848842d77073d32d29d395731d2cb14d3cd4bf26d99736e74c83",
+      "passed": true,
+      "official_tests": 10,
+      "report_sha256": "cdbb8490ce1570c6ab444b966c4067fb48c24ccd3144a05f67654fb434c2f5d8",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-06",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "enable_core": true,
+        "enable_toggle": true,
+        "enable_toggleAll": true,
+        "enable_edit": true,
+        "enable_counter": true,
+        "enable_clearCompleted": true,
+        "enable_routing": true
+      },
+      "files_sha256": "df27a0fa3955dc7a6be49a24f57aa1b5486ab0e4078a92ffcd4e709948b0541b",
+      "passed": true,
+      "official_tests": 10,
+      "report_sha256": "685096af1bc53e458f8387489190bcde14fd555f44547a2faf7a8b9b14461243",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-07",
+      "arm": "direct",
+      "status": "invalid",
+      "reason": "No parseable controller assignment",
+      "passed": false
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-07",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "enable_core": true,
+        "enable_toggle": true,
+        "enable_toggleAll": false,
+        "enable_edit": true,
+        "enable_counter": true,
+        "enable_clearCompleted": true,
+        "enable_routing": false
+      },
+      "files_sha256": "27c3fe6542dc463697ea0f64e19b43d3861d5c5caa72d63be776b1e2938c44df",
+      "passed": true,
+      "official_tests": 16,
+      "report_sha256": "e33761ba24476023449cb0b18eca03b155bae14b1de825a020b519fad02f4e1f",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-07",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "enable_core": true,
+        "enable_toggle": true,
+        "enable_toggleAll": true,
+        "enable_edit": true,
+        "enable_counter": true,
+        "enable_clearCompleted": true,
+        "enable_routing": true
+      },
+      "files_sha256": "df27a0fa3955dc7a6be49a24f57aa1b5486ab0e4078a92ffcd4e709948b0541b",
+      "passed": true,
+      "official_tests": 16,
+      "report_sha256": "6ff1a87cc928d389831e2e8caf40092916abdec6748249b001ebf9b99aa9a213",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-08",
+      "arm": "direct",
+      "status": "invalid",
+      "reason": "No parseable controller assignment",
+      "passed": false
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-08",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "enable_core": true,
+        "enable_toggle": true,
+        "enable_toggleAll": true,
+        "enable_edit": true,
+        "enable_counter": true,
+        "enable_clearCompleted": true,
+        "enable_routing": true
+      },
+      "files_sha256": "df27a0fa3955dc7a6be49a24f57aa1b5486ab0e4078a92ffcd4e709948b0541b",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "5fda56907f10b3b2f512f6dc104303c9c95dc70ba2d91d419fe96d65bf766508",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-08",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "enable_core": true,
+        "enable_toggle": true,
+        "enable_toggleAll": true,
+        "enable_edit": true,
+        "enable_counter": true,
+        "enable_clearCompleted": true,
+        "enable_routing": true
+      },
+      "files_sha256": "df27a0fa3955dc7a6be49a24f57aa1b5486ab0e4078a92ffcd4e709948b0541b",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "5fda56907f10b3b2f512f6dc104303c9c95dc70ba2d91d419fe96d65bf766508",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-01",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "1f2c02bc56128da569f512df147187c3640dbb6b9143cb6cbc86e766d7589eaf",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "12491f977a71ff491708988726ea2552327d3afb2fa5de40ba55bd15140ef08f",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-01",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "counter": true,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "ce0fa056a91fc3663d42fc444376354db7a71b459378d798a5eb7d1714420f84",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "676cdcf62cc7b8ed2c472d88a34a497ea04463cb90702f1357a8b00e82ef539a",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-01",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "f86196e0c41dad9bb42f04a11adc04edb9641013369ccb81d7bf3ad297796666",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "3e70c9fc86048185819e581291789639dfd9b87c9ef55f0bf60ead50200820cd",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-02",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "517e7ff83b8dc22818b4f36f80aa69a62d0d4ee9e619106af504bfd48723b8c9",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "c5fb7274a047b8b4b280d189c8f2dc2f4dd77003d6be0220cfd8a09d896f799b",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-02",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": false,
+        "edit": false,
+        "counter": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "c6a12ea1664b7e7128e399026e04bd4aa4f4441b84ef92466abeb831446b19b2",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "bd201f0d6d552652c0af16676bf9758c24689b1d5c3fe9416d3ca4329d88db19",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-02",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "f86196e0c41dad9bb42f04a11adc04edb9641013369ccb81d7bf3ad297796666",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "13c22fb6da46733b9df05f65264eb4152cc88e0f86c13a92c525e0565953ba47",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-03",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "f45b81374e1c3f6c6e181daadd3ad4e1b9190c517d8fe69de605549a826524a4",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "aa9457a3634a14b6008e6751d9a6fb6d2a11cf6e1600b25b49f8750b75306aa0",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-03",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "toggle": false,
+        "toggleAll": false,
+        "edit": true,
+        "counter": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "b2d93a422ce0b305a9598b17bfea135371cf352c299f459ce354f3e816770ecb",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "de6ffc10c5ca5d39f8285e96d2378d01a34714ffaa8dcff1e7b5d564ca928fc3",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-03",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "f86196e0c41dad9bb42f04a11adc04edb9641013369ccb81d7bf3ad297796666",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "eb2acb488ce84e318f6d0f129f5393939384deee43ef95d227e62d1a07aca836",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-04",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "a6531aa46c2d1e56f67218edd556711e4dd7efea7642017ea3e7d63936c7f7d3",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "a187fe2d52acfa77064bfe0b70a0fbc521ac4aeda93df86036df6f4ffd83dc9b",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-04",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": false,
+        "counter": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "86cc1b1ae57df2bf3e393524d9d5c763f3c9e08c04d58971c8bdb8a82caaca30",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "7b4927636f55aff19bfa46b373005975162f93f1e6f26233db402397b3572efe",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-04",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "f86196e0c41dad9bb42f04a11adc04edb9641013369ccb81d7bf3ad297796666",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "52bc992c8d7e8b86997f870e29fffc449bb129f5a72daf6eac206a53e180f167",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-05",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "b0ff2edbb42627d175c30af15e76a4ad70c0ef50ae83d39d1926b1cc84e7145f",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "aa47c75e6ecd2668ade5c4e04acdaee284fe078b9557626faed2605a9eb2b362",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-05",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": false,
+        "edit": false,
+        "counter": false,
+        "clearCompleted": true,
+        "routing": false
+      },
+      "files_sha256": "d8fe579acb0e5e7ca92439bdd4a4151e57260782aee16fb16f007d265f1cca0f",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "5c3a7458c180002761e123405e5bb0fde1231afd87542c98c9af0eaeba821a7a",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-05",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "f86196e0c41dad9bb42f04a11adc04edb9641013369ccb81d7bf3ad297796666",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "e30df975db887f5e31a0e4114fc80a2725f5e981d56d2513fbac33486faf20fe",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-06",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "848293bc9f9df4be453e4b56dfd59c7e2ad6f3d5e2b79ac341b2ba9d1b43c44a",
+      "passed": true,
+      "official_tests": 10,
+      "report_sha256": "b5b4b1ef64b7ba720273b1420106dc76b1a73e1e08c2d528690844e82b1ce322",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-06",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": false,
+        "edit": false,
+        "counter": false,
+        "clearCompleted": false,
+        "routing": true
+      },
+      "files_sha256": "0b70ed00e19c2b9e17aa82e82928e744e6a3544519579310da3bdbc15e2c013e",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "d8bed72ca6aa57e9553e0a664632740cc166be2f6f56b81947e56338c3d9871c",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-06",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "f86196e0c41dad9bb42f04a11adc04edb9641013369ccb81d7bf3ad297796666",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "51e050b36ce502dd0202fa5a74deb4a051af69bca7d561317f658eedcff85604",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-07",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "561cae935a84c3dda10084984553fc091c0815a34538b7771762ffcc0f7ee3d6",
+      "passed": true,
+      "official_tests": 16,
+      "report_sha256": "a28a92f0c832bd8285c8b827c1f97409818771e300d1580f39d88f615b688895",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-07",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": false,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": false
+      },
+      "files_sha256": "ff04ccc69e764a746c1e6970c6571a70a787afd40736bc6137c53088ba4ae9fd",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "5fb16efd012c03fa291139870a4e68e3883085d3b7919b2ca723b9f3a0099811",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-07",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "f86196e0c41dad9bb42f04a11adc04edb9641013369ccb81d7bf3ad297796666",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "febf28d733184c870c356ad7902a249127cf72e9a1489b99bf2bce84992eb951",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-08",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "8698c2ab17e4922f6307d09f24dd97dc1e0912cbc932fff3ef4c0b2769af6118",
+      "passed": true,
+      "official_tests": 24,
+      "report_sha256": "6ef8fb516bffa522f7229f2fd348ff0cde859f8a5eb7763508a62ca7b5582ade",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-08",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "f86196e0c41dad9bb42f04a11adc04edb9641013369ccb81d7bf3ad297796666",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "99caef9da85dd68058bfc6d5d50d92a81a931d5ddd197652f7bd7df717f0104a",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-08",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "f86196e0c41dad9bb42f04a11adc04edb9641013369ccb81d7bf3ad297796666",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "99caef9da85dd68058bfc6d5d50d92a81a931d5ddd197652f7bd7df717f0104a",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-01",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "4432654157a9e94cc972ff726900be5b2c59329f9298188d758d7b7289525fd8",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "c472926ada82b3dc8ccd651ea5594af4f2e578de77e04aa9677607e4b05f06b2",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-01",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "enableCore": true,
+        "enableToggle": false,
+        "enableToggleAll": false,
+        "enableEdit": false,
+        "enableClearCompleted": false,
+        "enableRouting": false
+      },
+      "files_sha256": "9e8e0752812984db7ff9d7692a82b5de94a58aba3064f2ae179d574ddabd1f96",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "ebae0919ca17e3fc4e93d0688dc6eec02eafb8623d4e895c139503dee723a5a9",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-01",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "enableCore": true,
+        "enableToggle": true,
+        "enableToggleAll": true,
+        "enableEdit": true,
+        "enableClearCompleted": true,
+        "enableRouting": true
+      },
+      "files_sha256": "d7b7158037895dbd8e7e43f45fafd50d509073acdcb28b182096142ed9abde52",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "773bdd1b7b20a11bf3f115fef840fc0cc8d107169add36bc10067a887860a9df",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-02",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "a39b0af36a3f2175bcd56e77b2522cb674f0c4a234d49c816c686c457dd1bcfe",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "1264790620a41e413978c71b5da15833c690d01d8e37213e3ac71f1b30269c09",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-02",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "enableCore": true,
+        "enableToggle": true,
+        "enableToggleAll": false,
+        "enableEdit": false,
+        "enableClearCompleted": false,
+        "enableRouting": false
+      },
+      "files_sha256": "16ebb682b106c823e25affbe4f6e7a970c19f21c1deba1b25eed769a360476cb",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "239fae6c6c64bf18950650204b80078a69393a72166cb3f2a34ccc55a46aeadb",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-02",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "enableCore": true,
+        "enableToggle": true,
+        "enableToggleAll": true,
+        "enableEdit": true,
+        "enableClearCompleted": true,
+        "enableRouting": true
+      },
+      "files_sha256": "d7b7158037895dbd8e7e43f45fafd50d509073acdcb28b182096142ed9abde52",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "894f3f0d278bc56a3d826fd6313bf96de415fe8b3a0914bb417c970e65707365",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-03",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "e3c7a9f0185f51a0415f9a7017b6f81cc06ff38f5da68cf968955caeaacba6e6",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "0a480d8fa17a899060f4e4707c1196a7fb59e2f38812b891810e6a54bfb241c7",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-03",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "enableCore": true,
+        "enableToggle": false,
+        "enableToggleAll": false,
+        "enableEdit": true,
+        "enableClearCompleted": false,
+        "enableRouting": false
+      },
+      "files_sha256": "f613361873e3e214869a5535b43bafde118c9020b6e7bab2ddb46d97912f3f48",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "78a02a8a66790c4256611930be2d910daea95d2d585ab3f433c818c8bf57ed94",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-03",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "enableCore": true,
+        "enableToggle": true,
+        "enableToggleAll": true,
+        "enableEdit": true,
+        "enableClearCompleted": true,
+        "enableRouting": true
+      },
+      "files_sha256": "d7b7158037895dbd8e7e43f45fafd50d509073acdcb28b182096142ed9abde52",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "7cb7921a11503c02354be547b001367f1fab9c3103a3d18659ebbb0dabab09d5",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-04",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "e51604320201d62d8fcb03caf7301baf56b8b2c850ae7bfea69d02f2c7af1c4a",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "341a9bf4849bad50a6dc603c7c25a62483e19f74e27208e8952e5b154f8a1899",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-04",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "enableCore": true,
+        "enableToggle": true,
+        "enableToggleAll": true,
+        "enableEdit": false,
+        "enableClearCompleted": false,
+        "enableRouting": false
+      },
+      "files_sha256": "3ce52df182923aa49ebd4e601f26331ba18894b58cba32bdd3b88cd06e0c3c1f",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "bf6324d35be129e796843d61f3b98547e59148fdcbed0131989d133093f23915",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-04",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "enableCore": true,
+        "enableToggle": true,
+        "enableToggleAll": true,
+        "enableEdit": true,
+        "enableClearCompleted": true,
+        "enableRouting": true
+      },
+      "files_sha256": "d7b7158037895dbd8e7e43f45fafd50d509073acdcb28b182096142ed9abde52",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "9c09d4009570a8c2596af80318be1ce64afc25cd0a0130777d317d420631b62e",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-05",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "0471c20d352b1d1f407e5bce53a677b1f2456ce0c398fa85bf53f4340a14a75a",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "943abdfa9df5adc267d57477e30cc10b9f3873c6366612d7bfc102a7c1a37f82",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-05",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "enableCore": true,
+        "enableToggle": true,
+        "enableToggleAll": false,
+        "enableEdit": false,
+        "enableClearCompleted": true,
+        "enableRouting": false
+      },
+      "files_sha256": "8d10c17a6bdf30d5e86eb57f60354f7ae62db8441f874026aef3a9b1ba4c2cc6",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "77960f24552760a128bfc3d0abd0a4de03f043ee27bb79ee926a19c31befbd00",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-05",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "enableCore": true,
+        "enableToggle": true,
+        "enableToggleAll": true,
+        "enableEdit": true,
+        "enableClearCompleted": true,
+        "enableRouting": true
+      },
+      "files_sha256": "d7b7158037895dbd8e7e43f45fafd50d509073acdcb28b182096142ed9abde52",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "6e34c1a9568c81a0f3623b06dc4af4a52015c3512e877775e826ef895a9a1813",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-06",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "a56368ce7ed9e1a9644973393156c18bc305ba09d016242f50eb24983d995f78",
+      "passed": true,
+      "official_tests": 10,
+      "report_sha256": "9f760132a2cb9450cbf199b70ce440d02b55e3985769f135a5e538ba656ffc3d",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-06",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "enableCore": true,
+        "enableToggle": true,
+        "enableToggleAll": false,
+        "enableEdit": false,
+        "enableClearCompleted": false,
+        "enableRouting": true
+      },
+      "files_sha256": "63dc698126f7ac64dc8ee15879607bfd85108819f88020629907e7bd9dcc3ba9",
+      "passed": true,
+      "official_tests": 10,
+      "report_sha256": "ea1fcaebab9b1c40e625dafd62bd5756b4f6ab84b96801b7e0386600e69f40cb",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-06",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "enableCore": true,
+        "enableToggle": true,
+        "enableToggleAll": true,
+        "enableEdit": true,
+        "enableClearCompleted": true,
+        "enableRouting": true
+      },
+      "files_sha256": "d7b7158037895dbd8e7e43f45fafd50d509073acdcb28b182096142ed9abde52",
+      "passed": true,
+      "official_tests": 10,
+      "report_sha256": "a2e84e5bd4ab91e4bd67cb0eec2ef10aa4a44d196e93bcaf8b303ccf287840a1",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-07",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "b580fb0812318eff02655d755d4e558f435e6d46f1fcdda7a8fd25e27fc3fe11",
+      "passed": true,
+      "official_tests": 16,
+      "report_sha256": "ccd6136febcaa9be9845d6ef789d954041fcb28606ad39025755ba7fffeba598",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-07",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "enableCore": true,
+        "enableToggle": true,
+        "enableToggleAll": false,
+        "enableEdit": true,
+        "enableClearCompleted": true,
+        "enableRouting": false
+      },
+      "files_sha256": "ae209bb96e15bcb795b3d81df3178d50956dc853124fa42d700d81de03d01699",
+      "passed": true,
+      "official_tests": 16,
+      "report_sha256": "6dbdd69a16b7facc4045267d232ebdee5e3de14e18bbda79fb71fb6360a272f6",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-07",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "enableCore": true,
+        "enableToggle": true,
+        "enableToggleAll": true,
+        "enableEdit": true,
+        "enableClearCompleted": true,
+        "enableRouting": true
+      },
+      "files_sha256": "d7b7158037895dbd8e7e43f45fafd50d509073acdcb28b182096142ed9abde52",
+      "passed": true,
+      "official_tests": 16,
+      "report_sha256": "165acccd822ca83ecf4245654acb0b38ea6b3b9311d8d9b09aca262c5f5e59d0",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-08",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "46716d4faf31c020fc1571471be97a35cf6d047363aa04c366dd496d5e3cfdb7",
+      "passed": true,
+      "official_tests": 24,
+      "report_sha256": "17cc65315c9cfb61019731755e6cb8c6424cdccee90b110b9eff8783d87c5500",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-08",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "enableCore": true,
+        "enableToggle": true,
+        "enableToggleAll": true,
+        "enableEdit": true,
+        "enableClearCompleted": true,
+        "enableRouting": true
+      },
+      "files_sha256": "d7b7158037895dbd8e7e43f45fafd50d509073acdcb28b182096142ed9abde52",
+      "passed": true,
+      "official_tests": 24,
+      "report_sha256": "ba9ded1cd3644af902df4c43a4c45c0c139c1e4cb0935cadde887b4dbefe6bb1",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-08",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "enableCore": true,
+        "enableToggle": true,
+        "enableToggleAll": true,
+        "enableEdit": true,
+        "enableClearCompleted": true,
+        "enableRouting": true
+      },
+      "files_sha256": "d7b7158037895dbd8e7e43f45fafd50d509073acdcb28b182096142ed9abde52",
+      "passed": true,
+      "official_tests": 24,
+      "report_sha256": "ba9ded1cd3644af902df4c43a4c45c0c139c1e4cb0935cadde887b4dbefe6bb1",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-01",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "0998e1ef37e3e0c68718f1071b01d2ecf5d080ccee8dd2b375fca7a32c184648",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "80f97953d55954d4a6e2849ba028cd2e047c84f7229ac4d3b5924065f2a0035c",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-01",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "core": true,
+        "toggle": false,
+        "toggleAll": false,
+        "edit": false,
+        "counter": true,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "7ed1e5ace5d41593a61359db8afdfc76c3ebf970e11c9250a3e8b9a01b08f033",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "63a041d14b1a082ea0648cac937ea1317fd2e28665f2cb7b4e3e4431709f6d09",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-01",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "core": true,
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "05f6bf84763ec42953b658c09a5f3d4344ec248584e9912d4dc7849a55087fa4",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "0416a9bf30f66778bc01463078a0b0b2f0eb7d996a88afc818dfc92664b7f41e",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-02",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "9eece9cc51b1a832f7a5674faa429a5c80b52fb1fc7b112ad7e8a39512d0f260",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "77e3534f56d3cbfed355369fe7ec48495217c8c32d5e66d9f1bd8ee88b47cf98",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-02",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "core": true,
+        "toggle": true,
+        "toggleAll": false,
+        "edit": false,
+        "counter": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "f968e1ec614de945358627a3a818e4a93ccc30f378a5f93546f1c13ef8cde621",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "2fbf1edb11ecd384bc66f3189948ada992712f72e9c716286edd8f7881256cb0",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-02",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "core": true,
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "05f6bf84763ec42953b658c09a5f3d4344ec248584e9912d4dc7849a55087fa4",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "8750c6dd4aed77dcf990cace6791fb4e1793f9dce6eb8c520157567ae3483f6f",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-03",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "8d496c78400428e962fc3deb9a48e39804e987af4d82d2bf7229538b88fc487a",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "d62f5569a27b2d8b31780ae26a84bd7ab1c9a9010da615a778ff30d3a14efec8",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-03",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "core": true,
+        "toggle": false,
+        "toggleAll": false,
+        "edit": true,
+        "counter": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "990217302a50367e6125f8dca92b51dec47eee1180089ad3b31e1d400eb397b8",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "41e9fe52180b9b75e286f686f050d2caba222c371f2792f393964f735f0b7b3a",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-03",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "core": true,
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "05f6bf84763ec42953b658c09a5f3d4344ec248584e9912d4dc7849a55087fa4",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "16832fb94638f9b1c15f33be78514e9a07aef61bd1aaf840d622e585eeb78d2b",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-04",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "4eaab88e6799b1aeb95271223ddf99d8b2395de197687b168abd7da85db6dbcb",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "0d0285299db4f45b12fd24d91926e55b4650dbf2a21b8e4772ca756c12d08919",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-04",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "core": true,
+        "toggle": true,
+        "toggleAll": true,
+        "edit": false,
+        "counter": false,
+        "clearCompleted": false,
+        "routing": false
+      },
+      "files_sha256": "bdd51bc29fe1fd9ba6d256291f72bda6ec467cdcd04decc84bef9b34b4cfb844",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "57ab05e54b937f21275315f57177001e426a665bfa2f33dd26dfa218add5f79f",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-04",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "core": true,
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "05f6bf84763ec42953b658c09a5f3d4344ec248584e9912d4dc7849a55087fa4",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "c0330c9523768c1902ee00e525facc11cd223df5219a60ae84eb842c09b6f020",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-05",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "472565fae9f6e2e12e58c7e2df07f57e13bc9144898c14b0d7443478d559bd83",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "fe2799d779f2522a89863d85d59b7bf8432e89a6a0b76048e2e5dd8d72f99313",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-05",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "core": true,
+        "toggle": true,
+        "toggleAll": false,
+        "edit": false,
+        "counter": false,
+        "clearCompleted": true,
+        "routing": false
+      },
+      "files_sha256": "fc3c38eaf118244cfea03721a7fdd92174f9fd334244de1efefa23f0b75715ec",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "b3b205164d5c2b45483c9a8762a25b1ca88339f017b21c098469aab3cfed49b0",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-05",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "core": true,
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "05f6bf84763ec42953b658c09a5f3d4344ec248584e9912d4dc7849a55087fa4",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "491d3f7daa2d94b19a971d92eb177f6d7fb479e9d14cb281254b9dfe0e276b16",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-06",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "4eaab88e6799b1aeb95271223ddf99d8b2395de197687b168abd7da85db6dbcb",
+      "passed": true,
+      "official_tests": 10,
+      "report_sha256": "b0a023fa30aacb263dbc58713b974fda8ed8de680aeaa15d9ebdf66a0811446f",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-06",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "core": true,
+        "toggle": true,
+        "toggleAll": false,
+        "edit": false,
+        "counter": false,
+        "clearCompleted": false,
+        "routing": true
+      },
+      "files_sha256": "fe7bbe543e88a2e8052aa38da4393e9d24d00747d17bbec62dc28a4d4cacf756",
+      "passed": true,
+      "official_tests": 10,
+      "report_sha256": "e00e38c042dffe4a0d352592981c6ed48ca403ba56b477a85e6e5036eb4e9666",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-06",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "core": true,
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "05f6bf84763ec42953b658c09a5f3d4344ec248584e9912d4dc7849a55087fa4",
+      "passed": true,
+      "official_tests": 10,
+      "report_sha256": "0911c199e5bfc0a9a42e759e2ac60c489d25a00e1b028346f4809163031dcc0f",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-07",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "ff1f6be364197fda06ccb071bc3b81d043ce91d5ab64f462a5c02edaa14c2992",
+      "passed": true,
+      "official_tests": 16,
+      "report_sha256": "fa21a92b133f0c922bece7b3d851db5337887b08b92364db99c92111e0c8d9a0",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-07",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "core": true,
+        "toggle": true,
+        "toggleAll": false,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": false
+      },
+      "files_sha256": "903d5245f22d986298e843f04f84fea666850b1d086595838dd9966f2bd476bb",
+      "passed": true,
+      "official_tests": 16,
+      "report_sha256": "1e738afed99730fe15bfbc7f1884622ae63056609eed4860c040e197b1d2af0e",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-07",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "core": true,
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "05f6bf84763ec42953b658c09a5f3d4344ec248584e9912d4dc7849a55087fa4",
+      "passed": true,
+      "official_tests": 16,
+      "report_sha256": "c9550923ccbf99193c381a9cb4a27770a1477e617fd0161f9fbcc93c73e30d75",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-08",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "c43830a8c246099c4a32e644e9edadc20bb639171ee9ab52339c969bff5f8b8a",
+      "passed": true,
+      "official_tests": 24,
+      "report_sha256": "d1158f92065a9152b296c673b9137ce33f7ca7743752781961995d8c61ee2b51",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-08",
+      "arm": "bound",
+      "status": "valid",
+      "plan": {
+        "core": true,
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "05f6bf84763ec42953b658c09a5f3d4344ec248584e9912d4dc7849a55087fa4",
+      "passed": true,
+      "official_tests": 24,
+      "report_sha256": "f1902d7bdbb9cb1d5e878ddbf0e8c91365aec2bf5e1c0052082b6c221981bfd0",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-08",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "core": true,
+        "toggle": true,
+        "toggleAll": true,
+        "edit": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true
+      },
+      "files_sha256": "05f6bf84763ec42953b658c09a5f3d4344ec248584e9912d4dc7849a55087fa4",
+      "passed": true,
+      "official_tests": 24,
+      "report_sha256": "f1902d7bdbb9cb1d5e878ddbf0e8c91365aec2bf5e1c0052082b6c221981bfd0",
+      "score_source": "new browser replay"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-01",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "d7786b5bf65e2f6f26865e16c88ba8833a1804fad382c947f3f2a381ddc21ed7",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "3b8b6719d299b57a02f6ee45bc577f1b88670d8dff37d8d135e00289c47d0177",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-01",
+      "arm": "bound",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-01",
+      "arm": "fixed",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-02",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "cad7907af76a72aa967445a0d24cab9131ecc0b2b7edffbd2044193d4f11be49",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "e90b3fbd78117dc0e3dbf5b02fc93133106428dbbffc698eefbb00e813281912",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-02",
+      "arm": "bound",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-02",
+      "arm": "fixed",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-03",
+      "arm": "direct",
+      "status": "invalid",
+      "reason": "No parseable controller assignment",
+      "passed": false
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-03",
+      "arm": "bound",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-03",
+      "arm": "fixed",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-04",
+      "arm": "direct",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-04",
+      "arm": "bound",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-04",
+      "arm": "fixed",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-05",
+      "arm": "direct",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-05",
+      "arm": "bound",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-05",
+      "arm": "fixed",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-06",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "15fa7450acce73ce9ad6607b3703a9bcacd4c99fa021f987099053510157056c",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "6b7daf8c92694b37c9098f0fdeda4f59cfb77eb773521b0538732404070a4338",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-06",
+      "arm": "bound",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-06",
+      "arm": "fixed",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-07",
+      "arm": "direct",
+      "status": "valid",
+      "files_sha256": "4b494cd83c2371f266ee0cec2b5e52bffcee5c07dfe3e3bec245f5388859e074",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "ab4e7e0395c88c8d2345e45677822f3addaad4c671b5b3857c6c84869da46adb",
+      "score_source": "same-source historical replay"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-07",
+      "arm": "bound",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-07",
+      "arm": "fixed",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-08",
+      "arm": "direct",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-08",
+      "arm": "bound",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-08",
+      "arm": "fixed",
+      "status": "invalid",
+      "reason": "Empty source",
+      "passed": false
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-01",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-01",
+      "arm": "strict_self",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-02",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-02",
+      "arm": "strict_self",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-03",
+      "arm": "strict_direct",
+      "passed": false,
+      "status": "invalid"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-03",
+      "arm": "strict_self",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-04",
+      "arm": "strict_direct",
+      "passed": false,
+      "status": "invalid"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-04",
+      "arm": "strict_self",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-05",
+      "arm": "strict_direct",
+      "passed": false,
+      "status": "invalid"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-05",
+      "arm": "strict_self",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-06",
+      "arm": "strict_direct",
+      "passed": false,
+      "status": "invalid"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-06",
+      "arm": "strict_self",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-07",
+      "arm": "strict_direct",
+      "passed": false,
+      "status": "invalid"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-07",
+      "arm": "strict_self",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-08",
+      "arm": "strict_direct",
+      "passed": false,
+      "status": "invalid"
+    },
+    {
+      "tag": "deepseek-flash",
+      "model": "deepseek/deepseek-v4-flash",
+      "task": "todo-08",
+      "arm": "strict_self",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-01",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-01",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-02",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-02",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-03",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-03",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-04",
+      "arm": "strict_direct",
+      "passed": false,
+      "status": "valid"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-04",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-05",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-05",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-06",
+      "arm": "strict_direct",
+      "passed": false,
+      "status": "valid"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-06",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-07",
+      "arm": "strict_direct",
+      "passed": false,
+      "status": "valid"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-07",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-08",
+      "arm": "strict_direct",
+      "passed": false,
+      "status": "valid"
+    },
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "task": "todo-08",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-01",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-01",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-02",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-02",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-03",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-03",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-04",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-04",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-05",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-05",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-06",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-06",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-07",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-07",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-08",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "task": "todo-08",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-01",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-01",
+      "arm": "strict_self",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-02",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-02",
+      "arm": "strict_self",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-03",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-03",
+      "arm": "strict_self",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-04",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-04",
+      "arm": "strict_self",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-05",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-05",
+      "arm": "strict_self",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-06",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-06",
+      "arm": "strict_self",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-07",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-07",
+      "arm": "strict_self",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-08",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "task": "todo-08",
+      "arm": "strict_self",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-01",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-01",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-02",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-02",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-03",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-03",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-04",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-04",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-05",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-05",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-06",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-06",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-07",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-07",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-08",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "task": "todo-08",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-01",
+      "arm": "strict_direct",
+      "passed": false,
+      "status": "valid"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-01",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-02",
+      "arm": "strict_direct",
+      "passed": true,
+      "status": "valid"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-02",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-03",
+      "arm": "strict_direct",
+      "passed": false,
+      "status": "invalid"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-03",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-04",
+      "arm": "strict_direct",
+      "passed": false,
+      "status": "invalid"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-04",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-05",
+      "arm": "strict_direct",
+      "passed": false,
+      "status": "invalid"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-05",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-06",
+      "arm": "strict_direct",
+      "passed": false,
+      "status": "valid"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-06",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-07",
+      "arm": "strict_direct",
+      "passed": false,
+      "status": "valid"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-07",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-08",
+      "arm": "strict_direct",
+      "passed": false,
+      "status": "invalid"
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "task": "todo-08",
+      "arm": "strict_self",
+      "passed": false,
+      "status": "build_failed"
+    }
+  ],
+  "paired": {
+    "deepseek-flash": {
+      "targets": [
+        "todo-01",
+        "todo-02",
+        "todo-03",
+        "todo-04",
+        "todo-05",
+        "todo-06",
+        "todo-07",
+        "todo-08"
+      ],
+      "passed": {
+        "direct": [
+          "todo-01",
+          "todo-02"
+        ],
+        "bound": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "fixed": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "strict_self": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "strict_direct": [
+          "todo-01",
+          "todo-02"
+        ]
+      },
+      "bound_only_vs_direct": [
+        "todo-03",
+        "todo-04",
+        "todo-05",
+        "todo-06",
+        "todo-07",
+        "todo-08"
+      ],
+      "direct_only_vs_bound": []
+    },
+    "gemma": {
+      "targets": [
+        "todo-01",
+        "todo-02",
+        "todo-03",
+        "todo-04",
+        "todo-05",
+        "todo-06",
+        "todo-07",
+        "todo-08"
+      ],
+      "passed": {
+        "direct": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-05"
+        ],
+        "bound": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-05",
+          "todo-06",
+          "todo-07"
+        ],
+        "fixed": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-05",
+          "todo-06",
+          "todo-07"
+        ],
+        "strict_self": [],
+        "strict_direct": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-05"
+        ]
+      },
+      "bound_only_vs_direct": [
+        "todo-06",
+        "todo-07"
+      ],
+      "direct_only_vs_bound": []
+    },
+    "mistral": {
+      "targets": [
+        "todo-01",
+        "todo-02",
+        "todo-03",
+        "todo-04",
+        "todo-05",
+        "todo-06",
+        "todo-07",
+        "todo-08"
+      ],
+      "passed": {
+        "direct": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "bound": [
+          "todo-01"
+        ],
+        "fixed": [
+          "todo-01"
+        ],
+        "strict_self": [],
+        "strict_direct": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ]
+      },
+      "bound_only_vs_direct": [],
+      "direct_only_vs_bound": [
+        "todo-02",
+        "todo-03",
+        "todo-04",
+        "todo-05",
+        "todo-06",
+        "todo-07",
+        "todo-08"
+      ]
+    },
+    "oss": {
+      "targets": [
+        "todo-01",
+        "todo-02",
+        "todo-03",
+        "todo-04",
+        "todo-05",
+        "todo-06",
+        "todo-07",
+        "todo-08"
+      ],
+      "passed": {
+        "direct": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "bound": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "fixed": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "strict_self": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "strict_direct": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ]
+      },
+      "bound_only_vs_direct": [],
+      "direct_only_vs_bound": []
+    },
+    "qwen": {
+      "targets": [
+        "todo-01",
+        "todo-02",
+        "todo-03",
+        "todo-04",
+        "todo-05",
+        "todo-06",
+        "todo-07",
+        "todo-08"
+      ],
+      "passed": {
+        "direct": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "bound": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "fixed": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "strict_self": [],
+        "strict_direct": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ]
+      },
+      "bound_only_vs_direct": [],
+      "direct_only_vs_bound": []
+    },
+    "qwen9": {
+      "targets": [
+        "todo-01",
+        "todo-02",
+        "todo-03",
+        "todo-04",
+        "todo-05",
+        "todo-06",
+        "todo-07",
+        "todo-08"
+      ],
+      "passed": {
+        "direct": [
+          "todo-02"
+        ],
+        "bound": [],
+        "fixed": [],
+        "strict_self": [],
+        "strict_direct": [
+          "todo-02"
+        ]
+      },
+      "bound_only_vs_direct": [],
+      "direct_only_vs_bound": [
+        "todo-02"
+      ]
+    }
+  }
+}

@@ -157,7 +157,7 @@ def table_head(title, groups):
     return lines + ["".join(rules)]
 
 
-def render_matrix(matrix, followups=()):
+def render_matrix(matrix, followups=(), replays=None):
     lines = [
         r"\begin{table*}[!t]",
         r"\centering",
@@ -192,6 +192,9 @@ def render_matrix(matrix, followups=()):
         ("TodoMVC (supplied)", ["Direct", "Human"]),
         ("Files (supplied)", ["Edit", "Human"]),
     ]
+    if replays:
+        groups[0] = ("TodoMVC", ["Direct", "Human", "Self", "Bind"])
+        groups.insert(2, ("Duo (replay)", [r"Direct$^*$", "Bind"]))
     lines += table_head("B. Feature subsets, feature pairs and supplied-library studies", groups)
     lines += [
         "Target generator & " + " & ".join(name for _, cols in groups for name in cols) + r" \\",
@@ -207,6 +210,23 @@ def render_matrix(matrix, followups=()):
                 ("supplied", "dom1", ["direct", "human"]),
             )
         ]
+        if replays:
+            suite = replays.get(m, {})
+            todo, arms = series[0]
+            if suite:
+                for index, key in ((0, "todomvc"), (1, "duo")):
+                    original = series[index][0]
+                    recovered = suite[key]
+                    assert original["targets"] == recovered["targets"]
+                    assert original["passed"]["direct"] == recovered["passed"]["strict_direct"]
+                    assert original["passed"]["self"] == recovered["passed"]["strict_self"]
+                assert suite["todomvc"]["passed"]["direct"] == todo["passed"]["direct"]
+                todo = {**todo, "passed": {**todo["passed"], "bound": suite["todomvc"]["passed"]["bound"]}}
+            series[0] = (todo, [*arms, "bound"])
+            replay = suite.get("duo", {})
+            if replay:
+                replay = {**replay, "passed": {k: replay["passed"][k] for k in ("direct", "bound")}}
+            series.insert(2, (replay, ["direct", "bound"]))
         if any(group for group, _ in series):
             lines += [
                 " & ".join([label, *(s for group, arms in series for s in values(group, arms))]) + r" \\"
@@ -250,7 +270,9 @@ def render_matrix(matrix, followups=()):
     lines += [
         r"\begin{minipage}{\textwidth}\footnotesize\raggedright "
         r"Human uses supplied components. GPT-5 denotes a frozen GPT-5 library. Self uses the row model for construction and deployment. "
-        r"A schedules twenty tasks per project. Five routes returned HTTP 403. B uses eight TodoMVC subsets and ten Duo pairs. Supplied TodoMVC samples each subset twice. Edit updates the prior file-explorer page. "
+        r"A schedules twenty tasks per project. B uses eight TodoMVC subsets and ten Duo pairs. "
+        + (r"Bind uses rules on archived code. Each delivered TodoMVC controller matches its fixed page on all eight targets. Duo Direct$^*$ allows an export repair. " if replays else "")
+        + r"Supplied TodoMVC samples each subset twice. Edit updates the previous page. "
         r"C names the generator above each column group. Sonnet denotes Claude Sonnet 4.5."
         + (r" In D, each row shares its own Direct baseline. Native constrains configuration output. Qwen3.5-9B also disables extra reasoning. Fixed reuses the first example." if followups else "")
         + r"\end{minipage}",
@@ -261,4 +283,5 @@ def render_matrix(matrix, followups=()):
 
 if __name__ == "__main__":
     from studies.public_library_transfer.self_replication.paper import rows
-    print(render_matrix(read(ROOT / "studies/results/paper-performance-matrix.json"), rows()), end="")
+    from studies.public_library_transfer.self_refinement.suite_comparisons import evidence
+    print(render_matrix(read(ROOT / "studies/results/paper-performance-matrix.json"), rows(), evidence()["models"]), end="")

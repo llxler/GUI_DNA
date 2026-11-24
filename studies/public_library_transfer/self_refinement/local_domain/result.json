@@ -1,0 +1,1925 @@
+{
+  "project": "calculator",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "targets": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "protocol": "Domain-scaffolded local Self; fresh raw HTML direct; fixed endpoints and fixed components",
+  "generation_sources_sha256": {
+    "studies/public_library_transfer/self_refinement/local_domain/run.py": "19dbcc1e9235a56624b887321938528af8902fca4ab3bd9d0fb04dad381357ae",
+    "studies/public_library_transfer/self_refinement/local_domain/templates.py": "664a2776968b5f533487d38c8a75dcd33162efe4db90c3e78f3aae228db33437",
+    "studies/public_library_transfer/self_refinement/local_domain/PROTOCOL.md": "6bcac34118b14c9afd8fbfea830f7227d0b087e0ab9a3a5b5f1ae2bd16eae54a",
+    "studies/public_library_transfer/core.py": "f79d8318b1064eae22fd10771e26482f3dd7f282fe43a1763eaa292153718e65",
+    "studies/schema_constrained_table/generate.py": "3ae8c4227a58970ee925bc8fae0f4ceccf6bee814b0ee49c4e76a53f4e3b359e",
+    "studies/public_library_transfer/browser.py": "fc86233c04e6f2ccc93aa67c6a150ea313d28ba759d8d2db1512c7e45f4e8e3d"
+  },
+  "probe_sources_sha256": {
+    "studies/public_library_transfer/self_refinement/local_domain/PROBE.md": "e551dedc6b2b5b5dc17e656c759592af10ce3a35cbd90bdf34dac0419d09f713",
+    "studies/public_library_transfer/self_refinement/local_domain/probe.py": "131c23a61c7a7abbde42fd8f88865a5bb83c746ae89c6c38d4110aa82e6e8d87"
+  },
+  "evidence_sha256": {
+    "artifacts/self-local-calculator-20261124/generation-seal.json": "504d51e456b9900ea200f21e6d8fd84ecfe0629d43c0b4c15bb5a84c9577735a",
+    "artifacts/self-local-calculator-20261124/registered.json": "4e1fd1bce3dd8c508ddcf81d48251e1774eecc841ec3d128ae8bdd0dddf11dd2",
+    "artifacts/self-local-calculator-20261124/environment.json": "f9838f97c68fbeabd3b85679dbe2520d21e432bab649121d6e11d43ace23e8bb",
+    "artifacts/self-local-calculator-20261124/scores.json": "010579004ea7ebe678ceafe08d5bd8ca381b83c82ef0f6b0157fcf5cdf5ba442",
+    "artifacts/self-local-calculator-20261124/probe/registered.json": "6ee4aea02daf4e4857cf4b90d3a379823a302ceec7e297e580250909302d9cdd",
+    "artifacts/self-local-calculator-20261124/probe/scores.json": "21d039c01187a1e8a57baae053403e77ff4bfe75947d779313898be890c7344e"
+  },
+  "accounting": {
+    "remote_calls": 0,
+    "api_usd": 0,
+    "weight_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "build": {
+      "requests": 36,
+      "input_tokens": 12646,
+      "output_tokens": 4345
+    },
+    "direct": {
+      "requests": 20,
+      "input_tokens": 20060,
+      "output_tokens": 28391
+    },
+    "plan": {
+      "requests": 0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    }
+  },
+  "library_properties": {
+    "A": {
+      "axis": null,
+      "admitted": false,
+      "labels": [
+        "sqrt",
+        "^2",
+        "√",
+        "1/x",
+        "sin",
+        "π",
+        "basic",
+        "scientific",
+        "MC"
+      ],
+      "valid_expressions": [
+        "sqrt",
+        "^2",
+        "√",
+        "1/x",
+        "sin",
+        "π",
+        "scientific",
+        "MC"
+      ],
+      "admitted_panels": [
+        false,
+        true
+      ],
+      "endpoint_load_errors": {},
+      "different_public_probes": null,
+      "component_probe": {
+        "null": {
+          "before": "4",
+          "after": "4",
+          "errors": []
+        },
+        "\"sqrt\"": {
+          "before": "4",
+          "after": "4",
+          "errors": [
+            "ReferenceError: newButtonLabel is not defined"
+          ]
+        },
+        "\"^2\"": {
+          "before": "4",
+          "after": "4",
+          "errors": [
+            "ReferenceError: Button is not defined"
+          ]
+        },
+        "\"√\"": {
+          "before": "4",
+          "after": "4",
+          "errors": [
+            "ReferenceError: Button is not defined"
+          ]
+        },
+        "\"1/x\"": {
+          "before": "4",
+          "after": "4",
+          "errors": [
+            "ReferenceError: newButtonLabel is not defined"
+          ]
+        },
+        "\"sin\"": {
+          "before": "4",
+          "after": "4",
+          "errors": [
+            "ReferenceError: addButton is not defined"
+          ]
+        },
+        "\"π\"": {
+          "before": "4",
+          "after": "sin() + π",
+          "errors": []
+        },
+        "\"basic\"": {
+          "before": "4",
+          "after": "4",
+          "errors": []
+        },
+        "\"scientific\"": {
+          "before": "4",
+          "after": "n => document.getElementById('memory').textContent = `${n}`",
+          "errors": []
+        },
+        "\"MC\"": {
+          "before": "4",
+          "after": "40",
+          "errors": []
+        }
+      }
+    },
+    "B": {
+      "axis": null,
+      "admitted": false,
+      "labels": [
+        "√",
+        "1/x",
+        "sin",
+        "π",
+        "basic",
+        "MC"
+      ],
+      "valid_expressions": [
+        "1/x",
+        "sin",
+        "π",
+        "MC"
+      ],
+      "admitted_panels": [
+        false,
+        false
+      ],
+      "endpoint_load_errors": {},
+      "different_public_probes": null,
+      "component_probe": {
+        "null": {
+          "before": "4",
+          "after": "4",
+          "errors": []
+        },
+        "\"√\"": {
+          "before": "4",
+          "after": "4",
+          "errors": []
+        },
+        "\"1/x\"": {
+          "before": "4",
+          "after": "4",
+          "errors": [
+            "ReferenceError: newButtonLabel is not defined"
+          ]
+        },
+        "\"sin\"": {
+          "before": "4",
+          "after": "4",
+          "errors": [
+            "ReferenceError: addButton is not defined"
+          ]
+        },
+        "\"π\"": {
+          "before": "4",
+          "after": "sin() + 'π';",
+          "errors": []
+        },
+        "\"basic\"": {
+          "before": "4",
+          "after": "4",
+          "errors": []
+        },
+        "\"MC\"": {
+          "before": "4",
+          "after": "3",
+          "errors": []
+        }
+      }
+    }
+  },
+  "summary": {
+    "direct": {
+      "passed": [],
+      "delivered": 10
+    },
+    "builds": {
+      "A": {
+        "passed": {
+          "self": [],
+          "fixed-A": [],
+          "fixed-B": [],
+          "fixed-components": []
+        },
+        "selected": {},
+        "only_self": [],
+        "only_direct": [],
+        "both": [],
+        "neither": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      "B": {
+        "passed": {
+          "self": [],
+          "fixed-A": [],
+          "fixed-B": [],
+          "fixed-components": []
+        },
+        "selected": {},
+        "only_self": [],
+        "only_direct": [],
+        "both": [],
+        "neither": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      }
+    }
+  },
+  "target_rows": [
+    {
+      "task": 1,
+      "arm": "fixed-A",
+      "rep": "A",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 1,
+      "arm": "fixed-B",
+      "rep": "A",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 1,
+      "arm": "self",
+      "rep": "A",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 2,
+      "arm": "fixed-A",
+      "rep": "A",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 2,
+      "arm": "fixed-B",
+      "rep": "A",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 2,
+      "arm": "self",
+      "rep": "A",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 3,
+      "arm": "fixed-A",
+      "rep": "A",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 3,
+      "arm": "fixed-B",
+      "rep": "A",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 3,
+      "arm": "self",
+      "rep": "A",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 4,
+      "arm": "fixed-A",
+      "rep": "A",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 4,
+      "arm": "fixed-B",
+      "rep": "A",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 4,
+      "arm": "self",
+      "rep": "A",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 5,
+      "arm": "fixed-A",
+      "rep": "A",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 5,
+      "arm": "fixed-B",
+      "rep": "A",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 5,
+      "arm": "self",
+      "rep": "A",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 6,
+      "arm": "fixed-A",
+      "rep": "A",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 6,
+      "arm": "fixed-B",
+      "rep": "A",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 6,
+      "arm": "self",
+      "rep": "A",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 7,
+      "arm": "fixed-A",
+      "rep": "A",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 7,
+      "arm": "fixed-B",
+      "rep": "A",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 7,
+      "arm": "self",
+      "rep": "A",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 8,
+      "arm": "fixed-A",
+      "rep": "A",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 8,
+      "arm": "fixed-B",
+      "rep": "A",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 8,
+      "arm": "self",
+      "rep": "A",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 9,
+      "arm": "fixed-A",
+      "rep": "A",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 9,
+      "arm": "fixed-B",
+      "rep": "A",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 9,
+      "arm": "self",
+      "rep": "A",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 10,
+      "arm": "fixed-A",
+      "rep": "A",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 10,
+      "arm": "fixed-B",
+      "rep": "A",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 10,
+      "arm": "self",
+      "rep": "A",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 11,
+      "arm": "fixed-A",
+      "rep": "A",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 11,
+      "arm": "fixed-B",
+      "rep": "A",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 11,
+      "arm": "self",
+      "rep": "A",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 12,
+      "arm": "fixed-A",
+      "rep": "A",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 12,
+      "arm": "fixed-B",
+      "rep": "A",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 12,
+      "arm": "self",
+      "rep": "A",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 13,
+      "arm": "fixed-A",
+      "rep": "A",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 13,
+      "arm": "fixed-B",
+      "rep": "A",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 13,
+      "arm": "self",
+      "rep": "A",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 14,
+      "arm": "fixed-A",
+      "rep": "A",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 14,
+      "arm": "fixed-B",
+      "rep": "A",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 14,
+      "arm": "self",
+      "rep": "A",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 15,
+      "arm": "fixed-A",
+      "rep": "A",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 15,
+      "arm": "fixed-B",
+      "rep": "A",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 15,
+      "arm": "self",
+      "rep": "A",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 16,
+      "arm": "fixed-A",
+      "rep": "A",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 16,
+      "arm": "fixed-B",
+      "rep": "A",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 16,
+      "arm": "self",
+      "rep": "A",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 17,
+      "arm": "fixed-A",
+      "rep": "A",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 17,
+      "arm": "fixed-B",
+      "rep": "A",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 17,
+      "arm": "self",
+      "rep": "A",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 18,
+      "arm": "fixed-A",
+      "rep": "A",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 18,
+      "arm": "fixed-B",
+      "rep": "A",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 18,
+      "arm": "self",
+      "rep": "A",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 19,
+      "arm": "fixed-A",
+      "rep": "A",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 19,
+      "arm": "fixed-B",
+      "rep": "A",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 19,
+      "arm": "self",
+      "rep": "A",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 20,
+      "arm": "fixed-A",
+      "rep": "A",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 20,
+      "arm": "fixed-B",
+      "rep": "A",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 20,
+      "arm": "self",
+      "rep": "A",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 1,
+      "arm": "fixed-A",
+      "rep": "B",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 1,
+      "arm": "fixed-B",
+      "rep": "B",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 1,
+      "arm": "self",
+      "rep": "B",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 2,
+      "arm": "fixed-A",
+      "rep": "B",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 2,
+      "arm": "fixed-B",
+      "rep": "B",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 2,
+      "arm": "self",
+      "rep": "B",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 3,
+      "arm": "fixed-A",
+      "rep": "B",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 3,
+      "arm": "fixed-B",
+      "rep": "B",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 3,
+      "arm": "self",
+      "rep": "B",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 4,
+      "arm": "fixed-A",
+      "rep": "B",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 4,
+      "arm": "fixed-B",
+      "rep": "B",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 4,
+      "arm": "self",
+      "rep": "B",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 5,
+      "arm": "fixed-A",
+      "rep": "B",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 5,
+      "arm": "fixed-B",
+      "rep": "B",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 5,
+      "arm": "self",
+      "rep": "B",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 6,
+      "arm": "fixed-A",
+      "rep": "B",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 6,
+      "arm": "fixed-B",
+      "rep": "B",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 6,
+      "arm": "self",
+      "rep": "B",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 7,
+      "arm": "fixed-A",
+      "rep": "B",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 7,
+      "arm": "fixed-B",
+      "rep": "B",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 7,
+      "arm": "self",
+      "rep": "B",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 8,
+      "arm": "fixed-A",
+      "rep": "B",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 8,
+      "arm": "fixed-B",
+      "rep": "B",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 8,
+      "arm": "self",
+      "rep": "B",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 9,
+      "arm": "fixed-A",
+      "rep": "B",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 9,
+      "arm": "fixed-B",
+      "rep": "B",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 9,
+      "arm": "self",
+      "rep": "B",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 10,
+      "arm": "fixed-A",
+      "rep": "B",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 10,
+      "arm": "fixed-B",
+      "rep": "B",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 10,
+      "arm": "self",
+      "rep": "B",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 11,
+      "arm": "fixed-A",
+      "rep": "B",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 11,
+      "arm": "fixed-B",
+      "rep": "B",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 11,
+      "arm": "self",
+      "rep": "B",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 12,
+      "arm": "fixed-A",
+      "rep": "B",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 12,
+      "arm": "fixed-B",
+      "rep": "B",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 12,
+      "arm": "self",
+      "rep": "B",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 13,
+      "arm": "fixed-A",
+      "rep": "B",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 13,
+      "arm": "fixed-B",
+      "rep": "B",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 13,
+      "arm": "self",
+      "rep": "B",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 14,
+      "arm": "fixed-A",
+      "rep": "B",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 14,
+      "arm": "fixed-B",
+      "rep": "B",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 14,
+      "arm": "self",
+      "rep": "B",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 15,
+      "arm": "fixed-A",
+      "rep": "B",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 15,
+      "arm": "fixed-B",
+      "rep": "B",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 15,
+      "arm": "self",
+      "rep": "B",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 16,
+      "arm": "fixed-A",
+      "rep": "B",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 16,
+      "arm": "fixed-B",
+      "rep": "B",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 16,
+      "arm": "self",
+      "rep": "B",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 17,
+      "arm": "fixed-A",
+      "rep": "B",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 17,
+      "arm": "fixed-B",
+      "rep": "B",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 17,
+      "arm": "self",
+      "rep": "B",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 18,
+      "arm": "fixed-A",
+      "rep": "B",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 18,
+      "arm": "fixed-B",
+      "rep": "B",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 18,
+      "arm": "self",
+      "rep": "B",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 19,
+      "arm": "fixed-A",
+      "rep": "B",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 19,
+      "arm": "fixed-B",
+      "rep": "B",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 19,
+      "arm": "self",
+      "rep": "B",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 20,
+      "arm": "fixed-A",
+      "rep": "B",
+      "setting": "A",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 20,
+      "arm": "fixed-B",
+      "rep": "B",
+      "setting": "B",
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 20,
+      "arm": "self",
+      "rep": "B",
+      "setting": null,
+      "status": "build_failed",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 1,
+      "arm": "direct",
+      "rep": null,
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "0d309590d0c783ddac27b9ff8673faebe62884fa65a77f04647a19c4f622befa"
+    },
+    {
+      "task": 2,
+      "arm": "direct",
+      "rep": null,
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "4eb71ba87052d6efa4b8d162748f1940a65b42dde2d8e6df93bddb94c217e16d"
+    },
+    {
+      "task": 3,
+      "arm": "direct",
+      "rep": null,
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "ec4d0699adb36c645b530c79a8419e77b1e23284c3556f6d98ed92c08e86a5c9"
+    },
+    {
+      "task": 4,
+      "arm": "direct",
+      "rep": null,
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "1f08c298c61ab240b21e0e1a8c1d8f47b5247b1c2588dc6bc5d897524a353648"
+    },
+    {
+      "task": 5,
+      "arm": "direct",
+      "rep": null,
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "67cc536ffcee6b50847d52e58b8812077a2f77b931ac5dddbb4142a2bde49b1b"
+    },
+    {
+      "task": 6,
+      "arm": "direct",
+      "rep": null,
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "49cdfacada75f7235d10252e4da9abe8259c685112148fe6793435e7ca090ef3"
+    },
+    {
+      "task": 7,
+      "arm": "direct",
+      "rep": null,
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "f5fe430a2c7fc83af548414cc6afdd0bd4fe437014c6e0d9fc56348a2ce3f9f5"
+    },
+    {
+      "task": 8,
+      "arm": "direct",
+      "rep": null,
+      "setting": null,
+      "status": "invalid",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 9,
+      "arm": "direct",
+      "rep": null,
+      "setting": null,
+      "status": "invalid",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 10,
+      "arm": "direct",
+      "rep": null,
+      "setting": null,
+      "status": "invalid",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 11,
+      "arm": "direct",
+      "rep": null,
+      "setting": null,
+      "status": "invalid",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 12,
+      "arm": "direct",
+      "rep": null,
+      "setting": null,
+      "status": "invalid",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 13,
+      "arm": "direct",
+      "rep": null,
+      "setting": null,
+      "status": "invalid",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 14,
+      "arm": "direct",
+      "rep": null,
+      "setting": null,
+      "status": "invalid",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 15,
+      "arm": "direct",
+      "rep": null,
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "341888a19ba807b31d70692c58db5412ed1adec82199d07d70abbd5c495e76f7"
+    },
+    {
+      "task": 16,
+      "arm": "direct",
+      "rep": null,
+      "setting": null,
+      "status": "invalid",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 17,
+      "arm": "direct",
+      "rep": null,
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "226aee13fbcade203e49c99ba1d38f2004560e3b147ce2e2b32ea381d96b8174"
+    },
+    {
+      "task": 18,
+      "arm": "direct",
+      "rep": null,
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "6d27d3afb8d49f505f99ee91d4e02b12419e05eca5b1e51f2faa929ac76d04bb"
+    },
+    {
+      "task": 19,
+      "arm": "direct",
+      "rep": null,
+      "setting": null,
+      "status": "invalid",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 20,
+      "arm": "direct",
+      "rep": null,
+      "setting": null,
+      "status": "invalid",
+      "passed": null,
+      "report_sha256": null
+    },
+    {
+      "task": 1,
+      "arm": "fixed-components",
+      "rep": "A",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "4d89344efe9d66139bec841d08fd146d9fa427a751fa0a647789ae50b351dff9"
+    },
+    {
+      "task": 2,
+      "arm": "fixed-components",
+      "rep": "A",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "452f25c0f230311737832f480667c53587581760c4343c6599da37406290d669"
+    },
+    {
+      "task": 3,
+      "arm": "fixed-components",
+      "rep": "A",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "8d888a128a38f77c6cd5eeb5b8ff2199727e57ffdff89c80bb31bb8fcf7e8909"
+    },
+    {
+      "task": 4,
+      "arm": "fixed-components",
+      "rep": "A",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "340d00bb91ce23796337dbe0936f8700bc0158bcb8ad9512b5b935592039baa2"
+    },
+    {
+      "task": 5,
+      "arm": "fixed-components",
+      "rep": "A",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "d4af2fbed09e6a7c7cf8b4a733008271a5f50cd3ca5f6d2ea51271cd7fc76985"
+    },
+    {
+      "task": 6,
+      "arm": "fixed-components",
+      "rep": "A",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "3179c090cfdcb40acaec807e9a27842ca7f2f898bbb82c846c0c79d8649ff13a"
+    },
+    {
+      "task": 7,
+      "arm": "fixed-components",
+      "rep": "A",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "87a19cf52b9dc53059d2f28a5859fd4b56fb6954260894bf408812f821f306c4"
+    },
+    {
+      "task": 8,
+      "arm": "fixed-components",
+      "rep": "A",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "b59d9c09716f0e852c9468e4390fe1e93ec49477a35f52fc23bf5714aa135375"
+    },
+    {
+      "task": 9,
+      "arm": "fixed-components",
+      "rep": "A",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "8897eafdaf75a35080a03203485deab402bee78179c9c86b8c5afae42abe45d2"
+    },
+    {
+      "task": 10,
+      "arm": "fixed-components",
+      "rep": "A",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "0c859415c174da6dc828712591647e2cffa7cc1fe5df24f51b2b3416075d5950"
+    },
+    {
+      "task": 11,
+      "arm": "fixed-components",
+      "rep": "A",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "319362261248b6315ff26a4acde756e3314cecdfa5e9ccfbf2816b882e649588"
+    },
+    {
+      "task": 12,
+      "arm": "fixed-components",
+      "rep": "A",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "e3c30c78f67707125fe1764594d189a99574aec4317dabed7c831f35c130de73"
+    },
+    {
+      "task": 13,
+      "arm": "fixed-components",
+      "rep": "A",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "48d40495e11c81df866d69b4a71d7b44c63558ef9020677f4e6fad766d4a6d0c"
+    },
+    {
+      "task": 14,
+      "arm": "fixed-components",
+      "rep": "A",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "36af48958c517a68ea154d4e7b19e5da07d63f8ff7b481f0cb9aa58cdd1422ae"
+    },
+    {
+      "task": 15,
+      "arm": "fixed-components",
+      "rep": "A",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "9381185bd7aab892798a351051bbd6742e739faadd0eb537051e330611df7b53"
+    },
+    {
+      "task": 16,
+      "arm": "fixed-components",
+      "rep": "A",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "39227ae86bb0879755b88f3d5015ee19efdae9a05137a219986708da383073f7"
+    },
+    {
+      "task": 17,
+      "arm": "fixed-components",
+      "rep": "A",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "fcffdbaf6220ddd3e711ca7fe9836fb0dfda775a88b3adaa49619b263529d015"
+    },
+    {
+      "task": 18,
+      "arm": "fixed-components",
+      "rep": "A",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "3891a01d744c4e6ccf30afa5bfceb2f4e589d7904b624288cf1184e88a05fde5"
+    },
+    {
+      "task": 19,
+      "arm": "fixed-components",
+      "rep": "A",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "fdc616407a080dbebfc9969592377f7e00226987a7d402db262c8b07cb0b1968"
+    },
+    {
+      "task": 20,
+      "arm": "fixed-components",
+      "rep": "A",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "6f2b842267689ed3c862d4d5be5f540bd457787db7df91a514be82a6b9187062"
+    },
+    {
+      "task": 1,
+      "arm": "fixed-components",
+      "rep": "B",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "de4961a0f6edf262ebb600d1aac5b60c40e3144e5245b88ea5ecd0a7a0c27fb9"
+    },
+    {
+      "task": 2,
+      "arm": "fixed-components",
+      "rep": "B",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "b9e633273f86955fa2c03204c2ea27cb89323b98a0a3727396b5a3840223c11d"
+    },
+    {
+      "task": 3,
+      "arm": "fixed-components",
+      "rep": "B",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "08e1f857d4dff03ced13547156e0ae5efa6a76f2e187bd031357740924b58a9d"
+    },
+    {
+      "task": 4,
+      "arm": "fixed-components",
+      "rep": "B",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "c950cad5febeca4febe10bbc1859c33629eb45d4df9ecad9e63385c172741960"
+    },
+    {
+      "task": 5,
+      "arm": "fixed-components",
+      "rep": "B",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "49baf3f9934491dee2dedb34297e6a2cad28c2746e20cc10813719198e26720a"
+    },
+    {
+      "task": 6,
+      "arm": "fixed-components",
+      "rep": "B",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "4f9be2458a56c507cf56e0a60ea28c4679f028f4aaa3c3002feb5b05e5214077"
+    },
+    {
+      "task": 7,
+      "arm": "fixed-components",
+      "rep": "B",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "7fba2db2a14a79fec3f0d185d09af9f20aca86f2939aa0c33002582c1c372e94"
+    },
+    {
+      "task": 8,
+      "arm": "fixed-components",
+      "rep": "B",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "dd45d41399ff3e4d632ab7d6a05744d327183e4b110eee74894e5e98d9ddea88"
+    },
+    {
+      "task": 9,
+      "arm": "fixed-components",
+      "rep": "B",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "ba9e57eec5ca2782030981ba28db29f7616f1856d3d667bf52a69326eb19a584"
+    },
+    {
+      "task": 10,
+      "arm": "fixed-components",
+      "rep": "B",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "fe578428acc456214d287074d3542ac014057469f3b9e5b5e8ff227ae9fbd951"
+    },
+    {
+      "task": 11,
+      "arm": "fixed-components",
+      "rep": "B",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "2668c399b66655a860f83433b87b385fcd5e6c3c5b8f9327dff21e484cb683b3"
+    },
+    {
+      "task": 12,
+      "arm": "fixed-components",
+      "rep": "B",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "52cfa53d687461332f4d9bde21eb41d9ce1e5b0a63ec57bf7d9f9879416b1840"
+    },
+    {
+      "task": 13,
+      "arm": "fixed-components",
+      "rep": "B",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "4a7eb6cfeaeca9d33ad833fd4efac0253f8bb8a15211c8c9d8f06fc22d910d19"
+    },
+    {
+      "task": 14,
+      "arm": "fixed-components",
+      "rep": "B",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "fc9c830ec094f57111ffc2fb693e96f7d3e91ef072badcedd0ab311f776286ae"
+    },
+    {
+      "task": 15,
+      "arm": "fixed-components",
+      "rep": "B",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "6711ab6437ef050f12a710cdff4f74529b6767181d0905538874bcafba63c8f0"
+    },
+    {
+      "task": 16,
+      "arm": "fixed-components",
+      "rep": "B",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "e7acf61e30415219fa1c5396a0248d0cb24e9bb9e5aa5483d785baf2e46f7673"
+    },
+    {
+      "task": 17,
+      "arm": "fixed-components",
+      "rep": "B",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "b989f9dc0c6a077726c2a40979f17a4b33b4d16d86842a55d2991b97d7aa5e6c"
+    },
+    {
+      "task": 18,
+      "arm": "fixed-components",
+      "rep": "B",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "bc601ab408b1c288be0fd0ca3496f96fdc70b9a2d3acd94af10e3090006170da"
+    },
+    {
+      "task": 19,
+      "arm": "fixed-components",
+      "rep": "B",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "af835e5a3915313e2a199440ce4e5581821185fe92153b6d6da3df4404dbc324"
+    },
+    {
+      "task": 20,
+      "arm": "fixed-components",
+      "rep": "B",
+      "setting": null,
+      "status": "valid",
+      "passed": false,
+      "report_sha256": "2d5d3b88515c77fd75427acd8bfa75e5894c6acfb324c6c31fe46095348cf878"
+    }
+  ]
+}
