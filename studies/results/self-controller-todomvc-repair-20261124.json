@@ -1,0 +1,487 @@
+{
+  "model": "qwen/qwen3.5-9b",
+  "registered_utc": "2026-11-24T04:41:55.342874+00:00",
+  "tasks": [
+    "todo-01",
+    "todo-02",
+    "todo-03",
+    "todo-04",
+    "todo-05",
+    "todo-06",
+    "todo-07",
+    "todo-08"
+  ],
+  "registration_sha256": "f56288f2fd4c0d9ffcf755b90f8d635819453cb829fac7d902862c29b7db4cb4",
+  "seal_sha256": "7d59c787838523f3f8a14e850f3ac2ed2bcb602ae918937c07deaab40f8ca6e1",
+  "original_sha256": "bd1041515700a5cb1d4075d8553e01f34f85a0319c292ce8cc877b11a48ddc17",
+  "original": {
+    "build-a": {
+      "self": {
+        "passed": [],
+        "missing": []
+      },
+      "fixed": {
+        "passed": [],
+        "missing": []
+      }
+    },
+    "build-b": {
+      "self": {
+        "passed": [],
+        "missing": []
+      },
+      "fixed": {
+        "passed": [],
+        "missing": []
+      }
+    },
+    "direct": {
+      "direct": {
+        "passed": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-06",
+          "todo-07"
+        ],
+        "missing": []
+      }
+    }
+  },
+  "builds": {
+    "build-a": {
+      "status": "invalid",
+      "reason": "[stdin]:3\nconst DNA_CONFIG = {\n      ^\n\nSyntaxError: Identifier 'DNA_CONFIG' has already been declared\n    at wrapSafe (node:internal/modules/cjs/loader:1763:18)\n    at checkSyntax (node:internal/main/check_syntax:76:3)\n    at node:internal/main/check_syntax:45:5\n    at Socket.<anonymous> (node:internal/process/execution:205:5)\n    at Socket.emit (node:events:521:24)\n    at endReadableNT (node:internal/streams/readable:1729:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)\n\nNode.js v24.15.0\n",
+      "public_before": {
+        "syntax_error": "[stdin]:3\nconst DNA_CONFIG = {\n      ^\n\nSyntaxError: Identifier 'DNA_CONFIG' has already been declared\n    at wrapSafe (node:internal/modules/cjs/loader:1763:18)\n    at checkSyntax (node:internal/main/check_syntax:76:3)\n    at node:internal/main/check_syntax:45:5\n    at Socket.<anonymous> (node:internal/process/execution:205:5)\n    at Socket.emit (node:events:521:24)\n    at endReadableNT (node:internal/streams/readable:1729:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)\n\nNode.js v24.15.0\n"
+      }
+    },
+    "build-b": {
+      "status": "valid",
+      "package_sha256": "2c837924dac0222c9b36466fa7d9e0a70c25ace4b93aa7dfa305974df992124c",
+      "public_after": {
+        "public_errors": []
+      },
+      "public_before": {
+        "syntax_error": "[stdin]:3\nconst DNA_CONFIG = {\n      ^\n\nSyntaxError: Identifier 'DNA_CONFIG' has already been declared\n    at wrapSafe (node:internal/modules/cjs/loader:1763:18)\n    at checkSyntax (node:internal/main/check_syntax:76:3)\n    at node:internal/main/check_syntax:45:5\n    at Socket.<anonymous> (node:internal/process/execution:205:5)\n    at Socket.emit (node:events:521:24)\n    at endReadableNT (node:internal/streams/readable:1729:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)\n\nNode.js v24.15.0\n"
+      }
+    }
+  },
+  "summary": {
+    "build-a": {
+      "self": {
+        "passed": [],
+        "missing": []
+      },
+      "fixed": {
+        "passed": [],
+        "missing": []
+      }
+    },
+    "build-b": {
+      "self": {
+        "passed": [],
+        "missing": []
+      },
+      "fixed": {
+        "passed": [],
+        "missing": []
+      }
+    }
+  },
+  "rows": [
+    {
+      "task": "todo-01",
+      "group": "build-a",
+      "arm": "self",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "task": "todo-01",
+      "group": "build-a",
+      "arm": "fixed",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "task": "todo-01",
+      "group": "build-b",
+      "arm": "self",
+      "status": "valid",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "files_sha256": "697ecdf34848808461722a86c33f2aafc18f6924a62ed412c4a276aa9e50e34a",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "c05ca4e43430fc17c05f378a8739310e5377a0bf12a1b9e412637bfcfb7b0a4a"
+    },
+    {
+      "task": "todo-01",
+      "group": "build-b",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "files_sha256": "697ecdf34848808461722a86c33f2aafc18f6924a62ed412c4a276aa9e50e34a",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "c05ca4e43430fc17c05f378a8739310e5377a0bf12a1b9e412637bfcfb7b0a4a"
+    },
+    {
+      "task": "todo-02",
+      "group": "build-a",
+      "arm": "self",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "task": "todo-02",
+      "group": "build-a",
+      "arm": "fixed",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "task": "todo-02",
+      "group": "build-b",
+      "arm": "self",
+      "status": "valid",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "files_sha256": "697ecdf34848808461722a86c33f2aafc18f6924a62ed412c4a276aa9e50e34a",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "da0f8a4979505e8fc067cf2328d87e28ab3020e5a55b7016a39648160d899d8a"
+    },
+    {
+      "task": "todo-02",
+      "group": "build-b",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "files_sha256": "697ecdf34848808461722a86c33f2aafc18f6924a62ed412c4a276aa9e50e34a",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "da0f8a4979505e8fc067cf2328d87e28ab3020e5a55b7016a39648160d899d8a"
+    },
+    {
+      "task": "todo-03",
+      "group": "build-a",
+      "arm": "self",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "task": "todo-03",
+      "group": "build-a",
+      "arm": "fixed",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "task": "todo-03",
+      "group": "build-b",
+      "arm": "self",
+      "status": "valid",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "files_sha256": "697ecdf34848808461722a86c33f2aafc18f6924a62ed412c4a276aa9e50e34a",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "5e3f5e0228c4621e7a47a4fd9cacf4a5a77602ea21aeadf3f5e48ff51c85a2dc"
+    },
+    {
+      "task": "todo-03",
+      "group": "build-b",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "files_sha256": "697ecdf34848808461722a86c33f2aafc18f6924a62ed412c4a276aa9e50e34a",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "5e3f5e0228c4621e7a47a4fd9cacf4a5a77602ea21aeadf3f5e48ff51c85a2dc"
+    },
+    {
+      "task": "todo-04",
+      "group": "build-a",
+      "arm": "self",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "task": "todo-04",
+      "group": "build-a",
+      "arm": "fixed",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "task": "todo-04",
+      "group": "build-b",
+      "arm": "self",
+      "status": "valid",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "files_sha256": "697ecdf34848808461722a86c33f2aafc18f6924a62ed412c4a276aa9e50e34a",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "65725e27b5688a6d2ac04a70fca5de3db0ecefe62bdd1b62a56a94000b411110"
+    },
+    {
+      "task": "todo-04",
+      "group": "build-b",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "files_sha256": "697ecdf34848808461722a86c33f2aafc18f6924a62ed412c4a276aa9e50e34a",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "65725e27b5688a6d2ac04a70fca5de3db0ecefe62bdd1b62a56a94000b411110"
+    },
+    {
+      "task": "todo-05",
+      "group": "build-a",
+      "arm": "self",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "task": "todo-05",
+      "group": "build-a",
+      "arm": "fixed",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "task": "todo-05",
+      "group": "build-b",
+      "arm": "self",
+      "status": "valid",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "files_sha256": "697ecdf34848808461722a86c33f2aafc18f6924a62ed412c4a276aa9e50e34a",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "f61cbc51d2d764d46210cd72a730161255a1320758167d6dcf2ddd582f4c5199"
+    },
+    {
+      "task": "todo-05",
+      "group": "build-b",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "files_sha256": "697ecdf34848808461722a86c33f2aafc18f6924a62ed412c4a276aa9e50e34a",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "f61cbc51d2d764d46210cd72a730161255a1320758167d6dcf2ddd582f4c5199"
+    },
+    {
+      "task": "todo-06",
+      "group": "build-a",
+      "arm": "self",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "task": "todo-06",
+      "group": "build-a",
+      "arm": "fixed",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "task": "todo-06",
+      "group": "build-b",
+      "arm": "self",
+      "status": "valid",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "files_sha256": "697ecdf34848808461722a86c33f2aafc18f6924a62ed412c4a276aa9e50e34a",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "5d13b51843dc84abdd88107701f3075cae37ce9b5fb3c5c23fc770584cec1d44"
+    },
+    {
+      "task": "todo-06",
+      "group": "build-b",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "files_sha256": "697ecdf34848808461722a86c33f2aafc18f6924a62ed412c4a276aa9e50e34a",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "5d13b51843dc84abdd88107701f3075cae37ce9b5fb3c5c23fc770584cec1d44"
+    },
+    {
+      "task": "todo-07",
+      "group": "build-a",
+      "arm": "self",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "task": "todo-07",
+      "group": "build-a",
+      "arm": "fixed",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "task": "todo-07",
+      "group": "build-b",
+      "arm": "self",
+      "status": "valid",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "files_sha256": "697ecdf34848808461722a86c33f2aafc18f6924a62ed412c4a276aa9e50e34a",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "f97ff755a22fd8f2181685590335b7b7173e80276d993be6f9d028dac2f3ceda"
+    },
+    {
+      "task": "todo-07",
+      "group": "build-b",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "files_sha256": "697ecdf34848808461722a86c33f2aafc18f6924a62ed412c4a276aa9e50e34a",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "f97ff755a22fd8f2181685590335b7b7173e80276d993be6f9d028dac2f3ceda"
+    },
+    {
+      "task": "todo-08",
+      "group": "build-a",
+      "arm": "self",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "task": "todo-08",
+      "group": "build-a",
+      "arm": "fixed",
+      "status": "invalid",
+      "passed": false
+    },
+    {
+      "task": "todo-08",
+      "group": "build-b",
+      "arm": "self",
+      "status": "valid",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "files_sha256": "697ecdf34848808461722a86c33f2aafc18f6924a62ed412c4a276aa9e50e34a",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "7be891f4ac0eff0dbfdecf5f708dd2f67a675347f93be712d7642c89da740f60"
+    },
+    {
+      "task": "todo-08",
+      "group": "build-b",
+      "arm": "fixed",
+      "status": "valid",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "files_sha256": "697ecdf34848808461722a86c33f2aafc18f6924a62ed412c4a276aa9e50e34a",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "7be891f4ac0eff0dbfdecf5f708dd2f67a675347f93be712d7642c89da740f60"
+    }
+  ],
+  "budget": {
+    "calls": 2,
+    "settled_usd": 0.000802,
+    "exposure_usd": 0.000802,
+    "unsettled_calls": 0,
+    "cap_usd": 0.12,
+    "stop_usd": 0.12,
+    "halted": 0
+  }
+}

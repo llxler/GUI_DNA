@@ -1,0 +1,599 @@
+{
+  "project": "table",
+  "deployer": "qwen/qwen3.5-9b",
+  "builder": "gpt-6-astra",
+  "registered_utc": "2026-11-24T04:20:54.370479+00:00",
+  "registration_sha256": "0b2ca8bf3fd70ada846ab9f89fb7e3fbf6934bced60851602c99a05620ac273b",
+  "seal_sha256": "7eb69cd65057f1add7d2fc3782ee65dbfd82130025230defc7d4260518ff4997",
+  "previous_result_sha256": "93ba2f57c116016d5ea6d1543ef00a6eea3ca0e5e3767c62d6fe0a24b26d83b9",
+  "sources": {
+    "replica-1": {
+      "passed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        12,
+        14,
+        15,
+        16
+      ],
+      "missing": [],
+      "invalid": [],
+      "routing": {
+        "Darkbloom": 20
+      },
+      "baseline": {
+        "selected": {
+          "passed": [
+            1,
+            5,
+            6,
+            7,
+            8,
+            10,
+            12,
+            15,
+            16
+          ],
+          "missing": [],
+          "invalid": [
+            2,
+            3,
+            4,
+            14
+          ]
+        },
+        "fixed": {
+          "passed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            12,
+            14,
+            15,
+            16
+          ],
+          "missing": [],
+          "invalid": []
+        }
+      },
+      "budget": {
+        "calls": 20,
+        "settled_usd": 0.002319,
+        "exposure_usd": 0.002319,
+        "unsettled_calls": 0,
+        "cap_usd": 0.5,
+        "stop_usd": 0.5,
+        "halted": 0
+      },
+      "package_sha256": "03e1bc78fbd8cca103fab09022044dae047d01f99489db989215d61b0a54af35"
+    },
+    "replica-2": {
+      "passed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        12,
+        14,
+        15,
+        16
+      ],
+      "missing": [],
+      "invalid": [],
+      "routing": {
+        "Darkbloom": 20
+      },
+      "baseline": {
+        "selected": {
+          "passed": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            7,
+            8,
+            10,
+            12,
+            14,
+            15,
+            16
+          ],
+          "missing": [],
+          "invalid": [
+            4
+          ]
+        },
+        "fixed": {
+          "passed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            12,
+            14,
+            15,
+            16
+          ],
+          "missing": [],
+          "invalid": []
+        }
+      },
+      "budget": {
+        "calls": 20,
+        "settled_usd": 0.001976,
+        "exposure_usd": 0.001976,
+        "unsettled_calls": 0,
+        "cap_usd": 0.5,
+        "stop_usd": 0.5,
+        "halted": 0
+      },
+      "package_sha256": "cd6dfd2625814e91bb4a41e7e502c0adf53cfc5e9eb5ae7538aea2473718e613"
+    }
+  },
+  "rows": [
+    {
+      "replica": "replica-1",
+      "task": 1,
+      "status": "valid",
+      "response_sha256": "0b705bfe70d00ca309b451e7c5de614ed027a26bc794cd120778522f0f8d74fd",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "aca26fda28cfa41434ccbe0abd4ae6e8421dba7a370cca8c38c29e6cc93243ad"
+    },
+    {
+      "replica": "replica-1",
+      "task": 2,
+      "status": "valid",
+      "response_sha256": "aa83f376b559b1ec50366c556a73860d6f278823f138e5f8c90a2973e37cfff0",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "d184629a1cdff79aa85712fb3eae32025ec66dc1402541e1aceae0ad6ceefd4d"
+    },
+    {
+      "replica": "replica-1",
+      "task": 3,
+      "status": "valid",
+      "response_sha256": "33b0d93ef27cb0b3a0bc2d17e1e6e0f3ff629fc3841695550c76e62729c62589",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "f88e0663c983c37ace30f95fae97b90520420be2a9a9165e2cc40eab8b3f5e80"
+    },
+    {
+      "replica": "replica-1",
+      "task": 4,
+      "status": "valid",
+      "response_sha256": "6c780513bf2690472393639060f8cf6d46f39379dfca0c945b6abae02a81f467",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "12810da656fbc247ee191fc1ac4e0c34c7d8e726fab5369d85c0888305a87d11"
+    },
+    {
+      "replica": "replica-1",
+      "task": 5,
+      "status": "valid",
+      "response_sha256": "5544c16c08ac96ff03571b6a92d2a0ea806458a0d0895f241de31f3acae6fd5b",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "cf5e2c5f67b6e6e0858a72ca3e8007c12a8a7092baf21b5678e881c329a739e4"
+    },
+    {
+      "replica": "replica-1",
+      "task": 6,
+      "status": "valid",
+      "response_sha256": "301b42477c4da586a4027d5e7721f221bbe6e6baa544bf9000a6c088c47823e2",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "68a963b5714bbc4bd6998287ce6d5feb40a7d6ecc1833751e9a6a09007a00d44"
+    },
+    {
+      "replica": "replica-1",
+      "task": 7,
+      "status": "valid",
+      "response_sha256": "7dd529d179d76edad39945b432d3880a97a9afed12a0091380291a0d0cf5ef21",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "d280b8e553c63483dbac8e67d048701b961acecffa6a14e6f8db1e6576075bf5"
+    },
+    {
+      "replica": "replica-1",
+      "task": 8,
+      "status": "valid",
+      "response_sha256": "d03bfb25461bd4d31fe665fd967883687b809d00cc94ed5000efe0ac6f722f88",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "8be9adfbec63580e7f0eacb1a1d54c8ceed3ef50257102f326b2211b8e7bc224"
+    },
+    {
+      "replica": "replica-1",
+      "task": 9,
+      "status": "valid",
+      "response_sha256": "31c7e67928255cc2c5ff4f7de99f2d06d0436dd8f0a864f6fec9608090905489",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": false,
+      "report_sha256": "87b58a106451d0e2eae80d539a8817e628a7faf2e883ff8a7780dd95cde968e2"
+    },
+    {
+      "replica": "replica-1",
+      "task": 10,
+      "status": "valid",
+      "response_sha256": "7dd671f70215a0582bd3d0ad572887fa6c5ca3c27a443df0b4aab9004180a0a9",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "32fd493ac65dc6f83ec1139cb6868a1509758785b6aa16994c800098722a1aeb"
+    },
+    {
+      "replica": "replica-1",
+      "task": 11,
+      "status": "valid",
+      "response_sha256": "92fb5f8f745b18a13a9d9252c9a49904901e609e250e3ed8b384876863e2af0f",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": false,
+      "report_sha256": "5ab7f1b4f96200bedb31e251951b6bae50528d4aa82f9639445e53d0e23cf67d"
+    },
+    {
+      "replica": "replica-1",
+      "task": 12,
+      "status": "valid",
+      "response_sha256": "26d0e94693305d1ec319316a58feee0a5657c183672289fc899f20711d44e30a",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "d8d21e74cfaa1ffc90ac9ad0ebf6ddc48b716b2669bd48c565853a2770b25f69"
+    },
+    {
+      "replica": "replica-1",
+      "task": 13,
+      "status": "valid",
+      "response_sha256": "d769034625ca602298aee2e2f40ee9acb2968589eaa6451954466db44b14d6e2",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": false,
+      "report_sha256": "e7e01b62b219af52ca97a5807ece56b44174d787f50a62e39dd2a7c683cd3606"
+    },
+    {
+      "replica": "replica-1",
+      "task": 14,
+      "status": "valid",
+      "response_sha256": "05f63c23ecb6a10ac3e276b8f1e56cfa8e861a10f4951ef608b375ba26408164",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "188280921bafe50e03935af8068c5fe3c4b23a33c3bb2d38548c1c13d0f6ff6a"
+    },
+    {
+      "replica": "replica-1",
+      "task": 15,
+      "status": "valid",
+      "response_sha256": "9bfe66cd2e52ed542964e89be047597b2103418da9cbf8ba00e91419751311c6",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "3b55f298403e0881c4e3e0c9ab0e5c5c3b4a9de5d77ef8bfba257f9c597e7f5e"
+    },
+    {
+      "replica": "replica-1",
+      "task": 16,
+      "status": "valid",
+      "response_sha256": "e6429fdaa832a77be4d9554bd4ee8d3e0d331f3895c965bfc012e26ff8a7e0e9",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "5959752bac863e8ef3ee05044658d90dcfafc27ea8cb8b289d8e79724eaacd87"
+    },
+    {
+      "replica": "replica-1",
+      "task": 17,
+      "status": "valid",
+      "response_sha256": "86a981a7969b7c0dcf957dfe0f5fee0b73df1c303113aca25e490076b0464386",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": false,
+      "report_sha256": "a19ad27b557b6e9086e95690c591d276617d66136bdc17f50c16e64623234a7a"
+    },
+    {
+      "replica": "replica-1",
+      "task": 18,
+      "status": "valid",
+      "response_sha256": "df6322851b7eb614299e751bfe52bb48a71d9af2119f46373ed27944aabe634f",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": false,
+      "report_sha256": "a715596f7aaee337f77b7fff28c6860a856d537ce0afbef93dfee5d5c8d0c35f"
+    },
+    {
+      "replica": "replica-1",
+      "task": 19,
+      "status": "valid",
+      "response_sha256": "94fffbf28a3458c143542e2613a1236f95433941c548976bb7a57421aacb0247",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": false,
+      "report_sha256": "2ddcd81ee117c0c311fb0d7055ef7085f6f209e18bb212e66231e699ce4c55fb"
+    },
+    {
+      "replica": "replica-1",
+      "task": 20,
+      "status": "valid",
+      "response_sha256": "02303aaada716973b6a91c76648bf816ee3697cb001c3e23ec131069a85e0b2e",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": false,
+      "report_sha256": "235f97a196f6c0c4b97c436a406956c893b93aa687ff08a5bb230a4c5191bdca"
+    },
+    {
+      "replica": "replica-2",
+      "task": 1,
+      "status": "valid",
+      "response_sha256": "a1d42f6e09c8cec3101cff2c491cbdc792491474306e781c1ce113fbb6d2db94",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "ec2d5f1a9fdd7691e6930878f0fb712f38bb2439c7c2115210c69a349f65f240"
+    },
+    {
+      "replica": "replica-2",
+      "task": 2,
+      "status": "valid",
+      "response_sha256": "0152e02a5f326f5d0f2f0974655bdf7164d52ea9a2d9ccbac2d816ea68139801",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "8aa4f7af4965e718a12bf5aed138172f4ad0da0a3cd668b1ee259c3d34563456"
+    },
+    {
+      "replica": "replica-2",
+      "task": 3,
+      "status": "valid",
+      "response_sha256": "0d2aacec4ab5beec3b8635c3bee02b3e4ee560c9a2ae058b06c915b189235cef",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "bde804e283c01e8cb58f120cdc8490fa90d8e6616597125c2f2b5bf293cb4e33"
+    },
+    {
+      "replica": "replica-2",
+      "task": 4,
+      "status": "valid",
+      "response_sha256": "95b6557ab6897e40efabb37976c19c62b14f7ef9147f16e8d094d2329979fe64",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "9c70c880a39b7545286fc37ca00d9e27d679efd7755c435c0612e347c80705ce"
+    },
+    {
+      "replica": "replica-2",
+      "task": 5,
+      "status": "valid",
+      "response_sha256": "0d36f7eca0cb41b05701912f2152db5dcae55c47dccaa32fa393c9b1da6c8721",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "2cd51751e8d4c635a760091243f65b3be6100ce49794013434357725e5093107"
+    },
+    {
+      "replica": "replica-2",
+      "task": 6,
+      "status": "valid",
+      "response_sha256": "ab13a4d2338dca927bcc8bcda8bd82662d2b7c97464d7c6e206c17f04f7c6739",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "0249b0103265517a80dfe16050babba071bcd14e25fccb05f1c591c450c4ef7a"
+    },
+    {
+      "replica": "replica-2",
+      "task": 7,
+      "status": "valid",
+      "response_sha256": "a74c39e0a8cd594f2e847fbb30e78385ec2dd34a6f59bc7b52cf375b61fb14f5",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "ed0a6b30fdfa5ea8aff75153c93a2b605f9aba216cb8ff49d4868578d2c3c123"
+    },
+    {
+      "replica": "replica-2",
+      "task": 8,
+      "status": "valid",
+      "response_sha256": "fd706d623d3f3850b670671f1566131a22143cfffd941669783700da406fcb9f",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "1fdf3a9b9b3cfed9fdbc9b6f5553bba56e87294fbdfc260ab32596d96daf95b5"
+    },
+    {
+      "replica": "replica-2",
+      "task": 9,
+      "status": "valid",
+      "response_sha256": "621b74adcc8383fd93e65a877a0d839d310e61da7779d0e6e0f0c478f5e8a2b3",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": false,
+      "report_sha256": "c68fb61ee75c6d4ab927aafab191d5c533018b04b49ec1cc449f52708216415d"
+    },
+    {
+      "replica": "replica-2",
+      "task": 10,
+      "status": "valid",
+      "response_sha256": "839e4c225d637f1d546fa0de920970b8383f0483d56dfd00502ae495546c0c23",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "1b2fa6739052d49e4aa3e66ea56b57cfa4c1f5e6d6b5e5712d1b4f8320cf6b3b"
+    },
+    {
+      "replica": "replica-2",
+      "task": 11,
+      "status": "valid",
+      "response_sha256": "530c74290fc0691b083f2e5de55452656107b915c781e66c84727d68e1c5c1c0",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": false,
+      "report_sha256": "00bc516ac9a0cfbca9b09722cddb3e6221c31a32641d4315aa8df1282d68062b"
+    },
+    {
+      "replica": "replica-2",
+      "task": 12,
+      "status": "valid",
+      "response_sha256": "ae3b8a3a4b875433ab19391a233f61b36fef296e03ad82735cef919728ecdc95",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "7baaa4a2a3654a4d06511f033c2894ea986715471d329c16dc0eebd3d5e53c35"
+    },
+    {
+      "replica": "replica-2",
+      "task": 13,
+      "status": "valid",
+      "response_sha256": "b2128f6f9e3fd4c27d1caee0eba6bcd5d08a0eec2131a2cee85bdf1aa349ce46",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": false,
+      "report_sha256": "3ec31d8c1f87de1264761ef3e0487a6eef45a959470c8afbcc52e0b7c50512f1"
+    },
+    {
+      "replica": "replica-2",
+      "task": 14,
+      "status": "valid",
+      "response_sha256": "b7f61033dfcf502389cc39ca5eb279879f6886fc6891e42ea60454c5d0fb4b2d",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "5ac59400901e633ab6607bc12f884590e9e7b175917bd834813dd1308b24bf39"
+    },
+    {
+      "replica": "replica-2",
+      "task": 15,
+      "status": "valid",
+      "response_sha256": "dcf40ca8a20b50037c5e72f3ed67eb2806f6428825c412cff17e1b6e25e3d313",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "6147341d37c0a8a0da71a7c0b085b9c35d6bc1bb9f49341d467738006625d377"
+    },
+    {
+      "replica": "replica-2",
+      "task": 16,
+      "status": "valid",
+      "response_sha256": "d2e0838baced061c6be777adbf311536156cd6b40509b53ddb55535319cda1a1",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": true,
+      "report_sha256": "ad99fadc5024b3de107e7b3b2ffed7878fccb3db70a9cb6a6cb8270af6cfd17f"
+    },
+    {
+      "replica": "replica-2",
+      "task": 17,
+      "status": "valid",
+      "response_sha256": "5dca2cbf6b2a94d40a7c4a14389680dc447ceb4d2497bbd59c9f99f20d02b361",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": false,
+      "report_sha256": "230b1a1d0edd67a685bd53c106bc26d8fa9260f940f0e33631ee3e3ec92c3629"
+    },
+    {
+      "replica": "replica-2",
+      "task": 18,
+      "status": "valid",
+      "response_sha256": "1cd9f3c72d8ad9a7b4f5977fb8d713c86c017906ce931711758151ec69aa7b7b",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": false,
+      "report_sha256": "27bfaa2a7be1584a660cdd621094394afb1847e734969a50ab5bdad3f24e6462"
+    },
+    {
+      "replica": "replica-2",
+      "task": 19,
+      "status": "valid",
+      "response_sha256": "9d65c0811d4a384931ec1a243760ebf8816e1ff1e95b158b597d99ffa701a5d1",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": false,
+      "report_sha256": "4f52354df7e47d7913894e1a1633953ca6e828dfc01c3cb0398f12535cac76fc"
+    },
+    {
+      "replica": "replica-2",
+      "task": 20,
+      "status": "valid",
+      "response_sha256": "1f9f0376579c4634f671f848fc915fc56f95c534a1a15cd7db97965f792ee7fd",
+      "provider": "Darkbloom",
+      "returned_model": "qwen/qwen3.5-9b",
+      "finish_reason": "stop",
+      "passed": false,
+      "report_sha256": "3b4f04544abffa02e8d1afe81464263868e7a08ab6396ca76ee070bc98e204a8"
+    }
+  ]
+}

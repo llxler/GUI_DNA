@@ -2284,3 +2284,33 @@ canvas 参考页屏蔽 k 后，三个种子的公开射击观察都从有效变�
 六个套件生成模型均完成八个 TodoMVC 需求和十个 Duo 组合。DeepSeek V4 Flash 的 TodoMVC 从零、人工、自建与固定首例分别是 2/8、5/8、8/8、8/8。Duo 从零为 6/10，自建和固定首例均为 0/10。Qwen3-Coder-30B 在 Duo 的三项为 4/10、1/10、1/10。Gemma 的一个组件在加载时重复注册测试，五个目标的逐题及固定候选共十份原始报告。每份至少有一个官方用例的所有同名执行都失败，复核后均判失败。[套件逐题数据](../studies/results/backbone-suites-20261124.json) · [原报告与各用例判定](../studies/results/backbone-suite-replays-20261124.json)
 
 四批合计发起 1,677 笔 API 请求，已结算 $5.269974。47 笔未决请求仍按原额预留，含预留的最高支出为 $6.478155。表格和 SVG 已结算 $3.138239，问卷 $1.966546，两个套件 $0.165189。每个模型各自在建库和部署阶段的账本可查。人工工时及历史 GPT-5 库的既有准备费未计入本次新增 API 支出。[分轮授权与最高敞口](../studies/results/backbone-allocations-20261124.json) · [分项账本](../studies/results/backbone-overview-20261124.json)
+
+
+## 45. Self 的失败位置与新建库者（2026-11-24）
+
+三个 Web-Bench 项目中，7 个模型共尝试建 21 份 Self 库，13 份在公开准入失败，影响 260 个预定目标。有库后，21 个目标的配置无效，139 个实际交付了页面。逐题配置和首例在这 139 个位置上逐项同过 12、同败 127。人工库和 Self 都交付页面的 103 项中，人工库独过 90、Self 独过 1、同过 10、同败 2。人工库取自上游能工作的参考实现。穷举原 GPT-OSS 表格库的两种设置，以及原 Qwen3.5 问卷库的 32 种设置，各对全部 20 个任务评分；两套库的任何设置都无法通过任何一题。[历史阶段与原响应](../studies/results/self-failure-diagnosis-20261124.json) · [680 个配置－目标位置](../studies/results/self-capacity-20261124.json)
+
+**保持 Qwen3.5-9B 生成器不变。** 模型从公开需求独立确定控件、首例和模块接口。原生结构输出交付四份设计；每个源文件单独写的两项目四份库均在组装/修复时失败。改为一次写出相互依赖的实现，按模型自己写的路径标记拆分模块，并仅在符号唯一时修正导入，可加载库增加到三份。表格的第二份库通过任务 1，固定首例亦通过同一题。三份可加载库的源码中均未发现自声明的 choice1–4 字面量。[原生文件生成](../studies/results/self-native-20261124.json) · [共享模块](../studies/results/self-coherent-20261124.json) · [源码分段与逐题报告](../studies/results/self-coherent-linker-20261124.json)
+
+| 项目与部署协议 | 从零 | 库 A 逐题 | 库 A 固定 | 库 B 逐题 | 库 B 固定 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 表格，Qwen 自建，原生配置与模块链接 | 1/20 | 0/20 | 0/20 | 1/20 | 1/20 |
+| 问卷，Qwen 自建，同上 | 5/20 | 0/20 | 0/20 | 0/20 | 0/20 |
+| 表格，GPT-6 Astra 建库，Qwen 文本配置 | 0/20 | 9/20 | 13/20 | 12/20 | 13/20 |
+| 表格，原两份 GPT-6 Astra 库，Qwen 原生配置 | 1/20 | 13/20 | 13/20 | 13/20 | 13/20 |
+
+**更换建库者。** GPT-6 Astra 的两次订阅会话相互独立，各看同一公开起始工程及完整需求，首轮都交付了能加载的七个 JS 模块。旧文本部署有 5 个响应耗尽额度却没有可见正文。关闭额外推理并要求输出本库真实 JSON Schema 后，Qwen 的 40 份配置逐字段等于各自首例。穷举第二份库的二元控件，两种设置分别通过 11/20、13/20，逐题事后任选也只能过 13 个目标。两份库同样受到基础单元格编辑状态的限制，多项失败在到达后续断言前已中止。两份强库与其固定页的分母各为 20。[两份强库](../studies/public_library_transfer/strong_builder/result.json) · [原生解码](../studies/public_library_transfer/strong_builder/native/result.json) · [所有取值](../studies/public_library_transfer/strong_builder/capacity.json)
+
+**同协议人工库对照。** 在所有来源均可判定的 14 个表格目标上，Qwen 原生从零为 0/14，人工库为 12/14，已有 GPT-5 库为 2/14，两份 GPT-6 Astra 库各为 7/14，两份 Qwen Self 均为 0/14。另 6 个表格人工库请求未交付。问卷的人工与 GPT-5 原生配置因服务错误和账本限额没有共同观测，不报比例。[从零、人工及旧 GPT-5 回执](../studies/results/self-supplied-native-20261124.json)
+
+**开发中未生效的改动。** 复杂清单易被不合法的选项值卡住。换短格式后，Qwen 两次耗尽 6,500 个输出 token 且没有可见表格设计。GPT-OSS 的标识含非 ASCII 连字符，规范化后能产生 8 个源文件和 20 个合法计划，仍是 0/20。一次修补写到错误的模块，将原补丁放回它自报的路径后又暴露出缺失的真实导出。问卷的 GPT-OSS 短清单库和固定页均为 4/20，原 Self 为 10/20。最初登记的三条条件重复均未达到改善门槛。[短格式](../studies/results/self-line-contract-20261124.json) · [符号与补丁复核](../studies/results/self-binding-table-20261124.json) · [问卷短格式](../studies/results/self-line-contract-form-20261124.json) · [预登记重复结果](../studies/results/self-confirmation-20261124.json)
+
+**从已运行的实现提取开关。** 在两份表格库上，让同一 Qwen 从自己的源代码提出局部替换。仅当原文唯一、替代可加载且对相同公开交互产生可复验的差异时接纳。库 A 有一个合格开关，两次点击回放中，原设置均未标记单元格，替代值均将一个单元格标为选中。穷举它的两个设置，替代值可过原先过不了的任务 4，实际 20 份部署却都选了原值。库 B 的 6 个提案均未验证出可用的控件，其原始固定页仍过任务 1。这里分别定位到了一个真实可用的变体和一次没有选中变体的部署失败。[公开行为观测、完整配置空间及逐题选择](../studies/results/self-executable-options-20261124.json)
+
+**单入口 TodoMVC。** Qwen3.5-9B 同设置新从零为 5/8。先设计控件再写代码的两次自建，逐题和固定均 0/8。一次公开纠错和仅移除模型重复声明的宿主保留名也均为 0/8；一份控制器能显示新事项却不写本地存储。第二种流程先按原公开宿主合约独立生成完整控制器，再从实际代码提出可执行选项。A 未通过添加后重载的公开检查，固定 0/8；B 的原页通过全部 8 项，但六个选项提案都未能给出经公开交互验证的差异。两个重复的严格逐题 Self 均为 0/8。另行事后复核一条交付规则：只有无法产生合法选择且自己的固定页已通过公开准入时才交付固定页，已交付的计划原样保留。两次交付为 0/8、8/8；表格两次为 0/20、1/20。没有新增模型调用或逐题组装收益。[初次设计](../studies/results/self-controller-todomvc-20261124.json) · [公共纠错](../studies/results/self-controller-todomvc-repair-20261124.json) · [宿主声明](../studies/results/self-controller-todomvc-host-binding-20261124.json) · [先实现再提取控件](../studies/results/self-todomvc-executable-options-20261124.json) · [固定交付规则](../studies/results/self-fixed-delivery-20261124.json)
+
+**GPT-OSS 增量编辑。** 从四条公开需求起步，每次保留已写好的代码。文本补丁的第二批修改针对未提交的源码，最终未准入，Self 0/20、从零 7/20。改用文件写入工具后，前四项实现可公开加载，随后同一请求连续遭遇 HTTP 502。原生工具与独立恢复都无可判定的部署目标，未计作 0/20。三笔未决传输保留原预留。[原始增量编辑](../studies/results/incremental-self-table-20261124.json) · [文件工具](../studies/results/native-incremental-self-table-20261124.json) · [恢复记录](../studies/results/native-incremental-self-table-resume-20261124.json)
+
+**代码模型的两次独立复验。** Qwen3-Coder-30B-A3B-Instruct 自己建库并配置，后写的模块读取已实现依赖的真实导出，逐步执行 ES 模块链接和公开页面加载检查。两套九文件库均成功，可评分的 20 项全部交付。两个 Self 分别从旧 0/20 提高至 5/20、1/20，同设置新从零为 3/20。这里旧 Self 自身有 20 个观测；总表 A 同时要求旧人工库等四臂均有结果，交集为 7 题。A 相对从零多过第 3、11、19 题，少过第 1 题；B 多过第 8 题，少过第 1、2、4 题。固定两库首例同样分别为 5/20、1/20。A 的配置 20 次均等于首例，B 产生四种配置，40 个逐题结果都和各自的固定首例相同。原 19 个从零页面在恢复阶段逐项复验均无变化。三笔中断保留预留，合计 85 笔调用，已结 0.054409 美元、上界 0.102598 美元。[实验与恢复协议](../studies/public_library_transfer/self_refinement/dependency_order/README.md) · [同模型逐题结果](../studies/results/self-dependency-resume-20261124.json)
+
+**费用。** 本轮新增 557 次 API 调用，已结算 0.246262 美元，27 笔未最终结算，保留预留后的本轮上界为 0.958426 美元。与当天较早的大表批次合计 2,234 次，已结算 5.516236 美元，总敞口 7.436581 美元。两份 GPT-6 Astra 库另行使用订阅会话，各 18,004 输入 token，分别 4,675 与 5,094 输出 token，未折算为 API 美元。[逐账本核对](../studies/results/self-construction-accounting-20261124.json) · [总表 D 区及不同交集](../studies/results/paper-library-followups-20261124.json)

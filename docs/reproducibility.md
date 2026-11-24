@@ -38,6 +38,21 @@ SVG 的原始规划、固定示例与部署回退可按[图表冻结实验](../s
 
 本地拥有完整 `artifacts/` 时可进一步复验研究快照与原报告。旧快照必须在登记的源码版本复算，见 [退役说明](archive/full-history-retirement.md)。当前分支不再提供已删除实验的复验入口；不要修改旧清单来迁就新源码。代码 checkout 不包含被忽略的响应、页面、账本、浏览器缓存或上游 checkout；仅有源码不能重放全部历史结果。
 
+### 核对 11 月 24 日的自建库诊断
+
+以下命令用公开结果核对失败阶段、同一题的对照、独立建库重复和实际分母。带 `check-local` 的入口还读本机原始文件、API 收据和官方浏览器报告。生成新候选需要另开有预算的研究批次。
+
+```bash
+uv run python -m studies.public_library_transfer.diagnostics.self_failures check
+uv run python -m studies.public_library_transfer.diagnostics.self_capacity.run check
+uv run python -m studies.public_library_transfer.self_refinement.native.report check
+uv run python -m studies.public_library_transfer.self_refinement.coherent.report check
+uv run python -m studies.public_library_transfer.self_replication.confirmation check
+uv run python -m studies.public_library_transfer.self_replication.paper
+uv run python -m studies.public_library_transfer.self_replication.accounting check
+uv run python -m studies.public_library_transfer.strong_builder.check
+```
+
 ## 人工库与 AI 库的同目标比较
 
 在保留 11 月 21 日原始产物的工作区，运行 `uv run python -m studies.layout run webbench/form/library_sources report` 可只读核对两阶段的输入哈希、目标、页面、官方报告、建库与生成费用以及续跑边界。论文三组配对行来自 [逐目标记录](../studies/results/library-sources-20261121.json)；附录另列每组全体可观察结果和缺失。表单公开修复的独立复核命令为 `uv run python -m studies.layout run webbench/form/public_repair report`，逐项确认所有反馈只含原解析或编译错误。两个项目不共用分母。[问卷协议](../studies/webbench/form/library_sources/PROTOCOL.md) · [图表协议](../studies/webbench/svg_chart/library_sources/PROTOCOL.md)

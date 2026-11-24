@@ -1,0 +1,747 @@
+{
+  "model": "qwen/qwen3.5-9b",
+  "registered_utc": "2026-11-24T04:50:04.664784+00:00",
+  "end_utc": "2026-11-24T05:18:00+00:00",
+  "registration_sha256": "3dba052647718eba8b8273c9927e02a827480f70b75f8aa9b16199cf88ab0104",
+  "seal_sha256": "c34b4f02ecb24715cb8e66d3cf992cb852478be0a6e9a323c24b159f1a756000",
+  "protocol_sha256": "ebeb66bde949290f463d5182e4c402766d20f03a33421365aca145fa307c49ad",
+  "reused_direct_results_sha256": "bd1041515700a5cb1d4075d8553e01f34f85a0319c292ce8cc877b11a48ddc17",
+  "reused_direct_cost": {
+    "calls": 8,
+    "settled_microusd": 1363,
+    "exposure_microusd": 1363
+  },
+  "tasks": [
+    "todo-01",
+    "todo-02",
+    "todo-03",
+    "todo-04",
+    "todo-05",
+    "todo-06",
+    "todo-07",
+    "todo-08"
+  ],
+  "seeds": {
+    "build-a": 20261124,
+    "build-b": 20261125,
+    "direct": 20261124
+  },
+  "replicas": {
+    "build-a": {
+      "base_status": "invalid",
+      "selection_status": "invalid",
+      "reason": "Plain controller failed both public admissions",
+      "package_sha256": "db732245ac948f71fbc649a72fefcf9091d727269d32de81a1d198de0f993c6e",
+      "base_files_sha256": null,
+      "public_admissions": [
+        {
+          "attempt": "source",
+          "passed": false,
+          "reason": "Public storage does not contain the added todo"
+        },
+        {
+          "attempt": "source-repair",
+          "passed": false,
+          "reason": "Public storage does not contain the added todo"
+        }
+      ],
+      "certified_options": [],
+      "candidate_witnesses": [],
+      "paired_fixed": {
+        "tasks": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "self_passed": 0,
+        "comparator_passed": 0,
+        "self_only": [],
+        "comparator_only": []
+      },
+      "paired_direct": {
+        "tasks": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "self_passed": 0,
+        "comparator_passed": 5,
+        "self_only": [],
+        "comparator_only": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-06",
+          "todo-07"
+        ]
+      }
+    },
+    "build-b": {
+      "base_status": "valid",
+      "selection_status": "invalid",
+      "reason": null,
+      "package_sha256": "8c829e956a16933117c345d3b22962c539fe10d8a4b94db8e6649d69db7d5169",
+      "base_files_sha256": "416e726ef26c29b7b041229cc477490b712889d724bc622d81c7c2447eef4cd4",
+      "public_admissions": [
+        {
+          "attempt": "source",
+          "passed": true
+        }
+      ],
+      "certified_options": [],
+      "candidate_witnesses": [
+        {
+          "round": "options",
+          "accepted": false,
+          "reason": "Public host: Page.evaluate: Error: No todo for the selected subject\n    at eval (eval at evaluate (:311:30), <anonymous>:9:27)\n    at UtilityScript.evaluate (<anonymous>:318:18)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "option": {
+            "id": "clear-completed",
+            "original_behavior": "Removes completed todos from the state array.",
+            "alternative_behavior": "Marks all completed todos as active (unchecked) instead of removing them.",
+            "probe": {
+              "events": [
+                {
+                  "type": "toggle",
+                  "subject": "last",
+                  "title": "",
+                  "filter": "all"
+                }
+              ],
+              "watch": "visible.length"
+            },
+            "original_fragment_digest": "e75dab7c002c8ae3577941e43acc65607f8b0874c6f98780265acb071c64b5cf",
+            "alternative_fragment_digest": "ec0844341b2c5e1c0d3a70de6494633dff0873e56c03cdc74dfe4556e48d11d0"
+          }
+        },
+        {
+          "round": "options",
+          "accepted": false,
+          "reason": "Public host: Page.evaluate: Error: No todo for the selected subject\n    at eval (eval at evaluate (:311:30), <anonymous>:9:27)\n    at UtilityScript.evaluate (<anonymous>:318:18)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "option": {
+            "id": "destroy-empty-edit",
+            "original_behavior": "Destroys the todo if the saved title is empty.",
+            "alternative_behavior": "Leaves the todo in the list with an empty string title if the saved title is empty.",
+            "probe": {
+              "events": [
+                {
+                  "type": "edit",
+                  "subject": "first",
+                  "title": "   ",
+                  "filter": "all"
+                },
+                {
+                  "type": "save",
+                  "subject": "first",
+                  "title": "",
+                  "filter": "all"
+                }
+              ],
+              "watch": "visible.titles"
+            },
+            "original_fragment_digest": "35582fe3fddbb265d116a4467050b01def769efb09911395898c773e201b8d2d",
+            "alternative_fragment_digest": "60dbce311bfe7c3b2281df8400965974fd54dfc95f8369083d2a122f1b7f21fd"
+          }
+        },
+        {
+          "round": "options",
+          "accepted": false,
+          "reason": "Invalid behavior description or public probe",
+          "option": {
+            "id": "persist-editing",
+            "original_behavior": "Does not persist the editing state to localStorage.",
+            "alternative_behavior": "Persists the editing state (id and title) to localStorage.",
+            "probe": {
+              "events": [],
+              "watch": "editing"
+            },
+            "original_fragment_digest": "28df801e15ef18819af09dd611def6553887cca8d148e58764d6663c9f1d17fa",
+            "alternative_fragment_digest": "8c6e9ad54e4a95d290a11e03c98cf081586d1a8f9c7b1aed8f9e4ac75a1febc4"
+          }
+        },
+        {
+          "round": "options-repair",
+          "accepted": false,
+          "reason": "Public host: Page.evaluate: Error: No todo for the selected subject\n    at eval (eval at evaluate (:311:30), <anonymous>:9:27)\n    at UtilityScript.evaluate (<anonymous>:318:18)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "option": {
+            "id": "destroy-empty-edit",
+            "original_behavior": "Destroys the todo if the saved title is empty.",
+            "alternative_behavior": "Leaves the todo in the list with an empty string title if the saved title is empty.",
+            "probe": {
+              "events": [
+                {
+                  "type": "edit",
+                  "subject": "first",
+                  "title": "   ",
+                  "filter": "all"
+                },
+                {
+                  "type": "save",
+                  "subject": "first",
+                  "title": "",
+                  "filter": "all"
+                }
+              ],
+              "watch": "visible.titles"
+            },
+            "original_fragment_digest": "35582fe3fddbb265d116a4467050b01def769efb09911395898c773e201b8d2d",
+            "alternative_fragment_digest": "60dbce311bfe7c3b2281df8400965974fd54dfc95f8369083d2a122f1b7f21fd"
+          }
+        },
+        {
+          "round": "options-repair",
+          "accepted": false,
+          "reason": "Invalid behavior description or public probe",
+          "option": {
+            "id": "persist-editing",
+            "original_behavior": "Does not persist the editing state to localStorage.",
+            "alternative_behavior": "Persists the editing state (id and title) to localStorage.",
+            "probe": {
+              "events": [],
+              "watch": "editing"
+            },
+            "original_fragment_digest": "28df801e15ef18819af09dd611def6553887cca8d148e58764d6663c9f1d17fa",
+            "alternative_fragment_digest": "8c6e9ad54e4a95d290a11e03c98cf081586d1a8f9c7b1aed8f9e4ac75a1febc4"
+          }
+        },
+        {
+          "round": "options-repair",
+          "accepted": false,
+          "reason": "Public host: Page.evaluate: Error: No todo for the selected subject\n    at eval (eval at evaluate (:311:30), <anonymous>:9:27)\n    at UtilityScript.evaluate (<anonymous>:318:18)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "option": {
+            "id": "clear-completed",
+            "original_behavior": "Removes completed todos from the state array.",
+            "alternative_behavior": "Marks all completed todos as active (unchecked) instead of removing them.",
+            "probe": {
+              "events": [
+                {
+                  "type": "toggle",
+                  "subject": "last",
+                  "title": "",
+                  "filter": "all"
+                }
+              ],
+              "watch": "visible.length"
+            },
+            "original_fragment_digest": "e75dab7c002c8ae3577941e43acc65607f8b0874c6f98780265acb071c64b5cf",
+            "alternative_fragment_digest": "ec0844341b2c5e1c0d3a70de6494633dff0873e56c03cdc74dfe4556e48d11d0"
+          }
+        }
+      ],
+      "paired_fixed": {
+        "tasks": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "self_passed": 0,
+        "comparator_passed": 8,
+        "self_only": [],
+        "comparator_only": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ]
+      },
+      "paired_direct": {
+        "tasks": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "self_passed": 0,
+        "comparator_passed": 5,
+        "self_only": [],
+        "comparator_only": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-06",
+          "todo-07"
+        ]
+      }
+    }
+  },
+  "summary": {
+    "direct": {
+      "direct": {
+        "passed": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-06",
+          "todo-07"
+        ],
+        "missing": []
+      }
+    },
+    "build-a": {
+      "self": {
+        "passed": [],
+        "missing": []
+      },
+      "fixed": {
+        "passed": [],
+        "missing": []
+      }
+    },
+    "build-b": {
+      "self": {
+        "passed": [],
+        "missing": []
+      },
+      "fixed": {
+        "passed": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "missing": []
+      }
+    }
+  },
+  "rows": [
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-01",
+      "status": "valid",
+      "files_sha256": "d8b02588c8f0670bca8b6c87ee581c7f4b00d473545e657ada479b101ee9e2ac",
+      "response_sha256": "4280b14a3fc107adfb64c01954e0b43b914e147bd825cb15e24046a0df9017a7",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "f8495d1ca696df3e79c8151b83a493b6f722ff43dcf10bf0de0aef00052e9b00"
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-02",
+      "status": "valid",
+      "files_sha256": "606d0e72fa3f5705ae4fb52cb5e88039a5c0dce44e40dabc6b0639fa7ff9ae69",
+      "response_sha256": "d36ac92c5c2e9abe3c789d7c016e8415e00afd2e75ba78a729e0bb9d3828ceb3",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "0c5d7c9d4bf10b5679a7043fc76d4f48968f263301b143ed84472d406274233a"
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-03",
+      "status": "valid",
+      "files_sha256": "6ac9546873776bb37245dfd3e41f5318d68a11f4377ab5153fc4e93dbd892a66",
+      "response_sha256": "37049f2415f832a68a97c053866f18a1b786d5f1a5f512840595eeac0de15347",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "25b47886153a7215bfb7b01b29b266098fdad70f4b307cc0d26222648e35c15b"
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-04",
+      "status": "valid",
+      "files_sha256": "ac865656ada958a9b151d3d0a80eb1e1d8f804dd05d4424f66a83144339bdcbd",
+      "response_sha256": "eaacd6a3d0c97aaf71ea77e12f142e9ca38d6a33965b20cabce9d85633662160",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "0e5ddd4d12ad2ad970cc09268293effdc1556b04f5f2c5de104bdb0d91b8ccc3"
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-05",
+      "status": "valid",
+      "files_sha256": "e70485734a908f9137e6095967869f78d691220164b8aa921019c64d16aa4cab",
+      "response_sha256": "e3d9817bf83e2a57edb28173eea0f04a3d2b4976fd9000ffbaf364ac72451480",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "cf7f11301ffb114dc1c85344004e315ecb4ec8a32815c4f5a72a6499bf88c714"
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-06",
+      "status": "valid",
+      "files_sha256": "ecb12faeccf30ed72dcd0502bb794b248fe80dd18eceac17f4ec23bbf13d08f8",
+      "response_sha256": "f8ef13a02d4f4c1da8369db7d5034407336f25b89711d650c19fc111930bff93",
+      "passed": true,
+      "official_tests": 10,
+      "report_sha256": "69b299c19a3d73992a2e5a75cb9c492d119f6354d916751b4057b082e7648b24"
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-07",
+      "status": "valid",
+      "files_sha256": "4b3ae7ee675f1cccb73f16a1adb3cbeb2102703308103136cb8fde3a7af5322a",
+      "response_sha256": "fc31daf9d220260f0b896f4bb46ddfd579319942836af231af58420cbe727369",
+      "passed": true,
+      "official_tests": 16,
+      "report_sha256": "7860acf4d35170cecaef12dc5ade07439d0203daf7cfa6b89f9de54f37b8ed92"
+    },
+    {
+      "group": "direct",
+      "arm": "direct",
+      "task": "todo-08",
+      "status": "valid",
+      "files_sha256": "cd56ea70459392e8f230da4ee7dd96588dd3d23751b88d5d275f050d1238c6fa",
+      "response_sha256": "1babda51301345240092617d89042e497dc11fe90bb399b6a574c7852d4675e4",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "2be655e13b80b698ea0d07219ec549a032114f4075c3c5ac8d4ccb0c67fb8d93"
+    },
+    {
+      "group": "build-a",
+      "arm": "fixed",
+      "task": "todo-01",
+      "status": "invalid",
+      "reason": "Plain controller failed both public admissions",
+      "passed": false
+    },
+    {
+      "group": "build-a",
+      "arm": "self",
+      "task": "todo-01",
+      "status": "invalid",
+      "reason": "Plain controller failed both public admissions",
+      "passed": false
+    },
+    {
+      "group": "build-b",
+      "arm": "fixed",
+      "task": "todo-01",
+      "status": "valid",
+      "files_sha256": "416e726ef26c29b7b041229cc477490b712889d724bc622d81c7c2447eef4cd4",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "1280576850ff6cf804009972870f2ce0e71fd9e89666eb733f7f073fc824ecd7"
+    },
+    {
+      "group": "build-b",
+      "arm": "self",
+      "task": "todo-01",
+      "status": "invalid",
+      "reason": "No public-admitted controller or certified control",
+      "passed": false
+    },
+    {
+      "group": "build-a",
+      "arm": "fixed",
+      "task": "todo-02",
+      "status": "invalid",
+      "reason": "Plain controller failed both public admissions",
+      "passed": false
+    },
+    {
+      "group": "build-a",
+      "arm": "self",
+      "task": "todo-02",
+      "status": "invalid",
+      "reason": "Plain controller failed both public admissions",
+      "passed": false
+    },
+    {
+      "group": "build-b",
+      "arm": "fixed",
+      "task": "todo-02",
+      "status": "valid",
+      "files_sha256": "416e726ef26c29b7b041229cc477490b712889d724bc622d81c7c2447eef4cd4",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "f7bbf0c5f64c76859c584570afa1a76f8fed0a172b756e62908b1cfea37396f0"
+    },
+    {
+      "group": "build-b",
+      "arm": "self",
+      "task": "todo-02",
+      "status": "invalid",
+      "reason": "No public-admitted controller or certified control",
+      "passed": false
+    },
+    {
+      "group": "build-a",
+      "arm": "fixed",
+      "task": "todo-03",
+      "status": "invalid",
+      "reason": "Plain controller failed both public admissions",
+      "passed": false
+    },
+    {
+      "group": "build-a",
+      "arm": "self",
+      "task": "todo-03",
+      "status": "invalid",
+      "reason": "Plain controller failed both public admissions",
+      "passed": false
+    },
+    {
+      "group": "build-b",
+      "arm": "fixed",
+      "task": "todo-03",
+      "status": "valid",
+      "files_sha256": "416e726ef26c29b7b041229cc477490b712889d724bc622d81c7c2447eef4cd4",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "6da4d22e657e8dd4b341542fb358cac679117139bc2ecf27fe50137475084b5c"
+    },
+    {
+      "group": "build-b",
+      "arm": "self",
+      "task": "todo-03",
+      "status": "invalid",
+      "reason": "No public-admitted controller or certified control",
+      "passed": false
+    },
+    {
+      "group": "build-a",
+      "arm": "fixed",
+      "task": "todo-04",
+      "status": "invalid",
+      "reason": "Plain controller failed both public admissions",
+      "passed": false
+    },
+    {
+      "group": "build-a",
+      "arm": "self",
+      "task": "todo-04",
+      "status": "invalid",
+      "reason": "Plain controller failed both public admissions",
+      "passed": false
+    },
+    {
+      "group": "build-b",
+      "arm": "fixed",
+      "task": "todo-04",
+      "status": "valid",
+      "files_sha256": "416e726ef26c29b7b041229cc477490b712889d724bc622d81c7c2447eef4cd4",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "2ae64a03e6794fe58c22f15eebc93899e0dc16d3e10567897441e50168d5f224"
+    },
+    {
+      "group": "build-b",
+      "arm": "self",
+      "task": "todo-04",
+      "status": "invalid",
+      "reason": "No public-admitted controller or certified control",
+      "passed": false
+    },
+    {
+      "group": "build-a",
+      "arm": "fixed",
+      "task": "todo-05",
+      "status": "invalid",
+      "reason": "Plain controller failed both public admissions",
+      "passed": false
+    },
+    {
+      "group": "build-a",
+      "arm": "self",
+      "task": "todo-05",
+      "status": "invalid",
+      "reason": "Plain controller failed both public admissions",
+      "passed": false
+    },
+    {
+      "group": "build-b",
+      "arm": "fixed",
+      "task": "todo-05",
+      "status": "valid",
+      "files_sha256": "416e726ef26c29b7b041229cc477490b712889d724bc622d81c7c2447eef4cd4",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "05069fee90902459e2755c96afefb549ae2e91c347b39b089a6ac67e5d98643d"
+    },
+    {
+      "group": "build-b",
+      "arm": "self",
+      "task": "todo-05",
+      "status": "invalid",
+      "reason": "No public-admitted controller or certified control",
+      "passed": false
+    },
+    {
+      "group": "build-a",
+      "arm": "fixed",
+      "task": "todo-06",
+      "status": "invalid",
+      "reason": "Plain controller failed both public admissions",
+      "passed": false
+    },
+    {
+      "group": "build-a",
+      "arm": "self",
+      "task": "todo-06",
+      "status": "invalid",
+      "reason": "Plain controller failed both public admissions",
+      "passed": false
+    },
+    {
+      "group": "build-b",
+      "arm": "fixed",
+      "task": "todo-06",
+      "status": "valid",
+      "files_sha256": "416e726ef26c29b7b041229cc477490b712889d724bc622d81c7c2447eef4cd4",
+      "passed": true,
+      "official_tests": 10,
+      "report_sha256": "4c9bbde07c9a9f05b1dfc12c20ea2e0c23500c06c779c91dbea8ad973221d83f"
+    },
+    {
+      "group": "build-b",
+      "arm": "self",
+      "task": "todo-06",
+      "status": "invalid",
+      "reason": "No public-admitted controller or certified control",
+      "passed": false
+    },
+    {
+      "group": "build-a",
+      "arm": "fixed",
+      "task": "todo-07",
+      "status": "invalid",
+      "reason": "Plain controller failed both public admissions",
+      "passed": false
+    },
+    {
+      "group": "build-a",
+      "arm": "self",
+      "task": "todo-07",
+      "status": "invalid",
+      "reason": "Plain controller failed both public admissions",
+      "passed": false
+    },
+    {
+      "group": "build-b",
+      "arm": "fixed",
+      "task": "todo-07",
+      "status": "valid",
+      "files_sha256": "416e726ef26c29b7b041229cc477490b712889d724bc622d81c7c2447eef4cd4",
+      "passed": true,
+      "official_tests": 16,
+      "report_sha256": "fe00e12150d026b173fa25cf72228e61ea358d32305a36db9e0944ada4a29f01"
+    },
+    {
+      "group": "build-b",
+      "arm": "self",
+      "task": "todo-07",
+      "status": "invalid",
+      "reason": "No public-admitted controller or certified control",
+      "passed": false
+    },
+    {
+      "group": "build-a",
+      "arm": "fixed",
+      "task": "todo-08",
+      "status": "invalid",
+      "reason": "Plain controller failed both public admissions",
+      "passed": false
+    },
+    {
+      "group": "build-a",
+      "arm": "self",
+      "task": "todo-08",
+      "status": "invalid",
+      "reason": "Plain controller failed both public admissions",
+      "passed": false
+    },
+    {
+      "group": "build-b",
+      "arm": "fixed",
+      "task": "todo-08",
+      "status": "valid",
+      "files_sha256": "416e726ef26c29b7b041229cc477490b712889d724bc622d81c7c2447eef4cd4",
+      "passed": true,
+      "official_tests": 24,
+      "report_sha256": "13edf0598017a6bb226c3ae48eb8826cb609c435fd4e48fa9d7c9e8b78ed2b6d"
+    },
+    {
+      "group": "build-b",
+      "arm": "self",
+      "task": "todo-08",
+      "status": "invalid",
+      "reason": "No public-admitted controller or certified control",
+      "passed": false
+    }
+  ],
+  "budget": {
+    "calls": 5,
+    "settled_usd": 0.001175,
+    "exposure_usd": 0.001175,
+    "unsettled_calls": 0,
+    "cap_usd": 0.8,
+    "stop_usd": 0.8,
+    "halted": 0
+  },
+  "cost_by_stage": {
+    "build-a/controller": {
+      "calls": 2,
+      "settled_microusd": 432,
+      "exposure_microusd": 432
+    },
+    "build-b/options": {
+      "calls": 2,
+      "settled_microusd": 545,
+      "exposure_microusd": 545
+    },
+    "build-b/controller": {
+      "calls": 1,
+      "settled_microusd": 198,
+      "exposure_microusd": 198
+    }
+  },
+  "requests": [
+    {
+      "purpose": "build-a/build/source",
+      "request_sha256": "95c7ec7308a64f9ebee45ff1a31358d5cb59deeec04bb98e1cdc9433a0b8d509",
+      "response_sha256": "f7100e32d666f2c3ee453bf4d7a287e62170c9d415fa8d459b3a15d7f3939991"
+    },
+    {
+      "purpose": "build-a/build/source-repair",
+      "request_sha256": "b75c6c054a28b4297082e6485bdac2cff1e73d438a76b8ba495cbd70b824a341",
+      "response_sha256": "b89c8468cf04f841fd0ad1f3d68d9177a2459c5c778299817315a024d99645d0"
+    },
+    {
+      "purpose": "build-b/build/options",
+      "request_sha256": "616b09a46e95b995d01a379c2628ae1a16c1493279f55b48cfa255770fe7c3d0",
+      "response_sha256": "8b64fe03e49b3fffc046840c756a0cee0ef417ace31a4703a32ee065e5a339bd"
+    },
+    {
+      "purpose": "build-b/build/options-repair",
+      "request_sha256": "57cb30dbd42253977479dcc42d51046dd9afa788da178fce7df0f7701b548eec",
+      "response_sha256": "f44c0d60ade7ed276cbeb9df14fe9431b29b0b2793ec1529bb5250a58982de26"
+    },
+    {
+      "purpose": "build-b/build/source",
+      "request_sha256": "b73074b0ff6c57ba5d62bf7f46189c6ee117a6ac965f8ca64bc3ba1353be515e",
+      "response_sha256": "7d340466fd43e6a3fcf7190e2f7e32e82d5b106a8c999badf9305b10b2e29fc6"
+    }
+  ]
+}

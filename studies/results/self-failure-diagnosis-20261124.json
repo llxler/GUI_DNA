@@ -1,0 +1,2049 @@
+{
+  "public": {
+    "sources_sha256": {
+      "backbone-matrix-20261124.json": "4297c24cad773da768b64a4e40e3407b4c442ac6f233bdd3000ac2bc87dd2892",
+      "backbone-extension-20261124.json": "dd106ce607867c66aca2e56adc48a5e28608e1fbcf391862d8a33869336af1d6",
+      "backbone-form-20261124.json": "b66b7d82b0fca2e3111f4e2e13a0688100b61e598aec7ed6f1d3c7f125689caf",
+      "public-library-transfer-calibration-20261123.json": "287ed59d49b1c064e8f53e9bebc37406b35d33fb09afe4dab9f0faf5187ffe89"
+    },
+    "unavailable_routes": {
+      "openai/gpt-5-mini": {
+        "table": {
+          "reason": "HTTP 403",
+          "self_targets_missing": 20
+        },
+        "svg-chart": {
+          "reason": "HTTP 403",
+          "self_targets_missing": 20
+        }
+      },
+      "openai/gpt-5": {
+        "table": {
+          "reason": "HTTP 403",
+          "self_targets_missing": 20
+        },
+        "svg-chart": {
+          "reason": "HTTP 403",
+          "self_targets_missing": 20
+        }
+      },
+      "anthropic/claude-haiku-4.5": {
+        "table": {
+          "reason": "HTTP 403",
+          "self_targets_missing": 20
+        },
+        "svg-chart": {
+          "reason": "HTTP 403",
+          "self_targets_missing": 20
+        }
+      },
+      "anthropic/claude-sonnet-4.5": {
+        "table": {
+          "reason": "HTTP 403",
+          "self_targets_missing": 20
+        },
+        "svg-chart": {
+          "reason": "HTTP 403",
+          "self_targets_missing": 20
+        }
+      },
+      "google/gemini-2.5-flash": {
+        "table": {
+          "reason": "HTTP 403",
+          "self_targets_missing": 20
+        },
+        "svg-chart": {
+          "reason": "HTTP 403",
+          "self_targets_missing": 20
+        }
+      }
+    },
+    "self_library_builds": {
+      "valid": 8,
+      "build_failed": 13
+    },
+    "final_rejection_messages": {
+      "ValueError: ['TypeError: this.getRandomColor is not a function']": 1,
+      "ValueError: Fragment anchor must occur exactly once in starter index.html": 2,
+      "ValueError: Invalid control type/domain": 2,
+      "ValueError: [\"SyntaxError: The requested module './common/table.js' does not provide an export named 'initTable'\"]": 1,
+      "ValueError: Expected a unique lowercase semantic id and behavior": 2,
+      "JSONDecodeError: Expecting value: line 1 column 1 (char 0)": 2,
+      "ValueError: [\"SyntaxError: Unexpected token 'export'\"]": 1,
+      "ValueError: Unsupported website file: './common/Question.js'": 1,
+      "JSONDecodeError: Unterminated string starting at: line 64 column 18 (char 5074)": 1
+    },
+    "scheduled_failure_location_counts": {
+      "self": {
+        "page_failed": 127,
+        "invalid": 21,
+        "page_passed": 12,
+        "build_failed": 260
+      },
+      "fixed": {
+        "page_failed": 145,
+        "page_passed": 15,
+        "build_failed": 260
+      },
+      "direct": {
+        "page_passed": 64,
+        "page_failed": 135,
+        "missing": 8,
+        "invalid": 213
+      },
+      "human": {
+        "invalid": 123,
+        "missing": 17,
+        "page_passed": 277,
+        "page_failed": 3
+      },
+      "gpt5-library": {
+        "invalid": 158,
+        "missing": 17,
+        "page_passed": 127,
+        "page_failed": 118
+      }
+    },
+    "both_pages_delivered_by_comparator": {
+      "fixed": {
+        "neither": 127,
+        "both": 12
+      },
+      "direct": {
+        "comparator_only": 22,
+        "neither": 44,
+        "both": 8,
+        "self_only": 1
+      },
+      "human": {
+        "comparator_only": 90,
+        "both": 10,
+        "self_only": 1,
+        "neither": 2
+      },
+      "gpt5-library": {
+        "both": 11,
+        "comparator_only": 38,
+        "neither": 40,
+        "self_only": 1
+      }
+    },
+    "per_project_failure_locations": {
+      "table": {
+        "self": {
+          "page_failed": 48,
+          "invalid": 12,
+          "build_failed": 80
+        },
+        "fixed": {
+          "page_failed": 57,
+          "page_passed": 3,
+          "build_failed": 80
+        },
+        "direct": {
+          "page_passed": 18,
+          "page_failed": 54,
+          "missing": 3,
+          "invalid": 65
+        },
+        "human": {
+          "invalid": 41,
+          "missing": 13,
+          "page_passed": 86
+        },
+        "gpt5-library": {
+          "invalid": 45,
+          "missing": 2,
+          "page_failed": 80,
+          "page_passed": 13
+        }
+      },
+      "svg-chart": {
+        "self": {
+          "page_passed": 2,
+          "page_failed": 33,
+          "invalid": 5,
+          "build_failed": 100
+        },
+        "fixed": {
+          "page_passed": 2,
+          "page_failed": 38,
+          "build_failed": 100
+        },
+        "direct": {
+          "invalid": 78,
+          "page_passed": 11,
+          "page_failed": 51
+        },
+        "human": {
+          "invalid": 48,
+          "page_passed": 92
+        },
+        "gpt5-library": {
+          "page_passed": 71,
+          "missing": 4,
+          "invalid": 53,
+          "page_failed": 12
+        }
+      },
+      "form": {
+        "self": {
+          "page_failed": 46,
+          "build_failed": 80,
+          "page_passed": 10,
+          "invalid": 4
+        },
+        "fixed": {
+          "page_failed": 50,
+          "build_failed": 80,
+          "page_passed": 10
+        },
+        "direct": {
+          "page_passed": 35,
+          "page_failed": 30,
+          "missing": 5,
+          "invalid": 70
+        },
+        "human": {
+          "invalid": 34,
+          "missing": 4,
+          "page_passed": 99,
+          "page_failed": 3
+        },
+        "gpt5-library": {
+          "page_failed": 26,
+          "missing": 11,
+          "invalid": 60,
+          "page_passed": 43
+        }
+      }
+    },
+    "blank_control_passed": {
+      "form": [],
+      "table": [],
+      "svg-chart": [
+        1
+      ]
+    },
+    "by_deployer_and_project": {
+      "qwen/qwen3-coder-30b-a3b-instruct": {
+        "table": {
+          "self_build": "valid",
+          "public_errors": [],
+          "scheduled_by_arm": {
+            "self": {
+              "page_failed": 19,
+              "invalid": 1
+            },
+            "fixed": {
+              "page_failed": 19,
+              "page_passed": 1
+            },
+            "direct": {
+              "page_passed": 3,
+              "page_failed": 15,
+              "missing": 1,
+              "invalid": 1
+            },
+            "human": {
+              "invalid": 7,
+              "missing": 13
+            },
+            "gpt5-library": {
+              "invalid": 18,
+              "missing": 2
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {
+              "neither": 19
+            },
+            "direct": {
+              "comparator_only": 2,
+              "neither": 15
+            },
+            "human": {},
+            "gpt5-library": {}
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": [
+              4
+            ]
+          }
+        },
+        "svg-chart": {
+          "self_build": "valid",
+          "public_errors": [],
+          "scheduled_by_arm": {
+            "self": {
+              "page_passed": 1,
+              "page_failed": 15,
+              "invalid": 4
+            },
+            "fixed": {
+              "page_passed": 1,
+              "page_failed": 19
+            },
+            "direct": {
+              "invalid": 20
+            },
+            "human": {
+              "invalid": 8,
+              "page_passed": 12
+            },
+            "gpt5-library": {
+              "page_passed": 15,
+              "missing": 2,
+              "invalid": 1,
+              "page_failed": 2
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {
+              "both": 1,
+              "neither": 15
+            },
+            "direct": {},
+            "human": {
+              "comparator_only": 11
+            },
+            "gpt5-library": {
+              "both": 1,
+              "comparator_only": 13,
+              "neither": 2
+            }
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": []
+          }
+        },
+        "form": {
+          "self_build": "valid",
+          "public_errors": [],
+          "scheduled_by_arm": {
+            "self": {
+              "page_failed": 20
+            },
+            "fixed": {
+              "page_failed": 20
+            },
+            "direct": {
+              "page_passed": 9,
+              "page_failed": 5,
+              "missing": 3,
+              "invalid": 3
+            },
+            "human": {
+              "invalid": 2,
+              "missing": 4,
+              "page_passed": 14
+            },
+            "gpt5-library": {
+              "page_failed": 4,
+              "missing": 9,
+              "invalid": 7
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {
+              "neither": 20
+            },
+            "direct": {
+              "comparator_only": 9,
+              "neither": 5
+            },
+            "human": {
+              "comparator_only": 14
+            },
+            "gpt5-library": {
+              "neither": 4
+            }
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": []
+          }
+        }
+      },
+      "mistralai/mistral-small-3.2-24b-instruct": {
+        "table": {
+          "self_build": "valid",
+          "public_errors": [],
+          "scheduled_by_arm": {
+            "self": {
+              "invalid": 11,
+              "page_failed": 9
+            },
+            "fixed": {
+              "page_passed": 2,
+              "page_failed": 18
+            },
+            "direct": {
+              "page_passed": 5,
+              "page_failed": 13,
+              "missing": 2
+            },
+            "human": {
+              "page_passed": 20
+            },
+            "gpt5-library": {
+              "page_failed": 17,
+              "page_passed": 3
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {
+              "neither": 9
+            },
+            "direct": {
+              "neither": 7,
+              "comparator_only": 1
+            },
+            "human": {
+              "comparator_only": 9
+            },
+            "gpt5-library": {
+              "neither": 8,
+              "comparator_only": 1
+            }
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": [
+              1,
+              4
+            ]
+          }
+        },
+        "svg-chart": {
+          "self_build": "build_failed",
+          "public_errors": [
+            "ValueError: ['ReferenceError: ScatterChart is not defined']",
+            "ValueError: ['TypeError: this.getRandomColor is not a function']"
+          ],
+          "scheduled_by_arm": {
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            },
+            "direct": {
+              "page_passed": 3,
+              "page_failed": 17
+            },
+            "human": {
+              "page_passed": 13,
+              "invalid": 7
+            },
+            "gpt5-library": {
+              "page_passed": 7,
+              "invalid": 12,
+              "missing": 1
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {},
+            "direct": {},
+            "human": {},
+            "gpt5-library": {}
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": []
+          }
+        },
+        "form": {
+          "self_build": "build_failed",
+          "public_errors": [
+            "ValueError: Expected a unique lowercase semantic id and behavior",
+            "ValueError: Invalid control type/domain"
+          ],
+          "scheduled_by_arm": {
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            },
+            "direct": {
+              "page_passed": 2,
+              "page_failed": 9,
+              "invalid": 9
+            },
+            "human": {
+              "page_passed": 20
+            },
+            "gpt5-library": {
+              "page_failed": 3,
+              "invalid": 15,
+              "page_passed": 1,
+              "missing": 1
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {},
+            "direct": {},
+            "human": {},
+            "gpt5-library": {}
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": []
+          }
+        }
+      },
+      "openai/gpt-oss-120b": {
+        "table": {
+          "self_build": "valid",
+          "public_errors": [],
+          "scheduled_by_arm": {
+            "self": {
+              "page_failed": 20
+            },
+            "fixed": {
+              "page_failed": 20
+            },
+            "direct": {
+              "page_passed": 7,
+              "page_failed": 12,
+              "invalid": 1
+            },
+            "human": {
+              "page_passed": 20
+            },
+            "gpt5-library": {
+              "page_failed": 17,
+              "page_passed": 3
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {
+              "neither": 20
+            },
+            "direct": {
+              "comparator_only": 7,
+              "neither": 12
+            },
+            "human": {
+              "comparator_only": 20
+            },
+            "gpt5-library": {
+              "neither": 17,
+              "comparator_only": 3
+            }
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": []
+          }
+        },
+        "svg-chart": {
+          "self_build": "build_failed",
+          "public_errors": [
+            "KeyError: 'files'",
+            "ValueError: Fragment anchor must occur exactly once in starter index.html"
+          ],
+          "scheduled_by_arm": {
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            },
+            "direct": {
+              "page_passed": 2,
+              "page_failed": 15,
+              "invalid": 3
+            },
+            "human": {
+              "page_passed": 20
+            },
+            "gpt5-library": {
+              "page_passed": 16,
+              "invalid": 1,
+              "page_failed": 3
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {},
+            "direct": {},
+            "human": {},
+            "gpt5-library": {}
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": []
+          }
+        },
+        "form": {
+          "self_build": "valid",
+          "public_errors": [
+            "ValueError: [\"SyntaxError: Unexpected token ')'\"]"
+          ],
+          "scheduled_by_arm": {
+            "self": {
+              "page_passed": 10,
+              "page_failed": 10
+            },
+            "fixed": {
+              "page_passed": 10,
+              "page_failed": 10
+            },
+            "direct": {
+              "page_passed": 10,
+              "invalid": 3,
+              "page_failed": 5,
+              "missing": 2
+            },
+            "human": {
+              "page_passed": 19,
+              "page_failed": 1
+            },
+            "gpt5-library": {
+              "page_passed": 14,
+              "page_failed": 6
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {
+              "both": 10,
+              "neither": 10
+            },
+            "direct": {
+              "both": 8,
+              "self_only": 1,
+              "neither": 4,
+              "comparator_only": 2
+            },
+            "human": {
+              "both": 9,
+              "comparator_only": 10,
+              "self_only": 1
+            },
+            "gpt5-library": {
+              "both": 9,
+              "comparator_only": 5,
+              "neither": 5,
+              "self_only": 1
+            }
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": []
+          }
+        }
+      },
+      "google/gemma-3-12b-it": {
+        "table": {
+          "self_build": "build_failed",
+          "public_errors": [
+            "ValueError: Invalid control type/domain",
+            "ValueError: Invalid control type/domain"
+          ],
+          "scheduled_by_arm": {
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            },
+            "direct": {
+              "page_failed": 14,
+              "invalid": 6
+            },
+            "human": {
+              "invalid": 19,
+              "page_passed": 1
+            },
+            "gpt5-library": {
+              "invalid": 20
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {},
+            "direct": {},
+            "human": {},
+            "gpt5-library": {}
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": []
+          }
+        },
+        "svg-chart": {
+          "self_build": "build_failed",
+          "public_errors": [
+            "ValueError: Expected a unique lowercase semantic id and behavior",
+            "ValueError: Fragment anchor must occur exactly once in starter index.html"
+          ],
+          "scheduled_by_arm": {
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            },
+            "direct": {
+              "page_passed": 2,
+              "page_failed": 13,
+              "invalid": 5
+            },
+            "human": {
+              "invalid": 18,
+              "page_passed": 2
+            },
+            "gpt5-library": {
+              "invalid": 20
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {},
+            "direct": {},
+            "human": {},
+            "gpt5-library": {}
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": []
+          }
+        },
+        "form": {
+          "self_build": "build_failed",
+          "public_errors": [
+            "ValueError: Expected a unique lowercase semantic id and behavior",
+            "ValueError: Unsupported website file: './common/Question.js'"
+          ],
+          "scheduled_by_arm": {
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            },
+            "direct": {
+              "page_passed": 4,
+              "page_failed": 11,
+              "invalid": 5
+            },
+            "human": {
+              "invalid": 20
+            },
+            "gpt5-library": {
+              "page_failed": 1,
+              "invalid": 19
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {},
+            "direct": {},
+            "human": {},
+            "gpt5-library": {}
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": []
+          }
+        }
+      },
+      "deepseek/deepseek-v4-pro-0813": {
+        "table": {
+          "self_build": "build_failed",
+          "public_errors": [
+            "JSONDecodeError: Unterminated string starting at: line 72 column 18 (char 11661)",
+            "ValueError: [\"SyntaxError: The requested module './common/table.js' does not provide an export named 'initTable'\"]"
+          ],
+          "scheduled_by_arm": {
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            },
+            "direct": {
+              "page_passed": 2,
+              "invalid": 18
+            },
+            "human": {
+              "page_passed": 20
+            },
+            "gpt5-library": {
+              "page_failed": 17,
+              "page_passed": 3
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {},
+            "direct": {},
+            "human": {},
+            "gpt5-library": {}
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": []
+          }
+        },
+        "svg-chart": {
+          "self_build": "build_failed",
+          "public_errors": [
+            "JSONDecodeError: Unterminated string starting at: line 60 column 18 (char 1667)",
+            "ValueError: Expected a unique lowercase semantic id and behavior"
+          ],
+          "scheduled_by_arm": {
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            },
+            "direct": {
+              "page_passed": 3,
+              "page_failed": 1,
+              "invalid": 16
+            },
+            "human": {
+              "page_passed": 20
+            },
+            "gpt5-library": {
+              "page_passed": 16,
+              "page_failed": 3,
+              "missing": 1
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {},
+            "direct": {},
+            "human": {},
+            "gpt5-library": {}
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": []
+          }
+        },
+        "form": {
+          "self_build": "build_failed",
+          "public_errors": [
+            "JSONDecodeError: Unterminated string starting at: line 72 column 18 (char 13030)",
+            "JSONDecodeError: Unterminated string starting at: line 64 column 18 (char 5074)"
+          ],
+          "scheduled_by_arm": {
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            },
+            "direct": {
+              "page_passed": 6,
+              "invalid": 14
+            },
+            "human": {
+              "page_passed": 20
+            },
+            "gpt5-library": {
+              "page_passed": 13,
+              "page_failed": 7
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {},
+            "direct": {},
+            "human": {},
+            "gpt5-library": {}
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": []
+          }
+        }
+      },
+      "deepseek/deepseek-v4-flash": {
+        "table": {
+          "self_build": "build_failed",
+          "public_errors": [
+            "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+            "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+          ],
+          "scheduled_by_arm": {
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            },
+            "direct": {
+              "page_passed": 1,
+              "invalid": 19
+            },
+            "human": {
+              "page_passed": 19,
+              "invalid": 1
+            },
+            "gpt5-library": {
+              "page_failed": 17,
+              "page_passed": 3
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {},
+            "direct": {},
+            "human": {},
+            "gpt5-library": {}
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": []
+          }
+        },
+        "svg-chart": {
+          "self_build": "valid",
+          "public_errors": [
+            "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+          ],
+          "scheduled_by_arm": {
+            "self": {
+              "page_passed": 1,
+              "page_failed": 18,
+              "invalid": 1
+            },
+            "fixed": {
+              "page_passed": 1,
+              "page_failed": 19
+            },
+            "direct": {
+              "invalid": 18,
+              "page_passed": 1,
+              "page_failed": 1
+            },
+            "human": {
+              "page_passed": 20
+            },
+            "gpt5-library": {
+              "page_passed": 16,
+              "invalid": 1,
+              "page_failed": 3
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {
+              "both": 1,
+              "neither": 18
+            },
+            "direct": {
+              "comparator_only": 1,
+              "neither": 1
+            },
+            "human": {
+              "both": 1,
+              "comparator_only": 18
+            },
+            "gpt5-library": {
+              "both": 1,
+              "comparator_only": 14,
+              "neither": 3
+            }
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": []
+          }
+        },
+        "form": {
+          "self_build": "build_failed",
+          "public_errors": [
+            "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+            "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+          ],
+          "scheduled_by_arm": {
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            },
+            "direct": {
+              "page_passed": 4,
+              "invalid": 16
+            },
+            "human": {
+              "page_passed": 17,
+              "invalid": 3
+            },
+            "gpt5-library": {
+              "page_passed": 13,
+              "invalid": 4,
+              "page_failed": 3
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {},
+            "direct": {},
+            "human": {},
+            "gpt5-library": {}
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": []
+          }
+        }
+      },
+      "qwen/qwen3.5-9b": {
+        "table": {
+          "self_build": "build_failed",
+          "public_errors": [
+            "JSONDecodeError: Unterminated string starting at: line 82 column 18 (char 52628)",
+            "ValueError: [\"SyntaxError: Unexpected token 'export'\"]"
+          ],
+          "scheduled_by_arm": {
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            },
+            "direct": {
+              "invalid": 20
+            },
+            "human": {
+              "invalid": 14,
+              "page_passed": 6
+            },
+            "gpt5-library": {
+              "invalid": 7,
+              "page_failed": 12,
+              "page_passed": 1
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {},
+            "direct": {},
+            "human": {},
+            "gpt5-library": {}
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": []
+          }
+        },
+        "svg-chart": {
+          "self_build": "build_failed",
+          "public_errors": [
+            "ValueError: Expected a unique lowercase semantic id and behavior",
+            "ValueError: Expected a unique lowercase semantic id and behavior"
+          ],
+          "scheduled_by_arm": {
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            },
+            "direct": {
+              "invalid": 16,
+              "page_failed": 4
+            },
+            "human": {
+              "invalid": 15,
+              "page_passed": 5
+            },
+            "gpt5-library": {
+              "invalid": 18,
+              "page_passed": 1,
+              "page_failed": 1
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {},
+            "direct": {},
+            "human": {},
+            "gpt5-library": {}
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": []
+          }
+        },
+        "form": {
+          "self_build": "valid",
+          "public_errors": [
+            "ValueError: Default/example outside control domain"
+          ],
+          "scheduled_by_arm": {
+            "self": {
+              "invalid": 4,
+              "page_failed": 16
+            },
+            "fixed": {
+              "page_failed": 20
+            },
+            "direct": {
+              "invalid": 20
+            },
+            "human": {
+              "page_passed": 9,
+              "page_failed": 2,
+              "invalid": 9
+            },
+            "gpt5-library": {
+              "invalid": 15,
+              "page_passed": 2,
+              "missing": 1,
+              "page_failed": 2
+            }
+          },
+          "both_pages_delivered": {
+            "fixed": {
+              "neither": 16
+            },
+            "direct": {},
+            "human": {
+              "comparator_only": 8,
+              "neither": 2
+            },
+            "gpt5-library": {
+              "comparator_only": 2,
+              "neither": 1
+            }
+          },
+          "fixed_vs_per_target_discordant_targets": {
+            "self_only": [],
+            "comparator_only": []
+          }
+        }
+      }
+    }
+  },
+  "archived_receipts": {
+    "self_build_responses": [
+      {
+        "builder": "qwen/qwen3-coder-30b-a3b-instruct",
+        "project": "table",
+        "attempts": [
+          {
+            "response_sha256": "273ab5ad441dc22246018dfd8236710c09216fccf99b057ec6cfd722a19e4bf4",
+            "visible_characters": 20455,
+            "finish_reason": "stop",
+            "completion_tokens": 5552
+          }
+        ],
+        "package_sha256": "0104cb4b7cd9e4920ef6015fed32911ebec5567621e9970787b5ef9f57698d2e",
+        "control_ids": [
+          "mode",
+          "selection",
+          "editing",
+          "dragging",
+          "filtering",
+          "sorting"
+        ]
+      },
+      {
+        "builder": "qwen/qwen3-coder-30b-a3b-instruct",
+        "project": "svg-chart",
+        "attempts": [
+          {
+            "response_sha256": "c7f02efb20ce6539c6edb2c20a9b7c803e964c390db99fd3b2217e61cd5b7de3",
+            "visible_characters": 10403,
+            "finish_reason": "stop",
+            "completion_tokens": 3004
+          }
+        ],
+        "package_sha256": "4f6e19b7073717b18001309f0866b799af3ed3eb4b7341f23f92d474151ce4e3",
+        "control_ids": [
+          "show-axes",
+          "show-grids",
+          "show-legends",
+          "point-style",
+          "line-smooth",
+          "show-tooltips"
+        ]
+      },
+      {
+        "builder": "mistralai/mistral-small-3.2-24b-instruct",
+        "project": "table",
+        "attempts": [
+          {
+            "response_sha256": "b7a1a601b87aff5f7f4804b520ae0ada2bc762862ce79933368c77cfd4971ca2",
+            "visible_characters": 17467,
+            "finish_reason": "stop",
+            "completion_tokens": 4788
+          }
+        ],
+        "package_sha256": "5531b642d8e9afca711bcfa0ff982b915672c5a81114cc1699acdee7df6c7655",
+        "control_ids": [
+          "context-menu",
+          "cell-selection",
+          "keyboard-navigation",
+          "cell-editing",
+          "row-column-manipulation",
+          "filter-sort"
+        ]
+      },
+      {
+        "builder": "mistralai/mistral-small-3.2-24b-instruct",
+        "project": "svg-chart",
+        "attempts": [
+          {
+            "response_sha256": "6402582796bc5b83655d51fd970b2e35789220d0af3eb6291e6b36b36b586e84",
+            "visible_characters": 8893,
+            "finish_reason": "stop",
+            "completion_tokens": 2691
+          },
+          {
+            "response_sha256": "85e49a852ca8f46e6eca17f095d5dab9e1ba051913cf1d34ae0db420228146bb",
+            "visible_characters": 16322,
+            "finish_reason": "stop",
+            "completion_tokens": 4924
+          }
+        ]
+      },
+      {
+        "builder": "openai/gpt-oss-120b",
+        "project": "table",
+        "attempts": [
+          {
+            "response_sha256": "80563c0c595c84e92a3812ab53fa98fbbb9d543b2c418c6b59896fd386f0c69c",
+            "visible_characters": 979,
+            "finish_reason": "stop",
+            "completion_tokens": 287
+          }
+        ],
+        "package_sha256": "1c08789f7412fa71b04d29df456a4d1330d6603224ca79531bd1809184e3e053",
+        "control_ids": [
+          "compact"
+        ]
+      },
+      {
+        "builder": "openai/gpt-oss-120b",
+        "project": "svg-chart",
+        "attempts": [
+          {
+            "response_sha256": "dd810b7a3272e3f77b16a86949faee70e0deef8a77d076aad77c9b3f59db2b19",
+            "visible_characters": 10042,
+            "finish_reason": "stop",
+            "completion_tokens": 2755
+          },
+          {
+            "response_sha256": "1f515ccee0ba65b6b1b94d4e837544477791410e190f34254051ee6deedf8ba6",
+            "visible_characters": 9047,
+            "finish_reason": "stop",
+            "completion_tokens": 2560
+          }
+        ]
+      },
+      {
+        "builder": "google/gemma-3-12b-it",
+        "project": "table",
+        "attempts": [
+          {
+            "response_sha256": "1fe6d613b775ce2ec8c26de366c4e190f3fa28c9e84f778d91c9ca8e59118086",
+            "visible_characters": 3798,
+            "finish_reason": "stop",
+            "completion_tokens": 1239
+          },
+          {
+            "response_sha256": "2ba0103b18719a6cb46871825b58e92d39db4941172825ef27f6921e3cd7376d",
+            "visible_characters": 3798,
+            "finish_reason": "stop",
+            "completion_tokens": 1239
+          }
+        ]
+      },
+      {
+        "builder": "google/gemma-3-12b-it",
+        "project": "svg-chart",
+        "attempts": [
+          {
+            "response_sha256": "e10bb24c9955f036d42c88d8a70a7c913eff768acfc8760dc619055fa5c2e70b",
+            "visible_characters": 4656,
+            "finish_reason": "stop",
+            "completion_tokens": 1383
+          },
+          {
+            "response_sha256": "7c83c5afd6e588d20ce054713ba251d64c472f051d9afd5f9459bdddf4eb6495",
+            "visible_characters": 4666,
+            "finish_reason": "stop",
+            "completion_tokens": 1393
+          }
+        ]
+      },
+      {
+        "builder": "deepseek/deepseek-v4-pro-0813",
+        "project": "table",
+        "attempts": [
+          {
+            "response_sha256": "4ddfbada3cd32cdf4e8fccab0b48de61551095b26db1811362ebe92630707f2f",
+            "visible_characters": 14266,
+            "finish_reason": "length",
+            "completion_tokens": 16000
+          },
+          {
+            "response_sha256": "2bd0c33ff1a110db8d1dab4d79ad6bc028f3c9319130d8b574d55da20b354d9b",
+            "visible_characters": 24718,
+            "finish_reason": "stop",
+            "completion_tokens": 7713
+          }
+        ]
+      },
+      {
+        "builder": "deepseek/deepseek-v4-pro-0813",
+        "project": "svg-chart",
+        "attempts": [
+          {
+            "response_sha256": "a91726f743876393f20ee521fa23d2487b7dd5487f0f8a4b02a723a1c47ec78e",
+            "visible_characters": 6341,
+            "finish_reason": "length",
+            "completion_tokens": 16000
+          },
+          {
+            "response_sha256": "db1afbecb21cc5c517ad29430c11a05602075b41bfedb0f784da7d0c133eb012",
+            "visible_characters": 26420,
+            "finish_reason": "stop",
+            "completion_tokens": 10349
+          }
+        ]
+      },
+      {
+        "builder": "deepseek/deepseek-v4-flash",
+        "project": "table",
+        "attempts": [
+          {
+            "response_sha256": "b7dfcfe72e282daad59d531859b2580c9898a7ea3596d4aee8f9c4f1109d245c",
+            "visible_characters": 0,
+            "finish_reason": "length",
+            "completion_tokens": 16000
+          },
+          {
+            "response_sha256": "28a24cdc4513fea246e3bc7f8b62fb7ef448335dff91bc9fdb9c8277c050bec9",
+            "visible_characters": 0,
+            "finish_reason": "length",
+            "completion_tokens": 16000
+          }
+        ]
+      },
+      {
+        "builder": "deepseek/deepseek-v4-flash",
+        "project": "svg-chart",
+        "attempts": [
+          {
+            "response_sha256": "153ce8050e46bb61a2791b4960542ab8240f901b0d1a62ea04f2d07c22e68140",
+            "visible_characters": 0,
+            "finish_reason": "length",
+            "completion_tokens": 16000
+          },
+          {
+            "response_sha256": "6b26026b943cc6d6e6d5d6c156b8e2f8589c1eacdec10e8733f52ad4da87de6b",
+            "visible_characters": 6741,
+            "finish_reason": "stop",
+            "completion_tokens": 12377
+          }
+        ],
+        "package_sha256": "e3c9c975d44b5e230d97f14f073fe2a56db7d9acef15c31eb4aa48051b43086e",
+        "control_ids": [
+          "axes",
+          "grids",
+          "legends",
+          "point-style",
+          "data-labels",
+          "line-smooth"
+        ]
+      },
+      {
+        "builder": "qwen/qwen3.5-9b",
+        "project": "table",
+        "attempts": [
+          {
+            "response_sha256": "e13c0834f4d2516e08e455e25fccafca037a876826b64c9b4201e02c9d7c0103",
+            "visible_characters": 53259,
+            "finish_reason": "length",
+            "completion_tokens": 16000
+          },
+          {
+            "response_sha256": "235d1fb70e88b9d94243c17c44cc768bd64f81f8949097ac553590c7a091982c",
+            "visible_characters": 23423,
+            "finish_reason": "stop",
+            "completion_tokens": 7276
+          }
+        ]
+      },
+      {
+        "builder": "qwen/qwen3.5-9b",
+        "project": "svg-chart",
+        "attempts": [
+          {
+            "response_sha256": "2abeb0da939112d3bd460715cd2f89a6749bd3f6b603a39435e9f246223ed0ab",
+            "visible_characters": 31698,
+            "finish_reason": "stop",
+            "completion_tokens": 9523
+          },
+          {
+            "response_sha256": "3bffb5ac765a55de1688d2790b47038d2820f26fbc6970352342f09d5bd3f4c0",
+            "visible_characters": 32073,
+            "finish_reason": "stop",
+            "completion_tokens": 9942
+          }
+        ]
+      },
+      {
+        "builder": "qwen/qwen3-coder-30b-a3b-instruct",
+        "project": "form",
+        "attempts": [
+          {
+            "response_sha256": "1f5bccad3f89c5957fac18143328a7962027455c8fbff6abff30ed1931e060d6",
+            "visible_characters": 19223,
+            "finish_reason": "stop",
+            "completion_tokens": 4990
+          }
+        ],
+        "package_sha256": "7de66cb46f4580ee47e54b0a107fd2085c5476a3be9f4ee178669d9424413a72",
+        "control_ids": [
+          "mode",
+          "theme",
+          "validation",
+          "autosave",
+          "layout",
+          "accessibility"
+        ]
+      },
+      {
+        "builder": "mistralai/mistral-small-3.2-24b-instruct",
+        "project": "form",
+        "attempts": [
+          {
+            "response_sha256": "1d0e63326b2a6150c9281cb7ab66bea35769ae445874bacc952eabeb2b1a24c7",
+            "visible_characters": 15428,
+            "finish_reason": "stop",
+            "completion_tokens": 4188
+          },
+          {
+            "response_sha256": "643d670e09226fc9044b362c85a7b5f9dfba70b1627b2cc27ed9aae4e3ce6cb2",
+            "visible_characters": 15435,
+            "finish_reason": "stop",
+            "completion_tokens": 4189
+          }
+        ]
+      },
+      {
+        "builder": "openai/gpt-oss-120b",
+        "project": "form",
+        "attempts": [
+          {
+            "response_sha256": "be5fb478e399fbb386f79cd71b483293c7b42f784e3272a086e2cee7c43aca7f",
+            "visible_characters": 18676,
+            "finish_reason": "stop",
+            "completion_tokens": 5171
+          },
+          {
+            "response_sha256": "c6fd6320efa916b5fa909afdee6092a5dbcd90abbd98e6bf16c84292a6c798d8",
+            "visible_characters": 17944,
+            "finish_reason": "stop",
+            "completion_tokens": 5025
+          }
+        ],
+        "package_sha256": "e94bce8e8cebfd5c1550bf8adf932e7ca7433bd518842d9c32c94a625d1f6978",
+        "control_ids": [
+          "required",
+          "select-mode",
+          "shuffle",
+          "star-count",
+          "min-length"
+        ]
+      },
+      {
+        "builder": "google/gemma-3-12b-it",
+        "project": "form",
+        "attempts": [
+          {
+            "response_sha256": "12ee6f84af9d39b58110b9e7ccab8659906b72d5bcaafb178afa3fee2ba737a7",
+            "visible_characters": 10232,
+            "finish_reason": "stop",
+            "completion_tokens": 3121
+          },
+          {
+            "response_sha256": "fd63cad812cea047237b17ab5a7cdf3802cbacf4b88613d18407b3a299c8f49e",
+            "visible_characters": 10299,
+            "finish_reason": "stop",
+            "completion_tokens": 3138
+          }
+        ]
+      },
+      {
+        "builder": "deepseek/deepseek-v4-pro-0813",
+        "project": "form",
+        "attempts": [
+          {
+            "response_sha256": "bc77bbf1cf0231c459bce7b9368328f42b93d77dece2846e43ab460226037be9",
+            "visible_characters": 15295,
+            "finish_reason": "length",
+            "completion_tokens": 16000
+          },
+          {
+            "response_sha256": "4970c63bb2895b4fa608204654840afee121fb36d9d1c4eaaa870cb26b0af006",
+            "visible_characters": 6266,
+            "finish_reason": "length",
+            "completion_tokens": 16000
+          }
+        ]
+      },
+      {
+        "builder": "deepseek/deepseek-v4-flash",
+        "project": "form",
+        "attempts": [
+          {
+            "response_sha256": "899060b8b748e53e8b5676b58c75439ccf8bea0783540e4755952ebe15b341ca",
+            "visible_characters": 0,
+            "finish_reason": "length",
+            "completion_tokens": 16000
+          },
+          {
+            "response_sha256": "d11babc6a06bf6049bbbf97b97d1e7aadebb5b482b2cba11bec272990a023e67",
+            "visible_characters": 0,
+            "finish_reason": "length",
+            "completion_tokens": 16000
+          }
+        ]
+      },
+      {
+        "builder": "qwen/qwen3.5-9b",
+        "project": "form",
+        "attempts": [
+          {
+            "response_sha256": "eb4faff765f49f48adab82c07fd7116974f07e97dae9962b7be8fa40557d12cc",
+            "visible_characters": 29085,
+            "finish_reason": "stop",
+            "completion_tokens": 8862
+          },
+          {
+            "response_sha256": "0b0caf5a73a728b5cf57f1d70a2a6a252a84a21da5677c06ec6b66293cabc06c",
+            "visible_characters": 28953,
+            "finish_reason": "stop",
+            "completion_tokens": 8150
+          }
+        ],
+        "package_sha256": "066f35abcf1cb0fac638ac37e5156f41c8367bf81e2c71000ae2268da743c2fb",
+        "control_ids": [
+          "q-required",
+          "q-select-mode",
+          "q-shuffle-options",
+          "q-multiline",
+          "q-export-active"
+        ]
+      }
+    ],
+    "self_invalid_plans": [
+      {
+        "deployer": "qwen/qwen3-coder-30b-a3b-instruct",
+        "project": "table",
+        "task": 4,
+        "reason": "Plan fields differ from schema",
+        "response_sha256": "3dd54ad83fe2df90ea933ff000ba74cfa30fe340719a31c317d7ee5cb3db2a52",
+        "visible_characters": 7681,
+        "finish_reason": "stop",
+        "completion_tokens": 2141,
+        "returned_top_level_keys": [
+          "assets",
+          "documentation",
+          "first_example",
+          "init",
+          "project",
+          "requirements",
+          "schema",
+          "starter"
+        ]
+      },
+      {
+        "deployer": "qwen/qwen3-coder-30b-a3b-instruct",
+        "project": "svg-chart",
+        "task": 4,
+        "reason": "Plan fields differ from schema",
+        "response_sha256": "05358db05464ee78ea7062f0f84579ad00620a3ff7e3e5983ce9265d40fb1c75",
+        "visible_characters": 4085,
+        "finish_reason": "stop",
+        "completion_tokens": 1215,
+        "returned_top_level_keys": [
+          "files",
+          "project"
+        ]
+      },
+      {
+        "deployer": "qwen/qwen3-coder-30b-a3b-instruct",
+        "project": "svg-chart",
+        "task": 7,
+        "reason": "Plan fields differ from schema",
+        "response_sha256": "c56adee503fe3287302859c5f6e84ad74a33361bd6403028bb8d790954e74545",
+        "visible_characters": 7564,
+        "finish_reason": "stop",
+        "completion_tokens": 2266,
+        "returned_top_level_keys": [
+          "files",
+          "project"
+        ]
+      },
+      {
+        "deployer": "qwen/qwen3-coder-30b-a3b-instruct",
+        "project": "svg-chart",
+        "task": 10,
+        "reason": "Plan fields differ from schema",
+        "response_sha256": "86c401170f8ab0d9e47e80412e4d231666b4699563a62802e9980942f07b2834",
+        "visible_characters": 10780,
+        "finish_reason": "stop",
+        "completion_tokens": 3064,
+        "returned_top_level_keys": [
+          "files",
+          "project"
+        ]
+      },
+      {
+        "deployer": "qwen/qwen3-coder-30b-a3b-instruct",
+        "project": "svg-chart",
+        "task": 11,
+        "reason": "Plan fields differ from schema",
+        "response_sha256": "29931d6c7670f141cb2399ae438da907e238360f89f61d0323cda3044a639d37",
+        "visible_characters": 22658,
+        "finish_reason": "stop",
+        "completion_tokens": 6594,
+        "returned_top_level_keys": [
+          "public_project"
+        ]
+      },
+      {
+        "deployer": "mistralai/mistral-small-3.2-24b-instruct",
+        "project": "table",
+        "task": 1,
+        "reason": "Plan fields differ from schema",
+        "response_sha256": "41ae220323a6fe17dfb3c1712a3da8d5f11250f2927ea1c7a6424cb7170774de",
+        "visible_characters": 5132,
+        "finish_reason": "stop",
+        "completion_tokens": 1509,
+        "returned_top_level_keys": [
+          "design",
+          "documentation",
+          "first_example",
+          "init",
+          "public_project",
+          "requirements",
+          "schema"
+        ]
+      },
+      {
+        "deployer": "mistralai/mistral-small-3.2-24b-instruct",
+        "project": "table",
+        "task": 2,
+        "reason": "Plan fields differ from schema",
+        "response_sha256": "691c3d2491d652aa3e068b9909ca25a33f2becb6624ff78d40cf26abe5537699",
+        "visible_characters": 7241,
+        "finish_reason": "stop",
+        "completion_tokens": 2058,
+        "returned_top_level_keys": [
+          "assets",
+          "design",
+          "documentation",
+          "first_example",
+          "init",
+          "public_project",
+          "requirements",
+          "schema"
+        ]
+      },
+      {
+        "deployer": "mistralai/mistral-small-3.2-24b-instruct",
+        "project": "table",
+        "task": 3,
+        "reason": "Plan fields differ from schema",
+        "response_sha256": "f170a41c597fa8fb53a453a0123e0ab7eae3d457f9ee9ac1c11948815919d3a4",
+        "visible_characters": 9021,
+        "finish_reason": "stop",
+        "completion_tokens": 2600,
+        "returned_top_level_keys": [
+          "assets",
+          "design",
+          "documentation",
+          "first_example",
+          "init",
+          "public_project",
+          "requirements",
+          "schema"
+        ]
+      },
+      {
+        "deployer": "mistralai/mistral-small-3.2-24b-instruct",
+        "project": "table",
+        "task": 4,
+        "reason": "Plan fields differ from schema",
+        "response_sha256": "f5df539fdb137980ad05fd160b79c1722d74efc02f211f82fcffc5bd7664b76c",
+        "visible_characters": 8896,
+        "finish_reason": "stop",
+        "completion_tokens": 2557,
+        "returned_top_level_keys": [
+          "design",
+          "documentation",
+          "first_example",
+          "init",
+          "public_project",
+          "requirements",
+          "schema"
+        ]
+      },
+      {
+        "deployer": "mistralai/mistral-small-3.2-24b-instruct",
+        "project": "table",
+        "task": 5,
+        "reason": "Plan fields differ from schema",
+        "response_sha256": "53d54164c880470a53b164de85a548c8f5ceff918cc8122ef403a20303fbe7ba",
+        "visible_characters": 11909,
+        "finish_reason": "stop",
+        "completion_tokens": 3464,
+        "returned_top_level_keys": [
+          "assets",
+          "design",
+          "documentation",
+          "first_example",
+          "init",
+          "public_project",
+          "requirements",
+          "schema"
+        ]
+      },
+      {
+        "deployer": "mistralai/mistral-small-3.2-24b-instruct",
+        "project": "table",
+        "task": 6,
+        "reason": "Plan fields differ from schema",
+        "response_sha256": "ca1f7e9afaea4f6eb6705ac295a4ed0c658cfc0e132f210c06df53af6bb64b63",
+        "visible_characters": 7630,
+        "finish_reason": "stop",
+        "completion_tokens": 2166,
+        "returned_top_level_keys": [
+          "design",
+          "documentation",
+          "first_example",
+          "init",
+          "public_project",
+          "requirements",
+          "schema"
+        ]
+      },
+      {
+        "deployer": "mistralai/mistral-small-3.2-24b-instruct",
+        "project": "table",
+        "task": 10,
+        "reason": "Plan fields differ from schema",
+        "response_sha256": "41c7b376c9cf36843e761916ff94cff545187b7fd4dbb9c9b822d96fa94858ae",
+        "visible_characters": 16058,
+        "finish_reason": "stop",
+        "completion_tokens": 4509,
+        "returned_top_level_keys": [
+          "assets",
+          "design",
+          "documentation",
+          "first_example",
+          "init",
+          "public_project",
+          "requirements",
+          "schema"
+        ]
+      },
+      {
+        "deployer": "mistralai/mistral-small-3.2-24b-instruct",
+        "project": "table",
+        "task": 12,
+        "reason": "Plan fields differ from schema",
+        "response_sha256": "1e80bce994aa3438322625827afd80c96f1264438aad599362b4498371d95fa1",
+        "visible_characters": 16291,
+        "finish_reason": "stop",
+        "completion_tokens": 4737,
+        "returned_top_level_keys": [
+          "design",
+          "documentation",
+          "first_example",
+          "init",
+          "public_project",
+          "requirements",
+          "schema"
+        ]
+      },
+      {
+        "deployer": "mistralai/mistral-small-3.2-24b-instruct",
+        "project": "table",
+        "task": 14,
+        "reason": "Plan fields differ from schema",
+        "response_sha256": "74b2313d2170e7898b95be76dce4cc4039fa29a20a31fe7487dfd18939f11845",
+        "visible_characters": 13032,
+        "finish_reason": "stop",
+        "completion_tokens": 3701,
+        "returned_top_level_keys": [
+          "design",
+          "documentation",
+          "first_example",
+          "init",
+          "public_project",
+          "requirements",
+          "schema"
+        ]
+      },
+      {
+        "deployer": "mistralai/mistral-small-3.2-24b-instruct",
+        "project": "table",
+        "task": 15,
+        "reason": "Plan fields differ from schema",
+        "response_sha256": "c3b9ef6c7efefc89936b134197f655b7a1d29c34ca36d9e500a839505fc1b9f8",
+        "visible_characters": 13280,
+        "finish_reason": "stop",
+        "completion_tokens": 3707,
+        "returned_top_level_keys": [
+          "design",
+          "documentation",
+          "first_example",
+          "init",
+          "public_project",
+          "requirements",
+          "schema"
+        ]
+      },
+      {
+        "deployer": "mistralai/mistral-small-3.2-24b-instruct",
+        "project": "table",
+        "task": 17,
+        "reason": "Plan fields differ from schema",
+        "response_sha256": "710fe733870dc89332cfdce130a12dbe44a114db904ce6022fa44d039c1ddbb4",
+        "visible_characters": 16803,
+        "finish_reason": "stop",
+        "completion_tokens": 4662,
+        "returned_top_level_keys": [
+          "assets",
+          "design",
+          "documentation",
+          "first_example",
+          "init",
+          "public_project",
+          "requirements",
+          "schema"
+        ]
+      },
+      {
+        "deployer": "deepseek/deepseek-v4-flash",
+        "project": "svg-chart",
+        "task": 11,
+        "reason": "Provider returned no text; charged response retained",
+        "response_sha256": "c75d38afa9480f7c45a3fa869bc8f609664e050e4848c836b9e8a34aea927f58",
+        "visible_characters": 0,
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "deployer": "qwen/qwen3.5-9b",
+        "project": "form",
+        "task": 1,
+        "reason": "Provider returned no text; charged response retained",
+        "response_sha256": "4e3106b261ec598176fc8a243b5502f387ac1d05be9cc5e968e72249ded17d5b",
+        "visible_characters": 0,
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "deployer": "qwen/qwen3.5-9b",
+        "project": "form",
+        "task": 16,
+        "reason": "Provider returned no text; charged response retained",
+        "response_sha256": "ce4ace727e397e97189aab2d938f22a1473820caf46b88ed63382e626c9d82bc",
+        "visible_characters": 0,
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "deployer": "qwen/qwen3.5-9b",
+        "project": "form",
+        "task": 18,
+        "reason": "Provider returned no text; charged response retained",
+        "response_sha256": "e4b5aeb2f14525988e74f0aa538cdb64acef0ee070ddc779b69d3e7c884874c8",
+        "visible_characters": 0,
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      },
+      {
+        "deployer": "qwen/qwen3.5-9b",
+        "project": "form",
+        "task": 19,
+        "reason": "Provider returned no text; charged response retained",
+        "response_sha256": "e0d41a8705a2e4e54cb26dc9806c0e35caf7e5a54eaacb79d2d56f82dd8eedec",
+        "visible_characters": 0,
+        "finish_reason": "length",
+        "completion_tokens": 8192
+      }
+    ],
+    "invalid_plan_reason_counts": {
+      "Plan fields differ from schema": 16,
+      "Provider returned no text; charged response retained": 5
+    },
+    "frozen_library_files": {
+      "table": {
+        "human": {
+          "package_sha256": "3498ab2313a9e9bb43a2bd6320a04c7ad623f7dae1b06c623a1af4b8be8d3585",
+          "files": [
+            "index.css",
+            "index.html",
+            "index.js",
+            "common/table.js",
+            "common/menu.js",
+            "common/key.js",
+            "common/mouse.js",
+            "common/layout.js",
+            "common/drag.js",
+            "common/util.js"
+          ]
+        },
+        "gpt5-library": {
+          "package_sha256": "d4aa02e27ca720e08059eec64ecc0131463143c4c8fc10c19f595fe9e60e754f",
+          "files": [
+            "index.css",
+            "index.js",
+            "common/menu.js",
+            "common/table.js",
+            "common/key.js",
+            "common/mouse.js",
+            "common/layout.js",
+            "common/drag.js"
+          ]
+        }
+      },
+      "svg-chart": {
+        "human": {
+          "package_sha256": "30bb3197ce9180ab51f4e79db61e34e388f1fc0709f5a461549153a9769d8146",
+          "files": [
+            "common/AreaChart.js",
+            "common/BarChart.js",
+            "common/Chart.js",
+            "common/Chart.scss",
+            "common/ChartTheme.js",
+            "common/DoughnutChart.js",
+            "common/LineChart.js",
+            "common/PieChart.js",
+            "common/ScatterChart.js",
+            "common/StepChart.js",
+            "common/config.scss",
+            "common/util.js",
+            "index.html",
+            "index.scss"
+          ]
+        },
+        "gpt5-library": {
+          "package_sha256": "42ece6683a78d101d2df1fa1a273416c785bab0c5ca7b07380256e151018d313",
+          "files": [
+            "index.html",
+            "index.js",
+            "index.scss",
+            "common/config.scss",
+            "common/Chart.scss",
+            "common/Chart.js",
+            "common/LineChart.js",
+            "common/ScatterChart.js",
+            "common/StepChart.js",
+            "common/AreaChart.js",
+            "common/BarChart.js",
+            "common/PieChart.js"
+          ]
+        }
+      },
+      "form": {
+        "human": {
+          "package_sha256": "48505662945ae2ad8830287ae684efe886748cae96730da2e201474dd9de2acf",
+          "files": [
+            "common/Contents.js",
+            "common/DataQuestion.js",
+            "common/LikertQuestion.js",
+            "common/MultiSelectionQuestion.js",
+            "common/NpsQuestion.js",
+            "common/OpenQuestion.js",
+            "common/Question.js",
+            "common/RankingQuestion.js",
+            "common/RatingQuestion.js",
+            "common/SingleSelectionQuestion.js",
+            "common/Survey.js",
+            "common/util/Draggable.js",
+            "common/util/util.js",
+            "index.css",
+            "index.html"
+          ]
+        },
+        "gpt5-library": {
+          "package_sha256": "23f8b85cd5126960e528a10b8b372826023c774112b9401659f2e578894ecd81",
+          "files": [
+            "index.html",
+            "index.css",
+            "index.js",
+            "common/Question.js",
+            "common/SingleSelectionQuestion.js",
+            "common/MultiSelectionQuestion.js",
+            "common/OpenQuestion.js",
+            "common/RatingQuestion.js",
+            "common/RankingQuestion.js",
+            "common/NpsQuestion.js",
+            "common/LikertQuestion.js",
+            "common/DataQuestion.js",
+            "common/Contents.js",
+            "common/Survey.js"
+          ]
+        }
+      }
+    },
+    "illustrative_browser_failures": [
+      {
+        "deployer": "mistralai/mistral-small-3.2-24b-instruct",
+        "arm": "gpt5-library",
+        "project": "table",
+        "task": 2,
+        "report_sha256": "1cf4e3881fc9e3e5b2f9875a048df702d642f70bbc13491350d9ab05e7af5fe3",
+        "files_digest": "ec4259ad1bcc1df0577a7163600f29631d36391135d857d412967d96251add60",
+        "failed_cases": [
+          ".menu-item-insert-row-above cell-1-1"
+        ]
+      },
+      {
+        "deployer": "deepseek/deepseek-v4-flash",
+        "arm": "self",
+        "project": "svg-chart",
+        "task": 2,
+        "report_sha256": "1f9b90b9efb2f4ccc0c47433346fdd518513ba0bdacb6f32c9c78924f5691ba6",
+        "files_digest": "11e60b07b2d200a3f2e847ef4ea5320ac1216ab28b1e097d24759b022c47a5a2",
+        "failed_cases": [
+          "Chart.svg"
+        ]
+      },
+      {
+        "deployer": "qwen/qwen3-coder-30b-a3b-instruct",
+        "arm": "gpt5-library",
+        "project": "form",
+        "task": 1,
+        "report_sha256": "79404e5919ccc1b3d51c00652523b81c41261cb877a404a3116b5efb750d25a7",
+        "files_digest": "e23391be228eed8cd369e8fbd91f0e492fee7c985928027489093a8513b8d8a4",
+        "failed_cases": [
+          "Question"
+        ]
+      },
+      {
+        "deployer": "qwen/qwen3-coder-30b-a3b-instruct",
+        "arm": "self",
+        "project": "form",
+        "task": 1,
+        "report_sha256": "dea03b4b462a61a2514dee5cf4ade619e7f3ef773599e041e18140feaf8b6ff9",
+        "files_digest": "70aa527c9abe9b9f9308921fa9535c6f90a092f840fe3b29643c11a76e9f9be9",
+        "failed_cases": [
+          "Question"
+        ]
+      },
+      {
+        "deployer": "openai/gpt-oss-120b",
+        "arm": "self",
+        "project": "form",
+        "task": 6,
+        "report_sha256": "9e6436a6d67f3574a3a86a8f4e34b22c8e079534f3c833145147979cc5216729",
+        "files_digest": "2c9bbc62d27bf592dcc4754f0c9c608f01ade7c3662a68e425cc3b601bd53a71",
+        "failed_cases": [
+          "ranking1 submit moved options - drag top"
+        ]
+      }
+    ]
+  }
+}

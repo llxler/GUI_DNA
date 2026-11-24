@@ -1,0 +1,2351 @@
+{
+  "stage": "Dependency-ordered same-model library and assembly",
+  "registered_utc": "2026-11-24T04:27:17.044787+00:00",
+  "model": "qwen/qwen3-coder-30b-a3b-instruct",
+  "provider": "SiliconFlow",
+  "project": "table",
+  "upstream_commit": "7b31ca2b786eef120dd49ce63dd03d0c0006046d",
+  "registration_sha256": "fc9e114832a714e118135a5838d5d7445bcafbb8294c3ce90cf6dea4078adda2",
+  "protocol_sha256": "fe5c977bfebea5d1c9c974748a7b878b49c1c77b01f34f6f41ad63b46b3e1446",
+  "public_input_sha256": "dc5421eec8b335ed55f2039f5214e0c31d5a96bf06a50a0af92be3aed6e1c9e1",
+  "browser_contract_sha256": "2ddd6a41d79caf8ae7e52b2f551447dbcb79c54705f6c08005ba6b906a8d6b54",
+  "historical_source_sha256": "4297c24cad773da768b64a4e40e3407b4c442ac6f233bdd3000ac2bc87dd2892",
+  "direct_seal_sha256": "6ca8451af3fd21b03e3402061144d12a987f1b385ccf31724c3eddc075910614",
+  "replicas": {
+    "build-a": {
+      "configuration_evidence": null,
+      "seal_sha256": "e05d4a0ea00ad67ef9ff519d425ff0412784605249e152c2c3e35e85181f319a",
+      "build_status": "missing",
+      "reason": "RemoteProtocolError",
+      "package_sha256": null,
+      "source_file_order": [
+        "app-core.js",
+        "common/menu.js",
+        "common/table.js",
+        "common/key.js",
+        "common/mouse.js",
+        "common/layout.js",
+        "common/drag.js",
+        "index.css",
+        "index.js"
+      ],
+      "controls": [
+        {
+          "id": "choice1",
+          "values": [
+            "on",
+            "off"
+          ],
+          "example": "on",
+          "description": "on: The application implements all 20 tasks with stable behavior and user interactions as specified in the requirements. The implementation includes context menus, keyboard navigation, cell selection, editing, copying/pasting, layout adjustments, and drag-and-drop functionality. All user-facing choices are implemented with consistent behavior and stable keys (choice1, choice2, etc.). The application handles all specified interactions including arrow keys, tab navigation, shift selection, and context menu operations. The UI updates are immediate and visually consistent with the provided CSS styling. / off: off"
+        },
+        {
+          "id": "choice2",
+          "values": [
+            "on",
+            "off"
+          ],
+          "example": "off",
+          "description": "on: The application implements all 20 tasks with stable behavior and user interactions as specified in the requirements. The implementation includes context menus, keyboard navigation, cell selection, editing, copying/pasting, layout adjustments, and drag-and-drop functionality. All user-facing choices are implemented with consistent behavior and stable keys (choice1, choice2, etc.). The application handles all specified interactions including arrow keys, tab navigation, shift selection, and context menu operations. The UI updates are immediate and visually consistent with the provided CSS styling. / off: on"
+        }
+      ],
+      "module_checkpoints": [
+        {
+          "path": "app-core.js",
+          "link_sha256": "b212703d7bdab004e860b8faa6298dded7fc664ffbfa19db2f3039266c9829eb",
+          "actual_exports": [
+            "clearSelection",
+            "copyCells",
+            "deleteCol",
+            "deleteRow",
+            "deleteSelectedCells",
+            "endDrag",
+            "extendSelectionTo",
+            "filterRows",
+            "finishEditing",
+            "getCellAtPosition",
+            "getFirstCell",
+            "getNextCell",
+            "getNextTabCell",
+            "getPrevTabCell",
+            "initTable",
+            "insertColLeft",
+            "insertColRight",
+            "insertRowAbove",
+            "insertRowBelow",
+            "moveCol",
+            "moveRow",
+            "pasteCells",
+            "selectAll",
+            "selectCell",
+            "selectColumn",
+            "selectRow",
+            "sortRows",
+            "startDrag",
+            "startEditing",
+            "state",
+            "updateColWidths",
+            "updateRowHeights"
+          ],
+          "actual_imports": [],
+          "errors": []
+        },
+        {
+          "path": "common/menu.js",
+          "link_sha256": "f44ca9fb083ab5ff791ab5dbde2cd3c42d7bfa2118c633d9e23d4adf70cea72f",
+          "actual_exports": [
+            "initMenu",
+            "showMenu"
+          ],
+          "actual_imports": [
+            "../app-core.js"
+          ],
+          "errors": []
+        }
+      ],
+      "public_checks": {},
+      "rows": [
+        {
+          "task": 1,
+          "direct": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "d01e516c704269b8ade5f628905eff2a21da65f5ac965d7fe238c7fa83cf08b0",
+            "files_digest": "d4d3b9d52743b1276480f19e4a717a2d0939be37546fd70258bc8c28a2e9bd61",
+            "response_sha256": "7f1c669aa2e87ec69a13eb358863b4a0142fe0c77202061bf2a66687427fe3e1"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": true,
+            "status": "valid",
+            "response_sha256": "a2589845994740e75779f9eb307bd72aa3d6cf4bf34e407ada2de3c914e060b1",
+            "report_sha256": "28cd118c3c3247628b3a18ad255736e552053cbf123bb54d1c9eb11b43ceb571"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "64485f773933f3ac6bca3e1ae68dc8ec77c61f78702c60a65412ac4a50c12c32",
+            "report_sha256": "255c212b4e47784da70cd4af1790227cedb572c0f75beda660a740df36e2073b"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "637af6d4ab25a82ca645fb102a75585a8c1827e0b4f7a550c4f91b8c11fa14f0"
+          }
+        },
+        {
+          "task": 2,
+          "direct": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "54ff8dff08be360ed17164b059dd63bd2591344e8b178b6473c9a0fb13269ca1",
+            "files_digest": "792e83afeb39333d6b2e3231d1528093a55fa165a6bd658b0508968c9f060f3c",
+            "response_sha256": "622d7ad7c4efc4d44344431fe8953e4881b74e313fdfa58628a9ea721a25c21d"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": true,
+            "status": "valid",
+            "response_sha256": "e6e6c4fa7605e1334f7d5fd79165efcf855f95c32f2377618b4485a3a949df8b",
+            "report_sha256": "212bf4b87e31c20143667ae8b8d1b300440b8ab3bd3fefd5263da556b7811ed5"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "b2d5de5155aca4af272e75bee45d90d2402f59b0e488a41aa6999804cf64334a",
+            "report_sha256": "1e6c750addb6c048f1ddbc0b11957bbb397a674544b096ba6db727c82a371172"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "f1dc36b704116a6debb8393c48709571f6ae86e34cd615eab43ff8c9d7a36062"
+          }
+        },
+        {
+          "task": 3,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "11ce1601dd471060d610cef45b2c62a9d3dc3fdfb6880ea1fdb56b6c11315099",
+            "files_digest": "4fdc6b031edfef6643a9f48792cbf12755089d27ec8d84c21f1cb6ab6ac363f7",
+            "response_sha256": "4ebe42c6d87c4ceb07390690fbe89d79af3598da32fc43cd3faed061203a4cdd"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "a4d7f5f415c0a3d7572d1f839d3af026c3ef613cd41786143b83d2f84f095ab5",
+            "report_sha256": "448b68da6091c30004486ebb1cd58de91012811c3e678eabb80a5c5229b5d5de"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "710e4ecb465b3290ccba4cd04acfd7e0f1ac56f3002e69f387754a7abeff032e",
+            "report_sha256": "e3d7827e9953e7091389b7f7ba2a6be41e256b52933cca91dafb411ca5d475d7"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "e797b25dcec3e088dc531dce690938b9af976ebe1f7a20820e0daa9d54b07e20"
+          }
+        },
+        {
+          "task": 4,
+          "direct": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "ddb121d5b3331f1f2c6338685a40c9f5a5a99aeee5e058e6f2329af0b0c0d74a",
+            "files_digest": "8d95affb1ab87f945e4550c35f7487753513ccacc825551187bf67cd5d58ce9f",
+            "response_sha256": "a01e3f40d1cdd7db3713e34bdc57ec093d0ff1347f63d6a0bf841f0783658e5e"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": true,
+            "status": "valid",
+            "response_sha256": "753aeca3a7f02f2b15623884a2bdb22d85a2bb3f799ef3bebd75d8189e1a9677",
+            "report_sha256": "5b7fe888e995916a7848677f5adf00d3df1ec2fac18be55735581d0d2845c54c"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "invalid",
+            "response_sha256": "3dd54ad83fe2df90ea933ff000ba74cfa30fe340719a31c317d7ee5cb3db2a52"
+          },
+          "old_fixed": {
+            "passed": true,
+            "status": "valid",
+            "report_sha256": "da3ff6a27d24c6e046b4e38ed6aa78e7576785687d5c61cfb993b6ef0644a8e8"
+          }
+        },
+        {
+          "task": 5,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "d1dd505428bcd1a97e72d58d6d49403bf6b67853d1f5b4622bbfc6fe4600ce57",
+            "files_digest": "940d079d88053b57a2ca338f45b580f1c99707d3b3e9a8b69c2c22312867da86",
+            "response_sha256": "a799c64303b2a80b05c3eeb1a77d755db462b433d90349be01f59777332744f5"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "d3c1eaef2fafdb84d9139da060e2e8cfdb12c2a41e7287d6afed52c75033818e",
+            "report_sha256": "846a419f625029f0cbe2c9ef33cb59d49611b91a3ad031dbf8633871c4866253"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "d682b7c160a716330f5c3a801fadf11816f04a16740a227280905d036b026c12",
+            "report_sha256": "f075d1e59256d7a194cf7273217b844376be727fae8dafcd02b2409494a661b9"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "f3f361516a4b007fb4dba21d5eedb69a0a4f7ef19f57e24fd0cee4444c58d3ee"
+          }
+        },
+        {
+          "task": 6,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "bc2aa545db2f33adf09037201650072d0978fc8b7f7e5f49472503c03d5695ff",
+            "files_digest": "74e0eb590fb62b053dc0ed5e17b2c943900b5ec9a820c6153f5111e2cb1563ff",
+            "response_sha256": "2bdb5a9545e68908d30dec0caefccb0afe94877ed8ad5edf5276b483d6ec6a6a"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "6a9db1edf75126109c8bf57303072e6881e54ad4f7983dd03bb24352b64520b3",
+            "report_sha256": "40fc051a2a40ea891cece834dc1b9aabf7f88fc1fd7e85dbbe77b1662b71605c"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "7ae69bc6d90ae60a54977b50da4241f6ed1594a690fa0afa8f5bb3d6ee5a3352",
+            "report_sha256": "f7967af86bb30654a96ca0562eab7e221763b337303bfb0360b6a660119823f2"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "cba67b4e0e570645a5c88123395c271e0232a615b9a52c5bb27c15a86fc00c4f"
+          }
+        },
+        {
+          "task": 7,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "a8eb4a2deda652e79d1ada7bc8ed1a7be9a1f529750655f26dd7b33be4504d62",
+            "files_digest": "a805736d1d8b631ef80a67132bf4f54152fe78a7949b13f984aeb1820b764af5",
+            "response_sha256": "c05d2a415872e3debf4e7664fa067883eeb6dfedc7b6b7d198f3892db1ee12b4"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "bffc7b5d69b08b31e726c4d04f737ae9925cd6fc3726955d1f3fa25133ab11b0",
+            "report_sha256": "3bda56967346a0c0553d2f66f7c4034ed6ac86b4ef05098af44e11d2310026c6"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "39e4f553a4c57d066233138a9328ec2bf8420a08c3cf20ad0b4a52a1df568848",
+            "report_sha256": "3d8b8dcdf852bb77002dffddcb8be4e4bc63b6ac307b274da8a05eac5834f5dc"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "0f40906d96a679459659a2b146b68da16705db901c027419320a984f5576e24a"
+          }
+        },
+        {
+          "task": 8,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "7c21f360bd1180abc1669887462569175fd90115cf1cb836af5265817aa68268",
+            "files_digest": "94add9ac5a931ca64505d53b7b1850c5acd757dae624c7225696251f133ac919",
+            "response_sha256": "ef2e59c3e810139e536e8f85d77742213717388eace0cbe43ee6bb001b9a4367"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "177d31d8be1ce502048b9c50e0f49343f1f92e668995f9213cbe4658bb6df7b8",
+            "report_sha256": "8621c1e39a9abc306d4f8457b26550eeffdbd1df7d5305cbcdf027167a431974"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "119ef41586f3351c04801bcc9b51bb1958fc859a4089472406fb2113f4e1a7a1",
+            "report_sha256": "0da620a79a764cee3c52cbc0149a7c0313c550637e4a5a972e4906c3979a914b"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "8ef9dea2c52577f98205724d5371f63e6835eac259025d0da30c1282f89695be"
+          }
+        },
+        {
+          "task": 9,
+          "direct": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError",
+            "response_sha256": null
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "398daac1582e8d809f1aa76d32951c2dfbb66ba0e76b62b97c39f8faf9afa825",
+            "report_sha256": "2912c2377198c585f71b11b17b9c66d3608909f63df10fb8c233badd9eb3290a"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "275c7a80a26abda75c9f3b9f887b9c6fa51feb5eacf2c2b189b116ee93a39cc0",
+            "report_sha256": "6d153dcf2731011579f62acd6009ab825f3a4a3853aa90bd9ecfd64d1054f4a0"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "4e61f6998f915a878f2df6f2627dca407368e2c9178594c7fe62ae61a6e982d6"
+          }
+        },
+        {
+          "task": 10,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "af8bb5ec289381edd3a606c850f817e7f40f3bd6d30af3e53a54a17090e52c30",
+            "files_digest": "8537b957566e148e1cdd2c39606e1d3cf896d21f1248792de88dd86f11ae5fd7",
+            "response_sha256": "1bffdc911e29e24046f4b4ddd6575729af7b1ed6454c0794d7bd30af2003df50"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "157811d587c5ebcde2f97d48b39cd066a79d79b6b5b728ade6802aa695839a55",
+            "report_sha256": "e1f82904c71b6feb57bbba88aac41ef454e4c3d2d780c16f64d960d65f433131"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "134ebad46fa4ff09011754d989caa2119f76ed2c53d66076b9717064124ef5c4",
+            "report_sha256": "ae49c56f7759d86b63012f0b74721632cd056d04fa2967715a5b464c4fe0833e"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "67bc20fff64e5e47cd85978ad041da40b0e9d07dbca54b7ca4bc952aa78421b8"
+          }
+        },
+        {
+          "task": 11,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "9218c95e280bf064370370b314c27434b51256d10bd22590c979c50f1e8a145c",
+            "files_digest": "bf03f4487c06cca47b33aef5bbb540732e25b747de337f5a5f7a57ec92b01f6b",
+            "response_sha256": "bc5d44027f7e444395423c3fa1299532444e65c01af9e396131f567752d4d83e"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "c4a009ad75816da8f5d05767b99ea9657d814f26791c11064583644b7ae39d2b",
+            "report_sha256": "e848ae84380b33610a5ad80a193bb6ad55548f095f206ebd9233735d163a0d80"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "4bab0e671eaba6d25fee1662b0e473a9481c0e8a54c1e74fed24bc8207b44c87",
+            "report_sha256": "da258aa4aa0c1223ebf0961f1541ff28b856bb6f267a0d24ac91c8e25d5e9405"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "91c6da39c965fe47af7b2734f24a93def73e9ea35b6ebe13068338291d148466"
+          }
+        },
+        {
+          "task": 12,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "c6eb39174d1b64b8238eb715062b180eb1d02a6ab702eca964998cef077cecce",
+            "files_digest": "b182e89c405bc1c51aa5ffd8aed193a3570c422490e4e63432d9dfaff5629b40",
+            "response_sha256": "ca393757c215fd29e0962e69f3a008351a05ce3c00692496afb61c95530db71b"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "405370953b15124590184ad3191789e238431bfec6e5a9999b02808c0c0d84e7",
+            "report_sha256": "60fdecce1a2742f8c1e688ef86eaebdfaf3f5229891ea771c9b7e6490743ac2b"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "ad44dcff6352fc92e10fd878ca5466b6f8cd2cf1afe574862cff5507cd8d22fc",
+            "report_sha256": "27992ce978601177035d7210992076d06b18c68b00b0656d3f2b4a06a37425f5"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "b90e153a7dbe2b4675d43a8fc11c9faccdb2ac61331a6e217ae4a24105a1f0e0"
+          }
+        },
+        {
+          "task": 13,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "ab19e74545e427cdc175a4a7b6ae642e0a8e7fb462711495a78986e78197c324",
+            "files_digest": "c644aff2000c5946069e94eb2cb41b81cd9720e731fc334c0131c537d9b87d38",
+            "response_sha256": "07ce4adbe421676b2b484ac68fc5f10a01427ec9b9e75d048b0e1fe1cbeb3f6d"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "2df09cebe5dd1b5131d47947e9019f926471f198d956443ece2bc4ff93c8347d",
+            "report_sha256": "48abdd10d7f8b65adf687b9f89091e4976becb6a8de21abc1a5a8760d5d6ac4e"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "445a9d962ab237336f36fbaf25c5152872af9b9f48167a1f988fbecf2ea2fa14",
+            "report_sha256": "ecbf47a9576a1b7ef47954ace1d3e74df3b9717b9e88d781dfce71b71182c9da"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "ac9392e43e0ce59d9eb4923a3678b26b9264621ce48f714e401e5295213df6b5"
+          }
+        },
+        {
+          "task": 14,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "858092b78264beed9573651519329e12d8a5c4c899e2e067eac1b40d626fed45",
+            "files_digest": "c760b8e10dc33ad6905a4e53c09a3ee48e58facac9855ae11d109a952a3ada82",
+            "response_sha256": "49cd55511ca8cf768992a561fe74a789ff7c14e0f86db774890f3b1f08a04a3d"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "cca3e3755a72804985df946c91e308238246dc52cae61794d1e863247ce46495",
+            "report_sha256": "a6f452432694e5330d8d02e7a6680789169b1d548f485aa31341c818fb0d0d82"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "1613deaaf269793c1fd29866355eefc5bab1de44a831c6ee98cbbe998c6182d7",
+            "report_sha256": "1576d3c8a0acab1fd222df7112b2508321cbe7a051d61626444a12fb8a374ce9"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "d1bc643163142248cf951a79d0f6a58e8b070b5d063a63cbde77219160ed8598"
+          }
+        },
+        {
+          "task": 15,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "daee611eaaf2f78e46072d6f58652a2a4a50d09305d3eaf56ccd64f3d3535c60",
+            "files_digest": "4c75cfdfe09fd8356a614ae15d4d4a6aff37e9056db304780b70f80bffada97e",
+            "response_sha256": "70d2a01b133a2c9116645bbad1a6a178cf5d585cc7d64afce130f9ceaf79b04a"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "a20925cfff11e1f2bc234276e3b7b42a530c4c5d038abe0d36ebd02ff9e8cfa0",
+            "report_sha256": "4a038e2853f4cf64a47b4385a5638603e395cd2464dc0b54a14d36250bf1a24e"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "d27197707889483db970f111120ca4bc90a0fa0352554850a22384c0ab78c1be",
+            "report_sha256": "96bd369102e48c40520d8109190dccd1879024346b52c2a1a8a784540f8309a0"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "9d2fe565f879bfe8b59bf1e62ff38adfdd08db9bfc84b8b6567cb3f3c1fef643"
+          }
+        },
+        {
+          "task": 16,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "78c2f45ea0d57e4c6c17b98e32749ae2513141a4001985a98b47a5573e2f5b4b",
+            "files_digest": "fc0c44d2ebd93bff2bc33cd30906924cebbd6daa2cab523542237f12fed667b5",
+            "response_sha256": "bd16d5c836a1feb334c135fe5e88c800799111118b70aacf6f9c44a71c22d58b"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "cc9dd2b27d6db226614f6091a8056905b8081d3e8ff0c55a458a7fe772227dbc",
+            "report_sha256": "321060f649136af29c187c3ce754f5d677a4977bf7d07882f180168e38c96ddd"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "8a149b18a400741c8b4440e77e6f833e871427e78f0d36a74f199bbfccbd82c8",
+            "report_sha256": "735062ee6890236fa1c4baac0349a53e7b82411f67b0b0e9904785e37f38f3f1"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "847c798dbef71e57c83847eabfeb796ddf1d417f8b92b063b357d64ee3cddff2"
+          }
+        },
+        {
+          "task": 17,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "a9d5a1d42c495a52d51d2ec696427073b0441bc211ae0ff87cab178f8fbf0cc5",
+            "files_digest": "58ea8355e202f6a9babb6fab1509e310d7eea0a9d53c9744be8ca2effa41b5a0",
+            "response_sha256": "e3e4301e73e8aa8e3fa11e2c7c1d90f4e8604de43ddeb5b7816333707be37af4"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "81268baf100cc760efa74385045574a0376062cbf8696452343f601449f38e46",
+            "report_sha256": "37cb19e2c4589120b129a256974f13aed9d89fe045d9f6daabf15d2457767e0a"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "7f6cca951799738ef05e5f9fff01a97e4eadd16bddc2822fb8293d12ae151c33",
+            "report_sha256": "978fba534bcd1632ee4b1cafb3e443234e940c3c1f74f9e355d3f7f3dd3691c4"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "9b5039bf0c4c682c9667ed0f80095e2a917c754935da42dc47a977baf3fb00a2"
+          }
+        },
+        {
+          "task": 18,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "b459c27a315a5b910431cae1b55b378248ef6b4add7dbdf1e992ae1feb95f121",
+            "files_digest": "7779ff73b90840a63c2a5d46719a2d2f4c7f622422187836e6dcb3792c4fbf29",
+            "response_sha256": "e788180cd37a9e96252f2479fc1082c9674153c22183f819eed2d416c4f1f974"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "957deb1486719dd506f15091ca9d1f9539ed8e75eb92086e42ec02698161e038",
+            "report_sha256": "901518c3d076ac54979631c5392c1637410ae4a506838b9875c930d92d7efab4"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "c4015b1286a06f98a390164617ab904a0b07f7ff55fb8f0f92a37db882b266dc",
+            "report_sha256": "476a97c93c36836bf28823e169eab09adedfd6024e1f33f7dc40b54802df9777"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "f76ebb0da20d9d8766a9b27d359eaf934bcfc9edddb54bbbb5e50f189f76feba"
+          }
+        },
+        {
+          "task": 19,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "8d4f70aa2ffe44f1003f6ddc6f15178b57946ee9a2f5c6305e16bb69a1f4bd7f",
+            "files_digest": "f944d3e6cbcda6c2de23b00bdcac71c82ebe19724e0b8ac4db66826b3d71e323",
+            "response_sha256": "810815cf3dab4916a841cd1a6632f3f7c281b9b09c3fa197990751a912f969ba"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": null,
+            "status": "missing"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "9bfad3800ac3f70e9c5e706922071e33afbc37e5db4f51575d1afc069fcbcd32",
+            "report_sha256": "c1c26db6fdea3c06d28e606ddd98523f6cf6821e12607ac864a1d58ca27b5844"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "c1c26db6fdea3c06d28e606ddd98523f6cf6821e12607ac864a1d58ca27b5844"
+          }
+        },
+        {
+          "task": 20,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "fbf4b7232a39964568238b2b4837f97ec8f327297fd19edbf4a1cb3d2204a5a5",
+            "files_digest": "803bb507575f8fce478735ea92cb66838159fd27ad2a47cc831485863855353b",
+            "response_sha256": "90878a61e91f53b4f21a1e9561ec7ce72c5a10f2ca1aea541625332b6d4fffe1"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "invalid",
+            "response_sha256": "ea4f51020cafb1ad5997c9471954f60c29eaed24d8928a9504a4bb99fc7dc169"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "d07c71995d0833c553d89ba249d7c689a2f0a0fca9136742d10360da056f6370",
+            "report_sha256": "96cec8f72a9a1b409053feb4b7345319cc473133b1ffdc67e241f22ea310be71"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "2d35d6261f9d430bfa39240af1d87ecaf3eddd139c05b256b0305ac3f9ba463e"
+          }
+        }
+      ],
+      "summary": {
+        "old_direct": {
+          "passed_ids": [
+            1,
+            2,
+            4
+          ],
+          "missing_ids": [
+            19
+          ],
+          "observed": 19
+        },
+        "old_self": {
+          "passed_ids": [],
+          "missing_ids": [],
+          "observed": 20
+        },
+        "old_fixed": {
+          "passed_ids": [
+            4
+          ],
+          "missing_ids": [],
+          "observed": 20
+        },
+        "direct": {
+          "passed_ids": [
+            1,
+            2,
+            4
+          ],
+          "missing_ids": [
+            9
+          ],
+          "observed": 19
+        },
+        "self": {
+          "passed_ids": [],
+          "missing_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": 0
+        },
+        "fixed": {
+          "passed_ids": [],
+          "missing_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": 0
+        }
+      },
+      "paired": {
+        "direct": {
+          "joint_ids": [],
+          "passed": {
+            "self": 0,
+            "direct": 0
+          },
+          "only_self": [],
+          "only_direct": []
+        },
+        "fixed": {
+          "joint_ids": [],
+          "passed": {
+            "self": 0,
+            "fixed": 0
+          },
+          "only_self": [],
+          "only_fixed": []
+        },
+        "old_self": {
+          "joint_ids": [],
+          "passed": {
+            "self": 0,
+            "old_self": 0
+          },
+          "only_self": [],
+          "only_old_self": []
+        }
+      }
+    },
+    "build-b": {
+      "configuration_evidence": null,
+      "seal_sha256": "261ffd63dbb2890a38219aba5c2168425cb1f09c4a8f81314a21719b1739c3a5",
+      "build_status": "missing",
+      "reason": "RemoteProtocolError",
+      "package_sha256": null,
+      "source_file_order": [
+        "app-core.js",
+        "common/menu.js",
+        "common/table.js",
+        "common/key.js",
+        "common/mouse.js",
+        "common/layout.js",
+        "common/drag.js",
+        "index.css",
+        "index.js"
+      ],
+      "controls": [
+        {
+          "id": "choice1",
+          "values": [
+            "on",
+            "off"
+          ],
+          "example": "off",
+          "description": "on: off / off: on"
+        },
+        {
+          "id": "choice2",
+          "values": [
+            "on",
+            "off"
+          ],
+          "example": "off",
+          "description": "on: off / off: on"
+        },
+        {
+          "id": "choice3",
+          "values": [
+            "on",
+            "off"
+          ],
+          "example": "off",
+          "description": "on: off / off: on"
+        },
+        {
+          "id": "choice4",
+          "values": [
+            "on",
+            "off"
+          ],
+          "example": "off",
+          "description": "on: off / off: on"
+        }
+      ],
+      "module_checkpoints": [
+        {
+          "path": "app-core.js",
+          "link_sha256": "9efd160a028623fc26db7d63d3515942df33e13f50410361d975913c85d9b21c",
+          "actual_exports": [
+            "addSelectedCell",
+            "clearFilter",
+            "clearSelectedCells",
+            "clearSort",
+            "removeSelectedCell",
+            "setCopiedContent",
+            "setFilter",
+            "setMenuVisibility",
+            "setSelectedCells",
+            "setSort",
+            "state",
+            "updateTableStructure"
+          ],
+          "actual_imports": [],
+          "errors": []
+        },
+        {
+          "path": "common/menu.js",
+          "link_sha256": "d398c4d80ce4f860a1d21317cef56395ebd2b4d4a532a63db175eb641b300a49",
+          "actual_exports": [
+            "hideMenu",
+            "showMenu"
+          ],
+          "actual_imports": [
+            "../app-core.js"
+          ],
+          "errors": []
+        },
+        {
+          "path": "common/table.js",
+          "link_sha256": "c5625dd7a285ce90888a053bae7aa09be81cc285c449cba2a75ad6c21bc68318",
+          "actual_exports": [
+            "clearSelectedCellContent",
+            "handleCellClick",
+            "handleCellDoubleClick",
+            "handleCellEditEnd",
+            "selectAllCells",
+            "selectRectangle"
+          ],
+          "actual_imports": [
+            "../app-core.js"
+          ],
+          "errors": []
+        },
+        {
+          "path": "common/key.js",
+          "link_sha256": "19498e249f1b2077304cfd1c0776034a8d4bc173f2af98ef774819a23f292bad",
+          "actual_exports": [
+            "handleKeyDown",
+            "selectAllCells"
+          ],
+          "actual_imports": [
+            "../app-core.js",
+            "./table.js"
+          ],
+          "errors": []
+        },
+        {
+          "path": "common/mouse.js",
+          "link_sha256": "d39786a571ea2501ecffe7bc42fcd18f69780e4d917434abd01c4883b118f62c",
+          "actual_exports": [
+            "handleMouseDown",
+            "handleMouseMove",
+            "handleMouseUp"
+          ],
+          "actual_imports": [
+            "../app-core.js",
+            "./table.js"
+          ],
+          "errors": []
+        }
+      ],
+      "public_checks": {},
+      "rows": [
+        {
+          "task": 1,
+          "direct": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "d01e516c704269b8ade5f628905eff2a21da65f5ac965d7fe238c7fa83cf08b0",
+            "files_digest": "d4d3b9d52743b1276480f19e4a717a2d0939be37546fd70258bc8c28a2e9bd61",
+            "response_sha256": "7f1c669aa2e87ec69a13eb358863b4a0142fe0c77202061bf2a66687427fe3e1"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": true,
+            "status": "valid",
+            "response_sha256": "a2589845994740e75779f9eb307bd72aa3d6cf4bf34e407ada2de3c914e060b1",
+            "report_sha256": "28cd118c3c3247628b3a18ad255736e552053cbf123bb54d1c9eb11b43ceb571"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "64485f773933f3ac6bca3e1ae68dc8ec77c61f78702c60a65412ac4a50c12c32",
+            "report_sha256": "255c212b4e47784da70cd4af1790227cedb572c0f75beda660a740df36e2073b"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "637af6d4ab25a82ca645fb102a75585a8c1827e0b4f7a550c4f91b8c11fa14f0"
+          }
+        },
+        {
+          "task": 2,
+          "direct": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "54ff8dff08be360ed17164b059dd63bd2591344e8b178b6473c9a0fb13269ca1",
+            "files_digest": "792e83afeb39333d6b2e3231d1528093a55fa165a6bd658b0508968c9f060f3c",
+            "response_sha256": "622d7ad7c4efc4d44344431fe8953e4881b74e313fdfa58628a9ea721a25c21d"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": true,
+            "status": "valid",
+            "response_sha256": "e6e6c4fa7605e1334f7d5fd79165efcf855f95c32f2377618b4485a3a949df8b",
+            "report_sha256": "212bf4b87e31c20143667ae8b8d1b300440b8ab3bd3fefd5263da556b7811ed5"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "b2d5de5155aca4af272e75bee45d90d2402f59b0e488a41aa6999804cf64334a",
+            "report_sha256": "1e6c750addb6c048f1ddbc0b11957bbb397a674544b096ba6db727c82a371172"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "f1dc36b704116a6debb8393c48709571f6ae86e34cd615eab43ff8c9d7a36062"
+          }
+        },
+        {
+          "task": 3,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "11ce1601dd471060d610cef45b2c62a9d3dc3fdfb6880ea1fdb56b6c11315099",
+            "files_digest": "4fdc6b031edfef6643a9f48792cbf12755089d27ec8d84c21f1cb6ab6ac363f7",
+            "response_sha256": "4ebe42c6d87c4ceb07390690fbe89d79af3598da32fc43cd3faed061203a4cdd"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "a4d7f5f415c0a3d7572d1f839d3af026c3ef613cd41786143b83d2f84f095ab5",
+            "report_sha256": "448b68da6091c30004486ebb1cd58de91012811c3e678eabb80a5c5229b5d5de"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "710e4ecb465b3290ccba4cd04acfd7e0f1ac56f3002e69f387754a7abeff032e",
+            "report_sha256": "e3d7827e9953e7091389b7f7ba2a6be41e256b52933cca91dafb411ca5d475d7"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "e797b25dcec3e088dc531dce690938b9af976ebe1f7a20820e0daa9d54b07e20"
+          }
+        },
+        {
+          "task": 4,
+          "direct": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "ddb121d5b3331f1f2c6338685a40c9f5a5a99aeee5e058e6f2329af0b0c0d74a",
+            "files_digest": "8d95affb1ab87f945e4550c35f7487753513ccacc825551187bf67cd5d58ce9f",
+            "response_sha256": "a01e3f40d1cdd7db3713e34bdc57ec093d0ff1347f63d6a0bf841f0783658e5e"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": true,
+            "status": "valid",
+            "response_sha256": "753aeca3a7f02f2b15623884a2bdb22d85a2bb3f799ef3bebd75d8189e1a9677",
+            "report_sha256": "5b7fe888e995916a7848677f5adf00d3df1ec2fac18be55735581d0d2845c54c"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "invalid",
+            "response_sha256": "3dd54ad83fe2df90ea933ff000ba74cfa30fe340719a31c317d7ee5cb3db2a52"
+          },
+          "old_fixed": {
+            "passed": true,
+            "status": "valid",
+            "report_sha256": "da3ff6a27d24c6e046b4e38ed6aa78e7576785687d5c61cfb993b6ef0644a8e8"
+          }
+        },
+        {
+          "task": 5,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "d1dd505428bcd1a97e72d58d6d49403bf6b67853d1f5b4622bbfc6fe4600ce57",
+            "files_digest": "940d079d88053b57a2ca338f45b580f1c99707d3b3e9a8b69c2c22312867da86",
+            "response_sha256": "a799c64303b2a80b05c3eeb1a77d755db462b433d90349be01f59777332744f5"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "d3c1eaef2fafdb84d9139da060e2e8cfdb12c2a41e7287d6afed52c75033818e",
+            "report_sha256": "846a419f625029f0cbe2c9ef33cb59d49611b91a3ad031dbf8633871c4866253"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "d682b7c160a716330f5c3a801fadf11816f04a16740a227280905d036b026c12",
+            "report_sha256": "f075d1e59256d7a194cf7273217b844376be727fae8dafcd02b2409494a661b9"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "f3f361516a4b007fb4dba21d5eedb69a0a4f7ef19f57e24fd0cee4444c58d3ee"
+          }
+        },
+        {
+          "task": 6,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "bc2aa545db2f33adf09037201650072d0978fc8b7f7e5f49472503c03d5695ff",
+            "files_digest": "74e0eb590fb62b053dc0ed5e17b2c943900b5ec9a820c6153f5111e2cb1563ff",
+            "response_sha256": "2bdb5a9545e68908d30dec0caefccb0afe94877ed8ad5edf5276b483d6ec6a6a"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "6a9db1edf75126109c8bf57303072e6881e54ad4f7983dd03bb24352b64520b3",
+            "report_sha256": "40fc051a2a40ea891cece834dc1b9aabf7f88fc1fd7e85dbbe77b1662b71605c"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "7ae69bc6d90ae60a54977b50da4241f6ed1594a690fa0afa8f5bb3d6ee5a3352",
+            "report_sha256": "f7967af86bb30654a96ca0562eab7e221763b337303bfb0360b6a660119823f2"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "cba67b4e0e570645a5c88123395c271e0232a615b9a52c5bb27c15a86fc00c4f"
+          }
+        },
+        {
+          "task": 7,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "a8eb4a2deda652e79d1ada7bc8ed1a7be9a1f529750655f26dd7b33be4504d62",
+            "files_digest": "a805736d1d8b631ef80a67132bf4f54152fe78a7949b13f984aeb1820b764af5",
+            "response_sha256": "c05d2a415872e3debf4e7664fa067883eeb6dfedc7b6b7d198f3892db1ee12b4"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "bffc7b5d69b08b31e726c4d04f737ae9925cd6fc3726955d1f3fa25133ab11b0",
+            "report_sha256": "3bda56967346a0c0553d2f66f7c4034ed6ac86b4ef05098af44e11d2310026c6"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "39e4f553a4c57d066233138a9328ec2bf8420a08c3cf20ad0b4a52a1df568848",
+            "report_sha256": "3d8b8dcdf852bb77002dffddcb8be4e4bc63b6ac307b274da8a05eac5834f5dc"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "0f40906d96a679459659a2b146b68da16705db901c027419320a984f5576e24a"
+          }
+        },
+        {
+          "task": 8,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "7c21f360bd1180abc1669887462569175fd90115cf1cb836af5265817aa68268",
+            "files_digest": "94add9ac5a931ca64505d53b7b1850c5acd757dae624c7225696251f133ac919",
+            "response_sha256": "ef2e59c3e810139e536e8f85d77742213717388eace0cbe43ee6bb001b9a4367"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "177d31d8be1ce502048b9c50e0f49343f1f92e668995f9213cbe4658bb6df7b8",
+            "report_sha256": "8621c1e39a9abc306d4f8457b26550eeffdbd1df7d5305cbcdf027167a431974"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "119ef41586f3351c04801bcc9b51bb1958fc859a4089472406fb2113f4e1a7a1",
+            "report_sha256": "0da620a79a764cee3c52cbc0149a7c0313c550637e4a5a972e4906c3979a914b"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "8ef9dea2c52577f98205724d5371f63e6835eac259025d0da30c1282f89695be"
+          }
+        },
+        {
+          "task": 9,
+          "direct": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError",
+            "response_sha256": null
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "398daac1582e8d809f1aa76d32951c2dfbb66ba0e76b62b97c39f8faf9afa825",
+            "report_sha256": "2912c2377198c585f71b11b17b9c66d3608909f63df10fb8c233badd9eb3290a"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "275c7a80a26abda75c9f3b9f887b9c6fa51feb5eacf2c2b189b116ee93a39cc0",
+            "report_sha256": "6d153dcf2731011579f62acd6009ab825f3a4a3853aa90bd9ecfd64d1054f4a0"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "4e61f6998f915a878f2df6f2627dca407368e2c9178594c7fe62ae61a6e982d6"
+          }
+        },
+        {
+          "task": 10,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "af8bb5ec289381edd3a606c850f817e7f40f3bd6d30af3e53a54a17090e52c30",
+            "files_digest": "8537b957566e148e1cdd2c39606e1d3cf896d21f1248792de88dd86f11ae5fd7",
+            "response_sha256": "1bffdc911e29e24046f4b4ddd6575729af7b1ed6454c0794d7bd30af2003df50"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "157811d587c5ebcde2f97d48b39cd066a79d79b6b5b728ade6802aa695839a55",
+            "report_sha256": "e1f82904c71b6feb57bbba88aac41ef454e4c3d2d780c16f64d960d65f433131"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "134ebad46fa4ff09011754d989caa2119f76ed2c53d66076b9717064124ef5c4",
+            "report_sha256": "ae49c56f7759d86b63012f0b74721632cd056d04fa2967715a5b464c4fe0833e"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "67bc20fff64e5e47cd85978ad041da40b0e9d07dbca54b7ca4bc952aa78421b8"
+          }
+        },
+        {
+          "task": 11,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "9218c95e280bf064370370b314c27434b51256d10bd22590c979c50f1e8a145c",
+            "files_digest": "bf03f4487c06cca47b33aef5bbb540732e25b747de337f5a5f7a57ec92b01f6b",
+            "response_sha256": "bc5d44027f7e444395423c3fa1299532444e65c01af9e396131f567752d4d83e"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "c4a009ad75816da8f5d05767b99ea9657d814f26791c11064583644b7ae39d2b",
+            "report_sha256": "e848ae84380b33610a5ad80a193bb6ad55548f095f206ebd9233735d163a0d80"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "4bab0e671eaba6d25fee1662b0e473a9481c0e8a54c1e74fed24bc8207b44c87",
+            "report_sha256": "da258aa4aa0c1223ebf0961f1541ff28b856bb6f267a0d24ac91c8e25d5e9405"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "91c6da39c965fe47af7b2734f24a93def73e9ea35b6ebe13068338291d148466"
+          }
+        },
+        {
+          "task": 12,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "c6eb39174d1b64b8238eb715062b180eb1d02a6ab702eca964998cef077cecce",
+            "files_digest": "b182e89c405bc1c51aa5ffd8aed193a3570c422490e4e63432d9dfaff5629b40",
+            "response_sha256": "ca393757c215fd29e0962e69f3a008351a05ce3c00692496afb61c95530db71b"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "405370953b15124590184ad3191789e238431bfec6e5a9999b02808c0c0d84e7",
+            "report_sha256": "60fdecce1a2742f8c1e688ef86eaebdfaf3f5229891ea771c9b7e6490743ac2b"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "ad44dcff6352fc92e10fd878ca5466b6f8cd2cf1afe574862cff5507cd8d22fc",
+            "report_sha256": "27992ce978601177035d7210992076d06b18c68b00b0656d3f2b4a06a37425f5"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "b90e153a7dbe2b4675d43a8fc11c9faccdb2ac61331a6e217ae4a24105a1f0e0"
+          }
+        },
+        {
+          "task": 13,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "ab19e74545e427cdc175a4a7b6ae642e0a8e7fb462711495a78986e78197c324",
+            "files_digest": "c644aff2000c5946069e94eb2cb41b81cd9720e731fc334c0131c537d9b87d38",
+            "response_sha256": "07ce4adbe421676b2b484ac68fc5f10a01427ec9b9e75d048b0e1fe1cbeb3f6d"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "2df09cebe5dd1b5131d47947e9019f926471f198d956443ece2bc4ff93c8347d",
+            "report_sha256": "48abdd10d7f8b65adf687b9f89091e4976becb6a8de21abc1a5a8760d5d6ac4e"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "445a9d962ab237336f36fbaf25c5152872af9b9f48167a1f988fbecf2ea2fa14",
+            "report_sha256": "ecbf47a9576a1b7ef47954ace1d3e74df3b9717b9e88d781dfce71b71182c9da"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "ac9392e43e0ce59d9eb4923a3678b26b9264621ce48f714e401e5295213df6b5"
+          }
+        },
+        {
+          "task": 14,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "858092b78264beed9573651519329e12d8a5c4c899e2e067eac1b40d626fed45",
+            "files_digest": "c760b8e10dc33ad6905a4e53c09a3ee48e58facac9855ae11d109a952a3ada82",
+            "response_sha256": "49cd55511ca8cf768992a561fe74a789ff7c14e0f86db774890f3b1f08a04a3d"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "cca3e3755a72804985df946c91e308238246dc52cae61794d1e863247ce46495",
+            "report_sha256": "a6f452432694e5330d8d02e7a6680789169b1d548f485aa31341c818fb0d0d82"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "1613deaaf269793c1fd29866355eefc5bab1de44a831c6ee98cbbe998c6182d7",
+            "report_sha256": "1576d3c8a0acab1fd222df7112b2508321cbe7a051d61626444a12fb8a374ce9"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "d1bc643163142248cf951a79d0f6a58e8b070b5d063a63cbde77219160ed8598"
+          }
+        },
+        {
+          "task": 15,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "daee611eaaf2f78e46072d6f58652a2a4a50d09305d3eaf56ccd64f3d3535c60",
+            "files_digest": "4c75cfdfe09fd8356a614ae15d4d4a6aff37e9056db304780b70f80bffada97e",
+            "response_sha256": "70d2a01b133a2c9116645bbad1a6a178cf5d585cc7d64afce130f9ceaf79b04a"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "a20925cfff11e1f2bc234276e3b7b42a530c4c5d038abe0d36ebd02ff9e8cfa0",
+            "report_sha256": "4a038e2853f4cf64a47b4385a5638603e395cd2464dc0b54a14d36250bf1a24e"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "d27197707889483db970f111120ca4bc90a0fa0352554850a22384c0ab78c1be",
+            "report_sha256": "96bd369102e48c40520d8109190dccd1879024346b52c2a1a8a784540f8309a0"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "9d2fe565f879bfe8b59bf1e62ff38adfdd08db9bfc84b8b6567cb3f3c1fef643"
+          }
+        },
+        {
+          "task": 16,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "78c2f45ea0d57e4c6c17b98e32749ae2513141a4001985a98b47a5573e2f5b4b",
+            "files_digest": "fc0c44d2ebd93bff2bc33cd30906924cebbd6daa2cab523542237f12fed667b5",
+            "response_sha256": "bd16d5c836a1feb334c135fe5e88c800799111118b70aacf6f9c44a71c22d58b"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "cc9dd2b27d6db226614f6091a8056905b8081d3e8ff0c55a458a7fe772227dbc",
+            "report_sha256": "321060f649136af29c187c3ce754f5d677a4977bf7d07882f180168e38c96ddd"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "8a149b18a400741c8b4440e77e6f833e871427e78f0d36a74f199bbfccbd82c8",
+            "report_sha256": "735062ee6890236fa1c4baac0349a53e7b82411f67b0b0e9904785e37f38f3f1"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "847c798dbef71e57c83847eabfeb796ddf1d417f8b92b063b357d64ee3cddff2"
+          }
+        },
+        {
+          "task": 17,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "a9d5a1d42c495a52d51d2ec696427073b0441bc211ae0ff87cab178f8fbf0cc5",
+            "files_digest": "58ea8355e202f6a9babb6fab1509e310d7eea0a9d53c9744be8ca2effa41b5a0",
+            "response_sha256": "e3e4301e73e8aa8e3fa11e2c7c1d90f4e8604de43ddeb5b7816333707be37af4"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "81268baf100cc760efa74385045574a0376062cbf8696452343f601449f38e46",
+            "report_sha256": "37cb19e2c4589120b129a256974f13aed9d89fe045d9f6daabf15d2457767e0a"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "7f6cca951799738ef05e5f9fff01a97e4eadd16bddc2822fb8293d12ae151c33",
+            "report_sha256": "978fba534bcd1632ee4b1cafb3e443234e940c3c1f74f9e355d3f7f3dd3691c4"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "9b5039bf0c4c682c9667ed0f80095e2a917c754935da42dc47a977baf3fb00a2"
+          }
+        },
+        {
+          "task": 18,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "b459c27a315a5b910431cae1b55b378248ef6b4add7dbdf1e992ae1feb95f121",
+            "files_digest": "7779ff73b90840a63c2a5d46719a2d2f4c7f622422187836e6dcb3792c4fbf29",
+            "response_sha256": "e788180cd37a9e96252f2479fc1082c9674153c22183f819eed2d416c4f1f974"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "957deb1486719dd506f15091ca9d1f9539ed8e75eb92086e42ec02698161e038",
+            "report_sha256": "901518c3d076ac54979631c5392c1637410ae4a506838b9875c930d92d7efab4"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "c4015b1286a06f98a390164617ab904a0b07f7ff55fb8f0f92a37db882b266dc",
+            "report_sha256": "476a97c93c36836bf28823e169eab09adedfd6024e1f33f7dc40b54802df9777"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "f76ebb0da20d9d8766a9b27d359eaf934bcfc9edddb54bbbb5e50f189f76feba"
+          }
+        },
+        {
+          "task": 19,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "8d4f70aa2ffe44f1003f6ddc6f15178b57946ee9a2f5c6305e16bb69a1f4bd7f",
+            "files_digest": "f944d3e6cbcda6c2de23b00bdcac71c82ebe19724e0b8ac4db66826b3d71e323",
+            "response_sha256": "810815cf3dab4916a841cd1a6632f3f7c281b9b09c3fa197990751a912f969ba"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": null,
+            "status": "missing"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "9bfad3800ac3f70e9c5e706922071e33afbc37e5db4f51575d1afc069fcbcd32",
+            "report_sha256": "c1c26db6fdea3c06d28e606ddd98523f6cf6821e12607ac864a1d58ca27b5844"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "c1c26db6fdea3c06d28e606ddd98523f6cf6821e12607ac864a1d58ca27b5844"
+          }
+        },
+        {
+          "task": 20,
+          "direct": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "fbf4b7232a39964568238b2b4837f97ec8f327297fd19edbf4a1cb3d2204a5a5",
+            "files_digest": "803bb507575f8fce478735ea92cb66838159fd27ad2a47cc831485863855353b",
+            "response_sha256": "90878a61e91f53b4f21a1e9561ec7ce72c5a10f2ca1aea541625332b6d4fffe1"
+          },
+          "self": {
+            "status": "missing",
+            "passed": null,
+            "reason": "build: RemoteProtocolError",
+            "response_sha256": null
+          },
+          "fixed": {
+            "status": "missing",
+            "passed": null,
+            "reason": "RemoteProtocolError"
+          },
+          "old_direct": {
+            "passed": false,
+            "status": "invalid",
+            "response_sha256": "ea4f51020cafb1ad5997c9471954f60c29eaed24d8928a9504a4bb99fc7dc169"
+          },
+          "old_self": {
+            "passed": false,
+            "status": "valid",
+            "response_sha256": "d07c71995d0833c553d89ba249d7c689a2f0a0fca9136742d10360da056f6370",
+            "report_sha256": "96cec8f72a9a1b409053feb4b7345319cc473133b1ffdc67e241f22ea310be71"
+          },
+          "old_fixed": {
+            "passed": false,
+            "status": "valid",
+            "report_sha256": "2d35d6261f9d430bfa39240af1d87ecaf3eddd139c05b256b0305ac3f9ba463e"
+          }
+        }
+      ],
+      "summary": {
+        "old_direct": {
+          "passed_ids": [
+            1,
+            2,
+            4
+          ],
+          "missing_ids": [
+            19
+          ],
+          "observed": 19
+        },
+        "old_self": {
+          "passed_ids": [],
+          "missing_ids": [],
+          "observed": 20
+        },
+        "old_fixed": {
+          "passed_ids": [
+            4
+          ],
+          "missing_ids": [],
+          "observed": 20
+        },
+        "direct": {
+          "passed_ids": [
+            1,
+            2,
+            4
+          ],
+          "missing_ids": [
+            9
+          ],
+          "observed": 19
+        },
+        "self": {
+          "passed_ids": [],
+          "missing_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": 0
+        },
+        "fixed": {
+          "passed_ids": [],
+          "missing_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": 0
+        }
+      },
+      "paired": {
+        "direct": {
+          "joint_ids": [],
+          "passed": {
+            "self": 0,
+            "direct": 0
+          },
+          "only_self": [],
+          "only_direct": []
+        },
+        "fixed": {
+          "joint_ids": [],
+          "passed": {
+            "self": 0,
+            "fixed": 0
+          },
+          "only_self": [],
+          "only_fixed": []
+        },
+        "old_self": {
+          "joint_ids": [],
+          "passed": {
+            "self": 0,
+            "old_self": 0
+          },
+          "only_self": [],
+          "only_old_self": []
+        }
+      }
+    }
+  },
+  "cost_by_phase": {
+    "build-a/construction": {
+      "calls": 4,
+      "settled_usd": 0.00207,
+      "exposure_usd": 0.021295,
+      "unsettled_calls": 1
+    },
+    "build-b/construction": {
+      "calls": 7,
+      "settled_usd": 0.003034,
+      "exposure_usd": 0.021962,
+      "unsettled_calls": 1
+    },
+    "direct/deploy": {
+      "calls": 20,
+      "settled_usd": 0.024418,
+      "exposure_usd": 0.034454,
+      "unsettled_calls": 1
+    }
+  },
+  "ledger": {
+    "calls": 31,
+    "settled_usd": 0.029522,
+    "exposure_usd": 0.077711,
+    "unsettled_calls": 3,
+    "cap_usd": 1.3,
+    "stop_usd": 1.3,
+    "halted": 0
+  },
+  "requests": [
+    {
+      "purpose": "table/build-a/design",
+      "request_sha256": "2552fffabac5657be8ba04c23d3c5816c774cd8103aad3e196897acaa20573b3",
+      "response_sha256": "0a590d3db0d3b24492415c03f43e3ea26c44aa83b9206652f748ee40fd9839ba",
+      "status": "settled",
+      "actual_usd": 0.00028,
+      "receipt_sha256": "cb6eeb210cab5aeeaffb37bafcc3e99e30d9a6ef9d699855a7eb037d9266593d",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 2242
+    },
+    {
+      "purpose": "table/build-a/source/app-core.js",
+      "request_sha256": "729cbb2fd3580d8db542d5a4ae65efba0ebdea1e750ba6421841fd64abd383bf",
+      "response_sha256": "3912ca65a0cdab94c1ef30f9489fe19ad5592a418d40c20ada2e7dfe06d041b6",
+      "status": "settled",
+      "actual_usd": 0.00102,
+      "receipt_sha256": "025d605a06df189a1ff1826dab2db34ea11886d5880c9f3d711c132fa0f113fb",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 13061
+    },
+    {
+      "purpose": "table/build-a/source/common/menu.js",
+      "request_sha256": "242a0055adad5dd859e6435a62ac5af0e8c6e8e1ac8d045762c82ce307159bf3",
+      "response_sha256": "38ab0b9bb2fa9bdf17e417e95a7ac0ba094033e4edd8d9359cefd1bc8883370d",
+      "status": "settled",
+      "actual_usd": 0.00077,
+      "receipt_sha256": "cde2e6604faec597db7a00ceccab32892466627f9a2bf4967da63d5a64e0bd46",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 5107
+    },
+    {
+      "purpose": "table/build-a/source/common/table.js",
+      "request_sha256": "d38b90d3986a072835af02bd9a4fa25446dfa8a61b4acbbcaf9859037842a988",
+      "response_sha256": null,
+      "status": "uncertain",
+      "actual_usd": null
+    },
+    {
+      "purpose": "table/build-b/design",
+      "request_sha256": "57e1fff01466f6649c747640df6ee8f82e78261c5b4fd82a048db1d0aafd0d56",
+      "response_sha256": "2fa8cc18d1f7461fdaded95df759df52372cdb48c985a71f10138e41a6c76896",
+      "status": "settled",
+      "actual_usd": 0.000231,
+      "receipt_sha256": "a884cf9e19b8bc7065d54bf7eb457308dfbbde1ca5768c9a0a6aba5bf6def22c",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 1054
+    },
+    {
+      "purpose": "table/build-b/source/app-core.js",
+      "request_sha256": "ab4638e368a294eabeac5305f3f087dc56a89e00e62b0a80e825f3966ce4314e",
+      "response_sha256": "c033de30eb6661e9fce0be0316cb601b061be72781be4dcf640ccf80413cfae7",
+      "status": "settled",
+      "actual_usd": 0.000254,
+      "receipt_sha256": "547c5e00c52f19023fbd0d6700e2ec6b54458321c9253908765902fdd100a6ae",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 1293
+    },
+    {
+      "purpose": "table/build-b/source/common/menu.js",
+      "request_sha256": "410a3b56671dfcd82e98624557870b944018d5640f4d2354d252993cb6c84cf1",
+      "response_sha256": "e376bd51426289f3cf02e3207efb31691a3a7646003737b289935416910fdb5b",
+      "status": "settled",
+      "actual_usd": 0.000652,
+      "receipt_sha256": "5ab40a3e26d604b62828f54b8a420e88d42a65ea83bad59590796c584fcf1714",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 6730
+    },
+    {
+      "purpose": "table/build-b/source/common/table.js",
+      "request_sha256": "00d87f01a2bf068188785d62aee7ff65df8466dc6b9f4177da58d9805366586b",
+      "response_sha256": "c8010016bc30f9fcd5ddef693d809b87a7c5fd089e164d4fd54c0fb13d5ffaee",
+      "status": "settled",
+      "actual_usd": 0.000576,
+      "receipt_sha256": "91fdcdaa351697e282434a2f38ea3fb22831ae85ed0cedd6626a9b1553f836d3",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 3784
+    },
+    {
+      "purpose": "table/build-b/source/common/key.js",
+      "request_sha256": "40e25b6e66b7a51f0c79be25b1739878ae468cc54e264194307c0e9f0baab7b8",
+      "response_sha256": "adcaa41bf531d8f8a7ed8e02b30309f38bb544ac1c26c6ca9d1cb52b3d020b5d",
+      "status": "settled",
+      "actual_usd": 0.000747,
+      "receipt_sha256": "73c1dbd06f92cfec43509216a99a5b5a2be67f3dc5a1f975617480cf474ac711",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 5056
+    },
+    {
+      "purpose": "table/build-b/source/common/mouse.js",
+      "request_sha256": "cfe64ad85bbc5526245308fbafc973ce3a837efa99f67bbbb400c466fb6568d4",
+      "response_sha256": "f9ba266bcf44e1f3a37aaf43049a926a35493b7731ef0bd8fbaeb1efed1be9fd",
+      "status": "settled",
+      "actual_usd": 0.000574,
+      "receipt_sha256": "231f506f70020a95dfc1eb2ea468bc7d15cd01e0c6353c9dd8803105b9b13dd7",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 1068
+    },
+    {
+      "purpose": "table/build-b/source/common/layout.js",
+      "request_sha256": "348a94ae168fe53cf67e6883f9f6a33297a99dfc08dce4acdc7895577764080f",
+      "response_sha256": null,
+      "status": "uncertain",
+      "actual_usd": null
+    },
+    {
+      "purpose": "table/direct/target/1",
+      "request_sha256": "e245e29377b6453e9803675ae102335269cf141cae1c8445df7098a417ac7404",
+      "response_sha256": "7f1c669aa2e87ec69a13eb358863b4a0142fe0c77202061bf2a66687427fe3e1",
+      "status": "settled",
+      "actual_usd": 0.000304,
+      "receipt_sha256": "3f975118f2f00459845f890253a235e95cf1ab61838f2a2b4deb7e8f18ef73c7",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 2677
+    },
+    {
+      "purpose": "table/direct/target/10",
+      "request_sha256": "fd4b0f3d978c1e9aecb44bafd30f7059e146758e4c2d53637966ee8f28dcb2db",
+      "response_sha256": "1bffdc911e29e24046f4b4ddd6575729af7b1ed6454c0794d7bd30af2003df50",
+      "status": "settled",
+      "actual_usd": 0.001672,
+      "receipt_sha256": "e28b925c73eeb95508a2cb4ec3d2bdb68c95de6138107a929f4cf2a02bb8eb0c",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 20887
+    },
+    {
+      "purpose": "table/direct/target/11",
+      "request_sha256": "5a7d50563c89f22ee1c1815d21a455f7990d915dba6eb7655278318e02200d4e",
+      "response_sha256": "bc5d44027f7e444395423c3fa1299532444e65c01af9e396131f567752d4d83e",
+      "status": "settled",
+      "actual_usd": 0.001394,
+      "receipt_sha256": "deedabbd1256bf620613a6e65bf9172aae1df29e0301849ae6e7f40c480a1c57",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 17407
+    },
+    {
+      "purpose": "table/direct/target/12",
+      "request_sha256": "c066ad841519d10e802a1938a38c7357ca5c6b932bf46da7055831ffbc858d85",
+      "response_sha256": "ca393757c215fd29e0962e69f3a008351a05ce3c00692496afb61c95530db71b",
+      "status": "settled",
+      "actual_usd": 0.001546,
+      "receipt_sha256": "809f4dd7f3dac6845536696373db5c900391aceaa66bf72eb8e80ce8aaaa2124",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 18085
+    },
+    {
+      "purpose": "table/direct/target/13",
+      "request_sha256": "81d19e62df969c1e30c3cb86714fd8fe747725cbcf45632e9b5f9e47a3f2477b",
+      "response_sha256": "07ce4adbe421676b2b484ac68fc5f10a01427ec9b9e75d048b0e1fe1cbeb3f6d",
+      "status": "settled",
+      "actual_usd": 0.001518,
+      "receipt_sha256": "8ff0e67264bf4680da06bc5854d7716071190025b8f5bad307952bbc0f90d66c",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 18255
+    },
+    {
+      "purpose": "table/direct/target/14",
+      "request_sha256": "222f6014b7684683ea2e554fa93dd51a7d1d95b181c5a2000203c8e807f65b16",
+      "response_sha256": "49cd55511ca8cf768992a561fe74a789ff7c14e0f86db774890f3b1f08a04a3d",
+      "status": "settled",
+      "actual_usd": 0.00141,
+      "receipt_sha256": "0161490b7882c58837b03f0f0621ceb1ac7829f0187e8ad97285617c2d045ab0",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 17595
+    },
+    {
+      "purpose": "table/direct/target/15",
+      "request_sha256": "bfb2823b8dc3fe63eb960c76212f30c099e47467b0a83a977741643dd0365486",
+      "response_sha256": "70d2a01b133a2c9116645bbad1a6a178cf5d585cc7d64afce130f9ceaf79b04a",
+      "status": "settled",
+      "actual_usd": 0.001647,
+      "receipt_sha256": "27fc9f7f0d48ed27855e662b8c6f4c397770882e9f041f3bdd2f0e6b0e0a9915",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 18859
+    },
+    {
+      "purpose": "table/direct/target/16",
+      "request_sha256": "eb0073779d386c5a46bb1d8c77e87258a2f91fc9ebf1f15545d293ea34d19589",
+      "response_sha256": "bd16d5c836a1feb334c135fe5e88c800799111118b70aacf6f9c44a71c22d58b",
+      "status": "settled",
+      "actual_usd": 0.001626,
+      "receipt_sha256": "fd330186e0cc19eb60cb7986c9bce0f9923260ff1f79d98c9a2f26495ed0cc8b",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 20131
+    },
+    {
+      "purpose": "table/direct/target/17",
+      "request_sha256": "19bd979cc60910830cfd782354f3e8be947fc618b79f4298e073ed0cd2c111d3",
+      "response_sha256": "e3e4301e73e8aa8e3fa11e2c7c1d90f4e8604de43ddeb5b7816333707be37af4",
+      "status": "settled",
+      "actual_usd": 0.001656,
+      "receipt_sha256": "8bfad0378d3e95e3a27e1b35210f38e23fafb2db203ac65e091f16c114d383c4",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 19994
+    },
+    {
+      "purpose": "table/direct/target/18",
+      "request_sha256": "bcebab425514a8bb618142cbe35bd1ee0cac996e2e07c7721e0c568636e1f8b4",
+      "response_sha256": "e788180cd37a9e96252f2479fc1082c9674153c22183f819eed2d416c4f1f974",
+      "status": "settled",
+      "actual_usd": 0.002155,
+      "receipt_sha256": "bcac2e22c271044abd630b24f85c247811bc302d4d75b27754338a098368e5dd",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 27857
+    },
+    {
+      "purpose": "table/direct/target/19",
+      "request_sha256": "e8b82d2940bd9c634cf432642b82c4053c3c924d96b5e4a4cf82c95db2eaebfb",
+      "response_sha256": "810815cf3dab4916a841cd1a6632f3f7c281b9b09c3fa197990751a912f969ba",
+      "status": "settled",
+      "actual_usd": 0.001798,
+      "receipt_sha256": "d12130f62ad545e7e73975f4b02c5bc79c418870f508d982e951bfaf0ea4ed44",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 21782
+    },
+    {
+      "purpose": "table/direct/target/2",
+      "request_sha256": "f4d062c45826b5f8924047bfa19f24e7bf52bf8738e77c037c60b7ce265a97f4",
+      "response_sha256": "622d7ad7c4efc4d44344431fe8953e4881b74e313fdfa58628a9ea721a25c21d",
+      "status": "settled",
+      "actual_usd": 0.000357,
+      "receipt_sha256": "416d3d07d06f999e6df123d093b9fcf506f1200ce9a16e94d4e451a2551317ce",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 3737
+    },
+    {
+      "purpose": "table/direct/target/20",
+      "request_sha256": "500b56ef8fda33f3e795eb31257302a79dbb1a0aa9dbcc9ff68cacda2af2b284",
+      "response_sha256": "90878a61e91f53b4f21a1e9561ec7ce72c5a10f2ca1aea541625332b6d4fffe1",
+      "status": "settled",
+      "actual_usd": 0.00171,
+      "receipt_sha256": "866e4c1d0dce954adebefc6bd13b2b8492daef7c9f392839e429271f6f76bd49",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 21439
+    },
+    {
+      "purpose": "table/direct/target/3",
+      "request_sha256": "c74b4adaec76f535218146476197b00bbc8fa6fe3cab5a5a5676fe276452048f",
+      "response_sha256": "4ebe42c6d87c4ceb07390690fbe89d79af3598da32fc43cd3faed061203a4cdd",
+      "status": "settled",
+      "actual_usd": 0.000701,
+      "receipt_sha256": "ccd21853a3bd1eaa6a936d873244595046836d791c78143d81baf7cf84695360",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 7888
+    },
+    {
+      "purpose": "table/direct/target/4",
+      "request_sha256": "86fd16c684c6b7b2f3ebb9b7f6f34e82ad6da4d04e034f22f21f3444a2b2baa4",
+      "response_sha256": "a01e3f40d1cdd7db3713e34bdc57ec093d0ff1347f63d6a0bf841f0783658e5e",
+      "status": "settled",
+      "actual_usd": 0.000715,
+      "receipt_sha256": "ec523b9ac91105f7bb0a59837f4c162c033f7d8c5197498439bde222631aad4c",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 7704
+    },
+    {
+      "purpose": "table/direct/target/5",
+      "request_sha256": "5ff83f8eaa97749a99419a91bf2ebf836b43b0fa12a85ebdc667e081d1519fb8",
+      "response_sha256": "a799c64303b2a80b05c3eeb1a77d755db462b433d90349be01f59777332744f5",
+      "status": "settled",
+      "actual_usd": 0.00082,
+      "receipt_sha256": "afceecbb5dd91014f1e6babd886f8059fadfe96d53c6a9393fbe6e4bb8799023",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 9163
+    },
+    {
+      "purpose": "table/direct/target/6",
+      "request_sha256": "714d0070e17305d3d5c133f59d2ed88c3f37b690eeafbb08c5d623dd533c5022",
+      "response_sha256": "2bdb5a9545e68908d30dec0caefccb0afe94877ed8ad5edf5276b483d6ec6a6a",
+      "status": "settled",
+      "actual_usd": 0.001051,
+      "receipt_sha256": "c07a569d3f31038a5328c13fb4046c56063d6dce3177a838714c68bec3c4a888",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 12795
+    },
+    {
+      "purpose": "table/direct/target/7",
+      "request_sha256": "ecede9df8908507dd08b45d2c13ae9af3eefc8bf306a9729356bc6836a58abff",
+      "response_sha256": "c05d2a415872e3debf4e7664fa067883eeb6dfedc7b6b7d198f3892db1ee12b4",
+      "status": "settled",
+      "actual_usd": 0.001124,
+      "receipt_sha256": "a9867296bdb9f3315b83be830c0b82ea4ce012e91d8fcd0ea1aed6798e33ee4d",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 12901
+    },
+    {
+      "purpose": "table/direct/target/8",
+      "request_sha256": "367dfe15f2d97ceea20b802d362efc071bbe4184729d6227e6b3d4deca9d2cac",
+      "response_sha256": "ef2e59c3e810139e536e8f85d77742213717388eace0cbe43ee6bb001b9a4367",
+      "status": "settled",
+      "actual_usd": 0.001214,
+      "receipt_sha256": "096dfdc0bd47629a232bbec61792ce703272890efee3be55d48d59f84e2de660",
+      "provider": "SiliconFlow",
+      "finish_reason": "stop",
+      "visible_characters": 14601
+    },
+    {
+      "purpose": "table/direct/target/9",
+      "request_sha256": "e530611c2221c2526c2260d50708f1724ff709a61bf272a6601bb2f107ba6a55",
+      "response_sha256": null,
+      "status": "uncertain",
+      "actual_usd": null
+    }
+  ]
+}

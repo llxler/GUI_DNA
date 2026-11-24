@@ -1,0 +1,813 @@
+{
+  "study": "Transport continuation of native per-file writes",
+  "project": "table",
+  "model": "openai/gpt-oss-120b",
+  "registered_utc": "2026-11-24T04:29:30.749811+00:00",
+  "end_utc": "2026-11-24T05:18:00+00:00",
+  "budget_usd": 1.96,
+  "registration_sha256": "f6fcad9dfff40443f807a9550b6060520c00e1a28c0db5e8ed675bb2120023fc",
+  "files_at_registration": {
+    "studies/public_library_transfer/self_refinement/incremental/native/PROTOCOL.md": "df26bd5c45b6cb755130a0a905756020d270ef2d19e4f9db6c460f80f50c33dc",
+    "studies/public_library_transfer/self_refinement/incremental/native/run.py": "6f5ab4787859e59576d763d4f307a7d5ee33a4c9870f7636997520364a85a9b4",
+    "studies/public_library_transfer/self_refinement/incremental/native/provider.py": "6b6491fafcbbaa293a963b37121d1a5abfc06d784915a6f9fee45f2bd9da5d87",
+    "studies/public_library_transfer/self_refinement/run.py": "099138fe6f40d7511cde41843bb4fe3bbc940bc8f6eda70c1c05f544b3bc67ef",
+    "studies/public_library_transfer/self_refinement/incremental/run.py": "6c0e67e5d812d81ec6cd952461a23885b6e5370568cc1662594cbe3ee44c9d24",
+    "studies/public_library_transfer/self_refinement/method.py": "baec8cd58ab39fb142ccba97d4009bff053d6c2e844076ba4a000a93ac1c5f6a",
+    "studies/public_library_transfer/core.py": "f79d8318b1064eae22fd10771e26482f3dd7f282fe43a1763eaa292153718e65",
+    "studies/webbench/backbone_matrix/run.py": "911c23da722b5b5df1afd828548e9f441ac9afce921ac3c207db6140c7adeedd",
+    "studies/public_library_transfer/browser.py": "fc86233c04e6f2ccc93aa67c6a150ea313d28ba759d8d2db1512c7e45f4e8e3d",
+    "src/gui_dna/budget.py": "a882c7c3a100f88d58aef11579bed71b14e430357ccf0af83c756b22034a5044",
+    "studies/results/backbone-matrix-20261124.json": "4297c24cad773da768b64a4e40e3407b4c442ac6f233bdd3000ac2bc87dd2892",
+    "studies/results/incremental-self-table-20261124.json": "572041c31c1a52faf8b3b90519895938ca635dc7a467b3ab12e1a0b156ea254e",
+    "artifacts/incremental-self-table-20261124/oss/build/interface.json": "3b34c4d666f21d69fd788ebf661d80f608dfb61a696b08ac9b6b87ff8026b5fb",
+    "artifacts/native-incremental-self-table-20261124/public.json": "dc5421eec8b335ed55f2039f5214e0c31d5a96bf06a50a0af92be3aed6e1c9e1",
+    "artifacts/native-incremental-self-table-20261124/browser.json": "2ddd6a41d79caf8ae7e52b2f551447dbcb79c54705f6c08005ba6b906a8d6b54",
+    "artifacts/native-incremental-self-table-20261124/interface.json": "3b34c4d666f21d69fd788ebf661d80f608dfb61a696b08ac9b6b87ff8026b5fb",
+    "studies/public_library_transfer/self_refinement/incremental/native/recover.py": "fae346c6d435b8d5cc1430ceb68f74c3a16f588ab263851896a4ced874d2003a",
+    "studies/public_library_transfer/self_refinement/incremental/native/RECOVERY.md": "24694976ca4152e36a2b7f83334ee2f6984b1bcccd536ab1247a25c50e61ccf5",
+    "studies/results/native-incremental-self-table-20261124.json": "91ee365d1a1683ab10b3debe15f9c83d53f693d759629b306a84e6d6f2ae9f1a",
+    "artifacts/native-incremental-self-table-20261124/registered.json": "9c32f2ddaafe4bf86f607d2a094b42fc213ae28a3269304cfb235c4629b79a4e",
+    "artifacts/native-incremental-self-table-resume-20261124/public.json": "dc5421eec8b335ed55f2039f5214e0c31d5a96bf06a50a0af92be3aed6e1c9e1",
+    "artifacts/native-incremental-self-table-resume-20261124/browser.json": "2ddd6a41d79caf8ae7e52b2f551447dbcb79c54705f6c08005ba6b906a8d6b54",
+    "artifacts/native-incremental-self-table-resume-20261124/interface.json": "3b34c4d666f21d69fd788ebf661d80f608dfb61a696b08ac9b6b87ff8026b5fb"
+  },
+  "tasks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "batch_ends": [
+    4,
+    8,
+    12,
+    16,
+    20
+  ],
+  "upstream_commit": "7b31ca2b786eef120dd49ce63dd03d0c0006046d",
+  "earlier_exposures_usd": {
+    "text_editor": 0.001823,
+    "native_editor": 0.02657
+  },
+  "seal_sha256": "34fac0f0d83d4bad97be07e951f84bbdeff9a5402d3eb40da9cd361f966afa97",
+  "build": {
+    "status": "missing",
+    "reason": "HTTP 502",
+    "revisions": [
+      {
+        "through": 4,
+        "batch": "through-4",
+        "selection_errors": [],
+        "writes": [
+          {
+            "path": "index.js",
+            "public_errors": [],
+            "accepted": true,
+            "checkpoint_sha256": "1c6549d1cde5926bdb28d136d7d5177280a016fd4fe0b84f238c5c70306aa75c"
+          },
+          {
+            "path": "common/menu.js",
+            "public_errors": [],
+            "accepted": true,
+            "checkpoint_sha256": "ac836087a5a3d5c7d3f90d5cd68d80b0932ba60891e520584d6192e3d660556d"
+          },
+          {
+            "path": "common/table.js",
+            "public_errors": [],
+            "accepted": true,
+            "checkpoint_sha256": "a891ad218434b2857cc9a318505d738a0811f7b2ea9e13a7bf0d47e514da7794"
+          },
+          {
+            "path": "index.css",
+            "public_errors": [],
+            "accepted": true,
+            "checkpoint_sha256": "3ff26ffe23d93057fdc8635b9fbd2113110660532cbae62e1c6aca9287cfc71a"
+          }
+        ],
+        "proposal": {
+          "files": [
+            {
+              "edit": "index.js",
+              "path": "index.js"
+            },
+            {
+              "edit": "common/menu.js",
+              "path": "common/menu.js"
+            },
+            {
+              "edit": "common/table.js",
+              "path": "common/table.js"
+            },
+            {
+              "edit": "index.css",
+              "path": "index.css"
+            }
+          ],
+          "smoke": {
+            "event": "contextmenu",
+            "selector": ".table",
+            "visible": ".menu"
+          }
+        },
+        "source_sha256": "25a6f9f6169bfe7a85ada08c6a67e350af701d2e539a9ec85804ea3343cce1f9",
+        "load_errors": [],
+        "probe": {
+          "passed": false,
+          "detail": "TimeoutError: locator.waitFor: Timeout 2200ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.menu').first() to be visible\u001b[22m\n\u001b[2m    9 × locator resolved to hidden <div class=\"menu\"></div>\u001b[22m\n"
+        }
+      }
+    ]
+  },
+  "public_checks": {
+    "through-4-public-check": {
+      "load_errors": [],
+      "probe": {
+        "passed": false,
+        "detail": "TimeoutError: locator.waitFor: Timeout 2200ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.menu').first() to be visible\u001b[22m\n\u001b[2m    9 × locator resolved to hidden <div class=\"menu\"></div>\u001b[22m\n"
+      }
+    }
+  },
+  "summary": {
+    "direct_original": {
+      "passed": 7,
+      "observed": 20,
+      "scheduled": 20,
+      "missing_ids": []
+    },
+    "self_original": {
+      "passed": 0,
+      "observed": 20,
+      "scheduled": 20,
+      "missing_ids": []
+    },
+    "self_refined": {
+      "passed": 0,
+      "observed": 0,
+      "scheduled": 20,
+      "missing_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    "fixed_refined": {
+      "passed": 0,
+      "observed": 0,
+      "scheduled": 20,
+      "missing_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    }
+  },
+  "paired_refined_to": {
+    "direct_original": {
+      "jointly_observed_ids": [],
+      "gained_ids": [],
+      "lost_ids": []
+    },
+    "self_original": {
+      "jointly_observed_ids": [],
+      "gained_ids": [],
+      "lost_ids": []
+    },
+    "fixed_refined": {
+      "jointly_observed_ids": [],
+      "gained_ids": [],
+      "lost_ids": []
+    }
+  },
+  "rows": [
+    {
+      "task": 1,
+      "direct_original": {
+        "status": "valid",
+        "passed": true,
+        "response_sha256": "e1178a1ec608a4534db27318b68dbd137b227d14ca9dc7ed1939162c298e249e",
+        "report_sha256": "e0bf4e9d1368933db47ed8e46bc44de4862acd75e709d3ecab045a916fe883bb"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "de5779369de8371469cc7a4d1c47737a155163d4237eae08483ce72875b52db7",
+        "report_sha256": "b365822ef45f00ed1d7291c06626a7ce153d4a37481815a905325c3ab0f9587e"
+      },
+      "self_refined": {
+        "status": "missing",
+        "passed": null,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "missing",
+        "passed": null
+      }
+    },
+    {
+      "task": 2,
+      "direct_original": {
+        "status": "valid",
+        "passed": true,
+        "response_sha256": "63d1ce2eb51f7b4b490287f5e215d23a52d3f82714d553b6e4ea10b164b9a630",
+        "report_sha256": "e68ee8b7a37da2313bdc2f6d12160a63e755a4c33b8de755c21d4cc39b560560"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "89c1de4d8ae2434edecf1407cb259eb86c199a009cbc7fc56db5b789354e7ed6",
+        "report_sha256": "9b61538f4f9f8d1b1e928ad98261df355226f604c7edd4b511dc428d9adafe5f"
+      },
+      "self_refined": {
+        "status": "missing",
+        "passed": null,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "missing",
+        "passed": null
+      }
+    },
+    {
+      "task": 3,
+      "direct_original": {
+        "status": "valid",
+        "passed": true,
+        "response_sha256": "14ca9d3e7e3d6031e6777611fd5a1a086d2e05167195e28ec5546b350d27f643",
+        "report_sha256": "acb6ae17378effbaa05f29b0dc5322b4b9792ba91f05cbb628506e023a2e2ad3"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "1b8960812e0ca5542155b32028b43a8561bd866331b215a0f538812e7a8324d6",
+        "report_sha256": "a5831080dc97ff2d544b9b2e5ccf08aab0a4d9092e221f88fb4df4cf5d46ec96"
+      },
+      "self_refined": {
+        "status": "missing",
+        "passed": null,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "missing",
+        "passed": null
+      }
+    },
+    {
+      "task": 4,
+      "direct_original": {
+        "status": "valid",
+        "passed": true,
+        "response_sha256": "7ed46f182aa16885e49a8ba4e68842395524d66305b4ce3d14cad7000b475ad2",
+        "report_sha256": "d3c1fa2155392c313a15cc7ca630024a465d59f8b52bee1f2dd6d27f674774a8"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "36c99641af6972a272092c1c7bbf3b0c7528bff6c40620506f2bb8e0556876f0",
+        "report_sha256": "860abfd92a3cebb02ada3f08c2065ea1a836a364dfd6679543d124a848656655"
+      },
+      "self_refined": {
+        "status": "missing",
+        "passed": null,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "missing",
+        "passed": null
+      }
+    },
+    {
+      "task": 5,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "2e0091fcfc731bc101d64ddc486d7e9d4454895b7671caa72d3257ba7d7c2e66",
+        "report_sha256": "ca1bc1476f0024c8443d7c876726271441d0838a1e610e4240707f1596ac8e33"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "ab49a1aa909e204688420bdf999d1a509248397394097f356bdfda8cd73b1100",
+        "report_sha256": "1263fea37c70b45cb9b0953d5d20bd245928ee7efc3291441c55675b8c7c2d0a"
+      },
+      "self_refined": {
+        "status": "missing",
+        "passed": null,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "missing",
+        "passed": null
+      }
+    },
+    {
+      "task": 6,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "b7cfd861c1a0fbe76834e9f915992f8c0807114bfff8e41046348de2e5e6e692",
+        "report_sha256": "89ae9374f7c44d6d4cbc17c3e34419b5ec3a31662ef58d6da99706a25ce46afa"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "9116372d23df591d127bba3728c41cd371b66534e069f7b61be9897cfc11a7dd",
+        "report_sha256": "d8b723855341a28bd1f2f11ec5b817239d8d1e0f31a8372d70f2c1a89cb2dede"
+      },
+      "self_refined": {
+        "status": "missing",
+        "passed": null,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "missing",
+        "passed": null
+      }
+    },
+    {
+      "task": 7,
+      "direct_original": {
+        "status": "valid",
+        "passed": true,
+        "response_sha256": "07f27dfe12d9b25a6e6118a3b62e9ee3c02a7b646ca35eabadb8789136705fd4",
+        "report_sha256": "10f34b7807cea19300553e81a9065f198ea576f54d1a4714f4cea88ffaca9432"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "31f6540f54dd2be2ef7e3f503f60dcdb7d19229db3bbc5d3bdc5d0cba24d5a1f",
+        "report_sha256": "a7cc45d0594c4a76f86f4311d2d5609cc2ed4c85f13a2e3af7e6db64a57fd8cd"
+      },
+      "self_refined": {
+        "status": "missing",
+        "passed": null,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "missing",
+        "passed": null
+      }
+    },
+    {
+      "task": 8,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "11f47a3678b2f599044ad77ff0c0bb846ff9f11aebcc26da17fb0b9b513c9513",
+        "report_sha256": "d2b6fa65c3ecf3693c262952652363792adc6655fafca149e60bd4c3a2660f9a"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "4c31494aa1e16dd5f1a75383c2a464949b6dcb27fe3438b523faf54483138c18",
+        "report_sha256": "8d46cf47e735b68a965312b51bca6ec8d2e6de086e17650a08261d9b2563b0b8"
+      },
+      "self_refined": {
+        "status": "missing",
+        "passed": null,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "missing",
+        "passed": null
+      }
+    },
+    {
+      "task": 9,
+      "direct_original": {
+        "status": "valid",
+        "passed": true,
+        "response_sha256": "c1da85ff0cad946cc6dbf89c29c50355601a704391161ae8dd8c836dc5628212",
+        "report_sha256": "c274a0ec458e4112d32b339132b48ccf8b97ceca5ff5e3c86b13095386a61841"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "ad1d19d45c76ae4d6f40a5bba21b6956c5aaf9db26a4e7c9b00af316d14004a3",
+        "report_sha256": "e62cf40bb02085e59d2787af5e51e64553d1ebec7496a28b246ad299daf49206"
+      },
+      "self_refined": {
+        "status": "missing",
+        "passed": null,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "missing",
+        "passed": null
+      }
+    },
+    {
+      "task": 10,
+      "direct_original": {
+        "status": "valid",
+        "passed": true,
+        "response_sha256": "fa129a9fed0425eaa5d1ca273376dc013cd150b0f8d27ec5879c8f498b310636",
+        "report_sha256": "7016afb982780c36001a61741b6c752b7b1afd39573b636b4c095609f3796dac"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "079a26e85f8759b6e670e6607d3506558e743a052d0d2294aaa224917a563199",
+        "report_sha256": "c675a48877a28823b31e7c1c9ec477dca9b54c65f64219d5734330e0fdb8e7c1"
+      },
+      "self_refined": {
+        "status": "missing",
+        "passed": null,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "missing",
+        "passed": null
+      }
+    },
+    {
+      "task": 11,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "86df735f1c9c4e769d703e36d17de3fcf579ce99aa1a485310725285f4bee4c4",
+        "report_sha256": "70ecea681f6155674f279bd949a8aaeec58550760742dd4ec0ab861c8615ae11"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "88236c4a40fd3c6a87e669df356addf1b97a30f3dbfff8016e4a91403bdd39b8",
+        "report_sha256": "6be84eaa9741801c08685d0543b693c6956644423549436bdb95d9cd0925436d"
+      },
+      "self_refined": {
+        "status": "missing",
+        "passed": null,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "missing",
+        "passed": null
+      }
+    },
+    {
+      "task": 12,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "e2039edfb0f0256ab4cf499973197024e4220499904dafc06751b6cedd321fec",
+        "report_sha256": "8227187e0448f9eb5b0a09de2ee725ced59b7faaaa979ad1d549aaab546ef307"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "72615526ab48d858aadfb3a293faec4779a9da118e4d7f1d6d2e5cddf15b2177",
+        "report_sha256": "d40de27c3a56c0ec96ac8dc8b1856064f025d9ff00635c68bea49e68a11c3b32"
+      },
+      "self_refined": {
+        "status": "missing",
+        "passed": null,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "missing",
+        "passed": null
+      }
+    },
+    {
+      "task": 13,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "53587861bb9472ebbdbe9d8f20ef3ef803e9224a451a618fedf3fd4f087252a0",
+        "report_sha256": "c089d5b6384d1a7133538ed2d0a661046cd3ac6ca9d403fc164eaa21875b4f05"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "aff54ad01ebc8616133eb44688a8e914eabe17574d43ac9cb648143c8f859f37",
+        "report_sha256": "8d12bcefbe35ab6ee26c050d9453aab94ec6ac68975b667539bcff6d556f8b51"
+      },
+      "self_refined": {
+        "status": "missing",
+        "passed": null,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "missing",
+        "passed": null
+      }
+    },
+    {
+      "task": 14,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "ae07476e9ed3565309bc34b112e67b7a6befbda31c67a48ddfc26cea337e81fc",
+        "report_sha256": "f767f36a11befd21cf95b05d0ee930f575a3a291250e6c110f7af64ede3fd343"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "f49256e8c99fa40664a24076e3b724cef76d1f2fa4d4b6c22dc742689a1a121e",
+        "report_sha256": "ed8ca482377a702219864711e7cf668e764179d6e1f08654f8b2c7f63dcc8489"
+      },
+      "self_refined": {
+        "status": "missing",
+        "passed": null,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "missing",
+        "passed": null
+      }
+    },
+    {
+      "task": 15,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "aeff2fd82db20cc65fb4cf62ccc65623f7eef253a22ee76187d7927fe2040a45",
+        "report_sha256": "228093e0e256079243e8305719c774fa2fcc12c335e83a4239e93cfecd6c2099"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "942284e074c5ac8acde832182e26ca6f73e0d3bf1b8cef70c4887f3a57118c14",
+        "report_sha256": "af42e5427862d090fc7539d1610ced04ae0f5516971c455c499edca669012a24"
+      },
+      "self_refined": {
+        "status": "missing",
+        "passed": null,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "missing",
+        "passed": null
+      }
+    },
+    {
+      "task": 16,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "78f9f822f05a2f98e20984d89be0de11d4f95e82eb6bbf398647de67fc0bcddf",
+        "report_sha256": "78fcd37f177427769170bf25b4e5b82014a08eb779caddc4660d99819f29f0e8"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "af0e47892690f9f45577990254ced7185c52a8534064e5d765534c852f833779",
+        "report_sha256": "da805449bcf155caa983e3e48305a80ad368f97e1c6117652f5ddd48eb23095f"
+      },
+      "self_refined": {
+        "status": "missing",
+        "passed": null,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "missing",
+        "passed": null
+      }
+    },
+    {
+      "task": 17,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "38675c7d7740b71ea57335a70ead2dac9a8b09a2a9b0afa3743f2c60f6b2e5a8",
+        "report_sha256": "49287ffa04b47e6f521f9cba9e2ab75b2facc89b524d2a16663f12f3b9ff54a5"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "55b2ee211bfeaf0cdbca808d4a0c4a752ca6f038ef4e4e5a4578c501a5f64883",
+        "report_sha256": "decaa63557a91de5f4b0f0b34b5452ca224c3ca2b57f1b304a1462f53e20b119"
+      },
+      "self_refined": {
+        "status": "missing",
+        "passed": null,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "missing",
+        "passed": null
+      }
+    },
+    {
+      "task": 18,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "a299825b92930a103dc9bd14336ecf898a3ed23b99818204594c67d5e3d9ad4f",
+        "report_sha256": "fdbbe84a0529c00c2c3a39892fc139b1311ffad4b1121d69f97b8ffd3d922633"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "6b0f81048ee301ca8d858aa2fa23266cdd09372cc20623c8f7b9c36673da4178",
+        "report_sha256": "aa602151835d3be9becfc48a19d33f3d162b3b9a4e196c73c89f0543d5602f1e"
+      },
+      "self_refined": {
+        "status": "missing",
+        "passed": null,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "missing",
+        "passed": null
+      }
+    },
+    {
+      "task": 19,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "1a42cf046f06e2cb2b55db29b9c6f3ee84124f02730ab2ebc01429c27ba4b0c1",
+        "report_sha256": "9299770243add1b54abbcc14e67ce095aed2a45a24ce09435bd9ba7578fa31cf"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "f8d0699ce3dab37fd0c33e0f3b0aa0c518ccfc859967f88f468657a79d8171f5",
+        "report_sha256": "dee758ebf9a2d87313cd99fb3fbb5751dc5066d672137db8929e94e76b7b16e9"
+      },
+      "self_refined": {
+        "status": "missing",
+        "passed": null,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "missing",
+        "passed": null
+      }
+    },
+    {
+      "task": 20,
+      "direct_original": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": "34b5bcfb9707c625bc93040742653d98d992993c6d1436f49f9b4a925c05eb95"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "fe67865fe6d67f5447cbf81b665399664092989656cff8abc68b9932bfacc61c",
+        "report_sha256": "031a884f4335eb802e17983ee9328575ae52198f97c00304183ca34ef1f27b4b"
+      },
+      "self_refined": {
+        "status": "missing",
+        "passed": null,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "missing",
+        "passed": null
+      }
+    }
+  ],
+  "ledger": {
+    "calls": 2,
+    "settled_usd": 0.0,
+    "exposure_usd": 0.031476,
+    "unsettled_calls": 2,
+    "cap_usd": 1.96,
+    "stop_usd": 1.96,
+    "halted": 0
+  },
+  "cost_by_phase": {
+    "build": {
+      "calls": 2,
+      "settled_usd": 0.0,
+      "exposure_usd": 0.031476,
+      "unsettled_calls": 2
+    },
+    "plan": {
+      "calls": 0,
+      "settled_usd": 0.0,
+      "exposure_usd": 0.0,
+      "unsettled_calls": 0
+    }
+  },
+  "calls": [
+    {
+      "purpose": "build/table/through-8/file-4/attempt-1",
+      "status": "uncertain",
+      "request_sha256": "e6dc0892419cb56d354f706fbb13f4fa6a9ac0606bca765f23c04b07b4284601",
+      "response_sha256": null,
+      "receipt_sha256": null
+    },
+    {
+      "purpose": "build/table/through-8/file-4/attempt-1",
+      "status": "uncertain",
+      "request_sha256": "719fb6936bc92782e90b721bb1154362aa75d440cd94d46ad5e2bca47a43a39a",
+      "response_sha256": null,
+      "receipt_sha256": null
+    }
+  ],
+  "reused_settled_tool_responses": [
+    {
+      "original": "artifacts/native-incremental-self-table-20261124/oss/build/through-4/file-1/attempt-1",
+      "request_sha256": "2227e1df249d6d8a7e9d241f1ce763562da37d376735e52848a3465238c2c8e8",
+      "response_sha256": "8205dedde5540a05a721f60e28fe3d16806dca8f5040d48f4aef1aae0835f171",
+      "receipt_sha256": "683f057d6a83817ddd8a538fc77249d7d6c3dfc04dccdd3e420210d577bbc7c8"
+    },
+    {
+      "original": "artifacts/native-incremental-self-table-20261124/oss/build/through-4/file-2/attempt-1",
+      "request_sha256": "27d0d6640e5eade15bb7a8c165b20ae4bcaecc80ba0623ef438644ce4893df9b",
+      "response_sha256": "0539c5ef823801075d36dca998cfac033880c25354a7d6dceafee3c0bf7ba15d",
+      "receipt_sha256": "6f2eaca3d8c2837f67ee67d8ac29143a9b60ec60c7066d853c253e9dbf54565c"
+    },
+    {
+      "original": "artifacts/native-incremental-self-table-20261124/oss/build/through-4/file-3/attempt-1",
+      "request_sha256": "c9ce45b88e7a742b4d904f2790abf5d31777ec7f1e898a4c8fe61dba133c5e1a",
+      "response_sha256": "f1a11ab4d58484e39ee69edc2cda071821d69d70585425272ee2df247e1f9bee",
+      "receipt_sha256": "8367d5593614bf8553960ef01ce72667677a99594714f17b3cdce772dbc584f2"
+    },
+    {
+      "original": "artifacts/native-incremental-self-table-20261124/oss/build/through-4/file-4/attempt-1",
+      "request_sha256": "20e01aae963fa851ad045244b71aee32c5dc72d43513c0f892a391dc14ae4289",
+      "response_sha256": "d794a8c5e62798b2bf6b5c6e86ed08393ead3d9e741f9e98693e78567936efb7",
+      "receipt_sha256": "1b7debdee31bb982d30b78c600f18984d07801888b640fd264ac10962217cadf"
+    },
+    {
+      "original": "artifacts/native-incremental-self-table-20261124/oss/build/through-4/plan/attempt-1",
+      "request_sha256": "5a808deb9d8726c652e5bf00f79ba370a25b20a5a6a98602389d3c85eab75ced",
+      "response_sha256": "3d0d3f186718c11ffb6f23f3856f18d079c1e823109a04e281157bc1d2aa89a4",
+      "receipt_sha256": "66cef17bcfad4d88fefd5ed6b1415aa1a7b019a4801c0ec4b6eca813643b328e"
+    },
+    {
+      "original": "artifacts/native-incremental-self-table-20261124/oss/build/through-8/file-1/attempt-1",
+      "request_sha256": "a20ceb03f5300a2594e2459a0dbe2debc3a05a8d0caa500b3d755cd63c41ea76",
+      "response_sha256": "f5ebef92158e13d71bc93639e43798bd5988b419e0cb1679a513e5181c6202da",
+      "receipt_sha256": "0f1e1576dcdd4e69744a8e70801676e3a561eed949b1f3da27d70c9abac70001"
+    },
+    {
+      "original": "artifacts/native-incremental-self-table-20261124/oss/build/through-8/file-2/attempt-1",
+      "request_sha256": "1ebfe1fbf050760c8c2f1e6a240a492431085568301d6329f65c4e140882e562",
+      "response_sha256": "da4472609f73dcf6a2c282774c0cb054e41bb2acd13e56001b171798236ad511",
+      "receipt_sha256": "c78ceaeb5f77ed847e01b5a809398e9a6c9dc2a033e91d3ac9c75cd552238025"
+    },
+    {
+      "original": "artifacts/native-incremental-self-table-20261124/oss/build/through-8/file-3/attempt-1",
+      "request_sha256": "dd84f7acf0b4ea3e75c04b9b6ebf206cfbad4bc484b62b0317604dfbd4a847b9",
+      "response_sha256": "7a659fcef036a196f7cc8ac3df2adb315539cda1a3b146194c6f104c346099bc",
+      "receipt_sha256": "d03537aa219becb4d7ac637c5d77ba2506dc4edb4ccdfe7df595ace01bb970aa"
+    },
+    {
+      "original": "artifacts/native-incremental-self-table-20261124/oss/build/through-8/file-3/attempt-2",
+      "request_sha256": "985017d600782aebe28702e7970e10d97782ac0e1fdb18ae212b457af77b04c0",
+      "response_sha256": "03ba49065935e8614970d3786760ae6036efcb035236f02e7525416df9f2eec0",
+      "receipt_sha256": "fa9d5bc5fe42c82f9045d9bb567e4491f1045cfbbe887e3f684fd916b2c442ab"
+    },
+    {
+      "original": "artifacts/native-incremental-self-table-20261124/oss/build/through-8/plan/attempt-1",
+      "request_sha256": "c4f13ef16bcc6a880f72745a4fc5225ad579d9b0ed780c8f2b53b913040a5b27",
+      "response_sha256": "131182deb549b40d5e0f6a48f2bd45f246857d2c46359b172fc4bb80d8913fc5",
+      "receipt_sha256": "16f200e2f84bbe8f6c2d810fd6cc386533f95989e43dd2f69bcc6fa7a0b2c8f6"
+    }
+  ]
+}

@@ -10,6 +10,10 @@
 
 论文总表以目标生成模型为行。表格、SVG 和问卷各有 20 个当前任务，横向依次读从零代码、上游参考组件组装、冻结 GPT-5 库、该模型自建并部署的库。各行只比较这些方法共同取得观察的目标；收到后建库失败或方案不合法计零，缺失响应单独标记。表格和 SVG 共登记 12 个模型，问卷随后纳入全部 7 条可用路线。TodoMVC 和 Duo 依各自的公开任务分列；历史文件管理器基线逐步编辑前一页。供库、部署和从零的费用逐模型记账，固定首例另行重放。[同任务实验协议](../studies/webbench/backbone_matrix/PROTOCOL.md) · [总表逐格依据](../studies/results/paper-performance-matrix.json)
 
+自建库复测把三件事分开记录：模型是否交付可加载的库、能否为该题交付合法配置、页面是否通过当前任务文件。每个独立库先冻结首个示例，再同时评估逐题配置和固定首例。另将已交付且不超过 32 种配置的旧库全部设置穷举，检查哪些需求能由现有实现达到。新建库使用的完整公开需求、源码生成与公开修复均计入准备成本。从零组按同一目标生成模型和解码设置配对，多个库共享同一份从零页。[自建库故障诊断](../studies/public_library_transfer/diagnostics/self_failures/PROTOCOL.md) · [可达性协议](../studies/public_library_transfer/diagnostics/self_capacity/PROTOCOL.md) · [原生接口对照](../studies/public_library_transfer/self_refinement/native/PROTOCOL.md)
+
+对已经能加载的库，还可以让建库模型回到自己的源码，把一个明确的动作写成两个可执行取值。提案指定唯一原文片段、替换内容和预期行为，再用同一个公开交互检查两个取值。通过验证后才把选项交给逐题生成器，另行验证换值是否能通过原先失败的目标。[源码定位与交互验证协议](../studies/public_library_transfer/self_refinement/coherent/linker/executable_options/PROTOCOL.md)
+
 ## 1. 同一需求下的三种生成方式
 
 Web-Bench 的 50 个正式项目各有 20 个编号任务。初始化可以由公开起始文件给出，也可以写在需求序列中。新实验的第 k 个目标取得截至第 k 项的累计描述。

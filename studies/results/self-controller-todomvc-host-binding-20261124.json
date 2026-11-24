@@ -1,0 +1,554 @@
+{
+  "model": "qwen/qwen3.5-9b",
+  "registered_utc": "2026-11-24T04:43:46.524541+00:00",
+  "tasks": [
+    "todo-01",
+    "todo-02",
+    "todo-03",
+    "todo-04",
+    "todo-05",
+    "todo-06",
+    "todo-07",
+    "todo-08"
+  ],
+  "registration_sha256": "84f6b4daac2945164c43c8a85ac8db5b87599ccaf5f85e3f6dce546f30d7c7dd",
+  "seal_sha256": "136078fab378ea6b500dd659ba8ec569ee745952ead0b0045defd4949c4937ea",
+  "original_sha256": "bd1041515700a5cb1d4075d8553e01f34f85a0319c292ce8cc877b11a48ddc17",
+  "new_api_calls": 0,
+  "new_api_usd": 0,
+  "states": {
+    "build-a": {
+      "before_sha256": "579cf7122555b6d5b79a026d5949a382fe9586630117fdee4e5a12c5f0a4ad48",
+      "after_sha256": "a2a7f406e688685b2af030e57816ac9c9694fe72b3d7edb183fdc4551325742c",
+      "removed": "const DNA_CONFIG = {\n  persistence: true,\n  routing: true\n};",
+      "removed_sha256": "5ac43ca2c338f5e419a6b71e9daf3c00971860ebfae0a036dbcca5aed004c596",
+      "removed_bytes": 60,
+      "public_check": {
+        "public_errors": [
+          "Cannot read properties of undefined (reading 'reduce')",
+          "missing controller"
+        ]
+      },
+      "status": "valid"
+    },
+    "build-b": {
+      "before_sha256": "8894f50fa25e45ea3fb81a330fe56e332d1c0eb5d5278d5897e20bf1b5616bbd",
+      "after_sha256": "895a6347eaec6534f4fdf4e875ddca51393b9dfdc7581f89350270fd3a4ab8c4",
+      "removed": "const DNA_CONFIG = {\n  add: true,\n  toggle: true,\n  edit: true,\n  clearCompleted: true,\n  route: true\n};",
+      "removed_sha256": "c004e3bcb1c610658c38105f0fd1b7675274fe4acbb04dd1d6f96c535a148d24",
+      "removed_bytes": 104,
+      "public_check": {
+        "public_errors": []
+      },
+      "status": "valid"
+    }
+  },
+  "passed": {
+    "build-a": {
+      "self": [],
+      "fixed": []
+    },
+    "build-b": {
+      "self": [],
+      "fixed": []
+    }
+  },
+  "rows": [
+    {
+      "task": "todo-01",
+      "group": "build-a",
+      "arm": "self",
+      "plan": {
+        "persistence": true,
+        "routing": false
+      },
+      "status": "valid",
+      "files_sha256": "30814f128515ed9756a5826599c245f437587d03f1e6ee213e3d2397451e778e",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "b44eee19e8b1280c942d8eda6570b9ccb2cc9050856958ff00969acc04603978"
+    },
+    {
+      "task": "todo-01",
+      "group": "build-a",
+      "arm": "fixed",
+      "plan": {
+        "persistence": true,
+        "routing": true
+      },
+      "status": "valid",
+      "files_sha256": "2dd458f899d41094cf01be1969ff4d5dca6e3d13032ec9cfc87cfaa13dc0c7f2",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "30e92590c911a6b2fa073b5cac9437234adf877206d20ec26015f961070c581b"
+    },
+    {
+      "task": "todo-02",
+      "group": "build-a",
+      "arm": "self",
+      "plan": {
+        "persistence": true,
+        "routing": true
+      },
+      "status": "valid",
+      "files_sha256": "2dd458f899d41094cf01be1969ff4d5dca6e3d13032ec9cfc87cfaa13dc0c7f2",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "0d62415f181f195e30bbc825b7891d20caf8f7ed0e621cc7b49aa0960915f552"
+    },
+    {
+      "task": "todo-02",
+      "group": "build-a",
+      "arm": "fixed",
+      "plan": {
+        "persistence": true,
+        "routing": true
+      },
+      "status": "valid",
+      "files_sha256": "2dd458f899d41094cf01be1969ff4d5dca6e3d13032ec9cfc87cfaa13dc0c7f2",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "0d62415f181f195e30bbc825b7891d20caf8f7ed0e621cc7b49aa0960915f552"
+    },
+    {
+      "task": "todo-03",
+      "group": "build-a",
+      "arm": "self",
+      "plan": {
+        "persistence": true,
+        "routing": false
+      },
+      "status": "valid",
+      "files_sha256": "30814f128515ed9756a5826599c245f437587d03f1e6ee213e3d2397451e778e",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "1ffa5009a6c7152b298055b57a5556291ad3987199c1b4b6fc697d7de7378c12"
+    },
+    {
+      "task": "todo-03",
+      "group": "build-a",
+      "arm": "fixed",
+      "plan": {
+        "persistence": true,
+        "routing": true
+      },
+      "status": "valid",
+      "files_sha256": "2dd458f899d41094cf01be1969ff4d5dca6e3d13032ec9cfc87cfaa13dc0c7f2",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "9ea3d265380fd9862095bfccf3831a9fa27b77ab0228983f5b9ab2f4b13d83f7"
+    },
+    {
+      "task": "todo-04",
+      "group": "build-a",
+      "arm": "self",
+      "plan": {
+        "persistence": true,
+        "routing": true
+      },
+      "status": "valid",
+      "files_sha256": "2dd458f899d41094cf01be1969ff4d5dca6e3d13032ec9cfc87cfaa13dc0c7f2",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "db242641b85c87da60407fffaf7ae8be7ecff9e37804fc6bd8a13ac637379f5f"
+    },
+    {
+      "task": "todo-04",
+      "group": "build-a",
+      "arm": "fixed",
+      "plan": {
+        "persistence": true,
+        "routing": true
+      },
+      "status": "valid",
+      "files_sha256": "2dd458f899d41094cf01be1969ff4d5dca6e3d13032ec9cfc87cfaa13dc0c7f2",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "db242641b85c87da60407fffaf7ae8be7ecff9e37804fc6bd8a13ac637379f5f"
+    },
+    {
+      "task": "todo-05",
+      "group": "build-a",
+      "arm": "self",
+      "plan": {
+        "persistence": true,
+        "routing": false
+      },
+      "status": "valid",
+      "files_sha256": "30814f128515ed9756a5826599c245f437587d03f1e6ee213e3d2397451e778e",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "0fbcb4000a0372eaaa3e111e11022c34a94a7a4777395c09f8657c1a6054048b"
+    },
+    {
+      "task": "todo-05",
+      "group": "build-a",
+      "arm": "fixed",
+      "plan": {
+        "persistence": true,
+        "routing": true
+      },
+      "status": "valid",
+      "files_sha256": "2dd458f899d41094cf01be1969ff4d5dca6e3d13032ec9cfc87cfaa13dc0c7f2",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "fe62b022da4ca88921bf14f65cc9a03270bf9641d4e892c0eb1415b19a324acf"
+    },
+    {
+      "task": "todo-06",
+      "group": "build-a",
+      "arm": "self",
+      "plan": {
+        "persistence": true,
+        "routing": true
+      },
+      "status": "valid",
+      "files_sha256": "2dd458f899d41094cf01be1969ff4d5dca6e3d13032ec9cfc87cfaa13dc0c7f2",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "d238ee06b2fb99adca562be4acc85ba00dcca19de83aed73542193c4cf4953a6"
+    },
+    {
+      "task": "todo-06",
+      "group": "build-a",
+      "arm": "fixed",
+      "plan": {
+        "persistence": true,
+        "routing": true
+      },
+      "status": "valid",
+      "files_sha256": "2dd458f899d41094cf01be1969ff4d5dca6e3d13032ec9cfc87cfaa13dc0c7f2",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "d238ee06b2fb99adca562be4acc85ba00dcca19de83aed73542193c4cf4953a6"
+    },
+    {
+      "task": "todo-07",
+      "group": "build-a",
+      "arm": "self",
+      "plan": {
+        "persistence": true,
+        "routing": false
+      },
+      "status": "valid",
+      "files_sha256": "30814f128515ed9756a5826599c245f437587d03f1e6ee213e3d2397451e778e",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "6e3a25ea125d5708e52d6234d4de0ea8da57edcb823df48f704509fc617a6e38"
+    },
+    {
+      "task": "todo-07",
+      "group": "build-a",
+      "arm": "fixed",
+      "plan": {
+        "persistence": true,
+        "routing": true
+      },
+      "status": "valid",
+      "files_sha256": "2dd458f899d41094cf01be1969ff4d5dca6e3d13032ec9cfc87cfaa13dc0c7f2",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "4d9b69204614a3a39fa9a1433a0bcb63de431bc055906ec641b5a78b463e9df2"
+    },
+    {
+      "task": "todo-08",
+      "group": "build-a",
+      "arm": "self",
+      "plan": {
+        "persistence": true,
+        "routing": true
+      },
+      "status": "valid",
+      "files_sha256": "2dd458f899d41094cf01be1969ff4d5dca6e3d13032ec9cfc87cfaa13dc0c7f2",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "01597e24b24f8e305f78b1d530769520d78095c68a4bfda1ccc85c1d08d91e88"
+    },
+    {
+      "task": "todo-08",
+      "group": "build-a",
+      "arm": "fixed",
+      "plan": {
+        "persistence": true,
+        "routing": true
+      },
+      "status": "valid",
+      "files_sha256": "2dd458f899d41094cf01be1969ff4d5dca6e3d13032ec9cfc87cfaa13dc0c7f2",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "01597e24b24f8e305f78b1d530769520d78095c68a4bfda1ccc85c1d08d91e88"
+    },
+    {
+      "task": "todo-01",
+      "group": "build-b",
+      "arm": "self",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "status": "valid",
+      "files_sha256": "e343332af6a9c778b67c1abe504fc692e0664e47fc544a43fdf01b7cc23aa6bf",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "941bb75ef0fdd0eee9f79829e6b71ffaa54a9210417da13d98f39f7fc6a53260"
+    },
+    {
+      "task": "todo-01",
+      "group": "build-b",
+      "arm": "fixed",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "status": "valid",
+      "files_sha256": "e343332af6a9c778b67c1abe504fc692e0664e47fc544a43fdf01b7cc23aa6bf",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "941bb75ef0fdd0eee9f79829e6b71ffaa54a9210417da13d98f39f7fc6a53260"
+    },
+    {
+      "task": "todo-02",
+      "group": "build-b",
+      "arm": "self",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "status": "valid",
+      "files_sha256": "e343332af6a9c778b67c1abe504fc692e0664e47fc544a43fdf01b7cc23aa6bf",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "326fd5b3012a54e0e45b8bb5242dba0360afbf2b9e24abf22b7920db3f7e0e1f"
+    },
+    {
+      "task": "todo-02",
+      "group": "build-b",
+      "arm": "fixed",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "status": "valid",
+      "files_sha256": "e343332af6a9c778b67c1abe504fc692e0664e47fc544a43fdf01b7cc23aa6bf",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "326fd5b3012a54e0e45b8bb5242dba0360afbf2b9e24abf22b7920db3f7e0e1f"
+    },
+    {
+      "task": "todo-03",
+      "group": "build-b",
+      "arm": "self",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "status": "valid",
+      "files_sha256": "e343332af6a9c778b67c1abe504fc692e0664e47fc544a43fdf01b7cc23aa6bf",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "4b8c2f33e15f95a8414ee703e67d480b7253fa80ca4405e324cabc2218153ce7"
+    },
+    {
+      "task": "todo-03",
+      "group": "build-b",
+      "arm": "fixed",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "status": "valid",
+      "files_sha256": "e343332af6a9c778b67c1abe504fc692e0664e47fc544a43fdf01b7cc23aa6bf",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "4b8c2f33e15f95a8414ee703e67d480b7253fa80ca4405e324cabc2218153ce7"
+    },
+    {
+      "task": "todo-04",
+      "group": "build-b",
+      "arm": "self",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "status": "valid",
+      "files_sha256": "e343332af6a9c778b67c1abe504fc692e0664e47fc544a43fdf01b7cc23aa6bf",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "492ef0df6161a42ac8aacffc77b080ded667c459af94b33b502a452f4a15bc5a"
+    },
+    {
+      "task": "todo-04",
+      "group": "build-b",
+      "arm": "fixed",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "status": "valid",
+      "files_sha256": "e343332af6a9c778b67c1abe504fc692e0664e47fc544a43fdf01b7cc23aa6bf",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "492ef0df6161a42ac8aacffc77b080ded667c459af94b33b502a452f4a15bc5a"
+    },
+    {
+      "task": "todo-05",
+      "group": "build-b",
+      "arm": "self",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "status": "valid",
+      "files_sha256": "e343332af6a9c778b67c1abe504fc692e0664e47fc544a43fdf01b7cc23aa6bf",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "8b8dc236356ccfb44a206990ac1dad4b3974facd6ef2917c508846eda83b63d1"
+    },
+    {
+      "task": "todo-05",
+      "group": "build-b",
+      "arm": "fixed",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "status": "valid",
+      "files_sha256": "e343332af6a9c778b67c1abe504fc692e0664e47fc544a43fdf01b7cc23aa6bf",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "8b8dc236356ccfb44a206990ac1dad4b3974facd6ef2917c508846eda83b63d1"
+    },
+    {
+      "task": "todo-06",
+      "group": "build-b",
+      "arm": "self",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "status": "valid",
+      "files_sha256": "e343332af6a9c778b67c1abe504fc692e0664e47fc544a43fdf01b7cc23aa6bf",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "7c9718ce094f103b4386df16ab3fef2b8bfcea98b85016d096d99d458cde0493"
+    },
+    {
+      "task": "todo-06",
+      "group": "build-b",
+      "arm": "fixed",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "status": "valid",
+      "files_sha256": "e343332af6a9c778b67c1abe504fc692e0664e47fc544a43fdf01b7cc23aa6bf",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "7c9718ce094f103b4386df16ab3fef2b8bfcea98b85016d096d99d458cde0493"
+    },
+    {
+      "task": "todo-07",
+      "group": "build-b",
+      "arm": "self",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "status": "valid",
+      "files_sha256": "e343332af6a9c778b67c1abe504fc692e0664e47fc544a43fdf01b7cc23aa6bf",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "c0e8578a585d45b5bc778626968ce112a180b63c3db9c275dd507b194e917d42"
+    },
+    {
+      "task": "todo-07",
+      "group": "build-b",
+      "arm": "fixed",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "status": "valid",
+      "files_sha256": "e343332af6a9c778b67c1abe504fc692e0664e47fc544a43fdf01b7cc23aa6bf",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "c0e8578a585d45b5bc778626968ce112a180b63c3db9c275dd507b194e917d42"
+    },
+    {
+      "task": "todo-08",
+      "group": "build-b",
+      "arm": "self",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "status": "valid",
+      "files_sha256": "e343332af6a9c778b67c1abe504fc692e0664e47fc544a43fdf01b7cc23aa6bf",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "732f8bb69403da7914be831a22c53ad85a1d514e2d183746a36cf68b5002b4f5"
+    },
+    {
+      "task": "todo-08",
+      "group": "build-b",
+      "arm": "fixed",
+      "plan": {
+        "add": true,
+        "toggle": true,
+        "edit": true,
+        "clearCompleted": true,
+        "route": true
+      },
+      "status": "valid",
+      "files_sha256": "e343332af6a9c778b67c1abe504fc692e0664e47fc544a43fdf01b7cc23aa6bf",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "732f8bb69403da7914be831a22c53ad85a1d514e2d183746a36cf68b5002b4f5"
+    }
+  ]
+}

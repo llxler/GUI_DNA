@@ -174,6 +174,18 @@ def test_main_table_separates_unavailable_routes_from_zero_scores():
     assert 'GPT-5,' in unavailable and 'Claude Sonnet 4.5' in unavailable
 
 
+def test_followup_panel_uses_the_joint_tasks_of_both_library_replicates():
+    from studies.public_library_transfer.self_replication.paper import matched_row
+
+    baseline = {i: i == 1 for i in range(1, 21)}
+    first = {**baseline, 2: True, 20: None}
+    second = {**baseline, 1: None}
+    arms = {"direct": baseline, "self_a": first, "fixed_a": baseline, "self_b": second, "fixed_b": baseline}
+    result = matched_row("Table editor", "Builder", "Native", arms)
+    assert result["targets"] == list(range(2, 20))
+    assert result["passed"] == {"direct": 0, "self_a": 1, "fixed_a": 0, "self_b": 0, "fixed_b": 0}
+
+
 def test_duplicate_official_case_titles_require_a_decisive_outcome():
     from studies.public_library_transfer.backbone_suites.replay import decide
 

@@ -157,7 +157,7 @@ def table_head(title, groups):
     return lines + ["".join(rules)]
 
 
-def render_matrix(matrix):
+def render_matrix(matrix, followups=()):
     lines = [
         r"\begin{table*}[!t]",
         r"\centering",
@@ -232,16 +232,33 @@ def render_matrix(matrix):
         for model in (MISTRAL, OSS):
             cells += values(matrix[model]["retrospective"].get(p, {}), ["direct", GPT5, SONNET])
         lines += [" & ".join([label, *cells]) + r" \\"]
+    lines += [r"\bottomrule\end{tabular*}\par\smallskip"]
+    if followups:
+        lines += [
+            r"\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lllcccccc@{}}",
+            r"\rowcolor[gray]{0.94}\multicolumn{9}{l}{\textbf{D. Independent AI builds and their fixed first examples}} \\",
+            r" & & & & & \multicolumn{2}{c}{Library 1} & \multicolumn{2}{c}{Library 2} \\",
+            r"\cmidrule(lr){6-7}\cmidrule(lr){8-9}",
+            r"Project & Target generator & Builder & Decoding & Direct & Planned & Fixed & Planned & Fixed \\",
+            r"\midrule",
+        ]
+        for row in followups:
+            counts = {"passed": row["passed"], "n": len(row["targets"])} if row["targets"] else {}
+            fields = values(counts, ("direct", "self_a", "fixed_a", "self_b", "fixed_b"))
+            lines += [" & ".join([row["project"], row["target_generator"], row["builder"], row["decoding"], *fields]) + r" \\"]
+        lines += [r"\bottomrule\end{tabular*}\par\smallskip"]
     lines += [
-        r"\bottomrule\end{tabular*}\par\smallskip",
         r"\begin{minipage}{\textwidth}\footnotesize\raggedright "
-        r"Human uses supplied components. The GPT-5 column uses a frozen GPT-5 implementation. Self uses the row model for both construction and deployment. "
-        r"Panel A schedules twenty files per project. Five routes returned HTTP 403 on entry. The question-form extension enrolled the seven available models. Panel B compares eight TodoMVC subsets and ten Duo pairs. Supplied TodoMVC samples each subset twice. The supplied file-explorer baseline edits its previous page. "
-        r"Panel C names the generator above each column group and the builder in the header. Sonnet denotes Claude Sonnet 4.5.\end{minipage}",
+        r"Human uses supplied components. GPT-5 denotes a frozen GPT-5 library. Self uses the row model for construction and deployment. "
+        r"A schedules twenty tasks per project. Five routes returned HTTP 403. B uses eight TodoMVC subsets and ten Duo pairs. Supplied TodoMVC samples each subset twice. Edit updates the prior file-explorer page. "
+        r"C names the generator above each column group. Sonnet denotes Claude Sonnet 4.5."
+        + (r" In D, each row shares its own Direct baseline. Native constrains configuration output. Qwen3.5-9B also disables extra reasoning. Fixed reuses the first example." if followups else "")
+        + r"\end{minipage}",
         r"\end{table*}",
     ]
     return "\n".join(lines) + "\n"
 
 
 if __name__ == "__main__":
-    print(render_matrix(read(ROOT / "studies/results/paper-performance-matrix.json")), end="")
+    from studies.public_library_transfer.self_replication.paper import rows
+    print(render_matrix(read(ROOT / "studies/results/paper-performance-matrix.json"), rows()), end="")

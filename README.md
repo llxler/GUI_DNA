@@ -21,6 +21,10 @@ GUI-DNA 把「点击后怎样改变应用状态」写进可复用的行为库，
 
 **从公开需求建库。** DeepSeek V4 Flash 在 TodoMVC 的从零代码为 2/8，自建库组装为 8/8。固定复用建库时的首例同样为 8/8。在 Duo 的十个双功能组合上，同一模型从零为 6/10，自建库为 0/10。每个实验分别报告哪份实现能工作，以及逐题更改配置增加了哪些通过项。[多模型实验](studies/webbench/backbone_matrix/README.md) · [完整记录](docs/results.md)
 
+Qwen3-Coder 按依赖顺序生成的两个表格库分别通过 5/20、1/20，同设置从零为 3/20，两个固定首例分别过相同的题。[代码模型逐题结果](studies/results/self-dependency-resume-20261124.json)
+
+建库质量与逐题选配置可以分别检验。保持 Qwen3.5-9B 和同一组 20 个表格任务不变，换用两份独立 GPT-6 Astra 库，原配置协议分别通过 9/20 和 12/20。两份库直接复用首例各通过 13/20。关闭额外推理并约束配置输出后，Qwen 为两份库分别选了 20 次首例。原 GPT-5 库在原协议通过 1/20。[论文总表 D 区与同目标人工对照](studies/results/paper-library-followups-20261124.json) · [同目标结果与逐题标识](studies/public_library_transfer/strong_builder/result.json) · [受约束配置](studies/public_library_transfer/strong_builder/native/result.json)
+
 ## 安装与核验
 
 需要 Python 3.13 和 [uv](https://docs.astral.sh/uv/)。在仓库根目录运行以下命令，可从随仓库发布的 JSON 核验目标数、配对成绩与费用汇总。

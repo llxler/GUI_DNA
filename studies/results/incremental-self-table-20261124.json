@@ -1,0 +1,754 @@
+{
+  "study": "Chronological file edits for a Self-built table library",
+  "project": "table",
+  "model": "openai/gpt-oss-120b",
+  "registered_utc": "2026-11-24T04:17:16.607838+00:00",
+  "end_utc": "2026-11-24T05:18:00+00:00",
+  "registration_sha256": "8319d661844a47f15ebd81b5e5255d654322d9482ef51b3169cced1603de0dc3",
+  "files_at_registration": {
+    "studies/public_library_transfer/self_refinement/incremental/PROTOCOL.md": "7816d78d06d2f05de61a48674cd00590d79caca2b3eb6598a9e43a1d0fe7fc46",
+    "studies/public_library_transfer/self_refinement/incremental/run.py": "6c0e67e5d812d81ec6cd952461a23885b6e5370568cc1662594cbe3ee44c9d24",
+    "studies/public_library_transfer/self_refinement/incremental/edit.py": "8aa7e92b1e57d1168ce7e747a3fc36e77b0cc6dae2557b18de5d1c80d717966e",
+    "studies/public_library_transfer/self_refinement/run.py": "099138fe6f40d7511cde41843bb4fe3bbc940bc8f6eda70c1c05f544b3bc67ef",
+    "studies/webbench/backbone_matrix/run.py": "911c23da722b5b5df1afd828548e9f441ac9afce921ac3c207db6140c7adeedd",
+    "studies/public_library_transfer/self_refinement/method.py": "baec8cd58ab39fb142ccba97d4009bff053d6c2e844076ba4a000a93ac1c5f6a",
+    "studies/public_library_transfer/core.py": "f79d8318b1064eae22fd10771e26482f3dd7f282fe43a1763eaa292153718e65",
+    "studies/public_library_transfer/browser.py": "fc86233c04e6f2ccc93aa67c6a150ea313d28ba759d8d2db1512c7e45f4e8e3d",
+    "src/gui_dna/budget.py": "a882c7c3a100f88d58aef11579bed71b14e430357ccf0af83c756b22034a5044",
+    "studies/results/backbone-matrix-20261124.json": "4297c24cad773da768b64a4e40e3407b4c442ac6f233bdd3000ac2bc87dd2892",
+    "artifacts/incremental-self-table-20261124/public.json": "dc5421eec8b335ed55f2039f5214e0c31d5a96bf06a50a0af92be3aed6e1c9e1",
+    "artifacts/incremental-self-table-20261124/browser.json": "2ddd6a41d79caf8ae7e52b2f551447dbcb79c54705f6c08005ba6b906a8d6b54"
+  },
+  "budget_usd": 2,
+  "tasks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "batch_ends": [
+    4,
+    8,
+    12,
+    16,
+    20
+  ],
+  "upstream_commit": "7b31ca2b786eef120dd49ce63dd03d0c0006046d",
+  "seal_sha256": "ecae9980febe37112439786a2063c12fc9c43726bc9fba574c9098669d423e99",
+  "build": {
+    "status": "invalid",
+    "reason": "No loadable incremental revision at batch 8: {'attempt': 'repair', 'format_error': 'Replacement anchor not unique in common/key.js'}",
+    "revisions": [
+      {
+        "through": 4,
+        "selected": "through-4-repair",
+        "source_sha256": "1e101bf10bd5889c16b52b3ac6472385f5fa8bace9bb70fe973e1cbddf0aaed1",
+        "attempts": [
+          {
+            "attempt": "edit",
+            "format_error": "Unknown edit header: @@END"
+          },
+          {
+            "attempt": "repair",
+            "edited_files": [
+              "index.css",
+              "index.js",
+              "common/menu.js",
+              "common/table.js"
+            ],
+            "load_errors": [],
+            "probe": {
+              "selector": ".menu",
+              "event": "contextmenu",
+              "visible": ".menu-item-insert-row-above"
+            },
+            "result": {
+              "passed": false,
+              "detail": "TimeoutError: locator.waitFor: Timeout 2200ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.menu-item-insert-row-above').first() to be visible\u001b[22m\n"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "public_checks": {
+    "through-4-repair-public-check": {
+      "load_errors": [],
+      "probe": {
+        "passed": false,
+        "detail": "TimeoutError: locator.waitFor: Timeout 2200ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.menu-item-insert-row-above').first() to be visible\u001b[22m\n"
+      }
+    }
+  },
+  "summary": {
+    "direct_original": {
+      "passed": 7,
+      "observed": 20,
+      "scheduled": 20,
+      "missing_ids": []
+    },
+    "self_original": {
+      "passed": 0,
+      "observed": 20,
+      "scheduled": 20,
+      "missing_ids": []
+    },
+    "self_refined": {
+      "passed": 0,
+      "observed": 20,
+      "scheduled": 20,
+      "missing_ids": []
+    },
+    "fixed_refined": {
+      "passed": 0,
+      "observed": 20,
+      "scheduled": 20,
+      "missing_ids": []
+    }
+  },
+  "paired_refined_to": {
+    "direct_original": {
+      "jointly_observed_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "gained_ids": [],
+      "lost_ids": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        9,
+        10
+      ]
+    },
+    "self_original": {
+      "jointly_observed_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "gained_ids": [],
+      "lost_ids": []
+    },
+    "fixed_refined": {
+      "jointly_observed_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "gained_ids": [],
+      "lost_ids": []
+    }
+  },
+  "rows": [
+    {
+      "task": 1,
+      "direct_original": {
+        "status": "valid",
+        "passed": true,
+        "response_sha256": "e1178a1ec608a4534db27318b68dbd137b227d14ca9dc7ed1939162c298e249e",
+        "report_sha256": "e0bf4e9d1368933db47ed8e46bc44de4862acd75e709d3ecab045a916fe883bb"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "de5779369de8371469cc7a4d1c47737a155163d4237eae08483ce72875b52db7",
+        "report_sha256": "b365822ef45f00ed1d7291c06626a7ce153d4a37481815a905325c3ab0f9587e"
+      },
+      "self_refined": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "invalid",
+        "passed": false
+      }
+    },
+    {
+      "task": 2,
+      "direct_original": {
+        "status": "valid",
+        "passed": true,
+        "response_sha256": "63d1ce2eb51f7b4b490287f5e215d23a52d3f82714d553b6e4ea10b164b9a630",
+        "report_sha256": "e68ee8b7a37da2313bdc2f6d12160a63e755a4c33b8de755c21d4cc39b560560"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "89c1de4d8ae2434edecf1407cb259eb86c199a009cbc7fc56db5b789354e7ed6",
+        "report_sha256": "9b61538f4f9f8d1b1e928ad98261df355226f604c7edd4b511dc428d9adafe5f"
+      },
+      "self_refined": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "invalid",
+        "passed": false
+      }
+    },
+    {
+      "task": 3,
+      "direct_original": {
+        "status": "valid",
+        "passed": true,
+        "response_sha256": "14ca9d3e7e3d6031e6777611fd5a1a086d2e05167195e28ec5546b350d27f643",
+        "report_sha256": "acb6ae17378effbaa05f29b0dc5322b4b9792ba91f05cbb628506e023a2e2ad3"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "1b8960812e0ca5542155b32028b43a8561bd866331b215a0f538812e7a8324d6",
+        "report_sha256": "a5831080dc97ff2d544b9b2e5ccf08aab0a4d9092e221f88fb4df4cf5d46ec96"
+      },
+      "self_refined": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "invalid",
+        "passed": false
+      }
+    },
+    {
+      "task": 4,
+      "direct_original": {
+        "status": "valid",
+        "passed": true,
+        "response_sha256": "7ed46f182aa16885e49a8ba4e68842395524d66305b4ce3d14cad7000b475ad2",
+        "report_sha256": "d3c1fa2155392c313a15cc7ca630024a465d59f8b52bee1f2dd6d27f674774a8"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "36c99641af6972a272092c1c7bbf3b0c7528bff6c40620506f2bb8e0556876f0",
+        "report_sha256": "860abfd92a3cebb02ada3f08c2065ea1a836a364dfd6679543d124a848656655"
+      },
+      "self_refined": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "invalid",
+        "passed": false
+      }
+    },
+    {
+      "task": 5,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "2e0091fcfc731bc101d64ddc486d7e9d4454895b7671caa72d3257ba7d7c2e66",
+        "report_sha256": "ca1bc1476f0024c8443d7c876726271441d0838a1e610e4240707f1596ac8e33"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "ab49a1aa909e204688420bdf999d1a509248397394097f356bdfda8cd73b1100",
+        "report_sha256": "1263fea37c70b45cb9b0953d5d20bd245928ee7efc3291441c55675b8c7c2d0a"
+      },
+      "self_refined": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "invalid",
+        "passed": false
+      }
+    },
+    {
+      "task": 6,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "b7cfd861c1a0fbe76834e9f915992f8c0807114bfff8e41046348de2e5e6e692",
+        "report_sha256": "89ae9374f7c44d6d4cbc17c3e34419b5ec3a31662ef58d6da99706a25ce46afa"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "9116372d23df591d127bba3728c41cd371b66534e069f7b61be9897cfc11a7dd",
+        "report_sha256": "d8b723855341a28bd1f2f11ec5b817239d8d1e0f31a8372d70f2c1a89cb2dede"
+      },
+      "self_refined": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "invalid",
+        "passed": false
+      }
+    },
+    {
+      "task": 7,
+      "direct_original": {
+        "status": "valid",
+        "passed": true,
+        "response_sha256": "07f27dfe12d9b25a6e6118a3b62e9ee3c02a7b646ca35eabadb8789136705fd4",
+        "report_sha256": "10f34b7807cea19300553e81a9065f198ea576f54d1a4714f4cea88ffaca9432"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "31f6540f54dd2be2ef7e3f503f60dcdb7d19229db3bbc5d3bdc5d0cba24d5a1f",
+        "report_sha256": "a7cc45d0594c4a76f86f4311d2d5609cc2ed4c85f13a2e3af7e6db64a57fd8cd"
+      },
+      "self_refined": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "invalid",
+        "passed": false
+      }
+    },
+    {
+      "task": 8,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "11f47a3678b2f599044ad77ff0c0bb846ff9f11aebcc26da17fb0b9b513c9513",
+        "report_sha256": "d2b6fa65c3ecf3693c262952652363792adc6655fafca149e60bd4c3a2660f9a"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "4c31494aa1e16dd5f1a75383c2a464949b6dcb27fe3438b523faf54483138c18",
+        "report_sha256": "8d46cf47e735b68a965312b51bca6ec8d2e6de086e17650a08261d9b2563b0b8"
+      },
+      "self_refined": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "invalid",
+        "passed": false
+      }
+    },
+    {
+      "task": 9,
+      "direct_original": {
+        "status": "valid",
+        "passed": true,
+        "response_sha256": "c1da85ff0cad946cc6dbf89c29c50355601a704391161ae8dd8c836dc5628212",
+        "report_sha256": "c274a0ec458e4112d32b339132b48ccf8b97ceca5ff5e3c86b13095386a61841"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "ad1d19d45c76ae4d6f40a5bba21b6956c5aaf9db26a4e7c9b00af316d14004a3",
+        "report_sha256": "e62cf40bb02085e59d2787af5e51e64553d1ebec7496a28b246ad299daf49206"
+      },
+      "self_refined": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "invalid",
+        "passed": false
+      }
+    },
+    {
+      "task": 10,
+      "direct_original": {
+        "status": "valid",
+        "passed": true,
+        "response_sha256": "fa129a9fed0425eaa5d1ca273376dc013cd150b0f8d27ec5879c8f498b310636",
+        "report_sha256": "7016afb982780c36001a61741b6c752b7b1afd39573b636b4c095609f3796dac"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "079a26e85f8759b6e670e6607d3506558e743a052d0d2294aaa224917a563199",
+        "report_sha256": "c675a48877a28823b31e7c1c9ec477dca9b54c65f64219d5734330e0fdb8e7c1"
+      },
+      "self_refined": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "invalid",
+        "passed": false
+      }
+    },
+    {
+      "task": 11,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "86df735f1c9c4e769d703e36d17de3fcf579ce99aa1a485310725285f4bee4c4",
+        "report_sha256": "70ecea681f6155674f279bd949a8aaeec58550760742dd4ec0ab861c8615ae11"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "88236c4a40fd3c6a87e669df356addf1b97a30f3dbfff8016e4a91403bdd39b8",
+        "report_sha256": "6be84eaa9741801c08685d0543b693c6956644423549436bdb95d9cd0925436d"
+      },
+      "self_refined": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "invalid",
+        "passed": false
+      }
+    },
+    {
+      "task": 12,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "e2039edfb0f0256ab4cf499973197024e4220499904dafc06751b6cedd321fec",
+        "report_sha256": "8227187e0448f9eb5b0a09de2ee725ced59b7faaaa979ad1d549aaab546ef307"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "72615526ab48d858aadfb3a293faec4779a9da118e4d7f1d6d2e5cddf15b2177",
+        "report_sha256": "d40de27c3a56c0ec96ac8dc8b1856064f025d9ff00635c68bea49e68a11c3b32"
+      },
+      "self_refined": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "invalid",
+        "passed": false
+      }
+    },
+    {
+      "task": 13,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "53587861bb9472ebbdbe9d8f20ef3ef803e9224a451a618fedf3fd4f087252a0",
+        "report_sha256": "c089d5b6384d1a7133538ed2d0a661046cd3ac6ca9d403fc164eaa21875b4f05"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "aff54ad01ebc8616133eb44688a8e914eabe17574d43ac9cb648143c8f859f37",
+        "report_sha256": "8d12bcefbe35ab6ee26c050d9453aab94ec6ac68975b667539bcff6d556f8b51"
+      },
+      "self_refined": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "invalid",
+        "passed": false
+      }
+    },
+    {
+      "task": 14,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "ae07476e9ed3565309bc34b112e67b7a6befbda31c67a48ddfc26cea337e81fc",
+        "report_sha256": "f767f36a11befd21cf95b05d0ee930f575a3a291250e6c110f7af64ede3fd343"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "f49256e8c99fa40664a24076e3b724cef76d1f2fa4d4b6c22dc742689a1a121e",
+        "report_sha256": "ed8ca482377a702219864711e7cf668e764179d6e1f08654f8b2c7f63dcc8489"
+      },
+      "self_refined": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "invalid",
+        "passed": false
+      }
+    },
+    {
+      "task": 15,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "aeff2fd82db20cc65fb4cf62ccc65623f7eef253a22ee76187d7927fe2040a45",
+        "report_sha256": "228093e0e256079243e8305719c774fa2fcc12c335e83a4239e93cfecd6c2099"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "942284e074c5ac8acde832182e26ca6f73e0d3bf1b8cef70c4887f3a57118c14",
+        "report_sha256": "af42e5427862d090fc7539d1610ced04ae0f5516971c455c499edca669012a24"
+      },
+      "self_refined": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "invalid",
+        "passed": false
+      }
+    },
+    {
+      "task": 16,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "78f9f822f05a2f98e20984d89be0de11d4f95e82eb6bbf398647de67fc0bcddf",
+        "report_sha256": "78fcd37f177427769170bf25b4e5b82014a08eb779caddc4660d99819f29f0e8"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "af0e47892690f9f45577990254ced7185c52a8534064e5d765534c852f833779",
+        "report_sha256": "da805449bcf155caa983e3e48305a80ad368f97e1c6117652f5ddd48eb23095f"
+      },
+      "self_refined": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "invalid",
+        "passed": false
+      }
+    },
+    {
+      "task": 17,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "38675c7d7740b71ea57335a70ead2dac9a8b09a2a9b0afa3743f2c60f6b2e5a8",
+        "report_sha256": "49287ffa04b47e6f521f9cba9e2ab75b2facc89b524d2a16663f12f3b9ff54a5"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "55b2ee211bfeaf0cdbca808d4a0c4a752ca6f038ef4e4e5a4578c501a5f64883",
+        "report_sha256": "decaa63557a91de5f4b0f0b34b5452ca224c3ca2b57f1b304a1462f53e20b119"
+      },
+      "self_refined": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "invalid",
+        "passed": false
+      }
+    },
+    {
+      "task": 18,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "a299825b92930a103dc9bd14336ecf898a3ed23b99818204594c67d5e3d9ad4f",
+        "report_sha256": "fdbbe84a0529c00c2c3a39892fc139b1311ffad4b1121d69f97b8ffd3d922633"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "6b0f81048ee301ca8d858aa2fa23266cdd09372cc20623c8f7b9c36673da4178",
+        "report_sha256": "aa602151835d3be9becfc48a19d33f3d162b3b9a4e196c73c89f0543d5602f1e"
+      },
+      "self_refined": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "invalid",
+        "passed": false
+      }
+    },
+    {
+      "task": 19,
+      "direct_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "1a42cf046f06e2cb2b55db29b9c6f3ee84124f02730ab2ebc01429c27ba4b0c1",
+        "report_sha256": "9299770243add1b54abbcc14e67ce095aed2a45a24ce09435bd9ba7578fa31cf"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "f8d0699ce3dab37fd0c33e0f3b0aa0c518ccfc859967f88f468657a79d8171f5",
+        "report_sha256": "dee758ebf9a2d87313cd99fb3fbb5751dc5066d672137db8929e94e76b7b16e9"
+      },
+      "self_refined": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "invalid",
+        "passed": false
+      }
+    },
+    {
+      "task": 20,
+      "direct_original": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": "34b5bcfb9707c625bc93040742653d98d992993c6d1436f49f9b4a925c05eb95"
+      },
+      "self_original": {
+        "status": "valid",
+        "passed": false,
+        "response_sha256": "fe67865fe6d67f5447cbf81b665399664092989656cff8abc68b9932bfacc61c",
+        "report_sha256": "031a884f4335eb802e17983ee9328575ae52198f97c00304183ca34ef1f27b4b"
+      },
+      "self_refined": {
+        "status": "invalid",
+        "passed": false,
+        "response_sha256": null
+      },
+      "fixed_refined": {
+        "status": "invalid",
+        "passed": false
+      }
+    }
+  ],
+  "ledger": {
+    "calls": 5,
+    "settled_usd": 0.001823,
+    "exposure_usd": 0.001823,
+    "unsettled_calls": 0,
+    "cap_usd": 2.0,
+    "stop_usd": 2.0,
+    "halted": 0
+  },
+  "cost_by_phase": {
+    "build": {
+      "calls": 5,
+      "settled_usd": 0.001823,
+      "exposure_usd": 0.001823,
+      "unsettled_calls": 0
+    },
+    "plan": {
+      "calls": 0,
+      "settled_usd": 0.0,
+      "exposure_usd": 0.0,
+      "unsettled_calls": 0
+    }
+  },
+  "calls": [
+    {
+      "purpose": "build/table/design",
+      "status": "settled",
+      "request_sha256": "f4fbc44a9288f254ba19674735cfe5ab5717015786afec7b679a26b73bd66008",
+      "response_sha256": "d7fe5234ea49146dfd5a90c60be8cf6f0437d4c15fc3c0a7357397e0e9cd13a2",
+      "receipt_sha256": "17652888057972e45e835e00996097f111f4387cc215c0ad414eb62466e3b570"
+    },
+    {
+      "purpose": "build/table/through-4/edit",
+      "status": "settled",
+      "request_sha256": "9fcc7da4d973b7bb3ea86e38bbd1c75d168abb14dd16c4ab9ba57a181bc0bb9c",
+      "response_sha256": "14d4cd7a4de1d2fd49fced3e4fce09704411ed343d6f0c7cd7b7db14b41d8746",
+      "receipt_sha256": "efcb21e839de64beb5b0c264138a326cf378c6ba9b23fc0ffd65e7906a10d9f8"
+    },
+    {
+      "purpose": "build/table/through-4/repair",
+      "status": "settled",
+      "request_sha256": "b8004b31c851c969eef2be3ac48038ef10266d1dfe3a108246a42e3e132c8608",
+      "response_sha256": "ee932fae4d39a0bbf33e0ba162cc245c5376eb71aeb1ca72a10f0c83a5a9a2d3",
+      "receipt_sha256": "2f8839417a69882fff703056448e29452b05a105fd6b7a0b0508133b5aac0cbd"
+    },
+    {
+      "purpose": "build/table/through-8/edit",
+      "status": "settled",
+      "request_sha256": "8798ab61371dfa0072f86e4d031eb2590b599a739c4f952198271aec3a846fca",
+      "response_sha256": "f6fdcbad5c69a31543a6548d1cc5f0120fff5911d0e4ced4302c9a54cbed30b7",
+      "receipt_sha256": "b7bd3afd480c9f521c82d8181c939bf0d19c68eae981eb631525637d0b18de15"
+    },
+    {
+      "purpose": "build/table/through-8/repair",
+      "status": "settled",
+      "request_sha256": "d3c7ceb9e1a1bc3775ecd3d2bbc8101e869e29d3ae9db93bd3cab86320db9071",
+      "response_sha256": "3f70741191231bc54ff0fb3c3bcea0571e0fae84882ee2ecf2678f59b2461e74",
+      "receipt_sha256": "16612edcccc3e00d09d7ed249fed861a30c62105c61d9d8827fef90b92e30de4"
+    }
+  ]
+}

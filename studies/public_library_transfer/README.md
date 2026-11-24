@@ -8,6 +8,8 @@
 
 官方参考页在十个项目分别通过 20/20。保留公开资产的空白页通过了 BOM 的任务 13–16、20 以及 SVG 图表的任务 1；其余 194 个任务均拒绝空白页。
 
+三个 Web-Bench 项目的旧 Self 有 13/21 次建库在部署前被拒。其余库交付的 139 个目标页，逐题配置和固定首例在每一题上结果一致。表格与问卷的后续复测分别保存清单、可运行源码、逐题回应和费用，两个项目各用自己的同模型从零对照。[原始失败归因](diagnostics/self_failures/PROTOCOL.md) · [小库的全部合法配置](diagnostics/self_capacity/PROTOCOL.md) · [建库提示与实现复测](self_refinement/README.md) · [GPT-6 Astra 两次独立建库](strong_builder/PROTOCOL.md)
+
 ## 研究目录
 
 | 范围 | 研究入口 |

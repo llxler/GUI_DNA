@@ -9,6 +9,7 @@ from decimal import Decimal, ROUND_HALF_UP
 import json
 import re
 
+from studies.public_library_transfer.self_replication import paper as self_followups
 from studies.end_to_end import ROOT, OUTPUT, reconstruct, sha
 
 PAPER = ROOT / "DNA_latex"
@@ -146,7 +147,7 @@ def _render_with_matrix(data):
                        for a in arms} for n in chart["targets"]}
     from studies.paper_performance import performance_matrix, render_matrix
     matrix = performance_matrix(data, replay, trials, today)
-    main = render_matrix(matrix)
+    main = render_matrix(matrix, self_followups.rows())
     appendix = [r"\section{Detailed End-to-End Results}", r"\label{app:details}",
                 "Library builders remain separate in every comparison. The shared direct baseline appears once per row. Each row uses only its own generator and target protocol."]
     appendix.append(table("tab:previous-workflows", "Earlier three-workflow pilots and retrospective AI-only studies. Entries are current files passed / jointly observed targets (percent). The direct comparator for the original SVG milestones had to return a complete file map. Builders share one direct comparator in each retrospective row.",
@@ -354,7 +355,9 @@ def audit(data, generated):
                                                  "backbone-matrix-20261124.json", "backbone-extension-20261124.json",
                                                  "backbone-form-20261124.json", "backbone-suites-20261124.json", "backbone-overview-20261124.json",
                                                  "backbone-suite-replays-20261124.json")},
-                                    **{str(p.relative_to(ROOT)): sha(p) for p in NOVEMBER_RESULTS.values()}},
+                                    **{str(p.relative_to(ROOT)): sha(p) for p in NOVEMBER_RESULTS.values()},
+                                    **{str(p.relative_to(ROOT)): sha(p) for p in self_followups.SOURCES},
+                                    **{str(p.relative_to(ROOT)): sha(p) for p in self_followups.appendix_sources()}},
               "manuscript_sources_sha256": {p.relative_to(ROOT).as_posix(): sha(p) for p in active},
               "scope": "Reconstructs primary candidates, checks complete generated table text and active manuscript scope; not independent human review or verification of every prose claim."}
     (ROOT / "studies/results/paper_end_to_end_audit.json").write_text(json.dumps(result, indent=2) + "\n")
@@ -365,6 +368,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write", action="store_true")
     args = parser.parse_args()
+    self_followups.verify_or_publish(args.write)
     data = reconstruct()
     assert json.loads(OUTPUT.read_text()) == data
     generated, matrix = _render_with_matrix(data)

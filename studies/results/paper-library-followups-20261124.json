@@ -1,0 +1,249 @@
+{
+  "panel": "D",
+  "target_generators": [
+    "qwen/qwen3.5-9b",
+    "qwen/qwen3-coder-30b-a3b-instruct"
+  ],
+  "panel_rows": [
+    {
+      "project": "Table editor",
+      "target_generator": "Qwen3.5-9B",
+      "builder": "Self",
+      "decoding": "Native",
+      "targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "passed": {
+        "direct": 1,
+        "self_a": 0,
+        "fixed_a": 0,
+        "self_b": 1,
+        "fixed_b": 1
+      }
+    },
+    {
+      "project": "Table editor",
+      "target_generator": "Qwen3-Coder-30B",
+      "builder": "Self",
+      "decoding": "Native",
+      "targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "passed": {
+        "direct": 3,
+        "self_a": 5,
+        "fixed_a": 5,
+        "self_b": 1,
+        "fixed_b": 1
+      }
+    },
+    {
+      "project": "Table editor",
+      "target_generator": "Qwen3.5-9B",
+      "builder": "GPT-6 Astra",
+      "decoding": "Text",
+      "targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "passed": {
+        "direct": 0,
+        "fixed_a": 13,
+        "self_a": 9,
+        "fixed_b": 13,
+        "self_b": 12
+      }
+    },
+    {
+      "project": "Table editor",
+      "target_generator": "Qwen3.5-9B",
+      "builder": "GPT-6 Astra",
+      "decoding": "Native",
+      "targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "passed": {
+        "direct": 1,
+        "fixed_a": 13,
+        "self_a": 13,
+        "fixed_b": 13,
+        "self_b": 13
+      }
+    },
+    {
+      "project": "Question form",
+      "target_generator": "Qwen3.5-9B",
+      "builder": "Self",
+      "decoding": "Native",
+      "targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "passed": {
+        "direct": 5,
+        "self_a": 0,
+        "fixed_a": 0,
+        "self_b": 0,
+        "fixed_b": 0
+      }
+    },
+    {
+      "project": "TodoMVC",
+      "target_generator": "Qwen3.5-9B",
+      "builder": "Self",
+      "decoding": "Native",
+      "targets": [
+        "todo-01",
+        "todo-02",
+        "todo-03",
+        "todo-04",
+        "todo-05",
+        "todo-06",
+        "todo-07",
+        "todo-08"
+      ],
+      "passed": {
+        "direct": 5,
+        "self_a": 0,
+        "fixed_a": 0,
+        "self_b": 0,
+        "fixed_b": 8
+      }
+    }
+  ],
+  "separate_source_matched_comparison": {
+    "table": {
+      "target_ids": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "passed": {
+        "human": 12,
+        "gpt5-library": 2,
+        "direct": 0,
+        "self_build-a": 0,
+        "self_build-b": 0,
+        "gpt6_replica-1": 7,
+        "gpt6_replica-2": 7
+      }
+    },
+    "form": {
+      "target_ids": [],
+      "passed": null
+    }
+  },
+  "sources_sha256": {
+    "studies/results/self-coherent-linker-20261124.json": "638704ec3b9280089324aa74e1ea82a8b3d799533d389fd5021261467c6b3c88",
+    "studies/results/self-native-20261124.json": "7acdec9129b6636eff80abe5f6624452fda45188c3e17d6d8b629cde24b6a50c",
+    "studies/results/self-supplied-native-20261124.json": "03f89b901672edf56e35b2f52b21621a7f31a7a64ecc76c94c637068e997d691",
+    "studies/results/self-todomvc-executable-options-20261124.json": "9e775f7a6b0e968aba5b7474d62be3fa8c45bdcc2762f18507c4ac3c47289df4",
+    "studies/results/self-dependency-resume-20261124.json": "53397b027a23f2e59095f66f57b18f14d3f4dd9c421df55157cbcb863420b607",
+    "studies/public_library_transfer/strong_builder/result.json": "93ba2f57c116016d5ea6d1543ef00a6eea3ca0e5e3767c62d6fe0a24b26d83b9",
+    "studies/public_library_transfer/strong_builder/native/result.json": "4d6d8231700648cb4d65f861135e5f1be7912cf03928d1ac85f4ce9db653df13"
+  }
+}
