@@ -1,0 +1,3881 @@
+{
+  "registered_utc": "2026-11-24T10:56:38.549018+00:00",
+  "sealed_utc": "2026-11-24T11:02:08.712899+00:00",
+  "seal_sha256": "18bc509fe337a83d3bc566f919693e311c71d4db3da28a40e5a58a77504e1924",
+  "registration_sha256": "a7da93c4aff7883b6350ba74a8a3aff91502523d81efcc05bc02253dc9788941",
+  "registered": {
+    "source_sha256": {
+      "studies/public_library_transfer/self_refinement/duo_components/compact/PROTOCOL.md": "36a684ea667f2e366fc8dadfed68031687aaa7ea736b2611fb61c953f9c86282",
+      "studies/public_library_transfer/self_refinement/duo_components/compact/contract.cjs": "e77787ef3f7562d2d14fd54d5ac912cf71bb32ed6898c850f8ef0db0afafe301",
+      "studies/public_library_transfer/self_refinement/duo_components/compact/run.py": "adfe8c176d4295d3d1316a8610890a33c53fbdaec0da0513ccbb81aa660e2cd9",
+      "artifacts/duo-compact-balance-20261124.json": "42f2af95a06733697c6115ab14bb08f9b1ff880eaf05aa09d480da3196df9a14",
+      "artifacts/duo-independent-components-20261124/seal.json": "7a6106ce40e0741dbdf380e9025b1444c2f993a3bb919155e4bc9c5bc02bd312",
+      "artifacts/duo-independent-components-20261124/registration.json": "10dc2b679a225084752a93edcebc3c2dc5748a82027562d73a2b31e505efb98b",
+      "studies/public_library_transfer/self_refinement/duo_components/PROTOCOL.md": "065c5d4729e00b1551eb770b3c4f10885a514b682aa8d568a437bee056830827",
+      "studies/public_library_transfer/self_refinement/duo_components/run.py": "c9d18fb0dab01bdb4f58a1d58fa87a4d30d54924804e01c476fc8397d988752d",
+      "studies/public_library_transfer/self_refinement/duo_components/transport.py": "90b7bf3180732efb93053cda04eff0bb1dcd6eb9ee9333692833fbff2f383690",
+      "artifacts/public-library-transfer-extra-20261123/build-inputs.json": "e5726568feb41c5b17feeee90146587c58fe7e901194c76662825ad5bfc7afc0",
+      "artifacts/public-library-transfer-extra-20261123/targets.json": "dbf13df51230747788d3c92a8149003f6c89a5ef351ac8a74443b18b98c84242",
+      "studies/results/public-library-transfer-duo-public-admission-20261123.json": "f77e6fcaaecef2a753aa936e8210677ddcb9351ff70cae8c5da8873613a4d7b7",
+      "artifacts/duo-compact-components-20261124/public-contracts.json": "9abeb62338e5a4acb01b94ae7588ad28aa2af1c060ab378facffb1148fa4c6b8"
+    },
+    "end": "2026-11-24T11:45:40+00:00",
+    "seeds": {
+      "build-a": 202611243,
+      "build-b": 202611244,
+      "direct": 202611243
+    },
+    "models": {
+      "qwen9": [
+        "qwen/qwen3.5-9b",
+        0.55,
+        0.35,
+        1.2,
+        {
+          "enabled": false
+        }
+      ]
+    },
+    "prior_cost": {
+      "qwen9": {
+        "calls": 100,
+        "settled_usd": 0.033854,
+        "exposure_usd": 0.033854,
+        "unsettled_calls": 0,
+        "cap_usd": 0.95,
+        "stop_usd": 0.95,
+        "halted": 0
+      },
+      "oss": {
+        "calls": 75,
+        "settled_usd": 0.008432,
+        "exposure_usd": 0.008432,
+        "unsettled_calls": 0,
+        "cap_usd": 1.0,
+        "stop_usd": 1.0,
+        "halted": 0
+      }
+    },
+    "features": {
+      "blogging": [
+        "addAltTextToImage",
+        "addCanonicalUrl",
+        "addComment",
+        "assignPostToCategory",
+        "editComment",
+        "editTag",
+        "postPerformanceReport"
+      ],
+      "taskmanagement": [
+        "addCommentToTask",
+        "approveOrRejectTaskReview",
+        "assignTaskToProject",
+        "assignTaskToUser",
+        "compareTime",
+        "projectCustomWorkflows",
+        "setTaskDeadline",
+        "setTaskPriority"
+      ]
+    },
+    "targets": {
+      "addAltTextToImage_postPerformanceReport": {
+        "group": "blogging",
+        "test_sha256": "bad2ed12c9d8a99c3789b22a7608ac540c60b4966b86b038632bb59b21203301"
+      },
+      "addCanonicalUrl_addComment": {
+        "group": "blogging",
+        "test_sha256": "2647effe9ec72636daf5ba31483ef55dcf395382b37e146a034aaf5d03f5ecd1"
+      },
+      "addCanonicalUrl_assignPostToCategory": {
+        "group": "blogging",
+        "test_sha256": "902458c7f9238da2031eed4e1d6bf15358ac53f486393c24d3f5554c76d1e016"
+      },
+      "addCanonicalUrl_editComment": {
+        "group": "blogging",
+        "test_sha256": "8b34cff62d7c993ec6e5357d087cf769a1672cd85c2ec4291dc2792444a78f2c"
+      },
+      "addCanonicalUrl_editTag": {
+        "group": "blogging",
+        "test_sha256": "3b76f39a3772fc335827ad5920b9fb9f4b0f965871bb7f78b4c1486ef70847a4"
+      },
+      "addCommentToTask_setTaskDeadline": {
+        "group": "taskmanagement",
+        "test_sha256": "d28c32689b83094ca47ed8c7cf57b11e81aa4e4a7ce7cd481a412794caede36e"
+      },
+      "approveOrRejectTaskReview_compareTime": {
+        "group": "taskmanagement",
+        "test_sha256": "7f9fb66b73b649055a7bc1a62b5cefae2698dde4fa07213c4a4089feb1ff9931"
+      },
+      "approveOrRejectTaskReview_projectCustomWorkflows": {
+        "group": "taskmanagement",
+        "test_sha256": "cd0394fe242b391aee0edfaba1e01bc8ab9121bb304cd91a00783de006c918a4"
+      },
+      "approveOrRejectTaskReview_setTaskPriority": {
+        "group": "taskmanagement",
+        "test_sha256": "6a186c34b098fc7f2a913c470bc6e63b8bfce5d60cb6ae97f4a9df4006a66a05"
+      },
+      "assignTaskToProject_assignTaskToUser": {
+        "group": "taskmanagement",
+        "test_sha256": "0436698870d442205229d1a16fc38c4e809debc8651600696b2c38d682bba912"
+      }
+    }
+  },
+  "source_overlap_sha256": "f77e6fcaaecef2a753aa936e8210677ddcb9351ff70cae8c5da8873613a4d7b7",
+  "old_protocol_sha256": "e565bac496c4a56162304b2dc8c947ced2af90f598ad15c0da26d3538935ff85",
+  "calibrated_unit": "one Duo test file with four public-overlapping assertions",
+  "groups": {
+    "qwen/qwen3.5-9b": {
+      "components_and_direct": [
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "blogging",
+          "target": "addAltTextToImage_postPerformanceReport",
+          "replica": "direct",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "8719e4154fdc4cba15b2bceee7968dc9246b3f0b72650fb941fc26f295d8e11f",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "a4bff5b9a84b9a71cbff9996838077c25817945510bb1f260ffb270c55803340",
+              "source_sha256": "c4653c932375928af424796dc13d94fb049be637e16bb64b6af8322c66a34eba",
+              "single_results": {
+                "addAltTextToImage": {
+                  "passed": false,
+                  "test_sha256": "5084139d4b378bcc15ab0b3fce763eec421aca0c2ccbee3b86b3a178f3732e44",
+                  "source_sha256": "8f4e48f1fb5a5637009dc8b694bb5a85e5df61b1b812a864528ac85ce084312c",
+                  "report_sha256": "8fe895c1ac39af5408bc4726bdf22fe746ac075a058b9709427a14ba7b5ad3f7",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                },
+                "postPerformanceReport": {
+                  "passed": false,
+                  "test_sha256": "8e85f6a421ce14112f1ef83ddfba7569ba21c3e19b3362eab7c9e9b94c5cb37b",
+                  "source_sha256": "8f4e48f1fb5a5637009dc8b694bb5a85e5df61b1b812a864528ac85ce084312c",
+                  "report_sha256": "56901cd2379d646b26b287519f28b9fe4797a916fa9450265216ab4b643c44e5",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "e96acb87ac1a88e0e8af3e3d17f41332aa254c6a7775314f8c76098edbec89ac",
+              "source_sha256": "8719e4154fdc4cba15b2bceee7968dc9246b3f0b72650fb941fc26f295d8e11f",
+              "single_results": {
+                "addAltTextToImage": {
+                  "passed": false,
+                  "test_sha256": "5084139d4b378bcc15ab0b3fce763eec421aca0c2ccbee3b86b3a178f3732e44",
+                  "source_sha256": "f608611ab88c7a3974869a0890659e8c44c836827c80ac4698bab89a84652d32",
+                  "report_sha256": "019b5d69ded86056a3c7f243270986fea09712d3ae0d83a7437791d358a178d9",
+                  "uncaught_process": {
+                    "original_log_sha256": "f9bf428ea6d43d53e0459bf3d8ad13b5442dab819b09997590a4845423c8b7a5",
+                    "original_error": "TypeError: Cannot use 'in' operator to search for 'href' in null",
+                    "replay_log_sha256": "1d8a119a8a6b1bf7f599ea317defb76e5ab8048f80b41f187c6da283e4bf89ae",
+                    "report_sha256": "019b5d69ded86056a3c7f243270986fea09712d3ae0d83a7437791d358a178d9",
+                    "replay_exit": 1
+                  },
+                  "cases_passed": 0,
+                  "public_cases": 2
+                },
+                "postPerformanceReport": {
+                  "passed": false,
+                  "test_sha256": "8e85f6a421ce14112f1ef83ddfba7569ba21c3e19b3362eab7c9e9b94c5cb37b",
+                  "source_sha256": "f608611ab88c7a3974869a0890659e8c44c836827c80ac4698bab89a84652d32",
+                  "report_sha256": "340bc572cc2a4bad78d0630dcc0b7270cd9c74fbea0e686a9f845c3c6f135a37",
+                  "uncaught_process": {
+                    "original_log_sha256": "5581644f6d46226393b56354c9d7380b5a4f606e3103468ef43ec066c47ab37c",
+                    "original_error": "TypeError: Cannot use 'in' operator to search for 'href' in null",
+                    "replay_log_sha256": "bd548eb6880bf47d0bd26c56fb32c567373e470d96e82c2a8e4c8f62641f798b",
+                    "report_sha256": "340bc572cc2a4bad78d0630dcc0b7270cd9c74fbea0e686a9f845c3c6f135a37",
+                    "replay_exit": 1
+                  },
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "blogging",
+          "target": "addCanonicalUrl_addComment",
+          "replica": "direct",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "2c5dc231bd278d516665d5e3c848b2b5cf8d5d83cabadba625b90f027f01d284",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "393f2181dd3ea14e54356611d0e1936d323621791b4140b323e3d1d7d18beccf",
+              "source_sha256": "6958ffa6177d8849ba470ab35fe68fb4472ca07ec28c70abca7cf591b77c1e6f",
+              "single_results": {
+                "addCanonicalUrl": {
+                  "passed": false,
+                  "test_sha256": "18b9cf4abfedd5d002960da21ebbd201c19c255b29ec160e1f0a0c747385df65",
+                  "source_sha256": "7b257b168e31eca264b34f13321278b32cbcf1e98e1564975e035c58d9ac530c",
+                  "report_sha256": "0c323e337e3d1261855a2b388128c7197393e7bb8416fe57d626926c9398a71d",
+                  "cases_passed": 1,
+                  "public_cases": 2
+                },
+                "addComment": {
+                  "passed": false,
+                  "test_sha256": "d7c26368f0bc0185a8981b904ccc4c3131ab7dc7cac083adb960636d30826645",
+                  "source_sha256": "7b257b168e31eca264b34f13321278b32cbcf1e98e1564975e035c58d9ac530c",
+                  "report_sha256": "c56e503dfa936e9dca4b62a7bbe023644a7a2daa50b2a988785fe79eeee8e751",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "e1e1b9aabcaf88c71b6107dd0ac47395b39703922a94fc49b6203ca3fbc690b3",
+              "source_sha256": "2c5dc231bd278d516665d5e3c848b2b5cf8d5d83cabadba625b90f027f01d284",
+              "single_results": {
+                "addCanonicalUrl": {
+                  "passed": false,
+                  "test_sha256": "18b9cf4abfedd5d002960da21ebbd201c19c255b29ec160e1f0a0c747385df65",
+                  "source_sha256": "46a7e6ba51ab7307a23701e19d5f7c1d980f02b5735b3db4f478b6ffb1471823",
+                  "report_sha256": "95df6c50ab79ffc48e159985cd0ffe2174587b092db999b4a1fd5e67c1a3c412",
+                  "cases_passed": 1,
+                  "public_cases": 2
+                },
+                "addComment": {
+                  "passed": false,
+                  "test_sha256": "d7c26368f0bc0185a8981b904ccc4c3131ab7dc7cac083adb960636d30826645",
+                  "source_sha256": "46a7e6ba51ab7307a23701e19d5f7c1d980f02b5735b3db4f478b6ffb1471823",
+                  "report_sha256": "5004cc773ce2c903c7653bd65ce876bd5592520ed89358a256f5c8adb24c2890",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "blogging",
+          "target": "addCanonicalUrl_assignPostToCategory",
+          "replica": "direct",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "9e40d8bdf1511c70e8576edb9cc69359aa9d43831a3ca7ea6f47e1141bd526c8",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "1ca387a31c9b747853c20203fecd9f7ba14fb15b152c226c9e784d01e4ad2ec0",
+              "source_sha256": "e66448fe1bfaf06ba9d6bfd7e8013794bb4f7ef64c5e3a56ea787e4819d9ee2b",
+              "single_results": {
+                "addCanonicalUrl": {
+                  "passed": false,
+                  "test_sha256": "18b9cf4abfedd5d002960da21ebbd201c19c255b29ec160e1f0a0c747385df65",
+                  "source_sha256": "92571df35842d1e1f2cf5dab73780dfd21193a47b0fde810cdb2c5a6e98f8bda",
+                  "report_sha256": "0abb3b0031958d39b6632ba9bdaccd631143a6d123c0436cdb905d08f8c056ac",
+                  "cases_passed": 1,
+                  "public_cases": 2
+                },
+                "assignPostToCategory": {
+                  "passed": false,
+                  "test_sha256": "980c512ed8ab0a9a38a8fbe701edbd3f21fdadb38f90a7de64fe9937ae518fd5",
+                  "source_sha256": "92571df35842d1e1f2cf5dab73780dfd21193a47b0fde810cdb2c5a6e98f8bda",
+                  "report_sha256": "6d2f8a49f353b5587d96b52a9bb46e17d2129f63700ee37f71bbf0b7cbbe6bdc",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "3a4ebb8449a4b8a2c223ab778c2bf653f09d1675339df3bb10969419ab50c5b7",
+              "source_sha256": "9e40d8bdf1511c70e8576edb9cc69359aa9d43831a3ca7ea6f47e1141bd526c8",
+              "single_results": {
+                "addCanonicalUrl": {
+                  "passed": false,
+                  "test_sha256": "18b9cf4abfedd5d002960da21ebbd201c19c255b29ec160e1f0a0c747385df65",
+                  "source_sha256": "67ad3d582fba95f46acc4395c5195c84c877780a110f7ced8fbbfcf31f46d669",
+                  "report_sha256": "b00f0b8c8d488529dba77d0de89bbadc165200e96810231db40695f521d79366",
+                  "cases_passed": 1,
+                  "public_cases": 2
+                },
+                "assignPostToCategory": {
+                  "passed": false,
+                  "test_sha256": "980c512ed8ab0a9a38a8fbe701edbd3f21fdadb38f90a7de64fe9937ae518fd5",
+                  "source_sha256": "67ad3d582fba95f46acc4395c5195c84c877780a110f7ced8fbbfcf31f46d669",
+                  "report_sha256": "ab2b4160d042465b3f5ddf1abbabbd07be84177d7b65e0555d81f6492916b89d",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "blogging",
+          "target": "addCanonicalUrl_editComment",
+          "replica": "direct",
+          "status": "invalid",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "5bcb9ad4937e5d216d739024ffe0d1836d716648495c4ef61534b6cdcbeee303",
+              "single_results": {}
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "cad51a7c5c25a4b9b21b169559a75882eeb42f5e39c1b0facf946cf63ce534de",
+              "single_results": {}
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "blogging",
+          "target": "addCanonicalUrl_editTag",
+          "replica": "direct",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "38afd10681be625405f01b733ea627624fc9c5b602f1861b88cba7330b234f59",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "7d6070321c4db79317f6ca0fee3aa756595b4d3bbfd63018a0fb7c834e8365fb",
+              "source_sha256": "c9debde43607302f6f33f9b5c74d4dadc4ea510acb0bbcc1d3cb2b2fc2f4fbff",
+              "single_results": {
+                "addCanonicalUrl": {
+                  "passed": false,
+                  "test_sha256": "18b9cf4abfedd5d002960da21ebbd201c19c255b29ec160e1f0a0c747385df65",
+                  "source_sha256": "8d310fd9d8255f3f161f36f25cdced7aeb7801b5941deb13c1f901a410c37f8c",
+                  "report_sha256": "f15a41c7559a244702f6af43f1d868bd638da7d1f0ced680cb864e5f985f71a8",
+                  "cases_passed": 1,
+                  "public_cases": 2
+                },
+                "editTag": {
+                  "passed": false,
+                  "test_sha256": "515d1efc6045b86f89914b5b6aa6099a26950141c0e66c7feefa26f49a86aa32",
+                  "source_sha256": "8d310fd9d8255f3f161f36f25cdced7aeb7801b5941deb13c1f901a410c37f8c",
+                  "report_sha256": "bd7bc776a632a15e335ac57c307465e1a010b28090d45bc7da15ef89c2245b74",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "af7c6c1bfbc3cbd03d4d82b01144784d25ec9ce3dda0d38fbc5423df3cf0499a",
+              "source_sha256": "38afd10681be625405f01b733ea627624fc9c5b602f1861b88cba7330b234f59",
+              "single_results": {
+                "addCanonicalUrl": {
+                  "passed": true,
+                  "test_sha256": "18b9cf4abfedd5d002960da21ebbd201c19c255b29ec160e1f0a0c747385df65",
+                  "source_sha256": "e9effcf044bf8c21810b5b83bf87b356a9c2f7a731164a7e0e337e5144ce93ed",
+                  "report_sha256": "a376ba677c7a833a5bb26f767034a65f4017703456df93232d1d459c856668e4",
+                  "cases_passed": 2,
+                  "public_cases": 2
+                },
+                "editTag": {
+                  "passed": false,
+                  "test_sha256": "515d1efc6045b86f89914b5b6aa6099a26950141c0e66c7feefa26f49a86aa32",
+                  "source_sha256": "e9effcf044bf8c21810b5b83bf87b356a9c2f7a731164a7e0e337e5144ce93ed",
+                  "report_sha256": "daeef4e430e61d06beb8fd919b7e66037fca78e7d57c437cb3603d029a093820",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "addCommentToTask_setTaskDeadline",
+          "replica": "direct",
+          "status": "invalid",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "5b80a920c921a1a11dded6111ee6a21f0b24b44222253effe77619673617d6d9",
+              "single_results": {}
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "90acc0c7e5a8c04c2773d760a705f405f430f3e3a530f2a998945976fafb539b",
+              "single_results": {}
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "approveOrRejectTaskReview_compareTime",
+          "replica": "direct",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "f3871273058ea79a6b44c54529348e9eec1a3029d97a5b7f297a4fb34dabe8f6",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "3b6d8a8e147a09a190d5f11a1cd6138d3f223fb8a39f3abe577ae1c699cc7ba0",
+              "source_sha256": "77f9b20ba2f4982f1a6d021505d22527c67cc55ed2e5e7a5733cacdd5df707f4",
+              "single_results": {
+                "approveOrRejectTaskReview": {
+                  "passed": false,
+                  "test_sha256": "58471f1aa537ed65b00712248ce1623b3f3d44b441a9153a299c7dbfa58ec6e5",
+                  "source_sha256": "46da5ce4d7347059ec708ab618e0366109a2339d7589b69dc89436f957ce5222",
+                  "report_sha256": "f5434db45db7cbee0c8e84fb8c9d8acfcda1f3d16ecca99fb5ef5f9bf552a74b",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                },
+                "compareTime": {
+                  "passed": false,
+                  "test_sha256": "6dc25359c6214e6ec2fce3aa7ee1190eaa96d51ecb3659bcdbba05b32de93e3b",
+                  "source_sha256": "46da5ce4d7347059ec708ab618e0366109a2339d7589b69dc89436f957ce5222",
+                  "report_sha256": "849c52b43752292afbe5b6167f1177f4f152463cc04ab2c87b7ebae3f05ed9c4",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "4a3e29f796c513c2c2d74542028ff931f4d93a1fcc72612defeee32428767668",
+              "source_sha256": "f3871273058ea79a6b44c54529348e9eec1a3029d97a5b7f297a4fb34dabe8f6",
+              "single_results": {
+                "approveOrRejectTaskReview": {
+                  "passed": false,
+                  "test_sha256": "58471f1aa537ed65b00712248ce1623b3f3d44b441a9153a299c7dbfa58ec6e5",
+                  "source_sha256": "2bea2789b0a0b23b63031bb023ceba29347be6e988716141819b32c51a51ad5f",
+                  "report_sha256": "0dd8d44901164637bf0ef954e933a94289eed94dbf374f31c1a41736d77ef8be",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                },
+                "compareTime": {
+                  "passed": false,
+                  "test_sha256": "6dc25359c6214e6ec2fce3aa7ee1190eaa96d51ecb3659bcdbba05b32de93e3b",
+                  "source_sha256": "2bea2789b0a0b23b63031bb023ceba29347be6e988716141819b32c51a51ad5f",
+                  "report_sha256": "386edb1956cbb434f01b05e2105eb9962e4a1895a54c850c2426e546bde28f9c",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "approveOrRejectTaskReview_projectCustomWorkflows",
+          "replica": "direct",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "45fb13dc19b0c0c30e1a05b2f3a73bbbd724c0610744771f81328ca6fe4c477f",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "a0c6370f58ffb6e664e39f0f122cce1437eaffbceaabd58b2ae9b6a136c0fb7b",
+              "source_sha256": "45fb13dc19b0c0c30e1a05b2f3a73bbbd724c0610744771f81328ca6fe4c477f",
+              "single_results": {
+                "approveOrRejectTaskReview": {
+                  "passed": false,
+                  "test_sha256": "58471f1aa537ed65b00712248ce1623b3f3d44b441a9153a299c7dbfa58ec6e5",
+                  "source_sha256": "479f3b765afc719ea4a34d18e7c9ca73356f5671b8a96bb6f93a991eb8b924bf",
+                  "report_sha256": "ae654b7b9ee85b38f8ad5632cc8576fc8d68a87c1f198e624f61e1e32a5c32bf",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                },
+                "projectCustomWorkflows": {
+                  "passed": false,
+                  "test_sha256": "47262a7c7cc99d42995dc41e4a849a3579df395a4c54af5ffb793999999236ea",
+                  "source_sha256": "479f3b765afc719ea4a34d18e7c9ca73356f5671b8a96bb6f93a991eb8b924bf",
+                  "report_sha256": "644ffa50bed7d31f14752a82b831dfa39f24ae04b3177b40ef72af556611305e",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "a53a09b3a422c3026b340705f6b7139014bb2d22ba50310e05ad65ea08a165ca",
+              "source_sha256": "45fb13dc19b0c0c30e1a05b2f3a73bbbd724c0610744771f81328ca6fe4c477f",
+              "single_results": {
+                "approveOrRejectTaskReview": {
+                  "passed": false,
+                  "test_sha256": "58471f1aa537ed65b00712248ce1623b3f3d44b441a9153a299c7dbfa58ec6e5",
+                  "source_sha256": "479f3b765afc719ea4a34d18e7c9ca73356f5671b8a96bb6f93a991eb8b924bf",
+                  "report_sha256": "a3346d86ffca3c195326e7fa45ae0d20661dd483c824be310fb9def455d8962c",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                },
+                "projectCustomWorkflows": {
+                  "passed": false,
+                  "test_sha256": "47262a7c7cc99d42995dc41e4a849a3579df395a4c54af5ffb793999999236ea",
+                  "source_sha256": "479f3b765afc719ea4a34d18e7c9ca73356f5671b8a96bb6f93a991eb8b924bf",
+                  "report_sha256": "477ac3da3137c9ed36918b3a0250d6d541e9443ced9772e3936916783853c1ad",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "approveOrRejectTaskReview_setTaskPriority",
+          "replica": "direct",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "0333f9192342fc7de8e915bcfa3d95a7c7dca3e1bb8e7d3404426d0d59e507d7",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "dcde9ec907e7092bfe2821fa2281bac6cc9ca09f3da41e900814c9e8237d1525",
+              "source_sha256": "91a3ed5e0dfd6b5771fd1c99f4c5b1b14a5daf90dfb18543136565138c22c6b9",
+              "single_results": {
+                "approveOrRejectTaskReview": {
+                  "passed": false,
+                  "test_sha256": "58471f1aa537ed65b00712248ce1623b3f3d44b441a9153a299c7dbfa58ec6e5",
+                  "source_sha256": "04a913cf8e5def0083516e611401ddcbd9d36b0b5148a03690cb73d3c1bfad08",
+                  "report_sha256": "3eacc9468a68118f23530f556793e087c02ce670be4c1432a430e93038a7c6ef",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                },
+                "setTaskPriority": {
+                  "passed": false,
+                  "test_sha256": "036ec3a87407b8571b9883d1190654509a70b33396a1642b7ed8a9322a5a0722",
+                  "source_sha256": "04a913cf8e5def0083516e611401ddcbd9d36b0b5148a03690cb73d3c1bfad08",
+                  "report_sha256": "3ef957812ffe346016b6a851e785e0493bab7fdbb8ba91815cdf11ceaeb6e8dc",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "21375ac11069a6f748c3b1f2781cdde2e55ffc6b01b8567b4ca6bda59e52b402",
+              "source_sha256": "0333f9192342fc7de8e915bcfa3d95a7c7dca3e1bb8e7d3404426d0d59e507d7",
+              "single_results": {
+                "approveOrRejectTaskReview": {
+                  "passed": false,
+                  "test_sha256": "58471f1aa537ed65b00712248ce1623b3f3d44b441a9153a299c7dbfa58ec6e5",
+                  "source_sha256": "2275e70a4dba22249ab8788f25717e289480c577151dd10dfa2867210b8aec56",
+                  "report_sha256": "2b6e1bb212efaaa800cc3c45024a581f2bc06f8a254dc1c7980eefc7ec59636d",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                },
+                "setTaskPriority": {
+                  "passed": false,
+                  "test_sha256": "036ec3a87407b8571b9883d1190654509a70b33396a1642b7ed8a9322a5a0722",
+                  "source_sha256": "2275e70a4dba22249ab8788f25717e289480c577151dd10dfa2867210b8aec56",
+                  "report_sha256": "edcdbf3cf3063dda0d36df51ad8cffe5ba9fcd37e9f8086583775aa2a5fd3125",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "assignTaskToProject_assignTaskToUser",
+          "replica": "direct",
+          "status": "invalid",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "b7d38e07ca366810ecd08b515b4749086ed9165e7e88bb0d50676c1d79ea48f6",
+              "single_results": {}
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "0b36e499d163634809bb6a095f43bc7ae7dbb3e4843d0cb58511ee40e37d2eec",
+              "single_results": {}
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "blogging",
+          "target": "addAltTextToImage",
+          "replica": "build-a",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "32b6cc424f6e73b4db9a78424cf4111b834598c405d5ef9ba2323cb8129ffc17",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "048eac8fca1945f31d4fcc33f165d8b1d12547950b0ca048c948e20bece4922b",
+              "source_sha256": "296bffae8fac88df8ca9e870f0543d25ccdc52f504011fb8c92c976468836406",
+              "single_results": {
+                "addAltTextToImage": {
+                  "passed": false,
+                  "test_sha256": "5084139d4b378bcc15ab0b3fce763eec421aca0c2ccbee3b86b3a178f3732e44",
+                  "source_sha256": "6cf1d8c32bc59361fe9d3822ae186fd206fd4b9c7b6aba6be3f729a811951061",
+                  "report_sha256": "c093913079536607130c1e6aee37cbd883a1b96c390e02c68de3fef5ac6bbb65",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "fa83dade046274cccaed5a2052f9b72bb673685d7e91f7a3d782a9c36c3813f7",
+              "source_sha256": "32b6cc424f6e73b4db9a78424cf4111b834598c405d5ef9ba2323cb8129ffc17",
+              "single_results": {
+                "addAltTextToImage": {
+                  "passed": false,
+                  "test_sha256": "5084139d4b378bcc15ab0b3fce763eec421aca0c2ccbee3b86b3a178f3732e44",
+                  "source_sha256": "e3dfb0235c8348a10d9e387cf2dc0290dbd6cdcf9a6dd0a8ce03b07b3d655faa",
+                  "report_sha256": "ed33a3a0bf49d5be008420242faa346db7b0a0ab50b28d0d3aa0a29838851f8f",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "blogging",
+          "target": "addAltTextToImage",
+          "replica": "build-b",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "354e9f5f93c18d7d3bdbccc56d43dfee4274a14b39b5079066ededc4e51caee0",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "43dd20bd51f66060d7c5c062a91daba51ae383925f2eaebb580cb5a713d0f3ae",
+              "source_sha256": "63cb1438d472e66f10c49efaac44cf791c1b5b388208d4370091d6b313f5a04a",
+              "single_results": {
+                "addAltTextToImage": {
+                  "passed": false,
+                  "test_sha256": "5084139d4b378bcc15ab0b3fce763eec421aca0c2ccbee3b86b3a178f3732e44",
+                  "source_sha256": "daf7b2de7841596623b275e0ea7ed71c304a987c7145a6bd449831623776ca72",
+                  "report_sha256": "ef2cdb56d25276a3df81b8817323ad24b77b14a731a73067825a8726e15ed4c3",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "7e900cd47295d6384d2b618ff6e7296f41372496dc683b39df1d536466f3b1b1",
+              "source_sha256": "354e9f5f93c18d7d3bdbccc56d43dfee4274a14b39b5079066ededc4e51caee0",
+              "single_results": {
+                "addAltTextToImage": {
+                  "passed": false,
+                  "test_sha256": "5084139d4b378bcc15ab0b3fce763eec421aca0c2ccbee3b86b3a178f3732e44",
+                  "source_sha256": "a59882b6db0b52cca7c2c21142de31e4d6baefbd21da1c1aacb831988ee5421a",
+                  "report_sha256": "d53ba247bd8726a352709da60514a00a49d537faa55f48f727dd3d704fd7fe35",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "blogging",
+          "target": "addCanonicalUrl",
+          "replica": "build-a",
+          "status": "valid",
+          "use": "first",
+          "source_sha256": "96412ab6df4bdec103a5dd20b88feb313777e159abc2e96d0458bc8fbba3bc32",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "c8b16a5c59773f239a6a53fc04b305ea1a09ec1b586c01aad2f81f34006d76e0",
+              "source_sha256": "96412ab6df4bdec103a5dd20b88feb313777e159abc2e96d0458bc8fbba3bc32",
+              "single_results": {
+                "addCanonicalUrl": {
+                  "passed": true,
+                  "test_sha256": "18b9cf4abfedd5d002960da21ebbd201c19c255b29ec160e1f0a0c747385df65",
+                  "source_sha256": "e1633e8a7d3f1091f38eb5c7d47b098d219e74947310ae31794cd2ba85d986d2",
+                  "report_sha256": "a3e042cd3161d219a785e8e1e59c044ad04b73a65e5c897ec64ba43b85dd4a5b",
+                  "cases_passed": 2,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "blogging",
+          "target": "addCanonicalUrl",
+          "replica": "build-b",
+          "status": "valid",
+          "use": "first",
+          "source_sha256": "1cf2c5f949d52b9856cd0eb8b523fd475bf64c59b28fd670791df5b14c397eff",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "9dfa23324d96576ac7a6591e32c6aec148eac382d6725685cd7d5127f17abbf0",
+              "source_sha256": "1cf2c5f949d52b9856cd0eb8b523fd475bf64c59b28fd670791df5b14c397eff",
+              "single_results": {
+                "addCanonicalUrl": {
+                  "passed": true,
+                  "test_sha256": "18b9cf4abfedd5d002960da21ebbd201c19c255b29ec160e1f0a0c747385df65",
+                  "source_sha256": "e79ae586a490b3b3c19f8b885fb64f1ef2f9bd7c81c0d2475e27b4e419ed04c6",
+                  "report_sha256": "8c40e9bbfbdd194324d0be20ac42ee6bc944649cf16ed92ad73335b943b74c8a",
+                  "cases_passed": 2,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "blogging",
+          "target": "addComment",
+          "replica": "build-a",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "1774d2f627acf06250fa8707dbd06ca3643baa854864477834d89e008d41666e",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "73078c615d2872c21b18e94a54b3f17265df7aec51187c5e4c91b167dc308d76",
+              "source_sha256": "2bdc67c65e95834ed4dbb1723723a1df1b85a01727f2ccb07e14b453e2873b05",
+              "single_results": {
+                "addComment": {
+                  "passed": false,
+                  "test_sha256": "d7c26368f0bc0185a8981b904ccc4c3131ab7dc7cac083adb960636d30826645",
+                  "source_sha256": "2a575234e23fded96180258a33c2dbd48c5af859be1fb7e05623842af78590b3",
+                  "report_sha256": "15b2734b66ba6715d0223a7cef6109add359aff609a2a30d1cb51e2a4bc7bdf9",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "b00b623b97a8f3b2a860f8a84d7c2455de21ab6d726d0948f08231fdc2b60400",
+              "source_sha256": "1774d2f627acf06250fa8707dbd06ca3643baa854864477834d89e008d41666e",
+              "single_results": {
+                "addComment": {
+                  "passed": false,
+                  "test_sha256": "d7c26368f0bc0185a8981b904ccc4c3131ab7dc7cac083adb960636d30826645",
+                  "source_sha256": "e82ae161c109d41b4e533546bb0144268daa8a31577d5d28f4990250bebfd569",
+                  "report_sha256": "49b9f2a9fd0b524943ee19e70b537ebe6e243f4cad7cbb8fdd08e0b18ea0cbe0",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "blogging",
+          "target": "addComment",
+          "replica": "build-b",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "ef07d71a6e5a94d2f4c5ae788984a8ee564545b31f2760cdc85c89fcfa3e9c4b",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "0abb59ea92152c21ea71387f6a7d4b5151ba5907078e85f0785a87294338b344",
+              "source_sha256": "6a51c34bd56aff6584c144f4a0a9d28ca1aa845e2508239a03cd69fbb9506f44",
+              "single_results": {
+                "addComment": {
+                  "passed": false,
+                  "test_sha256": "d7c26368f0bc0185a8981b904ccc4c3131ab7dc7cac083adb960636d30826645",
+                  "source_sha256": "4c9ee841902c9a66b3e4c7998716fbda6c1318fc9ad7d101b57988eea429836e",
+                  "report_sha256": "040acd1d295dfb275a2b12d521b826c6199e76bfa9951919241564825cff78f1",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "54a000334f82740efbe30e72e0a5065e4378614ad3ff9864702670d4cddf3ecc",
+              "source_sha256": "ef07d71a6e5a94d2f4c5ae788984a8ee564545b31f2760cdc85c89fcfa3e9c4b",
+              "single_results": {
+                "addComment": {
+                  "passed": false,
+                  "test_sha256": "d7c26368f0bc0185a8981b904ccc4c3131ab7dc7cac083adb960636d30826645",
+                  "source_sha256": "da80bda01ed63e6e898fa9e4823901fc624f6c073c717663834c08891a29ffb9",
+                  "report_sha256": "89a76d04bce6dbd657c7fe8805ef6d0daadfa6eb45dc8a9ac974366f626514ac",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "blogging",
+          "target": "assignPostToCategory",
+          "replica": "build-a",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "c71e102290e53b32c442a08f5c4f269ace194335b5c03e8eec3b49f77a4ddc29",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "5eda5098845c8ddf970b307df34f19b3f7c36f5461223b45b8f98ec5368f2c1c",
+              "source_sha256": "f591875dc44431c49697c98ac17587f6c7aad56db44b30198e1f19e6e5dc4310",
+              "single_results": {
+                "assignPostToCategory": {
+                  "passed": false,
+                  "test_sha256": "980c512ed8ab0a9a38a8fbe701edbd3f21fdadb38f90a7de64fe9937ae518fd5",
+                  "source_sha256": "18e2e91150b0cf597513c51955437b3b7e261d0d90c6619eceaa8796ab5d5e0c",
+                  "report_sha256": "c12180c1cddd779ffa9781ee2407ceca734da18a8f46c1f2ec441c7e8781dd9a",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "3881df7322d9276c58f987cb0dbffa8e50a665d422c41aa944629d77b410d96f",
+              "source_sha256": "c71e102290e53b32c442a08f5c4f269ace194335b5c03e8eec3b49f77a4ddc29",
+              "single_results": {
+                "assignPostToCategory": {
+                  "passed": false,
+                  "test_sha256": "980c512ed8ab0a9a38a8fbe701edbd3f21fdadb38f90a7de64fe9937ae518fd5",
+                  "source_sha256": "935ddad204019b0ce8e0532326568cd869e29d8fc74a1dda3f8f2daff9763b37",
+                  "report_sha256": "d63980c76a76c0e448c243b1e276bfe45cba9fae1a3648d23a1fe8229f57fce5",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "blogging",
+          "target": "assignPostToCategory",
+          "replica": "build-b",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "68bb52864a4b05e70410d811916a11f2f3d11e8ffae7b51b1a2a4e8e8676bed0",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "bec18e3681afd3ef5fa68d59eac2580e26c75b35d5de2c2f306cd2163f4e2e1e",
+              "source_sha256": "de383807f73bbd29d443d6a931f0ec9364c2f61d5ddc4d702e5785d2af800559",
+              "single_results": {
+                "assignPostToCategory": {
+                  "passed": false,
+                  "test_sha256": "980c512ed8ab0a9a38a8fbe701edbd3f21fdadb38f90a7de64fe9937ae518fd5",
+                  "source_sha256": "9255c5c308fc040cf00bd8386bb61f7cf43618e141f0a1c7da89b9c69ba22dba",
+                  "report_sha256": "d45fb932cf99d96b0d6cfbf94bb71747a993a7d1b654585677e257ffd8554b41",
+                  "cases_passed": 1,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "9c47222682d7b3e55501d4caceb02f29cf6d22b350cc62ff1c93dfa9655ea0ae",
+              "source_sha256": "68bb52864a4b05e70410d811916a11f2f3d11e8ffae7b51b1a2a4e8e8676bed0",
+              "single_results": {
+                "assignPostToCategory": {
+                  "passed": false,
+                  "test_sha256": "980c512ed8ab0a9a38a8fbe701edbd3f21fdadb38f90a7de64fe9937ae518fd5",
+                  "source_sha256": "8f2cf7d611f46a037060f057974e04741c52a8a06d437a3f7df16911f4c0cd01",
+                  "report_sha256": "f745463cf575e3d0bb9109fface35ea02e1951aa4df7751b3f4774537411af65",
+                  "cases_passed": 1,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "blogging",
+          "target": "editComment",
+          "replica": "build-a",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "2abf1d3015bc8389fd64929c33a188181dee9de2623f3c51a62c8fdfb8fb68be",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "67f9a586955388f1f59c2ad789b3bc6f19235531ea12e8563e668858a647f9da",
+              "source_sha256": "2abf1d3015bc8389fd64929c33a188181dee9de2623f3c51a62c8fdfb8fb68be",
+              "single_results": {
+                "editComment": {
+                  "passed": false,
+                  "test_sha256": "e34d853e100c07f455023f34ac9befb7c6af32da1ee47819dd89562754f2a963",
+                  "source_sha256": "21cbb586f7bc9ec292d59e0bc76648954208a75e72f0d58fcbf5c1ebadc92bec",
+                  "report_sha256": "9559a8ec3cdd0cdfd9dad14d470f785e7d839d61af84b314d49f13c53709ef6b",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "e07a3275e995bfeeb1455b0e5b86260a0be87e9438151ca112d79f0751b70451",
+              "source_sha256": "2abf1d3015bc8389fd64929c33a188181dee9de2623f3c51a62c8fdfb8fb68be",
+              "single_results": {
+                "editComment": {
+                  "passed": false,
+                  "test_sha256": "e34d853e100c07f455023f34ac9befb7c6af32da1ee47819dd89562754f2a963",
+                  "source_sha256": "21cbb586f7bc9ec292d59e0bc76648954208a75e72f0d58fcbf5c1ebadc92bec",
+                  "report_sha256": "fc62839ddc3dafe183387e91e015b8aa95c8b8372a51dc1cd526c779fe27cc98",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "blogging",
+          "target": "editComment",
+          "replica": "build-b",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "a9ee234bb12ba054c0f710361777c99cac90918d6164644bc873a6d7afcb94af",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "7a35ffe404d5b44a51a340b461f3d3282d7946682bc5c2f0698be9e3a6c381c4",
+              "source_sha256": "e506fbd1bdb276b76149fa9f422e1d26dde9d5774b45fc24c467524f48690a29",
+              "single_results": {
+                "editComment": {
+                  "passed": false,
+                  "test_sha256": "e34d853e100c07f455023f34ac9befb7c6af32da1ee47819dd89562754f2a963",
+                  "source_sha256": "6ab201a7437d376ad67330efea9902502db018a32ffd2d14070cc6bdc6cd844a",
+                  "report_sha256": "1efa62ef27f0b9be07ea31133c98833bcba91d5628f66bedb46f96c41bdd9b4d",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "767c1980704c801eed3220610c2a7bfa40cb7ef4646277eb4889a94ff83b4715",
+              "source_sha256": "a9ee234bb12ba054c0f710361777c99cac90918d6164644bc873a6d7afcb94af",
+              "single_results": {
+                "editComment": {
+                  "passed": false,
+                  "test_sha256": "e34d853e100c07f455023f34ac9befb7c6af32da1ee47819dd89562754f2a963",
+                  "source_sha256": "ae8d3ff3755ddfd90a9ecfe49948279aefd1836a8f454aa1263bf049f37ec93b",
+                  "report_sha256": "6e3c858c31cfa5ddca335c227af2b5614e8f73362ee8d4873a4b662391a706a9",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "blogging",
+          "target": "editTag",
+          "replica": "build-a",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "03a283ed94bdc4076aefedfe5288143d77d8f6eeef35a0ea445b91ee2bf62388",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "922bf76c128642bae2256495612eeed7f1f94dc182a1a345004d4211763749ed",
+              "source_sha256": "5a835cf39eb0ea114f3c4076567622f7e697dba392738a40815f8211c6e14d64",
+              "single_results": {
+                "editTag": {
+                  "passed": false,
+                  "test_sha256": "515d1efc6045b86f89914b5b6aa6099a26950141c0e66c7feefa26f49a86aa32",
+                  "source_sha256": "52e398ddc731aa38f540825abe4bc669abeca0e63e98b8a203b3ee8f8820645a",
+                  "report_sha256": "b40b69ff4f92a63a4ff3a891bf136a235bfe716dc56029396ea43eef4ee0f2a6",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "1d25b649d9d60b8fa335f74a19b6a308903c12395dca2fc4d752f3e36b037250",
+              "source_sha256": "03a283ed94bdc4076aefedfe5288143d77d8f6eeef35a0ea445b91ee2bf62388",
+              "single_results": {
+                "editTag": {
+                  "passed": false,
+                  "test_sha256": "515d1efc6045b86f89914b5b6aa6099a26950141c0e66c7feefa26f49a86aa32",
+                  "source_sha256": "a708c815d6218859580bf3a534a72f40f74d3ac05c144f9899d3408d5cd65c78",
+                  "report_sha256": "4d902fc6283f8446a6a06af14b28fb4680bbf3e81254eeb45a6f511160ccb693",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "blogging",
+          "target": "editTag",
+          "replica": "build-b",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "2dba83f107f13e13417200c69acd0a7fb3d0b2a3786e2e54c6ff1abcc2398077",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "87a7114079bc7085d447ddeb8e460849c88140c2aaf6f7d4978bc2a349a1382a",
+              "source_sha256": "4cdad6e4924c5e3a5859629310df7677b85a894cac4aa6862d2bef57218b7148",
+              "single_results": {
+                "editTag": {
+                  "passed": false,
+                  "test_sha256": "515d1efc6045b86f89914b5b6aa6099a26950141c0e66c7feefa26f49a86aa32",
+                  "source_sha256": "1c7e760be2ae2b80a2c556f93cb3d2903cf7815fd8827b1d4fc00d9fa66aa030",
+                  "report_sha256": "23266445bd2c2045735edf619b3d8ef6840a90d4c82d04bd7dd2fdc601427a90",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "ae1a61ea0c5827947283149b012dc222d30d18269345ed943491655928a4e815",
+              "source_sha256": "2dba83f107f13e13417200c69acd0a7fb3d0b2a3786e2e54c6ff1abcc2398077",
+              "single_results": {
+                "editTag": {
+                  "passed": false,
+                  "test_sha256": "515d1efc6045b86f89914b5b6aa6099a26950141c0e66c7feefa26f49a86aa32",
+                  "source_sha256": "896b1c8a88b74db88b1a0e25d4b2bcc1ff2a08ae108509f60b01377c47adc6f7",
+                  "report_sha256": "9981f3ddd8416f7297a79b4c5d694e0f69da0059d882d86564a1149a03ace972",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "blogging",
+          "target": "postPerformanceReport",
+          "replica": "build-a",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "61c3df278092cb3a374ac845609cb79b4013d7a2bf4afd1768807e913db782b9",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "4cc2efc7a419026d5ea700430ed66e8e1866d0740a1f90af26aa4f6435f413f5",
+              "source_sha256": "d719c6f4ce4b16245e80fed22e1026b7a3f4924239eb108204ed9a7deb0c9c3c",
+              "single_results": {
+                "postPerformanceReport": {
+                  "passed": false,
+                  "test_sha256": "8e85f6a421ce14112f1ef83ddfba7569ba21c3e19b3362eab7c9e9b94c5cb37b",
+                  "source_sha256": "5fbb285e9b6cd7d8c7d78cad369bf86a89cb966b181cbb1e25302757c55f729e",
+                  "report_sha256": "556be1cbd90ee0024d0453c21faf9575e0c5b4ce5c448802bbf8d4e9358cdde9",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "f64a4e222ae4afb6b506f5b518a8c38251956bc641666ec97109ad1be21b1ad2",
+              "source_sha256": "61c3df278092cb3a374ac845609cb79b4013d7a2bf4afd1768807e913db782b9",
+              "single_results": {
+                "postPerformanceReport": {
+                  "passed": false,
+                  "test_sha256": "8e85f6a421ce14112f1ef83ddfba7569ba21c3e19b3362eab7c9e9b94c5cb37b",
+                  "source_sha256": "cf1d52b1226bdbe28721320aa448bd5a116f3994cbca2d87bc9bc9811ea7b548",
+                  "report_sha256": "8d2cccd8ad779ea3bc3a0374be1a7d70ac9886412830ebb0a33509e45e124744",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "blogging",
+          "target": "postPerformanceReport",
+          "replica": "build-b",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "62fc272c670c10d4062422b1ebdd6ad2d97665478ec8a61e45fe42c7dd019c8e",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "651d1a13da8b67b2639e1c2f012bddb7ac4916769ecccf04fe9d105826b122ac",
+              "source_sha256": "7b9622c2f3fbc6b61c58367393f8623a7a723c6f2ebe95492b02f1d4c9c884b2",
+              "single_results": {
+                "postPerformanceReport": {
+                  "passed": false,
+                  "test_sha256": "8e85f6a421ce14112f1ef83ddfba7569ba21c3e19b3362eab7c9e9b94c5cb37b",
+                  "source_sha256": "d35c0ca7f347a38ccefdeadf6a514a6589fe8258fbfc027cf6f17b77deb93d1c",
+                  "report_sha256": "dd835d4f7d8c5b0f7c769f2c32fd4b0232d647bb7738d73a8e8bb001708f8d7c",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "20128cb858e4fdba8448dc74378617da3b794b69640467a5fa56bf9ebf62dd98",
+              "source_sha256": "62fc272c670c10d4062422b1ebdd6ad2d97665478ec8a61e45fe42c7dd019c8e",
+              "single_results": {
+                "postPerformanceReport": {
+                  "passed": false,
+                  "test_sha256": "8e85f6a421ce14112f1ef83ddfba7569ba21c3e19b3362eab7c9e9b94c5cb37b",
+                  "source_sha256": "f30f3f5025ebfc049823eac771c5b1d678bc8be4507b43d9060bd54be946818d",
+                  "report_sha256": "861332569b12e52edf2332c2a749191d97a155353f398319760f60d29e688943",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "addCommentToTask",
+          "replica": "build-a",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "4c065f508ed2e61fe93367dcc7796e5356c50355f1c777d80a8aeec597e6dfa0",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "e295cbf97395c58b7780069407ff3d5830745eeda1a542647728ab9887e95cab",
+              "source_sha256": "a8ecb30c7361666df0aefbd167ae2968261a5c267379f9753b1346cf7ae2b73c",
+              "single_results": {
+                "addCommentToTask": {
+                  "passed": false,
+                  "test_sha256": "d57ab382f6bb6219c8f6516e1f0e28c8e83c6a969da2c5d88b3c20eab855db6b",
+                  "source_sha256": "ab1056a21802530948f4adfc9c043d7a7c915b27f29326800a926455468d7325",
+                  "report_sha256": "335512951fb70e829284952d72861c421823959aa8ffbee26aedd2a304c16cde",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "d4c38a7123eabfe14d3f05c7c28cfa7c0bd45f64918c2006cf296e87f009c4df",
+              "source_sha256": "4c065f508ed2e61fe93367dcc7796e5356c50355f1c777d80a8aeec597e6dfa0",
+              "single_results": {
+                "addCommentToTask": {
+                  "passed": false,
+                  "test_sha256": "d57ab382f6bb6219c8f6516e1f0e28c8e83c6a969da2c5d88b3c20eab855db6b",
+                  "source_sha256": "49691d04666591ee1b5d6e2ba50b8381b5ae400cb0d176f9262aecfaa9cf3216",
+                  "report_sha256": "93f0e1b3b10ecaa2457c74b4d23cddf912ec982e67d36bc80000eae7351604d5",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "addCommentToTask",
+          "replica": "build-b",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "24cc7c233a4959bf60199613c4d61b0e2cf21617e2dd0682a39368dfdfa4f8bb",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "05d9c180029e75cbeb91d1eb64bb8ace19817f50ee571b7e6afb54c7876b2f81",
+              "source_sha256": "1a63ecc232dd33cec22d5265eae9e9d807691a8ec5e6f74f99698e109eca56af",
+              "single_results": {
+                "addCommentToTask": {
+                  "passed": false,
+                  "test_sha256": "d57ab382f6bb6219c8f6516e1f0e28c8e83c6a969da2c5d88b3c20eab855db6b",
+                  "source_sha256": "338b56ab1f2ce52aeb4a6561b4e0ebe68c1e0f13be86512640232506eca9f05f",
+                  "report_sha256": "9d4611498d68448405015ec1eb58242cebd231c86db970f375d873566f08c2d5",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "279ff92222c414241cbb9c56d10f07b3ea50503dafe289d63a2fe25e27b24032",
+              "source_sha256": "24cc7c233a4959bf60199613c4d61b0e2cf21617e2dd0682a39368dfdfa4f8bb",
+              "single_results": {
+                "addCommentToTask": {
+                  "passed": false,
+                  "test_sha256": "d57ab382f6bb6219c8f6516e1f0e28c8e83c6a969da2c5d88b3c20eab855db6b",
+                  "source_sha256": "9a357166e58c497b3f6cae0aa74f4cc469750e4fe9dbe3a40148955dc7eb98d9",
+                  "report_sha256": "48b2763eaee59c8e40f99b48e01e6cca2f7aba2c25929ec695d537fa9863aa8e",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "approveOrRejectTaskReview",
+          "replica": "build-a",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "4362f2165b21835df6cebc1eb639c1bf2dc1247ee60007ac27af98e6879457fe",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "34dc2e61b69c586371fa863d31e2bbde60ff42edd27d18f8c6e1fce9945fd7b9",
+              "source_sha256": "8bc1f2f44176f7e18f9135f024e4a21b74beae9c5c695a8b3128dd08bf2a9b30",
+              "single_results": {
+                "approveOrRejectTaskReview": {
+                  "passed": false,
+                  "test_sha256": "58471f1aa537ed65b00712248ce1623b3f3d44b441a9153a299c7dbfa58ec6e5",
+                  "source_sha256": "7a929a64debff775d5aaa8c8f9a5e760bb275b894ccefef1bc8da4a3dbd14c5b",
+                  "report_sha256": "f51a5397772d469d091e8fef918693e5875fb68fb2c5a38fd922e8b6f02e897d",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "ff8f519d0d62b1af5ba596fc3bfc749b66e8dcb2c4aba5a8f7e081d52e776d29",
+              "source_sha256": "4362f2165b21835df6cebc1eb639c1bf2dc1247ee60007ac27af98e6879457fe",
+              "single_results": {
+                "approveOrRejectTaskReview": {
+                  "passed": false,
+                  "test_sha256": "58471f1aa537ed65b00712248ce1623b3f3d44b441a9153a299c7dbfa58ec6e5",
+                  "source_sha256": "5bd0b78ee75c09cc3266b00f0d98019b4de415eede6bb1fd668141c9a074c9fc",
+                  "report_sha256": "2edd2c82e2f297eb6b940b75a5cf7e1aab30df7424a60ba815d920a2554a075f",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "approveOrRejectTaskReview",
+          "replica": "build-b",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "316234c7742ebede7d269d1c6ed4aa51af4a48734ca705f54818ae864276dec8",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "d45aaaeef1559772eae4e019f48214e2c58d796cfb928067d9cb9e3277df868a",
+              "source_sha256": "2fc5f50793064e8689e7273625f1585a552f9e89c2b5de9ebb8e0334f548831f",
+              "single_results": {
+                "approveOrRejectTaskReview": {
+                  "passed": false,
+                  "test_sha256": "58471f1aa537ed65b00712248ce1623b3f3d44b441a9153a299c7dbfa58ec6e5",
+                  "source_sha256": "962a11d1ad869006367a4817847abd11316da1b161f8a1cd613deb65f4756fd0",
+                  "report_sha256": "cff5bd7a49e56cd1de5984e5267740e0c4edd36ea99f95a57585fd587e76b7aa",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "4d84331ca55d8a722bbccf8ef3a8aa257a8ee9cd42b958fc4ad53da810577774",
+              "source_sha256": "316234c7742ebede7d269d1c6ed4aa51af4a48734ca705f54818ae864276dec8",
+              "single_results": {
+                "approveOrRejectTaskReview": {
+                  "passed": false,
+                  "test_sha256": "58471f1aa537ed65b00712248ce1623b3f3d44b441a9153a299c7dbfa58ec6e5",
+                  "source_sha256": "e02328e6e4359cd0686da48cf0110e403275989b85c980eefde83f222ceb15f1",
+                  "report_sha256": "e513e480fc4444c3f2ee761ca022aae19985a30f485a7eda36fb3301916f4bd6",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "assignTaskToProject",
+          "replica": "build-a",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "8a6cae1df44232a50e1d13565aa0e0813bd87cb0970fad2ba37115c07cd351be",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "057c9176a87311239c29bad88fd7bcdbb56cd19f3eba54c0738319ac0cccea62",
+              "source_sha256": "ec3412d73aeed7fe6a2b9fe988d36b5da1fe89f8b993c2c16a93b28ee5ec49af",
+              "single_results": {
+                "assignTaskToProject": {
+                  "passed": false,
+                  "test_sha256": "e24aa6e9dd5d0bef1ec598bebc375528c88fa95b044bf42a402b70b1130b5c5a",
+                  "source_sha256": "8707baf38b9ecdf1b496a51319e35e589a96ddfe7d400648063cd801d6535f45",
+                  "report_sha256": "96d6d10725c2b4ccd3a1fdb26a5a9a6124afbad0f8554868d0b8db095aa3d62a",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "5b740d0c51ea504613d48983cee8cef80b00046ab8c46f1bb914874ba9bc8044",
+              "source_sha256": "8a6cae1df44232a50e1d13565aa0e0813bd87cb0970fad2ba37115c07cd351be",
+              "single_results": {
+                "assignTaskToProject": {
+                  "passed": false,
+                  "test_sha256": "e24aa6e9dd5d0bef1ec598bebc375528c88fa95b044bf42a402b70b1130b5c5a",
+                  "source_sha256": "212510cb6c75cb99065d9ea20deea16e2052651b68303dc33adc9fd81a1efd7d",
+                  "report_sha256": "72a64c594562a8f74d33c8c8ffec05cc857901b7c040804f9ebee8c65cc75961",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "assignTaskToProject",
+          "replica": "build-b",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "429e5590ef32b544d09e51ce1bc5310c7875a88b2544f334aa03c880569cf666",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "134bc0b063b5561c93e54cecebacccfcbc7f83a04254e5805d2bd96561785329",
+              "source_sha256": "b4c1b1487ad20dd78002be4300fe540c4bdeec1f1a23c87fa1b4d3a00447d281",
+              "single_results": {
+                "assignTaskToProject": {
+                  "passed": false,
+                  "test_sha256": "e24aa6e9dd5d0bef1ec598bebc375528c88fa95b044bf42a402b70b1130b5c5a",
+                  "source_sha256": "ad0b59f3a9f7bdb2e1e7f067adfbed759586808869af9b4d746f0204c7fb3a9d",
+                  "report_sha256": "8e1ce98348c0b80ee7822ae29bb1282ee96b57ad9c416069d8b01a629c7561c5",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "7495adf3993699986186eec3460d265bfd19002d342a388d23275830a2ce2996",
+              "source_sha256": "429e5590ef32b544d09e51ce1bc5310c7875a88b2544f334aa03c880569cf666",
+              "single_results": {
+                "assignTaskToProject": {
+                  "passed": false,
+                  "test_sha256": "e24aa6e9dd5d0bef1ec598bebc375528c88fa95b044bf42a402b70b1130b5c5a",
+                  "source_sha256": "7ab8a3b55c08babdf4a556362c037fa3bdbff5393d9f7fa7b7aafac9d532b9ee",
+                  "report_sha256": "1aab13ca7a7dc180bfe88ebab6f10ab10fe1d0c43bf83c6ba3094298b9f3d060",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "assignTaskToUser",
+          "replica": "build-a",
+          "status": "valid",
+          "use": "first",
+          "source_sha256": "cb45bc346f972b88f6fe0f259cb1d8c4a73a2719f03288a0de1c6151a7411cb8",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "e93bdc53c1ee4b76d3299d6a5e953ac2d514b07b4c6befe5828701538a7ab317",
+              "source_sha256": "cb45bc346f972b88f6fe0f259cb1d8c4a73a2719f03288a0de1c6151a7411cb8",
+              "single_results": {
+                "assignTaskToUser": {
+                  "passed": true,
+                  "test_sha256": "14072e74b661393446ffb4202b0947d0cc9e42636d947fcd4dc902ce5401504d",
+                  "source_sha256": "423d53531cd5410c3b540b1f75cb64c623be6df1fba17d42ad1f9cede64c2575",
+                  "report_sha256": "64a9d4ba35c05cd28948e13e5fa99afe610031a4dcbb36adcafd5693e1a4710c",
+                  "cases_passed": 2,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "assignTaskToUser",
+          "replica": "build-b",
+          "status": "valid",
+          "use": "first",
+          "source_sha256": "53e4b82726b2c73cd1743641d4fa42ac6c2aeafe91cdc0ff7eb8bad792857034",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "57bbcffe92444fda59ee551ba7683c716c069363438e0fe1bf1021c0fc7fa12b",
+              "source_sha256": "53e4b82726b2c73cd1743641d4fa42ac6c2aeafe91cdc0ff7eb8bad792857034",
+              "single_results": {
+                "assignTaskToUser": {
+                  "passed": false,
+                  "test_sha256": "14072e74b661393446ffb4202b0947d0cc9e42636d947fcd4dc902ce5401504d",
+                  "source_sha256": "398b8cd3a7667430d3cf6dc62f2911ec909390bc7d5406e80b19fb65a6f9bb2f",
+                  "report_sha256": "17c57587860c8e5c73efecf966315f003c1205d381daf005e26c5d16b2945df7",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "d558d13f1a854ab9452dded51b6135fa77eac4fa05e0f81a8fe9671000b91316",
+              "single_results": {}
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "compareTime",
+          "replica": "build-a",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "4e63810dd8a069f6080b3063ee5e06d90314719399011c54eb629c4c569526f2",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "58b712f31c3b144762918993a37e39c068c74b8b304fe278f0c3bf9e71376f66",
+              "source_sha256": "6bfbaa5725adaf4090e96ef5fd9e1de128e013935cfdd5737ee47c80072e8d32",
+              "single_results": {
+                "compareTime": {
+                  "passed": false,
+                  "test_sha256": "6dc25359c6214e6ec2fce3aa7ee1190eaa96d51ecb3659bcdbba05b32de93e3b",
+                  "source_sha256": "ab2c78be94275be1458d4562463a341ef671ae4710eac596535ca25be32649d0",
+                  "report_sha256": "2588a9fbeead20677ab7102620c968a77aeec4836065494ec7f86a2f2c42134c",
+                  "cases_passed": 1,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "a9f4d7e3a2619f18a4c27b38289830da361c68fd0779a0a39f43a5fe27dcc50c",
+              "source_sha256": "4e63810dd8a069f6080b3063ee5e06d90314719399011c54eb629c4c569526f2",
+              "single_results": {
+                "compareTime": {
+                  "passed": false,
+                  "test_sha256": "6dc25359c6214e6ec2fce3aa7ee1190eaa96d51ecb3659bcdbba05b32de93e3b",
+                  "source_sha256": "827341be2808992e6bd6b9a9632d6d3d556e4b9f527e41b1798b66cc05331fe7",
+                  "report_sha256": "153091b9c161993107c712091cb805bbd895688d97550efd563ab8acb77fa46f",
+                  "cases_passed": 1,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "compareTime",
+          "replica": "build-b",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "be49b2aadb90aca1896f34194c2cc167cc2b85be08cb3737f7e68521f88bf46c",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "9a7e6f390143b1bf80f5754b507f3c4ee79fa6905ddac1f7bc18c0eec6424690",
+              "source_sha256": "603bff65926a0d921efb7497b56e51a045d3b34fff1d588f1c11a21a4600ddd5",
+              "single_results": {
+                "compareTime": {
+                  "passed": false,
+                  "test_sha256": "6dc25359c6214e6ec2fce3aa7ee1190eaa96d51ecb3659bcdbba05b32de93e3b",
+                  "source_sha256": "e208b4561ef8a65024a375bc3a4d2e3682f3389f83e6f908026722fd8ca9fe42",
+                  "report_sha256": "78f7d480067b19ef3e0cb5a03b88b862268ff4beb4d3d3e22f3e0a6fda68b6f7",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "ba506b3d614c8c30a79f98cc5d6e276704a8942264160ec39bfa94d8375f1b90",
+              "source_sha256": "be49b2aadb90aca1896f34194c2cc167cc2b85be08cb3737f7e68521f88bf46c",
+              "single_results": {
+                "compareTime": {
+                  "passed": false,
+                  "test_sha256": "6dc25359c6214e6ec2fce3aa7ee1190eaa96d51ecb3659bcdbba05b32de93e3b",
+                  "source_sha256": "4096a578469d1751472abd9929a67d6c436329f1fed054e60fdffa97df233d14",
+                  "report_sha256": "349161bb3820c6d5cad5432b8bd878767b647fd7ce364715cbad89dcf26c3e96",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "projectCustomWorkflows",
+          "replica": "build-a",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "a82be58397fd54039aff1926b9cda483e2db4e3c25906fc60c68885bf8a06be6",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "53b23e4d8710d79347e14daf0a8c1c7e8a4b94e44c718f3934adc6e286910a82",
+              "source_sha256": "a0cf40854bf3d2be6818e9879fd648730891d0544a099b330395d8c201381abb",
+              "single_results": {
+                "projectCustomWorkflows": {
+                  "passed": false,
+                  "test_sha256": "47262a7c7cc99d42995dc41e4a849a3579df395a4c54af5ffb793999999236ea",
+                  "source_sha256": "42b2125d144c8b64a917eb6e105e387aea292a9a013bd6532527a8ed577018b1",
+                  "report_sha256": "caa6e2320d53671fed7e8e1733248822e1398d8f826e83614f8a744fb1c9e04c",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "dd5c14d2b7678a73c59ff8ea73b422a6da5a3f79828f2bba35557bc94796e79e",
+              "source_sha256": "a82be58397fd54039aff1926b9cda483e2db4e3c25906fc60c68885bf8a06be6",
+              "single_results": {
+                "projectCustomWorkflows": {
+                  "passed": false,
+                  "test_sha256": "47262a7c7cc99d42995dc41e4a849a3579df395a4c54af5ffb793999999236ea",
+                  "source_sha256": "ef658d0d2506bed45f4317d9818674367ef6022afaab65194708b57e894ab6cc",
+                  "report_sha256": "0c6d5626bf60c2e7cb8acba20776781845fd83c2ccfdf27e061bb06e82cce369",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "projectCustomWorkflows",
+          "replica": "build-b",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "750e0bdc8399d4149e4bea1d4cc91ff038fbb05e41d25ccfd3b9851d3cf5bff3",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "82239697e5906b90b044da56ddb11f93d77f1c40888b1cf3d77712775491a371",
+              "source_sha256": "8e15136cad04e2544ef3c9046d915cef3aa99ee9f4a21f213a2880ab09b35921",
+              "single_results": {
+                "projectCustomWorkflows": {
+                  "passed": false,
+                  "test_sha256": "47262a7c7cc99d42995dc41e4a849a3579df395a4c54af5ffb793999999236ea",
+                  "source_sha256": "1ce80398d3ac46ae206cc0d07112b852bded31809b6e5966bde31d0f85cf6304",
+                  "report_sha256": "cf5fa8d64540524351ef0683330284c9306008203ad992aea86407ab8b954134",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "28bc5a9fe6f9a6f12285dcc0d4228e5ff025316fbe4bcd1291bce308abc4f1b7",
+              "source_sha256": "750e0bdc8399d4149e4bea1d4cc91ff038fbb05e41d25ccfd3b9851d3cf5bff3",
+              "single_results": {
+                "projectCustomWorkflows": {
+                  "passed": false,
+                  "test_sha256": "47262a7c7cc99d42995dc41e4a849a3579df395a4c54af5ffb793999999236ea",
+                  "source_sha256": "77fabce907b4b7fcfe2df2b477a33127fe6617ccbc28b870402690428fda7178",
+                  "report_sha256": "fd3c349f4b94fa000d69fd125ade7ef4d2d22524c3b6843fed3a51e52d8d27d5",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "setTaskDeadline",
+          "replica": "build-a",
+          "status": "invalid",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "509841d67a038a9a0e5ac8b32f3fcb4fb6130281e20b3fb3b3652b9f0397fe48",
+              "single_results": {}
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "7bcde8b888ee962173594b4d0a98ac42dec664417c10c15bac28c12778e4ab61",
+              "single_results": {}
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "setTaskDeadline",
+          "replica": "build-b",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "1b733cbd908cbf9971d66f3a4a55878cf5abff188d02efad8b129316fa0e682d",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "78213314b0a585d48e9ad8536bf1a9bbdb6a9e5017a411d2b5ee7584021617d5",
+              "source_sha256": "44106246c36c1eb417150151af4641b7de851f38675cf4a35444972487fede9c",
+              "single_results": {
+                "setTaskDeadline": {
+                  "passed": false,
+                  "test_sha256": "479b53f5249ff4da31f84f59a5b827e25cc33cefadedc239f58503b820329a78",
+                  "source_sha256": "cae74923bbe0f5fd2f32751f921cd8cf4a4c27784332add8e5fbbe1d9ce595cc",
+                  "report_sha256": "71767da12768488a12b83fc85305b881f99065621e0bac53956bb01fc162af25",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "15165ca6dac30a2087d84033dc885c32ac881b4da35af665c864da00526a361d",
+              "source_sha256": "1b733cbd908cbf9971d66f3a4a55878cf5abff188d02efad8b129316fa0e682d",
+              "single_results": {
+                "setTaskDeadline": {
+                  "passed": false,
+                  "test_sha256": "479b53f5249ff4da31f84f59a5b827e25cc33cefadedc239f58503b820329a78",
+                  "source_sha256": "b6eeeb985fd3578ed7c0023fbb424c4940908754ebf1900cf07c552769438b62",
+                  "report_sha256": "d7d176769963ef7ac2b12de9f8a9a6cf336136a82446daae2ce9da1565d53f60",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "setTaskPriority",
+          "replica": "build-a",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "5e0e6cae4d9982af9c0d48b8c9de0678d1f225aa9cc914db3f9c9a57ffa1f66e",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "5ca5eb3163c678ac1455bbfadfd0441d979574e5693acdbce89b2d4e919daf3b",
+              "source_sha256": "33cf5dc9562d13ece86a2468f60e48ab34f02c46adaa86c27d510925b8d6ff43",
+              "single_results": {
+                "setTaskPriority": {
+                  "passed": false,
+                  "test_sha256": "036ec3a87407b8571b9883d1190654509a70b33396a1642b7ed8a9322a5a0722",
+                  "source_sha256": "f3be37559aa6d701476e13d5006f0354032374e0211d664499ca1287cf2cf4c9",
+                  "report_sha256": "e1e93f25b966451d175b1a85826b2f5058c2dd2c969043f1b9a9596d32a014ab",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "6e740460346802d9c3f1307b45a5cc650e6da240c9f2833de9f993c1d04afdb2",
+              "source_sha256": "5e0e6cae4d9982af9c0d48b8c9de0678d1f225aa9cc914db3f9c9a57ffa1f66e",
+              "single_results": {
+                "setTaskPriority": {
+                  "passed": false,
+                  "test_sha256": "036ec3a87407b8571b9883d1190654509a70b33396a1642b7ed8a9322a5a0722",
+                  "source_sha256": "7217bc456d1ca3e2e87e417871491dafbde94b62a852ce56cdcf64f2e6ec99a4",
+                  "report_sha256": "92b4cd93e3b586e5ad9952b87a69bd689930bcd1a47d064ebec20ee34a1a81b7",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "model": "qwen/qwen3.5-9b",
+          "group": "taskmanagement",
+          "target": "setTaskPriority",
+          "replica": "build-b",
+          "status": "valid",
+          "use": "repair",
+          "source_sha256": "834897d7ed080fced18e88fa0ef6e79dede6e11dc64a8073f447c029adaa6f5f",
+          "attempts": {
+            "first": {
+              "status": "returned",
+              "response_sha256": "b9da1d45674456022029b64f7662306fcf10865065872b4582af8418ebd009fd",
+              "source_sha256": "8a89a653a3838abe70f64968710a42e33e7963f7bad26bef135cf2aafdd4f50f",
+              "single_results": {
+                "setTaskPriority": {
+                  "passed": false,
+                  "test_sha256": "036ec3a87407b8571b9883d1190654509a70b33396a1642b7ed8a9322a5a0722",
+                  "source_sha256": "b06ec51cd3a751120c974c7511ed05b1f133c317e9062af8c47f3a43ee8c39ac",
+                  "report_sha256": "94936481a01f5c2f34eb6710ba7f883f76f336300f532649afe78fd4b556e4de",
+                  "cases_passed": 0,
+                  "public_cases": 2
+                }
+              }
+            },
+            "repair": {
+              "status": "returned",
+              "response_sha256": "4394a3fbda23e68269facd9e3686821292e7f519245b166db2479361a501ffe8",
+              "source_sha256": "834897d7ed080fced18e88fa0ef6e79dede6e11dc64a8073f447c029adaa6f5f",
+              "single_results": {
+                "setTaskPriority": {
+                  "passed": false,
+                  "test_sha256": "036ec3a87407b8571b9883d1190654509a70b33396a1642b7ed8a9322a5a0722",
+                  "source_sha256": "ae2d64cd1cd1eb130a205051ea380cafa1c6e47c386ddb9d720fe7fc6725bd33",
+                  "report_sha256": "da3c97b122194e179d7587b160b071def5a59144454f90e94649a78042d2c0dc",
+                  "cases_passed": 1,
+                  "public_cases": 2
+                }
+              }
+            }
+          }
+        }
+      ],
+      "single_preparation": {
+        "direct": {
+          "first": {
+            "valid": 7,
+            "all_public_single_cases_passed": 0,
+            "passed_ids": []
+          },
+          "final": {
+            "valid": 7,
+            "all_public_single_cases_passed": 0,
+            "passed_ids": []
+          },
+          "total": 10,
+          "repair_requests": 10,
+          "final_status": {
+            "valid": 7,
+            "invalid": 3
+          }
+        },
+        "build-a": {
+          "first": {
+            "valid": 14,
+            "all_public_single_cases_passed": 2,
+            "passed_ids": [
+              "addCanonicalUrl",
+              "assignTaskToUser"
+            ]
+          },
+          "final": {
+            "valid": 14,
+            "all_public_single_cases_passed": 2,
+            "passed_ids": [
+              "addCanonicalUrl",
+              "assignTaskToUser"
+            ]
+          },
+          "total": 15,
+          "repair_requests": 13,
+          "final_status": {
+            "valid": 14,
+            "invalid": 1
+          }
+        },
+        "build-b": {
+          "first": {
+            "valid": 15,
+            "all_public_single_cases_passed": 1,
+            "passed_ids": [
+              "addCanonicalUrl"
+            ]
+          },
+          "final": {
+            "valid": 15,
+            "all_public_single_cases_passed": 1,
+            "passed_ids": [
+              "addCanonicalUrl"
+            ]
+          },
+          "total": 15,
+          "repair_requests": 14,
+          "final_status": {
+            "valid": 15
+          }
+        }
+      },
+      "repeats": {
+        "build-a": {
+          "rows": [
+            {
+              "task": "addAltTextToImage_postPerformanceReport",
+              "group": "blogging",
+              "plan_delivery": {
+                "status": "returned",
+                "response_sha256": "17778ce10bd80b230d9b3f1f041edfc57a113fa2761f0bfdae72dc9b07741799"
+              },
+              "arms": {
+                "direct_first": {
+                  "status": "valid",
+                  "source_sha256": "c4653c932375928af424796dc13d94fb049be637e16bb64b6af8322c66a34eba",
+                  "files_digest": "b2e27173be0e95dcfe2bc76ef9f9b05914f7d21d6280d4d4e7c41e727415321f",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "d37c6f1862a00117e4ad5e15927da927f8eb63b8644bff759931c0dc409f9c35"
+                },
+                "direct_repaired": {
+                  "status": "valid",
+                  "source_sha256": "8719e4154fdc4cba15b2bceee7968dc9246b3f0b72650fb941fc26f295d8e11f",
+                  "files_digest": "54a8b1c35a43395aa18dc390825bcf55dd5b68342b5df0ce7ddd3a036e92f463",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "223225c8d0c0d76d43aa2dcc2a0a92d05f8ab2ffc44724bf4ed1a963889d2677"
+                },
+                "self": {
+                  "plan": {
+                    "first": "addAltTextToImage",
+                    "second": "postPerformanceReport"
+                  },
+                  "status": "valid",
+                  "files_sha256": "f334c696ae2062a62628b965917c152143d9d5a37dfaaaf808e5ca4835ba5cd5",
+                  "files_digest": "4b486f926ed98ca73e290dcfd7de4bd5fffb09699ab93b4ebd11a488071c689a",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "d945c9b4dd041776d2f470f989c7cc3917f48fd8c9c1fb06820c964f39771df2"
+                },
+                "by_name": {
+                  "plan": {
+                    "first": "addAltTextToImage",
+                    "second": "postPerformanceReport"
+                  },
+                  "status": "valid",
+                  "files_sha256": "f334c696ae2062a62628b965917c152143d9d5a37dfaaaf808e5ca4835ba5cd5",
+                  "files_digest": "4b486f926ed98ca73e290dcfd7de4bd5fffb09699ab93b4ebd11a488071c689a",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "d945c9b4dd041776d2f470f989c7cc3917f48fd8c9c1fb06820c964f39771df2"
+                },
+                "fixed": {
+                  "plan": {
+                    "first": "addAltTextToImage",
+                    "second": "addCanonicalUrl"
+                  },
+                  "status": "valid",
+                  "files_sha256": "39c07023972df9b0dd655024951416f9fef5e92964946bdb3a4c6d6ed2a46f5d",
+                  "files_digest": "736a9f0e83f6de12cab38b776993f24f7ded9252cb3cfda1db11199273a6d41a",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "9a42767383321d05e57adc8fab3f81540f08e423f121bde5727ec52740fa8bcc"
+                }
+              }
+            },
+            {
+              "task": "addCanonicalUrl_addComment",
+              "group": "blogging",
+              "plan_delivery": {
+                "status": "returned",
+                "response_sha256": "1aaf476a2f4e492c92667856b84c2235b707629dfb786c2b82bb101fecde8462"
+              },
+              "arms": {
+                "direct_first": {
+                  "status": "valid",
+                  "source_sha256": "6958ffa6177d8849ba470ab35fe68fb4472ca07ec28c70abca7cf591b77c1e6f",
+                  "files_digest": "01925b128d4d51f97bd2356915c43042553ec627383108f1d876494d7c375533",
+                  "passed": false,
+                  "official_cases_passed": 1,
+                  "report_sha256": "b7744457d9dca3389b7b327eb404676e958ec755b9e7f53162cdde327676f515"
+                },
+                "direct_repaired": {
+                  "status": "valid",
+                  "source_sha256": "2c5dc231bd278d516665d5e3c848b2b5cf8d5d83cabadba625b90f027f01d284",
+                  "files_digest": "47496a573f04626e309398016c28d1af63256737488c920c53447d4863d1d0ec",
+                  "passed": false,
+                  "official_cases_passed": 1,
+                  "report_sha256": "a7079831d1d956a9740011cfdead733601880d2658232a6634a9a083e1354c31"
+                },
+                "self": {
+                  "plan": {
+                    "first": "addCanonicalUrl",
+                    "second": "addComment"
+                  },
+                  "status": "valid",
+                  "files_sha256": "76cfa2b5638e81689f69cf95741032d607e173e5a17c7bdf1e83afe2844c432f",
+                  "files_digest": "fd405dfdb9cc539e13a5a417854a51331efb4437f90962a9c903213ba9d85804",
+                  "passed": false,
+                  "official_cases_passed": 2,
+                  "report_sha256": "9e65d6823ade030def544dab363bf4b1d5a8abe8177701fb7e794c8811ef197e"
+                },
+                "by_name": {
+                  "plan": {
+                    "first": "addCanonicalUrl",
+                    "second": "addComment"
+                  },
+                  "status": "valid",
+                  "files_sha256": "76cfa2b5638e81689f69cf95741032d607e173e5a17c7bdf1e83afe2844c432f",
+                  "files_digest": "fd405dfdb9cc539e13a5a417854a51331efb4437f90962a9c903213ba9d85804",
+                  "passed": false,
+                  "official_cases_passed": 2,
+                  "report_sha256": "9e65d6823ade030def544dab363bf4b1d5a8abe8177701fb7e794c8811ef197e"
+                },
+                "fixed": {
+                  "plan": {
+                    "first": "addAltTextToImage",
+                    "second": "addCanonicalUrl"
+                  },
+                  "status": "valid",
+                  "files_sha256": "c3d3b7eebde7ff0d29a59aaa45998a1801284c8d8d8cab74e46c52fa1e084b4f",
+                  "files_digest": "50bded49cd3230a13c12347343a16cec090d985c8d2de43756158e3e7c715a6d",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "4cc15283a34b6492ebeb2a329caa90bffc7d1833c26eb89b1923218dbfd280c5"
+                }
+              }
+            },
+            {
+              "task": "addCanonicalUrl_assignPostToCategory",
+              "group": "blogging",
+              "plan_delivery": {
+                "status": "returned",
+                "response_sha256": "452a0100050736903bf120cccf9e4c2972e222a721e055f47ff6582b90a77f40"
+              },
+              "arms": {
+                "direct_first": {
+                  "status": "valid",
+                  "source_sha256": "e66448fe1bfaf06ba9d6bfd7e8013794bb4f7ef64c5e3a56ea787e4819d9ee2b",
+                  "files_digest": "9ba3b38301e0a4f9eae4a588c3c0506e3958baf7a688c1a252f199631629a155",
+                  "passed": false,
+                  "official_cases_passed": 1,
+                  "report_sha256": "cb67b0a402abe5a73e9ed97e30a008f526dd7209c563a3cbad914a1e5853e3b6"
+                },
+                "direct_repaired": {
+                  "status": "valid",
+                  "source_sha256": "9e40d8bdf1511c70e8576edb9cc69359aa9d43831a3ca7ea6f47e1141bd526c8",
+                  "files_digest": "335931a0e5698c12e62b757871e994432f18fd8636059df0bbeb6d111c972980",
+                  "passed": false,
+                  "official_cases_passed": 1,
+                  "report_sha256": "668445bcf30499e157f5565a81a22f06f6f65122e41fd9040b33138110c624f7"
+                },
+                "self": {
+                  "plan": {
+                    "first": "addCanonicalUrl",
+                    "second": "assignPostToCategory"
+                  },
+                  "status": "valid",
+                  "files_sha256": "c2c440d24f13d4645666b09ba85c04b948a4fe19254e892a96975f33bf13e543",
+                  "files_digest": "c8b9a6d82ed6a115ee58a29c8ee957f32f1970c051595850a6eb7d257537e175",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "bf5d2e2434a5d76da537b4e2ca018354a7e815cc86e52129cba7caeddca1a319"
+                },
+                "by_name": {
+                  "plan": {
+                    "first": "addCanonicalUrl",
+                    "second": "assignPostToCategory"
+                  },
+                  "status": "valid",
+                  "files_sha256": "c2c440d24f13d4645666b09ba85c04b948a4fe19254e892a96975f33bf13e543",
+                  "files_digest": "c8b9a6d82ed6a115ee58a29c8ee957f32f1970c051595850a6eb7d257537e175",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "bf5d2e2434a5d76da537b4e2ca018354a7e815cc86e52129cba7caeddca1a319"
+                },
+                "fixed": {
+                  "plan": {
+                    "first": "addAltTextToImage",
+                    "second": "addCanonicalUrl"
+                  },
+                  "status": "valid",
+                  "files_sha256": "55546e731cd2c4899a0dc7c976c9e86c1707373909b30e11fe8692a218d51180",
+                  "files_digest": "0fa1c720f0ddbc8c93ce236c2307e7e75fc6c724fa90e6ae393a7897bbcdb3d6",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "f07a86c4c74cc82d91e807cf10b485707299d07ca0620a832eba9e2d3e6bf810"
+                }
+              }
+            },
+            {
+              "task": "addCanonicalUrl_editComment",
+              "group": "blogging",
+              "plan_delivery": {
+                "status": "returned",
+                "response_sha256": "e5d7c86737eac14521665d0230ced04a92b771ed61488f1f0effc480d4c6e9ae"
+              },
+              "arms": {
+                "direct_first": {
+                  "status": "invalid",
+                  "passed": false
+                },
+                "direct_repaired": {
+                  "status": "invalid",
+                  "passed": false
+                },
+                "self": {
+                  "plan": {
+                    "first": "addCanonicalUrl",
+                    "second": "editComment"
+                  },
+                  "status": "valid",
+                  "files_sha256": "8eee3272c78f335ecf6c7e2bd39c61b779fdb926128f635ef7dc195d926abb18",
+                  "files_digest": "a79e44ba3d2dfc451f9f754a21408e29fc62d6ee4c18c55eb18c60d18cc7c2b5",
+                  "passed": false,
+                  "official_cases_passed": 2,
+                  "report_sha256": "606153cc8005a3296b544580dfb1cf3dad95ea39d0da66d04309e3f5bfc6b3f3"
+                },
+                "by_name": {
+                  "plan": {
+                    "first": "addCanonicalUrl",
+                    "second": "editComment"
+                  },
+                  "status": "valid",
+                  "files_sha256": "8eee3272c78f335ecf6c7e2bd39c61b779fdb926128f635ef7dc195d926abb18",
+                  "files_digest": "a79e44ba3d2dfc451f9f754a21408e29fc62d6ee4c18c55eb18c60d18cc7c2b5",
+                  "passed": false,
+                  "official_cases_passed": 2,
+                  "report_sha256": "606153cc8005a3296b544580dfb1cf3dad95ea39d0da66d04309e3f5bfc6b3f3"
+                },
+                "fixed": {
+                  "plan": {
+                    "first": "addAltTextToImage",
+                    "second": "addCanonicalUrl"
+                  },
+                  "status": "valid",
+                  "files_sha256": "9188eee9103cae40b7148a7f2116321622a38ff663e8896bcb629171e1ca7630",
+                  "files_digest": "651ee176e15b1b6a1a48aa07b069bea4b28c10e8cb608f851f395dec8de8b775",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "cae9cd2f66fc8001b6a581a882d1a8b1b1f2db4b54b35fd5ecd9bf11bacfcf78"
+                }
+              }
+            },
+            {
+              "task": "addCanonicalUrl_editTag",
+              "group": "blogging",
+              "plan_delivery": {
+                "status": "returned",
+                "response_sha256": "5a82796675a9b3fbd43a3cd3c59dceb607ba5c9009bd34744f167c3adb3946cf"
+              },
+              "arms": {
+                "direct_first": {
+                  "status": "valid",
+                  "source_sha256": "c9debde43607302f6f33f9b5c74d4dadc4ea510acb0bbcc1d3cb2b2fc2f4fbff",
+                  "files_digest": "8382653f97f1bb34937375ad730e45309876153568f33998e280efe7e3a4b722",
+                  "passed": false,
+                  "official_cases_passed": 1,
+                  "report_sha256": "51af137b62d51cf489d7ac47a59afadd4b97636ec7a497cbaf45ce16604e7ad7"
+                },
+                "direct_repaired": {
+                  "status": "valid",
+                  "source_sha256": "38afd10681be625405f01b733ea627624fc9c5b602f1861b88cba7330b234f59",
+                  "files_digest": "e56df61c6757755a42a7cc3c89b146fc015fe7191daebd4c34babb45382a96e9",
+                  "passed": false,
+                  "official_cases_passed": 2,
+                  "report_sha256": "1e69de82ff900946e7a08870e11070cf194f1cc43c3834bc2b4c3abaf2014eac"
+                },
+                "self": {
+                  "plan": {
+                    "first": "addCanonicalUrl",
+                    "second": "editTag"
+                  },
+                  "status": "valid",
+                  "files_sha256": "a48235df46fc3b2f0341dadffba4e3592dcd94c1187df0689c9a4e11b62d2e99",
+                  "files_digest": "c8c5b4f1abbd56607c4b2d16d407f01c1fea7518c7d46fd846ea14e4f988f946",
+                  "passed": false,
+                  "official_cases_passed": 2,
+                  "report_sha256": "54db3df65d627395d5b5d30ae92746a024ac4971b67f790cc133b6d414931dc7"
+                },
+                "by_name": {
+                  "plan": {
+                    "first": "addCanonicalUrl",
+                    "second": "editTag"
+                  },
+                  "status": "valid",
+                  "files_sha256": "a48235df46fc3b2f0341dadffba4e3592dcd94c1187df0689c9a4e11b62d2e99",
+                  "files_digest": "c8c5b4f1abbd56607c4b2d16d407f01c1fea7518c7d46fd846ea14e4f988f946",
+                  "passed": false,
+                  "official_cases_passed": 2,
+                  "report_sha256": "54db3df65d627395d5b5d30ae92746a024ac4971b67f790cc133b6d414931dc7"
+                },
+                "fixed": {
+                  "plan": {
+                    "first": "addAltTextToImage",
+                    "second": "addCanonicalUrl"
+                  },
+                  "status": "valid",
+                  "files_sha256": "0396f3ad1c6c49d379c6f1e71960ef2e7b81e84be48b3670ecf6c528fecf9704",
+                  "files_digest": "abdd359e88caa91272ea2e482fc1dc8af6fbf4311a87bd4a2357f511b2c6b8f6",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "02952394804548965f286da2214e21d5426e443309a527c95fd68a9166f8310d"
+                }
+              }
+            },
+            {
+              "task": "addCommentToTask_setTaskDeadline",
+              "group": "taskmanagement",
+              "plan_delivery": {
+                "status": "returned",
+                "response_sha256": "2135fdc9c20a0a8499adf409c49beaa97d0b164ea90fd42956b7c369c72b3f34"
+              },
+              "arms": {
+                "direct_first": {
+                  "status": "invalid",
+                  "passed": false
+                },
+                "direct_repaired": {
+                  "status": "invalid",
+                  "passed": false
+                },
+                "self": {
+                  "plan": {
+                    "first": "addCommentToTask",
+                    "second": "setTaskDeadline"
+                  },
+                  "status": "unavailable_module",
+                  "passed": false
+                },
+                "by_name": {
+                  "plan": {
+                    "first": "addCommentToTask",
+                    "second": "setTaskDeadline"
+                  },
+                  "status": "unavailable_module",
+                  "passed": false
+                },
+                "fixed": {
+                  "plan": {
+                    "first": "addCommentToTask",
+                    "second": "approveOrRejectTaskReview"
+                  },
+                  "status": "valid",
+                  "files_sha256": "1b826f8b5a17abb55674a1317108631b6d4c6e3e8566c83983c97c32d159f99d",
+                  "files_digest": "23d715dfb082d78ffe8eeeb13723fe852bbdbcae75acf21ddb4a21a6e93998d9",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "a584228eb48e1513d98518087861079cb81261eae51f1723dfbe717a1c58b1a4"
+                }
+              }
+            },
+            {
+              "task": "approveOrRejectTaskReview_compareTime",
+              "group": "taskmanagement",
+              "plan_delivery": {
+                "status": "returned",
+                "response_sha256": "515ff4c1811716d29be66b6df93ef5e83acf3903abc14d2fb9e612047c91a133"
+              },
+              "arms": {
+                "direct_first": {
+                  "status": "valid",
+                  "source_sha256": "77f9b20ba2f4982f1a6d021505d22527c67cc55ed2e5e7a5733cacdd5df707f4",
+                  "files_digest": "92865107d7e27d043f81aa631012bf34efc51730190f8703a0261213b59f3795",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "35f40a48ed54761c8a41b8af06cc4f9be37bda398af01cc1e89d23025ad272cd"
+                },
+                "direct_repaired": {
+                  "status": "valid",
+                  "source_sha256": "f3871273058ea79a6b44c54529348e9eec1a3029d97a5b7f297a4fb34dabe8f6",
+                  "files_digest": "347241676298940a43dfaff04c763c542fa6a741d52427201d2bfac998329007",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "45c4b1154f4172915dd505b18eb0b79ad40164c33233c4fa352d81781618f319"
+                },
+                "self": {
+                  "plan": {
+                    "first": "approveOrRejectTaskReview",
+                    "second": "compareTime"
+                  },
+                  "status": "valid",
+                  "files_sha256": "83abd9c852cfdc8f8fb29f90d33cb590d9c789c2dfa307ea56ac355e4f56d151",
+                  "files_digest": "1b4b7a946fd2d2e135cc4982d6730f96e17f97d5e6526d1fb85ff10d433241eb",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "6cd3600db507b3f3934175e7cd2d30905cb9eba53f7bc02498954ecdcc51528d"
+                },
+                "by_name": {
+                  "plan": {
+                    "first": "approveOrRejectTaskReview",
+                    "second": "compareTime"
+                  },
+                  "status": "valid",
+                  "files_sha256": "83abd9c852cfdc8f8fb29f90d33cb590d9c789c2dfa307ea56ac355e4f56d151",
+                  "files_digest": "1b4b7a946fd2d2e135cc4982d6730f96e17f97d5e6526d1fb85ff10d433241eb",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "6cd3600db507b3f3934175e7cd2d30905cb9eba53f7bc02498954ecdcc51528d"
+                },
+                "fixed": {
+                  "plan": {
+                    "first": "addCommentToTask",
+                    "second": "approveOrRejectTaskReview"
+                  },
+                  "status": "valid",
+                  "files_sha256": "a5664b8f755c28a6977af4fe31572e1a6c5d5bbc0b42f90337ec042ad142694b",
+                  "files_digest": "5682e0e58713e74d022dda57d7ee3620ab3ea3fc1cc3baf98ec11fecf8a537c0",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "49f0109c0a6a6368d1b103a01ac567a17380b8c33b1c6a4484b24570cc3c7cc3"
+                }
+              }
+            },
+            {
+              "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+              "group": "taskmanagement",
+              "plan_delivery": {
+                "status": "returned",
+                "response_sha256": "d288010ed7fec23237d9161f517c3f800c71b5a02f4262e46fee629042f66c70"
+              },
+              "arms": {
+                "direct_first": {
+                  "status": "valid",
+                  "source_sha256": "45fb13dc19b0c0c30e1a05b2f3a73bbbd724c0610744771f81328ca6fe4c477f",
+                  "files_digest": "e593c34eee72576fe6110b4e4b1946d2f015a02b08f24543bb5f3fe18b556add",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "895415191a2e976d9e85ccedec26b62000cbcda468782db9e506cfe9183aa85f"
+                },
+                "direct_repaired": {
+                  "status": "valid",
+                  "source_sha256": "45fb13dc19b0c0c30e1a05b2f3a73bbbd724c0610744771f81328ca6fe4c477f",
+                  "files_digest": "e593c34eee72576fe6110b4e4b1946d2f015a02b08f24543bb5f3fe18b556add",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "895415191a2e976d9e85ccedec26b62000cbcda468782db9e506cfe9183aa85f"
+                },
+                "self": {
+                  "plan": {
+                    "first": "approveOrRejectTaskReview",
+                    "second": "projectCustomWorkflows"
+                  },
+                  "status": "valid",
+                  "files_sha256": "82615bfb1de9f18aacf40173673503adac515b823806bf2352b165fa3083b984",
+                  "files_digest": "d5d6ab86a1b50d026a65fd4202e938448febbe46b3f5c905cd1c60bd525c5680",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "e2438efe0bc12b9a5d58f718809d002c971ec67cd6d044c86d53cce29aa48c7b"
+                },
+                "by_name": {
+                  "plan": {
+                    "first": "approveOrRejectTaskReview",
+                    "second": "projectCustomWorkflows"
+                  },
+                  "status": "valid",
+                  "files_sha256": "82615bfb1de9f18aacf40173673503adac515b823806bf2352b165fa3083b984",
+                  "files_digest": "d5d6ab86a1b50d026a65fd4202e938448febbe46b3f5c905cd1c60bd525c5680",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "e2438efe0bc12b9a5d58f718809d002c971ec67cd6d044c86d53cce29aa48c7b"
+                },
+                "fixed": {
+                  "plan": {
+                    "first": "addCommentToTask",
+                    "second": "approveOrRejectTaskReview"
+                  },
+                  "status": "valid",
+                  "files_sha256": "58ce9ab34d847bc695a5ad4b4ac80a6b8105fd662e29a1b292b552c57300dcfb",
+                  "files_digest": "a2a778d53554002e7a4b38caac5cd54f5d38917eb9cde275f8c8a14293022862",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "f461d5592f451f65c6c495f58c0f6393742ed12ee2bf8fa76f8ae6ad625cb254"
+                }
+              }
+            },
+            {
+              "task": "approveOrRejectTaskReview_setTaskPriority",
+              "group": "taskmanagement",
+              "plan_delivery": {
+                "status": "returned",
+                "response_sha256": "14f3acc1305395951921567eb4da4b0fbe6953e65e362f46b4dd8e6aff9a8fc1"
+              },
+              "arms": {
+                "direct_first": {
+                  "status": "valid",
+                  "source_sha256": "91a3ed5e0dfd6b5771fd1c99f4c5b1b14a5daf90dfb18543136565138c22c6b9",
+                  "files_digest": "c8a73cc6d0fe744d4bc1d023a4894353d58ca5e00fb0bb2b3f958d3ccda3c6ee",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "3204571f467e0e51389f5e475de2a1eaaa956ed111587bc4da6d547b284ccf90"
+                },
+                "direct_repaired": {
+                  "status": "valid",
+                  "source_sha256": "0333f9192342fc7de8e915bcfa3d95a7c7dca3e1bb8e7d3404426d0d59e507d7",
+                  "files_digest": "c8ab32f97143e3c9275bde691d0605cb5e0be9b74e253321fd52a947fdf4642e",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "3924dc452f171674e0c64ab0687a333870ec647daae9c958ba5aa65c10104570"
+                },
+                "self": {
+                  "plan": {
+                    "first": "approveOrRejectTaskReview",
+                    "second": "setTaskPriority"
+                  },
+                  "status": "valid",
+                  "files_sha256": "b9f003c34e290edf6b63b420c3e9c2fdf18a5301b8518e815defeb68c48f7945",
+                  "files_digest": "76060ee7b84191ab6329721cdc46b96ce57102d449e87882f4bddf7b04eda1b2",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "47e5f0e1135d7b39aeba6b5c0808d355ac981f9de753819e6a4903e3ad2fc3f8"
+                },
+                "by_name": {
+                  "plan": {
+                    "first": "approveOrRejectTaskReview",
+                    "second": "setTaskPriority"
+                  },
+                  "status": "valid",
+                  "files_sha256": "b9f003c34e290edf6b63b420c3e9c2fdf18a5301b8518e815defeb68c48f7945",
+                  "files_digest": "76060ee7b84191ab6329721cdc46b96ce57102d449e87882f4bddf7b04eda1b2",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "47e5f0e1135d7b39aeba6b5c0808d355ac981f9de753819e6a4903e3ad2fc3f8"
+                },
+                "fixed": {
+                  "plan": {
+                    "first": "addCommentToTask",
+                    "second": "approveOrRejectTaskReview"
+                  },
+                  "status": "valid",
+                  "files_sha256": "acdbfeadd356ee5b03751e38d94d2fc63721dab5be98c4ba8bed9cf898c4e4cb",
+                  "files_digest": "78fa27e7bcd77e49b59818dd74cba9e5e67431fdd8b85921243ee607cdddf1c9",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "993a27fdbd04ffe655a208f641ae72e3a8f8edc84388606713bbe8b3cfd1177c"
+                }
+              }
+            },
+            {
+              "task": "assignTaskToProject_assignTaskToUser",
+              "group": "taskmanagement",
+              "plan_delivery": {
+                "status": "returned",
+                "response_sha256": "bc9f8a0e5b6281173bab652fb608ecbb6ba426b9d6a26a6462ac53df5a608931"
+              },
+              "arms": {
+                "direct_first": {
+                  "status": "invalid",
+                  "passed": false
+                },
+                "direct_repaired": {
+                  "status": "invalid",
+                  "passed": false
+                },
+                "self": {
+                  "plan": {
+                    "first": "assignTaskToProject",
+                    "second": "assignTaskToUser"
+                  },
+                  "status": "valid",
+                  "files_sha256": "91a6ffb52a7d83b44c8e0a8af3bc2d5c109b8b3947caafa4ad717f1f96448db1",
+                  "files_digest": "9c8973dc71143be49cf15774e3c55f4c49eb09440bb99a9f14d77fe176e0deb4",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "4e37b66446d1eba6e1bdf67432bacf8c84f91108284002e887d26a4af3b74d7f"
+                },
+                "by_name": {
+                  "plan": {
+                    "first": "assignTaskToProject",
+                    "second": "assignTaskToUser"
+                  },
+                  "status": "valid",
+                  "files_sha256": "91a6ffb52a7d83b44c8e0a8af3bc2d5c109b8b3947caafa4ad717f1f96448db1",
+                  "files_digest": "9c8973dc71143be49cf15774e3c55f4c49eb09440bb99a9f14d77fe176e0deb4",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "4e37b66446d1eba6e1bdf67432bacf8c84f91108284002e887d26a4af3b74d7f"
+                },
+                "fixed": {
+                  "plan": {
+                    "first": "addCommentToTask",
+                    "second": "approveOrRejectTaskReview"
+                  },
+                  "status": "valid",
+                  "files_sha256": "b3b02bcf8179615b032347804f63c0b66828678a84c4502502fd967578c24085",
+                  "files_digest": "b65627c5d3429fe54985f15b9765fe4ce31dfdb4d876d85f75a534ec80b96783",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "2270c874bc6aa6af20b3e4dc13a2b26a03c401643bcd4b81ae9ef82f78aa850d"
+                }
+              }
+            }
+          ],
+          "paired": {
+            "self": {
+              "direct_first": {
+                "common": [
+                  "addAltTextToImage_postPerformanceReport",
+                  "addCanonicalUrl_addComment",
+                  "addCanonicalUrl_assignPostToCategory",
+                  "addCanonicalUrl_editComment",
+                  "addCanonicalUrl_editTag",
+                  "addCommentToTask_setTaskDeadline",
+                  "approveOrRejectTaskReview_compareTime",
+                  "approveOrRejectTaskReview_projectCustomWorkflows",
+                  "approveOrRejectTaskReview_setTaskPriority",
+                  "assignTaskToProject_assignTaskToUser"
+                ],
+                "passed": 0,
+                "other_passed": 0,
+                "only": [],
+                "other_only": []
+              },
+              "direct_repaired": {
+                "common": [
+                  "addAltTextToImage_postPerformanceReport",
+                  "addCanonicalUrl_addComment",
+                  "addCanonicalUrl_assignPostToCategory",
+                  "addCanonicalUrl_editComment",
+                  "addCanonicalUrl_editTag",
+                  "addCommentToTask_setTaskDeadline",
+                  "approveOrRejectTaskReview_compareTime",
+                  "approveOrRejectTaskReview_projectCustomWorkflows",
+                  "approveOrRejectTaskReview_setTaskPriority",
+                  "assignTaskToProject_assignTaskToUser"
+                ],
+                "passed": 0,
+                "other_passed": 0,
+                "only": [],
+                "other_only": []
+              },
+              "fixed": {
+                "common": [
+                  "addAltTextToImage_postPerformanceReport",
+                  "addCanonicalUrl_addComment",
+                  "addCanonicalUrl_assignPostToCategory",
+                  "addCanonicalUrl_editComment",
+                  "addCanonicalUrl_editTag",
+                  "addCommentToTask_setTaskDeadline",
+                  "approveOrRejectTaskReview_compareTime",
+                  "approveOrRejectTaskReview_projectCustomWorkflows",
+                  "approveOrRejectTaskReview_setTaskPriority",
+                  "assignTaskToProject_assignTaskToUser"
+                ],
+                "passed": 0,
+                "other_passed": 0,
+                "only": [],
+                "other_only": []
+              },
+              "by_name": {
+                "common": [
+                  "addAltTextToImage_postPerformanceReport",
+                  "addCanonicalUrl_addComment",
+                  "addCanonicalUrl_assignPostToCategory",
+                  "addCanonicalUrl_editComment",
+                  "addCanonicalUrl_editTag",
+                  "addCommentToTask_setTaskDeadline",
+                  "approveOrRejectTaskReview_compareTime",
+                  "approveOrRejectTaskReview_projectCustomWorkflows",
+                  "approveOrRejectTaskReview_setTaskPriority",
+                  "assignTaskToProject_assignTaskToUser"
+                ],
+                "passed": 0,
+                "other_passed": 0,
+                "only": [],
+                "other_only": []
+              }
+            },
+            "by_name": {
+              "direct_first": {
+                "common": [
+                  "addAltTextToImage_postPerformanceReport",
+                  "addCanonicalUrl_addComment",
+                  "addCanonicalUrl_assignPostToCategory",
+                  "addCanonicalUrl_editComment",
+                  "addCanonicalUrl_editTag",
+                  "addCommentToTask_setTaskDeadline",
+                  "approveOrRejectTaskReview_compareTime",
+                  "approveOrRejectTaskReview_projectCustomWorkflows",
+                  "approveOrRejectTaskReview_setTaskPriority",
+                  "assignTaskToProject_assignTaskToUser"
+                ],
+                "passed": 0,
+                "other_passed": 0,
+                "only": [],
+                "other_only": []
+              },
+              "direct_repaired": {
+                "common": [
+                  "addAltTextToImage_postPerformanceReport",
+                  "addCanonicalUrl_addComment",
+                  "addCanonicalUrl_assignPostToCategory",
+                  "addCanonicalUrl_editComment",
+                  "addCanonicalUrl_editTag",
+                  "addCommentToTask_setTaskDeadline",
+                  "approveOrRejectTaskReview_compareTime",
+                  "approveOrRejectTaskReview_projectCustomWorkflows",
+                  "approveOrRejectTaskReview_setTaskPriority",
+                  "assignTaskToProject_assignTaskToUser"
+                ],
+                "passed": 0,
+                "other_passed": 0,
+                "only": [],
+                "other_only": []
+              },
+              "fixed": {
+                "common": [
+                  "addAltTextToImage_postPerformanceReport",
+                  "addCanonicalUrl_addComment",
+                  "addCanonicalUrl_assignPostToCategory",
+                  "addCanonicalUrl_editComment",
+                  "addCanonicalUrl_editTag",
+                  "addCommentToTask_setTaskDeadline",
+                  "approveOrRejectTaskReview_compareTime",
+                  "approveOrRejectTaskReview_projectCustomWorkflows",
+                  "approveOrRejectTaskReview_setTaskPriority",
+                  "assignTaskToProject_assignTaskToUser"
+                ],
+                "passed": 0,
+                "other_passed": 0,
+                "only": [],
+                "other_only": []
+              }
+            },
+            "fixed": {
+              "direct_first": {
+                "common": [
+                  "addAltTextToImage_postPerformanceReport",
+                  "addCanonicalUrl_addComment",
+                  "addCanonicalUrl_assignPostToCategory",
+                  "addCanonicalUrl_editComment",
+                  "addCanonicalUrl_editTag",
+                  "addCommentToTask_setTaskDeadline",
+                  "approveOrRejectTaskReview_compareTime",
+                  "approveOrRejectTaskReview_projectCustomWorkflows",
+                  "approveOrRejectTaskReview_setTaskPriority",
+                  "assignTaskToProject_assignTaskToUser"
+                ],
+                "passed": 0,
+                "other_passed": 0,
+                "only": [],
+                "other_only": []
+              },
+              "direct_repaired": {
+                "common": [
+                  "addAltTextToImage_postPerformanceReport",
+                  "addCanonicalUrl_addComment",
+                  "addCanonicalUrl_assignPostToCategory",
+                  "addCanonicalUrl_editComment",
+                  "addCanonicalUrl_editTag",
+                  "addCommentToTask_setTaskDeadline",
+                  "approveOrRejectTaskReview_compareTime",
+                  "approveOrRejectTaskReview_projectCustomWorkflows",
+                  "approveOrRejectTaskReview_setTaskPriority",
+                  "assignTaskToProject_assignTaskToUser"
+                ],
+                "passed": 0,
+                "other_passed": 0,
+                "only": [],
+                "other_only": []
+              },
+              "by_name": {
+                "common": [
+                  "addAltTextToImage_postPerformanceReport",
+                  "addCanonicalUrl_addComment",
+                  "addCanonicalUrl_assignPostToCategory",
+                  "addCanonicalUrl_editComment",
+                  "addCanonicalUrl_editTag",
+                  "addCommentToTask_setTaskDeadline",
+                  "approveOrRejectTaskReview_compareTime",
+                  "approveOrRejectTaskReview_projectCustomWorkflows",
+                  "approveOrRejectTaskReview_setTaskPriority",
+                  "assignTaskToProject_assignTaskToUser"
+                ],
+                "passed": 0,
+                "other_passed": 0,
+                "only": [],
+                "other_only": []
+              }
+            }
+          }
+        },
+        "build-b": {
+          "rows": [
+            {
+              "task": "addAltTextToImage_postPerformanceReport",
+              "group": "blogging",
+              "plan_delivery": {
+                "status": "returned",
+                "response_sha256": "c0f1604a6a897af41852d71cda8641913957e0b0688363149e0e112e2f8a086d"
+              },
+              "arms": {
+                "direct_first": {
+                  "status": "valid",
+                  "source_sha256": "c4653c932375928af424796dc13d94fb049be637e16bb64b6af8322c66a34eba",
+                  "files_digest": "b2e27173be0e95dcfe2bc76ef9f9b05914f7d21d6280d4d4e7c41e727415321f",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "d37c6f1862a00117e4ad5e15927da927f8eb63b8644bff759931c0dc409f9c35"
+                },
+                "direct_repaired": {
+                  "status": "valid",
+                  "source_sha256": "8719e4154fdc4cba15b2bceee7968dc9246b3f0b72650fb941fc26f295d8e11f",
+                  "files_digest": "54a8b1c35a43395aa18dc390825bcf55dd5b68342b5df0ce7ddd3a036e92f463",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "223225c8d0c0d76d43aa2dcc2a0a92d05f8ab2ffc44724bf4ed1a963889d2677"
+                },
+                "self": {
+                  "plan": {
+                    "first": "addAltTextToImage",
+                    "second": "postPerformanceReport"
+                  },
+                  "status": "valid",
+                  "files_sha256": "bbf2bea581a667b66b313dfe37f2d6179cc6fa2947436586c93d89319dd21859",
+                  "files_digest": "dcf59b2d87069589ff6d520684a00452b9a61c68b66e11c3c4d13954a525d6a1",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "e5c524d06d618a14df63fe3786f23e81a0663fb11da56765d3ef31520f776fd8"
+                },
+                "by_name": {
+                  "plan": {
+                    "first": "addAltTextToImage",
+                    "second": "postPerformanceReport"
+                  },
+                  "status": "valid",
+                  "files_sha256": "bbf2bea581a667b66b313dfe37f2d6179cc6fa2947436586c93d89319dd21859",
+                  "files_digest": "dcf59b2d87069589ff6d520684a00452b9a61c68b66e11c3c4d13954a525d6a1",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "e5c524d06d618a14df63fe3786f23e81a0663fb11da56765d3ef31520f776fd8"
+                },
+                "fixed": {
+                  "plan": {
+                    "first": "addAltTextToImage",
+                    "second": "addCanonicalUrl"
+                  },
+                  "status": "valid",
+                  "files_sha256": "2b984da4b55fe076bd3548a8ad2e56a5597062dea30e826779e0f681b59da701",
+                  "files_digest": "7695e32693e53aa21ecf59ec0bd27b791cba150f36e63fdf65861d8638a59118",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "cdc41cd4e85d12651035ca096acf673cf49a35458b385d1165a5b485dd21aee5"
+                }
+              }
+            },
+            {
+              "task": "addCanonicalUrl_addComment",
+              "group": "blogging",
+              "plan_delivery": {
+                "status": "returned",
+                "response_sha256": "9433d424f3ae46af720befceb0158d46b6a5d36fafddea85cec85aca1d7e1f7c"
+              },
+              "arms": {
+                "direct_first": {
+                  "status": "valid",
+                  "source_sha256": "6958ffa6177d8849ba470ab35fe68fb4472ca07ec28c70abca7cf591b77c1e6f",
+                  "files_digest": "01925b128d4d51f97bd2356915c43042553ec627383108f1d876494d7c375533",
+                  "passed": false,
+                  "official_cases_passed": 1,
+                  "report_sha256": "b7744457d9dca3389b7b327eb404676e958ec755b9e7f53162cdde327676f515"
+                },
+                "direct_repaired": {
+                  "status": "valid",
+                  "source_sha256": "2c5dc231bd278d516665d5e3c848b2b5cf8d5d83cabadba625b90f027f01d284",
+                  "files_digest": "47496a573f04626e309398016c28d1af63256737488c920c53447d4863d1d0ec",
+                  "passed": false,
+                  "official_cases_passed": 1,
+                  "report_sha256": "a7079831d1d956a9740011cfdead733601880d2658232a6634a9a083e1354c31"
+                },
+                "self": {
+                  "plan": {
+                    "first": "addCanonicalUrl",
+                    "second": "addComment"
+                  },
+                  "status": "valid",
+                  "files_sha256": "ce0dbaedd97e5077f2b6700f823edaccb3092e904562112c806d7caacb750ee3",
+                  "files_digest": "09c31e32aef2d37c0c15009d5776495e78b2021d9cfb7d7045b249b4deace904",
+                  "passed": false,
+                  "official_cases_passed": 2,
+                  "report_sha256": "b050cc792ae6c883150c050fa59dceb604427455cfa004b529245574289deda4"
+                },
+                "by_name": {
+                  "plan": {
+                    "first": "addCanonicalUrl",
+                    "second": "addComment"
+                  },
+                  "status": "valid",
+                  "files_sha256": "ce0dbaedd97e5077f2b6700f823edaccb3092e904562112c806d7caacb750ee3",
+                  "files_digest": "09c31e32aef2d37c0c15009d5776495e78b2021d9cfb7d7045b249b4deace904",
+                  "passed": false,
+                  "official_cases_passed": 2,
+                  "report_sha256": "b050cc792ae6c883150c050fa59dceb604427455cfa004b529245574289deda4"
+                },
+                "fixed": {
+                  "plan": {
+                    "first": "addAltTextToImage",
+                    "second": "addCanonicalUrl"
+                  },
+                  "status": "valid",
+                  "files_sha256": "64fc15478eeb928a9f6d8830c0dd0a4309065aa8b33a22bb6910a581cc0f22d9",
+                  "files_digest": "80379b1ff6a805c43d0755e702796d027bdda520bc75d7c4570ceda4ef7bdcb2",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "e5d47c675095fcd2b0d47354fb8e6d32bb9457ca7bc8372e67610b4bfc276264"
+                }
+              }
+            },
+            {
+              "task": "addCanonicalUrl_assignPostToCategory",
+              "group": "blogging",
+              "plan_delivery": {
+                "status": "returned",
+                "response_sha256": "6ae29908aa660495e31e285e7daa6368356956a52fe5fd46bba3b5f04ef9b090"
+              },
+              "arms": {
+                "direct_first": {
+                  "status": "valid",
+                  "source_sha256": "e66448fe1bfaf06ba9d6bfd7e8013794bb4f7ef64c5e3a56ea787e4819d9ee2b",
+                  "files_digest": "9ba3b38301e0a4f9eae4a588c3c0506e3958baf7a688c1a252f199631629a155",
+                  "passed": false,
+                  "official_cases_passed": 1,
+                  "report_sha256": "cb67b0a402abe5a73e9ed97e30a008f526dd7209c563a3cbad914a1e5853e3b6"
+                },
+                "direct_repaired": {
+                  "status": "valid",
+                  "source_sha256": "9e40d8bdf1511c70e8576edb9cc69359aa9d43831a3ca7ea6f47e1141bd526c8",
+                  "files_digest": "335931a0e5698c12e62b757871e994432f18fd8636059df0bbeb6d111c972980",
+                  "passed": false,
+                  "official_cases_passed": 1,
+                  "report_sha256": "668445bcf30499e157f5565a81a22f06f6f65122e41fd9040b33138110c624f7"
+                },
+                "self": {
+                  "plan": {
+                    "first": "addCanonicalUrl",
+                    "second": "assignPostToCategory"
+                  },
+                  "status": "valid",
+                  "files_sha256": "d8f481b844b32faccd4659d9ddf8ff952a0580f58e31c9f383ab054c014c2acf",
+                  "files_digest": "acfe3406f07b42d27bdc96146e812ada2edc8909e2667c30dcf1df6638a0da0f",
+                  "passed": false,
+                  "official_cases_passed": 3,
+                  "report_sha256": "19a66b3d45e8cbb712035c3492bafc879f4ab5608328eb5bbf3f366bbfc7105a"
+                },
+                "by_name": {
+                  "plan": {
+                    "first": "addCanonicalUrl",
+                    "second": "assignPostToCategory"
+                  },
+                  "status": "valid",
+                  "files_sha256": "d8f481b844b32faccd4659d9ddf8ff952a0580f58e31c9f383ab054c014c2acf",
+                  "files_digest": "acfe3406f07b42d27bdc96146e812ada2edc8909e2667c30dcf1df6638a0da0f",
+                  "passed": false,
+                  "official_cases_passed": 3,
+                  "report_sha256": "19a66b3d45e8cbb712035c3492bafc879f4ab5608328eb5bbf3f366bbfc7105a"
+                },
+                "fixed": {
+                  "plan": {
+                    "first": "addAltTextToImage",
+                    "second": "addCanonicalUrl"
+                  },
+                  "status": "valid",
+                  "files_sha256": "94a74fe4baab354523d68be66879ae2f9c46d031c1eef63a33885cfceb106d15",
+                  "files_digest": "1112c48fd93050322c48e4f33a413a6fc75fb13ba62177b7d80664c2730041c8",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "2fda2a5aa6311f20ef5d07c197967743929d17db67ed74e6dc38a3e2f59a11f2"
+                }
+              }
+            },
+            {
+              "task": "addCanonicalUrl_editComment",
+              "group": "blogging",
+              "plan_delivery": {
+                "status": "returned",
+                "response_sha256": "018b1ecd01cea963d5841943c7486777519ce5d83696dec08fef45aacaf9152b"
+              },
+              "arms": {
+                "direct_first": {
+                  "status": "invalid",
+                  "passed": false
+                },
+                "direct_repaired": {
+                  "status": "invalid",
+                  "passed": false
+                },
+                "self": {
+                  "plan": {
+                    "first": "addCanonicalUrl",
+                    "second": "editComment"
+                  },
+                  "status": "valid",
+                  "files_sha256": "609df87340fc6e5c50146df980fdc9a8fb263e6b7551294866fd2e28290b2e2a",
+                  "files_digest": "3794a623662b3a9b9872634b741fa199dd70c35826c5fa0452da790c428e97e8",
+                  "passed": false,
+                  "official_cases_passed": 2,
+                  "report_sha256": "33b9cac2c429546e70ee533d3d875a6e0c504829db8443376c46c5b475b71c4f"
+                },
+                "by_name": {
+                  "plan": {
+                    "first": "addCanonicalUrl",
+                    "second": "editComment"
+                  },
+                  "status": "valid",
+                  "files_sha256": "609df87340fc6e5c50146df980fdc9a8fb263e6b7551294866fd2e28290b2e2a",
+                  "files_digest": "3794a623662b3a9b9872634b741fa199dd70c35826c5fa0452da790c428e97e8",
+                  "passed": false,
+                  "official_cases_passed": 2,
+                  "report_sha256": "33b9cac2c429546e70ee533d3d875a6e0c504829db8443376c46c5b475b71c4f"
+                },
+                "fixed": {
+                  "plan": {
+                    "first": "addAltTextToImage",
+                    "second": "addCanonicalUrl"
+                  },
+                  "status": "valid",
+                  "files_sha256": "32b83ddd03f6f850da78aab2d65d20bf4027288ea1f4850c089bd381b678f94a",
+                  "files_digest": "94760e4461db6bbd2ec6a0e99b26bf7fa61d2f9d82cbf62cb9f1bb4a60d6cd46",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "d33fb2365790d34c3daf3dc0f257519e9ed625cf20c2f2f7744489c8511cf5ae"
+                }
+              }
+            },
+            {
+              "task": "addCanonicalUrl_editTag",
+              "group": "blogging",
+              "plan_delivery": {
+                "status": "returned",
+                "response_sha256": "1d7663de6674a9ea8644b786ecacd7fc7c08bc4428ef6314594235ebec5930e0"
+              },
+              "arms": {
+                "direct_first": {
+                  "status": "valid",
+                  "source_sha256": "c9debde43607302f6f33f9b5c74d4dadc4ea510acb0bbcc1d3cb2b2fc2f4fbff",
+                  "files_digest": "8382653f97f1bb34937375ad730e45309876153568f33998e280efe7e3a4b722",
+                  "passed": false,
+                  "official_cases_passed": 1,
+                  "report_sha256": "51af137b62d51cf489d7ac47a59afadd4b97636ec7a497cbaf45ce16604e7ad7"
+                },
+                "direct_repaired": {
+                  "status": "valid",
+                  "source_sha256": "38afd10681be625405f01b733ea627624fc9c5b602f1861b88cba7330b234f59",
+                  "files_digest": "e56df61c6757755a42a7cc3c89b146fc015fe7191daebd4c34babb45382a96e9",
+                  "passed": false,
+                  "official_cases_passed": 2,
+                  "report_sha256": "1e69de82ff900946e7a08870e11070cf194f1cc43c3834bc2b4c3abaf2014eac"
+                },
+                "self": {
+                  "plan": {
+                    "first": "addCanonicalUrl",
+                    "second": "editTag"
+                  },
+                  "status": "valid",
+                  "files_sha256": "9f1a65682cbc8d2e86ee2a5e62f048178254a2eb20aaabff2dbee23692cebae3",
+                  "files_digest": "e20306f2ec6819031d34bfbce50408aaf1fa9ac460251e582ec5bfcc8f034d66",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "1d6469a9d58eb6e152d07b4392aec234eac000e903908608f0c3ba1db0fb4557"
+                },
+                "by_name": {
+                  "plan": {
+                    "first": "addCanonicalUrl",
+                    "second": "editTag"
+                  },
+                  "status": "valid",
+                  "files_sha256": "9f1a65682cbc8d2e86ee2a5e62f048178254a2eb20aaabff2dbee23692cebae3",
+                  "files_digest": "e20306f2ec6819031d34bfbce50408aaf1fa9ac460251e582ec5bfcc8f034d66",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "1d6469a9d58eb6e152d07b4392aec234eac000e903908608f0c3ba1db0fb4557"
+                },
+                "fixed": {
+                  "plan": {
+                    "first": "addAltTextToImage",
+                    "second": "addCanonicalUrl"
+                  },
+                  "status": "valid",
+                  "files_sha256": "b8e0a616b3b9cff2f37958f1aa703fb1bb80b6516c94ff44c935e167e651cca7",
+                  "files_digest": "f7088593188551bd82a164d5dbf9c76cfe23dc830c7de4e8c2e42a19f6657723",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "5eaafed912eceec14dcde9ead5a8097764bb5cbf85677002a88bf3c1b73291f7"
+                }
+              }
+            },
+            {
+              "task": "addCommentToTask_setTaskDeadline",
+              "group": "taskmanagement",
+              "plan_delivery": {
+                "status": "returned",
+                "response_sha256": "1d322fe14f5274e2bcee5d37dc9c0f08abcfcf78551f1dc590b54407d794d1e7"
+              },
+              "arms": {
+                "direct_first": {
+                  "status": "invalid",
+                  "passed": false
+                },
+                "direct_repaired": {
+                  "status": "invalid",
+                  "passed": false
+                },
+                "self": {
+                  "plan": {
+                    "first": "addCommentToTask",
+                    "second": "setTaskDeadline"
+                  },
+                  "status": "valid",
+                  "files_sha256": "d6478fdf17ef84197b0560e9d7763a033a15e0391fd1e6d7ed4158f83e1d6840",
+                  "files_digest": "ccafd8f6d19c5d011f080cf5169f532528766aea90ec80b0cb1f8f8de7ffb5e3",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "12f78a7464d1419a689d1e6558a35d9eab524a068096600b84b66f62893d6a9d"
+                },
+                "by_name": {
+                  "plan": {
+                    "first": "addCommentToTask",
+                    "second": "setTaskDeadline"
+                  },
+                  "status": "valid",
+                  "files_sha256": "d6478fdf17ef84197b0560e9d7763a033a15e0391fd1e6d7ed4158f83e1d6840",
+                  "files_digest": "ccafd8f6d19c5d011f080cf5169f532528766aea90ec80b0cb1f8f8de7ffb5e3",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "12f78a7464d1419a689d1e6558a35d9eab524a068096600b84b66f62893d6a9d"
+                },
+                "fixed": {
+                  "plan": {
+                    "first": "addCommentToTask",
+                    "second": "approveOrRejectTaskReview"
+                  },
+                  "status": "valid",
+                  "files_sha256": "2ba42f6c2c62d70a7c2837239334e1a9b5f680dc80192ba1fba00d9a201e7707",
+                  "files_digest": "d0fbd17cba3dad414c4c13deb0559a30b19864a279e7f4569cd19b27e168a8e4",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "5337f91083b3ae1dce7ca47767f7f9d85990650485fd0c0b15faa93993bd0a4b"
+                }
+              }
+            },
+            {
+              "task": "approveOrRejectTaskReview_compareTime",
+              "group": "taskmanagement",
+              "plan_delivery": {
+                "status": "returned",
+                "response_sha256": "677ba0c59459509fea5a477379ff597c96fb7a8737f0cecc4475de625160c839"
+              },
+              "arms": {
+                "direct_first": {
+                  "status": "valid",
+                  "source_sha256": "77f9b20ba2f4982f1a6d021505d22527c67cc55ed2e5e7a5733cacdd5df707f4",
+                  "files_digest": "92865107d7e27d043f81aa631012bf34efc51730190f8703a0261213b59f3795",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "35f40a48ed54761c8a41b8af06cc4f9be37bda398af01cc1e89d23025ad272cd"
+                },
+                "direct_repaired": {
+                  "status": "valid",
+                  "source_sha256": "f3871273058ea79a6b44c54529348e9eec1a3029d97a5b7f297a4fb34dabe8f6",
+                  "files_digest": "347241676298940a43dfaff04c763c542fa6a741d52427201d2bfac998329007",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "45c4b1154f4172915dd505b18eb0b79ad40164c33233c4fa352d81781618f319"
+                },
+                "self": {
+                  "plan": {
+                    "first": "approveOrRejectTaskReview",
+                    "second": "compareTime"
+                  },
+                  "status": "valid",
+                  "files_sha256": "b35ea53bbd6e20eedbb2471c6693cb992e6f579435f0f808cf87ff8ae76ced52",
+                  "files_digest": "e9b655170207003b1eeedfc54d4cdec6d4f64de708b448b495c827e3538e796d",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "61a5298b64acf38a8372ff86c9f6409b9d299e78a76a77b6022c12b8304b76f4"
+                },
+                "by_name": {
+                  "plan": {
+                    "first": "approveOrRejectTaskReview",
+                    "second": "compareTime"
+                  },
+                  "status": "valid",
+                  "files_sha256": "b35ea53bbd6e20eedbb2471c6693cb992e6f579435f0f808cf87ff8ae76ced52",
+                  "files_digest": "e9b655170207003b1eeedfc54d4cdec6d4f64de708b448b495c827e3538e796d",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "61a5298b64acf38a8372ff86c9f6409b9d299e78a76a77b6022c12b8304b76f4"
+                },
+                "fixed": {
+                  "plan": {
+                    "first": "addCommentToTask",
+                    "second": "approveOrRejectTaskReview"
+                  },
+                  "status": "valid",
+                  "files_sha256": "00862cedc994d890540ace0f7430d0f361c5afc3dde1ab58f02274bf89c6ffcf",
+                  "files_digest": "212e79218b8ed78d6408d75adb948917d52513db20a02a3f55e29f18db63947d",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "8dfe4475de413020608775ca0f5fc046320d65b880433023c14c2add5dd05776"
+                }
+              }
+            },
+            {
+              "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+              "group": "taskmanagement",
+              "plan_delivery": {
+                "status": "returned",
+                "response_sha256": "ca450c63b24179531ffedcbb80ea1bbd82e92fa347de29d972b0e5d741f4316d"
+              },
+              "arms": {
+                "direct_first": {
+                  "status": "valid",
+                  "source_sha256": "45fb13dc19b0c0c30e1a05b2f3a73bbbd724c0610744771f81328ca6fe4c477f",
+                  "files_digest": "e593c34eee72576fe6110b4e4b1946d2f015a02b08f24543bb5f3fe18b556add",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "895415191a2e976d9e85ccedec26b62000cbcda468782db9e506cfe9183aa85f"
+                },
+                "direct_repaired": {
+                  "status": "valid",
+                  "source_sha256": "45fb13dc19b0c0c30e1a05b2f3a73bbbd724c0610744771f81328ca6fe4c477f",
+                  "files_digest": "e593c34eee72576fe6110b4e4b1946d2f015a02b08f24543bb5f3fe18b556add",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "895415191a2e976d9e85ccedec26b62000cbcda468782db9e506cfe9183aa85f"
+                },
+                "self": {
+                  "plan": {
+                    "first": "approveOrRejectTaskReview",
+                    "second": "projectCustomWorkflows"
+                  },
+                  "status": "valid",
+                  "files_sha256": "7828c4cedd629793cd8ef9dc2851a89c8d7f9af4d0ec98d9043868d6f4a65e8d",
+                  "files_digest": "22a6a014f726e5bafe3120e35f27c9d5cd1d74c9006619127c21aec262636da1",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "a66a482489c2206abb4b1d699d3fb6df1549088a6f89e4df58b7f247d3aa40d5"
+                },
+                "by_name": {
+                  "plan": {
+                    "first": "approveOrRejectTaskReview",
+                    "second": "projectCustomWorkflows"
+                  },
+                  "status": "valid",
+                  "files_sha256": "7828c4cedd629793cd8ef9dc2851a89c8d7f9af4d0ec98d9043868d6f4a65e8d",
+                  "files_digest": "22a6a014f726e5bafe3120e35f27c9d5cd1d74c9006619127c21aec262636da1",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "a66a482489c2206abb4b1d699d3fb6df1549088a6f89e4df58b7f247d3aa40d5"
+                },
+                "fixed": {
+                  "plan": {
+                    "first": "addCommentToTask",
+                    "second": "approveOrRejectTaskReview"
+                  },
+                  "status": "valid",
+                  "files_sha256": "50c2a7f9e9cad9c0a9bc99c7f628922ce1fd53003c331372e48a7f6afedeb7ea",
+                  "files_digest": "d95791533cfc450c27bbbd96b85272794af1f8b0a955023bede121978f2e6884",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "79612531324d537a21ac2f14b70988c14173f1db1e675236b65817a9358bc3e1"
+                }
+              }
+            },
+            {
+              "task": "approveOrRejectTaskReview_setTaskPriority",
+              "group": "taskmanagement",
+              "plan_delivery": {
+                "status": "returned",
+                "response_sha256": "8bf27087ff73ae0f688e60ca3662cf1c0711b7fc29ee800c2ef9d6f6112f08fd"
+              },
+              "arms": {
+                "direct_first": {
+                  "status": "valid",
+                  "source_sha256": "91a3ed5e0dfd6b5771fd1c99f4c5b1b14a5daf90dfb18543136565138c22c6b9",
+                  "files_digest": "c8a73cc6d0fe744d4bc1d023a4894353d58ca5e00fb0bb2b3f958d3ccda3c6ee",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "3204571f467e0e51389f5e475de2a1eaaa956ed111587bc4da6d547b284ccf90"
+                },
+                "direct_repaired": {
+                  "status": "valid",
+                  "source_sha256": "0333f9192342fc7de8e915bcfa3d95a7c7dca3e1bb8e7d3404426d0d59e507d7",
+                  "files_digest": "c8ab32f97143e3c9275bde691d0605cb5e0be9b74e253321fd52a947fdf4642e",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "3924dc452f171674e0c64ab0687a333870ec647daae9c958ba5aa65c10104570"
+                },
+                "self": {
+                  "plan": {
+                    "first": "approveOrRejectTaskReview",
+                    "second": "setTaskPriority"
+                  },
+                  "status": "valid",
+                  "files_sha256": "fc18a58ce312952e368b93d5e1a911a667e80e0ae79d6e2201e37da25345e8e1",
+                  "files_digest": "73e128ea4b6911cc73ceae8fbae9d0f258e71806eb2ad56b48c0019d0a4e3e72",
+                  "passed": false,
+                  "official_cases_passed": 1,
+                  "report_sha256": "d0212ef1b09d782ad029aedd1bd770aad59cb57bee4fa8b4a6e4bd7bed36f546"
+                },
+                "by_name": {
+                  "plan": {
+                    "first": "approveOrRejectTaskReview",
+                    "second": "setTaskPriority"
+                  },
+                  "status": "valid",
+                  "files_sha256": "fc18a58ce312952e368b93d5e1a911a667e80e0ae79d6e2201e37da25345e8e1",
+                  "files_digest": "73e128ea4b6911cc73ceae8fbae9d0f258e71806eb2ad56b48c0019d0a4e3e72",
+                  "passed": false,
+                  "official_cases_passed": 1,
+                  "report_sha256": "d0212ef1b09d782ad029aedd1bd770aad59cb57bee4fa8b4a6e4bd7bed36f546"
+                },
+                "fixed": {
+                  "plan": {
+                    "first": "addCommentToTask",
+                    "second": "approveOrRejectTaskReview"
+                  },
+                  "status": "valid",
+                  "files_sha256": "7b14417f9947856982e5a6e402ccd3cf03057d73527b1f5798889ba4209521bc",
+                  "files_digest": "1e69663bbeef34ff4c611566df63e2a1105dfdafe0bd3ad60c71a0910d29193e",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "7afd5b0917d955c91b8e101584240db24dc5a610f7fe8497e958bc24f793566a"
+                }
+              }
+            },
+            {
+              "task": "assignTaskToProject_assignTaskToUser",
+              "group": "taskmanagement",
+              "plan_delivery": {
+                "status": "returned",
+                "response_sha256": "542e36e2a2cc2c7e3e50acc22668efe7c1b231fd6c700e72757673b9e4b5bd72"
+              },
+              "arms": {
+                "direct_first": {
+                  "status": "invalid",
+                  "passed": false
+                },
+                "direct_repaired": {
+                  "status": "invalid",
+                  "passed": false
+                },
+                "self": {
+                  "plan": {
+                    "first": "assignTaskToProject",
+                    "second": "assignTaskToUser"
+                  },
+                  "status": "valid",
+                  "files_sha256": "adad52e1adaf144ba0f3573d187ee54c0a03bcfd60eb5bb7fda8177b37409ac3",
+                  "files_digest": "f568cdc919e47305a13729a850ed0051a8c8bc312889b3e14af170e9367a9324",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "567184b7a9429a0b6afa2cb1a522b9a156572ef49b5321f6c99d3268421a23b2"
+                },
+                "by_name": {
+                  "plan": {
+                    "first": "assignTaskToProject",
+                    "second": "assignTaskToUser"
+                  },
+                  "status": "valid",
+                  "files_sha256": "adad52e1adaf144ba0f3573d187ee54c0a03bcfd60eb5bb7fda8177b37409ac3",
+                  "files_digest": "f568cdc919e47305a13729a850ed0051a8c8bc312889b3e14af170e9367a9324",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "567184b7a9429a0b6afa2cb1a522b9a156572ef49b5321f6c99d3268421a23b2"
+                },
+                "fixed": {
+                  "plan": {
+                    "first": "addCommentToTask",
+                    "second": "approveOrRejectTaskReview"
+                  },
+                  "status": "valid",
+                  "files_sha256": "9b871441a520ec94b255babdf54bde530dae0f11f0feafd6eba83a1335326efe",
+                  "files_digest": "af463efb843ccee6c691c8b889329efc7532b72442f95b86330eb81bf06a0a94",
+                  "passed": false,
+                  "official_cases_passed": 0,
+                  "report_sha256": "8edc451e9ee178fa91706bc4adcd44ea7e05be094e3c5d9ddf5377c9d96f27b9"
+                }
+              }
+            }
+          ],
+          "paired": {
+            "self": {
+              "direct_first": {
+                "common": [
+                  "addAltTextToImage_postPerformanceReport",
+                  "addCanonicalUrl_addComment",
+                  "addCanonicalUrl_assignPostToCategory",
+                  "addCanonicalUrl_editComment",
+                  "addCanonicalUrl_editTag",
+                  "addCommentToTask_setTaskDeadline",
+                  "approveOrRejectTaskReview_compareTime",
+                  "approveOrRejectTaskReview_projectCustomWorkflows",
+                  "approveOrRejectTaskReview_setTaskPriority",
+                  "assignTaskToProject_assignTaskToUser"
+                ],
+                "passed": 0,
+                "other_passed": 0,
+                "only": [],
+                "other_only": []
+              },
+              "direct_repaired": {
+                "common": [
+                  "addAltTextToImage_postPerformanceReport",
+                  "addCanonicalUrl_addComment",
+                  "addCanonicalUrl_assignPostToCategory",
+                  "addCanonicalUrl_editComment",
+                  "addCanonicalUrl_editTag",
+                  "addCommentToTask_setTaskDeadline",
+                  "approveOrRejectTaskReview_compareTime",
+                  "approveOrRejectTaskReview_projectCustomWorkflows",
+                  "approveOrRejectTaskReview_setTaskPriority",
+                  "assignTaskToProject_assignTaskToUser"
+                ],
+                "passed": 0,
+                "other_passed": 0,
+                "only": [],
+                "other_only": []
+              },
+              "fixed": {
+                "common": [
+                  "addAltTextToImage_postPerformanceReport",
+                  "addCanonicalUrl_addComment",
+                  "addCanonicalUrl_assignPostToCategory",
+                  "addCanonicalUrl_editComment",
+                  "addCanonicalUrl_editTag",
+                  "addCommentToTask_setTaskDeadline",
+                  "approveOrRejectTaskReview_compareTime",
+                  "approveOrRejectTaskReview_projectCustomWorkflows",
+                  "approveOrRejectTaskReview_setTaskPriority",
+                  "assignTaskToProject_assignTaskToUser"
+                ],
+                "passed": 0,
+                "other_passed": 0,
+                "only": [],
+                "other_only": []
+              },
+              "by_name": {
+                "common": [
+                  "addAltTextToImage_postPerformanceReport",
+                  "addCanonicalUrl_addComment",
+                  "addCanonicalUrl_assignPostToCategory",
+                  "addCanonicalUrl_editComment",
+                  "addCanonicalUrl_editTag",
+                  "addCommentToTask_setTaskDeadline",
+                  "approveOrRejectTaskReview_compareTime",
+                  "approveOrRejectTaskReview_projectCustomWorkflows",
+                  "approveOrRejectTaskReview_setTaskPriority",
+                  "assignTaskToProject_assignTaskToUser"
+                ],
+                "passed": 0,
+                "other_passed": 0,
+                "only": [],
+                "other_only": []
+              }
+            },
+            "by_name": {
+              "direct_first": {
+                "common": [
+                  "addAltTextToImage_postPerformanceReport",
+                  "addCanonicalUrl_addComment",
+                  "addCanonicalUrl_assignPostToCategory",
+                  "addCanonicalUrl_editComment",
+                  "addCanonicalUrl_editTag",
+                  "addCommentToTask_setTaskDeadline",
+                  "approveOrRejectTaskReview_compareTime",
+                  "approveOrRejectTaskReview_projectCustomWorkflows",
+                  "approveOrRejectTaskReview_setTaskPriority",
+                  "assignTaskToProject_assignTaskToUser"
+                ],
+                "passed": 0,
+                "other_passed": 0,
+                "only": [],
+                "other_only": []
+              },
+              "direct_repaired": {
+                "common": [
+                  "addAltTextToImage_postPerformanceReport",
+                  "addCanonicalUrl_addComment",
+                  "addCanonicalUrl_assignPostToCategory",
+                  "addCanonicalUrl_editComment",
+                  "addCanonicalUrl_editTag",
+                  "addCommentToTask_setTaskDeadline",
+                  "approveOrRejectTaskReview_compareTime",
+                  "approveOrRejectTaskReview_projectCustomWorkflows",
+                  "approveOrRejectTaskReview_setTaskPriority",
+                  "assignTaskToProject_assignTaskToUser"
+                ],
+                "passed": 0,
+                "other_passed": 0,
+                "only": [],
+                "other_only": []
+              },
+              "fixed": {
+                "common": [
+                  "addAltTextToImage_postPerformanceReport",
+                  "addCanonicalUrl_addComment",
+                  "addCanonicalUrl_assignPostToCategory",
+                  "addCanonicalUrl_editComment",
+                  "addCanonicalUrl_editTag",
+                  "addCommentToTask_setTaskDeadline",
+                  "approveOrRejectTaskReview_compareTime",
+                  "approveOrRejectTaskReview_projectCustomWorkflows",
+                  "approveOrRejectTaskReview_setTaskPriority",
+                  "assignTaskToProject_assignTaskToUser"
+                ],
+                "passed": 0,
+                "other_passed": 0,
+                "only": [],
+                "other_only": []
+              }
+            },
+            "fixed": {
+              "direct_first": {
+                "common": [
+                  "addAltTextToImage_postPerformanceReport",
+                  "addCanonicalUrl_addComment",
+                  "addCanonicalUrl_assignPostToCategory",
+                  "addCanonicalUrl_editComment",
+                  "addCanonicalUrl_editTag",
+                  "addCommentToTask_setTaskDeadline",
+                  "approveOrRejectTaskReview_compareTime",
+                  "approveOrRejectTaskReview_projectCustomWorkflows",
+                  "approveOrRejectTaskReview_setTaskPriority",
+                  "assignTaskToProject_assignTaskToUser"
+                ],
+                "passed": 0,
+                "other_passed": 0,
+                "only": [],
+                "other_only": []
+              },
+              "direct_repaired": {
+                "common": [
+                  "addAltTextToImage_postPerformanceReport",
+                  "addCanonicalUrl_addComment",
+                  "addCanonicalUrl_assignPostToCategory",
+                  "addCanonicalUrl_editComment",
+                  "addCanonicalUrl_editTag",
+                  "addCommentToTask_setTaskDeadline",
+                  "approveOrRejectTaskReview_compareTime",
+                  "approveOrRejectTaskReview_projectCustomWorkflows",
+                  "approveOrRejectTaskReview_setTaskPriority",
+                  "assignTaskToProject_assignTaskToUser"
+                ],
+                "passed": 0,
+                "other_passed": 0,
+                "only": [],
+                "other_only": []
+              },
+              "by_name": {
+                "common": [
+                  "addAltTextToImage_postPerformanceReport",
+                  "addCanonicalUrl_addComment",
+                  "addCanonicalUrl_assignPostToCategory",
+                  "addCanonicalUrl_editComment",
+                  "addCanonicalUrl_editTag",
+                  "addCommentToTask_setTaskDeadline",
+                  "approveOrRejectTaskReview_compareTime",
+                  "approveOrRejectTaskReview_projectCustomWorkflows",
+                  "approveOrRejectTaskReview_setTaskPriority",
+                  "assignTaskToProject_assignTaskToUser"
+                ],
+                "passed": 0,
+                "other_passed": 0,
+                "only": [],
+                "other_only": []
+              }
+            }
+          }
+        }
+      },
+      "old_protocol": {
+        "direct": {
+          "addAltTextToImage_postPerformanceReport": false,
+          "addCanonicalUrl_addComment": true,
+          "addCanonicalUrl_assignPostToCategory": false,
+          "addCanonicalUrl_editComment": false,
+          "addCanonicalUrl_editTag": true,
+          "addCommentToTask_setTaskDeadline": false,
+          "approveOrRejectTaskReview_compareTime": false,
+          "approveOrRejectTaskReview_projectCustomWorkflows": false,
+          "approveOrRejectTaskReview_setTaskPriority": false,
+          "assignTaskToProject_assignTaskToUser": false
+        },
+        "self": {
+          "addAltTextToImage_postPerformanceReport": false,
+          "addCanonicalUrl_addComment": true,
+          "addCanonicalUrl_assignPostToCategory": false,
+          "addCanonicalUrl_editComment": false,
+          "addCanonicalUrl_editTag": false,
+          "addCommentToTask_setTaskDeadline": false,
+          "approveOrRejectTaskReview_compareTime": false,
+          "approveOrRejectTaskReview_projectCustomWorkflows": false,
+          "approveOrRejectTaskReview_setTaskPriority": false,
+          "assignTaskToProject_assignTaskToUser": false
+        }
+      },
+      "billing": {
+        "total": {
+          "calls": 97,
+          "settled_usd": 0.026475,
+          "exposure_usd": 0.026475,
+          "unsettled_calls": 0,
+          "cap_usd": 0.55,
+          "stop_usd": 0.55,
+          "halted": 0
+        },
+        "per_stage": {
+          "prepare/build-b/repair": {
+            "calls": 14,
+            "settled_microusd": 4489,
+            "exposure_microusd": 4489,
+            "unresolved": 0,
+            "prompt_tokens": 29815,
+            "completion_tokens": 16132
+          },
+          "prepare/build-b/first": {
+            "calls": 15,
+            "settled_microusd": 3227,
+            "exposure_microusd": 3227,
+            "unresolved": 0,
+            "prompt_tokens": 8619,
+            "completion_tokens": 19482
+          },
+          "plan/build-b": {
+            "calls": 10,
+            "settled_microusd": 742,
+            "exposure_microusd": 742,
+            "unresolved": 0,
+            "prompt_tokens": 8902,
+            "completion_tokens": 191
+          },
+          "direct/direct/repair": {
+            "calls": 10,
+            "settled_microusd": 5993,
+            "exposure_microusd": 5993,
+            "unresolved": 0,
+            "prompt_tokens": 36859,
+            "completion_tokens": 23386
+          },
+          "direct/direct/first": {
+            "calls": 10,
+            "settled_microusd": 3828,
+            "exposure_microusd": 3828,
+            "unresolved": 0,
+            "prompt_tokens": 9183,
+            "completion_tokens": 23766
+          },
+          "prepare/build-a/repair": {
+            "calls": 13,
+            "settled_microusd": 4236,
+            "exposure_microusd": 4236,
+            "unresolved": 0,
+            "prompt_tokens": 27110,
+            "completion_tokens": 15838
+          },
+          "prepare/build-a/first": {
+            "calls": 15,
+            "settled_microusd": 3213,
+            "exposure_microusd": 3213,
+            "unresolved": 0,
+            "prompt_tokens": 8619,
+            "completion_tokens": 19355
+          },
+          "plan/build-a": {
+            "calls": 10,
+            "settled_microusd": 747,
+            "exposure_microusd": 747,
+            "unresolved": 0,
+            "prompt_tokens": 8902,
+            "completion_tokens": 227
+          }
+        }
+      }
+    }
+  },
+  "preceding_batch_sha256": "0217b00c80388771b47508bbc2f846ff57a2ce9a57e815b6d4a2eed256a97a25",
+  "public_contract_audit": {
+    "blogging/addAltTextToImage": {
+      "n_cases": 2,
+      "actions": {
+        "change": 2,
+        "click": 2
+      },
+      "requests": {
+        "post": 2
+      },
+      "query_apis": [
+        "getByLabelText",
+        "getByText"
+      ]
+    },
+    "blogging/postPerformanceReport": {
+      "n_cases": 2,
+      "actions": {
+        "click": 2
+      },
+      "requests": {
+        "get": 2
+      },
+      "query_apis": [
+        "getByText"
+      ]
+    },
+    "blogging/addCanonicalUrl": {
+      "n_cases": 2,
+      "actions": {
+        "change": 2,
+        "click": 2
+      },
+      "requests": {
+        "post": 2
+      },
+      "query_apis": [
+        "getByLabelText",
+        "getByText"
+      ]
+    },
+    "blogging/addComment": {
+      "n_cases": 2,
+      "actions": {
+        "change": 2,
+        "click": 2
+      },
+      "requests": {
+        "post": 2
+      },
+      "query_apis": [
+        "getByPlaceholderText",
+        "getByText"
+      ]
+    },
+    "blogging/assignPostToCategory": {
+      "n_cases": 2,
+      "actions": {
+        "change": 2,
+        "click": 2
+      },
+      "requests": {
+        "post": 2
+      },
+      "query_apis": [
+        "getByLabelText",
+        "getByText"
+      ]
+    },
+    "blogging/editComment": {
+      "n_cases": 2,
+      "actions": {
+        "change": 2,
+        "click": 2
+      },
+      "requests": {
+        "put": 2
+      },
+      "query_apis": [
+        "getByPlaceholderText",
+        "getByText"
+      ]
+    },
+    "blogging/editTag": {
+      "n_cases": 2,
+      "actions": {
+        "change": 2,
+        "click": 2
+      },
+      "requests": {
+        "put": 2
+      },
+      "query_apis": [
+        "getByLabelText",
+        "getByText"
+      ]
+    },
+    "taskmanagement/addCommentToTask": {
+      "n_cases": 2,
+      "actions": {
+        "change": 2,
+        "click": 2
+      },
+      "requests": {
+        "post": 2
+      },
+      "query_apis": [
+        "getByTestId",
+        "getByText"
+      ]
+    },
+    "taskmanagement/setTaskDeadline": {
+      "n_cases": 2,
+      "actions": {
+        "change": 2,
+        "click": 2
+      },
+      "requests": {
+        "post": 2
+      },
+      "query_apis": [
+        "getByPlaceholderText",
+        "getByText"
+      ]
+    },
+    "taskmanagement/approveOrRejectTaskReview": {
+      "n_cases": 2,
+      "actions": {
+        "change": 2,
+        "click": 2
+      },
+      "requests": {
+        "post": 2
+      },
+      "query_apis": [
+        "getByTestId",
+        "getByText"
+      ]
+    },
+    "taskmanagement/compareTime": {
+      "n_cases": 2,
+      "actions": {},
+      "requests": {
+        "get": 2
+      },
+      "query_apis": [
+        "getByText"
+      ]
+    },
+    "taskmanagement/projectCustomWorkflows": {
+      "n_cases": 2,
+      "actions": {
+        "change": 2,
+        "click": 2
+      },
+      "requests": {
+        "post": 2
+      },
+      "query_apis": [
+        "getByLabelText",
+        "getByRole",
+        "getByText"
+      ]
+    },
+    "taskmanagement/setTaskPriority": {
+      "n_cases": 2,
+      "actions": {
+        "change": 2,
+        "click": 2
+      },
+      "requests": {
+        "post": 2
+      },
+      "query_apis": [
+        "getByTestId",
+        "getByText"
+      ]
+    },
+    "taskmanagement/assignTaskToProject": {
+      "n_cases": 2,
+      "actions": {
+        "change": 4,
+        "click": 2
+      },
+      "requests": {
+        "post": 2
+      },
+      "query_apis": [
+        "getByTestId",
+        "getByText"
+      ]
+    },
+    "taskmanagement/assignTaskToUser": {
+      "n_cases": 2,
+      "actions": {
+        "change": 4,
+        "click": 2
+      },
+      "requests": {
+        "post": 2
+      },
+      "query_apis": [
+        "getByTestId",
+        "getByText"
+      ]
+    },
+    "addAltTextToImage_postPerformanceReport": {
+      "n_cases": 4,
+      "actions": {
+        "change": 2,
+        "click": 4
+      },
+      "requests": {
+        "post": 2,
+        "get": 2
+      },
+      "query_apis": [
+        "getByLabelText",
+        "getByText"
+      ]
+    },
+    "addCanonicalUrl_addComment": {
+      "n_cases": 4,
+      "actions": {
+        "change": 4,
+        "click": 4
+      },
+      "requests": {
+        "post": 4
+      },
+      "query_apis": [
+        "getByLabelText",
+        "getByPlaceholderText",
+        "getByText"
+      ]
+    },
+    "addCanonicalUrl_assignPostToCategory": {
+      "n_cases": 4,
+      "actions": {
+        "change": 4,
+        "click": 4
+      },
+      "requests": {
+        "post": 4
+      },
+      "query_apis": [
+        "getByLabelText",
+        "getByText"
+      ]
+    },
+    "addCanonicalUrl_editComment": {
+      "n_cases": 4,
+      "actions": {
+        "change": 4,
+        "click": 4
+      },
+      "requests": {
+        "post": 2,
+        "put": 2
+      },
+      "query_apis": [
+        "getByLabelText",
+        "getByPlaceholderText",
+        "getByText"
+      ]
+    },
+    "addCanonicalUrl_editTag": {
+      "n_cases": 4,
+      "actions": {
+        "change": 4,
+        "click": 4
+      },
+      "requests": {
+        "post": 2,
+        "put": 2
+      },
+      "query_apis": [
+        "getByLabelText",
+        "getByText"
+      ]
+    },
+    "addCommentToTask_setTaskDeadline": {
+      "n_cases": 4,
+      "actions": {
+        "change": 4,
+        "click": 4
+      },
+      "requests": {
+        "post": 4
+      },
+      "query_apis": [
+        "getByPlaceholderText",
+        "getByTestId",
+        "getByText"
+      ]
+    },
+    "approveOrRejectTaskReview_compareTime": {
+      "n_cases": 4,
+      "actions": {
+        "change": 2,
+        "click": 2
+      },
+      "requests": {
+        "post": 2,
+        "get": 2
+      },
+      "query_apis": [
+        "getByTestId",
+        "getByText"
+      ]
+    },
+    "approveOrRejectTaskReview_projectCustomWorkflows": {
+      "n_cases": 4,
+      "actions": {
+        "change": 4,
+        "click": 4
+      },
+      "requests": {
+        "post": 4
+      },
+      "query_apis": [
+        "getByLabelText",
+        "getByRole",
+        "getByTestId",
+        "getByText"
+      ]
+    },
+    "approveOrRejectTaskReview_setTaskPriority": {
+      "n_cases": 4,
+      "actions": {
+        "change": 4,
+        "click": 4
+      },
+      "requests": {
+        "post": 4
+      },
+      "query_apis": [
+        "getByTestId",
+        "getByText"
+      ]
+    },
+    "assignTaskToProject_assignTaskToUser": {
+      "n_cases": 4,
+      "actions": {
+        "change": 8,
+        "click": 4
+      },
+      "requests": {
+        "post": 4
+      },
+      "query_apis": [
+        "getByTestId",
+        "getByText"
+      ]
+    }
+  },
+  "runtime_amendment": {
+    "utc": "2026-11-24T10:59:40.420410+00:00",
+    "amendment": {
+      "protocol_sha256": "b26efd39983499d376586d780c75fe2cec8321043161b26d468905e4b77d978d",
+      "code_sha256": "592d933c3227022a06724fc8572df8ff1bba3814ea74c2b4748fc86fce59645d",
+      "original_registration_sha256": "a7da93c4aff7883b6350ba74a8a3aff91502523d81efcc05bc02253dc9788941"
+    }
+  },
+  "uncaught_programs": {
+    "qwen9/direct/blogging/addAltTextToImage_postPerformanceReport/repair/singles/addAltTextToImage": {
+      "original_log_sha256": "f9bf428ea6d43d53e0459bf3d8ad13b5442dab819b09997590a4845423c8b7a5",
+      "original_error": "TypeError: Cannot use 'in' operator to search for 'href' in null",
+      "replay_log_sha256": "1d8a119a8a6b1bf7f599ea317defb76e5ab8048f80b41f187c6da283e4bf89ae",
+      "report_sha256": "019b5d69ded86056a3c7f243270986fea09712d3ae0d83a7437791d358a178d9",
+      "replay_exit": 1
+    },
+    "qwen9/direct/blogging/addAltTextToImage_postPerformanceReport/repair/singles/postPerformanceReport": {
+      "original_log_sha256": "5581644f6d46226393b56354c9d7380b5a4f606e3103468ef43ec066c47ab37c",
+      "original_error": "TypeError: Cannot use 'in' operator to search for 'href' in null",
+      "replay_log_sha256": "bd548eb6880bf47d0bd26c56fb32c567373e470d96e82c2a8e4c8f62641f798b",
+      "report_sha256": "340bc572cc2a4bad78d0630dcc0b7270cd9c74fbea0e686a9f845c3c6f135a37",
+      "replay_exit": 1
+    },
+    "scores/addAltTextToImage_postPerformanceReport/54a8b1c35a43395aa18dc390825bcf55dd5b68342b5df0ce7ddd3a036e92f463": {
+      "original_log_sha256": "f716ec262e16c71fca6fd5a7f356abb10d147150d00264e4527d22c56c8c14c0",
+      "original_error": "TypeError: Cannot use 'in' operator to search for 'href' in null",
+      "replay_log_sha256": "a190d1cbd54111f120df9ec5fe53856985b41563c7b40a4c33edeeee95b534b5",
+      "report_sha256": "223225c8d0c0d76d43aa2dcc2a0a92d05f8ab2ffc44724bf4ed1a963889d2677",
+      "replay_exit": 1
+    }
+  }
+}

@@ -1,0 +1,2350 @@
+{
+  "parent_result_sha256": "0d4846c9f736329db020984f8d64b626ea5f8090cb06624a9902dca180eab793",
+  "registered": {
+    "utc": "2026-11-24T10:59:58.339223+00:00",
+    "protocol_sha256": "e1c02e3b4cf20be33335776dc6c831e9ef77760bc2afd0242227825e4cd292de",
+    "parent_seal_sha256": "e8508bc60605ad67231cb3071ffee8f148357b6f719bdbadaf9accc6f36601c8"
+  },
+  "sealed_utc": "2026-11-24T11:01:55.923213+00:00",
+  "seal_sha256": "2a183e970a243618d276c49007604480299cc8bcd9ce75bb11dddf63c04d4e60",
+  "sources": {
+    "studies/public_library_transfer/self_refinement/todomvc/verified_controller/switch_scope/PROTOCOL.md": "e1c02e3b4cf20be33335776dc6c831e9ef77760bc2afd0242227825e4cd292de",
+    "studies/public_library_transfer/self_refinement/todomvc/verified_controller/switch_scope/repair.cjs": "5edf86ef2bd5dc75ee16e935ecaa0a993db82eb45bd7fc940b0e6a874efd769f",
+    "studies/public_library_transfer/self_refinement/todomvc/verified_controller/switch_scope/run.py": "3d23551ab78b9321066f0f923dcf02bff848ea572ef74896c84f922724e8ca6f",
+    "artifacts/benchmark-probe/WebApp1k/staging/node_modules/acorn/dist/acorn.js": "b95392d79457d0357555c5ed3e56302d074b92dff119bcf3b44179500b10e9df",
+    "artifacts/todomvc-gemma-verified-20261124/seal.json": "e8508bc60605ad67231cb3071ffee8f148357b6f719bdbadaf9accc6f36601c8"
+  },
+  "additional_model_calls": 0,
+  "rows": [
+    {
+      "group": "direct",
+      "stage": "initial",
+      "arm": "direct",
+      "task": "todo-01",
+      "status": "valid",
+      "files_sha256": "2b984d004c4e20a345e74768c7c6d097b1e27f324b5f02d2267863344d97326b",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "ffebca7fd6e24a78be46398bac47965502dd423ede684b2fd7b0e255a08bfaad"
+    },
+    {
+      "group": "direct",
+      "stage": "final",
+      "arm": "direct",
+      "task": "todo-01",
+      "status": "valid",
+      "files_sha256": "553c03df271d40c591c04ac472f64a5610d373e9e60528e81d25a81739e70361",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "c3fb278e7973610fc66652af8227d82ec818287d5c15e9729cee6e59e5f213db"
+    },
+    {
+      "group": "direct",
+      "stage": "initial",
+      "arm": "direct",
+      "task": "todo-02",
+      "status": "valid",
+      "files_sha256": "44267d9895efa1a6a50809bf4e784efadabf3e5b09a1fb626524c5ce44d78b74",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "0c99b041721442453d88d8dd40c9427eafd53d0956820aebe85df33ffca828c6"
+    },
+    {
+      "group": "direct",
+      "stage": "final",
+      "arm": "direct",
+      "task": "todo-02",
+      "status": "valid",
+      "files_sha256": "ab294cceb48caa2fee1e84e9bd82f63b99da4dc0b101f67428019f83a0e6e6b8",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "95840ad6806e8181f1a02abd5796b19e3e143995f69c607ab3d45f04a84be883"
+    },
+    {
+      "group": "direct",
+      "stage": "initial",
+      "arm": "direct",
+      "task": "todo-03",
+      "status": "valid",
+      "diagnostic": "scoped",
+      "evidence": {
+        "status": "scoped",
+        "proof": [
+          {
+            "switch_start": 526,
+            "case_index": 0,
+            "start": 574,
+            "end": 849,
+            "local": [
+              "title"
+            ]
+          },
+          {
+            "switch_start": 526,
+            "case_index": 4,
+            "start": 1317,
+            "end": 1653,
+            "local": [
+              "title"
+            ]
+          }
+        ],
+        "duplicates": {
+          "1323": "title"
+        }
+      },
+      "response_sha256": "b7a206dbdd2248751bf858232d88385118bdb1ad7609dfac5038b9d46f415033",
+      "input_source_sha256": "558477aa6fa4f84960309ae30fea5d519531f1c71594af663eacd2ee9ccb03e0",
+      "files_sha256": "cde22e50f588273f88b8880b45b8dcb91bac7fd3e0d14217c328c946abf8f27c",
+      "public_checks": {
+        "initial-state": {
+          "owners": [
+            "init"
+          ],
+          "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+          "passed": true,
+          "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":1}"
+        },
+        "restore": {
+          "owners": [
+            "init"
+          ],
+          "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+        },
+        "append": {
+          "owners": [
+            "add"
+          ],
+          "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true},{\"id\":12,\"title\":\"Third note\",\"completed\":false}]"
+        },
+        "blank": {
+          "owners": [
+            "add"
+          ],
+          "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+        },
+        "persist": {
+          "owners": [
+            "persist",
+            "add"
+          ],
+          "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true},{\"id\":12,\"title\":\"Third note\",\"completed\":false}]"
+        },
+        "view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+          "passed": true,
+          "actual": "{\"visible\":[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}],\"countText\":\"Todos left: 1\",\"allCompleted\":false,\"hasCompleted\":true,\"hasTodos\":true,\"editing\":null,\"filter\":\"all\"}"
+        },
+        "empty-view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "For an empty state, visible is empty and hasTodos is false.",
+          "passed": true,
+          "actual": "{\"visible\":[],\"countText\":\"Todos left: 0\",\"allCompleted\":true,\"hasCompleted\":false,\"hasTodos\":false,\"editing\":null,\"filter\":\"all\"}"
+        },
+        "edit": {
+          "owners": [
+            "edit"
+          ],
+          "expected": "Starting to edit id 7 sets state.editing to that id.",
+          "passed": true,
+          "actual": "7"
+        },
+        "save": {
+          "owners": [
+            "save"
+          ],
+          "expected": "Saving id 7 with a padded nonempty title trims its title and exits editing.",
+          "passed": true,
+          "actual": "[\"Renamed\",null]"
+        },
+        "cancel": {
+          "owners": [
+            "cancel"
+          ],
+          "expected": "Cancelling edit keeps the original title and exits editing.",
+          "passed": true,
+          "actual": "[\"First note\",null]"
+        }
+      },
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "895cb2a502efd7257d4bf8831a9ca0cc269c5d847e7a957edb2ae61faa09e112"
+    },
+    {
+      "group": "direct",
+      "stage": "final",
+      "arm": "direct",
+      "task": "todo-03",
+      "status": "valid",
+      "diagnostic": "scoped",
+      "evidence": {
+        "status": "scoped",
+        "proof": [
+          {
+            "switch_start": 526,
+            "case_index": 0,
+            "start": 574,
+            "end": 849,
+            "local": [
+              "title"
+            ]
+          },
+          {
+            "switch_start": 526,
+            "case_index": 4,
+            "start": 1317,
+            "end": 1653,
+            "local": [
+              "title"
+            ]
+          }
+        ],
+        "duplicates": {
+          "1323": "title"
+        }
+      },
+      "response_sha256": "b7a206dbdd2248751bf858232d88385118bdb1ad7609dfac5038b9d46f415033",
+      "input_source_sha256": "558477aa6fa4f84960309ae30fea5d519531f1c71594af663eacd2ee9ccb03e0",
+      "files_sha256": "cde22e50f588273f88b8880b45b8dcb91bac7fd3e0d14217c328c946abf8f27c",
+      "public_checks": {
+        "initial-state": {
+          "owners": [
+            "init"
+          ],
+          "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+          "passed": true,
+          "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":1}"
+        },
+        "restore": {
+          "owners": [
+            "init"
+          ],
+          "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+        },
+        "append": {
+          "owners": [
+            "add"
+          ],
+          "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true},{\"id\":12,\"title\":\"Third note\",\"completed\":false}]"
+        },
+        "blank": {
+          "owners": [
+            "add"
+          ],
+          "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+        },
+        "persist": {
+          "owners": [
+            "persist",
+            "add"
+          ],
+          "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true},{\"id\":12,\"title\":\"Third note\",\"completed\":false}]"
+        },
+        "view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+          "passed": true,
+          "actual": "{\"visible\":[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}],\"countText\":\"Todos left: 1\",\"allCompleted\":false,\"hasCompleted\":true,\"hasTodos\":true,\"editing\":null,\"filter\":\"all\"}"
+        },
+        "empty-view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "For an empty state, visible is empty and hasTodos is false.",
+          "passed": true,
+          "actual": "{\"visible\":[],\"countText\":\"Todos left: 0\",\"allCompleted\":true,\"hasCompleted\":false,\"hasTodos\":false,\"editing\":null,\"filter\":\"all\"}"
+        },
+        "edit": {
+          "owners": [
+            "edit"
+          ],
+          "expected": "Starting to edit id 7 sets state.editing to that id.",
+          "passed": true,
+          "actual": "7"
+        },
+        "save": {
+          "owners": [
+            "save"
+          ],
+          "expected": "Saving id 7 with a padded nonempty title trims its title and exits editing.",
+          "passed": true,
+          "actual": "[\"Renamed\",null]"
+        },
+        "cancel": {
+          "owners": [
+            "cancel"
+          ],
+          "expected": "Cancelling edit keeps the original title and exits editing.",
+          "passed": true,
+          "actual": "[\"First note\",null]"
+        }
+      },
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "895cb2a502efd7257d4bf8831a9ca0cc269c5d847e7a957edb2ae61faa09e112"
+    },
+    {
+      "group": "direct",
+      "stage": "initial",
+      "arm": "direct",
+      "task": "todo-04",
+      "status": "valid",
+      "files_sha256": "e57a4fa77f6b863be916756189203a2fe8a00ec1879b1612904719e67556bd85",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "8883dc990a4ac37763a329bbebc57cd1faf01c7f2dcc5b039e9ed595cea9cfbe"
+    },
+    {
+      "group": "direct",
+      "stage": "final",
+      "arm": "direct",
+      "task": "todo-04",
+      "status": "valid",
+      "files_sha256": "908f621a17e9fdfe2cb26885e5214ea43c8f8ee190741957f25b93110166ed3a",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "d18955bb166ae4879f4998ded9cf0386b59cee4f61739991dbfe3daceb6ec508"
+    },
+    {
+      "group": "direct",
+      "stage": "initial",
+      "arm": "direct",
+      "task": "todo-05",
+      "status": "valid",
+      "files_sha256": "691b2869e7031850f8cd781a3b748db9b99e7d3a2dc73267d79a6b6652e0f234",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "71d715c5b57f442ebe4638449708760a9719fbef0dd96b12a225ede21eb99b64"
+    },
+    {
+      "group": "direct",
+      "stage": "final",
+      "arm": "direct",
+      "task": "todo-05",
+      "status": "valid",
+      "files_sha256": "691b2869e7031850f8cd781a3b748db9b99e7d3a2dc73267d79a6b6652e0f234",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "71d715c5b57f442ebe4638449708760a9719fbef0dd96b12a225ede21eb99b64"
+    },
+    {
+      "group": "direct",
+      "stage": "initial",
+      "arm": "direct",
+      "task": "todo-06",
+      "status": "valid",
+      "files_sha256": "b5761c68b837ce6cb4839c57408561ebe505c3ff3f168a023ad2bfca9d071ea4",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 10,
+      "report_sha256": "2377b4b59884eba4f28ccce65763f468e40a49b58a3b203d111c1719d4309c6a"
+    },
+    {
+      "group": "direct",
+      "stage": "final",
+      "arm": "direct",
+      "task": "todo-06",
+      "status": "valid",
+      "files_sha256": "b5761c68b837ce6cb4839c57408561ebe505c3ff3f168a023ad2bfca9d071ea4",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 10,
+      "report_sha256": "2377b4b59884eba4f28ccce65763f468e40a49b58a3b203d111c1719d4309c6a"
+    },
+    {
+      "group": "direct",
+      "stage": "initial",
+      "arm": "direct",
+      "task": "todo-07",
+      "status": "valid",
+      "diagnostic": "scoped",
+      "evidence": {
+        "status": "scoped",
+        "proof": [
+          {
+            "switch_start": 526,
+            "case_index": 0,
+            "start": 574,
+            "end": 1038,
+            "local": [
+              "title"
+            ]
+          },
+          {
+            "switch_start": 526,
+            "case_index": 4,
+            "start": 1831,
+            "end": 2451,
+            "local": [
+              "title"
+            ]
+          }
+        ],
+        "duplicates": {
+          "1837": "title"
+        }
+      },
+      "response_sha256": "bc793c01e97fd3405a8a5ae8f4e46ba9f60795398742a3c206b7c616ff52e286",
+      "input_source_sha256": "f826167964018df27c5eb6bf5114218aa9ca3fd252c6f7e5a14dd8e30b231f76",
+      "files_sha256": "d517bf3e0b7e664fac3958a7db73a18235aa59d557ec558167bc8bddb9c4fb99",
+      "public_checks": {
+        "initial-state": {
+          "owners": [
+            "init"
+          ],
+          "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+          "passed": true,
+          "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":1}"
+        },
+        "restore": {
+          "owners": [
+            "init"
+          ],
+          "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+        },
+        "append": {
+          "owners": [
+            "add"
+          ],
+          "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true},{\"id\":12,\"title\":\"Third note\",\"completed\":false}]"
+        },
+        "blank": {
+          "owners": [
+            "add"
+          ],
+          "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+        },
+        "persist": {
+          "owners": [
+            "persist",
+            "add"
+          ],
+          "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true},{\"id\":12,\"title\":\"Third note\",\"completed\":false}]"
+        },
+        "view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+          "passed": true,
+          "actual": "{\"visible\":[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}],\"countText\":\"1 item left\",\"allCompleted\":false,\"hasCompleted\":true,\"hasTodos\":true,\"editing\":null,\"filter\":\"all\"}"
+        },
+        "empty-view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "For an empty state, visible is empty and hasTodos is false.",
+          "passed": true,
+          "actual": "{\"visible\":[],\"countText\":\"0 items left\",\"allCompleted\":true,\"hasCompleted\":false,\"hasTodos\":false,\"editing\":null,\"filter\":\"all\"}"
+        },
+        "count": {
+          "owners": [
+            "select"
+          ],
+          "expected": "With one active item the countText is 1 item left.",
+          "passed": true,
+          "actual": "\"1 item left\""
+        },
+        "toggle": {
+          "owners": [
+            "toggle"
+          ],
+          "expected": "Toggling id 7 marks it complete and leaves id 11 complete.",
+          "passed": true,
+          "actual": "[true,true]"
+        },
+        "edit": {
+          "owners": [
+            "edit"
+          ],
+          "expected": "Starting to edit id 7 sets state.editing to that id.",
+          "passed": true,
+          "actual": "7"
+        },
+        "save": {
+          "owners": [
+            "save"
+          ],
+          "expected": "Saving id 7 with a padded nonempty title trims its title and exits editing.",
+          "passed": true,
+          "actual": "[\"Renamed\",null]"
+        },
+        "cancel": {
+          "owners": [
+            "cancel"
+          ],
+          "expected": "Cancelling edit keeps the original title and exits editing.",
+          "passed": true,
+          "actual": "[\"First note\",null]"
+        },
+        "clear": {
+          "owners": [
+            "clearCompleted"
+          ],
+          "expected": "Clearing completed todos leaves only id 7.",
+          "passed": true,
+          "actual": "[7]"
+        }
+      },
+      "passed": true,
+      "official_tests": 16,
+      "report_sha256": "2cc005284608ca80a847bcbf5e51cf63e47b7321c02b98704514367257c68dac"
+    },
+    {
+      "group": "direct",
+      "stage": "final",
+      "arm": "direct",
+      "task": "todo-07",
+      "status": "valid",
+      "diagnostic": "scoped",
+      "evidence": {
+        "status": "scoped",
+        "proof": [
+          {
+            "switch_start": 526,
+            "case_index": 0,
+            "start": 574,
+            "end": 1038,
+            "local": [
+              "title"
+            ]
+          },
+          {
+            "switch_start": 526,
+            "case_index": 4,
+            "start": 1831,
+            "end": 2451,
+            "local": [
+              "title"
+            ]
+          }
+        ],
+        "duplicates": {
+          "1837": "title"
+        }
+      },
+      "response_sha256": "bc793c01e97fd3405a8a5ae8f4e46ba9f60795398742a3c206b7c616ff52e286",
+      "input_source_sha256": "f826167964018df27c5eb6bf5114218aa9ca3fd252c6f7e5a14dd8e30b231f76",
+      "files_sha256": "d517bf3e0b7e664fac3958a7db73a18235aa59d557ec558167bc8bddb9c4fb99",
+      "public_checks": {
+        "initial-state": {
+          "owners": [
+            "init"
+          ],
+          "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+          "passed": true,
+          "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":1}"
+        },
+        "restore": {
+          "owners": [
+            "init"
+          ],
+          "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+        },
+        "append": {
+          "owners": [
+            "add"
+          ],
+          "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true},{\"id\":12,\"title\":\"Third note\",\"completed\":false}]"
+        },
+        "blank": {
+          "owners": [
+            "add"
+          ],
+          "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+        },
+        "persist": {
+          "owners": [
+            "persist",
+            "add"
+          ],
+          "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true},{\"id\":12,\"title\":\"Third note\",\"completed\":false}]"
+        },
+        "view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+          "passed": true,
+          "actual": "{\"visible\":[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}],\"countText\":\"1 item left\",\"allCompleted\":false,\"hasCompleted\":true,\"hasTodos\":true,\"editing\":null,\"filter\":\"all\"}"
+        },
+        "empty-view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "For an empty state, visible is empty and hasTodos is false.",
+          "passed": true,
+          "actual": "{\"visible\":[],\"countText\":\"0 items left\",\"allCompleted\":true,\"hasCompleted\":false,\"hasTodos\":false,\"editing\":null,\"filter\":\"all\"}"
+        },
+        "count": {
+          "owners": [
+            "select"
+          ],
+          "expected": "With one active item the countText is 1 item left.",
+          "passed": true,
+          "actual": "\"1 item left\""
+        },
+        "toggle": {
+          "owners": [
+            "toggle"
+          ],
+          "expected": "Toggling id 7 marks it complete and leaves id 11 complete.",
+          "passed": true,
+          "actual": "[true,true]"
+        },
+        "edit": {
+          "owners": [
+            "edit"
+          ],
+          "expected": "Starting to edit id 7 sets state.editing to that id.",
+          "passed": true,
+          "actual": "7"
+        },
+        "save": {
+          "owners": [
+            "save"
+          ],
+          "expected": "Saving id 7 with a padded nonempty title trims its title and exits editing.",
+          "passed": true,
+          "actual": "[\"Renamed\",null]"
+        },
+        "cancel": {
+          "owners": [
+            "cancel"
+          ],
+          "expected": "Cancelling edit keeps the original title and exits editing.",
+          "passed": true,
+          "actual": "[\"First note\",null]"
+        },
+        "clear": {
+          "owners": [
+            "clearCompleted"
+          ],
+          "expected": "Clearing completed todos leaves only id 7.",
+          "passed": true,
+          "actual": "[7]"
+        }
+      },
+      "passed": true,
+      "official_tests": 16,
+      "report_sha256": "2cc005284608ca80a847bcbf5e51cf63e47b7321c02b98704514367257c68dac"
+    },
+    {
+      "group": "direct",
+      "stage": "initial",
+      "arm": "direct",
+      "task": "todo-08",
+      "status": "valid",
+      "diagnostic": "scoped",
+      "evidence": {
+        "status": "scoped",
+        "proof": [
+          {
+            "switch_start": 526,
+            "case_index": 0,
+            "start": 574,
+            "end": 842,
+            "local": [
+              "title"
+            ]
+          },
+          {
+            "switch_start": 526,
+            "case_index": 4,
+            "start": 1275,
+            "end": 1604,
+            "local": [
+              "title"
+            ]
+          }
+        ],
+        "duplicates": {
+          "1281": "title"
+        }
+      },
+      "response_sha256": "a5ab429ec28efbb451b18231b4fafab90b262cad213661c51ec16300b8bc203c",
+      "input_source_sha256": "655ab735497baaf12e15ea464d626dce1b60f556f483c7d7a552a64baf82c4f7",
+      "files_sha256": "5208894013b4ef70a0ce94e06d19f0b9a0daa56dfdfc8a49425369c455ce4c47",
+      "public_checks": {
+        "initial-state": {
+          "owners": [
+            "init"
+          ],
+          "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+          "passed": true,
+          "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":1}"
+        },
+        "restore": {
+          "owners": [
+            "init"
+          ],
+          "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+        },
+        "append": {
+          "owners": [
+            "add"
+          ],
+          "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true},{\"id\":12,\"title\":\"Third note\",\"completed\":false}]"
+        },
+        "blank": {
+          "owners": [
+            "add"
+          ],
+          "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+        },
+        "persist": {
+          "owners": [
+            "persist",
+            "add"
+          ],
+          "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true},{\"id\":12,\"title\":\"Third note\",\"completed\":false}]"
+        },
+        "view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+          "passed": true,
+          "actual": "{\"visible\":[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}],\"countText\":\"2 items left\",\"allCompleted\":false,\"hasCompleted\":true,\"hasTodos\":true,\"editing\":null,\"filter\":\"all\"}"
+        },
+        "empty-view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "For an empty state, visible is empty and hasTodos is false.",
+          "passed": true,
+          "actual": "{\"visible\":[],\"countText\":\"0 items left\",\"allCompleted\":true,\"hasCompleted\":false,\"hasTodos\":false,\"editing\":null,\"filter\":\"all\"}"
+        },
+        "count": {
+          "owners": [
+            "select"
+          ],
+          "expected": "With one active item the countText is 1 item left.",
+          "passed": false,
+          "actual": "\"2 items left\""
+        },
+        "toggle": {
+          "owners": [
+            "toggle"
+          ],
+          "expected": "Toggling id 7 marks it complete and leaves id 11 complete.",
+          "passed": true,
+          "actual": "[true,true]"
+        },
+        "toggle-all": {
+          "owners": [
+            "toggleAll"
+          ],
+          "expected": "With one active and one completed item, toggleAll marks both complete.",
+          "passed": false,
+          "actual": "[null,null]"
+        },
+        "edit": {
+          "owners": [
+            "edit"
+          ],
+          "expected": "Starting to edit id 7 sets state.editing to that id.",
+          "passed": true,
+          "actual": "7"
+        },
+        "save": {
+          "owners": [
+            "save"
+          ],
+          "expected": "Saving id 7 with a padded nonempty title trims its title and exits editing.",
+          "passed": true,
+          "actual": "[\"Renamed\",null]"
+        },
+        "cancel": {
+          "owners": [
+            "cancel"
+          ],
+          "expected": "Cancelling edit keeps the original title and exits editing.",
+          "passed": true,
+          "actual": "[\"First note\",null]"
+        },
+        "clear": {
+          "owners": [
+            "clearCompleted"
+          ],
+          "expected": "Clearing completed todos leaves only id 7.",
+          "passed": true,
+          "actual": "[7]"
+        },
+        "route": {
+          "owners": [
+            "route"
+          ],
+          "expected": "The completed route is recorded in the state filter.",
+          "passed": true,
+          "actual": "\"completed\""
+        },
+        "filtered-view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "Selecting the completed route shows only the completed item.",
+          "passed": true,
+          "actual": "[11]"
+        }
+      },
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "1a53645efdeb487f0083262025e98fc5e7663148058f4beb32c1b137298049dc"
+    },
+    {
+      "group": "direct",
+      "stage": "final",
+      "arm": "direct",
+      "task": "todo-08",
+      "status": "valid",
+      "diagnostic": "scoped",
+      "evidence": {
+        "status": "scoped",
+        "proof": [
+          {
+            "switch_start": 526,
+            "case_index": 0,
+            "start": 574,
+            "end": 842,
+            "local": [
+              "title"
+            ]
+          },
+          {
+            "switch_start": 526,
+            "case_index": 4,
+            "start": 1275,
+            "end": 1604,
+            "local": [
+              "title"
+            ]
+          }
+        ],
+        "duplicates": {
+          "1281": "title"
+        }
+      },
+      "response_sha256": "a5ab429ec28efbb451b18231b4fafab90b262cad213661c51ec16300b8bc203c",
+      "input_source_sha256": "655ab735497baaf12e15ea464d626dce1b60f556f483c7d7a552a64baf82c4f7",
+      "files_sha256": "5208894013b4ef70a0ce94e06d19f0b9a0daa56dfdfc8a49425369c455ce4c47",
+      "public_checks": {
+        "initial-state": {
+          "owners": [
+            "init"
+          ],
+          "expected": "Empty list, all filter, no editing, and numeric nextId when storage is empty.",
+          "passed": true,
+          "actual": "{\"todos\":[],\"filter\":\"all\",\"editing\":null,\"nextId\":1}"
+        },
+        "restore": {
+          "owners": [
+            "init"
+          ],
+          "expected": "Initialize from the two ordered {id,title,completed} records in react-todos. Preserve their values.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+        },
+        "append": {
+          "owners": [
+            "add"
+          ],
+          "expected": "Add a trimmed third active item with an unused ID; retain the two earlier items.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true},{\"id\":12,\"title\":\"Third note\",\"completed\":false}]"
+        },
+        "blank": {
+          "owners": [
+            "add"
+          ],
+          "expected": "Ignore a whitespace-only title without changing the two existing todos.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}]"
+        },
+        "persist": {
+          "owners": [
+            "persist",
+            "add"
+          ],
+          "expected": "After adding Third note, react-todos contains three ordered records with id,title,completed; no editing state in the stored array.",
+          "passed": true,
+          "actual": "[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true},{\"id\":12,\"title\":\"Third note\",\"completed\":false}]"
+        },
+        "view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "View lists both items in order and reports hasTodos true, allCompleted false, hasCompleted true, editing null, filter all.",
+          "passed": true,
+          "actual": "{\"visible\":[{\"id\":7,\"title\":\"First note\",\"completed\":false},{\"id\":11,\"title\":\"Second note\",\"completed\":true}],\"countText\":\"2 items left\",\"allCompleted\":false,\"hasCompleted\":true,\"hasTodos\":true,\"editing\":null,\"filter\":\"all\"}"
+        },
+        "empty-view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "For an empty state, visible is empty and hasTodos is false.",
+          "passed": true,
+          "actual": "{\"visible\":[],\"countText\":\"0 items left\",\"allCompleted\":true,\"hasCompleted\":false,\"hasTodos\":false,\"editing\":null,\"filter\":\"all\"}"
+        },
+        "count": {
+          "owners": [
+            "select"
+          ],
+          "expected": "With one active item the countText is 1 item left.",
+          "passed": false,
+          "actual": "\"2 items left\""
+        },
+        "toggle": {
+          "owners": [
+            "toggle"
+          ],
+          "expected": "Toggling id 7 marks it complete and leaves id 11 complete.",
+          "passed": true,
+          "actual": "[true,true]"
+        },
+        "toggle-all": {
+          "owners": [
+            "toggleAll"
+          ],
+          "expected": "With one active and one completed item, toggleAll marks both complete.",
+          "passed": false,
+          "actual": "[null,null]"
+        },
+        "edit": {
+          "owners": [
+            "edit"
+          ],
+          "expected": "Starting to edit id 7 sets state.editing to that id.",
+          "passed": true,
+          "actual": "7"
+        },
+        "save": {
+          "owners": [
+            "save"
+          ],
+          "expected": "Saving id 7 with a padded nonempty title trims its title and exits editing.",
+          "passed": true,
+          "actual": "[\"Renamed\",null]"
+        },
+        "cancel": {
+          "owners": [
+            "cancel"
+          ],
+          "expected": "Cancelling edit keeps the original title and exits editing.",
+          "passed": true,
+          "actual": "[\"First note\",null]"
+        },
+        "clear": {
+          "owners": [
+            "clearCompleted"
+          ],
+          "expected": "Clearing completed todos leaves only id 7.",
+          "passed": true,
+          "actual": "[7]"
+        },
+        "route": {
+          "owners": [
+            "route"
+          ],
+          "expected": "The completed route is recorded in the state filter.",
+          "passed": true,
+          "actual": "\"completed\""
+        },
+        "filtered-view": {
+          "owners": [
+            "select"
+          ],
+          "expected": "Selecting the completed route shows only the completed item.",
+          "passed": true,
+          "actual": "[11]"
+        }
+      },
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "1a53645efdeb487f0083262025e98fc5e7663148058f4beb32c1b137298049dc"
+    },
+    {
+      "group": "A",
+      "stage": "initial",
+      "arm": "fixed",
+      "task": "todo-01",
+      "status": "valid",
+      "files_sha256": "fe514f5ae7e2a57d73992fcbf6dde6af7115070eaf33aad09fdedb7b4f86d076",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "b3ae58613c8fe728846fc14e6b5418a13eb292abc48aaf33825a656869e328bd"
+    },
+    {
+      "group": "A",
+      "stage": "initial",
+      "arm": "planned",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "fe514f5ae7e2a57d73992fcbf6dde6af7115070eaf33aad09fdedb7b4f86d076",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "b3ae58613c8fe728846fc14e6b5418a13eb292abc48aaf33825a656869e328bd"
+    },
+    {
+      "group": "A",
+      "stage": "initial",
+      "arm": "fixed",
+      "task": "todo-02",
+      "status": "valid",
+      "files_sha256": "fe514f5ae7e2a57d73992fcbf6dde6af7115070eaf33aad09fdedb7b4f86d076",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "a26246b0e95e3dbfe23f7916acfb5f32e6782f793bd57a2be7e822aaf7c89a5d"
+    },
+    {
+      "group": "A",
+      "stage": "initial",
+      "arm": "planned",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "fe514f5ae7e2a57d73992fcbf6dde6af7115070eaf33aad09fdedb7b4f86d076",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "a26246b0e95e3dbfe23f7916acfb5f32e6782f793bd57a2be7e822aaf7c89a5d"
+    },
+    {
+      "group": "A",
+      "stage": "initial",
+      "arm": "fixed",
+      "task": "todo-03",
+      "status": "valid",
+      "files_sha256": "fe514f5ae7e2a57d73992fcbf6dde6af7115070eaf33aad09fdedb7b4f86d076",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "485ca19399456034dd2f66e34e80e3ae69e4cf4fe8b3b37b9f0431ac7103182a"
+    },
+    {
+      "group": "A",
+      "stage": "initial",
+      "arm": "planned",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "fe514f5ae7e2a57d73992fcbf6dde6af7115070eaf33aad09fdedb7b4f86d076",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "485ca19399456034dd2f66e34e80e3ae69e4cf4fe8b3b37b9f0431ac7103182a"
+    },
+    {
+      "group": "A",
+      "stage": "initial",
+      "arm": "fixed",
+      "task": "todo-04",
+      "status": "valid",
+      "files_sha256": "fe514f5ae7e2a57d73992fcbf6dde6af7115070eaf33aad09fdedb7b4f86d076",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "fbb6e1d3a8ebd370406eecda83589b67f142ac2897a3a345133c60a3912277e4"
+    },
+    {
+      "group": "A",
+      "stage": "initial",
+      "arm": "planned",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "fe514f5ae7e2a57d73992fcbf6dde6af7115070eaf33aad09fdedb7b4f86d076",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "fbb6e1d3a8ebd370406eecda83589b67f142ac2897a3a345133c60a3912277e4"
+    },
+    {
+      "group": "A",
+      "stage": "initial",
+      "arm": "fixed",
+      "task": "todo-05",
+      "status": "valid",
+      "files_sha256": "fe514f5ae7e2a57d73992fcbf6dde6af7115070eaf33aad09fdedb7b4f86d076",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "cadf644df60234d4722f433ec9065ecb2923843d38ee2ed510692122a8a8cec6"
+    },
+    {
+      "group": "A",
+      "stage": "initial",
+      "arm": "planned",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "fe514f5ae7e2a57d73992fcbf6dde6af7115070eaf33aad09fdedb7b4f86d076",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "cadf644df60234d4722f433ec9065ecb2923843d38ee2ed510692122a8a8cec6"
+    },
+    {
+      "group": "A",
+      "stage": "initial",
+      "arm": "fixed",
+      "task": "todo-06",
+      "status": "valid",
+      "files_sha256": "fe514f5ae7e2a57d73992fcbf6dde6af7115070eaf33aad09fdedb7b4f86d076",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "d53cc15874cefe3c727e6a1c2cd85b86f1aa704eea7c73550ab1406c6fde9949"
+    },
+    {
+      "group": "A",
+      "stage": "initial",
+      "arm": "planned",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "fe514f5ae7e2a57d73992fcbf6dde6af7115070eaf33aad09fdedb7b4f86d076",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "d53cc15874cefe3c727e6a1c2cd85b86f1aa704eea7c73550ab1406c6fde9949"
+    },
+    {
+      "group": "A",
+      "stage": "initial",
+      "arm": "fixed",
+      "task": "todo-07",
+      "status": "valid",
+      "files_sha256": "fe514f5ae7e2a57d73992fcbf6dde6af7115070eaf33aad09fdedb7b4f86d076",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "a1a274c1f6c4c85cd860eaf6d1cf81af26b823af15231cb365fd2720fdd997ac"
+    },
+    {
+      "group": "A",
+      "stage": "initial",
+      "arm": "planned",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "fe514f5ae7e2a57d73992fcbf6dde6af7115070eaf33aad09fdedb7b4f86d076",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "a1a274c1f6c4c85cd860eaf6d1cf81af26b823af15231cb365fd2720fdd997ac"
+    },
+    {
+      "group": "A",
+      "stage": "initial",
+      "arm": "fixed",
+      "task": "todo-08",
+      "status": "valid",
+      "files_sha256": "fe514f5ae7e2a57d73992fcbf6dde6af7115070eaf33aad09fdedb7b4f86d076",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "0048812ae2aba2fd62482fef26da0860f500602007ddc14a7a8645fcd380c2ca"
+    },
+    {
+      "group": "A",
+      "stage": "initial",
+      "arm": "planned",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "fe514f5ae7e2a57d73992fcbf6dde6af7115070eaf33aad09fdedb7b4f86d076",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "0048812ae2aba2fd62482fef26da0860f500602007ddc14a7a8645fcd380c2ca"
+    },
+    {
+      "group": "A",
+      "stage": "final",
+      "arm": "fixed",
+      "task": "todo-01",
+      "status": "valid",
+      "files_sha256": "4b6e9620d8000c060b37190667204f9569979a2f4a79111c479ed1f82baf138c",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "c9339d8becbfb9f4222f5b3de0d9076c7fe6abc219393f036c8e4760329b02da"
+    },
+    {
+      "group": "A",
+      "stage": "final",
+      "arm": "planned",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "4b6e9620d8000c060b37190667204f9569979a2f4a79111c479ed1f82baf138c",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 4,
+      "report_sha256": "c9339d8becbfb9f4222f5b3de0d9076c7fe6abc219393f036c8e4760329b02da"
+    },
+    {
+      "group": "A",
+      "stage": "final",
+      "arm": "fixed",
+      "task": "todo-02",
+      "status": "valid",
+      "files_sha256": "4b6e9620d8000c060b37190667204f9569979a2f4a79111c479ed1f82baf138c",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "ba6ea0a738b1d1fa688598d69121b34802bf86e878d870efe584f58a7bc9099a"
+    },
+    {
+      "group": "A",
+      "stage": "final",
+      "arm": "planned",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "4b6e9620d8000c060b37190667204f9569979a2f4a79111c479ed1f82baf138c",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 5,
+      "report_sha256": "ba6ea0a738b1d1fa688598d69121b34802bf86e878d870efe584f58a7bc9099a"
+    },
+    {
+      "group": "A",
+      "stage": "final",
+      "arm": "fixed",
+      "task": "todo-03",
+      "status": "valid",
+      "files_sha256": "4b6e9620d8000c060b37190667204f9569979a2f4a79111c479ed1f82baf138c",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "0396334ed5652686271a14642bc12943593c6235220d1c9bafa607a6d0d147be"
+    },
+    {
+      "group": "A",
+      "stage": "final",
+      "arm": "planned",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "4b6e9620d8000c060b37190667204f9569979a2f4a79111c479ed1f82baf138c",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "0396334ed5652686271a14642bc12943593c6235220d1c9bafa607a6d0d147be"
+    },
+    {
+      "group": "A",
+      "stage": "final",
+      "arm": "fixed",
+      "task": "todo-04",
+      "status": "valid",
+      "files_sha256": "4b6e9620d8000c060b37190667204f9569979a2f4a79111c479ed1f82baf138c",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "ed1e5e03ff7ec2bf05eaa5f0d686657d6e68fc00d033edaa906297bface3f121"
+    },
+    {
+      "group": "A",
+      "stage": "final",
+      "arm": "planned",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "4b6e9620d8000c060b37190667204f9569979a2f4a79111c479ed1f82baf138c",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "ed1e5e03ff7ec2bf05eaa5f0d686657d6e68fc00d033edaa906297bface3f121"
+    },
+    {
+      "group": "A",
+      "stage": "final",
+      "arm": "fixed",
+      "task": "todo-05",
+      "status": "valid",
+      "files_sha256": "4b6e9620d8000c060b37190667204f9569979a2f4a79111c479ed1f82baf138c",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "beb497cc64ddf9aa99513ca6d85f4bb5c24d1971547f13cecdae0a9fe26db1db"
+    },
+    {
+      "group": "A",
+      "stage": "final",
+      "arm": "planned",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "4b6e9620d8000c060b37190667204f9569979a2f4a79111c479ed1f82baf138c",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "beb497cc64ddf9aa99513ca6d85f4bb5c24d1971547f13cecdae0a9fe26db1db"
+    },
+    {
+      "group": "A",
+      "stage": "final",
+      "arm": "fixed",
+      "task": "todo-06",
+      "status": "valid",
+      "files_sha256": "4b6e9620d8000c060b37190667204f9569979a2f4a79111c479ed1f82baf138c",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "10707f03c0ccbb7807b8ce4577b6881a132704968e9113f76c123ff78e681a88"
+    },
+    {
+      "group": "A",
+      "stage": "final",
+      "arm": "planned",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "4b6e9620d8000c060b37190667204f9569979a2f4a79111c479ed1f82baf138c",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 10,
+      "report_sha256": "10707f03c0ccbb7807b8ce4577b6881a132704968e9113f76c123ff78e681a88"
+    },
+    {
+      "group": "A",
+      "stage": "final",
+      "arm": "fixed",
+      "task": "todo-07",
+      "status": "valid",
+      "files_sha256": "4b6e9620d8000c060b37190667204f9569979a2f4a79111c479ed1f82baf138c",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "8279d528ef8d2ebb7aed3f56ed82b157491d6895b89f2341f643270d8e4ed5de"
+    },
+    {
+      "group": "A",
+      "stage": "final",
+      "arm": "planned",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "4b6e9620d8000c060b37190667204f9569979a2f4a79111c479ed1f82baf138c",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "8279d528ef8d2ebb7aed3f56ed82b157491d6895b89f2341f643270d8e4ed5de"
+    },
+    {
+      "group": "A",
+      "stage": "final",
+      "arm": "fixed",
+      "task": "todo-08",
+      "status": "valid",
+      "files_sha256": "4b6e9620d8000c060b37190667204f9569979a2f4a79111c479ed1f82baf138c",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "237e22e32195a95e0d0ae2b0e349833c22acf759ef64a2b7ccb3602fbaaf7d62"
+    },
+    {
+      "group": "A",
+      "stage": "final",
+      "arm": "planned",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "4b6e9620d8000c060b37190667204f9569979a2f4a79111c479ed1f82baf138c",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "237e22e32195a95e0d0ae2b0e349833c22acf759ef64a2b7ccb3602fbaaf7d62"
+    },
+    {
+      "group": "B",
+      "stage": "initial",
+      "arm": "fixed",
+      "task": "todo-01",
+      "status": "valid",
+      "files_sha256": "1ebe51c2a2126ba7f5f9f906de2afb7b9e304b436d65c5ed4e625ceda19215bc",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "8dfc05579351a6af85d008b49c22ee470d9bae594623ca6c21bf0a52c6792832"
+    },
+    {
+      "group": "B",
+      "stage": "initial",
+      "arm": "planned",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "1ebe51c2a2126ba7f5f9f906de2afb7b9e304b436d65c5ed4e625ceda19215bc",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "8dfc05579351a6af85d008b49c22ee470d9bae594623ca6c21bf0a52c6792832"
+    },
+    {
+      "group": "B",
+      "stage": "initial",
+      "arm": "fixed",
+      "task": "todo-02",
+      "status": "valid",
+      "files_sha256": "1ebe51c2a2126ba7f5f9f906de2afb7b9e304b436d65c5ed4e625ceda19215bc",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "5f86f0f053f3f8eac16513378551ac4bbb9a0125a9baddddcdf40d89994ba589"
+    },
+    {
+      "group": "B",
+      "stage": "initial",
+      "arm": "planned",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "1ebe51c2a2126ba7f5f9f906de2afb7b9e304b436d65c5ed4e625ceda19215bc",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "5f86f0f053f3f8eac16513378551ac4bbb9a0125a9baddddcdf40d89994ba589"
+    },
+    {
+      "group": "B",
+      "stage": "initial",
+      "arm": "fixed",
+      "task": "todo-03",
+      "status": "valid",
+      "files_sha256": "1ebe51c2a2126ba7f5f9f906de2afb7b9e304b436d65c5ed4e625ceda19215bc",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "ac00707f3fad0210f4d7efbd957e9e9c3e72edd095bc32db0acbc9fe4fe6d060"
+    },
+    {
+      "group": "B",
+      "stage": "initial",
+      "arm": "planned",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "1ebe51c2a2126ba7f5f9f906de2afb7b9e304b436d65c5ed4e625ceda19215bc",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "ac00707f3fad0210f4d7efbd957e9e9c3e72edd095bc32db0acbc9fe4fe6d060"
+    },
+    {
+      "group": "B",
+      "stage": "initial",
+      "arm": "fixed",
+      "task": "todo-04",
+      "status": "valid",
+      "files_sha256": "1ebe51c2a2126ba7f5f9f906de2afb7b9e304b436d65c5ed4e625ceda19215bc",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "d125ea05fbfc1c3a7130a2ec20bf28ec9180ce11fa230d5b0772b95f2b8693f9"
+    },
+    {
+      "group": "B",
+      "stage": "initial",
+      "arm": "planned",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "1ebe51c2a2126ba7f5f9f906de2afb7b9e304b436d65c5ed4e625ceda19215bc",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "d125ea05fbfc1c3a7130a2ec20bf28ec9180ce11fa230d5b0772b95f2b8693f9"
+    },
+    {
+      "group": "B",
+      "stage": "initial",
+      "arm": "fixed",
+      "task": "todo-05",
+      "status": "valid",
+      "files_sha256": "1ebe51c2a2126ba7f5f9f906de2afb7b9e304b436d65c5ed4e625ceda19215bc",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "db972a6520edbdcbedc807efc1111e02adecbc6bc39c48a6e04f8749edaea2e3"
+    },
+    {
+      "group": "B",
+      "stage": "initial",
+      "arm": "planned",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "1ebe51c2a2126ba7f5f9f906de2afb7b9e304b436d65c5ed4e625ceda19215bc",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "db972a6520edbdcbedc807efc1111e02adecbc6bc39c48a6e04f8749edaea2e3"
+    },
+    {
+      "group": "B",
+      "stage": "initial",
+      "arm": "fixed",
+      "task": "todo-06",
+      "status": "valid",
+      "files_sha256": "1ebe51c2a2126ba7f5f9f906de2afb7b9e304b436d65c5ed4e625ceda19215bc",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 10,
+      "report_sha256": "0356d2ec0f0cee02bfafdfbc1bf68de1dc1e82ebb2a2959004e6c997ed3dd5fb"
+    },
+    {
+      "group": "B",
+      "stage": "initial",
+      "arm": "planned",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "1ebe51c2a2126ba7f5f9f906de2afb7b9e304b436d65c5ed4e625ceda19215bc",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 10,
+      "report_sha256": "0356d2ec0f0cee02bfafdfbc1bf68de1dc1e82ebb2a2959004e6c997ed3dd5fb"
+    },
+    {
+      "group": "B",
+      "stage": "initial",
+      "arm": "fixed",
+      "task": "todo-07",
+      "status": "valid",
+      "files_sha256": "1ebe51c2a2126ba7f5f9f906de2afb7b9e304b436d65c5ed4e625ceda19215bc",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "385c39c044b2a5487ef45c45fda78c1139c73ca343aa177696c4433bbbe321c5"
+    },
+    {
+      "group": "B",
+      "stage": "initial",
+      "arm": "planned",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "1ebe51c2a2126ba7f5f9f906de2afb7b9e304b436d65c5ed4e625ceda19215bc",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "385c39c044b2a5487ef45c45fda78c1139c73ca343aa177696c4433bbbe321c5"
+    },
+    {
+      "group": "B",
+      "stage": "initial",
+      "arm": "fixed",
+      "task": "todo-08",
+      "status": "valid",
+      "files_sha256": "1ebe51c2a2126ba7f5f9f906de2afb7b9e304b436d65c5ed4e625ceda19215bc",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "205c2e368cffebc3ebbf41e19ec84c00fcfc09cd0f59c4b4fd5b75d156b434aa"
+    },
+    {
+      "group": "B",
+      "stage": "initial",
+      "arm": "planned",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "1ebe51c2a2126ba7f5f9f906de2afb7b9e304b436d65c5ed4e625ceda19215bc",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "205c2e368cffebc3ebbf41e19ec84c00fcfc09cd0f59c4b4fd5b75d156b434aa"
+    },
+    {
+      "group": "B",
+      "stage": "final",
+      "arm": "fixed",
+      "task": "todo-01",
+      "status": "valid",
+      "files_sha256": "0416462c7d98fc26e98ff4ca6074a9c921b209b02324d597e280f41e7abbcfb5",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "b461df06671e77124ad69308376b52a886489e163dccef3ff025af45e7f01cb3"
+    },
+    {
+      "group": "B",
+      "stage": "final",
+      "arm": "planned",
+      "task": "todo-01",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "0416462c7d98fc26e98ff4ca6074a9c921b209b02324d597e280f41e7abbcfb5",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 4,
+      "report_sha256": "b461df06671e77124ad69308376b52a886489e163dccef3ff025af45e7f01cb3"
+    },
+    {
+      "group": "B",
+      "stage": "final",
+      "arm": "fixed",
+      "task": "todo-02",
+      "status": "valid",
+      "files_sha256": "0416462c7d98fc26e98ff4ca6074a9c921b209b02324d597e280f41e7abbcfb5",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "5b0d8a380ec361e3cfdc76d8931d5ea135e24054dcd8cf942aa0d1fa33b27899"
+    },
+    {
+      "group": "B",
+      "stage": "final",
+      "arm": "planned",
+      "task": "todo-02",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "0416462c7d98fc26e98ff4ca6074a9c921b209b02324d597e280f41e7abbcfb5",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 5,
+      "report_sha256": "5b0d8a380ec361e3cfdc76d8931d5ea135e24054dcd8cf942aa0d1fa33b27899"
+    },
+    {
+      "group": "B",
+      "stage": "final",
+      "arm": "fixed",
+      "task": "todo-03",
+      "status": "valid",
+      "files_sha256": "0416462c7d98fc26e98ff4ca6074a9c921b209b02324d597e280f41e7abbcfb5",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "f983907c855a1e123d1d1b16adfe918ff65f09f36dbbb5c3148a812e59ec7995"
+    },
+    {
+      "group": "B",
+      "stage": "final",
+      "arm": "planned",
+      "task": "todo-03",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "0416462c7d98fc26e98ff4ca6074a9c921b209b02324d597e280f41e7abbcfb5",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 8,
+      "report_sha256": "f983907c855a1e123d1d1b16adfe918ff65f09f36dbbb5c3148a812e59ec7995"
+    },
+    {
+      "group": "B",
+      "stage": "final",
+      "arm": "fixed",
+      "task": "todo-04",
+      "status": "valid",
+      "files_sha256": "0416462c7d98fc26e98ff4ca6074a9c921b209b02324d597e280f41e7abbcfb5",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "69921505766e463761dce05ce94c0e6b3e6407b0198450f0469eb4d686ff7a0e"
+    },
+    {
+      "group": "B",
+      "stage": "final",
+      "arm": "planned",
+      "task": "todo-04",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "0416462c7d98fc26e98ff4ca6074a9c921b209b02324d597e280f41e7abbcfb5",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "69921505766e463761dce05ce94c0e6b3e6407b0198450f0469eb4d686ff7a0e"
+    },
+    {
+      "group": "B",
+      "stage": "final",
+      "arm": "fixed",
+      "task": "todo-05",
+      "status": "valid",
+      "files_sha256": "0416462c7d98fc26e98ff4ca6074a9c921b209b02324d597e280f41e7abbcfb5",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "6722a5933179ba5c803899529c1cb339ddd190be5aeb29f1ca1e78edce73ad05"
+    },
+    {
+      "group": "B",
+      "stage": "final",
+      "arm": "planned",
+      "task": "todo-05",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "0416462c7d98fc26e98ff4ca6074a9c921b209b02324d597e280f41e7abbcfb5",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 8,
+      "report_sha256": "6722a5933179ba5c803899529c1cb339ddd190be5aeb29f1ca1e78edce73ad05"
+    },
+    {
+      "group": "B",
+      "stage": "final",
+      "arm": "fixed",
+      "task": "todo-06",
+      "status": "valid",
+      "files_sha256": "0416462c7d98fc26e98ff4ca6074a9c921b209b02324d597e280f41e7abbcfb5",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 10,
+      "report_sha256": "4966b784387b39c332d24d1058f3ba37ee03538966bfc620ca726cbf59468f3c"
+    },
+    {
+      "group": "B",
+      "stage": "final",
+      "arm": "planned",
+      "task": "todo-06",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "0416462c7d98fc26e98ff4ca6074a9c921b209b02324d597e280f41e7abbcfb5",
+      "diagnostic": "unchanged",
+      "passed": true,
+      "official_tests": 10,
+      "report_sha256": "4966b784387b39c332d24d1058f3ba37ee03538966bfc620ca726cbf59468f3c"
+    },
+    {
+      "group": "B",
+      "stage": "final",
+      "arm": "fixed",
+      "task": "todo-07",
+      "status": "valid",
+      "files_sha256": "0416462c7d98fc26e98ff4ca6074a9c921b209b02324d597e280f41e7abbcfb5",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "2f50abbcca4531c531d60d2f79b0a08b805ba61c6e6b638bbd6284587755139f"
+    },
+    {
+      "group": "B",
+      "stage": "final",
+      "arm": "planned",
+      "task": "todo-07",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "0416462c7d98fc26e98ff4ca6074a9c921b209b02324d597e280f41e7abbcfb5",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 16,
+      "report_sha256": "2f50abbcca4531c531d60d2f79b0a08b805ba61c6e6b638bbd6284587755139f"
+    },
+    {
+      "group": "B",
+      "stage": "final",
+      "arm": "fixed",
+      "task": "todo-08",
+      "status": "valid",
+      "files_sha256": "0416462c7d98fc26e98ff4ca6074a9c921b209b02324d597e280f41e7abbcfb5",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "ded5385b1127bd11dfa24290864e4c91b69812dda387c521aaed03667e685e9f"
+    },
+    {
+      "group": "B",
+      "stage": "final",
+      "arm": "planned",
+      "task": "todo-08",
+      "status": "valid",
+      "plan": {
+        "persistence": true,
+        "editing": true,
+        "counter": true,
+        "clearCompleted": true,
+        "routing": true,
+        "toggleAll": true
+      },
+      "files_sha256": "0416462c7d98fc26e98ff4ca6074a9c921b209b02324d597e280f41e7abbcfb5",
+      "diagnostic": "unchanged",
+      "passed": false,
+      "official_tests": 24,
+      "report_sha256": "ded5385b1127bd11dfa24290864e4c91b69812dda387c521aaed03667e685e9f"
+    }
+  ],
+  "paired": {
+    "A": {
+      "targets": [
+        "todo-01",
+        "todo-02",
+        "todo-03",
+        "todo-04",
+        "todo-05",
+        "todo-06",
+        "todo-07",
+        "todo-08"
+      ],
+      "passed": {
+        "initial_planned": [],
+        "initial_fixed": [],
+        "final_planned": [],
+        "final_fixed": [],
+        "initial_direct": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-05",
+          "todo-06",
+          "todo-07"
+        ],
+        "final_direct": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-05",
+          "todo-06",
+          "todo-07"
+        ]
+      },
+      "scheduled": 8,
+      "individual_observations": {
+        "initial_planned": {
+          "targets": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "passed": []
+        },
+        "initial_fixed": {
+          "targets": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "passed": []
+        },
+        "final_planned": {
+          "targets": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "passed": []
+        },
+        "final_fixed": {
+          "targets": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "passed": []
+        },
+        "initial_direct": {
+          "targets": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "passed": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-05",
+            "todo-06",
+            "todo-07"
+          ]
+        },
+        "final_direct": {
+          "targets": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "passed": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-05",
+            "todo-06",
+            "todo-07"
+          ]
+        }
+      }
+    },
+    "B": {
+      "targets": [
+        "todo-01",
+        "todo-02",
+        "todo-03",
+        "todo-04",
+        "todo-05",
+        "todo-06",
+        "todo-07",
+        "todo-08"
+      ],
+      "passed": {
+        "initial_planned": [
+          "todo-01",
+          "todo-02",
+          "todo-05",
+          "todo-06"
+        ],
+        "initial_fixed": [
+          "todo-01",
+          "todo-02",
+          "todo-05",
+          "todo-06"
+        ],
+        "final_planned": [
+          "todo-01",
+          "todo-02",
+          "todo-04",
+          "todo-05",
+          "todo-06"
+        ],
+        "final_fixed": [
+          "todo-01",
+          "todo-02",
+          "todo-04",
+          "todo-05",
+          "todo-06"
+        ],
+        "initial_direct": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-05",
+          "todo-06",
+          "todo-07"
+        ],
+        "final_direct": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-05",
+          "todo-06",
+          "todo-07"
+        ]
+      },
+      "scheduled": 8,
+      "individual_observations": {
+        "initial_planned": {
+          "targets": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "passed": [
+            "todo-01",
+            "todo-02",
+            "todo-05",
+            "todo-06"
+          ]
+        },
+        "initial_fixed": {
+          "targets": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "passed": [
+            "todo-01",
+            "todo-02",
+            "todo-05",
+            "todo-06"
+          ]
+        },
+        "final_planned": {
+          "targets": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "passed": [
+            "todo-01",
+            "todo-02",
+            "todo-04",
+            "todo-05",
+            "todo-06"
+          ]
+        },
+        "final_fixed": {
+          "targets": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "passed": [
+            "todo-01",
+            "todo-02",
+            "todo-04",
+            "todo-05",
+            "todo-06"
+          ]
+        },
+        "initial_direct": {
+          "targets": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "passed": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-05",
+            "todo-06",
+            "todo-07"
+          ]
+        },
+        "final_direct": {
+          "targets": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "passed": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-05",
+            "todo-06",
+            "todo-07"
+          ]
+        }
+      }
+    }
+  }
+}
