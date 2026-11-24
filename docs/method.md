@@ -16,6 +16,8 @@
 
 对不合外层格式却包含完整实现的交付，还可以从同一冻结回复恢复源码。TodoMVC 接受完整控制器，绑定它实际声明的布尔键；从零调用使用同一源码提取规则。Duo 只抽取完整 React 模块，先建项目内索引，再按目标公开给出的两个功能名装配。两种部署都使用确定性程序。论文 Table 1 B 区的 Bind 表示这次离线部署；Self 始终表示原模型自己建库、自己选配置。Duo 的 Direct* 另允许只修正默认导出声明。两个项目按各自共同目标比较。[协议与直接对照](../studies/results/library-domain-replay-20261124.json)
 
+本地小模型另测研究者给定的领域接口。计算器提供共享状态、按键注册表和有限运算语法；TodoMVC 提供事件函数签名、路由和持久化时机。每种接口均用两个独立库及同一组新从零代码。计算器同时比较两种固定顺序，以及不含模型代码的标准数学绑定；TodoMVC 同时比较可选事件组全开和全关。按函数建库与逐题从零的调用次数分别记录。[计算器协议](../studies/public_library_transfer/self_refinement/local_domain/typed_keys/PROTOCOL.md) · [TodoMVC 协议](../studies/public_library_transfer/self_refinement/todomvc/event_modules/PROTOCOL.md)
+
 ## 1. 同一需求下的三种生成方式
 
 Web-Bench 的 50 个正式项目各有 20 个编号任务。初始化可以由公开起始文件给出，也可以写在需求序列中。新实验的第 k 个目标取得截至第 k 项的累计描述。
@@ -91,3 +93,7 @@ Web-Bench 作者估计资深工程师完成一个完整基准项目平均需要 
 表格兼容重建固定公开配置模式和编译器，由同一建库模型各自独立运行普通提示两次、共享状态与事件优先级提示两次。两批历史 Mistral 响应逐条交给每个后端。另给本地 Qwen 每个目标一份全新、仅含公开接口的提示，并以第一份固定示例作为单独对照。SVG 的部署回退只在响应不可用时采用建库者预先提供的首例，评分成功后才知道它的行为覆盖度。原方案成绩、带回退的流程成绩和固定页成绩分别记录。[表格建库协议](../studies/webbench/table/compatible_rebuild/PROTOCOL.md) · [新表格规划协议](../studies/webbench/table/local_planning/PROTOCOL.md) · [图表部署规则](../studies/webbench/svg_chart/interface_refinement/RECOVERY.md)
 
 表格还做了不继承旧接口的端到端复验。两次建库各自从公开需求和起始工程命名行为开关、撰写模块和指定可用首例。通用编译器提供闭合布尔配置，模型自由决定具体语义。每库各自取得 20 份全新的 Qwen 首轮方案。另行冻结的解码器按同一份方案模式输出键名和括号，由规划模型在每个合法值之间选择。既有库的嵌套对象和枚举也用同一算法，便于辨别语法合法与行为正确的差别。[独立自主建库](../studies/webbench/table/controller_build/PROTOCOL.md) · [受约束规划](../studies/webbench/table/schema_decoding/PROTOCOL.md)
+
+Duo 的新协议让模型一次只写一个组件，在该功能原有的两条公共断言上检查；从零候选可以用两个公开功能各自的断言修复一次。TodoMVC 让模型写完整控制器、命名布尔配置，在同一公开操作下逐一翻转并重复两次，实测到差异的键才交给同模型规划。两者都独立建库两次，共用同目标的从零样本，另测固定部署。实际被选择的页面按文件散列与固定页比较。[Duo 协议](../studies/public_library_transfer/self_refinement/duo_components/PROTOCOL.md) · [TodoMVC 协议](../studies/public_library_transfer/self_refinement/todomvc/verified_controller/PROTOCOL.md)
+
+问卷组从公开规范固定基类、八个题型和应用入口，子类读取同一库实际交付的基类；从零生成器也可读取和调用相同的组装器，含构造参数、挂载、按钮以及写入存储的胶水。SVG 组先生成共用基类，再按依赖生成六种渲染类，研究者提供从公开类型到类的挂载。运行时分别对照原提交、源文件依赖链接、模型根据公开浏览器异常修复及 DOM 类名接口诊断。相同的源代码接收与公开接口修复也适用于各自从零页面。[问卷协议](../studies/public_library_transfer/self_refinement/form_components/PROTOCOL.md) · [SVG 协议与分阶段改动](../studies/public_library_transfer/self_refinement/svg_renderers/README.md)

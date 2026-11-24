@@ -1,0 +1,1991 @@
+{
+  "project": "Web-Bench svg-chart",
+  "model": "qwen/qwen3-coder-30b-a3b-instruct",
+  "source_sha256": "952ddff512c65ebc07ef1185c4dd375ff04d604246b93299e0e71fdbc1af8d93",
+  "benchmark_calibration": {
+    "source_sha256": "287ed59d49b1c064e8f53e9bebc37406b35d33fb09afe4dab9f0faf5187ffe89",
+    "blank_passed": [
+      1
+    ],
+    "reference_failed": []
+  },
+  "protocol_sha256": "3ed7bede3cb8cb5affd791efddb1f842cb4e77f4baba77b8f47eeed0e34c1ccd",
+  "seal_sha256": "838b26237e11c0ebbe04d7b5e2b993fddd1135606e51e99f33f4788c560899ff",
+  "definition": {
+    "strict": "Only transmission/absence of generation or absence of an evaluator verdict is unobserved. A received invalid schema, invalid source or unadmitted build is an observed pipeline failure.",
+    "controls": "The fixed page enables every supplied renderer. The host-only page retains the public starter classes and the identical researcher-provided data-type lookup, mounting and draw calls.",
+    "fallback": "Additional offline estimate. If no valid plan was delivered, reuse the already frozen fixed page where available. The original strict generator performs no automatic fallback.",
+    "repair": "The implemented rule also accepts unchanged drawable types with fewer public errors. Adding types requires no increase in the number of errors."
+  },
+  "scheduled_targets": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "replicas": {
+    "A": {
+      "all_six_common": {
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "strict_self": [
+            1
+          ],
+          "fixed_all": [
+            1
+          ],
+          "initial_fixed": [
+            1
+          ],
+          "direct_repaired": [
+            1,
+            2
+          ],
+          "direct_first": [
+            1,
+            2
+          ],
+          "host_only": [
+            1
+          ]
+        }
+      },
+      "all_six_excluding_public_asset_target": {
+        "targets": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "strict_self": [],
+          "fixed_all": [],
+          "initial_fixed": [],
+          "direct_repaired": [
+            2
+          ],
+          "direct_first": [
+            2
+          ],
+          "host_only": []
+        }
+      },
+      "by_arm": {
+        "strict_self": {
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": [
+            1
+          ],
+          "excluded": {
+            "generation_missing": [],
+            "evaluation_missing": []
+          },
+          "received_pipeline_failures": []
+        },
+        "fixed_all": {
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": [
+            1
+          ],
+          "excluded": {
+            "generation_missing": [],
+            "evaluation_missing": []
+          },
+          "received_pipeline_failures": []
+        },
+        "initial_fixed": {
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": [
+            1
+          ],
+          "excluded": {
+            "generation_missing": [],
+            "evaluation_missing": []
+          },
+          "received_pipeline_failures": []
+        },
+        "direct_repaired": {
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": [
+            1,
+            2
+          ],
+          "excluded": {
+            "generation_missing": [],
+            "evaluation_missing": []
+          },
+          "received_pipeline_failures": [
+            4,
+            5,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13
+          ]
+        },
+        "direct_first": {
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": [
+            1,
+            2
+          ],
+          "excluded": {
+            "generation_missing": [],
+            "evaluation_missing": []
+          },
+          "received_pipeline_failures": [
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13
+          ]
+        },
+        "host_only": {
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": [
+            1
+          ],
+          "excluded": {
+            "generation_missing": [],
+            "evaluation_missing": []
+          },
+          "received_pipeline_failures": []
+        }
+      },
+      "strict_self_vs_repaired_direct": {
+        "common_targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "left_passed": [
+          1
+        ],
+        "right_passed": [
+          1,
+          2
+        ],
+        "both": [
+          1
+        ],
+        "left_only": [],
+        "right_only": [
+          2
+        ],
+        "neither": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      "strict_self_vs_repaired_direct_no_asset_target": {
+        "common_targets": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "left_passed": [],
+        "right_passed": [
+          2
+        ],
+        "both": [],
+        "left_only": [],
+        "right_only": [
+          2
+        ],
+        "neither": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      "fixed_all_vs_repaired_direct": {
+        "common_targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "left_passed": [
+          1
+        ],
+        "right_passed": [
+          1,
+          2
+        ],
+        "both": [
+          1
+        ],
+        "left_only": [],
+        "right_only": [
+          2
+        ],
+        "neither": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      "strict_self_vs_fixed_all": {
+        "common_targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "left_passed": [
+          1
+        ],
+        "right_passed": [
+          1
+        ],
+        "both": [
+          1
+        ],
+        "left_only": [],
+        "right_only": [],
+        "neither": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      "strict_self_vs_host": {
+        "common_targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "left_passed": [
+          1
+        ],
+        "right_passed": [
+          1
+        ],
+        "both": [
+          1
+        ],
+        "left_only": [],
+        "right_only": [],
+        "neither": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      "fixed_all_vs_host": {
+        "common_targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "left_passed": [
+          1
+        ],
+        "right_passed": [
+          1
+        ],
+        "both": [
+          1
+        ],
+        "left_only": [],
+        "right_only": [],
+        "neither": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      "first_vs_repaired_direct": {
+        "common_targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "left_passed": [
+          1,
+          2
+        ],
+        "right_passed": [
+          1,
+          2
+        ],
+        "both": [
+          1,
+          2
+        ],
+        "left_only": [],
+        "right_only": [],
+        "neither": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      "same_rendered_page_as_fixed": [
+        16,
+        19,
+        20
+      ],
+      "delivered_plan_count": 20,
+      "hypothetical_fixed_fallback": {
+        "substituted_targets": [],
+        "by_arm": {
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": [
+            1
+          ],
+          "excluded": {
+            "generation_missing": [],
+            "evaluation_missing": []
+          },
+          "received_pipeline_failures": []
+        },
+        "vs_repaired_direct": {
+          "common_targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "left_passed": [
+            1
+          ],
+          "right_passed": [
+            1,
+            2
+          ],
+          "both": [
+            1
+          ],
+          "left_only": [],
+          "right_only": [
+            2
+          ],
+          "neither": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        }
+      },
+      "public_preparation": {
+        "admitted": true,
+        "public_repair": "proposal_did_not_meet_registered_program_criterion",
+        "accepted": false,
+        "initial_drawable": [],
+        "selected_drawable": [],
+        "initial_errors": [
+          "Chart is not defined"
+        ],
+        "selected_errors": [
+          "Chart is not defined"
+        ]
+      },
+      "legacy_browser_verdict_only_omitted": [
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    "B": {
+      "all_six_common": {
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "strict_self": [
+            1
+          ],
+          "fixed_all": [
+            1
+          ],
+          "initial_fixed": [
+            1
+          ],
+          "direct_repaired": [
+            1,
+            2
+          ],
+          "direct_first": [
+            1,
+            2
+          ],
+          "host_only": [
+            1
+          ]
+        }
+      },
+      "all_six_excluding_public_asset_target": {
+        "targets": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "strict_self": [],
+          "fixed_all": [],
+          "initial_fixed": [],
+          "direct_repaired": [
+            2
+          ],
+          "direct_first": [
+            2
+          ],
+          "host_only": []
+        }
+      },
+      "by_arm": {
+        "strict_self": {
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": [
+            1
+          ],
+          "excluded": {
+            "generation_missing": [],
+            "evaluation_missing": []
+          },
+          "received_pipeline_failures": []
+        },
+        "fixed_all": {
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": [
+            1
+          ],
+          "excluded": {
+            "generation_missing": [],
+            "evaluation_missing": []
+          },
+          "received_pipeline_failures": []
+        },
+        "initial_fixed": {
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": [
+            1
+          ],
+          "excluded": {
+            "generation_missing": [],
+            "evaluation_missing": []
+          },
+          "received_pipeline_failures": []
+        },
+        "direct_repaired": {
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": [
+            1,
+            2
+          ],
+          "excluded": {
+            "generation_missing": [],
+            "evaluation_missing": []
+          },
+          "received_pipeline_failures": [
+            4,
+            5,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13
+          ]
+        },
+        "direct_first": {
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": [
+            1,
+            2
+          ],
+          "excluded": {
+            "generation_missing": [],
+            "evaluation_missing": []
+          },
+          "received_pipeline_failures": [
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13
+          ]
+        },
+        "host_only": {
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": [
+            1
+          ],
+          "excluded": {
+            "generation_missing": [],
+            "evaluation_missing": []
+          },
+          "received_pipeline_failures": []
+        }
+      },
+      "strict_self_vs_repaired_direct": {
+        "common_targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "left_passed": [
+          1
+        ],
+        "right_passed": [
+          1,
+          2
+        ],
+        "both": [
+          1
+        ],
+        "left_only": [],
+        "right_only": [
+          2
+        ],
+        "neither": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      "strict_self_vs_repaired_direct_no_asset_target": {
+        "common_targets": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "left_passed": [],
+        "right_passed": [
+          2
+        ],
+        "both": [],
+        "left_only": [],
+        "right_only": [
+          2
+        ],
+        "neither": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      "fixed_all_vs_repaired_direct": {
+        "common_targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "left_passed": [
+          1
+        ],
+        "right_passed": [
+          1,
+          2
+        ],
+        "both": [
+          1
+        ],
+        "left_only": [],
+        "right_only": [
+          2
+        ],
+        "neither": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      "strict_self_vs_fixed_all": {
+        "common_targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "left_passed": [
+          1
+        ],
+        "right_passed": [
+          1
+        ],
+        "both": [
+          1
+        ],
+        "left_only": [],
+        "right_only": [],
+        "neither": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      "strict_self_vs_host": {
+        "common_targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "left_passed": [
+          1
+        ],
+        "right_passed": [
+          1
+        ],
+        "both": [
+          1
+        ],
+        "left_only": [],
+        "right_only": [],
+        "neither": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      "fixed_all_vs_host": {
+        "common_targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "left_passed": [
+          1
+        ],
+        "right_passed": [
+          1
+        ],
+        "both": [
+          1
+        ],
+        "left_only": [],
+        "right_only": [],
+        "neither": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      "first_vs_repaired_direct": {
+        "common_targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "left_passed": [
+          1,
+          2
+        ],
+        "right_passed": [
+          1,
+          2
+        ],
+        "both": [
+          1,
+          2
+        ],
+        "left_only": [],
+        "right_only": [],
+        "neither": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      "same_rendered_page_as_fixed": [
+        1,
+        16,
+        19,
+        20
+      ],
+      "delivered_plan_count": 20,
+      "hypothetical_fixed_fallback": {
+        "substituted_targets": [],
+        "by_arm": {
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": [
+            1
+          ],
+          "excluded": {
+            "generation_missing": [],
+            "evaluation_missing": []
+          },
+          "received_pipeline_failures": []
+        },
+        "vs_repaired_direct": {
+          "common_targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "left_passed": [
+            1
+          ],
+          "right_passed": [
+            1,
+            2
+          ],
+          "both": [
+            1
+          ],
+          "left_only": [],
+          "right_only": [
+            2
+          ],
+          "neither": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        }
+      },
+      "public_preparation": {
+        "admitted": true,
+        "public_repair": "proposal_did_not_meet_registered_program_criterion",
+        "accepted": false,
+        "initial_drawable": [],
+        "selected_drawable": [],
+        "initial_errors": [
+          "Chart is not defined"
+        ],
+        "selected_errors": [
+          "Chart is not defined"
+        ]
+      },
+      "legacy_browser_verdict_only_omitted": [
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    }
+  },
+  "both_replicas_all_arms": {
+    "targets": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "passed": {
+      "strict_self_A": [
+        1
+      ],
+      "fixed_all_A": [
+        1
+      ],
+      "initial_fixed_A": [
+        1
+      ],
+      "direct_repaired": [
+        1,
+        2
+      ],
+      "direct_first": [
+        1,
+        2
+      ],
+      "host_only": [
+        1
+      ],
+      "strict_self_B": [
+        1
+      ],
+      "fixed_all_B": [
+        1
+      ],
+      "initial_fixed_B": [
+        1
+      ]
+    }
+  },
+  "module_inspection": {
+    "A": {
+      "bundle_sha256": "9ec53476433ba515866dd29a387264e181b606af05f91eeab772ea689655d2dc",
+      "modules": {
+        "common/Chart.js": {
+          "sha256": "9602e2715fe995e5160dc13859da266af57d08253560691a9b9fd3e584afe5ee",
+          "extends": [],
+          "contains_static_import_declaration": false
+        },
+        "common/LineChart.js": {
+          "sha256": "c3f3c3569cd7742bfd5767464bcc1e6718cce779c55f2c5af99e6ad2de8489e5",
+          "extends": [
+            "Chart"
+          ],
+          "contains_static_import_declaration": false
+        },
+        "common/BarChart.js": {
+          "sha256": "6c393b0e3bdc91c3eee5d22cf816b1b8f003a31a0b2bd927d02bcb32c693df4b",
+          "extends": [
+            "Chart"
+          ],
+          "contains_static_import_declaration": false
+        },
+        "common/PieChart.js": {
+          "sha256": "502d8e5bbee234bd78249e8e54c3ef8d065a692d8afde7ff3d91ab01df21fefd",
+          "extends": [
+            "Chart"
+          ],
+          "contains_static_import_declaration": true
+        },
+        "common/ScatterChart.js": {
+          "sha256": "c1f18cd1241dc5676817931a6c4a18e75f90d5e75844d4b38dfd7577cf252138",
+          "extends": [
+            "LineChart"
+          ],
+          "contains_static_import_declaration": false
+        },
+        "common/StepChart.js": {
+          "sha256": "92c4528fbd52133d294abe61435319dc3ba8106fda12c42e54f3194f96596d26",
+          "extends": [
+            "LineChart"
+          ],
+          "contains_static_import_declaration": false
+        },
+        "common/AreaChart.js": {
+          "sha256": "451e068c0609609f2b756caf681b95648ad5a4dbbc53b8d5ec14f0401bc025e2",
+          "extends": [
+            "LineChart"
+          ],
+          "contains_static_import_declaration": false
+        }
+      }
+    },
+    "B": {
+      "bundle_sha256": "86a85b521c0396ac5f68d2ba1a9ca5794f9d7121d17f51dbcb9b35571c383390",
+      "modules": {
+        "common/Chart.js": {
+          "sha256": "54879752c395ebc215920eb20d1bca16edb29e0dcd3b8a5180afbbcce6646bb2",
+          "extends": [],
+          "contains_static_import_declaration": false
+        },
+        "common/LineChart.js": {
+          "sha256": "c6dc2b091e3bc7121a7e83a2db7b5a0d5094af5c616ce5a9f33d819fedf361b7",
+          "extends": [
+            "Chart"
+          ],
+          "contains_static_import_declaration": false
+        },
+        "common/BarChart.js": {
+          "sha256": "5e91799a395d165663aedb442ecc4b473f19e3923236e7f8c2dbc2513c8751fb",
+          "extends": [
+            "Chart"
+          ],
+          "contains_static_import_declaration": false
+        },
+        "common/PieChart.js": {
+          "sha256": "13b3c1696456358cd427c19aa7e36091470f6b19ae80d51c6b523e069fb7453f",
+          "extends": [
+            "Chart"
+          ],
+          "contains_static_import_declaration": false
+        },
+        "common/ScatterChart.js": {
+          "sha256": "360b997d24d384827574aa5d251b04f386ffd9fda4df6bdc9d4f9449e35ce807",
+          "extends": [
+            "LineChart"
+          ],
+          "contains_static_import_declaration": false
+        },
+        "common/StepChart.js": {
+          "sha256": "80eb80b7f2ff6ade5cf948be65766acafaec68bdc8de9cce0e48fd269983e11a",
+          "extends": [
+            "LineChart"
+          ],
+          "contains_static_import_declaration": false
+        },
+        "common/AreaChart.js": {
+          "sha256": "34cc0b59c9f3654861f7b0daadaabdde551120053e3ec370711389f0a93cd043",
+          "extends": [
+            "LineChart"
+          ],
+          "contains_static_import_declaration": false
+        }
+      }
+    }
+  },
+  "incomplete_observations": [
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 4,
+      "source_status": "invalid",
+      "classification": "received_pipeline_failure",
+      "strict_outcome": false,
+      "generation_note": "Unsupported website file: 'assets/data.js'"
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 4,
+      "source_status": "invalid",
+      "classification": "received_pipeline_failure",
+      "strict_outcome": false,
+      "generation_note": "Unsupported website file: 'assets/data.js'"
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 5,
+      "source_status": "invalid",
+      "classification": "received_pipeline_failure",
+      "strict_outcome": false,
+      "generation_note": "Unsupported website file: 'assets/data.js'"
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 5,
+      "source_status": "invalid",
+      "classification": "received_pipeline_failure",
+      "strict_outcome": false,
+      "generation_note": "Unsupported website file: 'assets/data.js'"
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 6,
+      "source_status": "invalid",
+      "classification": "received_pipeline_failure",
+      "strict_outcome": false,
+      "generation_note": "Unsupported website file: 'assets/data.js'"
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 7,
+      "source_status": "invalid",
+      "classification": "received_pipeline_failure",
+      "strict_outcome": false,
+      "generation_note": "Unsupported website file: 'assets/data.js'"
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 7,
+      "source_status": "invalid",
+      "classification": "received_pipeline_failure",
+      "strict_outcome": false,
+      "generation_note": "Unsupported website file: 'assets/data.js'"
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 9,
+      "source_status": "invalid",
+      "classification": "received_pipeline_failure",
+      "strict_outcome": false,
+      "generation_note": "No complete JS, HTML or file map"
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 9,
+      "source_status": "invalid",
+      "classification": "received_pipeline_failure",
+      "strict_outcome": false,
+      "generation_note": "No complete JS, HTML or file map"
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 10,
+      "source_status": "invalid",
+      "classification": "received_pipeline_failure",
+      "strict_outcome": false,
+      "generation_note": "Unsupported website file: 'assets/data.js'"
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 10,
+      "source_status": "invalid",
+      "classification": "received_pipeline_failure",
+      "strict_outcome": false,
+      "generation_note": "Unsupported website file: 'assets/data.js'"
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 11,
+      "source_status": "invalid",
+      "classification": "received_pipeline_failure",
+      "strict_outcome": false,
+      "generation_note": "Unsupported website file: 'assets/data.js'"
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 11,
+      "source_status": "invalid",
+      "classification": "received_pipeline_failure",
+      "strict_outcome": false,
+      "generation_note": "Unsupported website file: 'assets/data.js'"
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 12,
+      "source_status": "invalid",
+      "classification": "received_pipeline_failure",
+      "strict_outcome": false,
+      "generation_note": "Unsupported website file: 'assets/data.js'"
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 12,
+      "source_status": "invalid",
+      "classification": "received_pipeline_failure",
+      "strict_outcome": false,
+      "generation_note": "Unsupported website file: 'assets/data.js'"
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 13,
+      "source_status": "invalid",
+      "classification": "received_pipeline_failure",
+      "strict_outcome": false,
+      "generation_note": "Unsupported website file: 'assets/data.js'"
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 13,
+      "source_status": "invalid",
+      "classification": "received_pipeline_failure",
+      "strict_outcome": false,
+      "generation_note": "Unsupported website file: 'assets/data.js'"
+    }
+  ]
+}

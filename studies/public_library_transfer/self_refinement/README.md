@@ -48,3 +48,5 @@ uv run python -m studies.public_library_transfer.self_refinement.line_contract.n
 
 - [TodoMVC 源码绑定](todomvc/source_binding/README.md)与 [Duo 组件装配](duo_composition/README.md)从六个模型原始输出检验哪些实现能直接使用。两项都核对从零回复，Duo 还独立核验默认导出声明和每个单功能组件。
 - [问卷题型](form_registry/README.md)逐模型核对已有类能否导出、挂载及呈现所要求控件，单位是九种公开类型。[表格与 SVG 行为选择](target_selection/README.md)分别测原模型方案、确定性选择和固定页。
+
+- [Duo 逐组件独立建库](duo_components/README.md)分别运行真实模型规划、按名装配、固定组件、从零首稿和公开反馈后的从零。[TodoMVC 独立控制器](todomvc/verified_controller/README.md)先实测哪些配置会改变动作结果，再运行八项逐题规划与固定默认。两套研究均保留两次独立建库。

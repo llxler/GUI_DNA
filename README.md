@@ -21,7 +21,11 @@ GUI-DNA 把「点击后怎样改变应用状态」写进可复用的行为库，
 
 **从公开需求建库。** DeepSeek V4 Flash 在 TodoMVC 的从零代码为 2/8，自建库组装为 8/8。固定复用建库时的首例同样为 8/8。在 Duo 的十个双功能组合上，同一模型从零为 6/10，自建库为 0/10。每个实验分别报告哪份实现能工作，以及逐题更改配置增加了哪些通过项。[多模型实验](studies/webbench/backbone_matrix/README.md) · [完整记录](docs/results.md)
 
-六模型的离线复测按已交付的源码重建接口。TodoMVC 的 Gemma 控制器通过 6/8，从零通过 4/8，固定该实现也通过相同六题。Duo 按公开功能名组装两个模型组件，GPT-OSS 通过 6/10（从零 5/10），Qwen3.5 通过 3/10（从零 2/10）。修正从零代码的默认导出后，Mistral 两者都为 4/10，另外三模型仍以从零更高。论文 Table 1 B 区的 Bind 单列此规则，Self 列保留模型自己的原方案。[两套件完整对照](studies/results/library-domain-replay-20261124.json)
+最近一次 Web-Bench 独立建库，Qwen3-Coder 的两份 SVG 库在补全同库父类导入和浏览器类名接口后通过 **7/20、5/20**，同样接受可交付源码的从零通过 **5/20**；固定全开页在两库逐题同分。GPT-OSS 的问卷库各覆盖九种独立控件，但整页分别通过 **5/20、6/20**，对称修复输出空白后的从零为 **12/20**。两项实验均按各自二十个相同官方文件计分。[逐题与协议对照](docs/results.md#47-按公开运行反馈独立建库再用同模型组装)
+
+六模型的离线复测按已交付的源码重建接口。TodoMVC 的 Gemma 控制器通过 6/8，从零通过 4/8，固定该实现也通过相同六题。Duo 按公开功能名组装两个模型组件，GPT-OSS 通过 6/10（从零 5/10），Qwen3.5 通过 3/10（从零 2/10）。修正从零代码的默认导出后，Mistral 两者都为 4/10，另外三模型仍以从零更高。论文 Table 1 B 区的 Bind 单列此规则，Self 列保留模型自己的原方案。新建库见 D 区。Duo 的 GPT-OSS 两次为 9/10、6/10，同等公开修复后的从零为 9/10。TodoMVC 的 Gemma 两次为 0/8、5/8，固定默认值逐题相同；给双方相同的分支作用域修复，从零为 6/8。[历史源码对照](studies/results/library-domain-replay-20261124.json) · [两次新建库逐行分母](studies/results/prospective-domain-builds-20261124.json)
+
+本地 Qwen2.5-0.5B 使用按键注册表与有限数学语法，两次独立准备的计算器库通过 5/20、7/20，同模型从零为 0/20。固定同一种按键顺序已有相同成绩，仅使用起始工程与确定性数学绑定也通过 6/20。[领域辅助建库与对照](studies/public_library_transfer/self_refinement/local_domain/typed_keys/result.json)
 
 Qwen3-Coder 按依赖顺序生成的两个表格库分别通过 5/20、1/20，同设置从零为 3/20，两个固定首例分别过相同的题。[代码模型逐题结果](studies/results/self-dependency-resume-20261124.json)
 

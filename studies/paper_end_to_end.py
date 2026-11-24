@@ -10,7 +10,7 @@ import json
 import re
 
 from studies.public_library_transfer.self_replication import paper as self_followups
-from studies.public_library_transfer.self_refinement import suite_comparisons
+from studies.public_library_transfer.self_refinement import domain_panel, prospective_panel, suite_comparisons
 from studies.end_to_end import ROOT, OUTPUT, reconstruct, sha
 
 PAPER = ROOT / "DNA_latex"
@@ -148,7 +148,7 @@ def _render_with_matrix(data):
                        for a in arms} for n in chart["targets"]}
     from studies.paper_performance import performance_matrix, render_matrix
     matrix = performance_matrix(data, replay, trials, today)
-    main = render_matrix(matrix, self_followups.rows(), suite_comparisons.evidence()["models"])
+    main = render_matrix(matrix, [*self_followups.rows(), *prospective_panel.rows()], suite_comparisons.evidence()["models"], domain_panel.rows())
     appendix = [r"\section{Detailed End-to-End Results}", r"\label{app:details}",
                 "Library builders remain separate in every comparison. The shared direct baseline appears once per row. Each row uses only its own generator and target protocol."]
     appendix.append(table("tab:previous-workflows", "Earlier three-workflow pilots and retrospective AI-only studies. Entries are current files passed / jointly observed targets (percent). The direct comparator for the original SVG milestones had to return a complete file map. Builders share one direct comparator in each retrospective row.",
@@ -359,6 +359,8 @@ def audit(data, generated):
                                     **{str(p.relative_to(ROOT)): sha(p) for p in NOVEMBER_RESULTS.values()},
                                     **{str(p.relative_to(ROOT)): sha(p) for p in self_followups.SOURCES},
                                     **{str(p.relative_to(ROOT)): sha(p) for p in (*suite_comparisons.SOURCES, suite_comparisons.OUTPUT)},
+                                    **{str(p.relative_to(ROOT)): sha(p) for p in (*domain_panel.SOURCES, *domain_panel.DIAGNOSTICS,
+                                                                                *prospective_panel.SOURCES, prospective_panel.OUTPUT)},
                                     **{str(p.relative_to(ROOT)): sha(p) for p in self_followups.appendix_sources()}},
               "manuscript_sources_sha256": {p.relative_to(ROOT).as_posix(): sha(p) for p in active},
               "scope": "Reconstructs primary candidates, checks complete generated table text and active manuscript scope; not independent human review or verification of every prose claim."}
@@ -372,6 +374,7 @@ def main():
     args = parser.parse_args()
     self_followups.verify_or_publish(args.write)
     suite_comparisons.verify_or_publish(args.write)
+    prospective_panel.verify_or_publish(args.write)
     data = reconstruct()
     assert json.loads(OUTPUT.read_text()) == data
     generated, matrix = _render_with_matrix(data)

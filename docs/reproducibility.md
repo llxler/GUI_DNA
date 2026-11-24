@@ -127,3 +127,7 @@ artifacts/presentation-build/venv/bin/python artifacts/presentation-build/render
 2026-11-18 的当前报告包为 `current-report-20261118.zip`，使用 [导出与解包说明](../studies/current_bundle/README.md)。在本机另行解包后，正式、兼容两个入口重算一致，核对 80 个预定位置、147 条精简浏览器报告（127 份不同原件），两个项目共七次真实浏览器抽查与原判定一致。哈希与逐页结果见 [验收记录](../studies/results/current-report-validation-20261118.json)。
 
 Table 1 B 区的离线绑定列可从公开的逐题 JSON 直接重建：运行 `uv run python -m studies.public_library_transfer.self_refinement.suite_comparisons` 核对两个套件的六个模型、每格目标与从零差集。逐个浏览器/Jest 收据的本机检查见 [TodoMVC](../studies/public_library_transfer/self_refinement/todomvc/source_binding/README.md) 和 [Duo](../studies/public_library_transfer/self_refinement/duo_composition/README.md)。人工库的来源、项目差异与建库模型的已知交付问题单列在[设计依据](library-preparation-design.md)。
+
+Duo 初批两模型与 Qwen 精简契约的另外两份库，分别用 `uv run python -m studies.public_library_transfer.self_refinement.duo_components.report check` 和 `uv run python -m studies.public_library_transfer.self_refinement.duo_components.compact.report check`。Gemma 的两份控制器用 `uv run python -m studies.public_library_transfer.self_refinement.todomvc.verified_controller.run check`，分支语法修复用同目录 `switch_scope.run check`。这些核对从发布记录取数，不调用模型。
+
+最新 20 项问卷及图表的官方结果和源文件接收灵敏度分别见 [问卷核验命令](../studies/public_library_transfer/self_refinement/form_components/README.md) 和 [图表核验命令](../studies/public_library_transfer/self_refinement/svg_renderers/README.md)。主表 D 区逐行保留目标标识及输入哈希。[18 行表格来源](../studies/results/prospective-domain-builds-20261124.json) · [七账本计费收据](../studies/results/domain-construction-accounting-20261124.json)

@@ -1,0 +1,4565 @@
+{
+  "model": "qwen/qwen3-coder-30b-a3b-instruct",
+  "registered_utc": "2026-11-24T11:05:28.263761+00:00",
+  "sealed_utc": "2026-11-24T11:12:48.064903+00:00",
+  "seal_sha256": "317bf434ad2c8e6752e0c6991b2d2ab963bce59cece7a958ee421e3b97d3244d",
+  "protocol_sha256": "4c9ff932f18d8c5aa7fcc64015c2f594004e14c5763c45e3a94b0f9233812dda",
+  "contract_sha256": "24fcfb4c13009caba751753b5eb67dad887cdb114587cc43b5e4e900b4a3ceb2",
+  "sources": {
+    "studies/public_library_transfer/self_refinement/svg_renderers/runtime_patch/run.py": "61ae5a35585b4f18dc0b339f2350ff4abb7bf4f5315be791bdad74a9a417e26e",
+    "studies/public_library_transfer/self_refinement/svg_renderers/runtime_patch/PROTOCOL.md": "4c9ff932f18d8c5aa7fcc64015c2f594004e14c5763c45e3a94b0f9233812dda",
+    "studies/public_library_transfer/self_refinement/svg_renderers/runtime_patch/observe.py": "b294731dab95e2cca8c1d9c909e37866fa2ca7815703f42016dd357f0fb28088",
+    "studies/public_library_transfer/self_refinement/svg_renderers/transport.py": "33cdc0c8ee873c64922222817d8260b89ba495398f5a9bf922e20d8f858cc6cd",
+    "studies/public_library_transfer/self_refinement/svg_renderers/components.py": "a849a29236d024577c009f95350fede2166225de4a7e2801cb606df104a708fc",
+    "artifacts/qwen-svg-module-linking-20261124/registration.json": "ac9c53aa111077e7706afc469646bd97b88302aff9118c3fe535bfef66cf89d9",
+    "artifacts/qwen-svg-renderers-20261124/registration.json": "c08fb57db0f70219b41169f2e65e0b2379325da7baf012da67f3ad9f1fdc30a5"
+  },
+  "admission": {
+    "utc": "2026-11-24T11:11:16.816809+00:00",
+    "balance": {
+      "checked_utc": "2026-11-24T11:11:16.816771+00:00",
+      "account_total_credits_usd": 170.0,
+      "account_total_usage_usd": 155.303856071,
+      "account_remaining_usd": 14.696143929,
+      "key_limit_usd": null,
+      "key_remaining_usd": null,
+      "key_limit_reset": null,
+      "effective_remaining_usd": 14.696143929,
+      "required_usd": 0.12,
+      "sufficient": true,
+      "generation_requests": 0
+    },
+    "closed_budget": {
+      "calls": 103,
+      "settled_usd": 0.097957,
+      "exposure_usd": 0.097957,
+      "unsettled_calls": 0,
+      "cap_usd": 0.4,
+      "stop_usd": 0.4,
+      "halted": 0
+    },
+    "closed_seal_sha256": "838b26237e11c0ebbe04d7b5e2b993fddd1135606e51e99f33f4788c560899ff",
+    "linked_seal_sha256": "7fb172256c5962128db4f87f29ed572b4ce389cc05d37546c055983267749490"
+  },
+  "changes": {
+    "A": {
+      "decision": "no_public_gain",
+      "before": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 9,
+          "scatter": 1,
+          "step": 1,
+          "area": 1,
+          "bar": 1,
+          "pie": 1
+        },
+        "errors": {
+          "InvalidCharacterError: Failed to execute 'add' on 'DOMTokenList': The token provided ('dataset dataset-0') contains HTML space characters, which are not valid in tokens.": "    at LineChart.createPolyline (/common/Chart.js:55:18)     at /common/LineChart.js:73:29",
+          "InvalidCharacterError: Failed to execute 'add' on 'DOMTokenList': The token provided ('grid grid-x grid-x-0') contains HTML space characters, which are not valid in tokens.": "    at BarChart.createLine (/common/Chart.js:41:18)     at BarChart.draw (/common/BarChart.js:28:29)"
+        }
+      },
+      "after": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 9,
+          "scatter": 1,
+          "step": 1,
+          "area": 1,
+          "bar": 1,
+          "pie": 1
+        },
+        "errors": {
+          "InvalidCharacterError: Failed to execute 'add' on 'DOMTokenList': The token provided ('dataset dataset-0') contains HTML space characters, which are not valid in tokens.": "    at LineChart.createPolyline (/common/Chart.js:55:18)     at /common/LineChart.js:73:29",
+          "InvalidCharacterError: Failed to execute 'add' on 'DOMTokenList': The token provided ('grid grid-x grid-x-0') contains HTML space characters, which are not valid in tokens.": "    at BarChart.createLine (/common/Chart.js:41:18)     at BarChart.draw (/common/BarChart.js:28:29)"
+        }
+      },
+      "edited_files": [
+        "common/Chart.js"
+      ],
+      "proposed": {
+        "drawn": {
+          "line": 18,
+          "scatter": 3,
+          "step": 1,
+          "area": 1,
+          "bar": 12,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 9,
+          "scatter": 1,
+          "step": 1,
+          "area": 1,
+          "bar": 1,
+          "pie": 1
+        },
+        "errors": {
+          "InvalidCharacterError: Failed to execute 'add' on 'DOMTokenList': The token provided ('tooltips hidden') contains HTML space characters, which are not valid in tokens.": "    at LineChart.createElement (/common/Chart.js:27:18)     at LineChart.draw (/common/LineChart.js:229:32)",
+          "InvalidCharacterError: Failed to execute 'add' on 'DOMTokenList': The token provided ('axes axes-x') contains HTML space characters, which are not valid in tokens.": "    at LineChart.createElement (/common/Chart.js:27:18)     at LineChart.draw (/common/LineChart.js:127:31)",
+          "InvalidCharacterError: Failed to execute 'add' on 'DOMTokenList': The token provided ('points points-0') contains HTML space characters, which are not valid in tokens.": "    at LineChart.createElement (/common/Chart.js:27:18)     at /common/LineChart.js:88:34",
+          "InvalidCharacterError: Failed to execute 'add' on 'DOMTokenList': The token provided ('dataLabels dataLabels-0') contains HTML space characters, which are not valid in tokens.": "    at LineChart.createElement (/common/Chart.js:27:18)     at /common/LineChart.js:110:34",
+          "InvalidCharacterError: Failed to execute 'add' on 'DOMTokenList': The token provided ('dataset dataset-0') contains HTML space characters, which are not valid in tokens.": "    at BarChart.createElement (/common/Chart.js:27:18)     at /common/BarChart.js:48:33"
+        }
+      }
+    },
+    "B": {
+      "decision": "no_applicable_patch",
+      "before": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 9,
+          "scatter": 1,
+          "step": 1,
+          "area": 1,
+          "bar": 1,
+          "pie": 1
+        },
+        "errors": {
+          "InvalidCharacterError: Failed to execute 'add' on 'DOMTokenList': The token provided ('tooltips hidden') contains HTML space characters, which are not valid in tokens.": "    at LineChart.createElement (/common/Chart.js:27:18)     at LineChart.draw (/common/LineChart.js:44:47)",
+          "InvalidCharacterError: Failed to execute 'add' on 'DOMTokenList': The token provided ('axes axes-x') contains HTML space characters, which are not valid in tokens.": "    at LineChart.createElement (/common/Chart.js:27:18)     at LineChart.draw (/common/LineChart.js:40:40)",
+          "InvalidCharacterError: Failed to execute 'add' on 'DOMTokenList': The token provided ('grid grid-x grid-x-0') contains HTML space characters, which are not valid in tokens.": "    at BarChart.createLine (/common/Chart.js:146:18)     at BarChart.draw (/common/BarChart.js:58:28)",
+          "InvalidCharacterError: Failed to execute 'add' on 'DOMTokenList': The token provided ('dataset dataset-0') contains HTML space characters, which are not valid in tokens.": "    at PieChart.createElement (/common/Chart.js:27:18)     at PieChart.draw (/common/PieChart.js:18:31)"
+        }
+      },
+      "after": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 9,
+          "scatter": 1,
+          "step": 1,
+          "area": 1,
+          "bar": 1,
+          "pie": 1
+        },
+        "errors": {
+          "InvalidCharacterError: Failed to execute 'add' on 'DOMTokenList': The token provided ('tooltips hidden') contains HTML space characters, which are not valid in tokens.": "    at LineChart.createElement (/common/Chart.js:27:18)     at LineChart.draw (/common/LineChart.js:44:47)",
+          "InvalidCharacterError: Failed to execute 'add' on 'DOMTokenList': The token provided ('axes axes-x') contains HTML space characters, which are not valid in tokens.": "    at LineChart.createElement (/common/Chart.js:27:18)     at LineChart.draw (/common/LineChart.js:40:40)",
+          "InvalidCharacterError: Failed to execute 'add' on 'DOMTokenList': The token provided ('grid grid-x grid-x-0') contains HTML space characters, which are not valid in tokens.": "    at BarChart.createLine (/common/Chart.js:146:18)     at BarChart.draw (/common/BarChart.js:58:28)",
+          "InvalidCharacterError: Failed to execute 'add' on 'DOMTokenList': The token provided ('dataset dataset-0') contains HTML space characters, which are not valid in tokens.": "    at PieChart.createElement (/common/Chart.js:27:18)     at PieChart.draw (/common/PieChart.js:18:31)"
+        }
+      },
+      "error": "Unterminated string starting at: line 41 column 17 (char 5469)"
+    },
+    "direct/1": {
+      "decision": "no_public_issue",
+      "before": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      },
+      "after": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      }
+    },
+    "direct/2": {
+      "decision": "no_public_issue",
+      "before": {
+        "drawn": {
+          "line": 264,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 9,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      },
+      "after": {
+        "drawn": {
+          "line": 264,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 9,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      }
+    },
+    "direct/3": {
+      "decision": "accepted",
+      "before": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      },
+      "after": {
+        "drawn": {
+          "line": 27,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 9,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      },
+      "edited_files": [
+        "common/LineChart.js",
+        "index.js"
+      ],
+      "proposed": {
+        "drawn": {
+          "line": 27,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 9,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      }
+    },
+    "direct/4": {
+      "decision": "no_source"
+    },
+    "direct/5": {
+      "decision": "no_source"
+    },
+    "direct/6": {
+      "decision": "no_public_issue",
+      "before": {
+        "drawn": {
+          "line": 180,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 9,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      },
+      "after": {
+        "drawn": {
+          "line": 180,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 9,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      }
+    },
+    "direct/7": {
+      "decision": "no_source"
+    },
+    "direct/8": {
+      "decision": "no_public_issue",
+      "before": {
+        "drawn": {
+          "line": 198,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 9,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      },
+      "after": {
+        "drawn": {
+          "line": 198,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 9,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      }
+    },
+    "direct/9": {
+      "decision": "no_source"
+    },
+    "direct/10": {
+      "decision": "no_source"
+    },
+    "direct/11": {
+      "decision": "no_source"
+    },
+    "direct/12": {
+      "decision": "no_source"
+    },
+    "direct/13": {
+      "decision": "no_source"
+    },
+    "direct/14": {
+      "decision": "accepted",
+      "before": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      },
+      "after": {
+        "drawn": {
+          "line": 198,
+          "scatter": 34,
+          "step": 34,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 9,
+          "scatter": 1,
+          "step": 1,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      },
+      "edited_files": [
+        "index.js"
+      ],
+      "proposed": {
+        "drawn": {
+          "line": 198,
+          "scatter": 34,
+          "step": 34,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 9,
+          "scatter": 1,
+          "step": 1,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      }
+    },
+    "direct/15": {
+      "decision": "no_applicable_patch",
+      "before": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      },
+      "after": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      },
+      "error": "Unterminated string starting at: line 17 column 17 (char 5481)"
+    },
+    "direct/16": {
+      "decision": "no_public_gain",
+      "before": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      },
+      "after": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      },
+      "edited_files": [
+        "index.js"
+      ],
+      "proposed": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      }
+    },
+    "direct/17": {
+      "decision": "empty_patch",
+      "before": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      },
+      "after": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      },
+      "edited_files": []
+    },
+    "direct/18": {
+      "decision": "no_applicable_patch",
+      "before": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      },
+      "after": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      },
+      "error": "Unterminated string starting at: line 1 column 2033 (char 2032)"
+    },
+    "direct/19": {
+      "decision": "no_applicable_patch",
+      "before": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      },
+      "after": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      },
+      "error": "Unterminated string starting at: line 22 column 17 (char 5895)"
+    },
+    "direct/20": {
+      "decision": "no_public_gain",
+      "before": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      },
+      "after": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      },
+      "edited_files": [
+        "index.js"
+      ],
+      "proposed": {
+        "drawn": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "mounted": {
+          "line": 0,
+          "scatter": 0,
+          "step": 0,
+          "area": 0,
+          "bar": 0,
+          "pie": 0
+        },
+        "errors": {}
+      }
+    }
+  },
+  "rows": [
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 1,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "a3802bd30258e188bc5e38a389f973e12b3d23bcc8d8c8c3432d7f45aa6dfa86",
+      "report_sha256": "ea28827cee9366c076aac31f7ea5b2b83b71192d678ee0a5cae94f11f06584ee",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "direct",
+      "arm": "previous",
+      "task": 1,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "a3802bd30258e188bc5e38a389f973e12b3d23bcc8d8c8c3432d7f45aa6dfa86",
+      "report_sha256": "ea28827cee9366c076aac31f7ea5b2b83b71192d678ee0a5cae94f11f06584ee",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 1,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "a3802bd30258e188bc5e38a389f973e12b3d23bcc8d8c8c3432d7f45aa6dfa86",
+      "report_sha256": "ea28827cee9366c076aac31f7ea5b2b83b71192d678ee0a5cae94f11f06584ee",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "host",
+      "arm": "only",
+      "task": 1,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "620570950edcb25f175f2263f5d1a4d761c66bd073eecc53be424bb5af1f3495",
+      "report_sha256": "e00f9a4bd62331928a26822547fca75ac5d4501f593b0eb638cdfa128a22fb25",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 2,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "683fc6b394b6263bec636975008519efbce377d9a006e22c1fdaf8e3fc3c5659",
+      "report_sha256": "830c6afb55847c37743f7c786a682f8f72c4a5b805516660e615fc135700f173",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "direct",
+      "arm": "previous",
+      "task": 2,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "683fc6b394b6263bec636975008519efbce377d9a006e22c1fdaf8e3fc3c5659",
+      "report_sha256": "830c6afb55847c37743f7c786a682f8f72c4a5b805516660e615fc135700f173",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 2,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "683fc6b394b6263bec636975008519efbce377d9a006e22c1fdaf8e3fc3c5659",
+      "report_sha256": "830c6afb55847c37743f7c786a682f8f72c4a5b805516660e615fc135700f173",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "host",
+      "arm": "only",
+      "task": 2,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "620570950edcb25f175f2263f5d1a4d761c66bd073eecc53be424bb5af1f3495",
+      "report_sha256": "61483eae7d247f44658c4b28711314766b34555e0722311484c0ff742c91c4f3",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 3,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "ce6e5ac2fab93b864d55b9467f073b0702a43b1cf33efe807b9bb25077d2a48b",
+      "report_sha256": "c51860aaacd8325eacee80a156805ea8a9f0002ec9fcc7f3877d38b96a79049e",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "previous",
+      "task": 3,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "ce6e5ac2fab93b864d55b9467f073b0702a43b1cf33efe807b9bb25077d2a48b",
+      "report_sha256": "c51860aaacd8325eacee80a156805ea8a9f0002ec9fcc7f3877d38b96a79049e",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 3,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "c6e8b1326a9040c851e2ca994d969ac21b4e5da1b9058e82a9bbeff529422b9e",
+      "report_sha256": "4ece3c3095a4b1a52f82334c551f1dd24344db6b764e52a13a539803db75e6bd",
+      "receipt_source": "runtime_patch",
+      "passed": false
+    },
+    {
+      "group": "host",
+      "arm": "only",
+      "task": 3,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "620570950edcb25f175f2263f5d1a4d761c66bd073eecc53be424bb5af1f3495",
+      "report_sha256": "cd377926173332c1aa7430f31fc7b7b2e8ce27c09475d502ab589a76b7d4c0c0",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 4,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "previous",
+      "task": 4,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 4,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "host",
+      "arm": "only",
+      "task": 4,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "620570950edcb25f175f2263f5d1a4d761c66bd073eecc53be424bb5af1f3495",
+      "report_sha256": "fd8f41fc54d30ea6b07430fcce0aa22acc687e409e1a4618db9904b8be834840",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 5,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "previous",
+      "task": 5,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 5,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "host",
+      "arm": "only",
+      "task": 5,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "620570950edcb25f175f2263f5d1a4d761c66bd073eecc53be424bb5af1f3495",
+      "report_sha256": "f2192f506c1c82fdedccd7e416b5406eafb5ad5a133072fb7e8f2b62c2726253",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 6,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "previous",
+      "task": 6,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "40c23e78edfde11871450382562fee1a2da7ed7222ba8e614ae818fb8c318901",
+      "report_sha256": "a93708c6334ffd44ad985ea07b95a1dd16a119119caa1390c0b99b96d0f81147",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 6,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "40c23e78edfde11871450382562fee1a2da7ed7222ba8e614ae818fb8c318901",
+      "report_sha256": "a93708c6334ffd44ad985ea07b95a1dd16a119119caa1390c0b99b96d0f81147",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "host",
+      "arm": "only",
+      "task": 6,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "620570950edcb25f175f2263f5d1a4d761c66bd073eecc53be424bb5af1f3495",
+      "report_sha256": "3449023578af5663e4d8384c7309f018bc65dfc26ce41083d2b453630f8ac642",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 7,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "previous",
+      "task": 7,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 7,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "host",
+      "arm": "only",
+      "task": 7,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "620570950edcb25f175f2263f5d1a4d761c66bd073eecc53be424bb5af1f3495",
+      "report_sha256": "683089bcc8889e20dfdaf2d4886929631fad6fa9c5cb81678b64705faa3c3e46",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 8,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "c021c46a7d970e302de70670511e57efb98a0a6883f822d5b9206b480eafa0b4",
+      "report_sha256": "76e2cf54b08e9c4a5246b873212311116a7538e244ba6c7c2b10a7dd13976634",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "previous",
+      "task": 8,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "c021c46a7d970e302de70670511e57efb98a0a6883f822d5b9206b480eafa0b4",
+      "report_sha256": "76e2cf54b08e9c4a5246b873212311116a7538e244ba6c7c2b10a7dd13976634",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 8,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "c021c46a7d970e302de70670511e57efb98a0a6883f822d5b9206b480eafa0b4",
+      "report_sha256": "76e2cf54b08e9c4a5246b873212311116a7538e244ba6c7c2b10a7dd13976634",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "host",
+      "arm": "only",
+      "task": 8,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "620570950edcb25f175f2263f5d1a4d761c66bd073eecc53be424bb5af1f3495",
+      "report_sha256": "3d2893837d4f2a9af169e15309a0180a82399cbaa57888a568705defeabf3dac",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 9,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "previous",
+      "task": 9,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 9,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "host",
+      "arm": "only",
+      "task": 9,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "620570950edcb25f175f2263f5d1a4d761c66bd073eecc53be424bb5af1f3495",
+      "report_sha256": "10e0e16ea172a88f337537176bdcd7143c1eede5b1e175b6a901f8379e93a146",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 10,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "previous",
+      "task": 10,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 10,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "host",
+      "arm": "only",
+      "task": 10,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "620570950edcb25f175f2263f5d1a4d761c66bd073eecc53be424bb5af1f3495",
+      "report_sha256": "38310e46d91984e8c29ba877944f17098efc5d087b6d8919499aa49689a394cb",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 11,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "previous",
+      "task": 11,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 11,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "host",
+      "arm": "only",
+      "task": 11,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "620570950edcb25f175f2263f5d1a4d761c66bd073eecc53be424bb5af1f3495",
+      "report_sha256": "5541b7a1810fbe7802c29430cf6474f360cce2be9bf6de2f8bb6506910297063",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 12,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "previous",
+      "task": 12,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 12,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "host",
+      "arm": "only",
+      "task": 12,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "620570950edcb25f175f2263f5d1a4d761c66bd073eecc53be424bb5af1f3495",
+      "report_sha256": "ba1c6ce464bb66a68d763549157c00caa1a98d6b1b3139c1f21e4c26936ff87d",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 13,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "previous",
+      "task": 13,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 13,
+      "status": "invalid",
+      "plan": null,
+      "page_digest": null,
+      "report_sha256": null,
+      "receipt_source": null,
+      "passed": false
+    },
+    {
+      "group": "host",
+      "arm": "only",
+      "task": 13,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "620570950edcb25f175f2263f5d1a4d761c66bd073eecc53be424bb5af1f3495",
+      "report_sha256": "01ba50cca9a34abbb6badd000b8128bc02d80982bec4e2853055602f045df071",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 14,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "305a583388722d53b37c7682fd58561d623a7b89332f0a9dc1d15c23d554e12d",
+      "report_sha256": "9fd106718b463680b48d696e5eab54865a2f8cde5e3d9efc5c906c1db54469ab",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "previous",
+      "task": 14,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "305a583388722d53b37c7682fd58561d623a7b89332f0a9dc1d15c23d554e12d",
+      "report_sha256": "9fd106718b463680b48d696e5eab54865a2f8cde5e3d9efc5c906c1db54469ab",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 14,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "47f3926a450b5271f9e32b2a3c0850a256d83381721b2c64b1a3811bf07862f6",
+      "report_sha256": "5d7b8a299419994b4f03d2e2c86dea0dd77e930a4c6d85c58677ab94242e4314",
+      "receipt_source": "runtime_patch",
+      "passed": false
+    },
+    {
+      "group": "host",
+      "arm": "only",
+      "task": 14,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "620570950edcb25f175f2263f5d1a4d761c66bd073eecc53be424bb5af1f3495",
+      "report_sha256": "beca84ba223e075a9ee793e58a7eb82d0eb0264b6cdf4bdf4f7e341e422765f3",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 15,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "3f46d8c33e34a2e744e2c63639ab7efb8cfd61c0a43629e0ad0f60aaf71532dc",
+      "report_sha256": "bb853cba0bf5157982336729cf75a3686f137ec29f0d920b74d08c79a4f2ad68",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "previous",
+      "task": 15,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "3f46d8c33e34a2e744e2c63639ab7efb8cfd61c0a43629e0ad0f60aaf71532dc",
+      "report_sha256": "bb853cba0bf5157982336729cf75a3686f137ec29f0d920b74d08c79a4f2ad68",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 15,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "3f46d8c33e34a2e744e2c63639ab7efb8cfd61c0a43629e0ad0f60aaf71532dc",
+      "report_sha256": "bb853cba0bf5157982336729cf75a3686f137ec29f0d920b74d08c79a4f2ad68",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "host",
+      "arm": "only",
+      "task": 15,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "620570950edcb25f175f2263f5d1a4d761c66bd073eecc53be424bb5af1f3495",
+      "report_sha256": "6b3e95c62fd08ed5675ed378fbf2fcab9dcb21bd413961aa0bc11adc9be85027",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 16,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "f0e89576dac941142ae2f53994762b2637abde96fc8d14fb26291d6bea179424",
+      "report_sha256": "373687ed7f507aae52fbd59b7e2255d0bb0fc10dae4c23a3b9f67e130b55bdad",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "previous",
+      "task": 16,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "f0e89576dac941142ae2f53994762b2637abde96fc8d14fb26291d6bea179424",
+      "report_sha256": "373687ed7f507aae52fbd59b7e2255d0bb0fc10dae4c23a3b9f67e130b55bdad",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 16,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "f0e89576dac941142ae2f53994762b2637abde96fc8d14fb26291d6bea179424",
+      "report_sha256": "373687ed7f507aae52fbd59b7e2255d0bb0fc10dae4c23a3b9f67e130b55bdad",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "host",
+      "arm": "only",
+      "task": 16,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "620570950edcb25f175f2263f5d1a4d761c66bd073eecc53be424bb5af1f3495",
+      "report_sha256": "d7c1adfa344ad7f563018301bcf3c15e1d8dae45cd4ba1eb48294e310d9b0d81",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 17,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "8e17f512a7604006911a7590e49f8dd318512fd04fa01d7c8bfe37814b7624d8",
+      "report_sha256": "92067ac8ff0dec711c3ce1cb6f850f6408adb9fb625bcd696df55dd9b214c3fa",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "previous",
+      "task": 17,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "8e17f512a7604006911a7590e49f8dd318512fd04fa01d7c8bfe37814b7624d8",
+      "report_sha256": "92067ac8ff0dec711c3ce1cb6f850f6408adb9fb625bcd696df55dd9b214c3fa",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 17,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "8e17f512a7604006911a7590e49f8dd318512fd04fa01d7c8bfe37814b7624d8",
+      "report_sha256": "92067ac8ff0dec711c3ce1cb6f850f6408adb9fb625bcd696df55dd9b214c3fa",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "host",
+      "arm": "only",
+      "task": 17,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "620570950edcb25f175f2263f5d1a4d761c66bd073eecc53be424bb5af1f3495",
+      "report_sha256": "bc763846abf38b60b202e532600389243253182bc0e71b6ccc4144d434f60272",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 18,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "39bee346d9c3a77289111a6c3182eb2faa82bee63a3467b7f7cb9d85f2e63eaa",
+      "report_sha256": "9b46084dbc9f8560fc8337bee03f61dd257169cb4938c714375ba35042de9fe1",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "previous",
+      "task": 18,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "39bee346d9c3a77289111a6c3182eb2faa82bee63a3467b7f7cb9d85f2e63eaa",
+      "report_sha256": "9b46084dbc9f8560fc8337bee03f61dd257169cb4938c714375ba35042de9fe1",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 18,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "39bee346d9c3a77289111a6c3182eb2faa82bee63a3467b7f7cb9d85f2e63eaa",
+      "report_sha256": "9b46084dbc9f8560fc8337bee03f61dd257169cb4938c714375ba35042de9fe1",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "host",
+      "arm": "only",
+      "task": 18,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "620570950edcb25f175f2263f5d1a4d761c66bd073eecc53be424bb5af1f3495",
+      "report_sha256": "5cac202425079c70b3459dce31604a5e15d539e7472149be6fe72b4edbd3a387",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 19,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "06342e3c4aecadb5454a9ab7a6b15f832e5de0921c971d10ce1cf0f6821159f7",
+      "report_sha256": "3748e533df7bb1cf089074e3fa6d85171e653404f7859d9b2a449ff85e0c52b3",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "previous",
+      "task": 19,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "06342e3c4aecadb5454a9ab7a6b15f832e5de0921c971d10ce1cf0f6821159f7",
+      "report_sha256": "3748e533df7bb1cf089074e3fa6d85171e653404f7859d9b2a449ff85e0c52b3",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 19,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "06342e3c4aecadb5454a9ab7a6b15f832e5de0921c971d10ce1cf0f6821159f7",
+      "report_sha256": "3748e533df7bb1cf089074e3fa6d85171e653404f7859d9b2a449ff85e0c52b3",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "host",
+      "arm": "only",
+      "task": 19,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "620570950edcb25f175f2263f5d1a4d761c66bd073eecc53be424bb5af1f3495",
+      "report_sha256": "17afc357e6d0dd87053aa1c95b5b7e742e1b7b144489faef65dcb0b184e32e9c",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "first",
+      "task": 20,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "ce8c7d8c60d64b1601ff9b33890471f98e59290321ae0f49990f44fe329cb033",
+      "report_sha256": "d53931f933b4f61c6051ee3e4943caa830e84893bb0ef1316a346671ee6a481e",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "previous",
+      "task": 20,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "ce8c7d8c60d64b1601ff9b33890471f98e59290321ae0f49990f44fe329cb033",
+      "report_sha256": "d53931f933b4f61c6051ee3e4943caa830e84893bb0ef1316a346671ee6a481e",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "direct",
+      "arm": "final",
+      "task": 20,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "ce8c7d8c60d64b1601ff9b33890471f98e59290321ae0f49990f44fe329cb033",
+      "report_sha256": "d53931f933b4f61c6051ee3e4943caa830e84893bb0ef1316a346671ee6a481e",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "host",
+      "arm": "only",
+      "task": 20,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "620570950edcb25f175f2263f5d1a4d761c66bd073eecc53be424bb5af1f3495",
+      "report_sha256": "72f20b327477f9f1a280501559239ae56479d51b354c057698fbd58e5174b3ba",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "fixed",
+      "task": 1,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "df57961048f13e4c8741f6bb3061785e25173db4009767f333c7e2642baf5541",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "A",
+      "arm": "initial_fixed",
+      "task": 1,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "df57961048f13e4c8741f6bb3061785e25173db4009767f333c7e2642baf5541",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "A",
+      "arm": "fixed",
+      "task": 2,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "ab190866241afce3676698bc39c0b2f91f3ea735316defb14a67e70feeeeaf26",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "A",
+      "arm": "initial_fixed",
+      "task": 2,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "ab190866241afce3676698bc39c0b2f91f3ea735316defb14a67e70feeeeaf26",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "A",
+      "arm": "fixed",
+      "task": 3,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "a2b88b33a044a95acf5c5df743bbe6a1af08f4a5cdf44d4f2e8e213cf05eba71",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "initial_fixed",
+      "task": 3,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "a2b88b33a044a95acf5c5df743bbe6a1af08f4a5cdf44d4f2e8e213cf05eba71",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "fixed",
+      "task": 4,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "f638e61f69ca33510ac49e9cb1a400e2c3ace7b79919a84772da37bcf886d43f",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "initial_fixed",
+      "task": 4,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "f638e61f69ca33510ac49e9cb1a400e2c3ace7b79919a84772da37bcf886d43f",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "fixed",
+      "task": 5,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "fa5626b92ce079ede79e3abceff4a049049b0d5c33de93a91f0728e961a76d94",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "initial_fixed",
+      "task": 5,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "fa5626b92ce079ede79e3abceff4a049049b0d5c33de93a91f0728e961a76d94",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "fixed",
+      "task": 6,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "b5300e1694f03b1ba4c262dffbffa11c659d4941deaa95aa9dae943e8d428bdd",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "initial_fixed",
+      "task": 6,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "b5300e1694f03b1ba4c262dffbffa11c659d4941deaa95aa9dae943e8d428bdd",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "fixed",
+      "task": 7,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "89fc7c8056779f79fb23f6ba2fc3a8e07d6303103045f633cb24089effec1ad2",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "initial_fixed",
+      "task": 7,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "89fc7c8056779f79fb23f6ba2fc3a8e07d6303103045f633cb24089effec1ad2",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "fixed",
+      "task": 8,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "68017dee75936d960718652061d3811238de8338f090bf7dc6687c1c4f1d3bb9",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "initial_fixed",
+      "task": 8,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "68017dee75936d960718652061d3811238de8338f090bf7dc6687c1c4f1d3bb9",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "fixed",
+      "task": 9,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "8589f0feca48cd5f85384b2ae3d867b7b73e60cf3cd85319819c72e0c1c51f39",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "initial_fixed",
+      "task": 9,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "8589f0feca48cd5f85384b2ae3d867b7b73e60cf3cd85319819c72e0c1c51f39",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "fixed",
+      "task": 10,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "c0195aa761b17e16525aa338e7f5e067c1fb7318c1a92f2ccf430877059fdd55",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "initial_fixed",
+      "task": 10,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "c0195aa761b17e16525aa338e7f5e067c1fb7318c1a92f2ccf430877059fdd55",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "fixed",
+      "task": 11,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "980b23afc29f5accd2f4e936a9e31e222bfab3ecc2795ad44a6e9bc94b564dd0",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "initial_fixed",
+      "task": 11,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "980b23afc29f5accd2f4e936a9e31e222bfab3ecc2795ad44a6e9bc94b564dd0",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "fixed",
+      "task": 12,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "627b365d78d6695cd5b31ff59d9799e6382c3bad0ba48cecda7950dc4dc69175",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "initial_fixed",
+      "task": 12,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "627b365d78d6695cd5b31ff59d9799e6382c3bad0ba48cecda7950dc4dc69175",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "fixed",
+      "task": 13,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "9b1053aed5fdce4b34d3dbc5798e3f2de138317d26a36bcb2c2667f051454ecc",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "initial_fixed",
+      "task": 13,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "9b1053aed5fdce4b34d3dbc5798e3f2de138317d26a36bcb2c2667f051454ecc",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "fixed",
+      "task": 14,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "497eb089963c6bc864b010fb1068f35b55f0d8986f50c3f86e27909e02a76584",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "initial_fixed",
+      "task": 14,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "497eb089963c6bc864b010fb1068f35b55f0d8986f50c3f86e27909e02a76584",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "fixed",
+      "task": 15,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "8dabbfe5b98f5ae66e211375f17f47d680f0601f0db0f428b1fb51761402dd47",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "initial_fixed",
+      "task": 15,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "8dabbfe5b98f5ae66e211375f17f47d680f0601f0db0f428b1fb51761402dd47",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "fixed",
+      "task": 16,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "490b80d421da3a22d6e5e1a7b0ac03d44b326a3c1df08f3d7983def01c02d071",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "initial_fixed",
+      "task": 16,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "490b80d421da3a22d6e5e1a7b0ac03d44b326a3c1df08f3d7983def01c02d071",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "fixed",
+      "task": 17,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "e6a163d7f78a85d64b88d87173b12a4fea2d128a392180983ab57cd76de240b2",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "initial_fixed",
+      "task": 17,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "e6a163d7f78a85d64b88d87173b12a4fea2d128a392180983ab57cd76de240b2",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "fixed",
+      "task": 18,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "ee54edea1ff28bc5d604f2c9c8a08728303c6d9f24741f0e1627f720131dfecb",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "initial_fixed",
+      "task": 18,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "ee54edea1ff28bc5d604f2c9c8a08728303c6d9f24741f0e1627f720131dfecb",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "fixed",
+      "task": 19,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "8ca1c1b387026acb60cec669ab5fb7d3a63240c9c25f93dd22418c570b9649c8",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "initial_fixed",
+      "task": 19,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "8ca1c1b387026acb60cec669ab5fb7d3a63240c9c25f93dd22418c570b9649c8",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "fixed",
+      "task": 20,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "e5c635fb517f7369ecebd659a5bcd022e1fffaa5cb48f00ee794b9ab167fcc09",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "initial_fixed",
+      "task": 20,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "e5c635fb517f7369ecebd659a5bcd022e1fffaa5cb48f00ee794b9ab167fcc09",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "planned",
+      "task": 1,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "df57961048f13e4c8741f6bb3061785e25173db4009767f333c7e2642baf5541",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "A",
+      "arm": "previous_plan",
+      "task": 1,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "a3d05d14862fd7cbb9aca1103a7c53a8d76f0100005c76b6afb799f6fcb76ac7",
+      "report_sha256": "184fa47a0a2eab4d55edcec7ecef5ac0eb0a28f4a8f0e6e3f00a35b0bc95f918",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "A",
+      "arm": "planned",
+      "task": 2,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "ab190866241afce3676698bc39c0b2f91f3ea735316defb14a67e70feeeeaf26",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "A",
+      "arm": "previous_plan",
+      "task": 2,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "a3d05d14862fd7cbb9aca1103a7c53a8d76f0100005c76b6afb799f6fcb76ac7",
+      "report_sha256": "936fcaf3ea1e254d183a4669e5a2fecef9dc8b811400309cb65e37b62c5ecdfb",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "A",
+      "arm": "planned",
+      "task": 3,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "a2b88b33a044a95acf5c5df743bbe6a1af08f4a5cdf44d4f2e8e213cf05eba71",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "previous_plan",
+      "task": 3,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "a3d05d14862fd7cbb9aca1103a7c53a8d76f0100005c76b6afb799f6fcb76ac7",
+      "report_sha256": "690e396234bd7cd6107093af24310c6ae6eafa96bdbbb577825408446e19448f",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "planned",
+      "task": 4,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "f638e61f69ca33510ac49e9cb1a400e2c3ace7b79919a84772da37bcf886d43f",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "previous_plan",
+      "task": 4,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "a3d05d14862fd7cbb9aca1103a7c53a8d76f0100005c76b6afb799f6fcb76ac7",
+      "report_sha256": "7f66973076f7b9e85e15b2ce7b9538dfe960a89ff41c57ee6230655d80dd8959",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "planned",
+      "task": 5,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "fa5626b92ce079ede79e3abceff4a049049b0d5c33de93a91f0728e961a76d94",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "previous_plan",
+      "task": 5,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "a3d05d14862fd7cbb9aca1103a7c53a8d76f0100005c76b6afb799f6fcb76ac7",
+      "report_sha256": "8623e335abc0b2771e6de1fb28b359b3f6a3029ba4cdd10b9f87ffde56817fe9",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "planned",
+      "task": 6,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "b5300e1694f03b1ba4c262dffbffa11c659d4941deaa95aa9dae943e8d428bdd",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "previous_plan",
+      "task": 6,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "a3d05d14862fd7cbb9aca1103a7c53a8d76f0100005c76b6afb799f6fcb76ac7",
+      "report_sha256": "5b6b2305cd18aaf90c09031dea4a76e2a8a85146dc7924473b9eb4f2a5d827a6",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "planned",
+      "task": 7,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "89fc7c8056779f79fb23f6ba2fc3a8e07d6303103045f633cb24089effec1ad2",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "previous_plan",
+      "task": 7,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "a3d05d14862fd7cbb9aca1103a7c53a8d76f0100005c76b6afb799f6fcb76ac7",
+      "report_sha256": "96a3c8c8340ec1ec95bc588745482aab7ccd45a1b655ee6c6de42260b2d22370",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "planned",
+      "task": 8,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "68017dee75936d960718652061d3811238de8338f090bf7dc6687c1c4f1d3bb9",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "previous_plan",
+      "task": 8,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "a3d05d14862fd7cbb9aca1103a7c53a8d76f0100005c76b6afb799f6fcb76ac7",
+      "report_sha256": "851918cbd4a086461ab87ea2bb8a9bfc24513240515d6f6c8eddc897a1d38455",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "planned",
+      "task": 9,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "8589f0feca48cd5f85384b2ae3d867b7b73e60cf3cd85319819c72e0c1c51f39",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "previous_plan",
+      "task": 9,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "a3d05d14862fd7cbb9aca1103a7c53a8d76f0100005c76b6afb799f6fcb76ac7",
+      "report_sha256": "3092eaa448a2cb2685442d3d2a87426c6f7f84e88fbc2689da233a1c553d831f",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "planned",
+      "task": 10,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "c0195aa761b17e16525aa338e7f5e067c1fb7318c1a92f2ccf430877059fdd55",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "previous_plan",
+      "task": 10,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "a3d05d14862fd7cbb9aca1103a7c53a8d76f0100005c76b6afb799f6fcb76ac7",
+      "report_sha256": "edeb2421c6f4be3d76063781997ff58306c16e6636c1973fa6194232627b23aa",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "planned",
+      "task": 11,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "980b23afc29f5accd2f4e936a9e31e222bfab3ecc2795ad44a6e9bc94b564dd0",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "previous_plan",
+      "task": 11,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "a3d05d14862fd7cbb9aca1103a7c53a8d76f0100005c76b6afb799f6fcb76ac7",
+      "report_sha256": "4372f434731daff4102797d4c2def2098231893d224396571ddc371307901c4a",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "planned",
+      "task": 12,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "627b365d78d6695cd5b31ff59d9799e6382c3bad0ba48cecda7950dc4dc69175",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "previous_plan",
+      "task": 12,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "a3d05d14862fd7cbb9aca1103a7c53a8d76f0100005c76b6afb799f6fcb76ac7",
+      "report_sha256": "f79f74872fe274ca5f20fc07feda850bbe082379ee8aecc6b044930cc7dc0378",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "planned",
+      "task": 13,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "9b1053aed5fdce4b34d3dbc5798e3f2de138317d26a36bcb2c2667f051454ecc",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "previous_plan",
+      "task": 13,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": true,
+        "step": false
+      },
+      "page_digest": "7b363e3a244c41dd7e4b2c53ee6c8d242cb5c4c8dc35407ca4d770649d6417c1",
+      "report_sha256": "d523cd9631c05633dada711cf374a7a7835d7e96d027c94bb5e68f235b10cd54",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "planned",
+      "task": 14,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "497eb089963c6bc864b010fb1068f35b55f0d8986f50c3f86e27909e02a76584",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "previous_plan",
+      "task": 14,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "ae6ffe5cfb521190aa67e86485eb39e4043fcb133ec40687a426eeef7e2e87c1",
+      "report_sha256": "fe32d8b35a8d9696970493b504ae30bbf97a3e10088c561f9695970b05647d88",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "planned",
+      "task": 15,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "8dabbfe5b98f5ae66e211375f17f47d680f0601f0db0f428b1fb51761402dd47",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "previous_plan",
+      "task": 15,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "914520435c260a176cb87a7b7603d5b26eb27f41c21ec476c39411feb53b002c",
+      "report_sha256": "6363d087dd7490706e7c4e18ebf466d0adfb3ac7540717741c208ce0da25ca98",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "planned",
+      "task": 16,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "490b80d421da3a22d6e5e1a7b0ac03d44b326a3c1df08f3d7983def01c02d071",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "previous_plan",
+      "task": 16,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "490b80d421da3a22d6e5e1a7b0ac03d44b326a3c1df08f3d7983def01c02d071",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "planned",
+      "task": 17,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "e6a163d7f78a85d64b88d87173b12a4fea2d128a392180983ab57cd76de240b2",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "previous_plan",
+      "task": 17,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": false,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "58d78b9e1be9f89f43a9f52b4a9c9938689bb41f883035f22ccf7f697eec6bc3",
+      "report_sha256": "79fb34f548be3ae573c3d75e3591b5f1940fd374c9d1f2c166b18ab011511d62",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "planned",
+      "task": 18,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "ee54edea1ff28bc5d604f2c9c8a08728303c6d9f24741f0e1627f720131dfecb",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "previous_plan",
+      "task": 18,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": false,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "58d78b9e1be9f89f43a9f52b4a9c9938689bb41f883035f22ccf7f697eec6bc3",
+      "report_sha256": "c372ed143b165cfd17aae37322f83665dd7595e14b6a1502c9c78406abd39af6",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "planned",
+      "task": 19,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "8ca1c1b387026acb60cec669ab5fb7d3a63240c9c25f93dd22418c570b9649c8",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "previous_plan",
+      "task": 19,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "8ca1c1b387026acb60cec669ab5fb7d3a63240c9c25f93dd22418c570b9649c8",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "planned",
+      "task": 20,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "e5c635fb517f7369ecebd659a5bcd022e1fffaa5cb48f00ee794b9ab167fcc09",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "A",
+      "arm": "previous_plan",
+      "task": 20,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "59ea2e370ce2207a64de1d70f80015765dc977babc0a9085c8745d08e9ccd2e4",
+      "report_sha256": "e5c635fb517f7369ecebd659a5bcd022e1fffaa5cb48f00ee794b9ab167fcc09",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "fixed",
+      "task": 1,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "aec25bf1da7932dc74752db5c8c18949592a868ff40088c6b0128b4838e6a3a3",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "B",
+      "arm": "initial_fixed",
+      "task": 1,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "aec25bf1da7932dc74752db5c8c18949592a868ff40088c6b0128b4838e6a3a3",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "B",
+      "arm": "fixed",
+      "task": 2,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "f9a68f6b3af7df1bdf7be4c2fc2b0c56f89f5cf048670f355e2715ed1bd90490",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "B",
+      "arm": "initial_fixed",
+      "task": 2,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "f9a68f6b3af7df1bdf7be4c2fc2b0c56f89f5cf048670f355e2715ed1bd90490",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "B",
+      "arm": "fixed",
+      "task": 3,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "62c5eaf83aa20b12d71f5e9ef6b87248c72395bb992549411d5002450acb3db7",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "initial_fixed",
+      "task": 3,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "62c5eaf83aa20b12d71f5e9ef6b87248c72395bb992549411d5002450acb3db7",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "fixed",
+      "task": 4,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "196ee32887187b3c8978f331259e75b4ffa0ebc2ea92d295c4f1bee27e7c7eb2",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "initial_fixed",
+      "task": 4,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "196ee32887187b3c8978f331259e75b4ffa0ebc2ea92d295c4f1bee27e7c7eb2",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "fixed",
+      "task": 5,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "2075d4e0759ad5c143037af1a67fb4c5e0b6cc3b3df236e28dd33f3ab4f648bd",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "initial_fixed",
+      "task": 5,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "2075d4e0759ad5c143037af1a67fb4c5e0b6cc3b3df236e28dd33f3ab4f648bd",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "fixed",
+      "task": 6,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "efdf5a9bcd2042799751cc1511aea113dab850f079f3b7b10c3ef50e72816c5f",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "initial_fixed",
+      "task": 6,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "efdf5a9bcd2042799751cc1511aea113dab850f079f3b7b10c3ef50e72816c5f",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "fixed",
+      "task": 7,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "6bc764db1ec017e77414e76ce19a3a91812f7bccf3aea5a9153e60c8e3904c53",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "initial_fixed",
+      "task": 7,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "6bc764db1ec017e77414e76ce19a3a91812f7bccf3aea5a9153e60c8e3904c53",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "fixed",
+      "task": 8,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "f04b105fcb7ef51b5c1ebc5c8ef0cfd32a3d793560220bf5f02957a627be4ac2",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "initial_fixed",
+      "task": 8,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "f04b105fcb7ef51b5c1ebc5c8ef0cfd32a3d793560220bf5f02957a627be4ac2",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "fixed",
+      "task": 9,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "6fcd8bbb19dd8a8e6c7224ed31c0ed3a2182934026b94c19176ed727f1a92ad4",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "initial_fixed",
+      "task": 9,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "6fcd8bbb19dd8a8e6c7224ed31c0ed3a2182934026b94c19176ed727f1a92ad4",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "fixed",
+      "task": 10,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "8dca6ab7f7d3b7a8e0dd543b81f5ca1f83ec35c6a547cb13fa4096530b1f0837",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "initial_fixed",
+      "task": 10,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "8dca6ab7f7d3b7a8e0dd543b81f5ca1f83ec35c6a547cb13fa4096530b1f0837",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "fixed",
+      "task": 11,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "1be5f4aa8867c9535be97bb6bdecc3065ca48f975ea44ed904a61294a0d4eb4b",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "initial_fixed",
+      "task": 11,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "1be5f4aa8867c9535be97bb6bdecc3065ca48f975ea44ed904a61294a0d4eb4b",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "fixed",
+      "task": 12,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "f22a41c333ad76fd9f22a651390b5a14039d13a43cfd1317d3cb041ae5021c05",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "initial_fixed",
+      "task": 12,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "f22a41c333ad76fd9f22a651390b5a14039d13a43cfd1317d3cb041ae5021c05",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "fixed",
+      "task": 13,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "9f661d455161d06ed4bb04481653ba38de40a03f741d148d2a7c52345f5f4f6b",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "initial_fixed",
+      "task": 13,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "9f661d455161d06ed4bb04481653ba38de40a03f741d148d2a7c52345f5f4f6b",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "fixed",
+      "task": 14,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "55a682a41386bb2782c32e4a5af4a4032ac68f19fc5c09e71af78c91bb0106ee",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "initial_fixed",
+      "task": 14,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "55a682a41386bb2782c32e4a5af4a4032ac68f19fc5c09e71af78c91bb0106ee",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "fixed",
+      "task": 15,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "8b125ff163a84fd291950eaa40a502e17e3943be5c2c2b31e99ccd11c5c05759",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "initial_fixed",
+      "task": 15,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "8b125ff163a84fd291950eaa40a502e17e3943be5c2c2b31e99ccd11c5c05759",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "fixed",
+      "task": 16,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "c3f524af8d157bd7afea89a8e03513c14869620779047e63b8991b95c7f1f7b7",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "initial_fixed",
+      "task": 16,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "c3f524af8d157bd7afea89a8e03513c14869620779047e63b8991b95c7f1f7b7",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "fixed",
+      "task": 17,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "ab6730afc1b92644f7562b95360b17a17a16d77f89963e3b2f6a3fdb9edfb1ae",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "initial_fixed",
+      "task": 17,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "ab6730afc1b92644f7562b95360b17a17a16d77f89963e3b2f6a3fdb9edfb1ae",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "fixed",
+      "task": 18,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "9f68a78f80bc6243ee95df1c6e912cd3a5222500bb1babcb88c0d090e26cf334",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "initial_fixed",
+      "task": 18,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "9f68a78f80bc6243ee95df1c6e912cd3a5222500bb1babcb88c0d090e26cf334",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "fixed",
+      "task": 19,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "708831e68fad1ea86897d1b6d32c89ffe138020db6a80ab10a7837ad32a34f82",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "initial_fixed",
+      "task": 19,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "708831e68fad1ea86897d1b6d32c89ffe138020db6a80ab10a7837ad32a34f82",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "fixed",
+      "task": 20,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "f75a1c4c2160741e9eb50db29bd597c00daff05f22e3687271223b30b55f47d7",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "initial_fixed",
+      "task": 20,
+      "status": "valid",
+      "plan": null,
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "f75a1c4c2160741e9eb50db29bd597c00daff05f22e3687271223b30b55f47d7",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "planned",
+      "task": 1,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "aec25bf1da7932dc74752db5c8c18949592a868ff40088c6b0128b4838e6a3a3",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "B",
+      "arm": "previous_plan",
+      "task": 1,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "aec25bf1da7932dc74752db5c8c18949592a868ff40088c6b0128b4838e6a3a3",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "B",
+      "arm": "planned",
+      "task": 2,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "f9a68f6b3af7df1bdf7be4c2fc2b0c56f89f5cf048670f355e2715ed1bd90490",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "B",
+      "arm": "previous_plan",
+      "task": 2,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "8e5e8cc442854ed230ea7b5d6f37acf4d56d811888cc50072146041a87acd2f6",
+      "report_sha256": "7c3fee61d08c36a5bc796272855b8163feea59ee44a786566efb274d917e8d50",
+      "receipt_source": "linked",
+      "passed": true
+    },
+    {
+      "group": "B",
+      "arm": "planned",
+      "task": 3,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "62c5eaf83aa20b12d71f5e9ef6b87248c72395bb992549411d5002450acb3db7",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "previous_plan",
+      "task": 3,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "8e5e8cc442854ed230ea7b5d6f37acf4d56d811888cc50072146041a87acd2f6",
+      "report_sha256": "38d49510e3c0e24aaf022a3ed9cdabf95b8ee1886939d6d9ca43e62aad11537c",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "planned",
+      "task": 4,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "196ee32887187b3c8978f331259e75b4ffa0ebc2ea92d295c4f1bee27e7c7eb2",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "previous_plan",
+      "task": 4,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "8e5e8cc442854ed230ea7b5d6f37acf4d56d811888cc50072146041a87acd2f6",
+      "report_sha256": "6a934d6b7ab79d84db650b3b0108d8a462d76b415426e97c986b48470eca4f9e",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "planned",
+      "task": 5,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "2075d4e0759ad5c143037af1a67fb4c5e0b6cc3b3df236e28dd33f3ab4f648bd",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "previous_plan",
+      "task": 5,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "8e5e8cc442854ed230ea7b5d6f37acf4d56d811888cc50072146041a87acd2f6",
+      "report_sha256": "53e111cfb851125786403783d968300373d5d9e26da5ae607e179e98894ff10a",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "planned",
+      "task": 6,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "efdf5a9bcd2042799751cc1511aea113dab850f079f3b7b10c3ef50e72816c5f",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "previous_plan",
+      "task": 6,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "8e5e8cc442854ed230ea7b5d6f37acf4d56d811888cc50072146041a87acd2f6",
+      "report_sha256": "366d27fbfc77ddf411bd969c30ee74c26478ab74f27f33e5d04b1507ec3719ac",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "planned",
+      "task": 7,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "6bc764db1ec017e77414e76ce19a3a91812f7bccf3aea5a9153e60c8e3904c53",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "previous_plan",
+      "task": 7,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "8e5e8cc442854ed230ea7b5d6f37acf4d56d811888cc50072146041a87acd2f6",
+      "report_sha256": "732ba77f2bf293bfae16be2cbf596161736e2918f98c2267a05be02e29d0393f",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "planned",
+      "task": 8,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "f04b105fcb7ef51b5c1ebc5c8ef0cfd32a3d793560220bf5f02957a627be4ac2",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "previous_plan",
+      "task": 8,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "8e5e8cc442854ed230ea7b5d6f37acf4d56d811888cc50072146041a87acd2f6",
+      "report_sha256": "6544ea3eca954b62e7b434e22fc4de395e6ee18639e6152566a923b67313ef10",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "planned",
+      "task": 9,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "6fcd8bbb19dd8a8e6c7224ed31c0ed3a2182934026b94c19176ed727f1a92ad4",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "previous_plan",
+      "task": 9,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "8e5e8cc442854ed230ea7b5d6f37acf4d56d811888cc50072146041a87acd2f6",
+      "report_sha256": "162c5cc27dec4a0ae87ac49cc3ed32818b9c14ead629a423c17f26ff33b213f4",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "planned",
+      "task": 10,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "8dca6ab7f7d3b7a8e0dd543b81f5ca1f83ec35c6a547cb13fa4096530b1f0837",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "previous_plan",
+      "task": 10,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "8e5e8cc442854ed230ea7b5d6f37acf4d56d811888cc50072146041a87acd2f6",
+      "report_sha256": "ffa0518a9434bfb695e8b9958b8e53a4cffb8c95db03c49b6b8cf78bafdb49e3",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "planned",
+      "task": 11,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "1be5f4aa8867c9535be97bb6bdecc3065ca48f975ea44ed904a61294a0d4eb4b",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "previous_plan",
+      "task": 11,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "8e5e8cc442854ed230ea7b5d6f37acf4d56d811888cc50072146041a87acd2f6",
+      "report_sha256": "0024ab791e454e2b4fa913245d0c4085dba13afe657bb2aa630f6a0b7e25fdc8",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "planned",
+      "task": 12,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "f22a41c333ad76fd9f22a651390b5a14039d13a43cfd1317d3cb041ae5021c05",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "previous_plan",
+      "task": 12,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": false,
+        "step": false
+      },
+      "page_digest": "8e5e8cc442854ed230ea7b5d6f37acf4d56d811888cc50072146041a87acd2f6",
+      "report_sha256": "4ffdc876d1511d3fe792c19abcd5f751679e6c407cb8f0d3c39fbbf632875977",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "planned",
+      "task": 13,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "9f661d455161d06ed4bb04481653ba38de40a03f741d148d2a7c52345f5f4f6b",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "previous_plan",
+      "task": 13,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": true,
+        "step": false
+      },
+      "page_digest": "f017af504102736dc15fb4a4e55f309c07c58ac5d1b812ef7edce3827027c5bb",
+      "report_sha256": "56d8ca1bf43352d9ddac4ec9d784f59027dd979eeacb149e538a49f902a007a0",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "planned",
+      "task": 14,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "55a682a41386bb2782c32e4a5af4a4032ac68f19fc5c09e71af78c91bb0106ee",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "previous_plan",
+      "task": 14,
+      "status": "valid",
+      "plan": {
+        "area": false,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "f66165eedec9cfd8ea27b4a8c4fd139788ac69100d210428c879eae6a2f1e8d2",
+      "report_sha256": "521b3174795ea6df2ec6934685660a602fdf32806a92be3e3a9947a8849a70f7",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "planned",
+      "task": 15,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "8b125ff163a84fd291950eaa40a502e17e3943be5c2c2b31e99ccd11c5c05759",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "previous_plan",
+      "task": 15,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": false,
+        "line": true,
+        "pie": false,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "7e5027347efba4234a30a68bb978dd347a8d3693d3d7996183124627d14a49e3",
+      "report_sha256": "9eacf099177fb4f19d9ed0840c87ad0780cc74c660f1388b6565cc387f734c51",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "planned",
+      "task": 16,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "c3f524af8d157bd7afea89a8e03513c14869620779047e63b8991b95c7f1f7b7",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "previous_plan",
+      "task": 16,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "c3f524af8d157bd7afea89a8e03513c14869620779047e63b8991b95c7f1f7b7",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "planned",
+      "task": 17,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "ab6730afc1b92644f7562b95360b17a17a16d77f89963e3b2f6a3fdb9edfb1ae",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "previous_plan",
+      "task": 17,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": false,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "719a6165eb04b0053d8a513dd49a0a7beff95ca246b6fe927bd01b86050725da",
+      "report_sha256": "94a07b18f9008557f6b0238258645f7d4522ace2af559908292bbfeaace284c8",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "planned",
+      "task": 18,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "9f68a78f80bc6243ee95df1c6e912cd3a5222500bb1babcb88c0d090e26cf334",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "previous_plan",
+      "task": 18,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": false,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "719a6165eb04b0053d8a513dd49a0a7beff95ca246b6fe927bd01b86050725da",
+      "report_sha256": "c3df5892c1045ba14686932486fe95bb1a23c323ba66c0b75035294223302e2b",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "planned",
+      "task": 19,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "708831e68fad1ea86897d1b6d32c89ffe138020db6a80ab10a7837ad32a34f82",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "previous_plan",
+      "task": 19,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "708831e68fad1ea86897d1b6d32c89ffe138020db6a80ab10a7837ad32a34f82",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "planned",
+      "task": 20,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "f75a1c4c2160741e9eb50db29bd597c00daff05f22e3687271223b30b55f47d7",
+      "receipt_source": "linked",
+      "passed": false
+    },
+    {
+      "group": "B",
+      "arm": "previous_plan",
+      "task": 20,
+      "status": "valid",
+      "plan": {
+        "area": true,
+        "bar": true,
+        "line": true,
+        "pie": true,
+        "scatter": true,
+        "step": true
+      },
+      "page_digest": "173dcbb785721c61c3fd42fadd79416a1b59993e6c14108074cac6640056635d",
+      "report_sha256": "f75a1c4c2160741e9eb50db29bd597c00daff05f22e3687271223b30b55f47d7",
+      "receipt_source": "linked",
+      "passed": false
+    }
+  ],
+  "paired": {
+    "A": {
+      "common_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "passed": {
+        "planned": [
+          1,
+          2
+        ],
+        "fixed": [
+          1,
+          2
+        ],
+        "initial_fixed": [
+          1,
+          2
+        ],
+        "direct": [
+          1,
+          2
+        ],
+        "first_direct": [
+          1,
+          2
+        ],
+        "host": [
+          1
+        ]
+      },
+      "without_asset_target": {
+        "planned": 1,
+        "fixed": 1,
+        "initial_fixed": 1,
+        "direct": 1,
+        "first_direct": 1,
+        "host": 0
+      },
+      "planned_only": [],
+      "direct_only": []
+    },
+    "B": {
+      "common_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "passed": {
+        "planned": [
+          1,
+          2
+        ],
+        "fixed": [
+          1,
+          2
+        ],
+        "initial_fixed": [
+          1,
+          2
+        ],
+        "direct": [
+          1,
+          2
+        ],
+        "first_direct": [
+          1,
+          2
+        ],
+        "host": [
+          1
+        ]
+      },
+      "without_asset_target": {
+        "planned": 1,
+        "fixed": 1,
+        "initial_fixed": 1,
+        "direct": 1,
+        "first_direct": 1,
+        "host": 0
+      },
+      "planned_only": [],
+      "direct_only": []
+    }
+  },
+  "budget": {
+    "calls": 50,
+    "settled_usd": 0.020439,
+    "exposure_usd": 0.020439,
+    "unsettled_calls": 0,
+    "cap_usd": 0.12,
+    "stop_usd": 0.12,
+    "halted": 0
+  },
+  "calls": [
+    {
+      "id": "5e4ba8b6c21a4bbf9a05010916e1a2de",
+      "purpose": "direct/3/edit",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1602,
+      "actual": 334,
+      "created": 1795518679.8448977
+    },
+    {
+      "id": "386d7b57c2cd4cecab7ae54462fa87e1",
+      "purpose": "direct/16/edit",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 5362,
+      "actual": 835,
+      "created": 1795518682.1100523
+    },
+    {
+      "id": "a7fac788f5b9453f924e37f959235419",
+      "purpose": "A/edit",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 7536,
+      "actual": 1363,
+      "created": 1795518682.2212117
+    },
+    {
+      "id": "f61d167297ad4c098f08b8e20c17a8fc",
+      "purpose": "direct/15/edit",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 5147,
+      "actual": 1088,
+      "created": 1795518682.3673644
+    },
+    {
+      "id": "8054730aa2ee4649b032548dd63634a5",
+      "purpose": "B/edit",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 11753,
+      "actual": 2072,
+      "created": 1795518682.4930148
+    },
+    {
+      "id": "87778120354e4602829df34af670b108",
+      "purpose": "direct/14/edit",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 5133,
+      "actual": 722,
+      "created": 1795518682.6206536
+    },
+    {
+      "id": "8305693576874f2d916690673807ee13",
+      "purpose": "direct/17/edit",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 5116,
+      "actual": 791,
+      "created": 1795518683.95537
+    },
+    {
+      "id": "a277830710ba47f199e6067ed6b31506",
+      "purpose": "direct/18/edit",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 5576,
+      "actual": 1138,
+      "created": 1795518698.4279912
+    },
+    {
+      "id": "c9bb6719fe224143a29397bacd903648",
+      "purpose": "direct/19/edit",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 5287,
+      "actual": 1134,
+      "created": 1795518707.8472974
+    },
+    {
+      "id": "742f831fa3614088a3a3acacba39e60a",
+      "purpose": "direct/20/edit",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 5609,
+      "actual": 824,
+      "created": 1795518710.568734
+    },
+    {
+      "id": "4964576da70742068a5aaf25e5b12be9",
+      "purpose": "A/plan/2",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1311,
+      "actual": 166,
+      "created": 1795518749.4744112
+    },
+    {
+      "id": "6209a01460024699adbbc70550c40afc",
+      "purpose": "A/plan/1",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1273,
+      "actual": 159,
+      "created": 1795518749.481435
+    },
+    {
+      "id": "e1d1820df1cc4bf590d1c387b1c94642",
+      "purpose": "A/plan/3",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1364,
+      "actual": 174,
+      "created": 1795518749.4926028
+    },
+    {
+      "id": "c14b98e906cc41298a18c3ce2fd2a5b7",
+      "purpose": "A/plan/4",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1453,
+      "actual": 188,
+      "created": 1795518749.5082247
+    },
+    {
+      "id": "b0484b37d78c435a81a1025c7b5d05c5",
+      "purpose": "A/plan/5",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1541,
+      "actual": 201,
+      "created": 1795518749.5281985
+    },
+    {
+      "id": "b4ca6a25a9ee4918b1811ffcc4c4271f",
+      "purpose": "A/plan/6",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1606,
+      "actual": 211,
+      "created": 1795518751.336892
+    },
+    {
+      "id": "8c13ca970d0a4b8080bf8fafcca56992",
+      "purpose": "A/plan/7",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1684,
+      "actual": 224,
+      "created": 1795518751.541512
+    },
+    {
+      "id": "4642aeea448f40c6957f50141c83a090",
+      "purpose": "A/plan/8",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1741,
+      "actual": 232,
+      "created": 1795518752.0015507
+    },
+    {
+      "id": "7faaff897445485d86ebab5cde54b495",
+      "purpose": "A/plan/9",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1796,
+      "actual": 241,
+      "created": 1795518752.2814512
+    },
+    {
+      "id": "f0c318108e8845b3b9c5250526f8ef17",
+      "purpose": "A/plan/10",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1858,
+      "actual": 251,
+      "created": 1795518752.2911131
+    },
+    {
+      "id": "089db9cc555d4b2ab7a0d3d7285f04f1",
+      "purpose": "A/plan/11",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1880,
+      "actual": 254,
+      "created": 1795518753.4728825
+    },
+    {
+      "id": "755ea46f9f0b4e98b128c9c057c34bd7",
+      "purpose": "A/plan/12",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1902,
+      "actual": 258,
+      "created": 1795518753.6777706
+    },
+    {
+      "id": "3ace7942b5844fb9a81cc18653d084fe",
+      "purpose": "A/plan/13",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1943,
+      "actual": 264,
+      "created": 1795518753.9083784
+    },
+    {
+      "id": "0a278481134043f2b31ec299c9734650",
+      "purpose": "A/plan/14",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 2010,
+      "actual": 273,
+      "created": 1795518753.997446
+    },
+    {
+      "id": "e82b7146cbd7498db571d93ab3570293",
+      "purpose": "A/plan/15",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 2065,
+      "actual": 282,
+      "created": 1795518754.1146078
+    },
+    {
+      "id": "763ee7e0b6e846b2a049785e3778ee75",
+      "purpose": "A/plan/16",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 2166,
+      "actual": 297,
+      "created": 1795518755.6396728
+    },
+    {
+      "id": "291486509ccf43eca4a9b9ddb85947fc",
+      "purpose": "A/plan/17",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 2221,
+      "actual": 306,
+      "created": 1795518756.0006313
+    },
+    {
+      "id": "fe67ce3389874fe79d65cb2a5d0f19a9",
+      "purpose": "A/plan/18",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 2289,
+      "actual": 316,
+      "created": 1795518756.176661
+    },
+    {
+      "id": "7e8f2617966f4dd3a71551d6c399aae6",
+      "purpose": "A/plan/19",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 2366,
+      "actual": 328,
+      "created": 1795518756.2589424
+    },
+    {
+      "id": "6227029436e0460e8f769bf1a55376c6",
+      "purpose": "A/plan/20",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 2433,
+      "actual": 337,
+      "created": 1795518756.767308
+    },
+    {
+      "id": "fcc30a78a6174d1880943fe8485aba0f",
+      "purpose": "B/plan/1",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1343,
+      "actual": 173,
+      "created": 1795518759.423336
+    },
+    {
+      "id": "fd01a96dee594fb0ac0984c459830e8f",
+      "purpose": "B/plan/4",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1523,
+      "actual": 199,
+      "created": 1795518759.4312696
+    },
+    {
+      "id": "30362d2b974349889f8c67d2cd2f84cf",
+      "purpose": "B/plan/2",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1380,
+      "actual": 176,
+      "created": 1795518759.4416332
+    },
+    {
+      "id": "d63cc181518a43d39f2d173163c14e82",
+      "purpose": "B/plan/3",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1433,
+      "actual": 184,
+      "created": 1795518759.4567046
+    },
+    {
+      "id": "0a8536beb23f4ac38d77c1849b3aab9a",
+      "purpose": "B/plan/5",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1611,
+      "actual": 212,
+      "created": 1795518759.4775722
+    },
+    {
+      "id": "aa2117b479d04a2b9561411588c48504",
+      "purpose": "B/plan/6",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1676,
+      "actual": 222,
+      "created": 1795518761.3634384
+    },
+    {
+      "id": "ad7faaeb944e4cc1b9b2f9f6bb7ffba9",
+      "purpose": "B/plan/7",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1754,
+      "actual": 235,
+      "created": 1795518761.5901928
+    },
+    {
+      "id": "72397964580e4b988bd4dff4670bc1f6",
+      "purpose": "B/plan/8",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1810,
+      "actual": 243,
+      "created": 1795518761.6125295
+    },
+    {
+      "id": "472728e8e4be4127979af59ccd5e3af7",
+      "purpose": "B/plan/9",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1866,
+      "actual": 251,
+      "created": 1795518761.678605
+    },
+    {
+      "id": "43773967f0824b12928d293959c4f31d",
+      "purpose": "B/plan/10",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1928,
+      "actual": 261,
+      "created": 1795518761.7834263
+    },
+    {
+      "id": "4087d2b2f74f442787615b4b7ca2dad8",
+      "purpose": "B/plan/11",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1949,
+      "actual": 264,
+      "created": 1795518763.2701159
+    },
+    {
+      "id": "c6ac129a76654db282b7a40fd916abf0",
+      "purpose": "B/plan/12",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 1972,
+      "actual": 268,
+      "created": 1795518763.6771126
+    },
+    {
+      "id": "3804a188f70a456abf306c523150cd29",
+      "purpose": "B/plan/13",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 2013,
+      "actual": 274,
+      "created": 1795518763.7565053
+    },
+    {
+      "id": "10ecb39e388141bcadc59ad3f14b86cc",
+      "purpose": "B/plan/14",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 2080,
+      "actual": 284,
+      "created": 1795518763.9537542
+    },
+    {
+      "id": "e804de88a0fe446c82c3179b37b67720",
+      "purpose": "B/plan/15",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 2135,
+      "actual": 293,
+      "created": 1795518764.2362957
+    },
+    {
+      "id": "32c0dc8a2da74bb5818a84a0006f3c20",
+      "purpose": "B/plan/16",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 2235,
+      "actual": 308,
+      "created": 1795518765.4211297
+    },
+    {
+      "id": "7b1781035b764abb82793ca34eaaa423",
+      "purpose": "B/plan/17",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 2290,
+      "actual": 316,
+      "created": 1795518765.8848832
+    },
+    {
+      "id": "bdc6d2cd2b4241238955d22ecbb028d9",
+      "purpose": "B/plan/18",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 2358,
+      "actual": 327,
+      "created": 1795518765.9242566
+    },
+    {
+      "id": "a7f84827e08b48d2802ceed21a83085e",
+      "purpose": "B/plan/19",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 2436,
+      "actual": 338,
+      "created": 1795518765.9649057
+    },
+    {
+      "id": "ecf7c47f8d204548986ed8e77d426da8",
+      "purpose": "B/plan/20",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "status": "settled",
+      "reserved": 2502,
+      "actual": 348,
+      "created": 1795518766.0402446
+    }
+  ]
+}

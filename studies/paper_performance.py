@@ -157,13 +157,20 @@ def table_head(title, groups):
     return lines + ["".join(rules)]
 
 
-def render_matrix(matrix, followups=(), replays=None):
+def order_build_rows(rows):
+    projects = ("Table editor", "Question form", "TodoMVC", "Duo", "SVG charts")
+    models = tuple(BACKBONES.values())
+    return sorted(rows, key=lambda r: (projects.index(r["project"]), models.index(r["target_generator"])))
+
+
+def render_matrix(matrix, followups=(), replays=None, domain_rows=()):
     lines = [
-        r"\begin{table*}[!t]",
+        r"\begin{table*}[p]",
         r"\centering",
-        r"\caption{Current-task passes by target generator. Each GUI-DNA column specifies its library source. Within each project and protocol, methods share one direct baseline and the same observed targets. Bold marks the highest count when scores differ. Dashes mark unavailable comparisons.}",
+        r"\caption{Current-task passes / matched targets. Bold marks a row maximum within each protocol. Dashes mark unavailable results.}",
         r"\label{tab:endtoend}",
-        r"\small\setlength{\tabcolsep}{2pt}\renewcommand{\arraystretch}{1.01}",
+        r"\fontsize{8.5}{9.5}\selectfont\setlength{\tabcolsep}{2pt}\renewcommand{\arraystretch}{0.97}",
+        r"\setlength{\aboverulesep}{0.8pt}\setlength{\belowrulesep}{1.25pt}",
     ]
     fresh = ["Direct", "Human", "GPT-5", "Self"]
     groups = [(label, fresh) for label in WEB_PROJECTS.values()]
@@ -185,7 +192,7 @@ def render_matrix(matrix, followups=(), replays=None):
             + ", ".join(unavailable)
             + r".\end{minipage}\par"
         )
-    lines += [r"\smallskip"]
+    lines += [r"\vspace{1pt}"]
     groups = [
         ("TodoMVC", ["Direct", "Human", "Self"]),
         ("WebApp1K-Duo", ["Direct", "Self"]),
@@ -231,7 +238,7 @@ def render_matrix(matrix, followups=(), replays=None):
             lines += [
                 " & ".join([label, *(s for group, arms in series for s in values(group, arms))]) + r" \\"
             ]
-    lines += [r"\bottomrule\end{tabular*}\par\smallskip"]
+    lines += [r"\bottomrule\end{tabular*}\par\vspace{1pt}"]
     groups = [
         ("Mistral / source comparison", ["Direct", "Human", "GPT-5"]),
         ("Mistral / retrospective", ["Direct", "GPT-5", "Sonnet"]),
@@ -252,29 +259,48 @@ def render_matrix(matrix, followups=(), replays=None):
         for model in (MISTRAL, OSS):
             cells += values(matrix[model]["retrospective"].get(p, {}), ["direct", GPT5, SONNET])
         lines += [" & ".join([label, *cells]) + r" \\"]
-    lines += [r"\bottomrule\end{tabular*}\par\smallskip"]
+    lines += [r"\bottomrule\end{tabular*}\par\vspace{1pt}"]
     if followups:
         lines += [
             r"\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lllcccccc@{}}",
-            r"\rowcolor[gray]{0.94}\multicolumn{9}{l}{\textbf{D. Independent AI builds and their fixed first examples}} \\",
-            r" & & & & & \multicolumn{2}{c}{Library 1} & \multicolumn{2}{c}{Library 2} \\",
+            r"\rowcolor[gray]{0.94}\multicolumn{5}{l}{\textbf{D. Paired comparisons with two library builds}} & "
+            r"\multicolumn{2}{c}{\textbf{Library 1}} & \multicolumn{2}{c}{\textbf{Library 2}} \\",
             r"\cmidrule(lr){6-7}\cmidrule(lr){8-9}",
-            r"Project & Target generator & Builder & Decoding & Direct & Planned & Fixed & Planned & Fixed \\",
+            r"Project & Target generator & Builder & Protocol & Direct & Planned & Fixed & Planned & Fixed \\",
             r"\midrule",
         ]
-        for row in followups:
+        previous_project = None
+        for row in order_build_rows(followups):
+            if previous_project and previous_project != row["project"]:
+                lines.append(r"\addlinespace[1pt]")
+            previous_project = row["project"]
             counts = {"passed": row["passed"], "n": len(row["targets"])} if row["targets"] else {}
             fields = values(counts, ("direct", "self_a", "fixed_a", "self_b", "fixed_b"))
-            lines += [" & ".join([row["project"], row["target_generator"], row["builder"], row["decoding"], *fields]) + r" \\"]
-        lines += [r"\bottomrule\end{tabular*}\par\smallskip"]
+            protocol = row["decoding"]
+            if len(row.get("libraries", ("a", "b"))) == 1:
+                protocol += " (" + {"a": "1", "b": "2"}[row["libraries"][0]] + ")"
+            lines += [" & ".join([row["project"], row["target_generator"], row["builder"], protocol, *fields]) + r" \\"]
+        lines += [r"\bottomrule\end{tabular*}\par\vspace{1pt}"]
+    if domain_rows:
+        lines += [
+            r"\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccccc@{}}",
+            r"\rowcolor[gray]{0.94}\multicolumn{3}{l}{\textbf{E. Domain scaffolds, local Qwen2.5-0.5B}} & "
+            r"\multicolumn{3}{c}{\textbf{Library 1}} & \multicolumn{3}{c}{\textbf{Library 2}} \\",
+            r"\cmidrule(lr){4-6}\cmidrule(lr){7-9}",
+            r"Project & Direct & Rules only & Planned & Fixed A & Fixed B & Planned & Fixed A & Fixed B \\",
+            r"\midrule",
+        ]
+        methods = ("direct", "rules", "A_plan", "A_first", "A_second", "B_plan", "B_first", "B_second")
+        for row in domain_rows:
+            lines.append(" & ".join([row["project"], *values(row, methods)]) + r" \\")
+        lines += [r"\bottomrule\end{tabular*}\par\vspace{1pt}"]
     lines += [
         r"\begin{minipage}{\textwidth}\footnotesize\raggedright "
-        r"Human uses supplied components. GPT-5 denotes a frozen GPT-5 library. Self uses the row model for construction and deployment. "
-        r"A schedules twenty tasks per project. B uses eight TodoMVC subsets and ten Duo pairs. "
-        + (r"Bind uses rules on archived code. Each delivered TodoMVC controller matches its fixed page on all eight targets. Duo Direct$^*$ allows an export repair. " if replays else "")
-        + r"Supplied TodoMVC samples each subset twice. Edit updates the previous page. "
-        r"C names the generator above each column group. Sonnet denotes Claude Sonnet 4.5."
-        + (r" In D, each row shares its own Direct baseline. Native constrains configuration output. Qwen3.5-9B also disables extra reasoning. Fixed reuses the first example." if followups else "")
+        r"Human uses supplied components. GPT-5 supplies a frozen library. Self uses the same builder and generator. "
+        + (r"Bind links archived code. Direct$^*$ repairs exports. Edit updates the previous page. " if replays else "")
+        + (r"D uses each protocol's Direct. Fixed retains an example, pair, defaults, or all renderers. Gemma, SVG and GPT-OSS form variants "
+           r"reuse builds. Relaxed files and DOM tokens accept recovered Direct files. " if followups else "")
+        + (r"In E, fixed A/B retain/swap button order or enable/disable optional events." if domain_rows else "")
         + r"\end{minipage}",
         r"\end{table*}",
     ]
@@ -284,4 +310,5 @@ def render_matrix(matrix, followups=(), replays=None):
 if __name__ == "__main__":
     from studies.public_library_transfer.self_replication.paper import rows
     from studies.public_library_transfer.self_refinement.suite_comparisons import evidence
-    print(render_matrix(read(ROOT / "studies/results/paper-performance-matrix.json"), rows(), evidence()["models"]), end="")
+    from studies.public_library_transfer.self_refinement import domain_panel, prospective_panel
+    print(render_matrix(read(ROOT / "studies/results/paper-performance-matrix.json"), [*rows(), *prospective_panel.rows()], evidence()["models"], domain_panel.rows()), end="")

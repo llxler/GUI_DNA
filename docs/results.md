@@ -2335,3 +2335,43 @@ Duo 的六十个模型－目标位置中，21 个缺少至少一个组件。两�
 问卷另按九种公开类对七份模型回复做接口探针。只导出已有的类之后，Mistral 和 Qwen3.5 都由零种可挂载变为九种；真正呈现所需控件的分别只有六种和一种。Gemma 原来即可挂载九种，控件检查仍然零种。Qwen3-Coder 和 GPT-OSS 的原始类各有八种通过控件检查，两份 DeepSeek 最终回复都没有完整模块。本处的九种题型与该项目二十个官方当前任务采用不同单位。[126 次浏览器检查与逐类收据](../studies/public_library_transfer/self_refinement/form_registry/README.md)
 
 同一 SVG 库内，把已在截至当前目标的公开需求中出现的配置名设为启用，旧 GPT-5 库在 Mistral 的 20 项协议中通过 17/20，模板首例也过完全相同的 17 项，原计划与从零均为 3/20。在同一数据、同一图表的两项冲突几何要求上，按公开字段选择分别命中两端，两种单一固定状态各命中一端。表格的 Qwen3.5 库若用实测的公开 CSS 状态选配置，其中一份由 0/20 成为 1/20，固定使用另一取值也为 1/20。原表格目标 4 和图表几何用例均已公开分析；这两处不能充当陌生任务上的独立验证。[各组配对及几何诊断](../studies/public_library_transfer/self_refinement/target_selection/README.md)
+
+Qwen3-Coder 的 SVG 库里已有折线绘制类。按公开起始工程挂载和调用后，成绩从 1/20 到 2/20，公开运行暴露变量作用域错误。把已有的三个声明移动到可见范围后，浏览器两次均渲染 9 个 SVG、138 个图形，官方通过 5/20。该模型 20 份从零回复都写出了文件，只是缺少协议要求的外层 `files` 键。仅恢复包装便从 0/20 到 5/20，再给予相同接线修复仍是 5/20。两组恰好都通过目标 1、2、4、5、6。任务 1 使用公共数据即可通过。DeepSeek Flash 只提交了修改图表的控件，没有提交新的绘制类。它的接线库只过第 1 题，从零只过第 2 题；剔除公共资产题后分别为 0/19、1/19。研究者添加了接线并重排既有声明；模型没有重写图表算法。[冻结接线](../studies/public_library_transfer/self_refinement/target_selection/chart_binding/README.md) · [对称从零控制](../studies/public_library_transfer/self_refinement/target_selection/chart_binding/direct_control/PROTOCOL.md)
+
+**独立新建计算器库。** 本地 Qwen2.5-0.5B-Instruct 先自由给新增按键写运算、两种行为和界面，两份库均未交付可切换的两种实现，均为 0/20。另行登记使用公开需求提取 13 个标签，研究者提供有限数学语法和共享状态，9 个键可从名称或表达式直接链接。两份独立领域辅助库组装通过 **5/20、7/20**，相同 20 项的新从零 HTML 为 **0/20**，宽松解析可运行 16 份。人工绑定器只使用起始工程、标准数学运算及原按键顺序，不含模型生成的代码，已过 **6/20**。固定原顺序为 4/20、6/20；固定交换后的顺序为 5/20、7/20。模型两次均在全部 20 题选后者。两次公开浏览器验证都能执行平方、平方根和倒数，模型自己写的记忆操作仍有错误。原版参考页面 20/20，空白 0/20。[首批全部零分](../studies/public_library_transfer/self_refinement/local_domain/result.json) · [领域语法、部署、两端与确定性绑定器](../studies/public_library_transfer/self_refinement/local_domain/typed_keys/result.json)
+
+若 13 个运算都由模型在允许的语法中选择，用修正后的联合分词对同一提示、种子和候选做约束采样，两次均仅通过按键顺序这一项（1/20）。这项对照将模型对运算的选择与直接绑定标准数学函数分开。[联合分词复验](../studies/public_library_transfer/self_refinement/local_domain/typed_keys/token-boundary-result.json)
+
+**独立新建 TodoMVC 事件库。** 本地同一 Qwen 分别生成两份包含全部 12 个函数的事件库。研究者提供共享状态的接口、事件路由与统一调用持久化的时机。每库逐题选五个可选事件组，与固定开启、关闭这五组和同权重从零各测八项，全部 0/8。后续加入对称公开反馈，两个库的公开状态检查分别从 2/16 到 3/16、从 1/16 到 1/16，只接受了第一库的一次清除已完成项修复；八个从零响应的替换无一满足公开改善条件。原版、修复版仍均为 0/8。分函数的准备调用与逐题生成的预算不同。[首次独立建库](../studies/public_library_transfer/self_refinement/todomvc/event_modules/README.md) · [公开检查与额外本地调用](../studies/public_library_transfer/self_refinement/todomvc/event_modules/feedback/README.md)
+
+## 47. 按公开运行反馈独立建库，再用同模型组装
+
+以下各行都使用同一部署模型的新从零候选。每个库分别在该行全部目标上评测；两次建库共用这份基线。Duo 的单位是一个四项断言均通过的组合文件，TodoMVC 的单位是一个功能子集。下表的固定列给出预先指定的部署。
+
+| 数据集、生成模型与协议 | 从零首稿 | 同等反馈后的从零 | 自建库 A | 自建库 B | 固定 A / B |
+|---|---:|---:|---:|---:|---:|
+| WebApp1K-Duo · GPT-OSS-120B · 逐组件 | 8/10 | 9/10 | 9/10 | 6/10 | 0/10、0/10 |
+| WebApp1K-Duo · Qwen3.5-9B · 逐组件 | 0/10 | 0/10 | 0/10 | 0/10 | 0/10、0/10 |
+| WebApp1K-Duo · Qwen3.5-9B · 精简组件契约、再次独立生成 | 0/10 | 0/10 | 0/10 | 0/10 | 0/10、0/10 |
+| TodoMVC · Gemma 3 12B · 验证可切换行为 | 4/8 | 4/8 | 0/8 | 5/8 | 0/8、5/8 |
+| TodoMVC · Gemma 3 12B · 另给双方相同的分支语法修复 | 6/8 | 6/8 | 0/8 | 5/8 | 0/8、5/8 |
+
+Duo 每库有 15 个独立 React 功能。GPT-OSS 两个库分别有 14/15、11/15 个功能通过两项公开检查。两模型每次都选对了题面明示的两个组件名。Qwen 精简提示后，能解析的组件由 9/15、13/15 增到 14/15、15/15，真正通过公开行为的仍只有 2/15、1/15。固定两组件对十种组合均为零。40 项组合断言都出现在公开的单功能规范中；这批只检验已有行为的组合。两模型与两批次的可用实现和费用分别留档。[首批逐题记录](../studies/public_library_transfer/self_refinement/duo_components/result.json) · [Qwen 精简契约的两份新库](../studies/public_library_transfer/self_refinement/duo_components/compact/result.json)
+
+Gemma 的建库者自行命名配置。从公开的 16 项操作中，至少一项在相同初态翻转取值后有稳定可重复的差异，才将该键交给规划器。库 A 有一个经验证的键，库 B 有两个，公开默认行为分别从 11/16、15/16 提高到 12/16、16/16。官方测试中，B 由 4/8 到 5/8，新增第 04 项；A 始终 0/8。两库在初稿与修复稿共 32 个逐题页面皆与相应默认页逐字相同。另有三份直接代码因不同 switch 分支重复声明局部变量而不能加载。向双方开放相同、经语法树检查的分支作用域修复后，从零新增第 03 和 07 项。与 B 的 5/8 相比，只有 B 通过 04，只有从零通过 03、07。[两次独立建库、对称公开反馈及官方回执](../studies/public_library_transfer/self_refinement/todomvc/verified_controller/result.json) · [同等语法修复](../studies/public_library_transfer/self_refinement/todomvc/verified_controller/switch_scope/result.json)
+
+**ByteDance Web-Bench，每行均为同一批 20 个当前任务。**
+
+| 项目与模型 | 同协议从零 | 自建库 A · 逐题 / 固定 | 自建库 B · 逐题 / 固定 | 研究者提供的接口 |
+|---|---:|---:|---:|---|
+| SVG · Qwen3-Coder · 修复父类导入与 DOM 类名，保留双方可交付源码 | 5/20 | 7/20、7/20 | 5/20、5/20 | 按六种公开数据类型挂载类；仅起始工程与挂载可过 1/20 |
+| 问卷 · GPT-OSS · 初始提交合同及公开反馈 | 10/20 | 5/20、1/20 | 6/20、7/20 | 预设题型、问卷组装器与存储接线，源码同时给从零 |
+| 问卷 · 同批次只放宽字符串之外的 JSON 空白 | 12/20 | 5/20、1/20 | 6/20、7/20 | 两组重复使用上行全部模型回答 |
+
+**SVG。** 在更强的同一宽松从零 5/20 上逐阶段对照，原始两库各 1/20，仅链接父类后各 2/20，增加一轮公开模型补丁后仍各 2/20，处理 DOM 类名后才分别达到 7/20 和 5/20。原提交口径下的直接生成只过 2/20。补丁阶段 A 的提案使五类数据出现图元，但错误文本的种数增加，按事先规定的准入条件保留原版。[同分母四阶段](../studies/public_library_transfer/self_refinement/svg_renderers/source_delivery/comparisons.json)
+
+Qwen 两次独立生成共用基类和六个图表子类。七个文件都能单独通过语法检查，但两个库运行时都找不到父类。补入同库唯一具名导出后能挂载 14 个容器，仍无图元。绘图助手把含空格的多个 CSS 类名作为一个 token 交给浏览器，绘制由此中断。只在公开页面确实出现该错误时，把已有调用中的字符串拆成 DOM 接受的类名，六类数据均能绘制，A、B 分别出现 333、350 个图元；研究者只改变既有调用传递类名的方式；绘图函数和图元均出自模型。对从零页面开放相同的代码接收、模块及 DOM 处理。剔除起始公共资产即可过的第 1 题，A 和 B 的逐题成绩为 **6/19、4/19**，宽松从零 **4/19**。A 独过第 5、6、19、20 题，从零独过第 12、13 题；B 与从零分数相同，B 独过 19、20，从零独过 12、13。两库各自的固定全开页与逐题方案通过完全相同的目标。DOM 修复在看到本批公开报错后设计，复用这两份库，仍需新生成验证。[两阶段源文件与公共报错](../studies/public_library_transfer/self_refinement/svg_renderers/README.md) · [每个正式任务及更强对照](../studies/public_library_transfer/self_refinement/svg_renderers/dom_tokens/result.json)
+
+**问卷。** 两份独立库各自从公开资料生成 Question 基类及八个题型子类。九种类型的独立公开交互，A 从 8/9 到 9/9，B 始终 9/9。应用级检查有不同结论。A 的逐题选择比固定整库多通过四个文件（5/20 对 1/20），B 却少通过一个（6/20 对 7/20）。第 20 题要求导出，两份逐题方案均关闭导出选项。公开组装器已实现实例化、挂载和存储接线；从零取得同一份组装器源码。最初从零首稿与修复后均 10/20；只将 JSON 字符串外被写成字面转义的空白还原，两者分别为 11/20、12/20。全部原始输出重新进入同一接收规则，无额外计费调用。[首批逐题与公开探针](../studies/public_library_transfer/self_refinement/form_components/result.json) · [双方同等交付修复](../studies/public_library_transfer/self_refinement/form_components/whitespace/result.json)
+
+**本轮成本。** 七个独立账本共有 574 笔，全部结清。供应商回执费用之和为 $0.226937236；账本逐笔向上取到微美元，合计 **$0.227205**。Duo 两项协议及问卷合计 $0.103300，Gemma 待办 $0.005509，SVG 原始与定点修复 $0.118396。本地诊断没有外部 API 费用。建库使用整个公开需求族，从零生成逐题进行。两种方法的总准备计算量不同。[按用途、模型、阶段和提供商的账本审计](../studies/results/domain-construction-accounting-20261124.json)
