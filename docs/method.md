@@ -97,3 +97,5 @@ Web-Bench 作者估计资深工程师完成一个完整基准项目平均需要 
 Duo 的新协议让模型一次只写一个组件，在该功能原有的两条公共断言上检查；从零候选可以用两个公开功能各自的断言修复一次。TodoMVC 让模型写完整控制器、命名布尔配置，在同一公开操作下逐一翻转并重复两次，实测到差异的键才交给同模型规划。两者都独立建库两次，共用同目标的从零样本，另测固定部署。实际被选择的页面按文件散列与固定页比较。[Duo 协议](../studies/public_library_transfer/self_refinement/duo_components/PROTOCOL.md) · [TodoMVC 协议](../studies/public_library_transfer/self_refinement/todomvc/verified_controller/PROTOCOL.md)
 
 问卷组从公开规范固定基类、八个题型和应用入口，子类读取同一库实际交付的基类；从零生成器也可读取和调用相同的组装器，含构造参数、挂载、按钮以及写入存储的胶水。SVG 组先生成共用基类，再按依赖生成六种渲染类，研究者提供从公开类型到类的挂载。运行时分别对照原提交、源文件依赖链接、模型根据公开浏览器异常修复及 DOM 类名接口诊断。相同的源代码接收与公开接口修复也适用于各自从零页面。[问卷协议](../studies/public_library_transfer/self_refinement/form_components/PROTOCOL.md) · [SVG 协议与分阶段改动](../studies/public_library_transfer/self_refinement/svg_renderers/README.md)
+
+图表确认组在模型生成前固定依赖链接和 DOM 类名适配，重新付费独立抽取两个库及二十份逐库方案。两份库共用先前已恢复代码交付的二十份真实从零页面；按目标核对响应、页面和官方回执。结果 6/20、6/20 对 5/20，固定全开在每个库上逐题同分。[新库与对照溯源](../studies/public_library_transfer/self_refinement/svg_renderers/confirmation/result.json)

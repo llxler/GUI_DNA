@@ -296,10 +296,10 @@ def render_matrix(matrix, followups=(), replays=None, domain_rows=()):
         lines += [r"\bottomrule\end{tabular*}\par\vspace{1pt}"]
     lines += [
         r"\begin{minipage}{\textwidth}\footnotesize\raggedright "
-        r"Human uses supplied components. GPT-5 supplies a frozen library. Self uses the same builder and generator. "
-        + (r"Bind links archived code. Direct$^*$ repairs exports. Edit updates the previous page. " if replays else "")
-        + (r"D uses each protocol's Direct. Fixed retains an example, pair, defaults, or all renderers. Gemma, SVG and GPT-OSS form variants "
-           r"reuse builds. Relaxed files and DOM tokens accept recovered Direct files. " if followups else "")
+        r"Human supplies components. GPT-5 supplies a frozen library. Self uses one model for both stages. "
+        + (r"Bind links archived code. Direct$^*$ repairs exports. Edit updates the prior page. " if replays else "")
+        + (r"D uses each protocol's Direct. Variants reuse libraries. Fixed retains an example, pair, defaults, or all renderers. "
+           r"Relaxed files and DOM tokens use recovered Direct. New SVG builds C/D reuse those 20 replies. " if followups else "")
         + (r"In E, fixed A/B retain/swap button order or enable/disable optional events." if domain_rows else "")
         + r"\end{minipage}",
         r"\end{table*}",
@@ -311,4 +311,6 @@ if __name__ == "__main__":
     from studies.public_library_transfer.self_replication.paper import rows
     from studies.public_library_transfer.self_refinement.suite_comparisons import evidence
     from studies.public_library_transfer.self_refinement import domain_panel, prospective_panel
-    print(render_matrix(read(ROOT / "studies/results/paper-performance-matrix.json"), [*rows(), *prospective_panel.rows()], evidence()["models"], domain_panel.rows()), end="")
+    print(render_matrix(read(ROOT / "studies/results/paper-performance-matrix.json"),
+                        [*rows(), *prospective_panel.rows(), *prospective_panel.confirmation_evidence()['rows']],
+                        evidence()["models"], domain_panel.rows()), end="")

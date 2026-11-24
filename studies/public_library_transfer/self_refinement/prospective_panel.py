@@ -21,6 +21,8 @@ SOURCES = (DUO, COMPACT, TODO, SCOPED_TODO, SVG, LINKED_SVG, PATCHED_SVG, DELIVE
            SVG.parent / "report.json", FORM, FORM_WHITESPACE)
 LABELS = {"openai/gpt-oss-120b": "GPT-OSS-120B", "qwen/qwen3.5-9b": "Qwen3.5-9B"}
 OUTPUT = ROOT / "studies/results/prospective-domain-builds-20261124.json"
+CONFIRMATION = SVG.parent / "confirmation/result.json"
+CONFIRMATION_OUTPUT = ROOT / "studies/results/prospective-domain-confirmation-20261124.json"
 
 
 def paired_rows(project, model, protocol, direct, replicas):
@@ -164,10 +166,50 @@ def evidence():
 
 def verify_or_publish(write=False):
     facts = evidence()
-    if write:
+    if write and not OUTPUT.exists():
         dump(OUTPUT, facts)
     assert read(OUTPUT) == facts
 
 
+def confirmation_evidence():
+    trial = read(CONFIRMATION)
+    assert trial['control_source_sha256'] == sha(TOKEN_SVG)
+    old = {r['task']: r for r in read(TOKEN_SVG)['rows'] if (r['group'], r['arm']) == ('direct', 'delivery')}
+    reused = {r['task']: r for r in trial['rows'] if r['group'] == 'direct'}
+    assert len(trial['rows']) == 100 and set(old) == set(reused) == set(range(1, 21))
+    direct = {}
+    for task, row in reused.items():
+        for field in ('passed', 'page_digest', 'report_sha256'):
+            assert row[field] == old[task][field]
+        assert row['status'] == 'valid' and len(row['report_sha256']) == len(row['page_digest']) == len(row['response_sha256']) == 64
+        direct[task] = row['passed']
+    scores = [{**r, 'passed': normalize(r)[0]} for r in trial['rows']]
+    replicas = {k: tuple(outcomes(scores, group=k.upper(), arm=arm) for arm in ('planned', 'fixed')) for k in ('a', 'b')}
+    summaries = paired_rows('SVG charts', 'Qwen3-Coder-30B', 'Prospective C/D', direct, replicas)
+    for row in summaries:
+        row['n'] = len(row['targets'])
+        for key in row['libraries']:
+            original = trial['paired'][key.upper()]
+            assert row['targets'] == sorted(original['common'])
+            for published, actual in (('self_' + key, 'planned'), ('fixed_' + key, 'fixed'), ('direct', 'direct_delivery')):
+                assert row['passed_targets'][published] == sorted(original['passed'][actual])
+    return {'scope': 'Fresh model-built SVG libraries C and D; the original study IDs A and B identify the first and '
+                     'second builds of this confirmation. All 20 Direct pages and current-task receipts are reused '
+                     'from the earlier recovered-file condition. No new direct generation was sampled.',
+            'paper_library_labels': {'a': 'C', 'b': 'D'}, 'rows': summaries,
+            'reused_direct': [{k: reused[t][k] for k in ('task', 'passed', 'page_digest', 'report_sha256',
+                                                         'response_sha256', 'selected_attempt')} for t in sorted(reused)],
+            'source_sha256': {str(s.relative_to(ROOT)): sha(s) for s in (OUTPUT, TOKEN_SVG, CONFIRMATION)}}
+
+
+def verify_confirmation(write=False):
+    facts = confirmation_evidence()
+    if write and not CONFIRMATION_OUTPUT.exists():
+        dump(CONFIRMATION_OUTPUT, facts)
+    assert read(CONFIRMATION_OUTPUT) == facts
+    return facts['rows']
+
+
 if __name__ == '__main__':
     verify_or_publish()
+    verify_confirmation()

@@ -13,11 +13,13 @@ from studies.study_io import ROOT, read, sha
 
 HERE = Path(__file__).resolve().parent
 DEST = ROOT / "studies/results/domain-construction-accounting-20261124.json"
+FINAL = ROOT / "studies/results/domain-construction-accounting-final-20261124.json"
 ART = ROOT / "artifacts"
 START = "2026-11-24T10:45:40+00:00"
 END = "2026-11-24T11:45:40+00:00"
 SVG_END = "2026-11-24T11:27:00+00:00"
 FORM_END = "2026-11-24T11:23:00+00:00"
+CONFIRM_END = "2026-11-24T11:35:30+00:00"
 APPROVED = 3_000_000
 # Fields are root directory, study report, model, cap in microdollars, provider ceilings.
 BASE_ROUTES = {
@@ -30,14 +32,17 @@ BASE_ROUTES = {
 
 PATCH = "svg-runtime-patch"
 FORM = "form-gpt-oss"
+CONFIRM = "svg-fresh-confirmation"
 ROUTES = {**BASE_ROUTES, PATCH: ("qwen-svg-runtime-patch-20261124", "svg_renderers/runtime_patch",
                                "qwen/qwen3-coder-30b-a3b-instruct", 120000, ".12", ".46"),
           FORM: ("form-independent-components-20261124", "form_components", "openai/gpt-oss-120b", 500000, ".25", "1")}
+ALL_ROUTES = {**ROUTES, CONFIRM: ("qwen-svg-prospective-confirmation-20261124", "svg_renderers/confirmation",
+                                 "qwen/qwen3-coder-30b-a3b-instruct", 100000, ".12", ".46")}
 BUCKETS = {"Duo allocation": (1_950_000, ("duo-qwen", "duo-oss", "duo-compact", FORM)),
            "TodoMVC allocation": (650_000, ("todomvc-gemma",)),
-           "SVG allocation": (400_000, ("svg-qwen-coder", PATCH))}
+           "SVG allocation": (400_000, ("svg-qwen-coder", PATCH, CONFIRM))}
 STUDIES = {"WebApp1K-Duo": ("duo-qwen", "duo-oss", "duo-compact"), "TodoMVC": ("todomvc-gemma",),
-           "Web-Bench SVG": ("svg-qwen-coder", PATCH), "Web-Bench form": (FORM,)}
+           "Web-Bench SVG": ("svg-qwen-coder", PATCH, CONFIRM), "Web-Bench form": (FORM,)}
 
 
 def require(condition, message):
@@ -81,7 +86,7 @@ def phase(route, purpose):
             return "direct/runtime-patch", "shared-direct"
         if len(fields) == 3 and fields[0] in ("A", "B") and fields[1] == "plan":
             return "planner", fields[0]
-    if route == "svg-qwen-coder":
+    if route in ("svg-qwen-coder", CONFIRM):
         if len(fields) == 3 and fields[0] == "direct" and fields[2] in ("1", "2"):
             return ("direct/initial" if fields[2] == "1" else "direct/public-repair"), "shared-direct"
         if len(fields) == 3 and fields[1] == "plan":
@@ -118,7 +123,7 @@ def grouped(rows, field):
 def expected_budget(public, route, model):
     if route.startswith("duo-"):
         return public["groups"][model]["billing"]["total"]
-    return public["budget"] if route in ("svg-qwen-coder", PATCH, FORM) else public["accounting"]
+    return public["budget"] if route in ("svg-qwen-coder", PATCH, FORM, CONFIRM) else public["accounting"]
 
 
 def match_budget(summary, published, cap):
@@ -131,12 +136,14 @@ def match_budget(summary, published, cap):
 
 
 def cutoff(route):
+    if route == CONFIRM:
+        return CONFIRM_END
     if route in ("svg-qwen-coder", PATCH):
         return SVG_END
     return FORM_END if route == FORM else END
 
 def artifact_paths(route):
-    raw_dir, study, *_ = ROUTES[route]
+    raw_dir, study, *_ = ALL_ROUTES[route]
     base = ART / raw_dir
     beginning = base.parent if route.startswith("duo-") else base
     reg = beginning / ("registered.json" if route == "todomvc-gemma" else "registration.json")
@@ -145,7 +152,7 @@ def artifact_paths(route):
 
 def verified_route(route):
     base, reg_path, seal_path, published = artifact_paths(route)
-    _, _, model, cap, pin, pout = ROUTES[route]
+    _, _, model, cap, pin, pout = ALL_ROUTES[route]
     source = read(published)
     reg, seal = read(reg_path), read(seal_path)
     require(sha(seal_path) == source["seal_sha256"], "Final result is not from the observed generation seal")
@@ -158,9 +165,13 @@ def verified_route(route):
     balance_path = ART / ("duo-compact-balance-20261124.json" if route == "duo-compact" else "duo-components-balance-20261124.json")
     if route.startswith("duo-"):
         balance = read(balance_path)
-    elif route == FORM:
-        balance_path = ART / "form-components-balance-20261124.json"
+    elif route in (FORM, CONFIRM):
+        balance_path = ART / ("form-components-balance-20261124.json" if route == FORM else "svg-confirmation-balance-20261124.json")
         balance = read(balance_path)
+        if route == CONFIRM:
+            require(reg["spec"]["sources"][str(balance_path.relative_to(ROOT))] == sha(balance_path)
+                    and reg["spec"]["request_cutoff"] == CONFIRM_END
+                    and micro(reg["spec"]["cap_usd"]) == cap, "New SVG registration or live balance mismatch")
     elif route == PATCH:
         balance_path = base / "admission.json"
         admission = read(balance_path)
@@ -238,7 +249,7 @@ def verified_route(route):
     amounts = total(rows)
     match_budget(amounts, ledger_read.totals(base / "budget.sqlite3"), cap)
     match_budget(amounts, expected_budget(source, route, model), cap)
-    return {"model": model, "cap_microusd": cap, "registered_utc": reg["utc"], "sealed_utc": seal["utc"],
+    result = {"model": model, "cap_microusd": cap, "registered_utc": reg["utc"], "sealed_utc": seal["utc"],
             "generation_cutoff_utc": cutoff(route),
             "sufficient_balance_checked_utc": balance["checked_utc"],
             "balance_evidence_sha256": sha(balance_path),
@@ -247,6 +258,14 @@ def verified_route(route):
             "per_replica": grouped(rows, "replica"),
             "per_phase_within_replica": {r: grouped([x for x in rows if x["replica"] == r], "phase")
                                         for r in sorted({x["replica"] for x in rows})}}
+    if route == CONFIRM:
+        amendment_path = base / "observer-compatibility.json"
+        amendment = read(amendment_path)
+        require(all(sha(ROOT/path) == stamp for path,stamp in amendment["sources"].items()),
+                "New SVG observer compatibility source changed")
+        result.update(observer_compatibility_sha256=sha(amendment_path),
+                      observer_compatibility_utc=amendment["utc"])
+    return result
 
 
 def allocation_totals(reports):
@@ -280,15 +299,16 @@ def validate_release(reports, before, followup, bucket):
     require(all(datetime.fromisoformat(r["created_utc"]) >= last_seal for r in later["calls"]),
             f"{followup} started before its preceding generations were sealed")
 
-def validate(data):
+def validate(data, confirmation=False):
     require(data["authorization"] == {"start_utc": START, "end_utc": END, "cap_microusd": APPROVED},
             "Incorrect authorization window")
-    require(set(data["routes"]) == set(ROUTES), "Missing or unexpected ledger in the completed cohort")
+    required_routes = ALL_ROUTES if confirmation else ROUTES
+    require(set(data["routes"]) == set(required_routes), "Missing or unexpected ledger in the completed cohort")
     unique = set()
     generations = set()
     all_rows = []
     for route, item in data["routes"].items():
-        cfg = ROUTES[route]
+        cfg = required_routes[route]
         _, _, model, cap, *_ = cfg
         _, _, _, published = artifact_paths(route)
         public = read(published)
@@ -303,6 +323,10 @@ def validate(data):
         bound = datetime.fromisoformat(deadline)
         registered, sealed, balance_checked = map(datetime.fromisoformat,
             (item["registered_utc"], item["sealed_utc"], item["sufficient_balance_checked_utc"]))
+        if route == CONFIRM:
+            require(registered <= datetime.fromisoformat(item["observer_compatibility_utc"]) <= sealed
+                    and public.get("observer_compatibility_sha256") == item["observer_compatibility_sha256"],
+                    "New SVG observer compatibility record differs from the delivered study")
         require(datetime.fromisoformat(START) <= min(registered, balance_checked) and max(registered, balance_checked) <= sealed,
                 "Balance/registration timing mismatch")
         for r in rows:
@@ -319,7 +343,7 @@ def validate(data):
                 require(r["status"] == "settled" and type(actual) is int and 0 <= actual <= r["reserved"]
                         and micro(r["provider_cost_usd"]) == actual and r["served_model"] == model
                         and len(r["response_sha256"]) == len(r["request_sha256"]) == 64, "Unverified actual charge")
-                if route in ("svg-qwen-coder",PATCH,"todomvc-gemma"):
+                if route in ("svg-qwen-coder",PATCH,CONFIRM,"todomvc-gemma"):
                     require(r.get("provider") == ("DeepInfra" if route == "todomvc-gemma" else "SiliconFlow"),
                             "Pinned provider changed")
                 identifier = r.get("generation_id_sha256")
@@ -342,6 +366,7 @@ def validate(data):
         match_budget(original["total"], patch_admission["closed_budget"], original["cap_microusd"])
     validate_release(data["routes"], ("duo-oss", "duo-qwen"), "duo-compact", "Duo allocation")
     validate_release(data["routes"], ("duo-oss", "duo-qwen", "duo-compact"), FORM, "Duo allocation")
+    validate_release(data["routes"], ("svg-qwen-coder", PATCH), CONFIRM, "SVG allocation")
     require(all(group["exposure_microusd"] <= group["cap_microusd"] for group in data["allocations"].values()),
             "A funding group exceeded its shared allocation")
     require(sum(v[0] for v in BUCKETS.values()) == APPROVED
@@ -351,10 +376,37 @@ def validate(data):
             and model_totals(data["routes"]) == data["models"], "Model, study or global total mismatch")
 
 
+def confirmation_statement(base, last):
+    validate(base)
+    reports = {**base["routes"], CONFIRM: last}
+    aggregates = {"authorization": base["authorization"], "models": model_totals(reports), "studies": study_totals(reports),
+                  "allocations": allocation_totals(reports),
+                  "total": total(call for report in reports.values() for call in report["calls"])}
+    validate({**aggregates, "routes": reports}, confirmation=True)
+    return {**aggregates, "seven_ledger_source_sha256": sha(DEST), "seven_ledger_total": base["total"],
+            "new_ledger": last, "route_count": len(reports),
+            "scope": "The confirmation uses the remaining original SVG allocation for two fresh libraries. "
+                     "Its Direct pages and host controls are reused from the earlier SVG study and incur no fresh charge. "
+                     "Gross reservations add the historical upper bound of every call, including released reservations. "
+                     "Final exposure equals settled charges plus all still-open reservations in the three shared allocations."}
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("action", choices=("write", "check-local", "check"))
+    p.add_argument("action", choices=("write", "check-local", "check", "write-final", "check-final-local", "check-final"))
     action = p.parse_args().action
+    if "final" in action:
+        base = read(DEST)
+        if action == "check-final-local":
+            require(all(verified_route(key) == item for key,item in base["routes"].items()), "Previous ledger changed")
+        last = read(FINAL)["new_ledger"] if action == "check-final" else verified_route(CONFIRM)
+        statement = confirmation_statement(base, last)
+        if action == "write-final":
+            core.save(FINAL, statement)
+        else:
+            require(read(FINAL) == statement, "Combined accounts differ from the supplied ledger evidence")
+        print(statement["route_count"], "authorized ledgers", statement["total"])
+        return
     if action == "check":
         data = read(DEST)
     else:
