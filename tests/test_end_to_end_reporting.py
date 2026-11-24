@@ -139,3 +139,47 @@ def test_paper_cells_use_only_jointly_observed_positions():
              'paired':{str(rep):{'both_pass':1,'both_fail':1,'direct_only':2,'plan_only':0}
                        for rep in (1, 2)}}
     assert matched_table([study]).count('3/4 & 1/4') == 2
+
+
+def test_overall_table_intersects_all_observed_arms_and_keeps_real_zeros():
+    from studies.paper_performance import joint_scores
+
+    scores = joint_scores({
+        'direct': {1: True, 2: True, 3: False},
+        'astra-a': {1: True, 2: True, 3: None},
+        'astra-b': {1: False, 2: None, 3: True},
+        'failed_build': {1: False, 2: False, 3: False},
+        'no_response': {1: None, 2: None, 3: None},
+    })
+    assert scores == {'n': 1, 'targets': [1],
+                      'passed': {'direct': 1, 'astra-a': 1, 'astra-b': 0, 'failed_build': 0}}
+    assert joint_scores({'direct': {1: True}, 'plan': {2: False}}) is None
+
+
+def test_main_table_separates_unavailable_routes_from_zero_scores():
+    from studies.paper_performance import BACKBONES, render_matrix
+
+    matrix = {model: {'current': {}, 'supplied': {}, 'sources': {}, 'retrospective': {}}
+              for model in BACKBONES}
+    qwen = 'qwen/qwen3.5-9b'
+    matrix[qwen]['current']['table'] = {'n': 20, 'passed': {'direct': 1, 'human': 0, 'self': 0}}
+    matrix[qwen]['current']['todomvc'] = {'n': 8, 'passed': {'direct': 1, 'human': 0, 'self': 0}}
+    tex = render_matrix(matrix)
+    assert tex.count(r'\begin{table*}') == 1 and tex.count(r'\end{table*}') == 1
+    assert '6.2' not in tex and 'Astra' not in tex
+    table_row, suite_row = [line for line in tex.splitlines() if line.startswith('Qwen3.5-9B &')]
+    assert '1/20' in table_row and table_row.count('0/20') == 2
+    assert '1/8' in suite_row and suite_row.count('0/8') == 2
+    unavailable = next(line for line in tex.splitlines() if '-- Unavailable in Panel A' in line)
+    assert 'GPT-5,' in unavailable and 'Claude Sonnet 4.5' in unavailable
+
+
+def test_duplicate_official_case_titles_require_a_decisive_outcome():
+    from studies.public_library_transfer.backbone_suites.replay import decide
+
+    names = ['a', 'b', 'c', 'd']
+    rows = [{'fullName': name, 'status': 'passed'} for name in names]
+    assert decide(names, rows) is True
+    assert decide(names, rows + [{'fullName': 'a', 'status': 'failed'}]) is None
+    rows[-1]['status'] = 'failed'
+    assert decide(names, rows + [{'fullName': 'a', 'status': 'failed'}]) is False

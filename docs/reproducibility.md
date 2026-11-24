@@ -89,6 +89,8 @@ uv run python -m studies.canvas_model_replication.run analyze
 
 ## 本地论文与展示
 
+正文总表及其[逐格数据](../studies/results/paper-performance-matrix.json)由 `studies.paper_end_to_end --write` 一起生成。用 `uv run python -m studies.webbench.backbone_matrix.audit` 可从公开逐题 JSON 核对模型、共同目标、实测零分、服务缺测和四批独立账本。四批的预算上限只在上一批封存后按实际敞口释放，逐笔授权可查。固定首例用相同自建库配对另报；表中“自建”表示该行的同一模型既建库又选配置。[实验协议及本地复验入口](../studies/webbench/backbone_matrix/README.md)
+
 ```bash
 uv run python -m studies.paper_end_to_end --write
 bash artifacts/paper-build/build.sh

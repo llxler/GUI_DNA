@@ -1,0 +1,108 @@
+{
+  "daily_cap_usd": 20,
+  "stages": [
+    {
+      "stage": "matrix",
+      "registered_utc": "2026-11-24T01:56:04.251257+00:00",
+      "registration_sha256": "743d0fca79ecc160950bd6d14b8ba979f805f5826163a2866ad80449c24f7d51",
+      "prior_exposure_usd": {},
+      "new_limits_usd": {
+        "qwen/qwen3-coder-30b-a3b-instruct": 1.15,
+        "mistralai/mistral-small-3.2-24b-instruct": 1.1,
+        "openai/gpt-oss-120b": 1.15,
+        "google/gemma-3-12b-it": 1,
+        "openai/gpt-5-mini": 1.95,
+        "openai/gpt-5": 3.75,
+        "anthropic/claude-haiku-4.5": 2.8,
+        "anthropic/claude-sonnet-4.5": 4.9,
+        "google/gemini-2.5-flash": 2.2
+      },
+      "max_total_usd": 20.0
+    },
+    {
+      "stage": "extension",
+      "registered_utc": "2026-11-24T01:58:32.014946+00:00",
+      "registration_sha256": "891ff83a0462304439175352b389d25d8e0748d8f7ed487577937092296dacbc",
+      "prior_exposure_usd": {
+        "matrix:qwen/qwen3-coder-30b-a3b-instruct": 1.15,
+        "matrix:mistralai/mistral-small-3.2-24b-instruct": 1.1,
+        "matrix:openai/gpt-oss-120b": 1.15,
+        "matrix:google/gemma-3-12b-it": 1,
+        "matrix:openai/gpt-5-mini": 0.019511,
+        "matrix:openai/gpt-5": 0.090002,
+        "matrix:anthropic/claude-haiku-4.5": 0.048011,
+        "matrix:anthropic/claude-sonnet-4.5": 0.139777,
+        "matrix:google/gemini-2.5-flash": 0.024093
+      },
+      "new_limits_usd": {
+        "deepseek/deepseek-v4-pro-0813": 3.5,
+        "deepseek/deepseek-v4-flash": 1.5,
+        "qwen/qwen3.5-9b": 1.5
+      },
+      "max_total_usd": 11.221394
+    },
+    {
+      "stage": "suites",
+      "registered_utc": "2026-11-24T02:02:03.725137+00:00",
+      "registration_sha256": "94c8a705181fb8ea35abe4c7dc45dfa7bd86424bf24e4732a8bd8f6eaf33252f",
+      "prior_exposure_usd": {
+        "matrix:qwen/qwen3-coder-30b-a3b-instruct": 1.15,
+        "matrix:mistralai/mistral-small-3.2-24b-instruct": 1.1,
+        "matrix:openai/gpt-oss-120b": 1.15,
+        "matrix:google/gemma-3-12b-it": 1,
+        "matrix:openai/gpt-5-mini": 0.019511,
+        "matrix:openai/gpt-5": 0.090002,
+        "matrix:anthropic/claude-haiku-4.5": 0.048011,
+        "matrix:anthropic/claude-sonnet-4.5": 0.139777,
+        "matrix:google/gemini-2.5-flash": 0.024093,
+        "extension:deepseek/deepseek-v4-pro-0813": 3.5,
+        "extension:deepseek/deepseek-v4-flash": 1.5,
+        "extension:qwen/qwen3.5-9b": 1.5
+      },
+      "new_limits_usd": {
+        "qwen/qwen3-coder-30b-a3b-instruct": 1,
+        "mistralai/mistral-small-3.2-24b-instruct": 1,
+        "openai/gpt-oss-120b": 1,
+        "google/gemma-3-12b-it": 1,
+        "deepseek/deepseek-v4-flash": 1,
+        "qwen/qwen3.5-9b": 1
+      },
+      "max_total_usd": 17.221394
+    },
+    {
+      "stage": "form",
+      "registered_utc": "2026-11-24T02:31:49.059434+00:00",
+      "registration_sha256": "f744f5916e61c41765fd38fb97af6cf8fe14234002488db11d4b600df1595946",
+      "prior_exposure_usd": {
+        "matrix:qwen/qwen3-coder-30b-a3b-instruct": 1.15,
+        "matrix:mistralai/mistral-small-3.2-24b-instruct": 1.1,
+        "matrix:openai/gpt-oss-120b": 0.052715,
+        "matrix:google/gemma-3-12b-it": 1,
+        "matrix:openai/gpt-5-mini": 0.019511,
+        "matrix:openai/gpt-5": 0.090002,
+        "matrix:anthropic/claude-haiku-4.5": 0.048011,
+        "matrix:anthropic/claude-sonnet-4.5": 0.139777,
+        "matrix:google/gemini-2.5-flash": 0.024093,
+        "extension:deepseek/deepseek-v4-pro-0813": 3.5,
+        "extension:deepseek/deepseek-v4-flash": 0.354431,
+        "extension:qwen/qwen3.5-9b": 0.202866,
+        "suites:qwen/qwen3-coder-30b-a3b-instruct": 0.010352,
+        "suites:mistralai/mistral-small-3.2-24b-instruct": 0.008241,
+        "suites:openai/gpt-oss-120b": 0.006151,
+        "suites:google/gemma-3-12b-it": 0.005894,
+        "suites:deepseek/deepseek-v4-flash": 0.099291,
+        "suites:qwen/qwen3.5-9b": 0.03526
+      },
+      "new_limits_usd": {
+        "qwen/qwen3-coder-30b-a3b-instruct": 0.75,
+        "mistralai/mistral-small-3.2-24b-instruct": 0.75,
+        "openai/gpt-oss-120b": 0.75,
+        "google/gemma-3-12b-it": 0.65,
+        "deepseek/deepseek-v4-pro-0813": 2.3,
+        "deepseek/deepseek-v4-flash": 1.1,
+        "qwen/qwen3.5-9b": 0.7
+      },
+      "max_total_usd": 14.846595
+    }
+  ]
+}

@@ -2,15 +2,25 @@
 
 论文以人工行为库＋GUI-DNA 为主，AI 从公开需求建库＋GUI-DNA 检验缺少现成实现时能否复用，两者均对照同研究的无库生成。
 
-## 0.1 首要任务：补齐历史 AI 建库的原模型条件
+## 1. 首要实验：补齐论文 Table 1 的同协议比较
 
-本轮已覆盖此前十个 Web-Bench 项目及 TodoMVC、WebApp1K-Duo。表格由同一 Mistral 部署时，两次新建库分别通过 18/20、19/20，本轮从零为 3/20；两套库各有一个固定配置能覆盖实际逐题规划通过的全部目标。原 60 个组或终点中，有 44 个取得同名部署模型在调整来源后的有效配置，原身份与原协议严格复现仍为 0。[本轮结论](results.md#public-library-transfer) · [全部配置验证](../studies/results/public-library-transfer-table-space-20261123.json)
+每次优先填完一个项目的整行。按同一生成模型比较从零、人工库组装、冻结 GPT-5 库和同模型自建自用。每格记录通过数和共同可判定的分母，固定首例另报。[逐格数据](../studies/results/paper-performance-matrix.json) · [多模型结果与费用](../studies/results/backbone-overview-20261124.json)
 
-- [ ] **恢复可用的原建库模型后，先补 GPT-5、Claude Sonnet 4.5。** 本次对十项 Web-Bench 各请求一套两种原模型的库，20 笔均返回 HTTP 403，保留未决预留与缺失标记。以历史组索引为清单，同名项目的旧样本数、建库所见需求、部署模型、token 上限和复用的直接对照逐项核对；canvas 按 16k/32k、独立重复和模型分开，flex 保留五个里程碑，编辑器保留准备窗口和笔记对照。TodoMVC 原四个部署模型每项有两次采样，Duo 使用其各自模型与两个域。每套新库保留首例，记录费用与失效原因。[逐原组复测状态](../studies/results/public-library-transfer-retest-crosswalk-20261123.json) · [旧组及共用对照](../studies/results/public-library-transfer-history-20261123.json)
-- [ ] **建库格式先给模型可执行的反馈。** 在下一版接口里直接支持布尔域的两种等价表示，把非法字段、允许值及锚点在公开 HTML 中的匹配次数写入纠错消息。冻结提示后再各采一次，比较首轮准入、一次修复后的准入及通过题数；本轮原始拒绝和事后的等价解析仍各自保留。[原始协议](../studies/public_library_transfer/deployments/open_weights/PROTOCOL.md) · [等价域诊断](../studies/public_library_transfer/diagnostics/boolean_domains/PROTOCOL.md)
+- [ ] **补当前缺测的常用模型。** 11 月 24 日登记的 GPT-5、GPT-5 mini、Claude Haiku 4.5、Sonnet 4.5、Gemini 2.5 Flash，首个请求均返回 403。当相应型号的服务可用时，另登记表格和 SVG 的完整 20 项。Qwen3-Coder-30B 的表格人工库组另有 13/20 个传输缺失。复测须单列新批次和原批共同分母 7。保留原批次的缺测记录及账本。历史 TodoMVC、文件管理器数据在各自协议下单列。
+- [ ] **扩展完整项目。** 表格、SVG、问卷已按七个可用模型完成本批。后续按文件管理器、计算器、BOM、表达式编辑器的顺序，先固定公开起始工程、人工组件来源、绑定与费用。用至少一个本轮模型完成全部方法和全部当前目标，再扩展模型。Duo 如增加人工组，先登记合法来源与组件边界。
+- [ ] **复查自建库的失败。** 对照公开准入、逐题方案与固定首例，区分格式失败、库无法实现所需操作和模型选错配置。先复现 Qwen3.5-9B 图表中两次被拒的控件标识、Gemma 表格中的非法控件值域和 Mistral 图表的脚本加载错误。冻结更简短的结构示例与公开运行反馈后，对同一模型、同一目标做新批次比较，保留现有得分。
+
+## 2. 补充实验
+
+### 原模型复测与泛化
+
+此前十个 Web-Bench 项目及 TodoMVC、WebApp1K-Duo 已有复测。历史 60 个组或终点中，44 个取得同名部署模型在调整库来源后的有效配置；原身份与原协议严格复现仍为 0。[本轮结论](results.md#public-library-transfer) · [表格全部配置](../studies/results/public-library-transfer-table-space-20261123.json)
+
+- [ ] **恢复可用的原建库模型后，先补 GPT-5、Claude Sonnet 4.5。** 11 月 23 日对十项 Web-Bench 分别请求两种原模型的库，20 笔均返回 HTTP 403，保留未决预留与缺失标记。以历史组索引为清单，同名项目的旧样本数、建库所见需求、部署模型、token 上限和复用的直接对照逐项核对；canvas 按 16k/32k、独立重复和模型分开，flex 保留五个里程碑，编辑器保留准备窗口和笔记对照。TodoMVC 原四个部署模型每项有两次采样，Duo 使用其各自模型与两个域。每套新库保留首例，记录费用与失效原因。[逐原组复测状态](../studies/results/public-library-transfer-retest-crosswalk-20261123.json) · [旧组及共用对照](../studies/results/public-library-transfer-history-20261123.json)
+- [ ] **建库格式先给模型可执行的反馈。** 11 月 24 日的 Web-Bench 接口已支持两种等价布尔表示。下一版把非法字段、允许值及锚点在公开 HTML 中的匹配次数写入纠错消息。冻结提示后再各采一次，比较首轮准入、一次修复后的准入及通过题数；本轮原始拒绝和事后的等价解析仍各自保留。[原始协议](../studies/public_library_transfer/deployments/open_weights/PROTOCOL.md) · [等价域诊断](../studies/public_library_transfer/diagnostics/boolean_domains/PROTOCOL.md)
 - [ ] 泛化验证优先使用此前未用于调提示的独立应用族，预登记建库者可见的公开材料；对同模型、同目标同时保存逐题方案、固定示例、从零代码，报告双方各自独有的通过项。当前闭集装配支持布尔值和有限枚举。连续几何参数、数组和复杂数据结构须各有可执行基线及合法范围。[跨项目协议及代码](../studies/public_library_transfer/README.md)
 
-## Web-Bench 尚待覆盖的项目
+### Web-Bench 尚待覆盖的项目
 
 分母来自 ByteDance 论文附录 A 表 5–7。已把冻结快照逐目录对齐，50 个正式项目各有 20 个当前任务文件，共 1,000 个项目－目标位置。ChartBuilder 对应目录 `chart`；额外目录 `demo`、`project-template`、`pull-loading` 不在论文 50 项清单中。TodoMVC 单列。重复生成、不同建库者、校准和空白页都不增加目标覆盖数。[官方项目清单](https://arxiv.org/html/2505.07473v1#A1) · [冻结快照](https://github.com/bytedance/web-bench/tree/7b31ca2b786eef120dd49ce63dd03d0c0006046d/projects)
 
@@ -40,7 +50,7 @@
 - [ ] draw、canvas、flex 已触及的 5 个里程碑不能代替全部 20 个任务。补测余下 15 项前先固定方法与运行合同，保留旧协议的原分母。
 - [ ] 框架与后端按运行环境安排；先验证构建、官方参考页、空白或失效对照与数据重置，再接入双库实验。相同任务设计的技术栈变体不计作独立应用族重复。
 
-## 0. 仍决定论文结论的实验
+### 规划能力、成本与断言
 
 - [ ] **P1 扩大应用与模型覆盖。** React 博客的 20 个官方文件均已接受参考页、拒绝起始页和空白页。下一步登记全部目标、人工组件与绑定来源、两组准备的信息与额度，再运行无库、人工库、AI 库三组。用第二个目标生成模型复验。相同需求的 Vue 等框架变体不计作独立应用族。[React 校准记录](../studies/results/react-blog-calibration-20261123.json)
 - [ ] **P2 检验规划器能否按目标切换互斥操作。** 图表 AI 库可覆盖两端，现有模型页各只命中一端；绘图短拖的 162 种设置都固定为后期最小线长。下一步优先寻找有两种经验证可选状态转移的库，在新生成前冻结相同按键或拖动、两端要求和固定页对照，检验实际方案能否两端都命中。[绘图回放](../studies/results/draw-pointer-transition-20261123.json)
@@ -49,12 +59,12 @@
 
 已审阅指定的 LaTCoder 及五篇交互生成研究，并据此改写引言。[逐篇笔记与原文出处](related-work-notes.md)
 
-## 1. 会议后续与作者审阅
+## 3. 会议后续与作者审阅
 
-- [ ] 在 Overleaf 审阅本地主稿、流程图与三方法结果表，确认人工库来源、占位符和逐模型分层在双栏排版中清楚可读。
+- [ ] 在 Overleaf 审阅本地主稿、流程图与多模型总表，确认人工库来源、占位符和逐模型分层在双栏排版中清楚可读。
 - [ ] 多端适配若纳入后续研究，先定义同一交互在桌面与窄屏的配对断言，以及修复一端后另一端发生回归的判据。
 
-## 2. 论文与公开交付
+## 4. 论文与公开交付
 
 - [ ] **R1 作者审核。** 复核论文结论、引用、署名与 AI 使用披露，确定匿名审稿链接。
 - [ ] **R2 跨机器复验。** 当前报告包已在本机另行解包复算；在干净机器上重新安装锁定依赖、验证两个入口并重跑浏览器抽样，登记环境与差异。

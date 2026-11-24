@@ -2257,3 +2257,30 @@ canvas 参考页屏蔽 k 后，三个种子的公开射击观察都从有效变�
 全量校准中，十个官方参考页通过各自全部 20 个目标。挂有原始公共资产的空白页通过 BOM 的五个文件和 SVG 的一个数据文件，其他文件均拒绝空白页。历史 60 个组或终点中的 44 个，已经有同名部署模型在调整来源后的实际配置记录；严格原协议同身份复现数为 0。项目级复测、模型身份替换和剩余缺口逐行登记。[200 个目标的参考与空白控制](../studies/results/public-library-transfer-calibration-20261123.json) · [60 组对应关系](../studies/results/public-library-transfer-retest-crosswalk-20261123.json)
 
 本轮八份独立账本新增 API 已结算 **$0.730233**；计入 131 笔未知或未决预留后，总敞口为 **$7.613748**，低于授权的 $20。订阅会话及本地 Qwen 的计算没有折算成 API 美元。这里的金额只合计本轮新增调用；Git 中公开结果可用 `python -m studies.public_library_transfer --check` 独立核对。[按建库者和账本的成本](../studies/results/public-library-transfer-overview-20261123.json)
+
+
+## 43. 论文总表的共同目标复算
+
+总表按 Mistral Small 3.2、GPT-OSS-120B、GPT-6.2 Astra 分块，每一列只比较同一生成器、协议、项目下各有记录的方法。已有观察的每种方法取同一批候选，未交付整组的协议条件留空。以 Mistral 的 SVG 新库复测为例，两份 Astra 库和直接生成共同可判定的是 10 个目标，直接通过 6 个，两库各通过 9 个。单独配对时两套库各有 13 项可判定，但对应的目标集合不同。Mistral 和 GPT-OSS 在该项目严格准入失败，由 Mistral 部署时在相同的 10 个位置均计 0。先前的成对成绩继续按各自目标集报告。此次复算没有新 API 请求。[总表逐格依据](../studies/results/paper-performance-matrix.json) · [原始部署记录](../studies/results/public-library-transfer-remote-20261123.json) · [开放权重建库记录](../studies/results/public-library-transfer-open-20261123.json)
+
+## 44. 多模型端到端总表（2026-11-24）
+
+表格、SVG 共登记 12 个目标模型。GPT-5、GPT-5 mini、Claude Haiku 4.5、Claude Sonnet 4.5、Gemini 2.5 Flash 首次调用返回 HTTP 403。已有的同型号历史对照留在原协议。其余 7 个模型另测问卷，6 个另测 TodoMVC 和 Duo。名单根据接口可用性登记，全部保留。表格、SVG、问卷的 120 份参考页和空白页校准回执已按原始报告核验。三个参考页各通过 20/20，空白页仅通过 SVG 的公共数据文件 1。[模型与输入](../studies/webbench/backbone_matrix/README.md) · [校准](../studies/results/public-library-transfer-calibration-20261123.json)
+
+每格依次为**从零 / 人工参考组件 / 冻结 GPT-5 库 / 同模型自建库**的通过数，括号内是四组共用的实测分母。目标始终为当前文件。建库或编译确实失败的样本为零，API 无观察的位置留缺。各模型每题各方法仅采样一次。
+
+| 生成模型 | 表格编辑器 | SVG 图表 | 问卷编辑器 |
+|---|---|---|---|
+| Gemma 3 12B | 0 / 1 / 0 / 0（20） | 2 / 2 / 0 / 0（20） | 4 / 0 / 0 / 0（20） |
+| Qwen3.5-9B | 0 / 6 / 1 / 0（20） | 0 / 5 / 1 / 0（20） | 0 / 8 / 2 / 0（19） |
+| Mistral Small 3.2 | 5 / 18 / 3 / 0（18） | 3 / 12 / 7 / 0（19） | 2 / 19 / 1 / 0（19） |
+| Qwen3-Coder-30B | 3 / 0 / 0 / 0（7） | 0 / 11 / 15 / 1（18） | 5 / 7 / 0 / 0（9） |
+| GPT-OSS-120B | 7 / 20 / 3 / 0（20） | 2 / 20 / 16 / 0（20） | 10 / 17 / 13 / 10（18） |
+| DeepSeek V4 Flash | 1 / 19 / 3 / 0（20） | 1 / 20 / 16 / 1（20） | 4 / 17 / 13 / 0（20） |
+| DeepSeek V4 Pro | 2 / 20 / 3 / 0（20） | 3 / 19 / 16 / 0（19） | 6 / 20 / 13 / 0（20） |
+
+按模型逐一和各自从零对照比较，表格、SVG、问卷上人工库的「提高 / 持平 / 降低」分别为 6/0/1、6/1/0、6/0/1。同模型自建库相应为 0/2/5、1/2/4、0/2/5。这些是该项目内生成模型的个数。Qwen3-Coder-30B 表格人工库组有 13 题在传输中断后未取得回答，四组共同分母为 7。每项的逐模型分母、建库状态、固定首例和费用均可独立核查。[总表数据](../studies/results/paper-performance-matrix.json) · [逐项目核对](../studies/results/backbone-overview-20261124.json)
+
+六个套件生成模型均完成八个 TodoMVC 需求和十个 Duo 组合。DeepSeek V4 Flash 的 TodoMVC 从零、人工、自建与固定首例分别是 2/8、5/8、8/8、8/8。Duo 从零为 6/10，自建和固定首例均为 0/10。Qwen3-Coder-30B 在 Duo 的三项为 4/10、1/10、1/10。Gemma 的一个组件在加载时重复注册测试，五个目标的逐题及固定候选共十份原始报告。每份至少有一个官方用例的所有同名执行都失败，复核后均判失败。[套件逐题数据](../studies/results/backbone-suites-20261124.json) · [原报告与各用例判定](../studies/results/backbone-suite-replays-20261124.json)
+
+四批合计发起 1,677 笔 API 请求，已结算 $5.269974。47 笔未决请求仍按原额预留，含预留的最高支出为 $6.478155。表格和 SVG 已结算 $3.138239，问卷 $1.966546，两个套件 $0.165189。每个模型各自在建库和部署阶段的账本可查。人工工时及历史 GPT-5 库的既有准备费未计入本次新增 API 支出。[分轮授权与最高敞口](../studies/results/backbone-allocations-20261124.json) · [分项账本](../studies/results/backbone-overview-20261124.json)

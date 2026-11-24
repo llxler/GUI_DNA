@@ -1,0 +1,3259 @@
+{
+  "date": "2026-11-24",
+  "unit": "one current task file per position",
+  "daily_cap_usd": 20,
+  "calls": 1677,
+  "unsettled_calls": 47,
+  "settled_usd": 5.269974,
+  "exposure_usd": 6.478155,
+  "sources_sha256": {
+    "backbone-matrix-20261124.json": "4297c24cad773da768b64a4e40e3407b4c442ac6f233bdd3000ac2bc87dd2892",
+    "backbone-extension-20261124.json": "dd106ce607867c66aca2e56adc48a5e28608e1fbcf391862d8a33869336af1d6",
+    "backbone-form-20261124.json": "b66b7d82b0fca2e3111f4e2e13a0688100b61e598aec7ed6f1d3c7f125689caf",
+    "backbone-suites-20261124.json": "e565bac496c4a56162304b2dc8c947ced2af90f598ad15c0da26d3538935ff85",
+    "backbone-suite-replays-20261124.json": "5664b7087363240291c52d2d2b8fd9826d1fff4edf0b5bd1d18df702460d1b06",
+    "backbone-allocations-20261124.json": "f6a99296d5a692700132e18ab9766285b1e6618fa158cd287874e55adc3def89"
+  },
+  "model_count_comparisons_to_direct_by_project": {
+    "table": {
+      "gpt5-library": {
+        "higher": 3,
+        "tied": 1,
+        "lower": 3
+      },
+      "human": {
+        "higher": 6,
+        "tied": 0,
+        "lower": 1
+      },
+      "self": {
+        "higher": 0,
+        "tied": 2,
+        "lower": 5
+      }
+    },
+    "svg-chart": {
+      "gpt5-library": {
+        "higher": 6,
+        "tied": 0,
+        "lower": 1
+      },
+      "human": {
+        "higher": 6,
+        "tied": 1,
+        "lower": 0
+      },
+      "self": {
+        "higher": 1,
+        "tied": 2,
+        "lower": 4
+      }
+    },
+    "form": {
+      "gpt5-library": {
+        "higher": 4,
+        "tied": 0,
+        "lower": 3
+      },
+      "human": {
+        "higher": 6,
+        "tied": 0,
+        "lower": 1
+      },
+      "self": {
+        "higher": 0,
+        "tied": 2,
+        "lower": 5
+      }
+    },
+    "todomvc": {
+      "human": {
+        "higher": 2,
+        "tied": 3,
+        "lower": 1
+      },
+      "self": {
+        "higher": 1,
+        "tied": 1,
+        "lower": 4
+      }
+    },
+    "duo": {
+      "self": {
+        "higher": 0,
+        "tied": 1,
+        "lower": 5
+      }
+    }
+  },
+  "models": {
+    "qwen/qwen3-coder-30b-a3b-instruct": {
+      "table_and_charts": {
+        "source_file": "backbone-matrix-20261124.json",
+        "source_registration": "743d0fca79ecc160950bd6d14b8ba979f805f5826163a2866ad80449c24f7d51",
+        "settled_build_microusd": 2915,
+        "ledger": {
+          "calls": 162,
+          "settled_usd": 0.154159,
+          "exposure_usd": 0.522788,
+          "unsettled_calls": 18,
+          "cap_usd": 1.15,
+          "stop_usd": 1.15,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "table": "valid",
+          "svg-chart": "valid"
+        },
+        "route_closed": null
+      },
+      "question_form": {
+        "source_file": "backbone-form-20261124.json",
+        "source_registration": "f744f5916e61c41765fd38fb97af6cf8fe14234002488db11d4b600df1595946",
+        "settled_build_microusd": 1584,
+        "ledger": {
+          "calls": 81,
+          "settled_usd": 0.078519,
+          "exposure_usd": 0.406533,
+          "unsettled_calls": 16,
+          "cap_usd": 0.75,
+          "stop_usd": 0.75,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "form": "valid"
+        },
+        "route_closed": null
+      },
+      "suites": {
+        "source_file": "backbone-suites-20261124.json",
+        "source_registration": "94c8a705181fb8ea35abe4c7dc45dfa7bd86424bf24e4732a8bd8f6eaf33252f",
+        "settled_build_microusd": 2629,
+        "ledger": {
+          "calls": 39,
+          "settled_usd": 0.010352,
+          "exposure_usd": 0.010352,
+          "unsettled_calls": 0,
+          "cap_usd": 1.0,
+          "stop_usd": 1.0,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "todomvc": "build_failed",
+          "blogging": "valid",
+          "taskmanagement": "valid"
+        },
+        "route_closed": null
+      },
+      "projects": {
+        "table": {
+          "comparison": {
+            "n": 7,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              13,
+              14,
+              20
+            ],
+            "passed": {
+              "direct": 3,
+              "human": 0,
+              "gpt5-library": 0,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 1,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": [
+              4
+            ]
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "passed": 3,
+              "test_failed": 15,
+              "missing": 1,
+              "invalid": 1
+            },
+            "human": {
+              "invalid": 7,
+              "missing": 13
+            },
+            "gpt5-library": {
+              "invalid": 18,
+              "missing": 2
+            },
+            "self": {
+              "test_failed": 19,
+              "invalid": 1
+            },
+            "fixed": {
+              "test_failed": 19,
+              "passed": 1
+            }
+          }
+        },
+        "svg-chart": {
+          "comparison": {
+            "n": 18,
+            "targets": [
+              1,
+              2,
+              3,
+              5,
+              6,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "direct": 0,
+              "human": 11,
+              "gpt5-library": 15,
+              "self": 1
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 1,
+              "self": 1
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "invalid": 20
+            },
+            "human": {
+              "invalid": 8,
+              "passed": 12
+            },
+            "gpt5-library": {
+              "passed": 15,
+              "missing": 2,
+              "invalid": 1,
+              "test_failed": 2
+            },
+            "self": {
+              "passed": 1,
+              "test_failed": 15,
+              "invalid": 4
+            },
+            "fixed": {
+              "passed": 1,
+              "test_failed": 19
+            }
+          }
+        },
+        "form": {
+          "comparison": {
+            "n": 9,
+            "targets": [
+              1,
+              2,
+              4,
+              6,
+              7,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "direct": 5,
+              "human": 7,
+              "gpt5-library": 0,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "passed": 9,
+              "test_failed": 5,
+              "missing": 3,
+              "invalid": 3
+            },
+            "human": {
+              "invalid": 2,
+              "missing": 4,
+              "passed": 14
+            },
+            "gpt5-library": {
+              "test_failed": 4,
+              "missing": 9,
+              "invalid": 7
+            },
+            "self": {
+              "test_failed": 20
+            },
+            "fixed": {
+              "test_failed": 20
+            }
+          }
+        },
+        "todomvc": {
+          "comparison": {
+            "n": 8,
+            "targets": [
+              "todo-01",
+              "todo-02",
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07",
+              "todo-08"
+            ],
+            "passed": {
+              "direct": 8,
+              "human": 8,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 8,
+            "targets": [
+              "todo-01",
+              "todo-02",
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07",
+              "todo-08"
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "passed": 8
+            },
+            "human": {
+              "passed": 8
+            },
+            "self": {
+              "build_failed": 8
+            },
+            "fixed": {
+              "build_failed": 8
+            }
+          }
+        },
+        "duo": {
+          "comparison": {
+            "n": 10,
+            "targets": [
+              "addAltTextToImage_postPerformanceReport",
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_assignPostToCategory",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "addCommentToTask_setTaskDeadline",
+              "approveOrRejectTaskReview_compareTime",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "passed": {
+              "direct": 4,
+              "self": 1
+            }
+          },
+          "fixed_pair": {
+            "n": 10,
+            "targets": [
+              "addAltTextToImage_postPerformanceReport",
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_assignPostToCategory",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "addCommentToTask_setTaskDeadline",
+              "approveOrRejectTaskReview_compareTime",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "passed": {
+              "fixed": 1,
+              "self": 1
+            },
+            "only_self": [
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "only_fixed": [
+              "addCommentToTask_setTaskDeadline"
+            ]
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "test_failed": 6,
+              "passed": 4
+            },
+            "self": {
+              "test_failed": 8,
+              "invalid": 1,
+              "passed": 1
+            },
+            "fixed": {
+              "test_failed": 9,
+              "passed": 1
+            }
+          }
+        }
+      }
+    },
+    "mistralai/mistral-small-3.2-24b-instruct": {
+      "table_and_charts": {
+        "source_file": "backbone-matrix-20261124.json",
+        "source_registration": "743d0fca79ecc160950bd6d14b8ba979f805f5826163a2866ad80449c24f7d51",
+        "settled_build_microusd": 3637,
+        "ledger": {
+          "calls": 143,
+          "settled_usd": 0.14871,
+          "exposure_usd": 0.192113,
+          "unsettled_calls": 3,
+          "cap_usd": 1.1,
+          "stop_usd": 1.1,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "table": "valid",
+          "svg-chart": "build_failed"
+        },
+        "route_closed": null
+      },
+      "question_form": {
+        "source_file": "backbone-form-20261124.json",
+        "source_registration": "f744f5916e61c41765fd38fb97af6cf8fe14234002488db11d4b600df1595946",
+        "settled_build_microusd": 2656,
+        "ledger": {
+          "calls": 62,
+          "settled_usd": 0.093711,
+          "exposure_usd": 0.117072,
+          "unsettled_calls": 1,
+          "cap_usd": 0.75,
+          "stop_usd": 0.75,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "form": "build_failed"
+        },
+        "route_closed": null
+      },
+      "suites": {
+        "source_file": "backbone-suites-20261124.json",
+        "source_registration": "94c8a705181fb8ea35abe4c7dc45dfa7bd86424bf24e4732a8bd8f6eaf33252f",
+        "settled_build_microusd": 2153,
+        "ledger": {
+          "calls": 34,
+          "settled_usd": 0.008241,
+          "exposure_usd": 0.008241,
+          "unsettled_calls": 0,
+          "cap_usd": 1.0,
+          "stop_usd": 1.0,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "todomvc": "build_failed",
+          "blogging": "valid",
+          "taskmanagement": "build_failed"
+        },
+        "route_closed": null
+      },
+      "projects": {
+        "table": {
+          "comparison": {
+            "n": 18,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "direct": 5,
+              "human": 18,
+              "gpt5-library": 3,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 2,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": [
+              1,
+              4
+            ]
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "passed": 5,
+              "test_failed": 13,
+              "missing": 2
+            },
+            "human": {
+              "passed": 20
+            },
+            "gpt5-library": {
+              "test_failed": 17,
+              "passed": 3
+            },
+            "self": {
+              "invalid": 11,
+              "test_failed": 9
+            },
+            "fixed": {
+              "passed": 2,
+              "test_failed": 18
+            }
+          }
+        },
+        "svg-chart": {
+          "comparison": {
+            "n": 19,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "direct": 3,
+              "human": 12,
+              "gpt5-library": 7,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "passed": 3,
+              "test_failed": 17
+            },
+            "human": {
+              "passed": 13,
+              "invalid": 7
+            },
+            "gpt5-library": {
+              "passed": 7,
+              "invalid": 12,
+              "missing": 1
+            },
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            }
+          }
+        },
+        "form": {
+          "comparison": {
+            "n": 19,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "direct": 2,
+              "human": 19,
+              "gpt5-library": 1,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "passed": 2,
+              "test_failed": 9,
+              "invalid": 9
+            },
+            "human": {
+              "passed": 20
+            },
+            "gpt5-library": {
+              "test_failed": 3,
+              "invalid": 15,
+              "passed": 1,
+              "missing": 1
+            },
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            }
+          }
+        },
+        "todomvc": {
+          "comparison": {
+            "n": 8,
+            "targets": [
+              "todo-01",
+              "todo-02",
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07",
+              "todo-08"
+            ],
+            "passed": {
+              "direct": 8,
+              "human": 8,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 8,
+            "targets": [
+              "todo-01",
+              "todo-02",
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07",
+              "todo-08"
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "passed": 8
+            },
+            "human": {
+              "passed": 8
+            },
+            "self": {
+              "build_failed": 8
+            },
+            "fixed": {
+              "build_failed": 8
+            }
+          }
+        },
+        "duo": {
+          "comparison": {
+            "n": 10,
+            "targets": [
+              "addAltTextToImage_postPerformanceReport",
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_assignPostToCategory",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "addCommentToTask_setTaskDeadline",
+              "approveOrRejectTaskReview_compareTime",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "passed": {
+              "direct": 0,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 10,
+            "targets": [
+              "addAltTextToImage_postPerformanceReport",
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_assignPostToCategory",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "addCommentToTask_setTaskDeadline",
+              "approveOrRejectTaskReview_compareTime",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "test_failed": 10
+            },
+            "self": {
+              "test_failed": 5,
+              "build_failed": 5
+            },
+            "fixed": {
+              "test_failed": 5,
+              "build_failed": 5
+            }
+          }
+        }
+      }
+    },
+    "openai/gpt-oss-120b": {
+      "table_and_charts": {
+        "source_file": "backbone-matrix-20261124.json",
+        "source_registration": "743d0fca79ecc160950bd6d14b8ba979f805f5826163a2866ad80449c24f7d51",
+        "settled_build_microusd": 1221,
+        "ledger": {
+          "calls": 143,
+          "settled_usd": 0.052715,
+          "exposure_usd": 0.052715,
+          "unsettled_calls": 0,
+          "cap_usd": 1.15,
+          "stop_usd": 1.15,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "table": "valid",
+          "svg-chart": "build_failed"
+        },
+        "route_closed": null
+      },
+      "question_form": {
+        "source_file": "backbone-form-20261124.json",
+        "source_registration": "f744f5916e61c41765fd38fb97af6cf8fe14234002488db11d4b600df1595946",
+        "settled_build_microusd": 1806,
+        "ledger": {
+          "calls": 82,
+          "settled_usd": 0.034909,
+          "exposure_usd": 0.056912,
+          "unsettled_calls": 2,
+          "cap_usd": 0.75,
+          "stop_usd": 0.75,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "form": "valid"
+        },
+        "route_closed": null
+      },
+      "suites": {
+        "source_file": "backbone-suites-20261124.json",
+        "source_registration": "94c8a705181fb8ea35abe4c7dc45dfa7bd86424bf24e4732a8bd8f6eaf33252f",
+        "settled_build_microusd": 1391,
+        "ledger": {
+          "calls": 37,
+          "settled_usd": 0.006151,
+          "exposure_usd": 0.006151,
+          "unsettled_calls": 0,
+          "cap_usd": 1.0,
+          "stop_usd": 1.0,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "todomvc": "valid",
+          "blogging": "build_failed",
+          "taskmanagement": "build_failed"
+        },
+        "route_closed": null
+      },
+      "projects": {
+        "table": {
+          "comparison": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "direct": 7,
+              "human": 20,
+              "gpt5-library": 3,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "passed": 7,
+              "test_failed": 12,
+              "invalid": 1
+            },
+            "human": {
+              "passed": 20
+            },
+            "gpt5-library": {
+              "test_failed": 17,
+              "passed": 3
+            },
+            "self": {
+              "test_failed": 20
+            },
+            "fixed": {
+              "test_failed": 20
+            }
+          }
+        },
+        "svg-chart": {
+          "comparison": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "direct": 2,
+              "human": 20,
+              "gpt5-library": 16,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "passed": 2,
+              "test_failed": 15,
+              "invalid": 3
+            },
+            "human": {
+              "passed": 20
+            },
+            "gpt5-library": {
+              "passed": 16,
+              "invalid": 1,
+              "test_failed": 3
+            },
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            }
+          }
+        },
+        "form": {
+          "comparison": {
+            "n": 18,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18
+            ],
+            "passed": {
+              "direct": 10,
+              "human": 17,
+              "gpt5-library": 13,
+              "self": 10
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 10,
+              "self": 10
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "passed": 10,
+              "invalid": 3,
+              "test_failed": 5,
+              "missing": 2
+            },
+            "human": {
+              "passed": 19,
+              "test_failed": 1
+            },
+            "gpt5-library": {
+              "passed": 14,
+              "test_failed": 6
+            },
+            "self": {
+              "passed": 10,
+              "test_failed": 10
+            },
+            "fixed": {
+              "passed": 10,
+              "test_failed": 10
+            }
+          }
+        },
+        "todomvc": {
+          "comparison": {
+            "n": 8,
+            "targets": [
+              "todo-01",
+              "todo-02",
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07",
+              "todo-08"
+            ],
+            "passed": {
+              "direct": 8,
+              "human": 8,
+              "self": 8
+            }
+          },
+          "fixed_pair": {
+            "n": 8,
+            "targets": [
+              "todo-01",
+              "todo-02",
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07",
+              "todo-08"
+            ],
+            "passed": {
+              "fixed": 8,
+              "self": 8
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "passed": 8
+            },
+            "human": {
+              "passed": 8
+            },
+            "self": {
+              "passed": 8
+            },
+            "fixed": {
+              "passed": 8
+            }
+          }
+        },
+        "duo": {
+          "comparison": {
+            "n": 10,
+            "targets": [
+              "addAltTextToImage_postPerformanceReport",
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_assignPostToCategory",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "addCommentToTask_setTaskDeadline",
+              "approveOrRejectTaskReview_compareTime",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "passed": {
+              "direct": 5,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 10,
+            "targets": [
+              "addAltTextToImage_postPerformanceReport",
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_assignPostToCategory",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "addCommentToTask_setTaskDeadline",
+              "approveOrRejectTaskReview_compareTime",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "test_failed": 5,
+              "passed": 5
+            },
+            "self": {
+              "build_failed": 10
+            },
+            "fixed": {
+              "build_failed": 10
+            }
+          }
+        }
+      }
+    },
+    "google/gemma-3-12b-it": {
+      "table_and_charts": {
+        "source_file": "backbone-matrix-20261124.json",
+        "source_registration": "743d0fca79ecc160950bd6d14b8ba979f805f5826163a2866ad80449c24f7d51",
+        "settled_build_microusd": 1694,
+        "ledger": {
+          "calls": 124,
+          "settled_usd": 0.166816,
+          "exposure_usd": 0.166816,
+          "unsettled_calls": 0,
+          "cap_usd": 1.0,
+          "stop_usd": 1.0,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "table": "build_failed",
+          "svg-chart": "build_failed"
+        },
+        "route_closed": null
+      },
+      "question_form": {
+        "source_file": "backbone-form-20261124.json",
+        "source_registration": "f744f5916e61c41765fd38fb97af6cf8fe14234002488db11d4b600df1595946",
+        "settled_build_microusd": 1370,
+        "ledger": {
+          "calls": 62,
+          "settled_usd": 0.089105,
+          "exposure_usd": 0.089105,
+          "unsettled_calls": 0,
+          "cap_usd": 0.65,
+          "stop_usd": 0.65,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "form": "build_failed"
+        },
+        "route_closed": null
+      },
+      "suites": {
+        "source_file": "backbone-suites-20261124.json",
+        "source_registration": "94c8a705181fb8ea35abe4c7dc45dfa7bd86424bf24e4732a8bd8f6eaf33252f",
+        "settled_build_microusd": 1423,
+        "ledger": {
+          "calls": 34,
+          "settled_usd": 0.005894,
+          "exposure_usd": 0.005894,
+          "unsettled_calls": 0,
+          "cap_usd": 1.0,
+          "stop_usd": 1.0,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "todomvc": "build_failed",
+          "blogging": "build_failed",
+          "taskmanagement": "valid"
+        },
+        "route_closed": null
+      },
+      "projects": {
+        "table": {
+          "comparison": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "direct": 0,
+              "human": 1,
+              "gpt5-library": 0,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "test_failed": 14,
+              "invalid": 6
+            },
+            "human": {
+              "invalid": 19,
+              "passed": 1
+            },
+            "gpt5-library": {
+              "invalid": 20
+            },
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            }
+          }
+        },
+        "svg-chart": {
+          "comparison": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "direct": 2,
+              "human": 2,
+              "gpt5-library": 0,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "passed": 2,
+              "test_failed": 13,
+              "invalid": 5
+            },
+            "human": {
+              "invalid": 18,
+              "passed": 2
+            },
+            "gpt5-library": {
+              "invalid": 20
+            },
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            }
+          }
+        },
+        "form": {
+          "comparison": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "direct": 4,
+              "human": 0,
+              "gpt5-library": 0,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "passed": 4,
+              "test_failed": 11,
+              "invalid": 5
+            },
+            "human": {
+              "invalid": 20
+            },
+            "gpt5-library": {
+              "test_failed": 1,
+              "invalid": 19
+            },
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            }
+          }
+        },
+        "todomvc": {
+          "comparison": {
+            "n": 8,
+            "targets": [
+              "todo-01",
+              "todo-02",
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07",
+              "todo-08"
+            ],
+            "passed": {
+              "direct": 4,
+              "human": 8,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 8,
+            "targets": [
+              "todo-01",
+              "todo-02",
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07",
+              "todo-08"
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "passed": 4,
+              "test_failed": 4
+            },
+            "human": {
+              "passed": 8
+            },
+            "self": {
+              "build_failed": 8
+            },
+            "fixed": {
+              "build_failed": 8
+            }
+          }
+        },
+        "duo": {
+          "comparison": {
+            "n": 10,
+            "targets": [
+              "addAltTextToImage_postPerformanceReport",
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_assignPostToCategory",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "addCommentToTask_setTaskDeadline",
+              "approveOrRejectTaskReview_compareTime",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "passed": {
+              "direct": 1,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 10,
+            "targets": [
+              "addAltTextToImage_postPerformanceReport",
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_assignPostToCategory",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "addCommentToTask_setTaskDeadline",
+              "approveOrRejectTaskReview_compareTime",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "test_failed": 9,
+              "passed": 1
+            },
+            "self": {
+              "build_failed": 5,
+              "test_failed": 5
+            },
+            "fixed": {
+              "build_failed": 5,
+              "test_failed": 5
+            }
+          }
+        }
+      }
+    },
+    "openai/gpt-5-mini": {
+      "table_and_charts": {
+        "source_file": "backbone-matrix-20261124.json",
+        "source_registration": "743d0fca79ecc160950bd6d14b8ba979f805f5826163a2866ad80449c24f7d51",
+        "settled_build_microusd": 0,
+        "ledger": {
+          "calls": 1,
+          "settled_usd": 0.0,
+          "exposure_usd": 0.019511,
+          "unsettled_calls": 1,
+          "cap_usd": 1.95,
+          "stop_usd": 1.95,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "table": "missing",
+          "svg-chart": "missing"
+        },
+        "route_closed": {
+          "reason": "HTTP 403"
+        }
+      },
+      "projects": {
+        "table": {
+          "comparison": null,
+          "fixed_pair": null,
+          "all_scheduled_outcomes": {
+            "direct": {
+              "missing": 20
+            },
+            "human": {
+              "missing": 20
+            },
+            "gpt5-library": {
+              "missing": 20
+            },
+            "self": {
+              "missing": 20
+            },
+            "fixed": {
+              "missing": 20
+            }
+          }
+        },
+        "svg-chart": {
+          "comparison": null,
+          "fixed_pair": null,
+          "all_scheduled_outcomes": {
+            "direct": {
+              "missing": 20
+            },
+            "human": {
+              "missing": 20
+            },
+            "gpt5-library": {
+              "missing": 20
+            },
+            "self": {
+              "missing": 20
+            },
+            "fixed": {
+              "missing": 20
+            }
+          }
+        }
+      }
+    },
+    "openai/gpt-5": {
+      "table_and_charts": {
+        "source_file": "backbone-matrix-20261124.json",
+        "source_registration": "743d0fca79ecc160950bd6d14b8ba979f805f5826163a2866ad80449c24f7d51",
+        "settled_build_microusd": 0,
+        "ledger": {
+          "calls": 1,
+          "settled_usd": 0.0,
+          "exposure_usd": 0.090002,
+          "unsettled_calls": 1,
+          "cap_usd": 3.75,
+          "stop_usd": 3.75,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "table": "missing",
+          "svg-chart": "missing"
+        },
+        "route_closed": {
+          "reason": "HTTP 403"
+        }
+      },
+      "projects": {
+        "table": {
+          "comparison": null,
+          "fixed_pair": null,
+          "all_scheduled_outcomes": {
+            "direct": {
+              "missing": 20
+            },
+            "human": {
+              "missing": 20
+            },
+            "gpt5-library": {
+              "missing": 20
+            },
+            "self": {
+              "missing": 20
+            },
+            "fixed": {
+              "missing": 20
+            }
+          }
+        },
+        "svg-chart": {
+          "comparison": null,
+          "fixed_pair": null,
+          "all_scheduled_outcomes": {
+            "direct": {
+              "missing": 20
+            },
+            "human": {
+              "missing": 20
+            },
+            "gpt5-library": {
+              "missing": 20
+            },
+            "self": {
+              "missing": 20
+            },
+            "fixed": {
+              "missing": 20
+            }
+          }
+        }
+      }
+    },
+    "anthropic/claude-haiku-4.5": {
+      "table_and_charts": {
+        "source_file": "backbone-matrix-20261124.json",
+        "source_registration": "743d0fca79ecc160950bd6d14b8ba979f805f5826163a2866ad80449c24f7d51",
+        "settled_build_microusd": 0,
+        "ledger": {
+          "calls": 1,
+          "settled_usd": 0.0,
+          "exposure_usd": 0.048011,
+          "unsettled_calls": 1,
+          "cap_usd": 2.8,
+          "stop_usd": 2.8,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "table": "missing",
+          "svg-chart": "missing"
+        },
+        "route_closed": {
+          "reason": "HTTP 403"
+        }
+      },
+      "projects": {
+        "table": {
+          "comparison": null,
+          "fixed_pair": null,
+          "all_scheduled_outcomes": {
+            "direct": {
+              "missing": 20
+            },
+            "human": {
+              "missing": 20
+            },
+            "gpt5-library": {
+              "missing": 20
+            },
+            "self": {
+              "missing": 20
+            },
+            "fixed": {
+              "missing": 20
+            }
+          }
+        },
+        "svg-chart": {
+          "comparison": null,
+          "fixed_pair": null,
+          "all_scheduled_outcomes": {
+            "direct": {
+              "missing": 20
+            },
+            "human": {
+              "missing": 20
+            },
+            "gpt5-library": {
+              "missing": 20
+            },
+            "self": {
+              "missing": 20
+            },
+            "fixed": {
+              "missing": 20
+            }
+          }
+        }
+      }
+    },
+    "anthropic/claude-sonnet-4.5": {
+      "table_and_charts": {
+        "source_file": "backbone-matrix-20261124.json",
+        "source_registration": "743d0fca79ecc160950bd6d14b8ba979f805f5826163a2866ad80449c24f7d51",
+        "settled_build_microusd": 0,
+        "ledger": {
+          "calls": 1,
+          "settled_usd": 0.0,
+          "exposure_usd": 0.139777,
+          "unsettled_calls": 1,
+          "cap_usd": 4.9,
+          "stop_usd": 4.9,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "table": "missing",
+          "svg-chart": "missing"
+        },
+        "route_closed": {
+          "reason": "HTTP 403"
+        }
+      },
+      "projects": {
+        "table": {
+          "comparison": null,
+          "fixed_pair": null,
+          "all_scheduled_outcomes": {
+            "direct": {
+              "missing": 20
+            },
+            "human": {
+              "missing": 20
+            },
+            "gpt5-library": {
+              "missing": 20
+            },
+            "self": {
+              "missing": 20
+            },
+            "fixed": {
+              "missing": 20
+            }
+          }
+        },
+        "svg-chart": {
+          "comparison": null,
+          "fixed_pair": null,
+          "all_scheduled_outcomes": {
+            "direct": {
+              "missing": 20
+            },
+            "human": {
+              "missing": 20
+            },
+            "gpt5-library": {
+              "missing": 20
+            },
+            "self": {
+              "missing": 20
+            },
+            "fixed": {
+              "missing": 20
+            }
+          }
+        }
+      }
+    },
+    "google/gemini-2.5-flash": {
+      "table_and_charts": {
+        "source_file": "backbone-matrix-20261124.json",
+        "source_registration": "743d0fca79ecc160950bd6d14b8ba979f805f5826163a2866ad80449c24f7d51",
+        "settled_build_microusd": 0,
+        "ledger": {
+          "calls": 1,
+          "settled_usd": 0.0,
+          "exposure_usd": 0.024093,
+          "unsettled_calls": 1,
+          "cap_usd": 2.2,
+          "stop_usd": 2.2,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "table": "missing",
+          "svg-chart": "missing"
+        },
+        "route_closed": {
+          "reason": "HTTP 403"
+        }
+      },
+      "projects": {
+        "table": {
+          "comparison": null,
+          "fixed_pair": null,
+          "all_scheduled_outcomes": {
+            "direct": {
+              "missing": 20
+            },
+            "human": {
+              "missing": 20
+            },
+            "gpt5-library": {
+              "missing": 20
+            },
+            "self": {
+              "missing": 20
+            },
+            "fixed": {
+              "missing": 20
+            }
+          }
+        },
+        "svg-chart": {
+          "comparison": null,
+          "fixed_pair": null,
+          "all_scheduled_outcomes": {
+            "direct": {
+              "missing": 20
+            },
+            "human": {
+              "missing": 20
+            },
+            "gpt5-library": {
+              "missing": 20
+            },
+            "self": {
+              "missing": 20
+            },
+            "fixed": {
+              "missing": 20
+            }
+          }
+        }
+      }
+    },
+    "deepseek/deepseek-v4-pro-0813": {
+      "table_and_charts": {
+        "source_file": "backbone-extension-20261124.json",
+        "source_registration": "891ff83a0462304439175352b389d25d8e0748d8f7ed487577937092296dacbc",
+        "settled_build_microusd": 224629,
+        "ledger": {
+          "calls": 124,
+          "settled_usd": 2.058542,
+          "exposure_usd": 2.129125,
+          "unsettled_calls": 1,
+          "cap_usd": 3.5,
+          "stop_usd": 3.5,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "table": "build_failed",
+          "svg-chart": "build_failed"
+        },
+        "route_closed": null
+      },
+      "question_form": {
+        "source_file": "backbone-form-20261124.json",
+        "source_registration": "f744f5916e61c41765fd38fb97af6cf8fe14234002488db11d4b600df1595946",
+        "settled_build_microusd": 143183,
+        "ledger": {
+          "calls": 62,
+          "settled_usd": 1.337596,
+          "exposure_usd": 1.337596,
+          "unsettled_calls": 0,
+          "cap_usd": 2.3,
+          "stop_usd": 2.3,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "form": "build_failed"
+        },
+        "route_closed": null
+      },
+      "projects": {
+        "table": {
+          "comparison": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "direct": 2,
+              "human": 20,
+              "gpt5-library": 3,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "passed": 2,
+              "invalid": 18
+            },
+            "human": {
+              "passed": 20
+            },
+            "gpt5-library": {
+              "test_failed": 17,
+              "passed": 3
+            },
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            }
+          }
+        },
+        "svg-chart": {
+          "comparison": {
+            "n": 19,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "direct": 3,
+              "human": 19,
+              "gpt5-library": 16,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "passed": 3,
+              "test_failed": 1,
+              "invalid": 16
+            },
+            "human": {
+              "passed": 20
+            },
+            "gpt5-library": {
+              "passed": 16,
+              "test_failed": 3,
+              "missing": 1
+            },
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            }
+          }
+        },
+        "form": {
+          "comparison": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "direct": 6,
+              "human": 20,
+              "gpt5-library": 13,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "passed": 6,
+              "invalid": 14
+            },
+            "human": {
+              "passed": 20
+            },
+            "gpt5-library": {
+              "passed": 13,
+              "test_failed": 7
+            },
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            }
+          }
+        }
+      }
+    },
+    "deepseek/deepseek-v4-flash": {
+      "table_and_charts": {
+        "source_file": "backbone-extension-20261124.json",
+        "source_registration": "891ff83a0462304439175352b389d25d8e0748d8f7ed487577937092296dacbc",
+        "settled_build_microusd": 27939,
+        "ledger": {
+          "calls": 144,
+          "settled_usd": 0.354431,
+          "exposure_usd": 0.354431,
+          "unsettled_calls": 0,
+          "cap_usd": 1.5,
+          "stop_usd": 1.5,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "table": "build_failed",
+          "svg-chart": "valid"
+        },
+        "route_closed": null
+      },
+      "question_form": {
+        "source_file": "backbone-form-20261124.json",
+        "source_registration": "f744f5916e61c41765fd38fb97af6cf8fe14234002488db11d4b600df1595946",
+        "settled_build_microusd": 14680,
+        "ledger": {
+          "calls": 62,
+          "settled_usd": 0.215607,
+          "exposure_usd": 0.215607,
+          "unsettled_calls": 0,
+          "cap_usd": 1.1,
+          "stop_usd": 1.1,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "form": "build_failed"
+        },
+        "route_closed": null
+      },
+      "suites": {
+        "source_file": "backbone-suites-20261124.json",
+        "source_registration": "94c8a705181fb8ea35abe4c7dc45dfa7bd86424bf24e4732a8bd8f6eaf33252f",
+        "settled_build_microusd": 18118,
+        "ledger": {
+          "calls": 37,
+          "settled_usd": 0.099291,
+          "exposure_usd": 0.099291,
+          "unsettled_calls": 0,
+          "cap_usd": 1.0,
+          "stop_usd": 1.0,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "todomvc": "valid",
+          "blogging": "build_failed",
+          "taskmanagement": "build_failed"
+        },
+        "route_closed": null
+      },
+      "projects": {
+        "table": {
+          "comparison": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "direct": 1,
+              "human": 19,
+              "gpt5-library": 3,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "passed": 1,
+              "invalid": 19
+            },
+            "human": {
+              "passed": 19,
+              "invalid": 1
+            },
+            "gpt5-library": {
+              "test_failed": 17,
+              "passed": 3
+            },
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            }
+          }
+        },
+        "svg-chart": {
+          "comparison": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "direct": 1,
+              "human": 20,
+              "gpt5-library": 16,
+              "self": 1
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 1,
+              "self": 1
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "invalid": 18,
+              "passed": 1,
+              "test_failed": 1
+            },
+            "human": {
+              "passed": 20
+            },
+            "gpt5-library": {
+              "passed": 16,
+              "invalid": 1,
+              "test_failed": 3
+            },
+            "self": {
+              "passed": 1,
+              "test_failed": 18,
+              "invalid": 1
+            },
+            "fixed": {
+              "passed": 1,
+              "test_failed": 19
+            }
+          }
+        },
+        "form": {
+          "comparison": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "direct": 4,
+              "human": 17,
+              "gpt5-library": 13,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "passed": 4,
+              "invalid": 16
+            },
+            "human": {
+              "passed": 17,
+              "invalid": 3
+            },
+            "gpt5-library": {
+              "passed": 13,
+              "invalid": 4,
+              "test_failed": 3
+            },
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            }
+          }
+        },
+        "todomvc": {
+          "comparison": {
+            "n": 8,
+            "targets": [
+              "todo-01",
+              "todo-02",
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07",
+              "todo-08"
+            ],
+            "passed": {
+              "direct": 2,
+              "human": 5,
+              "self": 8
+            }
+          },
+          "fixed_pair": {
+            "n": 8,
+            "targets": [
+              "todo-01",
+              "todo-02",
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07",
+              "todo-08"
+            ],
+            "passed": {
+              "fixed": 8,
+              "self": 8
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "passed": 2,
+              "invalid": 6
+            },
+            "human": {
+              "invalid": 3,
+              "passed": 5
+            },
+            "self": {
+              "passed": 8
+            },
+            "fixed": {
+              "passed": 8
+            }
+          }
+        },
+        "duo": {
+          "comparison": {
+            "n": 10,
+            "targets": [
+              "addAltTextToImage_postPerformanceReport",
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_assignPostToCategory",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "addCommentToTask_setTaskDeadline",
+              "approveOrRejectTaskReview_compareTime",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "passed": {
+              "direct": 6,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 10,
+            "targets": [
+              "addAltTextToImage_postPerformanceReport",
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_assignPostToCategory",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "addCommentToTask_setTaskDeadline",
+              "approveOrRejectTaskReview_compareTime",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "invalid": 4,
+              "passed": 6
+            },
+            "self": {
+              "build_failed": 10
+            },
+            "fixed": {
+              "build_failed": 10
+            }
+          }
+        }
+      }
+    },
+    "qwen/qwen3.5-9b": {
+      "table_and_charts": {
+        "source_file": "backbone-extension-20261124.json",
+        "source_registration": "891ff83a0462304439175352b389d25d8e0748d8f7ed487577937092296dacbc",
+        "settled_build_microusd": 8688,
+        "ledger": {
+          "calls": 124,
+          "settled_usd": 0.202866,
+          "exposure_usd": 0.202866,
+          "unsettled_calls": 0,
+          "cap_usd": 1.5,
+          "stop_usd": 1.5,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "table": "build_failed",
+          "svg-chart": "build_failed"
+        },
+        "route_closed": null
+      },
+      "question_form": {
+        "source_file": "backbone-form-20261124.json",
+        "source_registration": "f744f5916e61c41765fd38fb97af6cf8fe14234002488db11d4b600df1595946",
+        "settled_build_microusd": 3252,
+        "ledger": {
+          "calls": 82,
+          "settled_usd": 0.117099,
+          "exposure_usd": 0.147893,
+          "unsettled_calls": 1,
+          "cap_usd": 0.7,
+          "stop_usd": 0.7,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "form": "valid"
+        },
+        "route_closed": null
+      },
+      "suites": {
+        "source_file": "backbone-suites-20261124.json",
+        "source_registration": "94c8a705181fb8ea35abe4c7dc45dfa7bd86424bf24e4732a8bd8f6eaf33252f",
+        "settled_build_microusd": 4480,
+        "ledger": {
+          "calls": 34,
+          "settled_usd": 0.03526,
+          "exposure_usd": 0.03526,
+          "unsettled_calls": 0,
+          "cap_usd": 1.0,
+          "stop_usd": 1.0,
+          "halted": 0
+        },
+        "build_outcomes": {
+          "todomvc": "build_failed",
+          "blogging": "valid",
+          "taskmanagement": "build_failed"
+        },
+        "route_closed": null
+      },
+      "projects": {
+        "table": {
+          "comparison": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "direct": 0,
+              "human": 6,
+              "gpt5-library": 1,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "invalid": 20
+            },
+            "human": {
+              "invalid": 14,
+              "passed": 6
+            },
+            "gpt5-library": {
+              "invalid": 7,
+              "test_failed": 12,
+              "passed": 1
+            },
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            }
+          }
+        },
+        "svg-chart": {
+          "comparison": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "direct": 0,
+              "human": 5,
+              "gpt5-library": 1,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "invalid": 16,
+              "test_failed": 4
+            },
+            "human": {
+              "invalid": 15,
+              "passed": 5
+            },
+            "gpt5-library": {
+              "invalid": 18,
+              "passed": 1,
+              "test_failed": 1
+            },
+            "self": {
+              "build_failed": 20
+            },
+            "fixed": {
+              "build_failed": 20
+            }
+          }
+        },
+        "form": {
+          "comparison": {
+            "n": 19,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "direct": 0,
+              "human": 8,
+              "gpt5-library": 2,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 20,
+            "targets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "invalid": 20
+            },
+            "human": {
+              "passed": 9,
+              "test_failed": 2,
+              "invalid": 9
+            },
+            "gpt5-library": {
+              "invalid": 15,
+              "passed": 2,
+              "missing": 1,
+              "test_failed": 2
+            },
+            "self": {
+              "invalid": 4,
+              "test_failed": 16
+            },
+            "fixed": {
+              "test_failed": 20
+            }
+          }
+        },
+        "todomvc": {
+          "comparison": {
+            "n": 8,
+            "targets": [
+              "todo-01",
+              "todo-02",
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07",
+              "todo-08"
+            ],
+            "passed": {
+              "direct": 1,
+              "human": 0,
+              "self": 0
+            }
+          },
+          "fixed_pair": {
+            "n": 8,
+            "targets": [
+              "todo-01",
+              "todo-02",
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07",
+              "todo-08"
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 0
+            },
+            "only_self": [],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "test_failed": 3,
+              "passed": 1,
+              "invalid": 4
+            },
+            "human": {
+              "invalid": 8
+            },
+            "self": {
+              "build_failed": 8
+            },
+            "fixed": {
+              "build_failed": 8
+            }
+          }
+        },
+        "duo": {
+          "comparison": {
+            "n": 10,
+            "targets": [
+              "addAltTextToImage_postPerformanceReport",
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_assignPostToCategory",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "addCommentToTask_setTaskDeadline",
+              "approveOrRejectTaskReview_compareTime",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "passed": {
+              "direct": 2,
+              "self": 1
+            }
+          },
+          "fixed_pair": {
+            "n": 10,
+            "targets": [
+              "addAltTextToImage_postPerformanceReport",
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_assignPostToCategory",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "addCommentToTask_setTaskDeadline",
+              "approveOrRejectTaskReview_compareTime",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "passed": {
+              "fixed": 0,
+              "self": 1
+            },
+            "only_self": [
+              "addCanonicalUrl_addComment"
+            ],
+            "only_fixed": []
+          },
+          "all_scheduled_outcomes": {
+            "direct": {
+              "invalid": 8,
+              "passed": 2
+            },
+            "self": {
+              "test_failed": 4,
+              "passed": 1,
+              "build_failed": 5
+            },
+            "fixed": {
+              "test_failed": 5,
+              "build_failed": 5
+            }
+          }
+        }
+      }
+    }
+  }
+}

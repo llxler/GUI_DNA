@@ -1,5 +1,7 @@
 # 十个 Web-Bench 项目的 AI 建库迁移实验
 
+11 月 24 日的独立复测在八个 TodoMVC 子集和十个 WebApp1K-Duo 组合上比较六个目标模型。每个模型自行建立、部署自己的库，并和同一模型对同一题的从零代码与固定首例分别配对。[实验协议](backbone_suites/PROTOCOL.md) · [逐题数据](../results/backbone-suites-20261124.json)
+
 本研究使用同一公开输入合同在十个项目上建库，各项目分别保留 20 个当前任务。每个建库重复配有逐题组装和固定首例，另按部署模型保留一个共用无库组。重复之间分别报告。运行器要求本地留存上游快照、浏览器依赖、原始包和生成清单。
 
 [生成协议](PROTOCOL.md) · [主批次结果](../results/public-library-transfer-20261123.json) · [官方参考页及空白页校准](../results/public-library-transfer-calibration-20261123.json) · [表格固定配置覆盖率](diagnostics/table_configurations/README.md)

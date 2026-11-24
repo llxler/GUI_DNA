@@ -111,22 +111,11 @@ def behavior_table(data):
         ["Builder","Repeat","Configs tested","Shoot","Field and change (px)"],rows,wide=True)
 
 
-def render(data):
+def _render_with_matrix(data):
     columns = ["Direct", "GUI-DNA (GPT-5)", "GUI-DNA (Sonnet)"]
     rows = [[COHORTS[c], *builder_cells(value["by_builder"], endpoint)]
             for c, value in data["cohorts"].items() for endpoint in ("current",)]
     replay = json.loads((ROOT / "studies/results/primary-replay.json").read_text())
-    supplied = []
-    for suite in replay["suites"]:
-        is_dom = suite["suite"] == "webbench"
-        counts = [model["counts"] for model in suite["models"]
-                  if not (is_dom and model["model"] == "google/gemma-3-12b-it")]
-        scores = []
-        for method in ("free", "dna"):
-            passed = sum(row[method]["final_all"] for row in counts)
-            total = sum(row[method]["n"] for row in counts)
-            scores.append(cell({"passed": passed, "total": total, "rate_percent": 100 * passed / total}))
-        supplied.append(["dom1 (supplied)" if is_dom else "TodoMVC (supplied)", *scores, "---", "---"])
     trials = json.loads(SOURCE_TRIALS.read_text())
     paired_rows = []
     for project, study in trials.items():
@@ -155,13 +144,9 @@ def render(data):
     chart = today["chart"]
     chart_cells = {n: {a: chart["cells"]["reference_typed" if a == "reference" else a][str(n)]["passed"]
                        for a in arms} for n in chart["targets"]}
-    source_rows = [workflow_row("Table editor", staged(today["table"], "first")),
-                   workflow_row("SVG charts (typed guide)", chart_cells),
-                   workflow_row("Expression editor (prepared)", staged(today["editor"], "first"))]
-    main = table("tab:endtoend",
-                 "Current official files passed. Within each row all displayed fractions share exactly the same observed targets. The supplied-library studies retain their original final-output and sampling protocols. The lower three rows compare the first Mistral responses available for the named workflows. The editor's direct workflow has its own GPT-5 preparation notes. The three-way editor intersection is empty after failed GPT-5 preparation. Its two displayed workflows share nine first responses. Dashes indicate missing comparisons.",
-                 ["Project / protocol", "No library", "Human library + DNA", "GPT-5 library + DNA"],
-                 [[r[0], *(x.split(" (")[0] for x in r[1:3]), "---"] for r in supplied] + source_rows, wide=True)
+    from studies.paper_performance import performance_matrix, render_matrix
+    matrix = performance_matrix(data, replay, trials, today)
+    main = render_matrix(matrix)
     appendix = [r"\section{Detailed End-to-End Results}", r"\label{app:details}",
                 "Library builders remain separate in every comparison. The shared direct baseline appears once per row. Each row uses only its own generator and target protocol."]
     appendix.append(table("tab:previous-workflows", "Earlier three-workflow pilots and retrospective AI-only studies. Entries are current files passed / jointly observed targets (percent). The direct comparator for the original SVG milestones had to return a complete file map. Builders share one direct comparator in each retrospective row.",
@@ -314,9 +299,13 @@ def render(data):
     appendix.append(r"The original draw study's complete ledger remains \$3.285408 (provider receipts \$3.28538045), including conditions outside the current comparison. This is a historical billing total, not a pooled method comparison. Micro-dollar rounding occurs per request. These are the original draw charges.")
     from studies.public_library_transfer.paper import tables as transfer_tables
     appendix.extend(transfer_tables(today, table))
-    return {"matched_workflow_table.tex": matched_table([*data["canvas_pilots"].values(), data["matched_flex"]]),
-            "canvas_behavior_table.tex":behavior_table(data), "end_to_end_table.tex": main,
-            "end_to_end_details.tex": "\n\n".join(appendix) + "\n"}
+    return {"canvas_behavior_table.tex":behavior_table(data), "end_to_end_table.tex": main,
+            "end_to_end_details.tex": "\n\n".join(appendix) + "\n"}, matrix
+
+
+def render(data):
+    """Return generated LaTeX files for callers rendering the local paper."""
+    return _render_with_matrix(data)[0]
 
 
 def active_sources():
@@ -351,12 +340,20 @@ def audit(data, generated):
         assert phrase in content, f"Missing primary result/boundary: {phrase}"
     assert not re.search(r"complete.history|full.history|history replay", content, re.I)
     assert not re.search(r"ABSTRACT_MATCHED|SONNET_RESULTS|CANVAS_RESULTS", content)
-    assert "tab:matched-workflows" in labels
+    body = (PAPER / "main.tex").read_text().split(r"\appendix")[0]
+    main_tables = re.findall(r"\\input\{([^}]+)\}", body)
+    assert [name for name in main_tables if name + ".tex" in generated] == ["end_to_end_table"]
+    assert "tab:matched-workflows" not in labels
     assert "current official task file" in content
     result = {"all_passed": True, "tables": expected_labels,
               "all_active_tables_generated_and_verified": True,
               "primary_view_sha256": sha(OUTPUT), "source_sha256": {**data["source_sha256"], str(SOURCE_TRIALS.relative_to(ROOT)): sha(SOURCE_TRIALS),
                                     str(FORM_REPAIR.relative_to(ROOT)): sha(FORM_REPAIR),
+                                    **{f"studies/results/{f}": sha(ROOT / "studies/results" / f)
+                                       for f in ("primary-replay.json", "paper-performance-matrix.json",
+                                                 "backbone-matrix-20261124.json", "backbone-extension-20261124.json",
+                                                 "backbone-form-20261124.json", "backbone-suites-20261124.json", "backbone-overview-20261124.json",
+                                                 "backbone-suite-replays-20261124.json")},
                                     **{str(p.relative_to(ROOT)): sha(p) for p in NOVEMBER_RESULTS.values()}},
               "manuscript_sources_sha256": {p.relative_to(ROOT).as_posix(): sha(p) for p in active},
               "scope": "Reconstructs primary candidates, checks complete generated table text and active manuscript scope; not independent human review or verification of every prose claim."}
@@ -370,10 +367,13 @@ def main():
     args = parser.parse_args()
     data = reconstruct()
     assert json.loads(OUTPUT.read_text()) == data
-    generated = render(data)
+    generated, matrix = _render_with_matrix(data)
+    matrix_path = ROOT / "studies/results/paper-performance-matrix.json"
     if args.write:
+        matrix_path.write_text(json.dumps(matrix, indent=2) + "\n")
         for name, text in generated.items():
             (PAPER / name).write_text(text)
+    assert json.loads(matrix_path.read_text()) == matrix, "Stale published performance matrix"
     report = audit(data, generated)
     print(json.dumps({"all_passed": report["all_passed"], "tables": len(report["tables"])}))
 
