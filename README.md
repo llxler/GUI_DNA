@@ -69,11 +69,19 @@ GUI_DNA/
 uv sync --extra dev
 uv run python -m studies.webgen_bench.report --portable
 uv run python -m studies.public_library_transfer.source_diagnosis.report
+```
+
+两条报告命令从版本库中的记录复算结果。完整工程测试还读取固定版本的 Web-Bench 需求和公开测试文件。首次检出且尚无 `artifacts/web-bench/` 时，准备公开快照后运行以下命令。
+
+```bash
+git init -q artifacts/web-bench
+git -C artifacts/web-bench fetch --depth 1 https://github.com/bytedance/web-bench.git 7b31ca2b786eef120dd49ce63dd03d0c0006046d
+git -C artifacts/web-bench checkout --detach FETCH_HEAD
 uv run playwright install chromium
 uv run pytest -q
 ```
 
-两条报告命令从版本库中的记录复算结果。重放完整浏览器实验还需要对应上游数据、系统运行库和本地原始产物。[环境与各项复验入口](docs/reproducibility.md)
+已有对应快照的工作区只需安装浏览器并运行测试。重放完整浏览器实验还需要对应上游数据、系统运行库和本地原始产物。[环境与各项复验入口](docs/reproducibility.md)
 
 ## 来源
 
