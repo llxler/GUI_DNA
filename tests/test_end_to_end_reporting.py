@@ -338,3 +338,39 @@ def test_library_followup_replaces_only_fully_observed_matched_targets():
     assert set_method(group, "self", rows, "a", TODO, "events")
     assert group["passed"] == {"direct": 1, "self": 0}
     assert group["n"] == 2 and not group["excluded_build_arms"]
+
+
+def test_lookup_tracks_method_receipts_when_protocols_share_a_row(capsys):
+    import json
+
+    from studies.lookup import main
+    from studies.study_io import ROOT, read
+
+    for method, source_arm, name, score in (
+        ("Self", "file-a", "result.json", 11),
+        ("GPT-5", "gpt5-library", "schema-transfer-result.json", 12),
+    ):
+        main(["web-bench/form", "DeepSeek V4 Flash", method])
+        cell = json.loads(capsys.readouterr().out)
+        assert cell["row_keys"] == ["deepseek/deepseek-v4-flash", "form_visible_targets"]
+        assert cell["method_record"].endswith("/visible_targets/" + name)
+        receipt = read(ROOT / cell["method_record"])
+        rows = [r for r in receipt.get("cell", receipt)["rows"] if r["arm"] == source_arm]
+        assert cell["score"] == sum(r["passed"] is True for r in rows) == score
+        assert cell["denominator"] == len(rows) == 20
+
+
+def test_lookup_separates_weighted_scores_build_failure_and_unavailable():
+    from studies.lookup import MATRIX, find_cell
+    from studies.study_io import ROOT, read
+
+    matrix = read(ROOT / MATRIX)
+
+    def query(model, method):
+        return find_cell(matrix, "webgen-bench", model, method)
+
+    weighted = query("deepseek/deepseek-v4-flash", "direct")
+    assert (weighted["score"], weighted["denominator"], weighted["unit"]) == (35.5, 43, "functional points")
+    for method, status in (("self", "build_failed"), ("gpt5-library", "unavailable")):
+        cell = query("google/gemma-3-12b-it", method)
+        assert cell["status"] == status and "score" not in cell

@@ -251,7 +251,7 @@ def attach(matrix):
     report=read(OUTPUT)
     initial={(r['model'],r['project']):r['cells'] for r in read(INITIAL)['rows']}
 
-    def publish(model,project,g,mapping,failed=()):
+    def publish(model,project,g,mapping,receipt,failed=()):
         expected=next((v[1] for v in initial[model,project].values() if v),None)
         if not g['n'] or g['n']!=expected:return
         cache=matrix[model]
@@ -269,36 +269,40 @@ def attach(matrix):
         if previous:
             assert set(previous['targets'])==set(g['targets'])
             counts.update(previous['passed']);markers.update(previous['markers'])
+        implementation_sources = dict(previous["implementation_sources"]) if previous else {}
         for method,origin in mapping.items():
+            implementation_sources[method] = str(receipt.relative_to(ROOT))
             counts[method]=len(g['arms'][origin]['passes'])
             if method!='direct':markers[method]='source-plans' if method!='self' else 'self-sequences'
         for method in failed:
             counts.pop(method,None);markers.pop(method,None)
+            implementation_sources.pop(method, None)
         cache.setdefault('source_diagnosis',{})[project]=dict(n=g['n'],targets=g['targets'],passed=counts,
-             markers=markers,excluded_build_arms=list(failed),source=str(OUTPUT.relative_to(ROOT)))
-    for project,g in report['web'].items():publish(g['model'],project,g,{'gpt5-library':'gpt5-library'})
+             markers=markers,excluded_build_arms=list(failed),source=str(OUTPUT.relative_to(ROOT)),
+             implementation_sources=implementation_sources)
+    for project,g in report['web'].items():publish(g['model'],project,g,{'gpt5-library':'gpt5-library'},TRIAL)
     for model,g in report['todo'].items():
         slots={k:k for k in ('direct','human','gpt5-library') if k in g['arms']}
         if 'a' in g['arms']:slots['self']='a'
-        publish(model,'todomvc',g,slots)
+        publish(model,'todomvc',g,slots,TRIAL)
     for model,g in report['visible_choices'].items():
-        publish(model,'todomvc',g,{'direct':'direct','human':'human','gpt5-library':'gpt5-library','self':'self'})
+        publish(model,'todomvc',g,{'direct':'direct','human':'human','gpt5-library':'gpt5-library','self':'self'},VISIBLE)
         group=matrix[model]['source_diagnosis']['todomvc']
         group['markers']={k:'visible-choices' for k in group['passed']}
     for model,g in report['core_profiles'].items():
         if g['eligible']:
-            publish(model,'todomvc',g,{'self':'self'})
+            publish(model,'todomvc',g,{'self':'self'},CORE_PROFILES)
             matrix[model]['source_diagnosis']['todomvc']['markers']['self']='core-profile'
     for model,g in report['form'].items():
         slots={'direct':'direct','human':'human','gpt5-library':'gpt5-library'}
         accepted=len(g['public']['a'])==5 and all(g['public']['a'].values()) and not g['public_errors']['a']
         if accepted:slots['self']='self-a'
-        publish(model,'form',g,slots,[] if accepted else ['self'])
+        publish(model,'form',g,slots,FORM,[] if accepted else ['self'])
 
     for model,g in report['svg_attributes'].items():
-        publish(model,'svg-chart',g,{'self':'planned'})
+        publish(model,'svg-chart',g,{'self':'planned'},SVG)
     for model,replicas in report['files'].items():
-        publish(model,'dom1',replicas['a'],{'self':'planned'})
+        publish(model,'dom1',replicas['a'],{'self':'planned'},IDENTITY)
 
 
 if __name__=='__main__':

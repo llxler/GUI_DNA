@@ -204,44 +204,73 @@ def values(group, methods):
     return [cell(group, method) for method in methods]
 
 
-def current_group(model, project):
-    original = model.get("paper_current", {}).get(project, model["current"].get(project, {}))
+def _current_record(model, project):
+    field = "paper_current" if project in model.get("paper_current", {}) else "current"
+    original = model[field].get(project, {})
     trial = model.get("self_recovery", {}).get(project)
-    if not trial:
-        return original
-    first = trial["first"]
-    if first["complete"] or "self" not in original.get("passed", {}):
-        return first
-    # A failed new preparation cannot displace an actual prior measurement.
-    return original
+    if trial and (trial["first"]["complete"] or "self" not in original.get("passed", {})):
+        return ("self_recovery", project, "first"), trial["first"]
+    return (field, project), original
+
+
+def current_group(model, project):
+    return _current_record(model, project)[1]
+
+
+def table_record(model, project):
+    """Return the matrix key path and the record used to render this generator's row."""
+    if project == "webgen-bench":
+        return ("webgen_functional",), model.get("webgen_functional", {})
+    ordered = (
+        ("source_diagnosis", project),
+        ("table_state_transitions",) if project == "table" else (),
+        ("library_capabilities", project),
+        ("form_visible_targets",) if project == "form" else (),
+        ("table_protocol_followup",) if project == "table" else (),
+        ("extended_targets", project),
+        ("component_followup", project),
+    )
+    for path in ordered:
+        if not path or path[0] not in model:
+            continue
+        record = model[path[0]]
+        if len(path) == 1:
+            return path, record
+        if project in record:
+            return path, record[project]
+
+    path, group = _current_record(model, project)
+    rebuild = model.get("panel_a_self", {}).get(project)
+    if rebuild is None:
+        return path, group
+    original = model["current"][project]
+    assert rebuild["targets"] == original["targets"] and group["n"] == len(rebuild["targets"])
+    return ("panel_a_self", project), {
+        **rebuild, "n": group["n"], "passed": original["passed"] | rebuild["passed"]
+    }
 
 
 def project_cells(model, project):
-    if project in model.get("source_diagnosis", {}):
-        return values(model["source_diagnosis"][project], METHODS)
-    if project == "table" and "table_state_transitions" in model:
-        return values(model["table_state_transitions"], METHODS)
-    if project in model.get("library_capabilities", {}):
-        return values(model["library_capabilities"][project], METHODS)
-    if project=="form" and "form_visible_targets" in model:
-        return values(model["form_visible_targets"], METHODS)
-    if project=="table" and "table_protocol_followup" in model:
-        return values(model["table_protocol_followup"], METHODS)
-    if project in model.get("extended_targets", {}):
-        return values(model["extended_targets"][project], METHODS)
-    if project in model.get("component_followup", {}):
-        return values(model["component_followup"][project], METHODS)
-    group = current_group(model, project)
-    rebuild = model.get("panel_a_self", {}).get(project)
-    if rebuild is None:
-        return values(group, METHODS)
-    original = model["current"][project]
-    assert rebuild["targets"] == original["targets"]
-    assert group["n"] == len(rebuild["targets"])
-    displayed = {"n": group["n"], "passed": original["passed"] | rebuild["passed"]}
-    cells = values(displayed, METHODS)
-    cells[-1] += r"$^{\dagger}$"
+    path, group = table_record(model, project)
+    cells = values(group, METHODS)
+    if path[0] == "panel_a_self":
+        cells[-1] += r"$^{\dagger}$"
     return cells
+
+
+def table_models(matrix, project):
+    """Generator IDs in the order displayed for a current Table 1 project."""
+    if project in WEB_PROJECTS:
+        return [m for m in BACKBONES if any(current_group(matrix[m], p) for p in WEB_PROJECTS)]
+    if project in ("dom1", "calculator"):
+        return (components.QWEN9, components.FLASH) if "dom1" in matrix[components.FLASH].get("library_capabilities", {}) else ()
+    if project == "todomvc":
+        return components.TODO_ROSTER
+    if project == "duo":
+        return [m for m in BACKBONES if current_group(matrix[m], project)]
+    if project == "webgen-bench":
+        return [m for m, entry in matrix.items() if "webgen_functional" in entry]
+    raise KeyError(project)
 
 
 def comparison_panel(title, projects, matrix):
@@ -263,11 +292,11 @@ def comparison_panel(title, projects, matrix):
         " & ".join(["Target generator", *(methods * len(projects))]) + r" \\",
         r"\midrule",
     ]
-    for model, label in BACKBONES.items():
-        entry = matrix[model]
-        if any(current_group(entry, project) for project in projects):
-            cells = [value for project in projects for value in project_cells(entry, project)]
-            lines.append(" & ".join([label, *cells]) + r" \\")
+    models = (table_models(matrix, "table") if projects == WEB_PROJECTS else
+              [m for m in BACKBONES if any(current_group(matrix[m], p) for p in projects)])
+    for model in models:
+        cells = [value for project in projects for value in project_cells(matrix[model], project)]
+        lines.append(" & ".join([BACKBONES[model], *cells]) + r" \\")
     return [*lines, r"\bottomrule\end{tabular*}\par"]
 
 
@@ -279,7 +308,7 @@ def order_build_rows(rows):
 
 def feature_panel(matrix):
     labels = BACKBONES | components.LABELS
-    duo = [m for m in BACKBONES if current_group(matrix[m], "duo")]
+    duo = table_models(matrix, "duo")
     lines = [
         r"\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{\hspace{1.1em}}lcccc@{}}",
         r"\toprule\rowcolor[gray]{0.94}\multicolumn{10}{l}{\textbf{B. Feature subsets and pairs}} \\",
@@ -288,7 +317,7 @@ def feature_panel(matrix):
         " & ".join(["Target generator", *METHODS.values()] * 2) + r" \\",
         r"\midrule",
     ]
-    for left, right in zip(components.TODO_ROSTER, duo, strict=True):
+    for left, right in zip(table_models(matrix, "todomvc"), duo, strict=True):
         fields = [labels[left], *project_cells(matrix[left], "todomvc"),
                   labels[right], *project_cells(matrix[right], "duo")]
         lines.append(" & ".join(fields) + r" \\")
@@ -303,7 +332,7 @@ def additional_web_projects(matrix):
         " & ".join(["Target generator", *METHODS.values(), *METHODS.values()]) + r" \\",
         r"\midrule",
     ]
-    for model in (components.QWEN9, components.FLASH):
+    for model in table_models(matrix, "dom1"):
         fields = [BACKBONES[model]]
         for project in ("dom1", "calculator"):
             fields.extend(project_cells(matrix[model], project))
@@ -326,8 +355,8 @@ def planned_panel():
 
 
 def functional_panel(matrix):
-    rows = [(BACKBONES[m], entry['webgen_functional']) for m, entry in matrix.items()
-            if 'webgen_functional' in entry]
+    rows = [(BACKBONES[m], table_record(matrix[m], "webgen-bench")[1])
+            for m in table_models(matrix, "webgen-bench")]
     if not rows:
         return planned_panel()
     lines = [
