@@ -1,0 +1,999 @@
+{
+  "registration": "9a292dc2269f2f5619e9e52b64eccf9a6ffe8c5bf8c1a66dec9734032b5a25fc",
+  "seal": "ee1f3ba3cf771d3a9ae2ddb9d289eb932dec5a59df5b65c859d88a8a854c271d",
+  "cost": {
+    "calls": 33,
+    "settled_usd": 0.00884,
+    "exposure_usd": 0.00884,
+    "unsettled_calls": 0,
+    "cap_usd": 0.75,
+    "stop_usd": 0.75,
+    "halted": 0
+  },
+  "direct_source": "3ffbc4cddfd3c2e07e0827a80cf10bac4194a8572a72623e59dd951fa69d033c",
+  "libraries": {
+    "a": {
+      "status": "build_failed",
+      "checks": [
+        "column"
+      ],
+      "history": {
+        "select": [
+          {
+            "retained": false,
+            "units": {
+              "two plain clicks replace old selection": {
+                "passed": false,
+                "observed": "TypeError: Assignment to constant variable."
+              }
+            },
+            "browser": {},
+            "previous_checks": [],
+            "expected_group": [
+              "selection"
+            ]
+          },
+          {
+            "retained": false,
+            "units": {
+              "two plain clicks replace old selection": {
+                "passed": false,
+                "observed": "TypeError: Assignment to constant variable."
+              }
+            },
+            "browser": {},
+            "previous_checks": [],
+            "expected_group": [
+              "selection"
+            ]
+          }
+        ],
+        "menu": [
+          {
+            "error": "Return one complete named function transition(state,event)"
+          },
+          {
+            "retained": true,
+            "units": {
+              "body context exposes insertion and deletion": {
+                "passed": true,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":null,\"anchor\":null,\"selected\":[],\"editing\":null,\"menu\":[\"Insert Row Above\",\"Insert Row Below\",\"Delete Row\"],\"target\":[1,1],\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              },
+              "dismiss closes menu": {
+                "passed": true,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":null,\"anchor\":null,\"selected\":[],\"editing\":null,\"menu\":[],\"target\":null,\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {
+              "checks": {
+                "selection": false,
+                "row": false,
+                "column": false,
+                "arrow": false,
+                "wrap": false,
+                "edit": false,
+                "clear": false,
+                "clipboard": false,
+                "range": false,
+                "resize": false,
+                "reorder": false
+              },
+              "errors": []
+            },
+            "previous_checks": [],
+            "expected_group": []
+          }
+        ],
+        "rows": [
+          {
+            "retained": false,
+            "units": {
+              "insert below keeps other data": {
+                "passed": false,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":null,\"anchor\":null,\"selected\":[],\"editing\":null,\"menu\":[],\"target\":[1,1],\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {},
+            "previous_checks": [],
+            "expected_group": [
+              "row"
+            ]
+          },
+          {
+            "retained": false,
+            "units": {
+              "insert below keeps other data": {
+                "passed": false,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":null,\"anchor\":null,\"selected\":[],\"editing\":null,\"menu\":[],\"target\":[1,1],\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {},
+            "previous_checks": [],
+            "expected_group": [
+              "row"
+            ]
+          }
+        ],
+        "columns": [
+          {
+            "retained": true,
+            "units": {
+              "insert left on all rows": {
+                "passed": true,
+                "observed": "{\"grid\":[[\"A\",\"New Col\",\"B\",\"C\"],[\"11\",\"\",\"12\",\"13\"],[\"21\",\"\",\"22\",\"23\"]],\"active\":null,\"anchor\":null,\"selected\":[],\"editing\":null,\"menu\":[],\"target\":[0,1],\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {
+              "checks": {
+                "selection": false,
+                "row": false,
+                "column": true,
+                "arrow": false,
+                "wrap": false,
+                "edit": false,
+                "clear": false,
+                "clipboard": false,
+                "range": false,
+                "resize": false,
+                "reorder": false
+              },
+              "errors": []
+            },
+            "previous_checks": [],
+            "expected_group": [
+              "column"
+            ]
+          }
+        ],
+        "keys": [
+          {
+            "retained": false,
+            "units": {
+              "initialize and move down": {
+                "passed": false,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":[1,0],\"anchor\":[1,0],\"selected\":[[0,0],[1,0]],\"editing\":null,\"menu\":[\"Select Row\"],\"target\":null,\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              },
+              "tab wraps row": {
+                "passed": false,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":[0,1],\"anchor\":[0,1],\"selected\":[[0,2],[0,1]],\"editing\":null,\"menu\":[\"Select Col\"],\"target\":null,\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {},
+            "previous_checks": [
+              "column"
+            ],
+            "expected_group": [
+              "arrow",
+              "wrap"
+            ]
+          },
+          {
+            "error": "Return one complete named function transition(state,event)"
+          }
+        ],
+        "edit": [
+          {
+            "retained": false,
+            "units": {
+              "delete contents": {
+                "passed": false,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":[1,1],\"anchor\":[1,1],\"selected\":[[1,1]],\"editing\":null,\"menu\":[],\"target\":null,\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              },
+              "start and escape": {
+                "passed": true,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":[1,1],\"anchor\":[1,1],\"selected\":[[1,1]],\"editing\":null,\"menu\":[],\"target\":[1,1],\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {},
+            "previous_checks": [
+              "column"
+            ],
+            "expected_group": [
+              "clear",
+              "edit"
+            ]
+          },
+          {
+            "retained": false,
+            "units": {
+              "delete contents": {
+                "passed": false,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":[1,1],\"anchor\":[1,1],\"selected\":[[1,1]],\"editing\":null,\"menu\":[],\"target\":null,\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              },
+              "start and escape": {
+                "passed": true,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":[1,1],\"anchor\":[1,1],\"selected\":[[1,1]],\"editing\":null,\"menu\":[],\"target\":[1,1],\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {},
+            "previous_checks": [
+              "column"
+            ],
+            "expected_group": [
+              "clear",
+              "edit"
+            ]
+          }
+        ],
+        "copy": [
+          {
+            "retained": false,
+            "units": {
+              "copy cell into destination": {
+                "passed": true,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":[1,1],\"anchor\":[1,1],\"selected\":[[1,1]],\"editing\":null,\"menu\":[],\"target\":null,\"clipboard\":[[\"12\"]],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {
+              "checks": {
+                "selection": false,
+                "row": false,
+                "column": true,
+                "arrow": false,
+                "wrap": false,
+                "edit": false,
+                "clear": false,
+                "clipboard": false,
+                "range": false,
+                "resize": false,
+                "reorder": false
+              },
+              "errors": []
+            },
+            "previous_checks": [
+              "column"
+            ],
+            "expected_group": [
+              "clipboard"
+            ]
+          },
+          {
+            "retained": false,
+            "units": {
+              "copy cell into destination": {
+                "passed": true,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":[1,1],\"anchor\":[1,1],\"selected\":[[1,1]],\"editing\":null,\"menu\":[],\"target\":null,\"clipboard\":[[\"12\"]],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {
+              "checks": {
+                "selection": false,
+                "row": false,
+                "column": true,
+                "arrow": false,
+                "wrap": false,
+                "edit": false,
+                "clear": false,
+                "clipboard": false,
+                "range": false,
+                "resize": false,
+                "reorder": false
+              },
+              "errors": []
+            },
+            "previous_checks": [
+              "column"
+            ],
+            "expected_group": [
+              "clipboard"
+            ]
+          }
+        ],
+        "range": [
+          {
+            "retained": false,
+            "units": {
+              "drag interior rectangle": {
+                "passed": false,
+                "observed": "TypeError: Assignment to constant variable."
+              }
+            },
+            "browser": {},
+            "previous_checks": [
+              "column"
+            ],
+            "expected_group": [
+              "range"
+            ]
+          },
+          {
+            "retained": false,
+            "units": {
+              "drag interior rectangle": {
+                "passed": false,
+                "observed": "TypeError: Assignment to constant variable."
+              }
+            },
+            "browser": {},
+            "previous_checks": [
+              "column"
+            ],
+            "expected_group": [
+              "range"
+            ]
+          }
+        ],
+        "size": [
+          {
+            "retained": false,
+            "units": {
+              "resize lower edge": {
+                "passed": false,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":[1,1],\"anchor\":[1,1],\"selected\":[[1,1]],\"editing\":null,\"menu\":[],\"target\":null,\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {},
+            "previous_checks": [
+              "column"
+            ],
+            "expected_group": [
+              "resize"
+            ]
+          },
+          {
+            "retained": false,
+            "units": {
+              "resize lower edge": {
+                "passed": false,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":[1,1],\"anchor\":[1,1],\"selected\":[[1,1]],\"editing\":null,\"menu\":[],\"target\":null,\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {},
+            "previous_checks": [
+              "column"
+            ],
+            "expected_group": [
+              "resize"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "status": "build_failed",
+      "checks": [
+        "column"
+      ],
+      "history": {
+        "select": [
+          {
+            "retained": false,
+            "units": {
+              "two plain clicks replace old selection": {
+                "passed": false,
+                "observed": "TypeError: Assignment to constant variable."
+              }
+            },
+            "browser": {},
+            "previous_checks": [],
+            "expected_group": [
+              "selection"
+            ]
+          },
+          {
+            "retained": false,
+            "units": {
+              "two plain clicks replace old selection": {
+                "passed": false,
+                "observed": "TypeError: Assignment to constant variable."
+              }
+            },
+            "browser": {},
+            "previous_checks": [],
+            "expected_group": [
+              "selection"
+            ]
+          }
+        ],
+        "menu": [
+          {
+            "retained": true,
+            "units": {
+              "body context exposes insertion and deletion": {
+                "passed": true,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":null,\"anchor\":null,\"selected\":[],\"editing\":null,\"menu\":[\"Insert Row Above\",\"Insert Row Below\",\"Delete Row\"],\"target\":[1,1],\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              },
+              "dismiss closes menu": {
+                "passed": true,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":null,\"anchor\":null,\"selected\":[],\"editing\":null,\"menu\":[],\"target\":null,\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {
+              "checks": {
+                "selection": false,
+                "row": false,
+                "column": false,
+                "arrow": false,
+                "wrap": false,
+                "edit": false,
+                "clear": false,
+                "clipboard": false,
+                "range": false,
+                "resize": false,
+                "reorder": false
+              },
+              "errors": []
+            },
+            "previous_checks": [],
+            "expected_group": []
+          }
+        ],
+        "rows": [
+          {
+            "retained": false,
+            "units": {
+              "insert below keeps other data": {
+                "passed": false,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":null,\"anchor\":null,\"selected\":[],\"editing\":null,\"menu\":[],\"target\":[1,1],\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {},
+            "previous_checks": [],
+            "expected_group": [
+              "row"
+            ]
+          },
+          {
+            "retained": false,
+            "units": {
+              "insert below keeps other data": {
+                "passed": false,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":null,\"anchor\":null,\"selected\":[],\"editing\":null,\"menu\":[],\"target\":[1,1],\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {},
+            "previous_checks": [],
+            "expected_group": [
+              "row"
+            ]
+          }
+        ],
+        "columns": [
+          {
+            "retained": true,
+            "units": {
+              "insert left on all rows": {
+                "passed": true,
+                "observed": "{\"grid\":[[\"A\",\"New Col\",\"B\",\"C\"],[\"11\",\"\",\"12\",\"13\"],[\"21\",\"\",\"22\",\"23\"]],\"active\":null,\"anchor\":null,\"selected\":[],\"editing\":null,\"menu\":[],\"target\":[0,1],\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {
+              "checks": {
+                "selection": false,
+                "row": false,
+                "column": true,
+                "arrow": false,
+                "wrap": false,
+                "edit": false,
+                "clear": false,
+                "clipboard": false,
+                "range": false,
+                "resize": false,
+                "reorder": false
+              },
+              "errors": []
+            },
+            "previous_checks": [],
+            "expected_group": [
+              "column"
+            ]
+          }
+        ],
+        "keys": [
+          {
+            "retained": false,
+            "units": {
+              "initialize and move down": {
+                "passed": false,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":[1,0],\"anchor\":[1,0],\"selected\":[[0,0],[1,0]],\"editing\":null,\"menu\":[\"Select Row\"],\"target\":null,\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              },
+              "tab wraps row": {
+                "passed": false,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":[0,1],\"anchor\":[0,1],\"selected\":[[0,2],[0,1]],\"editing\":null,\"menu\":[\"Select Col\"],\"target\":null,\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {},
+            "previous_checks": [
+              "column"
+            ],
+            "expected_group": [
+              "arrow",
+              "wrap"
+            ]
+          },
+          {
+            "error": "Return one complete named function transition(state,event)"
+          }
+        ],
+        "edit": [
+          {
+            "retained": false,
+            "units": {
+              "delete contents": {
+                "passed": true,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":[1,1],\"anchor\":[1,1],\"selected\":[[1,1]],\"editing\":null,\"menu\":[],\"target\":null,\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              },
+              "start and escape": {
+                "passed": false,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":null,\"anchor\":null,\"selected\":[[1,1]],\"editing\":null,\"menu\":[],\"target\":null,\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {},
+            "previous_checks": [
+              "column"
+            ],
+            "expected_group": [
+              "clear",
+              "edit"
+            ]
+          },
+          {
+            "retained": false,
+            "units": {
+              "delete contents": {
+                "passed": true,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":[1,1],\"anchor\":[1,1],\"selected\":[[1,1]],\"editing\":null,\"menu\":[],\"target\":null,\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              },
+              "start and escape": {
+                "passed": false,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":null,\"anchor\":null,\"selected\":[[1,1]],\"editing\":null,\"menu\":[],\"target\":null,\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {},
+            "previous_checks": [
+              "column"
+            ],
+            "expected_group": [
+              "clear",
+              "edit"
+            ]
+          }
+        ],
+        "copy": [
+          {
+            "retained": false,
+            "units": {
+              "copy cell into destination": {
+                "passed": true,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":[1,1],\"anchor\":[1,1],\"selected\":[[1,1]],\"editing\":null,\"menu\":[],\"target\":null,\"clipboard\":[[\"12\"]],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {
+              "checks": {
+                "selection": false,
+                "row": false,
+                "column": true,
+                "arrow": false,
+                "wrap": false,
+                "edit": false,
+                "clear": false,
+                "clipboard": false,
+                "range": false,
+                "resize": false,
+                "reorder": false
+              },
+              "errors": []
+            },
+            "previous_checks": [
+              "column"
+            ],
+            "expected_group": [
+              "clipboard"
+            ]
+          },
+          {
+            "retained": false,
+            "units": {
+              "copy cell into destination": {
+                "passed": true,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":[1,1],\"anchor\":[1,1],\"selected\":[[1,1]],\"editing\":null,\"menu\":[],\"target\":null,\"clipboard\":[[\"12\"]],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {
+              "checks": {
+                "selection": false,
+                "row": false,
+                "column": true,
+                "arrow": false,
+                "wrap": false,
+                "edit": false,
+                "clear": false,
+                "clipboard": false,
+                "range": false,
+                "resize": false,
+                "reorder": false
+              },
+              "errors": []
+            },
+            "previous_checks": [
+              "column"
+            ],
+            "expected_group": [
+              "clipboard"
+            ]
+          }
+        ],
+        "range": [
+          {
+            "retained": false,
+            "units": {
+              "drag interior rectangle": {
+                "passed": true,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":[2,2],\"anchor\":[1,1],\"selected\":[[1,1],[1,2],[2,1],[2,2]],\"editing\":null,\"menu\":[],\"target\":null,\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {
+              "checks": {
+                "selection": false,
+                "row": false,
+                "column": true,
+                "arrow": false,
+                "wrap": false,
+                "edit": false,
+                "clear": false,
+                "clipboard": false,
+                "range": false,
+                "resize": false,
+                "reorder": false
+              },
+              "errors": []
+            },
+            "previous_checks": [
+              "column"
+            ],
+            "expected_group": [
+              "range"
+            ]
+          },
+          {
+            "retained": false,
+            "units": {
+              "drag interior rectangle": {
+                "passed": true,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":[2,2],\"anchor\":[1,1],\"selected\":[[1,1],[1,2],[2,1],[2,2]],\"editing\":null,\"menu\":[],\"target\":null,\"clipboard\":[],\"rowHeights\":[],\"colWidths\":[]}"
+              }
+            },
+            "browser": {
+              "checks": {
+                "selection": false,
+                "row": false,
+                "column": true,
+                "arrow": false,
+                "wrap": false,
+                "edit": false,
+                "clear": false,
+                "clipboard": false,
+                "range": false,
+                "resize": false,
+                "reorder": false
+              },
+              "errors": []
+            },
+            "previous_checks": [
+              "column"
+            ],
+            "expected_group": [
+              "range"
+            ]
+          }
+        ],
+        "size": [
+          {
+            "retained": false,
+            "units": {
+              "resize lower edge": {
+                "passed": false,
+                "observed": "TypeError: Cannot set properties of undefined (setting '1')"
+              }
+            },
+            "browser": {},
+            "previous_checks": [
+              "column"
+            ],
+            "expected_group": [
+              "resize"
+            ]
+          },
+          {
+            "retained": false,
+            "units": {
+              "resize lower edge": {
+                "passed": false,
+                "observed": "{\"grid\":[[\"A\",\"B\",\"C\"],[\"11\",\"12\",\"13\"],[\"21\",\"22\",\"23\"]],\"active\":[1,1],\"anchor\":[1,1],\"selected\":[[1,1]],\"editing\":null,\"menu\":[],\"target\":null,\"clipboard\":[],\"rowHeights\":{\"1\":40},\"colWidths\":[]}"
+              }
+            },
+            "browser": {},
+            "previous_checks": [
+              "column"
+            ],
+            "expected_group": [
+              "resize"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rows": [
+    {
+      "task": 1,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "a6f942a39b7b8614a05885a9b5198a58ef469115c8fe609d99faf17e35259c88",
+      "passed": false
+    },
+    {
+      "task": 2,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "ad554ec1bfb7dacfa7c86d33720ee38299254ceee8dbd64c251485924f1f745c",
+      "passed": false
+    },
+    {
+      "task": 3,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "ac44bea4c31acd183d8d2531b0dd07f4922bb02ee33101cb72f3c39a4034adee",
+      "passed": false
+    },
+    {
+      "task": 4,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "1f77abaa73261cf54441fc0f5b594b521bfe9169d3be270246782763d941e771",
+      "passed": false
+    },
+    {
+      "task": 5,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "3fa8d28725082abe6a1185c8c02647106725dc82b76e79491f4af20b9191626a",
+      "passed": false
+    },
+    {
+      "task": 6,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "22a05a8d1edba8146159d3c1ea4cd57d60a0cb9edc8e8d6eb10e2baca393dacf",
+      "passed": false
+    },
+    {
+      "task": 7,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "83038c2ae72f278affecfc80c4578c330d859a5cb2177bc283cae578501b5464",
+      "passed": false
+    },
+    {
+      "task": 8,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "fa6f6635ade1a95a381502530f0997f05df8cacf4e5f9a3192ace788b6d2aa17",
+      "passed": false
+    },
+    {
+      "task": 9,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "c12e5a6219a61865078339f5ab30bc2658dcdf93fdfad77072f4b644f4576df7",
+      "passed": false
+    },
+    {
+      "task": 10,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "85a89d84a4074a7615b565486674d6b7f2340cf78cf7fbf14699ec96ea538811",
+      "passed": false
+    },
+    {
+      "task": 11,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "3525b1fcaeb0ece3eeb76e4a2812ab893cb73c7987b58e5c78bfcd82093e8beb",
+      "passed": false
+    },
+    {
+      "task": 12,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "e4dcc801a1bf6c8239683e104adcd3947cb34a6ccf926823ddbc7605255204c1",
+      "passed": false
+    },
+    {
+      "task": 13,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "cf5705fad9cb3a10ff1b87d1c0c5305dbfe5d1ce992f2d7264508dbbe676a7a4",
+      "passed": false
+    },
+    {
+      "task": 14,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "ae202c964cef9eada962ddd6ec81827da809dafda22d1e905c327ee0f130a645",
+      "passed": false
+    },
+    {
+      "task": 15,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "8a5a0e8db31737c5debc7dc34dad45ecc8ed3d5da7d3576ae7b109b0e2adb417",
+      "passed": false
+    },
+    {
+      "task": 16,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "c49fcd574d1d99cfd69da136a4f035ea1e72888ddb0cb60d532379241a4b6833",
+      "passed": false
+    },
+    {
+      "task": 17,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "00e9b343e6c330572206e7e7045ac6ebb52f00d6f2ac373a73c34ecfc183f78a",
+      "passed": false
+    },
+    {
+      "task": 18,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "55f6ba6c64be3eaa1b101f4e95a221257b6b926ac40aca0b594ba4348406dc80",
+      "passed": false
+    },
+    {
+      "task": 19,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "e7399197f84d4ae9579c03e567629b65cb2ea49755d61cab47f969ec3cf7eb15",
+      "passed": false
+    },
+    {
+      "task": 20,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "ed47cedb4cdbf603ccbebefba5a5591b64183af355acd8eb3dca94b16481f87d",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 1,
+      "status": "valid",
+      "report_sha256": "5e747ef36c346ed46c50fe66e38ef37fb00ba477cd7a42fd9f3134efd80f0ccf",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 2,
+      "status": "valid",
+      "report_sha256": "705913e52ba8d60ce7d417b417a5a47f968e9bef4cd063c60bfe8004ffe7f70e",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 3,
+      "status": "valid",
+      "report_sha256": "e552d55557b934eba8c908708139e26ad542531360ef1516deb4827fa66ee2b4",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 4,
+      "status": "valid",
+      "report_sha256": "65a540fbdc649f56eac909557959ad442c5bb45f6f44ae431483fabbac78dccc",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 5,
+      "status": "valid",
+      "report_sha256": "d32d4a55b5511a5a0b4939a94641f98cc5234f4043bfddc6f6265759a193ca2f",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 6,
+      "status": "valid",
+      "report_sha256": "31e2f9a279c27a6b347dc18acd564e58b0a0515ab99d47411279f1eb7cedd418",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 7,
+      "status": "valid",
+      "report_sha256": "4b06d30926ad64256a38efdcd6290ef243623fe8ed119c458bdd4c510bd572ef",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 8,
+      "status": "valid",
+      "report_sha256": "e8a2d150b8a4632f71f62de7fd9fc19683386aaaf550aa5777111f20a628373d",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 9,
+      "status": "valid",
+      "report_sha256": "3d8897a516133db8b754e5665eb5156d567f27bc403a1513364a38ebcdb9717e",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 10,
+      "status": "valid",
+      "report_sha256": "41d65644957fa992d12af55879657532abb7c6b159f4593ed31ef4aabb02dcb1",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 11,
+      "status": "valid",
+      "report_sha256": "a529d5de6bff11bd2652e5de98d094df7617f6070b7d2c553afc9e9cca0381e3",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 12,
+      "status": "valid",
+      "report_sha256": "7d586b9f91a3e0fea564d1ea09f1213369e679baba29c3577572b27905e7f62f",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 13,
+      "status": "valid",
+      "report_sha256": "533aac3d780db4acf06d13199235404b0ac897bedc586278fac2bd3294a5ce6f",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 14,
+      "status": "valid",
+      "report_sha256": "b43be6c4f4eb96e556e066b74952d45b8fd11e64de4bd592dcb91c2bb713909a",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 15,
+      "status": "valid",
+      "report_sha256": "48d241643aecd9752dd320e747160cd506d5abe9e8361626166198b8e92fdc58",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 16,
+      "status": "valid",
+      "report_sha256": "b47e7225b3b4d0a8f4a54357e077e8e5dc845bee1f84e78676ae235a3a4f535e",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 17,
+      "status": "valid",
+      "report_sha256": "748c9a782e911b17ea9340206763762e5b0d7833a32a174093e123134f55f21d",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 18,
+      "status": "valid",
+      "report_sha256": "8d7de5ac49a5261ce72a1241875dea4df49c88144babc2b94573a2a5b446e302",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 19,
+      "status": "valid",
+      "report_sha256": "653d2c1bda243e6cfd3deb85dd172251d4ade8687863e475c638102a76c750b8",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 20,
+      "status": "valid",
+      "report_sha256": "c7829f31669e053a5e952cd6aaff9456ed276fc9ce0dd9492026f55409417c37",
+      "passed": false
+    }
+  ]
+}

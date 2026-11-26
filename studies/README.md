@@ -1,13 +1,16 @@
 # GUI-DNA 论文研究
 
-`studies/` 保存论文的实验协议、生成与评分代码，以及可核验的结果。两个研究入口分别按研究问题和基准项目组织。
+`studies/` 保存论文的实验协议、生成与评分代码，以及可核验的结果。各研究入口按研究问题和基准项目组织。
 
 | 研究入口 | 可以查到什么 |
 | --- | --- |
 | [公开需求建库与迁移](public_library_transfer/README.md) | 独立建库、无库生成、逐题配置与固定首例的配对结果。涵盖 Web-Bench、TodoMVC、WebApp1K-Duo，以及已登记的补充实验。 |
 | [Web-Bench 项目研究](webbench/README.md) | 按项目查找组件来源、库接口、可表达行为、配置穷举、官方断言与控制页诊断。 |
+| [WebGen-Bench 网站功能](webgen_bench/README.md) | 六站 43 项操作、模型源码与配置交付、浏览器视觉评判及校准。 |
 
 公开汇总位于 [results/](results)。Web-Bench 的通过数表示候选通过当前任务文件中的全部官方断言。比较时按项目、目标范围、建库者及部署模型读取同一组配对。完整二十项和五个里程碑的结果分别报告。[评分与数据边界](../docs/method.md)
+
+11 月 26 日的表格、文件管理器、问卷、TodoMVC 和 Duo 可从[同题结果与建库记录](results/library-capabilities-20261126.json)进入。逐轮代码与协议按项目保存；[当前任务](../docs/roadmap.md)列出仍缺的来源与实验。
 
 ```bash
 uv run python -m studies.public_library_transfer --check

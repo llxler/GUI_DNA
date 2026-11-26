@@ -25,10 +25,10 @@ CONFIRMATION = SVG.parent / "confirmation/result.json"
 CONFIRMATION_OUTPUT = ROOT / "studies/results/prospective-domain-confirmation-20261124.json"
 
 
-def paired_rows(project, model, protocol, direct, replicas):
+def paired_rows(project, model, protocol, direct, replicas, *, admitted_only=False):
     """Compare on target identities and split rows when the builds have different coverage."""
     sets = {}
-    assert set(replicas) == {"a", "b"}
+    assert set(replicas) <= {"a", "b"}
     for rep, (plan, fixed) in replicas.items():
         assert set(plan) == set(fixed) == set(direct)
         assert all(value is None or type(value) is bool for arm in (plan, fixed, direct) for value in arm.values())
@@ -44,6 +44,13 @@ def paired_rows(project, model, protocol, direct, replicas):
         return {"project": project, "target_generator": model, "builder": "Self",
                 "decoding": protocol, "libraries": list(keys), "scheduled": len(direct),
                 "targets": tasks, "passed": {k: len(v) for k, v in passed.items()}, "passed_targets": passed}
+    if admitted_only:
+        keys = tuple(rep for rep, tasks in sets.items() if tasks)
+        rows = ([group(keys)] if len(keys) == 2 and sets["a"] == sets["b"]
+                else [group((rep,)) for rep in keys])
+        return [{**row, "excluded_build_arms": [
+            f"{arm}_{rep}" for rep in ("a", "b") if not sets.get(rep) for arm in ("self", "fixed")
+        ]} for row in rows]
     return [group(("a", "b"))] if sets["a"] == sets["b"] else [group((rep,)) for rep in ("a", "b")]
 
 
@@ -56,7 +63,7 @@ def outcomes(rows, **conditions):
     return result
 
 
-def duo_rows(source, protocol):
+def duo_rows(source, protocol, *, admitted_only=False):
     groups = []
     for model, data in read(source)["groups"].items():
         reps, direct = {}, None
@@ -67,8 +74,14 @@ def duo_rows(source, protocol):
             if direct is None:
                 direct = columns["direct_repaired"]
             assert columns["direct_repaired"] == direct
+            if admitted_only:
+                for row in rows:
+                    for arm in ("self", "fixed"):
+                        if (row["arms"]["by_name"]["status"] == "unavailable_module"
+                                or row["arms"][arm]["status"] == "unavailable_module"):
+                            columns[arm][row["task"]] = None
             reps[rep] = columns["self"], columns["fixed"]
-        groups.extend(paired_rows("Duo", LABELS[model], protocol, direct, reps))
+        groups.extend(paired_rows("Duo", LABELS[model], protocol, direct, reps, admitted_only=admitted_only))
     return groups
 
 
@@ -112,8 +125,9 @@ def svg_rows(source, protocol, direct_source=None, direct_arm='final'):
     return paired_rows("SVG charts", "Qwen3-Coder-30B", protocol, direct, reps)
 
 
-def rows():
-    result = duo_rows(DUO, "Components") + duo_rows(COMPACT, "Compact UI")
+def rows(*, admitted_only=False):
+    result = (duo_rows(DUO, "Components", admitted_only=admitted_only)
+              + duo_rows(COMPACT, "Compact UI", admitted_only=admitted_only))
     result += todo_rows(TODO, "Verified keys") + todo_rows(SCOPED_TODO, "Case scopes")
     result += svg_rows(SVG, 'Renderers') + svg_rows(SVG, 'Relaxed files', direct_source=DELIVERED_SVG)
     result += svg_rows(LINKED_SVG, 'Module links') + svg_rows(PATCHED_SVG, 'Error repair')

@@ -166,12 +166,99 @@ def test_main_table_separates_unavailable_routes_from_zero_scores():
     matrix[qwen]['current']['todomvc'] = {'n': 8, 'passed': {'direct': 1, 'human': 0, 'self': 0}}
     tex = render_matrix(matrix)
     assert tex.count(r'\begin{table*}') == 1 and tex.count(r'\end{table*}') == 1
-    assert '6.2' not in tex and 'Astra' not in tex
+    headers = [line.removesuffix(r'\\').strip() for line in tex.splitlines() if line.startswith('Target generator')]
+    methods = ['Direct', 'Human', 'GPT-5', 'Self']
+    assert [header.split(' & ')[1:] for header in headers] == [methods * 3, methods * 2]
+    assert 'Bind' not in tex and 'Sonnet' not in tex
     table_row, suite_row = [line for line in tex.splitlines() if line.startswith('Qwen3.5-9B &')]
     assert '1/20' in table_row and table_row.count('0/20') == 2
     assert '1/8' in suite_row and suite_row.count('0/8') == 2
-    unavailable = next(line for line in tex.splitlines() if '-- Unavailable in Panel A' in line)
-    assert 'GPT-5,' in unavailable and 'Claude Sonnet 4.5' in unavailable
+    assert r'\textcolor[gray]{0.55}{--}' in suite_row
+    assert 'Gemini' not in tex and 'Claude Haiku 4.5' not in tex
+
+
+def test_flash_question_form_reports_the_first_registered_library_in_the_primary_cell():
+    from studies.paper_performance import render_matrix
+    from studies.study_io import ROOT, read, sha
+    from studies.webbench.form.flash_self_build import paper as flash
+
+    matrix = read(ROOT / "studies/results/paper-performance-matrix.json")
+    group = matrix[flash.MODEL]
+    original = group["current"]["form"]
+    displayed = group["panel_a_self"]["form"]
+    assert original["passed"]["self"] == 0
+    assert displayed["targets"] == original["targets"] == list(range(1, 21))
+    assert displayed["source_sha256"] == sha(flash.COMPLETION)
+    assert displayed["library"] == "file-a"
+    assert displayed["passed"] == {"self": 8}
+    panel_a = render_matrix(matrix).split("B. Feature subsets")[0]
+    row = next(line for line in panel_a.splitlines() if line.startswith("DeepSeek V4 Flash &"))
+    visible = group["form_visible_targets"]
+    assert visible["targets"] == original["targets"]
+    assert visible["passed"] == {"direct": 10, "human": 20, "gpt5-library": 12, "self": 11}
+    assert row.split(" & ")[-4:] == [
+        r"10/20$^{\dagger}$", r"\textbf{20/20}$^{\dagger}$", r"12/20$^{\dagger *}$", r"11/20$^{\dagger}$ \\",
+    ]
+
+
+def test_paper_omits_failed_builds_and_keeps_measured_zeros():
+    from studies.paper_performance import render_matrix
+    from studies.study_io import ROOT, read
+    from studies.webbench.form.flash_self_build import paper as flash
+
+    matrix = read(ROOT / "studies/results/paper-performance-matrix.json")
+    # Check original admission on the archived batch even after prospective rebuilds arrive.
+    for model in matrix.values():
+        model.pop("self_recovery", None)
+        model.pop("component_followup", None)
+        model.pop("extended_targets", None)
+        model.pop("table_protocol_followup", None)
+        model.pop("form_visible_targets", None)
+        model.pop("library_capabilities", None)
+        model.pop("table_state_transitions", None)
+        model.pop("source_diagnosis", None)
+        model.pop("webgen_functional", None)
+    from studies.paper_component_followup import LABELS
+    for model in LABELS:
+        matrix.pop(model, None)
+    tex = render_matrix(matrix)
+    panel_a = tex.split("B. Feature subsets")[0]
+    gemma = next(line for line in panel_a.splitlines() if line.startswith("Gemma 3 12B &"))
+    qwen = next(line for line in panel_a.splitlines() if line.startswith("Qwen3.5-9B &"))
+    assert gemma.removesuffix(r"\\").split("&")[-1].strip() == ""
+    assert qwen.removesuffix(r"\\").split("&")[-1].strip() == "0/19"
+    suite = tex.split("B. Feature subsets")[1]
+    gemma = next(line for line in suite.splitlines() if line.startswith("Gemma 3 12B &"))
+    duo = [part.strip() for part in gemma.removesuffix(r"\\").split("&")[5:]]
+    assert duo == ["0/5", r"\textcolor[gray]{0.55}{--}", r"\textcolor[gray]{0.55}{--}", "0/5"]
+    appendix = render_matrix(matrix, followups=flash.rows())
+    whole = next(line for line in appendix.splitlines() if "Whole package" in line)
+    assert [part.strip() for part in whole.removesuffix(r"\\").split("&")[-2:]] == ["", ""]
+
+
+def test_updated_table_uses_common_targets_and_keeps_the_original_webgen_registration():
+    from studies import paper_component_followup as studies
+    from studies.paper_performance import render_matrix
+    from studies.study_io import ROOT, read
+
+    matrix = read(ROOT / "studies/results/paper-performance-matrix.json")
+    for entry in matrix.values():
+        for g in entry.get("extended_targets", {}).values():
+            old, added = map(set, (g["original_targets"], g["additional_targets"]))
+            assert old.isdisjoint(added) and old | added == set(g["targets"])
+            assert all(0 <= n <= g["n"] == len(g["targets"]) for n in g["passed"].values())
+    tex = render_matrix(matrix)
+    a, b = tex.split("B. Feature subsets and pairs", 1)
+    b, c = b.split("C. WebGen-Bench", 1)
+    assert all(label in b and label not in a for label in studies.LABELS.values())
+    for model in read(studies.PLANNED)['models']:
+        group = matrix[model]['webgen_functional']
+        assert group['registered'] == 43 and group['n'] == len(set(group['targets']))
+        assert all(0 <= v <= group['n'] for v in group['passed'].values())
+        assert 'gpt5-library' not in group['passed']
+    assert 'alternate vision judge' in c and 'planned functional evaluation' not in c
+    plan = read(studies.PLANNED)
+    assert plan["measurements"] == [] and len({i for ids in plan["pilot_sites"].values() for i in ids}) == 6
 
 
 def test_followup_panel_uses_the_joint_tasks_of_both_library_replicates():
@@ -195,3 +282,59 @@ def test_duplicate_official_case_titles_require_a_decisive_outcome():
     assert decide(names, rows + [{'fullName': 'a', 'status': 'failed'}]) is None
     rows[-1]['status'] = 'failed'
     assert decide(names, rows + [{'fullName': 'a', 'status': 'failed'}]) is False
+
+
+def test_source_receiver_splits_real_paths_and_drops_only_headers():
+    from studies.webbench.self_build_modules.source_delivery.run import extract
+    source = "FILE: common/LineChart.js\nexport class LineChart {}\nFILE: index.js\nimport './common/LineChart.js'"
+    assert extract(source, ["common/LineChart.js", "index.js"]) == {
+        "common/LineChart.js": "export class LineChart {}", "index.js": "import './common/LineChart.js'"
+    }
+
+
+def test_rebuild_admission_pairs_controls_before_counting_a_measured_zero():
+    from studies.public_library_transfer.self_refinement.suite_recovery.paper import paired
+
+    cell = {
+        "project": "duo", "original_shared": ["a", "b"],
+        "original": {"direct": {"a": False, "b": True}},
+        "builds": {"a": {"groups": {"one": "valid", "two": "build_failed"}, "seal_sha256": "x",
+                         "arms": {"self": {"a": {"passed": False}, "b": {"passed": None}},
+                                  "fixed": {"a": {"status": "valid", "passed": True},
+                                            "b": {"status": "build_failed", "passed": None}}}}},
+    }
+    group = paired(cell, "a")
+    assert group["targets"] == ["a"] and group["passed"] == {"direct": 0, "self": 0}
+    assert group["fixed_passed"] == 1 and group["complete"]
+    cell["builds"]["a"]["arms"]["self"]["a"]["passed"] = None
+    missing = paired(cell, "a")
+    assert not missing["complete"] and "self" not in missing["passed"]
+
+
+def test_failed_rebuild_does_not_erase_an_admitted_original_zero():
+    from studies.paper_performance import current_group
+    original = {"n": 2, "passed": {"direct": 1, "self": 0}}
+    rejected = {"complete": False, "n": 2, "passed": {"direct": 1}, "excluded_build_arms": ["self"]}
+    model = {"current": {"form": original}, "self_recovery": {"form": {"first": rejected}}}
+    assert current_group(model, "form") == original
+    model["paper_current"] = {"form": {"n": 2, "passed": {"direct": 1}, "excluded_build_arms": ["self"]}}
+    assert current_group(model, "form") == rejected
+
+
+def test_library_followup_replaces_only_fully_observed_matched_targets():
+    from copy import deepcopy
+    from studies.paper_library_capabilities import TODO, set_method
+
+    group = {"targets": [2, 4], "n": 2, "passed": {"direct": 1}, "excluded_build_arms": ["self"]}
+    old = deepcopy(group)
+    rows = [{"task": 1, "arm": "a", "status": "valid", "passed": True},
+            {"task": 2, "arm": "a", "status": "valid", "passed": False},
+            {"task": 4, "arm": "a", "status": "missing", "passed": None}]
+    for row in rows[:2]:
+        row["report_sha256"] = "0" * 64
+    assert not set_method(group, "self", rows, "a", TODO, "events")
+    assert group == old
+    rows[2].update(status="valid", passed=False, report_sha256="1" * 64)
+    assert set_method(group, "self", rows, "a", TODO, "events")
+    assert group["passed"] == {"direct": 1, "self": 0}
+    assert group["n"] == 2 and not group["excluded_build_arms"]

@@ -65,7 +65,7 @@ def matched_row(
     }
 
 
-def rows():
+def rows(*, admitted_only=False):
     linked = read(LINKED)["projects"]
     native = read(NATIVE)["projects"]
     first = read(STRONG / "result.json")
@@ -76,12 +76,20 @@ def rows():
         trial = linked[project]["replicas"]
         baseline = native[project]["replicas"]["build-a"]["rows"]
         arms = {"direct": {r["task"]: r["direct"]["passed"] for r in baseline}}
+        excluded = []
         for g, suffix in (("build-a", "a"), ("build-b", "b")):
+            if admitted_only and trial[g]["status"] != "valid":
+                excluded.extend((f"self_{suffix}", f"fixed_{suffix}"))
+                continue
             rows = trial[g]["rows"]
             assert {r["task"]: r["direct"]["passed"] for r in rows} == arms["direct"]
             for arm in ("self", "fixed"):
                 arms[arm + "_" + suffix] = {r["task"]: r[arm]["passed"] for r in rows}
-        result.append(matched_row(label, "Self", "Native", arms))
+        if len(arms) > 1:
+            row = matched_row(label, "Self", "Native", arms)
+            if excluded:
+                row["excluded_build_arms"] = excluded
+            result.append(row)
     coder = read(CODER)
     assert coder["model"] == "qwen/qwen3-coder-30b-a3b-instruct"
     coder_groups = coder["replicas"]
@@ -121,22 +129,30 @@ def rows():
             r["task"]: r["passed"] for r in controller["rows"] if r["group"] == "direct"
         }
     }
+    excluded = []
     for group, suffix in (("build-a", "a"), ("build-b", "b")):
         for arm in ("self", "fixed"):
-            arms[arm + "_" + suffix] = {
+            name = arm + "_" + suffix
+            stage = "base_status" if arm == "fixed" else "selection_status"
+            if admitted_only and controller["replicas"][group][stage] != "valid":
+                excluded.append(name)
+                continue
+            arms[name] = {
                 r["task"]: r["passed"]
                 for r in controller["rows"]
                 if r["group"] == group and r["arm"] == arm
             }
-    result.append(
-        matched_row(
+    if len(arms) > 1:
+        row = matched_row(
             "TodoMVC",
             "Self",
             "Native",
             arms,
             targets=[f"todo-{n:02d}" for n in range(1, 9)],
         )
-    )
+        if excluded:
+            row["excluded_build_arms"] = excluded
+        result.append(row)
     project_order = {"Table editor": 0, "Question form": 1, "TodoMVC": 2}
     return sorted(result, key=lambda row: project_order[row["project"]])
 

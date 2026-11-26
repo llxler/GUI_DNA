@@ -10,7 +10,14 @@ import json
 import re
 
 from studies.public_library_transfer.self_replication import paper as self_followups
+from studies.webbench.form.flash_self_build import paper as flash_form
+from studies.public_library_transfer.self_refinement.suite_recovery import paper as recovery
 from studies.public_library_transfer.self_refinement import domain_panel, prospective_panel, suite_comparisons
+from studies import paper_component_followup as component_trials
+from studies.webbench.table.event_modules import paper as table_protocols
+from studies import paper_library_capabilities as capabilities
+from studies.webgen_bench import report as functional
+from studies.public_library_transfer.source_diagnosis import report as sources
 from studies.end_to_end import ROOT, OUTPUT, reconstruct, sha
 
 PAPER = ROOT / "DNA_latex"
@@ -131,6 +138,8 @@ def _render_with_matrix(data):
                           if paired else "---")
         paired_rows.append([project + " (paired)", *scores, "---"])
     today = {k: json.loads(v.read_text()) for k, v in NOVEMBER_RESULTS.items()}
+    editor_ai = today["editor"]["provenance"]["ai"]
+    editor_build_failed = editor_ai["preparation_status"] == "returned_artifacts_failed_public_validation"
     arms = ("direct", "reference", "ai")
 
     def workflow_row(label, observations):
@@ -148,18 +157,20 @@ def _render_with_matrix(data):
                        for a in arms} for n in chart["targets"]}
     from studies.paper_performance import performance_matrix, render_matrix
     matrix = performance_matrix(data, replay, trials, today)
-    main = render_matrix(matrix, [*self_followups.rows(), *prospective_panel.rows(),
-                                  *prospective_panel.confirmation_evidence()['rows']],
-                         suite_comparisons.evidence()["models"], domain_panel.rows())
+    main = render_matrix(matrix)
     appendix = [r"\section{Detailed End-to-End Results}", r"\label{app:details}",
                 "Library builders remain separate in every comparison. The shared direct baseline appears once per row. Each row uses only its own generator and target protocol."]
     appendix.append(table("tab:previous-workflows", "Earlier three-workflow pilots and retrospective AI-only studies. Entries are current files passed / jointly observed targets (percent). The direct comparator for the original SVG milestones had to return a complete file map. Builders share one direct comparator in each retrospective row.",
                           ["Study", "No library", "Human + DNA", "GPT-5 + DNA", "Sonnet + DNA"],
                           paired_rows + [[study, direct, "---", gpt, sonnet] for study, direct, gpt, sonnet in rows], wide=True))
+    editor_repair = workflow_row("Editor, one repair", staged(today["editor"], "after_public_repair"))
+    if editor_build_failed:
+        assert editor_ai["artifact_sha256"] is None
+        editor_repair[-1] = ""
     sensitivity_rows = [workflow_row("Table editor, one repair", staged(today["table"], "after_public_repair")),
-                        workflow_row("Editor, one repair", staged(today["editor"], "after_public_repair")),
+                        editor_repair,
                         workflow_row("Charts, asset test excluded", {n: chart_cells[n] for n in chart["blank_discriminating"]["tasks"]})]
-    appendix.append(table("tab:new-source-sensitivity", "Each row uses its own common observed targets. Repairs use only public validation feedback. The chart row removes the predeclared file passed by the blank control after calibration and before generation.",
+    appendix.append(table("tab:new-source-sensitivity", "Each row uses its own common observed targets. Repairs use only public validation feedback. The blank library cell marks failed preparation. The chart row removes the predeclared file passed by the blank control.",
                           ["Protocol", "Direct", "Human", "GPT-5"], sensitivity_rows))
     rows = [[p, *builder_cells(groups, endpoint)] for value in data["cohorts"].values()
             for p, groups in value["by_project_builder"].items() for endpoint in ("current",)]
@@ -279,6 +290,8 @@ def _render_with_matrix(data):
     labels = {"svg-chart": "SVG charts", "table": "Table editor", "expression-editor": "Expression editor"}
     for project, record in today["reuse_costs"]["projects"].items():
         for arm, group in record["workflows"].items():
+            if project == "expression-editor" and arm == "ai" and editor_build_failed:
+                continue
             end = group["ordered"][-1]
             observed = group["observed_current_files"]
             bills.append([labels[project], names[arm],
@@ -290,7 +303,7 @@ def _render_with_matrix(data):
                           "Provider charges in USD across each twenty-target schedule. Preparation is charged once. "
                           "Total includes allowed public repairs. Exposure adds unresolved reservations. "
                           "Upstream human labor and local compute are unpriced. A dash means no observable final target endpoints. "
-                          "This table covers the original two-attempt editor preparation and the enumerated reference guide for charts.",
+                          "The chart reference includes its enumerated guide. Failed preparation charges are reported in the text.",
                           ["Project", "Workflow", "Passed/obs.", "Prepare", "Total", "Exposure"], bills))
     rows = [[COHORTS[c], MODELS[b], f"{values[b]['settled_usd']:.6f}", f"{values[b]['exposure_usd']:.6f}"]
             for c, values in data["costs"]["construction_by_builder"].items() for b in BUILDERS]
@@ -360,7 +373,8 @@ def audit(data, generated):
                                                  "backbone-suite-replays-20261124.json", "domain-construction-accounting-20261124.json",
                                                  "domain-construction-accounting-final-20261124.json")},
                                     **{str(p.relative_to(ROOT)): sha(p) for p in NOVEMBER_RESULTS.values()},
-                                    **{str(p.relative_to(ROOT)): sha(p) for p in self_followups.SOURCES},
+                                    **{str(p.relative_to(ROOT)): sha(p) for p in (*self_followups.SOURCES, *flash_form.SOURCES, *recovery.SOURCES)},
+                                    **{str(p.relative_to(ROOT)): sha(p) for p in (*sources.SOURCES, sources.OUTPUT, *functional.SOURCES, functional.RESULT, *capabilities.SOURCES, capabilities.SUMMARY, *component_trials.SOURCES, component_trials.EXTENSION, table_protocols.PROFILES, table_protocols.EVENTS, table_protocols.RECOVERED, table_protocols.FOCUSED, table_protocols.FLASH, table_protocols.FLASH_SCHEMA)},
                                     **{str(p.relative_to(ROOT)): sha(p) for p in (*suite_comparisons.SOURCES, suite_comparisons.OUTPUT)},
                                     **{str(p.relative_to(ROOT)): sha(p) for p in (*domain_panel.SOURCES, *domain_panel.DIAGNOSTICS,
                                                                                 *prospective_panel.SOURCES, prospective_panel.OUTPUT,
@@ -383,6 +397,29 @@ def main():
     data = reconstruct()
     assert json.loads(OUTPUT.read_text()) == data
     generated, matrix = _render_with_matrix(data)
+    from studies.paper_performance import METHODS, project_cells
+    for row in json.loads(capabilities.SUMMARY.read_text())["annotated_cells"]["rows"]:
+        # Preserve the published 18-cell development audit when a later protocol supersedes a cell.
+        snapshot = {k:v for k,v in matrix[row["model"]].items() if k != "source_diagnosis"}
+        rendered = project_cells(snapshot, row["project"])[list(METHODS).index(row["method"])]
+        pair = re.search(r"(\d+)/(\d+)", rendered)
+        expected = row["displayed"]
+        assert pair and (int(pair[1]), int(pair[2])) == (expected["passed"], len(expected["targets"])), row
+    for model in matrix.values():
+        for project,group in model.get("source_diagnosis",{}).items():
+            for method,cell in zip(METHODS,project_cells(model,project),strict=True):
+                match = re.search(r"(\d+)/(\d+)",cell)
+                if method in group["passed"]:
+                    assert match and (int(match[1]),int(match[2]))==(group["passed"][method],len(group["targets"]))
+                else:
+                    assert match is None
+    source_report = json.loads(sources.OUTPUT.read_text())
+    for row in source_report["initial_visible_reversals"]:
+        cells = dict(zip(METHODS, project_cells(matrix[row["model"]], row["project"]), strict=True))
+        for arm, expected in row["displayed_after"].items():
+            match = re.search(r"(\d+)/(\d+)", cells[arm])
+            measured = [int(match[1]), int(match[2])] if match else None
+            assert measured == expected, (row["model"], row["project"], arm, measured, expected)
     matrix_path = ROOT / "studies/results/paper-performance-matrix.json"
     if args.write:
         matrix_path.write_text(json.dumps(matrix, indent=2) + "\n")

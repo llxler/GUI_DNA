@@ -143,7 +143,1332 @@
       }
     },
     "sources": {},
-    "retrospective": {}
+    "retrospective": {},
+    "paper_current": {
+      "table": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 0,
+          "human": 1,
+          "gpt5-library": 0
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "failed_build_targets": {
+          "self": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        }
+      },
+      "svg-chart": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 2,
+          "human": 2,
+          "gpt5-library": 0
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "failed_build_targets": {
+          "self": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        }
+      },
+      "form": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 4,
+          "human": 0,
+          "gpt5-library": 0
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "failed_build_targets": {
+          "self": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        }
+      },
+      "todomvc": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "passed": {
+          "direct": 4,
+          "human": 8
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "failed_build_targets": {
+          "self": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ]
+        }
+      },
+      "duo": {
+        "n": 5,
+        "targets": [
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "passed": {
+          "direct": 0,
+          "self": 0
+        },
+        "excluded_build_arms": [],
+        "failed_build_targets": {
+          "self": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag"
+          ]
+        }
+      }
+    },
+    "self_recovery": {
+      "form": {
+        "first": {
+          "n": 20,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 4,
+            "human": 0,
+            "gpt5-library": 0,
+            "self": 0
+          },
+          "preparation": "module links",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "rep": "a",
+          "complete": true,
+          "seal_sha256": "8dc6c77a8facbc9685fa98ae88c8f44ba6ba7bfc84dd57668b3998585e9bbe52",
+          "fixed_passed": 4
+        },
+        "replication": {
+          "n": 20,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 4,
+            "human": 0,
+            "gpt5-library": 0,
+            "self": 0
+          },
+          "preparation": "module links",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "rep": "b",
+          "complete": true,
+          "seal_sha256": "c7fd799b6b70f8b07db057a00d189feee2e462b588e3ce6f69eaec449af717b0",
+          "fixed_passed": 5
+        },
+        "source": "studies/webbench/self_build_modules/module_links/result.json",
+        "source_sha256": "b9d1b7e5b4c79e3d9075c34ca15c0277f3f8dd741f5e9131cb64b627e75ffb3f"
+      },
+      "table": {
+        "first": {
+          "n": 20,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 0,
+            "human": 1,
+            "gpt5-library": 0
+          },
+          "preparation": "module links",
+          "build_status": "build_failed",
+          "eligible": [],
+          "observed": [],
+          "rep": "a",
+          "complete": false,
+          "seal_sha256": "dcd91683a729341464186719d1b3de1d818839b73cdaccb3d54ddbd0300c9464",
+          "excluded_build_arms": [
+            "self"
+          ]
+        },
+        "replication": {
+          "n": 20,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 0,
+            "human": 1,
+            "gpt5-library": 0
+          },
+          "preparation": "module links",
+          "build_status": "build_failed",
+          "eligible": [],
+          "observed": [],
+          "rep": "b",
+          "complete": false,
+          "seal_sha256": "010196550ec5f716247cb1d118067651823906eb0574770d56ec6fd1f19ff793",
+          "excluded_build_arms": [
+            "self"
+          ]
+        },
+        "source": "studies/webbench/self_build_modules/module_links/result.json",
+        "source_sha256": "b9d1b7e5b4c79e3d9075c34ca15c0277f3f8dd741f5e9131cb64b627e75ffb3f"
+      },
+      "svg-chart": {
+        "first": {
+          "n": 20,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 2,
+            "human": 2,
+            "gpt5-library": 0,
+            "self": 0
+          },
+          "preparation": "modules",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "rep": "a",
+          "complete": true,
+          "seal_sha256": "743fdad5ec8f95fcdfd0bba53c1b5c496db5e97019bfbb8be1a98608bf7fd264",
+          "fixed_passed": 2
+        },
+        "replication": {
+          "n": 20,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 2,
+            "human": 2,
+            "gpt5-library": 0,
+            "self": 0
+          },
+          "preparation": "modules",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "rep": "b",
+          "complete": true,
+          "seal_sha256": "fc18d7f462d0761f3d4491673541b4e03f60d214252a6c7bc3492c70ab146a49",
+          "fixed_passed": 2
+        },
+        "source": "studies/webbench/self_build_modules/module_links/result.json",
+        "source_sha256": "b9d1b7e5b4c79e3d9075c34ca15c0277f3f8dd741f5e9131cb64b627e75ffb3f"
+      },
+      "todomvc": {
+        "first": {
+          "n": 8,
+          "targets": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "passed": {
+            "direct": 4,
+            "human": 8,
+            "self": 0
+          },
+          "preparation": "controller",
+          "build_status": "valid",
+          "eligible": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "rep": "a",
+          "complete": true,
+          "seal_sha256": "991aa6f52bb40b6bcbee9e19c09dc1d79f84c5a9a997e815eea46aebbef23087",
+          "fixed_passed": 0
+        },
+        "replication": {
+          "n": 8,
+          "targets": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "passed": {
+            "direct": 4,
+            "human": 8,
+            "self": 8
+          },
+          "preparation": "controller",
+          "build_status": "valid",
+          "eligible": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "rep": "b",
+          "complete": true,
+          "seal_sha256": "2ef443852132d6055d60047e841985828416770a9ad551160f5d4576dc08836c",
+          "fixed_passed": 8
+        },
+        "source": "studies/public_library_transfer/self_refinement/suite_recovery/result.json",
+        "source_sha256": "169ecb83b85bdd8dcdfcb51469f5709c96e7390ba17937aca1697bb3b688260d"
+      },
+      "duo": {
+        "first": {
+          "n": 5,
+          "targets": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag"
+          ],
+          "passed": {
+            "direct": 1,
+            "self": 1
+          },
+          "preparation": "components",
+          "build_status": "valid",
+          "eligible": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag"
+          ],
+          "observed": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag"
+          ],
+          "rep": "a",
+          "complete": true,
+          "seal_sha256": "e9164f19b1dcb76de5aa769481cea6af77b3fe257ce744070fc82ff9c4c24be9",
+          "fixed_passed": 0
+        },
+        "replication": {
+          "n": 5,
+          "targets": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag"
+          ],
+          "passed": {
+            "direct": 1,
+            "self": 1
+          },
+          "preparation": "components",
+          "build_status": "valid",
+          "eligible": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag"
+          ],
+          "observed": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag"
+          ],
+          "rep": "b",
+          "complete": true,
+          "seal_sha256": "0befcaf611a0227ca1fd643078968d7e70eccd8b9eb592823d4594f1c81f2d8b",
+          "fixed_passed": 0
+        },
+        "source": "studies/public_library_transfer/self_refinement/suite_recovery/result.json",
+        "source_sha256": "169ecb83b85bdd8dcdfcb51469f5709c96e7390ba17937aca1697bb3b688260d"
+      }
+    },
+    "component_followup": {
+      "svg-chart": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 2,
+          "human": 2,
+          "gpt5-library": 15,
+          "self": 3
+        },
+        "preparation": "modules",
+        "build_status": "valid",
+        "eligible": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "observed": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "rep": "a",
+        "complete": true,
+        "seal_sha256": "743fdad5ec8f95fcdfd0bba53c1b5c496db5e97019bfbb8be1a98608bf7fd264",
+        "fixed_passed": 2,
+        "markers": {
+          "self": "typed",
+          "gpt5-library": "menu"
+        },
+        "build_attempts": {
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/result.json"
+        }
+      },
+      "form": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 4,
+          "human": 0,
+          "gpt5-library": 0,
+          "self": 4
+        },
+        "preparation": "module links",
+        "build_status": "valid",
+        "eligible": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "observed": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "rep": "a",
+        "complete": true,
+        "seal_sha256": "8dc6c77a8facbc9685fa98ae88c8f44ba6ba7bfc84dd57668b3998585e9bbe52",
+        "fixed_passed": 4,
+        "markers": {
+          "self": "typed"
+        },
+        "build_attempts": {
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/entrypoint-result.json"
+        }
+      },
+      "table": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 0,
+          "human": 1,
+          "gpt5-library": 0,
+          "self": 0
+        },
+        "preparation": "module links",
+        "build_status": "build_failed",
+        "eligible": [],
+        "observed": [],
+        "rep": "a",
+        "complete": false,
+        "seal_sha256": "dcd91683a729341464186719d1b3de1d818839b73cdaccb3d54ddbd0300c9464",
+        "excluded_build_arms": [],
+        "build_attempts": {
+          "gpt5-library": "missing",
+          "self": "valid"
+        },
+        "markers": {
+          "self": "typed"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/integration-result.json"
+        }
+      },
+      "todomvc": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "passed": {
+          "direct": 4,
+          "human": 8,
+          "self": 5,
+          "gpt5-library": 7
+        },
+        "preparation": "controller",
+        "build_status": "valid",
+        "eligible": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "observed": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "rep": "a",
+        "complete": true,
+        "seal_sha256": "991aa6f52bb40b6bcbee9e19c09dc1d79f84c5a9a997e815eea46aebbef23087",
+        "fixed_passed": 0,
+        "markers": {
+          "self": "events",
+          "gpt5-library": "blind"
+        }
+      }
+    },
+    "library_capabilities": {
+      "table": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 0,
+          "human": 1,
+          "gpt5-library": 0,
+          "self": 2
+        },
+        "preparation": "module links",
+        "build_status": "build_failed",
+        "eligible": [],
+        "observed": [],
+        "rep": "a",
+        "complete": false,
+        "seal_sha256": "dcd91683a729341464186719d1b3de1d818839b73cdaccb3d54ddbd0300c9464",
+        "excluded_build_arms": [],
+        "build_attempts": {
+          "gpt5-library": "missing",
+          "self": "valid"
+        },
+        "markers": {
+          "self": "events"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/table/action_contracts/result.json"
+        }
+      },
+      "form": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 2,
+          "human": 7,
+          "gpt5-library": 9,
+          "self": 2
+        },
+        "markers": {
+          "direct": "survey",
+          "human": "survey",
+          "gpt5-library": "survey",
+          "self": "survey"
+        },
+        "implementation_sources": {
+          "direct": "studies/webbench/form/survey_workflow/result.json",
+          "human": "studies/webbench/form/survey_workflow/result.json",
+          "gpt5-library": "studies/webbench/form/survey_workflow/result.json",
+          "self": "studies/webbench/form/survey_workflow/module_links/result.json"
+        }
+      },
+      "duo": {
+        "n": 5,
+        "targets": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag"
+        ],
+        "passed": {
+          "direct": 1,
+          "self": 1,
+          "gpt5-library": 1
+        },
+        "preparation": "components",
+        "build_status": "valid",
+        "eligible": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag"
+        ],
+        "observed": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag"
+        ],
+        "rep": "a",
+        "complete": true,
+        "seal_sha256": "e9164f19b1dcb76de5aa769481cea6af77b3fe257ce744070fc82ff9c4c24be9",
+        "fixed_passed": 0,
+        "markers": {
+          "gpt5-library": "donor"
+        },
+        "excluded_build_arms": [],
+        "implementation_sources": {
+          "gpt5-library": "studies/public_library_transfer/duo_donor_library/result.json"
+        }
+      }
+    },
+    "webgen_functional": {
+      "targets": [
+        "000011/0",
+        "000011/1",
+        "000011/2",
+        "000011/3",
+        "000011/4",
+        "000011/5",
+        "000011/6",
+        "000011/7",
+        "000011/8",
+        "000016/0",
+        "000016/1",
+        "000016/2",
+        "000016/3",
+        "000016/4",
+        "000016/5",
+        "000030/0",
+        "000030/1",
+        "000030/2",
+        "000030/3",
+        "000057/0",
+        "000057/1",
+        "000057/2",
+        "000057/3",
+        "000057/4",
+        "000057/5",
+        "000057/6",
+        "000057/7",
+        "000090/0",
+        "000090/1",
+        "000090/2",
+        "000090/3",
+        "000090/4",
+        "000090/5",
+        "000090/6",
+        "000090/7",
+        "000090/8",
+        "000101/0",
+        "000101/1",
+        "000101/2",
+        "000101/3",
+        "000101/4",
+        "000101/5",
+        "000101/6"
+      ],
+      "n": 43,
+      "registered": 43,
+      "passed": {
+        "direct": 13.0,
+        "human": 19.0
+      },
+      "excluded_build_arms": [
+        "self"
+      ],
+      "measure": "functional points",
+      "judge": "qwen/qwen3-vl-30b-a3b-instruct"
+    },
+    "source_diagnosis": {
+      "table": {
+        "n": 20,
+        "targets": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "passed": {
+          "direct": 0,
+          "human": 1,
+          "gpt5-library": 3,
+          "self": 2
+        },
+        "markers": {
+          "self": "events",
+          "gpt5-library": "source-plans"
+        },
+        "excluded_build_arms": [],
+        "source": "studies/results/library-source-diagnosis-20261126.json"
+      }
+    }
   },
   "qwen/qwen3.5-9b": {
     "current": {
@@ -279,7 +1604,1313 @@
     },
     "supplied": {},
     "sources": {},
-    "retrospective": {}
+    "retrospective": {},
+    "paper_current": {
+      "table": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 0,
+          "human": 6,
+          "gpt5-library": 1
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "failed_build_targets": {
+          "self": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        }
+      },
+      "svg-chart": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 0,
+          "human": 5,
+          "gpt5-library": 1
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "failed_build_targets": {
+          "self": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        }
+      },
+      "todomvc": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "passed": {
+          "direct": 1,
+          "human": 0
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "failed_build_targets": {
+          "self": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ]
+        }
+      },
+      "duo": {
+        "n": 5,
+        "targets": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag"
+        ],
+        "passed": {
+          "direct": 2,
+          "self": 1
+        },
+        "excluded_build_arms": [],
+        "failed_build_targets": {
+          "self": [
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ]
+        }
+      }
+    },
+    "self_recovery": {
+      "form": {
+        "first": {
+          "n": 19,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 0,
+            "human": 8,
+            "gpt5-library": 2
+          },
+          "preparation": "module links",
+          "build_status": "build_failed",
+          "eligible": [],
+          "observed": [],
+          "rep": "a",
+          "complete": false,
+          "seal_sha256": "1700461b39bcf3cff7072bbec8ff42f13326966175006f181c552574d2e244e0",
+          "excluded_build_arms": [
+            "self"
+          ]
+        },
+        "replication": {
+          "n": 19,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 0,
+            "human": 8,
+            "gpt5-library": 2
+          },
+          "preparation": "module links",
+          "build_status": "build_failed",
+          "eligible": [],
+          "observed": [],
+          "rep": "b",
+          "complete": false,
+          "seal_sha256": "501034e311c90a8280d67051e32317556d9463550b033948f3b92e401c27df00",
+          "excluded_build_arms": [
+            "self"
+          ]
+        },
+        "source": "studies/webbench/self_build_modules/module_links/result.json",
+        "source_sha256": "b9d1b7e5b4c79e3d9075c34ca15c0277f3f8dd741f5e9131cb64b627e75ffb3f"
+      },
+      "svg-chart": {
+        "first": {
+          "n": 20,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 0,
+            "human": 5,
+            "gpt5-library": 1
+          },
+          "preparation": "module links",
+          "build_status": "build_failed",
+          "eligible": [],
+          "observed": [],
+          "rep": "a",
+          "complete": false,
+          "seal_sha256": "a8a693103fc560596abe2bf9b4c7e4245d2e9ed699bfd8fe2f6a6e6d64d423ec",
+          "excluded_build_arms": [
+            "self"
+          ]
+        },
+        "replication": {
+          "n": 20,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 0,
+            "human": 5,
+            "gpt5-library": 1
+          },
+          "preparation": "module links",
+          "build_status": "build_failed",
+          "eligible": [],
+          "observed": [],
+          "rep": "b",
+          "complete": false,
+          "seal_sha256": "a1a2c36421bf6435065d948708ded7e7c408191e4fb8ee45b01a4b86185b2751",
+          "excluded_build_arms": [
+            "self"
+          ]
+        },
+        "source": "studies/webbench/self_build_modules/module_links/result.json",
+        "source_sha256": "b9d1b7e5b4c79e3d9075c34ca15c0277f3f8dd741f5e9131cb64b627e75ffb3f"
+      },
+      "table": {
+        "first": {
+          "n": 20,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 0,
+            "human": 6,
+            "gpt5-library": 1
+          },
+          "preparation": "module links",
+          "build_status": "build_failed",
+          "eligible": [],
+          "observed": [],
+          "rep": "a",
+          "complete": false,
+          "seal_sha256": "f060f2b684f7daf5c723ca6ab0c1cff8d8cc7ce7bd85dcc5e6a591602b15d500",
+          "excluded_build_arms": [
+            "self"
+          ]
+        },
+        "replication": {
+          "n": 20,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 0,
+            "human": 6,
+            "gpt5-library": 1
+          },
+          "preparation": "module links",
+          "build_status": "build_failed",
+          "eligible": [],
+          "observed": [],
+          "rep": "b",
+          "complete": false,
+          "seal_sha256": "4e950fbef7c7db0dcf60b6a508fca92e01a30f79ce16bc8d074263e8baa7d119",
+          "excluded_build_arms": [
+            "self"
+          ]
+        },
+        "source": "studies/webbench/self_build_modules/module_links/result.json",
+        "source_sha256": "b9d1b7e5b4c79e3d9075c34ca15c0277f3f8dd741f5e9131cb64b627e75ffb3f"
+      },
+      "todomvc": {
+        "first": {
+          "n": 8,
+          "targets": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "passed": {
+            "direct": 1,
+            "human": 0,
+            "self": 4
+          },
+          "preparation": "controller",
+          "build_status": "valid",
+          "eligible": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "rep": "a",
+          "complete": true,
+          "seal_sha256": "70e959d392640b2c512ea32b734501f5806ceb183fdb46a8cd98e54c82c6f281",
+          "fixed_passed": 5
+        },
+        "replication": {
+          "n": 8,
+          "targets": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "passed": {
+            "direct": 1,
+            "human": 0,
+            "self": 4
+          },
+          "preparation": "controller",
+          "build_status": "valid",
+          "eligible": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "rep": "b",
+          "complete": true,
+          "seal_sha256": "57c372c693b0dbe79f33ae6d3ee11ab715b007392d349ed08c1ab3df7b5f1d89",
+          "fixed_passed": 6
+        },
+        "source": "studies/public_library_transfer/self_refinement/suite_recovery/result.json",
+        "source_sha256": "169ecb83b85bdd8dcdfcb51469f5709c96e7390ba17937aca1697bb3b688260d"
+      }
+    },
+    "component_followup": {
+      "table": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 0,
+          "human": 6,
+          "gpt5-library": 3
+        },
+        "preparation": "module links",
+        "build_status": "build_failed",
+        "eligible": [],
+        "observed": [],
+        "rep": "a",
+        "complete": false,
+        "seal_sha256": "f060f2b684f7daf5c723ca6ab0c1cff8d8cc7ce7bd85dcc5e6a591602b15d500",
+        "excluded_build_arms": [
+          "self"
+        ],
+        "markers": {
+          "gpt5-library": "visible"
+        },
+        "build_attempts": {
+          "gpt5-library": "missing",
+          "self": "build_failed"
+        }
+      },
+      "form": {
+        "n": 19,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 0,
+          "human": 8,
+          "gpt5-library": 2,
+          "self": 4
+        },
+        "markers": {
+          "self": "typed"
+        },
+        "build_attempts": {
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/result.json"
+        }
+      },
+      "svg-chart": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 0,
+          "human": 5,
+          "gpt5-library": 1,
+          "self": 4
+        },
+        "preparation": "module links",
+        "build_status": "build_failed",
+        "eligible": [],
+        "observed": [],
+        "rep": "a",
+        "complete": false,
+        "seal_sha256": "a8a693103fc560596abe2bf9b4c7e4245d2e9ed699bfd8fe2f6a6e6d64d423ec",
+        "excluded_build_arms": [],
+        "build_attempts": {
+          "self": "valid"
+        },
+        "markers": {
+          "self": "typed"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/svg-admission-result.json"
+        }
+      },
+      "todomvc": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "passed": {
+          "direct": 1,
+          "human": 0,
+          "self": 4,
+          "gpt5-library": 0
+        },
+        "preparation": "controller",
+        "build_status": "valid",
+        "eligible": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "observed": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "rep": "a",
+        "complete": true,
+        "seal_sha256": "70e959d392640b2c512ea32b734501f5806ceb183fdb46a8cd98e54c82c6f281",
+        "fixed_passed": 5,
+        "markers": {
+          "self": "rebuild",
+          "gpt5-library": "blind"
+        }
+      }
+    },
+    "extended_targets": {
+      "form": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 0,
+          "human": 9,
+          "gpt5-library": 3,
+          "self": 4
+        },
+        "markers": {
+          "self": "typed"
+        },
+        "build_attempts": {
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/result.json"
+        },
+        "original_targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "additional_targets": [
+          13
+        ]
+      }
+    },
+    "table_protocol_followup": {
+      "n": 20,
+      "targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "passed": {
+        "direct": 0,
+        "human": 6,
+        "gpt5-library": 3
+      },
+      "preparation": "module links",
+      "build_status": "build_failed",
+      "eligible": [],
+      "observed": [],
+      "rep": "a",
+      "complete": false,
+      "seal_sha256": "f060f2b684f7daf5c723ca6ab0c1cff8d8cc7ce7bd85dcc5e6a591602b15d500",
+      "excluded_build_arms": [
+        "self"
+      ],
+      "markers": {
+        "gpt5-library": "profiles"
+      },
+      "build_attempts": {
+        "gpt5-library": "missing",
+        "self": "build_failed"
+      },
+      "implementation_sources": {
+        "gpt5-library": "studies/webbench/table_interactions/result.json"
+      }
+    },
+    "library_capabilities": {
+      "table": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 0,
+          "human": 6,
+          "gpt5-library": 3,
+          "self": 3
+        },
+        "preparation": "module links",
+        "build_status": "build_failed",
+        "eligible": [],
+        "observed": [],
+        "rep": "a",
+        "complete": false,
+        "seal_sha256": "f060f2b684f7daf5c723ca6ab0c1cff8d8cc7ce7bd85dcc5e6a591602b15d500",
+        "excluded_build_arms": [],
+        "markers": {
+          "gpt5-library": "profiles",
+          "self": "events"
+        },
+        "build_attempts": {
+          "gpt5-library": "missing",
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "gpt5-library": "studies/webbench/table_interactions/result.json",
+          "self": "studies/webbench/table/selection_binding/typed-result.json"
+        }
+      },
+      "svg-chart": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 0,
+          "human": 5,
+          "gpt5-library": 1,
+          "self": 4
+        },
+        "preparation": "module links",
+        "build_status": "build_failed",
+        "eligible": [],
+        "observed": [],
+        "rep": "a",
+        "complete": false,
+        "seal_sha256": "a8a693103fc560596abe2bf9b4c7e4245d2e9ed699bfd8fe2f6a6e6d64d423ec",
+        "excluded_build_arms": [],
+        "build_attempts": {
+          "self": "valid"
+        },
+        "markers": {
+          "self": "events"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/svg_public_geometry/decoration/helpers-result.json"
+        }
+      },
+      "duo": {
+        "n": 5,
+        "targets": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag"
+        ],
+        "passed": {
+          "direct": 2,
+          "self": 1,
+          "gpt5-library": 1
+        },
+        "excluded_build_arms": [],
+        "failed_build_targets": {
+          "self": [
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ]
+        },
+        "markers": {
+          "gpt5-library": "donor"
+        },
+        "implementation_sources": {
+          "gpt5-library": "studies/public_library_transfer/duo_donor_library/result.json"
+        }
+      },
+      "dom1": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 3,
+          "human": 5,
+          "gpt5-library": 10,
+          "self": 2
+        },
+        "excluded_build_arms": [],
+        "build_attempts": {
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "direct": "studies/webbench/file_explorer/document_library/controls.json",
+          "human": "studies/webbench/file_explorer/document_library/controls.json",
+          "gpt5-library": "studies/webbench/file_explorer/document_library/controls.json",
+          "self": "studies/webbench/file_explorer/document_library/result.json"
+        }
+      },
+      "calculator": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 4,
+          "human": 20,
+          "gpt5-library": 10,
+          "self": 6
+        },
+        "excluded_build_arms": [],
+        "build_attempts": {
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "direct": "studies/webbench/calculator/key_groups/result.json",
+          "human": "studies/webbench/calculator/key_groups/result.json",
+          "gpt5-library": "studies/webbench/calculator/key_groups/result.json",
+          "self": "studies/webbench/calculator/starter_modules/focused/result.json"
+        }
+      }
+    },
+    "webgen_functional": {
+      "targets": [
+        "000011/0",
+        "000011/1",
+        "000011/2",
+        "000011/3",
+        "000011/4",
+        "000011/5",
+        "000011/6",
+        "000011/7",
+        "000011/8",
+        "000016/0",
+        "000016/1",
+        "000016/2",
+        "000016/3",
+        "000016/4",
+        "000016/5",
+        "000030/0",
+        "000030/1",
+        "000030/2",
+        "000030/3",
+        "000057/0",
+        "000057/1",
+        "000057/2",
+        "000057/3",
+        "000057/4",
+        "000057/5",
+        "000057/6",
+        "000057/7",
+        "000090/0",
+        "000090/1",
+        "000090/2",
+        "000090/3",
+        "000090/4",
+        "000090/5",
+        "000090/6",
+        "000090/7",
+        "000090/8",
+        "000101/0",
+        "000101/1",
+        "000101/2",
+        "000101/3",
+        "000101/4",
+        "000101/5",
+        "000101/6"
+      ],
+      "n": 43,
+      "registered": 43,
+      "passed": {
+        "direct": 11.5,
+        "human": 24.5
+      },
+      "excluded_build_arms": [
+        "self"
+      ],
+      "measure": "functional points",
+      "judge": "qwen/qwen3-vl-30b-a3b-instruct"
+    },
+    "table_state_transitions": {
+      "n": 20,
+      "targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "passed": {
+        "direct": 0,
+        "human": 6,
+        "gpt5-library": 3,
+        "self": 3
+      },
+      "preparation": "incremental interaction repair",
+      "build_status": "valid",
+      "eligible": [],
+      "observed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "rep": "a",
+      "complete": true,
+      "seal_sha256": "f060f2b684f7daf5c723ca6ab0c1cff8d8cc7ce7bd85dcc5e6a591602b15d500",
+      "excluded_build_arms": [],
+      "markers": {
+        "gpt5-library": "profiles",
+        "self": "typed"
+      },
+      "build_attempts": {
+        "gpt5-library": "missing",
+        "self": "valid"
+      },
+      "implementation_sources": {
+        "gpt5-library": "studies/webbench/table_interactions/result.json",
+        "self": "studies/webbench/table/selection_binding/interaction_repairs/result.json"
+      },
+      "fixed_passes": [
+        1,
+        2,
+        4
+      ]
+    },
+    "source_diagnosis": {
+      "svg-chart": {
+        "n": 20,
+        "targets": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "passed": {
+          "direct": 0,
+          "human": 5,
+          "gpt5-library": 15,
+          "self": 3
+        },
+        "markers": {
+          "self": "self-sequences",
+          "gpt5-library": "source-plans"
+        },
+        "excluded_build_arms": [],
+        "source": "studies/results/library-source-diagnosis-20261126.json"
+      },
+      "todomvc": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "passed": {
+          "direct": 1,
+          "human": 8,
+          "gpt5-library": 5,
+          "self": 5
+        },
+        "markers": {
+          "self": "core-profile",
+          "gpt5-library": "visible-choices",
+          "direct": "visible-choices",
+          "human": "visible-choices"
+        },
+        "excluded_build_arms": [],
+        "source": "studies/results/library-source-diagnosis-20261126.json"
+      },
+      "form": {
+        "n": 20,
+        "targets": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "passed": {
+          "direct": 2,
+          "human": 10,
+          "gpt5-library": 15,
+          "self": 3
+        },
+        "markers": {
+          "self": "self-sequences",
+          "human": "source-plans",
+          "gpt5-library": "source-plans"
+        },
+        "excluded_build_arms": [],
+        "source": "studies/results/library-source-diagnosis-20261126.json"
+      },
+      "dom1": {
+        "n": 20,
+        "targets": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "passed": {
+          "direct": 3,
+          "human": 5,
+          "gpt5-library": 10,
+          "self": 1
+        },
+        "markers": {
+          "self": "self-sequences"
+        },
+        "excluded_build_arms": [],
+        "source": "studies/results/library-source-diagnosis-20261126.json"
+      }
+    }
   },
   "mistralai/mistral-small-3.2-24b-instruct": {
     "current": {
@@ -475,7 +3106,10 @@
         "passed": {
           "direct": 6,
           "human": 0
-        }
+        },
+        "excluded_build_arms": [
+          "openai/gpt-5"
+        ]
       },
       "form": {
         "n": 18,
@@ -687,6 +3321,1515 @@
           "openai/gpt-5": 9
         }
       }
+    },
+    "paper_current": {
+      "svg-chart": {
+        "n": 19,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 3,
+          "human": 12,
+          "gpt5-library": 7
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "failed_build_targets": {
+          "self": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        }
+      },
+      "form": {
+        "n": 19,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 2,
+          "human": 19,
+          "gpt5-library": 1
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "failed_build_targets": {
+          "self": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        }
+      },
+      "todomvc": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "passed": {
+          "direct": 8,
+          "human": 8
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "failed_build_targets": {
+          "self": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ]
+        }
+      },
+      "duo": {
+        "n": 5,
+        "targets": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag"
+        ],
+        "passed": {
+          "direct": 0,
+          "self": 0
+        },
+        "excluded_build_arms": [],
+        "failed_build_targets": {
+          "self": [
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ]
+        }
+      }
+    },
+    "self_recovery": {
+      "form": {
+        "first": {
+          "n": 19,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 2,
+            "human": 19,
+            "gpt5-library": 1,
+            "self": 0
+          },
+          "preparation": "entry",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17,
+            18,
+            19,
+            20
+          ],
+          "rep": "a",
+          "complete": true,
+          "seal_sha256": "e4c78c8f08a1b0fa79ea36c80f252bb45be224316d3c626475f7a46342aacad3",
+          "fixed_passed": 1
+        },
+        "replication": {
+          "n": 19,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 2,
+            "human": 19,
+            "gpt5-library": 1,
+            "self": 0
+          },
+          "preparation": "entry",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17,
+            18,
+            19,
+            20
+          ],
+          "rep": "b",
+          "complete": true,
+          "seal_sha256": "7871bba99fab70413889c2734369aa2cb6639c6cf3c4a23bff3891acc483d3f7",
+          "fixed_passed": 1
+        },
+        "source": "studies/webbench/self_build_modules/module_links/result.json",
+        "source_sha256": "b9d1b7e5b4c79e3d9075c34ca15c0277f3f8dd741f5e9131cb64b627e75ffb3f"
+      },
+      "table": {
+        "first": {
+          "n": 18,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 5,
+            "human": 18,
+            "gpt5-library": 3,
+            "self": 0
+          },
+          "preparation": "observed options",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            19,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            19,
+            20
+          ],
+          "rep": "a",
+          "complete": true,
+          "seal_sha256": "f4bab991be61a3aeb1ab22b1cbdd860e089a2d9b7c6fb34ad72c24e32a59760a",
+          "fixed_passed": 1
+        },
+        "replication": {
+          "n": 18,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 5,
+            "human": 18,
+            "gpt5-library": 3,
+            "self": 0
+          },
+          "preparation": "modules",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            19,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            19,
+            20
+          ],
+          "rep": "b",
+          "complete": true,
+          "seal_sha256": "3ad81d7a7bbdac4aaae818a62a0453b0c9563a2f55c66ddd60d22123b4ff4ae2",
+          "fixed_passed": 2
+        },
+        "source": "studies/webbench/self_build_modules/module_links/result.json",
+        "source_sha256": "b9d1b7e5b4c79e3d9075c34ca15c0277f3f8dd741f5e9131cb64b627e75ffb3f"
+      },
+      "svg-chart": {
+        "first": {
+          "n": 19,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 3,
+            "human": 12,
+            "gpt5-library": 7
+          },
+          "preparation": "modules",
+          "build_status": "missing",
+          "eligible": [],
+          "observed": [],
+          "rep": "a",
+          "complete": false,
+          "seal_sha256": "5318bd75d7add16f44f2f3805553180ecce40d3ff36a9e8a9c2b3d7b5d9fa97e"
+        },
+        "replication": {
+          "n": 19,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 3,
+            "human": 12,
+            "gpt5-library": 7
+          },
+          "preparation": "modules",
+          "build_status": "missing",
+          "eligible": [],
+          "observed": [],
+          "rep": "b",
+          "complete": false,
+          "seal_sha256": "ce576d47ee9e1127d408273506da94fda3240a65ececd36ba1d6a7751428a06b"
+        },
+        "source": "studies/webbench/self_build_modules/module_links/result.json",
+        "source_sha256": "b9d1b7e5b4c79e3d9075c34ca15c0277f3f8dd741f5e9131cb64b627e75ffb3f"
+      },
+      "todomvc": {
+        "first": {
+          "n": 8,
+          "targets": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "passed": {
+            "direct": 8,
+            "human": 8,
+            "self": 8
+          },
+          "preparation": "controller",
+          "build_status": "valid",
+          "eligible": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "rep": "a",
+          "complete": true,
+          "seal_sha256": "a5dd2062ac14e0eef6009e0e01b3daa653bf848ed53c78c7db3187555b2632ab",
+          "fixed_passed": 8
+        },
+        "replication": {
+          "n": 8,
+          "targets": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "passed": {
+            "direct": 8,
+            "human": 8
+          },
+          "preparation": "controller",
+          "build_status": "build_failed",
+          "eligible": [],
+          "observed": [],
+          "rep": "b",
+          "complete": false,
+          "seal_sha256": "3bd3f5477fa9892b558e9a4121abdb0f8defa316b9c06991d419ff5b85d8e2c1",
+          "excluded_build_arms": [
+            "self"
+          ]
+        },
+        "source": "studies/public_library_transfer/self_refinement/suite_recovery/result.json",
+        "source_sha256": "169ecb83b85bdd8dcdfcb51469f5709c96e7390ba17937aca1697bb3b688260d"
+      },
+      "duo": {
+        "first": {
+          "n": 10,
+          "targets": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag",
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ],
+          "passed": {
+            "direct": 0,
+            "self": 3
+          },
+          "preparation": "components with JSON block receiver",
+          "build_status": "valid",
+          "eligible": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag",
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ],
+          "observed": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag",
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ],
+          "rep": "a",
+          "complete": true,
+          "seal_sha256": "df87fc25ad1b10d7b9b3fcfaa3045d032f0c254a1b234408ae6354d2b34dbc36",
+          "fixed_passed": 0
+        },
+        "replication": {
+          "n": 10,
+          "targets": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag",
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ],
+          "passed": {
+            "direct": 0,
+            "self": 3
+          },
+          "preparation": "components with JSON block receiver",
+          "build_status": "valid",
+          "eligible": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag",
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ],
+          "observed": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag",
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ],
+          "rep": "b",
+          "complete": true,
+          "seal_sha256": "f333df91c92c7b6b874cae49bb7477a17b6598917c9fbe017f4d1a334c64f69f",
+          "fixed_passed": 0
+        },
+        "source": "studies/public_library_transfer/self_refinement/suite_recovery/duo_confirmation/result.json",
+        "source_sha256": "5833fbfe6af8e2646ad3b7ce95dae70d1053e5b65ea6663fa8e7f7a5426cda0c"
+      }
+    },
+    "component_followup": {
+      "table": {
+        "n": 18,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 5,
+          "human": 18,
+          "gpt5-library": 3,
+          "self": 2
+        },
+        "preparation": "observed options",
+        "build_status": "valid",
+        "eligible": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          18,
+          19,
+          20
+        ],
+        "observed": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          18,
+          19,
+          20
+        ],
+        "rep": "a",
+        "complete": true,
+        "seal_sha256": "f4bab991be61a3aeb1ab22b1cbdd860e089a2d9b7c6fb34ad72c24e32a59760a",
+        "fixed_passed": 1,
+        "markers": {
+          "self": "typed"
+        },
+        "build_attempts": {
+          "gpt5-library": "missing",
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/integration-result.json"
+        }
+      },
+      "form": {
+        "n": 19,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 2,
+          "human": 19,
+          "gpt5-library": 1,
+          "self": 5
+        },
+        "preparation": "entry",
+        "build_status": "valid",
+        "eligible": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20
+        ],
+        "observed": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20
+        ],
+        "rep": "a",
+        "complete": true,
+        "seal_sha256": "e4c78c8f08a1b0fa79ea36c80f252bb45be224316d3c626475f7a46342aacad3",
+        "fixed_passed": 1,
+        "markers": {
+          "self": "typed"
+        },
+        "build_attempts": {
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/integration-result.json"
+        }
+      },
+      "svg-chart": {
+        "n": 19,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 3,
+          "human": 12,
+          "gpt5-library": 7,
+          "self": 5
+        },
+        "preparation": "modules",
+        "build_status": "missing",
+        "eligible": [],
+        "observed": [],
+        "rep": "a",
+        "complete": false,
+        "seal_sha256": "5318bd75d7add16f44f2f3805553180ecce40d3ff36a9e8a9c2b3d7b5d9fa97e",
+        "build_attempts": {
+          "self": "valid"
+        },
+        "excluded_build_arms": [],
+        "markers": {
+          "self": "typed"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/svg-admission-result.json"
+        }
+      },
+      "todomvc": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "passed": {
+          "direct": 8,
+          "human": 8,
+          "self": 8,
+          "gpt5-library": 8
+        },
+        "preparation": "controller",
+        "build_status": "valid",
+        "eligible": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "observed": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "rep": "a",
+        "complete": true,
+        "seal_sha256": "a5dd2062ac14e0eef6009e0e01b3daa653bf848ed53c78c7db3187555b2632ab",
+        "fixed_passed": 8,
+        "markers": {
+          "self": "rebuild",
+          "gpt5-library": "blind"
+        }
+      }
+    },
+    "extended_targets": {
+      "table": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 5,
+          "human": 20,
+          "gpt5-library": 3,
+          "self": 2
+        },
+        "preparation": "observed options",
+        "build_status": "valid",
+        "eligible": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          18,
+          19,
+          20
+        ],
+        "observed": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          18,
+          19,
+          20
+        ],
+        "rep": "a",
+        "complete": true,
+        "seal_sha256": "f4bab991be61a3aeb1ab22b1cbdd860e089a2d9b7c6fb34ad72c24e32a59760a",
+        "fixed_passed": 1,
+        "markers": {
+          "self": "typed"
+        },
+        "build_attempts": {
+          "gpt5-library": "missing",
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/integration-result.json"
+        },
+        "original_targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          18,
+          19,
+          20
+        ],
+        "additional_targets": [
+          16,
+          17
+        ]
+      },
+      "svg-chart": {
+        "n": 19,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 3,
+          "human": 12,
+          "gpt5-library": 7,
+          "self": 5
+        },
+        "preparation": "modules",
+        "build_status": "missing",
+        "eligible": [],
+        "observed": [],
+        "rep": "a",
+        "complete": false,
+        "seal_sha256": "5318bd75d7add16f44f2f3805553180ecce40d3ff36a9e8a9c2b3d7b5d9fa97e",
+        "build_attempts": {
+          "self": "valid"
+        },
+        "excluded_build_arms": [],
+        "markers": {
+          "self": "typed"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/svg-admission-result.json"
+        },
+        "original_targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20
+        ],
+        "additional_targets": []
+      },
+      "form": {
+        "n": 19,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 2,
+          "human": 19,
+          "gpt5-library": 1,
+          "self": 5
+        },
+        "preparation": "entry",
+        "build_status": "valid",
+        "eligible": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20
+        ],
+        "observed": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20
+        ],
+        "rep": "a",
+        "complete": true,
+        "seal_sha256": "e4c78c8f08a1b0fa79ea36c80f252bb45be224316d3c626475f7a46342aacad3",
+        "fixed_passed": 1,
+        "markers": {
+          "self": "typed"
+        },
+        "build_attempts": {
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/integration-result.json"
+        },
+        "original_targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20
+        ],
+        "additional_targets": []
+      }
+    },
+    "library_capabilities": {
+      "svg-chart": {
+        "n": 19,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 3,
+          "human": 12,
+          "gpt5-library": 7,
+          "self": 3
+        },
+        "preparation": "modules",
+        "build_status": "missing",
+        "eligible": [],
+        "observed": [],
+        "rep": "a",
+        "complete": false,
+        "seal_sha256": "5318bd75d7add16f44f2f3805553180ecce40d3ff36a9e8a9c2b3d7b5d9fa97e",
+        "build_attempts": {
+          "self": "valid"
+        },
+        "excluded_build_arms": [],
+        "markers": {
+          "self": "events"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/svg_public_geometry/decoration/helpers-result.json"
+        },
+        "original_targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20
+        ],
+        "additional_targets": []
+      },
+      "form": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 7,
+          "human": 13,
+          "gpt5-library": 14,
+          "self": 4
+        },
+        "markers": {
+          "direct": "survey",
+          "human": "survey",
+          "gpt5-library": "survey",
+          "self": "survey"
+        },
+        "implementation_sources": {
+          "direct": "studies/webbench/form/survey_workflow/result.json",
+          "human": "studies/webbench/form/survey_workflow/result.json",
+          "gpt5-library": "studies/webbench/form/survey_workflow/result.json",
+          "self": "studies/webbench/form/survey_workflow/module_links/result.json"
+        },
+        "direct_transport_receipt": "studies/webbench/form/survey_workflow/transport/result.json"
+      },
+      "duo": {
+        "n": 10,
+        "targets": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "passed": {
+          "direct": 0,
+          "self": 3,
+          "gpt5-library": 4
+        },
+        "preparation": "components with JSON block receiver",
+        "build_status": "valid",
+        "eligible": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "observed": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "rep": "a",
+        "complete": true,
+        "seal_sha256": "df87fc25ad1b10d7b9b3fcfaa3045d032f0c254a1b234408ae6354d2b34dbc36",
+        "fixed_passed": 0,
+        "markers": {
+          "gpt5-library": "donor"
+        },
+        "excluded_build_arms": [],
+        "implementation_sources": {
+          "gpt5-library": "studies/public_library_transfer/duo_donor_library/result.json"
+        }
+      }
+    },
+    "source_diagnosis": {
+      "svg-chart": {
+        "n": 19,
+        "targets": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "passed": {
+          "direct": 3,
+          "human": 12,
+          "gpt5-library": 7,
+          "self": 3
+        },
+        "markers": {
+          "self": "self-sequences"
+        },
+        "excluded_build_arms": [],
+        "source": "studies/results/library-source-diagnosis-20261126.json"
+      }
     }
   },
   "qwen/qwen3-coder-30b-a3b-instruct": {
@@ -815,7 +4958,821 @@
       }
     },
     "sources": {},
-    "retrospective": {}
+    "retrospective": {},
+    "paper_current": {
+      "todomvc": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "passed": {
+          "direct": 8,
+          "human": 8
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "failed_build_targets": {
+          "self": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ]
+        }
+      }
+    },
+    "self_recovery": {
+      "form": {
+        "first": {
+          "n": 9,
+          "targets": [
+            1,
+            2,
+            4,
+            6,
+            7,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 5,
+            "human": 7,
+            "gpt5-library": 0
+          },
+          "preparation": "module links",
+          "build_status": "build_failed",
+          "eligible": [],
+          "observed": [],
+          "rep": "a",
+          "complete": false,
+          "seal_sha256": "e5879a045582e35f2e6bd659b63cb46deb72b9897acc0c070e58558e5e6ef473",
+          "excluded_build_arms": [
+            "self"
+          ]
+        },
+        "replication": {
+          "n": 9,
+          "targets": [
+            1,
+            2,
+            4,
+            6,
+            7,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 5,
+            "human": 7,
+            "gpt5-library": 0,
+            "self": 0
+          },
+          "preparation": "module links",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            4,
+            6,
+            7,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            4,
+            6,
+            7,
+            17,
+            18,
+            19,
+            20
+          ],
+          "rep": "b",
+          "complete": true,
+          "seal_sha256": "77ff5296ce9cde32f0754251c4e1bfe94ce0aab300b92626d279f97d73bdf0f8",
+          "fixed_passed": 4
+        },
+        "source": "studies/webbench/self_build_modules/module_links/result.json",
+        "source_sha256": "b9d1b7e5b4c79e3d9075c34ca15c0277f3f8dd741f5e9131cb64b627e75ffb3f"
+      },
+      "table": {
+        "first": {
+          "n": 7,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            13,
+            14,
+            20
+          ],
+          "passed": {
+            "direct": 3,
+            "human": 0,
+            "gpt5-library": 0,
+            "self": 2
+          },
+          "preparation": "module links",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            13,
+            14,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            13,
+            14,
+            20
+          ],
+          "rep": "a",
+          "complete": true,
+          "seal_sha256": "76900bfef508bf275e6413fe1e405bb0e426823d8958e98defb8bc48d7b852c5",
+          "fixed_passed": 2
+        },
+        "replication": {
+          "n": 7,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            13,
+            14,
+            20
+          ],
+          "passed": {
+            "direct": 3,
+            "human": 0,
+            "gpt5-library": 0,
+            "self": 4
+          },
+          "preparation": "modules",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            13,
+            14,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            13,
+            14,
+            20
+          ],
+          "rep": "b",
+          "complete": true,
+          "seal_sha256": "9e325225c58aec3f6a8b43b4f85a0ded789df62848fdbc663182ab8db6291194",
+          "fixed_passed": 4
+        },
+        "source": "studies/webbench/self_build_modules/module_links/result.json",
+        "source_sha256": "b9d1b7e5b4c79e3d9075c34ca15c0277f3f8dd741f5e9131cb64b627e75ffb3f"
+      },
+      "todomvc": {
+        "first": {
+          "n": 8,
+          "targets": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "passed": {
+            "direct": 8,
+            "human": 8,
+            "self": 8
+          },
+          "preparation": "controller",
+          "build_status": "valid",
+          "eligible": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "rep": "a",
+          "complete": true,
+          "seal_sha256": "9ad9f5c20c7e1509aa331108587181bb2902ce22e5ea72052bf2729d318f3a3c",
+          "fixed_passed": 8
+        },
+        "replication": {
+          "n": 8,
+          "targets": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "passed": {
+            "direct": 8,
+            "human": 8,
+            "self": 8
+          },
+          "preparation": "controller",
+          "build_status": "valid",
+          "eligible": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "rep": "b",
+          "complete": true,
+          "seal_sha256": "996844f2275ae1aa06d464f3803237b193062d8025d89c58fd60139dbfa77b39",
+          "fixed_passed": 8
+        },
+        "source": "studies/public_library_transfer/self_refinement/suite_recovery/result.json",
+        "source_sha256": "169ecb83b85bdd8dcdfcb51469f5709c96e7390ba17937aca1697bb3b688260d"
+      }
+    },
+    "component_followup": {
+      "table": {
+        "n": 7,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          13,
+          14,
+          20
+        ],
+        "passed": {
+          "direct": 3,
+          "human": 5,
+          "gpt5-library": 1,
+          "self": 2
+        },
+        "preparation": "module links",
+        "build_status": "valid",
+        "eligible": [
+          1,
+          2,
+          3,
+          4,
+          13,
+          14,
+          20
+        ],
+        "observed": [
+          1,
+          2,
+          3,
+          4,
+          13,
+          14,
+          20
+        ],
+        "rep": "a",
+        "complete": true,
+        "seal_sha256": "76900bfef508bf275e6413fe1e405bb0e426823d8958e98defb8bc48d7b852c5",
+        "fixed_passed": 2,
+        "markers": {
+          "self": "typed",
+          "human": "menu",
+          "gpt5-library": "menu"
+        },
+        "build_attempts": {
+          "gpt5-library": "missing",
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/result.json"
+        }
+      },
+      "svg-chart": {
+        "n": 18,
+        "targets": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 0,
+          "human": 11,
+          "gpt5-library": 15,
+          "self": 6
+        },
+        "markers": {
+          "self": "typed"
+        },
+        "build_attempts": {
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/result.json"
+        }
+      },
+      "form": {
+        "n": 9,
+        "targets": [
+          1,
+          2,
+          4,
+          6,
+          7,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 5,
+          "human": 7,
+          "gpt5-library": 7,
+          "self": 4
+        },
+        "markers": {
+          "gpt5-library": "menu",
+          "self": "typed"
+        },
+        "build_attempts": {
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/result.json"
+        }
+      },
+      "todomvc": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "passed": {
+          "direct": 8,
+          "human": 8,
+          "self": 8,
+          "gpt5-library": 8
+        },
+        "preparation": "controller",
+        "build_status": "valid",
+        "eligible": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "observed": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "rep": "a",
+        "complete": true,
+        "seal_sha256": "9ad9f5c20c7e1509aa331108587181bb2902ce22e5ea72052bf2729d318f3a3c",
+        "fixed_passed": 8,
+        "markers": {
+          "self": "rebuild",
+          "gpt5-library": "blind"
+        }
+      }
+    },
+    "extended_targets": {
+      "table": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 3,
+          "human": 10,
+          "gpt5-library": 3,
+          "self": 3
+        },
+        "preparation": "module links",
+        "build_status": "valid",
+        "eligible": [
+          1,
+          2,
+          3,
+          4,
+          13,
+          14,
+          20
+        ],
+        "observed": [
+          1,
+          2,
+          3,
+          4,
+          13,
+          14,
+          20
+        ],
+        "rep": "a",
+        "complete": true,
+        "seal_sha256": "76900bfef508bf275e6413fe1e405bb0e426823d8958e98defb8bc48d7b852c5",
+        "fixed_passed": 2,
+        "markers": {
+          "self": "typed",
+          "human": "menu",
+          "gpt5-library": "menu"
+        },
+        "build_attempts": {
+          "gpt5-library": "missing",
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/result.json"
+        },
+        "original_targets": [
+          1,
+          2,
+          3,
+          4,
+          13,
+          14,
+          20
+        ],
+        "additional_targets": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "svg-chart": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 0,
+          "human": 12,
+          "gpt5-library": 17,
+          "self": 6
+        },
+        "markers": {
+          "self": "typed"
+        },
+        "build_attempts": {
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/result.json"
+        },
+        "original_targets": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "additional_targets": [
+          4,
+          7
+        ]
+      },
+      "form": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 9,
+          "human": 15,
+          "gpt5-library": 15,
+          "self": 7
+        },
+        "markers": {
+          "gpt5-library": "menu",
+          "self": "typed"
+        },
+        "build_attempts": {
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/result.json"
+        },
+        "original_targets": [
+          1,
+          2,
+          4,
+          6,
+          7,
+          17,
+          18,
+          19,
+          20
+        ],
+        "additional_targets": [
+          3,
+          5,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      }
+    },
+    "table_protocol_followup": {
+      "n": 20,
+      "targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "passed": {
+        "direct": 3,
+        "human": 10,
+        "gpt5-library": 1,
+        "self": 3
+      },
+      "preparation": "module links",
+      "build_status": "valid",
+      "eligible": [
+        1,
+        2,
+        3,
+        4,
+        13,
+        14,
+        20
+      ],
+      "observed": [
+        1,
+        2,
+        3,
+        4,
+        13,
+        14,
+        20
+      ],
+      "rep": "a",
+      "complete": true,
+      "seal_sha256": "76900bfef508bf275e6413fe1e405bb0e426823d8958e98defb8bc48d7b852c5",
+      "fixed_passed": 2,
+      "markers": {
+        "self": "handlers",
+        "human": "menu",
+        "gpt5-library": "profiles"
+      },
+      "build_attempts": {
+        "gpt5-library": "missing",
+        "self": "valid"
+      },
+      "implementation_sources": {
+        "self": "studies/webbench/table/event_modules/focused-result.json",
+        "gpt5-library": "studies/webbench/table_interactions/result.json"
+      },
+      "original_targets": [
+        1,
+        2,
+        3,
+        4,
+        13,
+        14,
+        20
+      ],
+      "additional_targets": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "excluded_build_arms": []
+    },
+    "library_capabilities": {
+      "duo": {
+        "n": 10,
+        "targets": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "passed": {
+          "direct": 4,
+          "self": 1,
+          "gpt5-library": 3
+        },
+        "markers": {
+          "gpt5-library": "donor"
+        },
+        "excluded_build_arms": [],
+        "implementation_sources": {
+          "gpt5-library": "studies/public_library_transfer/duo_donor_library/result.json"
+        }
+      }
+    }
   },
   "openai/gpt-oss-120b": {
     "current": {
@@ -1118,6 +6075,954 @@
           "openai/gpt-5": 14
         }
       }
+    },
+    "paper_current": {
+      "svg-chart": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 2,
+          "human": 20,
+          "gpt5-library": 16
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "failed_build_targets": {
+          "self": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        }
+      },
+      "duo": {
+        "n": 10,
+        "targets": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "passed": {
+          "direct": 5
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "failed_build_targets": {
+          "self": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag",
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ]
+        }
+      }
+    },
+    "self_recovery": {
+      "table": {
+        "first": {
+          "n": 20,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 7,
+            "human": 20,
+            "gpt5-library": 3,
+            "self": 7
+          },
+          "preparation": "modules",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "rep": "a",
+          "complete": true,
+          "seal_sha256": "48a3dd1b38e19a6c03eb788920e39e6c4712a593fbf5f0c8999250ce4a573395",
+          "fixed_passed": 7
+        },
+        "replication": {
+          "n": 20,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 7,
+            "human": 20,
+            "gpt5-library": 3,
+            "self": 4
+          },
+          "preparation": "modules",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "rep": "b",
+          "complete": true,
+          "seal_sha256": "155a606eff078d89c10bb8756b675332afeae3d37b18aa51470f5da4aa8f9e5f",
+          "fixed_passed": 4
+        },
+        "source": "studies/webbench/self_build_modules/module_links/result.json",
+        "source_sha256": "b9d1b7e5b4c79e3d9075c34ca15c0277f3f8dd741f5e9131cb64b627e75ffb3f"
+      },
+      "svg-chart": {
+        "first": {
+          "n": 20,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 2,
+            "human": 20,
+            "gpt5-library": 16
+          },
+          "preparation": "module links",
+          "build_status": "build_failed",
+          "eligible": [],
+          "observed": [],
+          "rep": "a",
+          "complete": false,
+          "seal_sha256": "2e1d38ec50d879d0226ba7f129c71d2895ddd8f3519f3f250e7d8fbfa075b624",
+          "excluded_build_arms": [
+            "self"
+          ]
+        },
+        "replication": {
+          "n": 20,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 2,
+            "human": 20,
+            "gpt5-library": 16,
+            "self": 9
+          },
+          "preparation": "modules",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "rep": "b",
+          "complete": true,
+          "seal_sha256": "5ae760ad8197d5946de421aaefcf7cec47e694962b25bb814ecf9508fd1bdcbb",
+          "fixed_passed": 9
+        },
+        "source": "studies/webbench/self_build_modules/module_links/result.json",
+        "source_sha256": "b9d1b7e5b4c79e3d9075c34ca15c0277f3f8dd741f5e9131cb64b627e75ffb3f"
+      },
+      "duo": {
+        "first": {
+          "n": 10,
+          "targets": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag",
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ],
+          "passed": {
+            "direct": 5,
+            "self": 4
+          },
+          "preparation": "components",
+          "build_status": "valid",
+          "eligible": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag",
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ],
+          "observed": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag",
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ],
+          "rep": "a",
+          "complete": true,
+          "seal_sha256": "759677a9e1c9ab2c8a38b1274ad60d64ed3b26e862574803f9e68063874ab871",
+          "fixed_passed": 0
+        },
+        "replication": {
+          "n": 10,
+          "targets": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag",
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ],
+          "passed": {
+            "direct": 5,
+            "self": 2
+          },
+          "preparation": "components",
+          "build_status": "valid",
+          "eligible": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag",
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ],
+          "observed": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag",
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ],
+          "rep": "b",
+          "complete": true,
+          "seal_sha256": "01d0e6d261029321166ac328e4158f816959d0d18c5bad9de19e296a9b65b4e2",
+          "fixed_passed": 0
+        },
+        "source": "studies/public_library_transfer/self_refinement/suite_recovery/result.json",
+        "source_sha256": "169ecb83b85bdd8dcdfcb51469f5709c96e7390ba17937aca1697bb3b688260d"
+      }
+    },
+    "component_followup": {
+      "table": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 7,
+          "human": 20,
+          "gpt5-library": 3,
+          "self": 7
+        },
+        "preparation": "modules",
+        "build_status": "valid",
+        "eligible": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "observed": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "rep": "a",
+        "complete": true,
+        "seal_sha256": "48a3dd1b38e19a6c03eb788920e39e6c4712a593fbf5f0c8999250ce4a573395",
+        "fixed_passed": 7,
+        "markers": {
+          "self": "rebuild",
+          "gpt5-library": "menu"
+        },
+        "build_attempts": {
+          "gpt5-library": "missing"
+        }
+      },
+      "svg-chart": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 2,
+          "human": 20,
+          "gpt5-library": 16,
+          "self": 4
+        },
+        "preparation": "module links",
+        "build_status": "build_failed",
+        "eligible": [],
+        "observed": [],
+        "rep": "a",
+        "complete": false,
+        "seal_sha256": "2e1d38ec50d879d0226ba7f129c71d2895ddd8f3519f3f250e7d8fbfa075b624",
+        "excluded_build_arms": [],
+        "build_attempts": {
+          "self": "valid"
+        },
+        "markers": {
+          "self": "typed"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/svg-admission-result.json"
+        }
+      },
+      "todomvc": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "passed": {
+          "direct": 8,
+          "human": 8,
+          "self": 8,
+          "gpt5-library": 7
+        },
+        "markers": {
+          "gpt5-library": "blind"
+        }
+      }
+    },
+    "extended_targets": {
+      "form": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 10,
+          "human": 19,
+          "gpt5-library": 14,
+          "self": 10
+        },
+        "original_targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "additional_targets": [
+          19,
+          20
+        ]
+      }
+    },
+    "table_protocol_followup": {
+      "n": 20,
+      "targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "passed": {
+        "direct": 7,
+        "human": 20,
+        "gpt5-library": 3,
+        "self": 7
+      },
+      "preparation": "modules",
+      "build_status": "valid",
+      "eligible": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "observed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "rep": "a",
+      "complete": true,
+      "seal_sha256": "48a3dd1b38e19a6c03eb788920e39e6c4712a593fbf5f0c8999250ce4a573395",
+      "fixed_passed": 7,
+      "markers": {
+        "self": "rebuild",
+        "gpt5-library": "profiles"
+      },
+      "build_attempts": {
+        "gpt5-library": "missing"
+      },
+      "excluded_build_arms": [],
+      "implementation_sources": {
+        "gpt5-library": "studies/webbench/table_interactions/result.json"
+      }
+    },
+    "library_capabilities": {
+      "svg-chart": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 2,
+          "human": 20,
+          "gpt5-library": 16,
+          "self": 7
+        },
+        "preparation": "module links",
+        "build_status": "build_failed",
+        "eligible": [],
+        "observed": [],
+        "rep": "a",
+        "complete": false,
+        "seal_sha256": "2e1d38ec50d879d0226ba7f129c71d2895ddd8f3519f3f250e7d8fbfa075b624",
+        "excluded_build_arms": [],
+        "build_attempts": {
+          "self": "valid"
+        },
+        "markers": {
+          "self": "events"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/svg_public_geometry/decoration/helpers-result.json"
+        }
+      },
+      "form": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 12,
+          "human": 9,
+          "gpt5-library": 11,
+          "self": 3
+        },
+        "markers": {
+          "direct": "survey",
+          "human": "survey",
+          "gpt5-library": "survey",
+          "self": "survey"
+        },
+        "implementation_sources": {
+          "direct": "studies/webbench/form/survey_workflow/result.json",
+          "human": "studies/webbench/form/survey_workflow/result.json",
+          "gpt5-library": "studies/webbench/form/survey_workflow/result.json",
+          "self": "studies/webbench/form/survey_workflow/module_links/result.json"
+        }
+      },
+      "duo": {
+        "n": 10,
+        "targets": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "passed": {
+          "direct": 5,
+          "self": 4,
+          "gpt5-library": 3
+        },
+        "preparation": "components",
+        "build_status": "valid",
+        "eligible": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "observed": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "rep": "a",
+        "complete": true,
+        "seal_sha256": "759677a9e1c9ab2c8a38b1274ad60d64ed3b26e862574803f9e68063874ab871",
+        "fixed_passed": 0,
+        "markers": {
+          "gpt5-library": "donor"
+        },
+        "excluded_build_arms": [],
+        "implementation_sources": {
+          "gpt5-library": "studies/public_library_transfer/duo_donor_library/result.json"
+        }
+      }
     }
   },
   "deepseek/deepseek-v4-flash": {
@@ -1264,7 +7169,981 @@
       }
     },
     "sources": {},
-    "retrospective": {}
+    "retrospective": {},
+    "paper_current": {
+      "table": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 1,
+          "human": 19,
+          "gpt5-library": 3
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "failed_build_targets": {
+          "self": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        }
+      },
+      "form": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 4,
+          "human": 17,
+          "gpt5-library": 13
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "failed_build_targets": {
+          "self": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        }
+      },
+      "duo": {
+        "n": 10,
+        "targets": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "passed": {
+          "direct": 6
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "failed_build_targets": {
+          "self": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag",
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ]
+        }
+      }
+    },
+    "panel_a_self": {
+      "form": {
+        "protocol": "File-level checks",
+        "library": "file-a",
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "self": 8
+        },
+        "source": "studies/webbench/form/flash_self_build/transport_completion/result.json",
+        "source_sha256": "1836501c88d50a3510511c0bfd6949156970071726d884e63200c791449c16d0"
+      }
+    },
+    "self_recovery": {
+      "table": {
+        "first": {
+          "n": 20,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 1,
+            "human": 19,
+            "gpt5-library": 3,
+            "self": 4
+          },
+          "preparation": "modules",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "rep": "a",
+          "complete": true,
+          "seal_sha256": "920e24fd6e9fcecc1c1bc16c1595f52f1ce8220e7d5f39b800c13230eb57d444",
+          "fixed_passed": 4
+        },
+        "replication": {
+          "n": 20,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 1,
+            "human": 19,
+            "gpt5-library": 3,
+            "self": 1
+          },
+          "preparation": "modules",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "rep": "b",
+          "complete": true,
+          "seal_sha256": "0fb19d6174e3a424cba06a606d8595ef966ee57e216fae2155b7ecace511f7a5",
+          "fixed_passed": 1
+        },
+        "source": "studies/webbench/self_build_modules/module_links/result.json",
+        "source_sha256": "b9d1b7e5b4c79e3d9075c34ca15c0277f3f8dd741f5e9131cb64b627e75ffb3f"
+      },
+      "duo": {
+        "first": {
+          "n": 10,
+          "targets": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag",
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ],
+          "passed": {
+            "direct": 6,
+            "self": 4
+          },
+          "preparation": "components",
+          "build_status": "valid",
+          "eligible": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag",
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ],
+          "observed": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag",
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ],
+          "rep": "a",
+          "complete": true,
+          "seal_sha256": "d5ce02922529732d2011ad935c691daa0d119796ab8874b99ac1fa7a851987e0",
+          "fixed_passed": 0
+        },
+        "replication": {
+          "n": 10,
+          "targets": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag",
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ],
+          "passed": {
+            "direct": 6,
+            "self": 3
+          },
+          "preparation": "components",
+          "build_status": "valid",
+          "eligible": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag",
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ],
+          "observed": [
+            "addAltTextToImage_postPerformanceReport",
+            "addCanonicalUrl_addComment",
+            "addCanonicalUrl_assignPostToCategory",
+            "addCanonicalUrl_editComment",
+            "addCanonicalUrl_editTag",
+            "addCommentToTask_setTaskDeadline",
+            "approveOrRejectTaskReview_compareTime",
+            "approveOrRejectTaskReview_projectCustomWorkflows",
+            "approveOrRejectTaskReview_setTaskPriority",
+            "assignTaskToProject_assignTaskToUser"
+          ],
+          "rep": "b",
+          "complete": true,
+          "seal_sha256": "075b921550412915a635183951d4351611d9401061991bd463ee6fdf089d532a",
+          "fixed_passed": 0
+        },
+        "source": "studies/public_library_transfer/self_refinement/suite_recovery/result.json",
+        "source_sha256": "169ecb83b85bdd8dcdfcb51469f5709c96e7390ba17937aca1697bb3b688260d"
+      }
+    },
+    "component_followup": {
+      "table": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 1,
+          "human": 19,
+          "gpt5-library": 3,
+          "self": 4
+        },
+        "preparation": "modules",
+        "build_status": "valid",
+        "eligible": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "observed": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "rep": "a",
+        "complete": true,
+        "seal_sha256": "920e24fd6e9fcecc1c1bc16c1595f52f1ce8220e7d5f39b800c13230eb57d444",
+        "fixed_passed": 4,
+        "markers": {
+          "self": "rebuild",
+          "gpt5-library": "visible"
+        },
+        "build_attempts": {
+          "gpt5-library": "missing"
+        }
+      },
+      "svg-chart": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 1,
+          "human": 20,
+          "gpt5-library": 16,
+          "self": 7
+        },
+        "markers": {
+          "self": "typed"
+        },
+        "build_attempts": {
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/result.json"
+        }
+      },
+      "todomvc": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "passed": {
+          "direct": 2,
+          "human": 5,
+          "self": 8,
+          "gpt5-library": 1
+        },
+        "markers": {
+          "gpt5-library": "blind"
+        }
+      }
+    },
+    "table_protocol_followup": {
+      "n": 20,
+      "targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "passed": {
+        "direct": 1,
+        "human": 19,
+        "gpt5-library": 2,
+        "self": 4
+      },
+      "preparation": "modules",
+      "build_status": "valid",
+      "eligible": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "observed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "rep": "a",
+      "complete": true,
+      "seal_sha256": "920e24fd6e9fcecc1c1bc16c1595f52f1ce8220e7d5f39b800c13230eb57d444",
+      "fixed_passed": 4,
+      "markers": {
+        "self": "rebuild",
+        "gpt5-library": "profiles"
+      },
+      "build_attempts": {
+        "gpt5-library": "missing"
+      },
+      "excluded_build_arms": [],
+      "implementation_sources": {
+        "gpt5-library": "studies/webbench/table_interactions/result.json"
+      }
+    },
+    "form_visible_targets": {
+      "n": 20,
+      "targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "passed": {
+        "direct": 10,
+        "human": 20,
+        "gpt5-library": 12,
+        "self": 11
+      },
+      "markers": {
+        "direct": "flash-visible",
+        "human": "flash-visible",
+        "gpt5-library": "flash-schema",
+        "self": "flash-visible"
+      },
+      "source": "studies/webbench/form/flash_self_build/visible_targets/result.json",
+      "schema_source": "studies/webbench/form/flash_self_build/visible_targets/schema-transfer-result.json"
+    },
+    "library_capabilities": {
+      "duo": {
+        "n": 10,
+        "targets": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "passed": {
+          "direct": 9,
+          "self": 6,
+          "gpt5-library": 4
+        },
+        "markers": {
+          "self": "events",
+          "direct": "events",
+          "gpt5-library": "donor"
+        },
+        "implementation_sources": {
+          "direct": "studies/public_library_transfer/duo_react_callbacks/result.json",
+          "self": "studies/public_library_transfer/duo_react_callbacks/result.json",
+          "gpt5-library": "studies/public_library_transfer/duo_donor_library/result.json"
+        },
+        "excluded_build_arms": []
+      },
+      "dom1": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 7,
+          "human": 10,
+          "gpt5-library": 10,
+          "self": 2
+        },
+        "excluded_build_arms": [],
+        "build_attempts": {
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "direct": "studies/webbench/file_explorer/document_library/controls.json",
+          "human": "studies/webbench/file_explorer/document_library/controls.json",
+          "gpt5-library": "studies/webbench/file_explorer/document_library/controls.json",
+          "self": "studies/webbench/file_explorer/document_library/result.json"
+        }
+      },
+      "calculator": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 10,
+          "human": 16,
+          "gpt5-library": 10,
+          "self": 6
+        },
+        "excluded_build_arms": [],
+        "build_attempts": {
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "direct": "studies/webbench/calculator/key_groups/result.json",
+          "human": "studies/webbench/calculator/key_groups/result.json",
+          "gpt5-library": "studies/webbench/calculator/key_groups/result.json",
+          "self": "studies/webbench/calculator/key_groups/result.json"
+        }
+      }
+    },
+    "webgen_functional": {
+      "targets": [
+        "000011/0",
+        "000011/1",
+        "000011/2",
+        "000011/3",
+        "000011/4",
+        "000011/5",
+        "000011/6",
+        "000011/7",
+        "000011/8",
+        "000016/0",
+        "000016/1",
+        "000016/2",
+        "000016/3",
+        "000016/4",
+        "000016/5",
+        "000030/0",
+        "000030/1",
+        "000030/2",
+        "000030/3",
+        "000057/0",
+        "000057/1",
+        "000057/2",
+        "000057/3",
+        "000057/4",
+        "000057/5",
+        "000057/6",
+        "000057/7",
+        "000090/0",
+        "000090/1",
+        "000090/2",
+        "000090/3",
+        "000090/4",
+        "000090/5",
+        "000090/6",
+        "000090/7",
+        "000090/8",
+        "000101/0",
+        "000101/1",
+        "000101/2",
+        "000101/3",
+        "000101/4",
+        "000101/5",
+        "000101/6"
+      ],
+      "n": 43,
+      "registered": 43,
+      "passed": {
+        "direct": 35.5,
+        "human": 21.0,
+        "self": 29.0
+      },
+      "excluded_build_arms": [],
+      "measure": "functional points",
+      "judge": "qwen/qwen3-vl-30b-a3b-instruct"
+    },
+    "source_diagnosis": {
+      "todomvc": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "passed": {
+          "direct": 8,
+          "human": 4,
+          "gpt5-library": 5,
+          "self": 8
+        },
+        "markers": {
+          "gpt5-library": "visible-choices",
+          "direct": "visible-choices",
+          "human": "visible-choices",
+          "self": "core-profile"
+        },
+        "excluded_build_arms": [],
+        "source": "studies/results/library-source-diagnosis-20261126.json"
+      },
+      "dom1": {
+        "n": 20,
+        "targets": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "passed": {
+          "direct": 7,
+          "human": 10,
+          "gpt5-library": 10,
+          "self": 2
+        },
+        "markers": {
+          "self": "self-sequences"
+        },
+        "excluded_build_arms": [],
+        "source": "studies/results/library-source-diagnosis-20261126.json"
+      }
+    }
   },
   "deepseek/deepseek-v4-pro-0813": {
     "current": {
@@ -1372,7 +8251,1056 @@
       }
     },
     "sources": {},
-    "retrospective": {}
+    "retrospective": {},
+    "paper_current": {
+      "table": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 2,
+          "human": 20,
+          "gpt5-library": 3
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "failed_build_targets": {
+          "self": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        }
+      },
+      "svg-chart": {
+        "n": 19,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 3,
+          "human": 19,
+          "gpt5-library": 16
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "failed_build_targets": {
+          "self": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        }
+      },
+      "form": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 6,
+          "human": 20,
+          "gpt5-library": 13
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "failed_build_targets": {
+          "self": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        }
+      }
+    },
+    "self_recovery": {
+      "form": {
+        "first": {
+          "n": 20,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 6,
+            "human": 20,
+            "gpt5-library": 13,
+            "self": 10
+          },
+          "preparation": "modules",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "rep": "a",
+          "complete": true,
+          "seal_sha256": "9d340893e167a00b2713b1d91660787f2c1a69bfa5c53c89e52ac4e518d0312a",
+          "fixed_passed": 10
+        },
+        "replication": {
+          "n": 20,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 6,
+            "human": 20,
+            "gpt5-library": 13,
+            "self": 14
+          },
+          "preparation": "modules",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "rep": "b",
+          "complete": true,
+          "seal_sha256": "27297e38d41189fb18cbe8fcc06793f5f3997f87d9ec647f91c64457578b8a6e",
+          "fixed_passed": 14
+        },
+        "source": "studies/webbench/self_build_modules/module_links/result.json",
+        "source_sha256": "b9d1b7e5b4c79e3d9075c34ca15c0277f3f8dd741f5e9131cb64b627e75ffb3f"
+      },
+      "table": {
+        "first": {
+          "n": 20,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 2,
+            "human": 20,
+            "gpt5-library": 3,
+            "self": 6
+          },
+          "preparation": "modules",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "rep": "a",
+          "complete": true,
+          "seal_sha256": "614796f13268a9ea8c67f551af49421ee96723cc27cac749f572111f59d10610",
+          "fixed_passed": 8
+        },
+        "replication": {
+          "n": 20,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 2,
+            "human": 20,
+            "gpt5-library": 3,
+            "self": 8
+          },
+          "preparation": "entry",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "rep": "b",
+          "complete": true,
+          "seal_sha256": "249b1f4cc635f0aedfd2fb09915323da58ccd20f99d3af0b77cdc8cc2081d078",
+          "fixed_passed": 7
+        },
+        "source": "studies/webbench/self_build_modules/module_links/result.json",
+        "source_sha256": "b9d1b7e5b4c79e3d9075c34ca15c0277f3f8dd741f5e9131cb64b627e75ffb3f"
+      },
+      "svg-chart": {
+        "first": {
+          "n": 19,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 3,
+            "human": 19,
+            "gpt5-library": 16,
+            "self": 5
+          },
+          "preparation": "modules",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "rep": "a",
+          "complete": true,
+          "seal_sha256": "cf632fca9ae591f69641eb600c228a6701c1bfc73613860e044bd241a33cef99",
+          "fixed_passed": 5
+        },
+        "replication": {
+          "n": 19,
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "passed": {
+            "direct": 3,
+            "human": 19,
+            "gpt5-library": 16,
+            "self": 10
+          },
+          "preparation": "modules",
+          "build_status": "valid",
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "observed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "rep": "b",
+          "complete": true,
+          "seal_sha256": "ab139df585597548f2ab7e3da511f8a42d3198ab23d3369cf1e418c5e1271533",
+          "fixed_passed": 10
+        },
+        "source": "studies/webbench/self_build_modules/module_links/result.json",
+        "source_sha256": "b9d1b7e5b4c79e3d9075c34ca15c0277f3f8dd741f5e9131cb64b627e75ffb3f"
+      }
+    },
+    "component_followup": {
+      "table": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 2,
+          "human": 20,
+          "gpt5-library": 3,
+          "self": 6
+        },
+        "preparation": "modules",
+        "build_status": "valid",
+        "eligible": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "observed": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "rep": "a",
+        "complete": true,
+        "seal_sha256": "614796f13268a9ea8c67f551af49421ee96723cc27cac749f572111f59d10610",
+        "fixed_passed": 8,
+        "markers": {
+          "self": "rebuild",
+          "gpt5-library": "menu"
+        },
+        "build_attempts": {
+          "gpt5-library": "missing"
+        }
+      },
+      "svg-chart": {
+        "n": 19,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 3,
+          "human": 19,
+          "gpt5-library": 16,
+          "self": 9
+        },
+        "preparation": "modules",
+        "build_status": "valid",
+        "eligible": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "observed": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "rep": "a",
+        "complete": true,
+        "seal_sha256": "cf632fca9ae591f69641eb600c228a6701c1bfc73613860e044bd241a33cef99",
+        "fixed_passed": 5,
+        "markers": {
+          "self": "typed"
+        },
+        "build_attempts": {
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/result.json"
+        }
+      }
+    },
+    "extended_targets": {
+      "svg-chart": {
+        "n": 20,
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "passed": {
+          "direct": 3,
+          "human": 20,
+          "gpt5-library": 17,
+          "self": 10
+        },
+        "preparation": "modules",
+        "build_status": "valid",
+        "eligible": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "observed": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "rep": "a",
+        "complete": true,
+        "seal_sha256": "cf632fca9ae591f69641eb600c228a6701c1bfc73613860e044bd241a33cef99",
+        "fixed_passed": 5,
+        "markers": {
+          "self": "typed"
+        },
+        "build_attempts": {
+          "self": "valid"
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/typed_components/result.json"
+        },
+        "original_targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "additional_targets": [
+          13
+        ]
+      }
+    },
+    "table_protocol_followup": {
+      "n": 20,
+      "targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "passed": {
+        "direct": 2,
+        "human": 20,
+        "gpt5-library": 3,
+        "self": 6
+      },
+      "preparation": "modules",
+      "build_status": "valid",
+      "eligible": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "observed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "rep": "a",
+      "complete": true,
+      "seal_sha256": "614796f13268a9ea8c67f551af49421ee96723cc27cac749f572111f59d10610",
+      "fixed_passed": 8,
+      "markers": {
+        "self": "rebuild",
+        "gpt5-library": "profiles"
+      },
+      "build_attempts": {
+        "gpt5-library": "missing"
+      },
+      "excluded_build_arms": [],
+      "implementation_sources": {
+        "gpt5-library": "studies/webbench/table_interactions/result.json"
+      }
+    }
   },
   "google/gemini-2.5-flash": {
     "current": {},
@@ -1454,5 +9382,253 @@
     "supplied": {},
     "sources": {},
     "retrospective": {}
+  },
+  "google/gemma-3-4b-it": {
+    "current": {},
+    "supplied": {},
+    "sources": {},
+    "retrospective": {},
+    "component_followup": {
+      "todomvc": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "passed": {
+          "direct": 2,
+          "human": 0,
+          "gpt5-library": 0,
+          "self": 1
+        },
+        "build_attempts": {
+          "self": "valid"
+        },
+        "markers": {
+          "self": "events"
+        }
+      }
+    },
+    "library_capabilities": {
+      "todomvc": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "passed": {
+          "direct": 2,
+          "human": 0,
+          "gpt5-library": 0,
+          "self": 1
+        },
+        "build_attempts": {
+          "self": "valid"
+        },
+        "markers": {
+          "self": "events"
+        },
+        "excluded_build_arms": [],
+        "implementation_sources": {
+          "self": "studies/public_library_transfer/compact_todomvc/numbered_plans/result.json"
+        }
+      }
+    },
+    "source_diagnosis": {
+      "todomvc": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "passed": {
+          "direct": 2,
+          "human": 2,
+          "gpt5-library": 6,
+          "self": 1
+        },
+        "markers": {
+          "self": "self-sequences",
+          "human": "source-plans",
+          "gpt5-library": "source-plans"
+        },
+        "excluded_build_arms": [],
+        "source": "studies/results/library-source-diagnosis-20261126.json"
+      }
+    }
+  },
+  "meta-llama/llama-3.2-3b-instruct": {
+    "current": {},
+    "supplied": {},
+    "sources": {},
+    "retrospective": {},
+    "component_followup": {
+      "todomvc": {
+        "n": 7,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-07",
+          "todo-08"
+        ],
+        "passed": {
+          "direct": 0,
+          "human": 0,
+          "gpt5-library": 0
+        },
+        "build_attempts": {
+          "self": "missing"
+        },
+        "markers": {}
+      }
+    },
+    "library_capabilities": {
+      "todomvc": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "passed": {
+          "direct": 0,
+          "human": 1,
+          "gpt5-library": 8,
+          "self": 1
+        },
+        "implementation_sources": {
+          "direct": "studies/public_library_transfer/compact_todomvc/numbered_plans/result.json",
+          "human": "studies/public_library_transfer/compact_todomvc/slot_choices/last-result.json",
+          "gpt5-library": "studies/public_library_transfer/compact_todomvc/slot_choices/last-result.json",
+          "self": "studies/public_library_transfer/compact_todomvc/slot_choices/last-result.json"
+        },
+        "markers": {
+          "human": "menu",
+          "gpt5-library": "menu",
+          "self": "menu"
+        },
+        "build_attempts": {
+          "self": "valid"
+        }
+      }
+    }
+  },
+  "mistralai/ministral-3b-2512": {
+    "current": {},
+    "supplied": {},
+    "sources": {},
+    "retrospective": {},
+    "component_followup": {
+      "todomvc": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "passed": {
+          "direct": 2,
+          "human": 2,
+          "gpt5-library": 1,
+          "self": 1
+        },
+        "build_attempts": {
+          "self": "valid"
+        },
+        "markers": {
+          "self": "events"
+        }
+      }
+    },
+    "library_capabilities": {
+      "todomvc": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "passed": {
+          "direct": 2,
+          "human": 2,
+          "gpt5-library": 1,
+          "self": 1
+        },
+        "build_attempts": {
+          "self": "valid"
+        },
+        "markers": {
+          "self": "events"
+        },
+        "excluded_build_arms": [],
+        "implementation_sources": {
+          "self": "studies/public_library_transfer/compact_todomvc/numbered_plans/result.json"
+        }
+      }
+    },
+    "source_diagnosis": {
+      "todomvc": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "passed": {
+          "direct": 2,
+          "human": 1,
+          "gpt5-library": 7,
+          "self": 2
+        },
+        "markers": {
+          "self": "self-sequences",
+          "human": "source-plans",
+          "gpt5-library": "source-plans"
+        },
+        "excluded_build_arms": [],
+        "source": "studies/results/library-source-diagnosis-20261126.json"
+      }
+    }
   }
 }

@@ -1,0 +1,1608 @@
+{
+  "registration": "d5f0f5a945fbc03fa65d9212eb88e2fa685ae17ead5a3d8fa49cee80bee76f89",
+  "seal": "57ccb7c7719c90f283672d4f85d0c1771538bc7aaeee10f057c43b2ab95dd76b",
+  "source_revision": "fbda49ea521d9ddd22d2425d01237e17e3d6831c",
+  "parquet_sha256": "e4470287edb0e5857e1ed9ac078301c59731d2cd0b9daa57c9108d6035b0fcac",
+  "choices": {
+    "blogging": {
+      "addAltTextToImage": null,
+      "addCanonicalUrl": {
+        "pair": "addCanonicalUrl_retrievePostsByCategory",
+        "sha256": "13e01b29256b83c5fa36f2724a9d26448bd9d689b8c4d20753c139dc5b1e20b8"
+      },
+      "addComment": {
+        "pair": "addComment_retrieveAllBlogPosts",
+        "sha256": "f6b3017a85a15ced6b216055bf64fc3e24c1f6211642b424c5a6d9d5cc7591aa"
+      },
+      "assignPostToCategory": {
+        "pair": "assignPostToCategory_publishBlogPost",
+        "sha256": "4cded377dc59489d1b24a6fce960e011248e7796aa1800e09468bf060bfcf09c"
+      },
+      "editComment": {
+        "pair": "approveRejectComments_editComment",
+        "sha256": "4e7eab018221c6b229d376dfb144071b7629468ebaa27836f092435aa750bf0e"
+      },
+      "editTag": {
+        "pair": "createCategory_editTag",
+        "sha256": "9b6f3f4282e7f94d7cbf74753c985a7a16bbfff259515589684fb832226e7477"
+      },
+      "postPerformanceReport": null
+    },
+    "taskmanagement": {
+      "addCommentToTask": null,
+      "approveOrRejectTaskReview": null,
+      "assignTaskToProject": {
+        "pair": "assignTaskToProject_reopenTask",
+        "sha256": "0f5f633c7ff18a84c4bfbf7a5a872e885949f3570837593174b7d60ceecfaf91"
+      },
+      "assignTaskToUser": {
+        "pair": "assignTaskToUser_taskSortPriority",
+        "sha256": "3a32f1fc8f71700f51f1f03d46524de6417685c7ae66196a0a24724c973685ca"
+      },
+      "compareTime": {
+        "pair": "compareTime_projectBudgetSetup",
+        "sha256": "9746054337b6faeed7be62baaf8acdde0ddc4972895c6eeeaf847deb9d0f5028"
+      },
+      "projectCustomWorkflows": {
+        "pair": "changeTaskDeadline_projectCustomWorkflows",
+        "sha256": "6054b4a24b4f413ccb1ae58f484437bb3a6ce61609bd26240ccc90d4940920e1"
+      },
+      "setTaskDeadline": {
+        "pair": "attachFileToTask_setTaskDeadline",
+        "sha256": "acbf0ff40b288125244f6a7fb7fb6df921903015cdb871553042dfa33f5f3989"
+      },
+      "setTaskPriority": {
+        "pair": "setTaskPriority_taskFilterStatus",
+        "sha256": "5d640d7bc1ff039b2ff15ad58af6e76a37bdb985e72eb809141d6c612f00a8f8"
+      }
+    }
+  },
+  "libraries": {
+    "blogging": {
+      "status": "valid",
+      "owners": {
+        "addCanonicalUrl": "addCanonicalUrl_retrievePostsByCategory",
+        "addComment": "addComment_retrieveAllBlogPosts",
+        "assignPostToCategory": "assignPostToCategory_publishBlogPost",
+        "editComment": "approveRejectComments_editComment",
+        "editTag": "createCategory_editTag"
+      },
+      "singles": {
+        "addCanonicalUrl": {
+          "passed": true,
+          "report_sha256": "544199c00daae15a2d3d945b8a3abc7fcc2f4c38b555a98cb11d753edc24ff95",
+          "source_sha256": "13e01b29256b83c5fa36f2724a9d26448bd9d689b8c4d20753c139dc5b1e20b8",
+          "test_sha256": "18b9cf4abfedd5d002960da21ebbd201c19c255b29ec160e1f0a0c747385df65"
+        },
+        "addComment": {
+          "passed": true,
+          "report_sha256": "71cff3f50faa049144ed5df8b132c7ecaceeed625e6c78d3b190c60276506996",
+          "source_sha256": "f6b3017a85a15ced6b216055bf64fc3e24c1f6211642b424c5a6d9d5cc7591aa",
+          "test_sha256": "d7c26368f0bc0185a8981b904ccc4c3131ab7dc7cac083adb960636d30826645"
+        },
+        "assignPostToCategory": {
+          "passed": true,
+          "report_sha256": "c75c921d8821c135a7c5882ef3b437fcac796d29722695b66379a334365542bc",
+          "source_sha256": "4cded377dc59489d1b24a6fce960e011248e7796aa1800e09468bf060bfcf09c",
+          "test_sha256": "980c512ed8ab0a9a38a8fbe701edbd3f21fdadb38f90a7de64fe9937ae518fd5"
+        },
+        "editComment": {
+          "passed": true,
+          "report_sha256": "329a4cb0cd7c36bd23a903ba4268d1a6fff2d0dfe074e0e0f68eca451c0fe709",
+          "source_sha256": "4e7eab018221c6b229d376dfb144071b7629468ebaa27836f092435aa750bf0e",
+          "test_sha256": "e34d853e100c07f455023f34ac9befb7c6af32da1ee47819dd89562754f2a963"
+        },
+        "editTag": {
+          "passed": true,
+          "report_sha256": "5471d3849a0a14496e067f6c8ec38c4d37f2182272b56571a7eed3f4811295ca",
+          "source_sha256": "9b6f3f4282e7f94d7cbf74753c985a7a16bbfff259515589684fb832226e7477",
+          "test_sha256": "515d1efc6045b86f89914b5b6aa6099a26950141c0e66c7feefa26f49a86aa32"
+        }
+      }
+    },
+    "taskmanagement": {
+      "status": "valid",
+      "owners": {
+        "assignTaskToProject": "assignTaskToProject_reopenTask",
+        "assignTaskToUser": "assignTaskToUser_taskSortPriority",
+        "compareTime": "compareTime_projectBudgetSetup",
+        "projectCustomWorkflows": "changeTaskDeadline_projectCustomWorkflows",
+        "setTaskDeadline": "attachFileToTask_setTaskDeadline",
+        "setTaskPriority": "setTaskPriority_taskFilterStatus"
+      },
+      "singles": {
+        "assignTaskToProject": {
+          "passed": true,
+          "report_sha256": "0b22b08bdae3665ecd4ad95507af9a64821fcab761cff431b2c2f250ed07b202",
+          "source_sha256": "0f5f633c7ff18a84c4bfbf7a5a872e885949f3570837593174b7d60ceecfaf91",
+          "test_sha256": "e24aa6e9dd5d0bef1ec598bebc375528c88fa95b044bf42a402b70b1130b5c5a"
+        },
+        "assignTaskToUser": {
+          "passed": true,
+          "report_sha256": "de7bcbf23a8c164e0ddbd2dc86472db86b4b6eec6ab67740ccc43725fa32818d",
+          "source_sha256": "3a32f1fc8f71700f51f1f03d46524de6417685c7ae66196a0a24724c973685ca",
+          "test_sha256": "14072e74b661393446ffb4202b0947d0cc9e42636d947fcd4dc902ce5401504d"
+        },
+        "compareTime": {
+          "passed": true,
+          "report_sha256": "1f8805caf0c973230b2cc29fedd18520319bad95efaf3ecf98569c9f6e3845d9",
+          "source_sha256": "9746054337b6faeed7be62baaf8acdde0ddc4972895c6eeeaf847deb9d0f5028",
+          "test_sha256": "6dc25359c6214e6ec2fce3aa7ee1190eaa96d51ecb3659bcdbba05b32de93e3b"
+        },
+        "projectCustomWorkflows": {
+          "passed": true,
+          "report_sha256": "33ba59aedd17d34603dd4ec201192e131b37b9fc72ae625c85e5c9a614647d0f",
+          "source_sha256": "6054b4a24b4f413ccb1ae58f484437bb3a6ce61609bd26240ccc90d4940920e1",
+          "test_sha256": "47262a7c7cc99d42995dc41e4a849a3579df395a4c54af5ffb793999999236ea"
+        },
+        "setTaskDeadline": {
+          "passed": true,
+          "report_sha256": "a39fbd8af285e77f110aaaf2539ebabb3f68fcec4a2027185ee929ba2be4b74a",
+          "source_sha256": "acbf0ff40b288125244f6a7fb7fb6df921903015cdb871553042dfa33f5f3989",
+          "test_sha256": "479b53f5249ff4da31f84f59a5b827e25cc33cefadedc239f58503b820329a78"
+        },
+        "setTaskPriority": {
+          "passed": true,
+          "report_sha256": "2e702551a4496f1fe4f9461dbd8dc383d570fd100ade894d6061b65bb20b6338",
+          "source_sha256": "5d640d7bc1ff039b2ff15ad58af6e76a37bdb985e72eb809141d6c612f00a8f8",
+          "test_sha256": "036ec3a87407b8571b9883d1190654509a70b33396a1642b7ed8a9322a5a0722"
+        }
+      }
+    }
+  },
+  "models": {
+    "deepseek/deepseek-v4-flash": [
+      {
+        "task": "addAltTextToImage_postPerformanceReport",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "a7ced63f82e40514d1a3b63bde2acf1d2857bcb372b6aaf03c5fac5fea7d4e20",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addAltTextToImage_postPerformanceReport",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b36467b0462380592fe7b3417cb5ac7481eac211c26704c4724049733cb6a600",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addAltTextToImage_postPerformanceReport",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "a7ced63f82e40514d1a3b63bde2acf1d2857bcb372b6aaf03c5fac5fea7d4e20",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addCanonicalUrl_addComment",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "38545116d3debeeec3e5d6e99bdb30fb198ec5ec8f74d511e5c3a1fd5eb7c647",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_addComment",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "38545116d3debeeec3e5d6e99bdb30fb198ec5ec8f74d511e5c3a1fd5eb7c647",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_addComment",
+        "arm": "planned",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "38545116d3debeeec3e5d6e99bdb30fb198ec5ec8f74d511e5c3a1fd5eb7c647",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_assignPostToCategory",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e9be4025e887fcd1fc4a1a56f4128249896cb9e16d8910cfdd3dbe5b50dc482c",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_assignPostToCategory",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "671239568d9466423dd0e8ac2f9fc9d11694857cd22a828d3ee9655a0371e9fd",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_assignPostToCategory",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "671239568d9466423dd0e8ac2f9fc9d11694857cd22a828d3ee9655a0371e9fd",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_editComment",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "31fd4f67ad482c2fb2fc578262dd3de036fad0686cbfc981fbf36c62510f26d8",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_editComment",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "0f78cd921a964ae8a01b88e379727e14e2d2ac11d2ec30b54d56554385628132",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_editComment",
+        "arm": "planned",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "0f78cd921a964ae8a01b88e379727e14e2d2ac11d2ec30b54d56554385628132",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_editTag",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "33aa2e8a00bc70f188cde1d2a8d1a3aa605f332ad48e89348798a9df28e43414",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_editTag",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "b24d5f73f097bc6a916b255e9886621c8b070eb458070143986ba5d822e87454",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_editTag",
+        "arm": "planned",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "b24d5f73f097bc6a916b255e9886621c8b070eb458070143986ba5d822e87454",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCommentToTask_setTaskDeadline",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "1c6d5531b5fa2d0f244101d248b144b54e8f110b4c6ca8ff01b46ba897c00e23",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addCommentToTask_setTaskDeadline",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "dbacbba263c402e54824ce5c0537c1dae549c31a26020954d2a64445f71cf3e1",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCommentToTask_setTaskDeadline",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "dbacbba263c402e54824ce5c0537c1dae549c31a26020954d2a64445f71cf3e1",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_compareTime",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "c6d5ce429a0f27bfaa4fe3c9d08d6d29ab17a220b26d6f6423ea8e3da1a74759",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_compareTime",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "41e4e7fb94ed55b6e6bf3b11f2f4c9194235a460bc8889cf26ad89244c63013f",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_compareTime",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "41e4e7fb94ed55b6e6bf3b11f2f4c9194235a460bc8889cf26ad89244c63013f",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "cadda68ec78da5c9637e8eeef2932ab6bdc4257a32ffee6d13e971f50e770f8a",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "ba3fbb43a6e3a8a14e4bc7ca4f27a3fe84be5aaeb82eaeb1a7b46eb8e7aa9ad6",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "ba3fbb43a6e3a8a14e4bc7ca4f27a3fe84be5aaeb82eaeb1a7b46eb8e7aa9ad6",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_setTaskPriority",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "4ff73b781a96418436b1e12f01b0fca974efa240445917f8e9fce835e7c9ff0f",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_setTaskPriority",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "89df3727671f23487acaf9d7aee8206146822b86670413c455661403aa941f88",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_setTaskPriority",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "89df3727671f23487acaf9d7aee8206146822b86670413c455661403aa941f88",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "assignTaskToProject_assignTaskToUser",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c12e1c2fc6a8c26cb4d82fd79316710b543d8de66dc828fae6d91d8c197feeea",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "assignTaskToProject_assignTaskToUser",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c12e1c2fc6a8c26cb4d82fd79316710b543d8de66dc828fae6d91d8c197feeea",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "assignTaskToProject_assignTaskToUser",
+        "arm": "planned",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c12e1c2fc6a8c26cb4d82fd79316710b543d8de66dc828fae6d91d8c197feeea",
+        "official_cases_passed": 4
+      }
+    ],
+    "google/gemma-3-12b-it": [
+      {
+        "task": "addAltTextToImage_postPerformanceReport",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "a7ced63f82e40514d1a3b63bde2acf1d2857bcb372b6aaf03c5fac5fea7d4e20",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addAltTextToImage_postPerformanceReport",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b36467b0462380592fe7b3417cb5ac7481eac211c26704c4724049733cb6a600",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addAltTextToImage_postPerformanceReport",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "12b78b8a172720b07df4bfebc324d1898304eff2a1c0ac5adeb872aea2a060a3",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addCanonicalUrl_addComment",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "38545116d3debeeec3e5d6e99bdb30fb198ec5ec8f74d511e5c3a1fd5eb7c647",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_addComment",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "38545116d3debeeec3e5d6e99bdb30fb198ec5ec8f74d511e5c3a1fd5eb7c647",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_addComment",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "23728da24c0bf91813629595d1c2827f2b0573e3274e66d7fe91a8f4f72a3c77",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_assignPostToCategory",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e9be4025e887fcd1fc4a1a56f4128249896cb9e16d8910cfdd3dbe5b50dc482c",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_assignPostToCategory",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "671239568d9466423dd0e8ac2f9fc9d11694857cd22a828d3ee9655a0371e9fd",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_assignPostToCategory",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "671239568d9466423dd0e8ac2f9fc9d11694857cd22a828d3ee9655a0371e9fd",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_editComment",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "31fd4f67ad482c2fb2fc578262dd3de036fad0686cbfc981fbf36c62510f26d8",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_editComment",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "0f78cd921a964ae8a01b88e379727e14e2d2ac11d2ec30b54d56554385628132",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_editComment",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "3de56848628f07cef50c86e881f8580c0389dd2b59d6bf38d477eced40bd0923",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_editTag",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "33aa2e8a00bc70f188cde1d2a8d1a3aa605f332ad48e89348798a9df28e43414",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_editTag",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "b24d5f73f097bc6a916b255e9886621c8b070eb458070143986ba5d822e87454",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_editTag",
+        "arm": "planned",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "b24d5f73f097bc6a916b255e9886621c8b070eb458070143986ba5d822e87454",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCommentToTask_setTaskDeadline",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "1c6d5531b5fa2d0f244101d248b144b54e8f110b4c6ca8ff01b46ba897c00e23",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addCommentToTask_setTaskDeadline",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "dbacbba263c402e54824ce5c0537c1dae549c31a26020954d2a64445f71cf3e1",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCommentToTask_setTaskDeadline",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "dbacbba263c402e54824ce5c0537c1dae549c31a26020954d2a64445f71cf3e1",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_compareTime",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "c6d5ce429a0f27bfaa4fe3c9d08d6d29ab17a220b26d6f6423ea8e3da1a74759",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_compareTime",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "41e4e7fb94ed55b6e6bf3b11f2f4c9194235a460bc8889cf26ad89244c63013f",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_compareTime",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "41e4e7fb94ed55b6e6bf3b11f2f4c9194235a460bc8889cf26ad89244c63013f",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "cadda68ec78da5c9637e8eeef2932ab6bdc4257a32ffee6d13e971f50e770f8a",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "ba3fbb43a6e3a8a14e4bc7ca4f27a3fe84be5aaeb82eaeb1a7b46eb8e7aa9ad6",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "ba3fbb43a6e3a8a14e4bc7ca4f27a3fe84be5aaeb82eaeb1a7b46eb8e7aa9ad6",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_setTaskPriority",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "4ff73b781a96418436b1e12f01b0fca974efa240445917f8e9fce835e7c9ff0f",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_setTaskPriority",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "89df3727671f23487acaf9d7aee8206146822b86670413c455661403aa941f88",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_setTaskPriority",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "ee5348218b6acfd63f8ab0b24b3b513c93cb7950160e6c0faf5550c765188be9",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "assignTaskToProject_assignTaskToUser",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c12e1c2fc6a8c26cb4d82fd79316710b543d8de66dc828fae6d91d8c197feeea",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "assignTaskToProject_assignTaskToUser",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c12e1c2fc6a8c26cb4d82fd79316710b543d8de66dc828fae6d91d8c197feeea",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "assignTaskToProject_assignTaskToUser",
+        "arm": "planned",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c12e1c2fc6a8c26cb4d82fd79316710b543d8de66dc828fae6d91d8c197feeea",
+        "official_cases_passed": 4
+      }
+    ],
+    "mistralai/mistral-small-3.2-24b-instruct": [
+      {
+        "task": "addAltTextToImage_postPerformanceReport",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "a7ced63f82e40514d1a3b63bde2acf1d2857bcb372b6aaf03c5fac5fea7d4e20",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addAltTextToImage_postPerformanceReport",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b36467b0462380592fe7b3417cb5ac7481eac211c26704c4724049733cb6a600",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addAltTextToImage_postPerformanceReport",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b36467b0462380592fe7b3417cb5ac7481eac211c26704c4724049733cb6a600",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addCanonicalUrl_addComment",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "38545116d3debeeec3e5d6e99bdb30fb198ec5ec8f74d511e5c3a1fd5eb7c647",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_addComment",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "38545116d3debeeec3e5d6e99bdb30fb198ec5ec8f74d511e5c3a1fd5eb7c647",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_addComment",
+        "arm": "planned",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "38545116d3debeeec3e5d6e99bdb30fb198ec5ec8f74d511e5c3a1fd5eb7c647",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_assignPostToCategory",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e9be4025e887fcd1fc4a1a56f4128249896cb9e16d8910cfdd3dbe5b50dc482c",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_assignPostToCategory",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "671239568d9466423dd0e8ac2f9fc9d11694857cd22a828d3ee9655a0371e9fd",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_assignPostToCategory",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "671239568d9466423dd0e8ac2f9fc9d11694857cd22a828d3ee9655a0371e9fd",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_editComment",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "31fd4f67ad482c2fb2fc578262dd3de036fad0686cbfc981fbf36c62510f26d8",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_editComment",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "0f78cd921a964ae8a01b88e379727e14e2d2ac11d2ec30b54d56554385628132",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_editComment",
+        "arm": "planned",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "0f78cd921a964ae8a01b88e379727e14e2d2ac11d2ec30b54d56554385628132",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_editTag",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "33aa2e8a00bc70f188cde1d2a8d1a3aa605f332ad48e89348798a9df28e43414",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_editTag",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "b24d5f73f097bc6a916b255e9886621c8b070eb458070143986ba5d822e87454",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_editTag",
+        "arm": "planned",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "b24d5f73f097bc6a916b255e9886621c8b070eb458070143986ba5d822e87454",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCommentToTask_setTaskDeadline",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "1c6d5531b5fa2d0f244101d248b144b54e8f110b4c6ca8ff01b46ba897c00e23",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addCommentToTask_setTaskDeadline",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "dbacbba263c402e54824ce5c0537c1dae549c31a26020954d2a64445f71cf3e1",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCommentToTask_setTaskDeadline",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "dbacbba263c402e54824ce5c0537c1dae549c31a26020954d2a64445f71cf3e1",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_compareTime",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "c6d5ce429a0f27bfaa4fe3c9d08d6d29ab17a220b26d6f6423ea8e3da1a74759",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_compareTime",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "41e4e7fb94ed55b6e6bf3b11f2f4c9194235a460bc8889cf26ad89244c63013f",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_compareTime",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "41e4e7fb94ed55b6e6bf3b11f2f4c9194235a460bc8889cf26ad89244c63013f",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "cadda68ec78da5c9637e8eeef2932ab6bdc4257a32ffee6d13e971f50e770f8a",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "ba3fbb43a6e3a8a14e4bc7ca4f27a3fe84be5aaeb82eaeb1a7b46eb8e7aa9ad6",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "ba3fbb43a6e3a8a14e4bc7ca4f27a3fe84be5aaeb82eaeb1a7b46eb8e7aa9ad6",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_setTaskPriority",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "4ff73b781a96418436b1e12f01b0fca974efa240445917f8e9fce835e7c9ff0f",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_setTaskPriority",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "89df3727671f23487acaf9d7aee8206146822b86670413c455661403aa941f88",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_setTaskPriority",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "ee5348218b6acfd63f8ab0b24b3b513c93cb7950160e6c0faf5550c765188be9",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "assignTaskToProject_assignTaskToUser",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c12e1c2fc6a8c26cb4d82fd79316710b543d8de66dc828fae6d91d8c197feeea",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "assignTaskToProject_assignTaskToUser",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c12e1c2fc6a8c26cb4d82fd79316710b543d8de66dc828fae6d91d8c197feeea",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "assignTaskToProject_assignTaskToUser",
+        "arm": "planned",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c12e1c2fc6a8c26cb4d82fd79316710b543d8de66dc828fae6d91d8c197feeea",
+        "official_cases_passed": 4
+      }
+    ],
+    "openai/gpt-oss-120b": [
+      {
+        "task": "addAltTextToImage_postPerformanceReport",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "a7ced63f82e40514d1a3b63bde2acf1d2857bcb372b6aaf03c5fac5fea7d4e20",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addAltTextToImage_postPerformanceReport",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b36467b0462380592fe7b3417cb5ac7481eac211c26704c4724049733cb6a600",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addAltTextToImage_postPerformanceReport",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b36467b0462380592fe7b3417cb5ac7481eac211c26704c4724049733cb6a600",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addCanonicalUrl_addComment",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "38545116d3debeeec3e5d6e99bdb30fb198ec5ec8f74d511e5c3a1fd5eb7c647",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_addComment",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "38545116d3debeeec3e5d6e99bdb30fb198ec5ec8f74d511e5c3a1fd5eb7c647",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_addComment",
+        "arm": "planned",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "38545116d3debeeec3e5d6e99bdb30fb198ec5ec8f74d511e5c3a1fd5eb7c647",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_assignPostToCategory",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e9be4025e887fcd1fc4a1a56f4128249896cb9e16d8910cfdd3dbe5b50dc482c",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_assignPostToCategory",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "671239568d9466423dd0e8ac2f9fc9d11694857cd22a828d3ee9655a0371e9fd",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_assignPostToCategory",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "671239568d9466423dd0e8ac2f9fc9d11694857cd22a828d3ee9655a0371e9fd",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_editComment",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "31fd4f67ad482c2fb2fc578262dd3de036fad0686cbfc981fbf36c62510f26d8",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_editComment",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "0f78cd921a964ae8a01b88e379727e14e2d2ac11d2ec30b54d56554385628132",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_editComment",
+        "arm": "planned",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "0f78cd921a964ae8a01b88e379727e14e2d2ac11d2ec30b54d56554385628132",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_editTag",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "33aa2e8a00bc70f188cde1d2a8d1a3aa605f332ad48e89348798a9df28e43414",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_editTag",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "b24d5f73f097bc6a916b255e9886621c8b070eb458070143986ba5d822e87454",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_editTag",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "066d1b5ce9708c0ee19424046792a62a30408836833c66afe3be47c65a42dd8d",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addCommentToTask_setTaskDeadline",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "1c6d5531b5fa2d0f244101d248b144b54e8f110b4c6ca8ff01b46ba897c00e23",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addCommentToTask_setTaskDeadline",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "dbacbba263c402e54824ce5c0537c1dae549c31a26020954d2a64445f71cf3e1",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCommentToTask_setTaskDeadline",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8d96ed7488de060815062e2309749dc86c04e17c83c74a3a39b2ffa48cc63ed4",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_compareTime",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "c6d5ce429a0f27bfaa4fe3c9d08d6d29ab17a220b26d6f6423ea8e3da1a74759",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_compareTime",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "41e4e7fb94ed55b6e6bf3b11f2f4c9194235a460bc8889cf26ad89244c63013f",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_compareTime",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "07854c9dc6756200446babe390008a47dc708cef7293c52ad14f72a8546ebab6",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "cadda68ec78da5c9637e8eeef2932ab6bdc4257a32ffee6d13e971f50e770f8a",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "ba3fbb43a6e3a8a14e4bc7ca4f27a3fe84be5aaeb82eaeb1a7b46eb8e7aa9ad6",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "68339a0a1870dc7be9c00d4f439e059822a7a3594eb9f0cdb08d7bc8b576c397",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_setTaskPriority",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "4ff73b781a96418436b1e12f01b0fca974efa240445917f8e9fce835e7c9ff0f",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_setTaskPriority",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "89df3727671f23487acaf9d7aee8206146822b86670413c455661403aa941f88",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_setTaskPriority",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "5ed93ac6b5a9c9a6e55e6edc41424177347b2cd487de0ba02da22aeacbcde8f3",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "assignTaskToProject_assignTaskToUser",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c12e1c2fc6a8c26cb4d82fd79316710b543d8de66dc828fae6d91d8c197feeea",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "assignTaskToProject_assignTaskToUser",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c12e1c2fc6a8c26cb4d82fd79316710b543d8de66dc828fae6d91d8c197feeea",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "assignTaskToProject_assignTaskToUser",
+        "arm": "planned",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c12e1c2fc6a8c26cb4d82fd79316710b543d8de66dc828fae6d91d8c197feeea",
+        "official_cases_passed": 4
+      }
+    ],
+    "qwen/qwen3-coder-30b-a3b-instruct": [
+      {
+        "task": "addAltTextToImage_postPerformanceReport",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "a7ced63f82e40514d1a3b63bde2acf1d2857bcb372b6aaf03c5fac5fea7d4e20",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addAltTextToImage_postPerformanceReport",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b36467b0462380592fe7b3417cb5ac7481eac211c26704c4724049733cb6a600",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addAltTextToImage_postPerformanceReport",
+        "arm": "planned",
+        "status": "invalid",
+        "passed": false
+      },
+      {
+        "task": "addCanonicalUrl_addComment",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "38545116d3debeeec3e5d6e99bdb30fb198ec5ec8f74d511e5c3a1fd5eb7c647",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_addComment",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "38545116d3debeeec3e5d6e99bdb30fb198ec5ec8f74d511e5c3a1fd5eb7c647",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_addComment",
+        "arm": "planned",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "38545116d3debeeec3e5d6e99bdb30fb198ec5ec8f74d511e5c3a1fd5eb7c647",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_assignPostToCategory",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e9be4025e887fcd1fc4a1a56f4128249896cb9e16d8910cfdd3dbe5b50dc482c",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_assignPostToCategory",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "671239568d9466423dd0e8ac2f9fc9d11694857cd22a828d3ee9655a0371e9fd",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_assignPostToCategory",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "671239568d9466423dd0e8ac2f9fc9d11694857cd22a828d3ee9655a0371e9fd",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_editComment",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "31fd4f67ad482c2fb2fc578262dd3de036fad0686cbfc981fbf36c62510f26d8",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_editComment",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "0f78cd921a964ae8a01b88e379727e14e2d2ac11d2ec30b54d56554385628132",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_editComment",
+        "arm": "planned",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "0f78cd921a964ae8a01b88e379727e14e2d2ac11d2ec30b54d56554385628132",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_editTag",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "33aa2e8a00bc70f188cde1d2a8d1a3aa605f332ad48e89348798a9df28e43414",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_editTag",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "b24d5f73f097bc6a916b255e9886621c8b070eb458070143986ba5d822e87454",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_editTag",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b92cafca2aff86728000508549141ca2c35893c7ff41427cbb0410dfef44b6e1",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCommentToTask_setTaskDeadline",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "1c6d5531b5fa2d0f244101d248b144b54e8f110b4c6ca8ff01b46ba897c00e23",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addCommentToTask_setTaskDeadline",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "dbacbba263c402e54824ce5c0537c1dae549c31a26020954d2a64445f71cf3e1",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCommentToTask_setTaskDeadline",
+        "arm": "planned",
+        "status": "invalid",
+        "passed": false
+      },
+      {
+        "task": "approveOrRejectTaskReview_compareTime",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "c6d5ce429a0f27bfaa4fe3c9d08d6d29ab17a220b26d6f6423ea8e3da1a74759",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_compareTime",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "41e4e7fb94ed55b6e6bf3b11f2f4c9194235a460bc8889cf26ad89244c63013f",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_compareTime",
+        "arm": "planned",
+        "status": "invalid",
+        "passed": false
+      },
+      {
+        "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "cadda68ec78da5c9637e8eeef2932ab6bdc4257a32ffee6d13e971f50e770f8a",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "ba3fbb43a6e3a8a14e4bc7ca4f27a3fe84be5aaeb82eaeb1a7b46eb8e7aa9ad6",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+        "arm": "planned",
+        "status": "invalid",
+        "passed": false
+      },
+      {
+        "task": "approveOrRejectTaskReview_setTaskPriority",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "4ff73b781a96418436b1e12f01b0fca974efa240445917f8e9fce835e7c9ff0f",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_setTaskPriority",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "89df3727671f23487acaf9d7aee8206146822b86670413c455661403aa941f88",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_setTaskPriority",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "89df3727671f23487acaf9d7aee8206146822b86670413c455661403aa941f88",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "assignTaskToProject_assignTaskToUser",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c12e1c2fc6a8c26cb4d82fd79316710b543d8de66dc828fae6d91d8c197feeea",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "assignTaskToProject_assignTaskToUser",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c12e1c2fc6a8c26cb4d82fd79316710b543d8de66dc828fae6d91d8c197feeea",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "assignTaskToProject_assignTaskToUser",
+        "arm": "planned",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c12e1c2fc6a8c26cb4d82fd79316710b543d8de66dc828fae6d91d8c197feeea",
+        "official_cases_passed": 4
+      }
+    ],
+    "qwen/qwen3.5-9b": [
+      {
+        "task": "addAltTextToImage_postPerformanceReport",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "a7ced63f82e40514d1a3b63bde2acf1d2857bcb372b6aaf03c5fac5fea7d4e20",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addAltTextToImage_postPerformanceReport",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b36467b0462380592fe7b3417cb5ac7481eac211c26704c4724049733cb6a600",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addAltTextToImage_postPerformanceReport",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b36467b0462380592fe7b3417cb5ac7481eac211c26704c4724049733cb6a600",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addCanonicalUrl_addComment",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "38545116d3debeeec3e5d6e99bdb30fb198ec5ec8f74d511e5c3a1fd5eb7c647",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_addComment",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "38545116d3debeeec3e5d6e99bdb30fb198ec5ec8f74d511e5c3a1fd5eb7c647",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_addComment",
+        "arm": "planned",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "38545116d3debeeec3e5d6e99bdb30fb198ec5ec8f74d511e5c3a1fd5eb7c647",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_assignPostToCategory",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e9be4025e887fcd1fc4a1a56f4128249896cb9e16d8910cfdd3dbe5b50dc482c",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_assignPostToCategory",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "671239568d9466423dd0e8ac2f9fc9d11694857cd22a828d3ee9655a0371e9fd",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_assignPostToCategory",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "671239568d9466423dd0e8ac2f9fc9d11694857cd22a828d3ee9655a0371e9fd",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_editComment",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "31fd4f67ad482c2fb2fc578262dd3de036fad0686cbfc981fbf36c62510f26d8",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_editComment",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "0f78cd921a964ae8a01b88e379727e14e2d2ac11d2ec30b54d56554385628132",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_editComment",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "3de56848628f07cef50c86e881f8580c0389dd2b59d6bf38d477eced40bd0923",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_editTag",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "33aa2e8a00bc70f188cde1d2a8d1a3aa605f332ad48e89348798a9df28e43414",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCanonicalUrl_editTag",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "b24d5f73f097bc6a916b255e9886621c8b070eb458070143986ba5d822e87454",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "addCanonicalUrl_editTag",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b92cafca2aff86728000508549141ca2c35893c7ff41427cbb0410dfef44b6e1",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCommentToTask_setTaskDeadline",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "1c6d5531b5fa2d0f244101d248b144b54e8f110b4c6ca8ff01b46ba897c00e23",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "addCommentToTask_setTaskDeadline",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "dbacbba263c402e54824ce5c0537c1dae549c31a26020954d2a64445f71cf3e1",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "addCommentToTask_setTaskDeadline",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "dbacbba263c402e54824ce5c0537c1dae549c31a26020954d2a64445f71cf3e1",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_compareTime",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "c6d5ce429a0f27bfaa4fe3c9d08d6d29ab17a220b26d6f6423ea8e3da1a74759",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_compareTime",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "41e4e7fb94ed55b6e6bf3b11f2f4c9194235a460bc8889cf26ad89244c63013f",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_compareTime",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "41e4e7fb94ed55b6e6bf3b11f2f4c9194235a460bc8889cf26ad89244c63013f",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "cadda68ec78da5c9637e8eeef2932ab6bdc4257a32ffee6d13e971f50e770f8a",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "ba3fbb43a6e3a8a14e4bc7ca4f27a3fe84be5aaeb82eaeb1a7b46eb8e7aa9ad6",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_projectCustomWorkflows",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "ba3fbb43a6e3a8a14e4bc7ca4f27a3fe84be5aaeb82eaeb1a7b46eb8e7aa9ad6",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_setTaskPriority",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "4ff73b781a96418436b1e12f01b0fca974efa240445917f8e9fce835e7c9ff0f",
+        "official_cases_passed": 0
+      },
+      {
+        "task": "approveOrRejectTaskReview_setTaskPriority",
+        "arm": "names",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "89df3727671f23487acaf9d7aee8206146822b86670413c455661403aa941f88",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "approveOrRejectTaskReview_setTaskPriority",
+        "arm": "planned",
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "89df3727671f23487acaf9d7aee8206146822b86670413c455661403aa941f88",
+        "official_cases_passed": 2
+      },
+      {
+        "task": "assignTaskToProject_assignTaskToUser",
+        "arm": "fixed",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c12e1c2fc6a8c26cb4d82fd79316710b543d8de66dc828fae6d91d8c197feeea",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "assignTaskToProject_assignTaskToUser",
+        "arm": "names",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c12e1c2fc6a8c26cb4d82fd79316710b543d8de66dc828fae6d91d8c197feeea",
+        "official_cases_passed": 4
+      },
+      {
+        "task": "assignTaskToProject_assignTaskToUser",
+        "arm": "planned",
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c12e1c2fc6a8c26cb4d82fd79316710b543d8de66dc828fae6d91d8c197feeea",
+        "official_cases_passed": 4
+      }
+    ]
+  },
+  "cost": {
+    "calls": 60,
+    "settled_usd": 0.001015,
+    "exposure_usd": 0.001015,
+    "unsettled_calls": 0,
+    "cap_usd": 1.0,
+    "stop_usd": 1.0,
+    "halted": 0
+  }
+}

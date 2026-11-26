@@ -1,0 +1,379 @@
+{
+  "registration": "31631b1755189b93d7b4a8a9bdf73651d8a0c008a4b0e0e26168e40f156462d7",
+  "cases": [
+    {
+      "tag": "gemma",
+      "model": "google/gemma-3-12b-it",
+      "registration": "31631b1755189b93d7b4a8a9bdf73651d8a0c008a4b0e0e26168e40f156462d7",
+      "parts_sha256": "8f6c535b692e71db92389539e923d7787619e40704fa2c2c683df420278d20d4",
+      "status": "build_failed",
+      "reasons": [
+        "Public module import rejected: Page.evaluate: TypeError: Failed to execute 'addEventListener' on 'EventTarget': parameter 2 is not of type 'Object'.     at install (/common/layout.js:21:9)     at install (/common/layout.js:49:1)     at /index.js:16:1"
+      ],
+      "public": [],
+      "seal_sha256": "c3259dd0cdf1f10c3030d63e5fd51d0535ccad13793931a3e0226648e04524a7",
+      "rows": []
+    },
+    {
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "registration": "31631b1755189b93d7b4a8a9bdf73651d8a0c008a4b0e0e26168e40f156462d7",
+      "parts_sha256": "533394638e0aaf275f89c7ec4cf2684cc403c9d474c76ca53cfd8437d7759c94",
+      "status": "build_failed",
+      "reasons": [
+        "Public actions failed"
+      ],
+      "public": [
+        {
+          "insert_delta": 0,
+          "selected": true,
+          "clicked": true,
+          "shared_functions": {
+            "select": true,
+            "startEdit": true,
+            "stopEdit": true
+          },
+          "visible_menus": 1,
+          "menu_text": [
+            "Select RowSelect ColFilterSort (Z-A)"
+          ],
+          "errors": []
+        },
+        {
+          "insert_delta": 0,
+          "selected": true,
+          "clicked": true,
+          "shared_functions": {
+            "select": true,
+            "startEdit": true,
+            "stopEdit": true
+          },
+          "visible_menus": 1,
+          "menu_text": [
+            "Select RowSelect ColFilterSort (Z-A)"
+          ],
+          "errors": []
+        }
+      ],
+      "seal_sha256": "67adeb9594b6bcdb68bc0fd8ab1110637de500b85a6e6ccaabdf96ec33cecca3",
+      "rows": []
+    },
+    {
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "registration": "31631b1755189b93d7b4a8a9bdf73651d8a0c008a4b0e0e26168e40f156462d7",
+      "parts_sha256": "92b235f46618c62caed7afc9b7e310ebfb45c10e538c1d6795e33008e41b11c5",
+      "status": "valid",
+      "reasons": [],
+      "public": [
+        {
+          "insert_delta": 1,
+          "selected": true,
+          "clicked": true,
+          "shared_functions": {
+            "select": true,
+            "startEdit": true,
+            "stopEdit": true
+          },
+          "visible_menus": 1,
+          "menu_text": [
+            "Insert Row AboveInsert Row BelowDelete RowSelect Row"
+          ],
+          "errors": []
+        }
+      ],
+      "seal_sha256": "0f70b1fbcb352e05223735413139d024cade443e11d5626ae6b1a29114cbfc96",
+      "rows": [
+        {
+          "task": 1,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "d7e74e77b5d16bcc2a1c7ef6227b89e1cdab0a7820d554464bcce5b4915f4fa8"
+        },
+        {
+          "task": 1,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "c0baafd4d1f5d8748edd6fa9fa4ede6e15463e12feef81c21d55a26675f145e0"
+        },
+        {
+          "task": 2,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "d96d4fb2b22d7b2571a20beed2d224fdbf9eccd608711cb4c275c4411dd97ccd"
+        },
+        {
+          "task": 2,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "3b0293d75a1f8eb36f380c8e5e8b3dfa0b7dece254200e7b527882a96e9f1820"
+        },
+        {
+          "task": 3,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "6c9d19eeb926918e48546608d5bcab345523fed4753bbbc517fb3d891ba18faf"
+        },
+        {
+          "task": 3,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a9a4b05bfaeb624960141c8a4c582630ab7f9ea5b1832700be56876e5ccb96eb"
+        },
+        {
+          "task": 4,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "3b0d317722ab3f487225e91a9098092e4145b81a86a10342f0d19cf5804ffbb2"
+        },
+        {
+          "task": 4,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "08bfd9fce745014ea0c1b79a79bacb7ed4152a38a2af6f371b9575a8bc63c5c2"
+        },
+        {
+          "task": 5,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "9914ff9c33b8cf8effb1d25628dcec96f9f2ce439dfcb21f3aa12aade0c2f4c6"
+        },
+        {
+          "task": 5,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ffc69b58f9342de24e6b4ea991c33ab2388df3ad4ad2f32b139779522f9b2ff0"
+        },
+        {
+          "task": 6,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "200dcc3d3962c283a097fa61f517f6f70283be0f51314c29052809228e76ceb2"
+        },
+        {
+          "task": 6,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "87516ac3844ad8e3c6dc50ad7e2ff7766429958b2e832865661a3bc09ad0f348"
+        },
+        {
+          "task": 7,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "703a817c60a6564cdddcdf0935d49e7feae0a6265b8cf6604ffb35969bb94c26"
+        },
+        {
+          "task": 7,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e99c34a8bcb3a11b66f432ba999c07d25551921107e440f818ea251eadda88bd"
+        },
+        {
+          "task": 8,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d65ba2d4bfd0d39b3a86393e3af3c0c3057237a6da8ac1c68cd6c65896cd848c"
+        },
+        {
+          "task": 8,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0349e96ae01c67c882f750b582f24a4813d8eead69626584bc7038301732cbbc"
+        },
+        {
+          "task": 9,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "8c358eb65145ed9729abb54099c5e61c0aba07f7e6f75aedc0e192170094da25"
+        },
+        {
+          "task": 9,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "87e2c53b90f296f64fd6e732fc153b1197333aa7fd148ca9ccd7a24672c7e84b"
+        },
+        {
+          "task": 10,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "1f88872dd014fe859ea2d014a666cc24b375370595ab1b4f5d171be75d3ed569"
+        },
+        {
+          "task": 10,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a5a92f679a030226faf0d837786ed3d1f3bfc2b1ea782327f73ff3142af0204c"
+        },
+        {
+          "task": 11,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "52c064619f46178115ffba76398674db9c1f1ef287a215dc5e5dc0d4a4971702"
+        },
+        {
+          "task": 11,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c0a345f2a5084508104afaf9532a51992a1b91bac2221282198359f5575ee463"
+        },
+        {
+          "task": 12,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "00f3aab95ba4d8121c02ecca0118517dbe946436fc8a3c7481dd16d12059bc05"
+        },
+        {
+          "task": 12,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "f12a4b0a536b521f21143f067d98b2e6e148c2f1540c93c4d9fbf339dd7a4f45"
+        },
+        {
+          "task": 13,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "334e1ca5282ab7a0248922e166c43f02c39ed178399935049f43339aed2ef927"
+        },
+        {
+          "task": 13,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "aba3d9c573375a0606ed47ab7b8779b23f765e7fd7e2cf54f96821abe7b20f51"
+        },
+        {
+          "task": 14,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "6fe9fa69fdceea5b896a40b6db511f023ee20f6d03592dfa4c5be2e1feec18da"
+        },
+        {
+          "task": 14,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "40252f6a7c4a369dc047cde541f6dfc3d506266015d070ce2b2719e0620d9098"
+        },
+        {
+          "task": 15,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c7b1078eeba54fc756202e499cc0379787c68aeddb531460f87d5f572de18cdd"
+        },
+        {
+          "task": 15,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a41bf85642a75303db114a4f75e1f106e423cf4c8d3ce93979cab04ea683bd1e"
+        },
+        {
+          "task": 16,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "8af0af616ff8832b6071cfe894be1ed11e9f84cb1d981fe9c0df2ee9f7f929b1"
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "eb8bd66e0c6162e3c70d689ee28105ec8a8a328760e4f386434d545cc9349a7d"
+        },
+        {
+          "task": 17,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "3cf21ec5d14f41a3c9e9851e19ac328664760e450c9016cdd0cef8c9523c656c"
+        },
+        {
+          "task": 17,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "cc69f19fafdc78e5822695973bdc79f26da56166a131fad84886adcda52ae612"
+        },
+        {
+          "task": 18,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "8cc801ea8c7666cd3465db21c64104e873ef18cde9cdaa2f7c165dc13f902fdd"
+        },
+        {
+          "task": 18,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "86cecbe2e2976fcd62dd66217538473d91c0e85164212a9493eb6315b75614c2"
+        },
+        {
+          "task": 19,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c22dbd6bec07e0219c5e53b13dee1decfa58debef50d2fd77c0086a97425d018"
+        },
+        {
+          "task": 19,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a7dbf6c2a443eba8e9147c68dadf8a03665d5144ea5b048b80b76e87bd6797c5"
+        },
+        {
+          "task": 20,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e5f70606a105cf99613aec0a7350337b81b34e8bc329157582881146f675f07a"
+        },
+        {
+          "task": 20,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "bde78adaebe3c5aade183e3b925e970fa4e009c8f159fc421601594adbf7aa19"
+        }
+      ]
+    }
+  ],
+  "cost": {
+    "calls": 40,
+    "settled_usd": 0.006075,
+    "exposure_usd": 0.006075,
+    "unsettled_calls": 0,
+    "cap_usd": 1.0,
+    "stop_usd": 1.0,
+    "halted": 0
+  }
+}

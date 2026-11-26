@@ -1,0 +1,1163 @@
+{
+  "cost": {
+    "calls": 59,
+    "settled_usd": 0.010599,
+    "exposure_usd": 0.010599,
+    "unsettled_calls": 0,
+    "cap_usd": 0.6,
+    "stop_usd": 0.6,
+    "halted": 0
+  },
+  "registration_sha256": "f97b93df57ac8129d28dca694d0380fe87b4c70866b27b48a6cee2158a127b5a",
+  "cases": [
+    {
+      "project": "svg-chart",
+      "builder": "qwen9",
+      "arm": "self",
+      "public": "artifacts/backbone-matrix-20261124/inputs/svg-chart/public.json",
+      "deploy": {
+        "qwen9": {
+          "model": "qwen/qwen3.5-9b",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": null,
+          "direct": 0
+        }
+      },
+      "status": "valid",
+      "reasons": [
+        {
+          "drawn": {
+            "line": 0,
+            "scatter": 0,
+            "step": 0,
+            "area": 0,
+            "bar": 0,
+            "pie": 0
+          },
+          "mounted": {
+            "line": 0,
+            "scatter": 0,
+            "step": 0,
+            "area": 0,
+            "bar": 0,
+            "pie": 0
+          },
+          "errors": {
+            "TypeError: Cannot read properties of undefined (reading 'width')": "    at new LineChart (/common/LineChart.js:14:31)     at /index.js:14:22",
+            "TypeError: Cannot read properties of undefined (reading 'setAttribute')": "    at new BarChart (/common/BarChart.js:20:14)     at /index.js:14:22",
+            "TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.": "    at /index.js:15:10"
+          }
+        },
+        {
+          "drawn": {
+            "line": 0,
+            "scatter": 0,
+            "step": 34,
+            "area": 0,
+            "bar": 0,
+            "pie": 0
+          },
+          "mounted": {
+            "line": 0,
+            "scatter": 0,
+            "step": 1,
+            "area": 0,
+            "bar": 0,
+            "pie": 0
+          },
+          "errors": {
+            "TypeError: Cannot read properties of null (reading 'split')": "    at /common/StepChart.js:375:49     at NodeList.forEach (<anonymous>)",
+            "TypeError: Cannot read properties of undefined (reading 'length')": "    at /common/AreaChart.js:416:37     at Array.forEach (<anonymous>)"
+          }
+        }
+      ],
+      "rows": [
+        {
+          "tag": "qwen9",
+          "task": 1,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "980107c3f06abd94a65186083765243a6df2c6d13f4d657826f1750e0c15e2fa"
+        },
+        {
+          "tag": "qwen9",
+          "task": 1,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "3cf1d971736f587f922113b942a2ec2549f01e6fba41e9ba5c5b95a869e1c03e"
+        },
+        {
+          "tag": "qwen9",
+          "task": 2,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "382b548a83e1353abd75fd6bed2a8d6e4826fb5a54089c9976209a278c6809f4"
+        },
+        {
+          "tag": "qwen9",
+          "task": 2,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c640389c0e5689950a03ac89bb2d98f59db2ebe39abdba76f85fec114c0ba6e7"
+        },
+        {
+          "tag": "qwen9",
+          "task": 3,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0b08424343cada0944b136432c75c0290c0c47fc3aefe4bd7e2ce0e17e110ecf"
+        },
+        {
+          "tag": "qwen9",
+          "task": 3,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "f12b8562cfba4735a4c1a367472d817d081b07b2a557b725f1d35f9f0347f91f"
+        },
+        {
+          "tag": "qwen9",
+          "task": 4,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "e471a3102ac7646e1b6f9b29478428c73b168f1262f8bc5c540199fe16e0eed9"
+        },
+        {
+          "tag": "qwen9",
+          "task": 4,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "7b03f88c733d53a504c69b26a2938879528f34bbc28c92478856b4d2cde86b6e"
+        },
+        {
+          "tag": "qwen9",
+          "task": 5,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "edff7a27df3091b948c1a174456781e24a3123dd31c3cb5f3e1ba25472ea7576"
+        },
+        {
+          "tag": "qwen9",
+          "task": 5,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "7376c170179d30df58c8ca6c3ac0d16c54a85f80f0d03cc70b671c3e5dbfd141"
+        },
+        {
+          "tag": "qwen9",
+          "task": 6,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "c113cecc89ab39c2e64c2bd6be64fec0be7087e5be5bdd0822aa94c92c8c76a3"
+        },
+        {
+          "tag": "qwen9",
+          "task": 6,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "67c293dab1ad6845371b00f9d71f36e0988616d7a8574bd98f0cea85afa1fdfa"
+        },
+        {
+          "tag": "qwen9",
+          "task": 7,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "b7013cf6168740fbc4901a3d418595af19dc6ee4d6fc296600ade71f86604187"
+        },
+        {
+          "tag": "qwen9",
+          "task": 7,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "b52bfeffdb5da733fc3a0ddfb9ecbab3a52bb97fcb8599751141921948459e4c"
+        },
+        {
+          "tag": "qwen9",
+          "task": 8,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "dd39e3e2a5fde3ce4006cdad65f7668fce3c93ba18503237270999f8972edaaa"
+        },
+        {
+          "tag": "qwen9",
+          "task": 8,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a66a917731ea17e7862f147275ee01a30a5ca5fe8755045655886247c5391463"
+        },
+        {
+          "tag": "qwen9",
+          "task": 9,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "464fa6a6e0cd0341f78e265ae26648baeec5ab07f01038667e2a063968bfe50f"
+        },
+        {
+          "tag": "qwen9",
+          "task": 9,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "af5d8ca039c7ffb32132df4008b4d3f96cfbe86a8e6a3fbc8d3d317cb57452ce"
+        },
+        {
+          "tag": "qwen9",
+          "task": 10,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "db1fbe6ea5e2eea376f40f402d36eb6244ecd9fe301c25bef2c9ed2d8bd4e9c2"
+        },
+        {
+          "tag": "qwen9",
+          "task": 10,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "84d74e38a5e2b342563518c9c792e04a200a412a7c3d2fc9d4404cfe209f9de3"
+        },
+        {
+          "tag": "qwen9",
+          "task": 11,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "dd0871dcf195680abb9cf0d090c25d4afb2dac526eb9e6c15b95c249d3479cd9"
+        },
+        {
+          "tag": "qwen9",
+          "task": 11,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "549ce30edbd4f99a55665f56fa5c0453852cd9a4cbf376f0c61261d4d318acd3"
+        },
+        {
+          "tag": "qwen9",
+          "task": 12,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "64a4bf1ba7add60c37b79f7d01ceb3eb2dd7ec499720c6515a2da644b68afafc"
+        },
+        {
+          "tag": "qwen9",
+          "task": 12,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "19d0003b8e1aa2e4331589cad7c61de8d2789dc781c09ff52967c77631d2af5e"
+        },
+        {
+          "tag": "qwen9",
+          "task": 13,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "7b9f0185fbc0e160a99905e6bf157b30bd3a9013780714966ebe8e0c44f69adc"
+        },
+        {
+          "tag": "qwen9",
+          "task": 13,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "db008a894377308a20f3be1e39d3974a54a9d80137626aa02c1a201fd876b7f4"
+        },
+        {
+          "tag": "qwen9",
+          "task": 14,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "fcf747d237d21843773a46093243b9b63790b436ca74603ff009d1c383a71688"
+        },
+        {
+          "tag": "qwen9",
+          "task": 14,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "7c30252debe0041512f7767306b07b8691ab9ee289d962f08a9ff8ac76ee335f"
+        },
+        {
+          "tag": "qwen9",
+          "task": 15,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "3cd28c990411bafcaa508f017cec5d54949b22ffa6fb9c9021d33d63b15f2522"
+        },
+        {
+          "tag": "qwen9",
+          "task": 15,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "f5bd17660f5b2d8261ec237a5a322d6ae0f80ae353aef6aa071ebda47502e60b"
+        },
+        {
+          "tag": "qwen9",
+          "task": 16,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2459f6a289c3b7f8c6be41c5f00a2c352f113c17d85aab0fd949410569aa6852"
+        },
+        {
+          "tag": "qwen9",
+          "task": 16,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d0cb7f48518a421b0d0f6eef900825d41b1218dfce548d6e4289a29b43d25fa7"
+        },
+        {
+          "tag": "qwen9",
+          "task": 17,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "4b8b3d0bc11c9e5104fa184dd40783927c91344323141af9c0bacef706590e3d"
+        },
+        {
+          "tag": "qwen9",
+          "task": 17,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "deae8f0a6dd6c868bc3c87cd67bfcc2832278b19120ea1d63f4543d6e075cab0"
+        },
+        {
+          "tag": "qwen9",
+          "task": 18,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2acc8d27d6102dfeb7ca9c1b210a0e2b1ea76f5a179f0c4d2bcd5e7c7693010d"
+        },
+        {
+          "tag": "qwen9",
+          "task": 18,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "663072b9cb911ff2bf0b4780fb76b92112f806be317fd6353c38ea6e96ea8230"
+        },
+        {
+          "tag": "qwen9",
+          "task": 19,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "08ab7ccb14dd305428e1bd526afaee2b2a386791287db40f5c4cb66525c3283e"
+        },
+        {
+          "tag": "qwen9",
+          "task": 19,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "49d9a1b8b2ab97b9c53de0626d2c7b77bb6838cfc70c2f52e7109d91496a9903"
+        },
+        {
+          "tag": "qwen9",
+          "task": 20,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "fdd2ae74b5c23cd1768c7adb4635e828bc3b1ab2fd9fd5e959dd9699602ff959"
+        },
+        {
+          "tag": "qwen9",
+          "task": 20,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "bcec338e6fb0f2d97ffc5353468435b2420c8b6a894cbd4be4f8ee8a415ce363"
+        }
+      ],
+      "seal_sha256": "7877c669b0cabf548f1ea550ea4c9865170dc5d2a58c84e40bcba16da9719fc0"
+    },
+    {
+      "project": "svg-chart",
+      "builder": "oss",
+      "arm": "self",
+      "public": "artifacts/backbone-matrix-20261124/inputs/svg-chart/public.json",
+      "deploy": {
+        "oss": {
+          "model": "openai/gpt-oss-120b",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": null,
+          "direct": 2
+        }
+      },
+      "status": "valid",
+      "reasons": [
+        {
+          "drawn": {
+            "line": 27,
+            "scatter": 3,
+            "step": 3,
+            "area": 6,
+            "bar": 28,
+            "pie": 10
+          },
+          "mounted": {
+            "line": 9,
+            "scatter": 1,
+            "step": 1,
+            "area": 1,
+            "bar": 1,
+            "pie": 1
+          },
+          "errors": {}
+        }
+      ],
+      "rows": [
+        {
+          "tag": "oss",
+          "task": 1,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "86ab51f62dd9e3959693f362b3c888296de4bd234126e7643ee730c2e582f87e"
+        },
+        {
+          "tag": "oss",
+          "task": 1,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "86ab51f62dd9e3959693f362b3c888296de4bd234126e7643ee730c2e582f87e"
+        },
+        {
+          "tag": "oss",
+          "task": 2,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "e7df3ba67ad24def7467ff723e66617b1c9debe099d30765cb84a728030202c2"
+        },
+        {
+          "tag": "oss",
+          "task": 2,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "e7df3ba67ad24def7467ff723e66617b1c9debe099d30765cb84a728030202c2"
+        },
+        {
+          "tag": "oss",
+          "task": 3,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "dfaac87fabc9a45632b6474dd19394bd074ca2a00bf7e93131509453ec38cfcd"
+        },
+        {
+          "tag": "oss",
+          "task": 3,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "dfaac87fabc9a45632b6474dd19394bd074ca2a00bf7e93131509453ec38cfcd"
+        },
+        {
+          "tag": "oss",
+          "task": 4,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "f6b7cc05aaf0945d38fd6fcadaeeb4ecc9541a7308abce088d6be805c3e13a90"
+        },
+        {
+          "tag": "oss",
+          "task": 4,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "f6b7cc05aaf0945d38fd6fcadaeeb4ecc9541a7308abce088d6be805c3e13a90"
+        },
+        {
+          "tag": "oss",
+          "task": 5,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "67169f5ac67798186cb6c35fd8343d83ffc9f13aef6bf162742baf061ee97416"
+        },
+        {
+          "tag": "oss",
+          "task": 5,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "67169f5ac67798186cb6c35fd8343d83ffc9f13aef6bf162742baf061ee97416"
+        },
+        {
+          "tag": "oss",
+          "task": 6,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "aa0439af50608586a01df4b4fa4aff60ea5495aba888a566b3c12484f5584394"
+        },
+        {
+          "tag": "oss",
+          "task": 6,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "aa0439af50608586a01df4b4fa4aff60ea5495aba888a566b3c12484f5584394"
+        },
+        {
+          "tag": "oss",
+          "task": 7,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "87e4366419445528af5d23cf2605293ce7b9984d3dacdb12ab2357211006d40f"
+        },
+        {
+          "tag": "oss",
+          "task": 7,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "87e4366419445528af5d23cf2605293ce7b9984d3dacdb12ab2357211006d40f"
+        },
+        {
+          "tag": "oss",
+          "task": 8,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ee06fb8715f340f4af4327f5420eb7c8f47477fd812d96ac974a53598a51737c"
+        },
+        {
+          "tag": "oss",
+          "task": 8,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ee06fb8715f340f4af4327f5420eb7c8f47477fd812d96ac974a53598a51737c"
+        },
+        {
+          "tag": "oss",
+          "task": 9,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "524e508cdf27ccdf9f0fef58752cf72bfe4e4250bc4774bc970b59061fd6a640"
+        },
+        {
+          "tag": "oss",
+          "task": 9,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "524e508cdf27ccdf9f0fef58752cf72bfe4e4250bc4774bc970b59061fd6a640"
+        },
+        {
+          "tag": "oss",
+          "task": 10,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "6001fb5a3e71510a16ff7ebd9a095007bc0fd65969d68f1a8e72d13b5b7cc736"
+        },
+        {
+          "tag": "oss",
+          "task": 10,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "6001fb5a3e71510a16ff7ebd9a095007bc0fd65969d68f1a8e72d13b5b7cc736"
+        },
+        {
+          "tag": "oss",
+          "task": 11,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e658d04d59267c45bc7cc86d1d7fe27b970fec7d373211a279262931a0e3f65b"
+        },
+        {
+          "tag": "oss",
+          "task": 11,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e658d04d59267c45bc7cc86d1d7fe27b970fec7d373211a279262931a0e3f65b"
+        },
+        {
+          "tag": "oss",
+          "task": 12,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "5c985f522927d8f871430972463b8e0d681b217f274ead51a5d4c3993b37e146"
+        },
+        {
+          "tag": "oss",
+          "task": 12,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "5c985f522927d8f871430972463b8e0d681b217f274ead51a5d4c3993b37e146"
+        },
+        {
+          "tag": "oss",
+          "task": 13,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "359922d2c0c7d30420a0b7c76bc61cd31f8eac04f553d5e9de66bd0aa371a8a6"
+        },
+        {
+          "tag": "oss",
+          "task": 13,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "359922d2c0c7d30420a0b7c76bc61cd31f8eac04f553d5e9de66bd0aa371a8a6"
+        },
+        {
+          "tag": "oss",
+          "task": 14,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "7fc6ba4b9acaf212877f6838f19b25654232f8c8f12dfa7dff1b1307c090a8ca"
+        },
+        {
+          "tag": "oss",
+          "task": 14,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "7fc6ba4b9acaf212877f6838f19b25654232f8c8f12dfa7dff1b1307c090a8ca"
+        },
+        {
+          "tag": "oss",
+          "task": 15,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e1a7c18bf25e2a3a4d8e9b157c3d689d58e464a1f073533e7a19461c6f827c22"
+        },
+        {
+          "tag": "oss",
+          "task": 15,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e1a7c18bf25e2a3a4d8e9b157c3d689d58e464a1f073533e7a19461c6f827c22"
+        },
+        {
+          "tag": "oss",
+          "task": 16,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a86d2248676d9a7fc9e04647ffb874dfe212b826b49ca00bdbcfb7d5538e7d0b"
+        },
+        {
+          "tag": "oss",
+          "task": 16,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a86d2248676d9a7fc9e04647ffb874dfe212b826b49ca00bdbcfb7d5538e7d0b"
+        },
+        {
+          "tag": "oss",
+          "task": 17,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "5cd411eceecfc31439cc58845f0c98cb784b114f530739cad6ec3da60b572b8d"
+        },
+        {
+          "tag": "oss",
+          "task": 17,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "5cd411eceecfc31439cc58845f0c98cb784b114f530739cad6ec3da60b572b8d"
+        },
+        {
+          "tag": "oss",
+          "task": 18,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a93b2a0ee3163d0044664785051d51d83bc73bc9baeea390bc3d6911ae6631fa"
+        },
+        {
+          "tag": "oss",
+          "task": 18,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a93b2a0ee3163d0044664785051d51d83bc73bc9baeea390bc3d6911ae6631fa"
+        },
+        {
+          "tag": "oss",
+          "task": 19,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "4670c7b274e6ad6139b520e3b9fa62f5e20e749f79c91b2e4a3ff1f4f0894580"
+        },
+        {
+          "tag": "oss",
+          "task": 19,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "4670c7b274e6ad6139b520e3b9fa62f5e20e749f79c91b2e4a3ff1f4f0894580"
+        },
+        {
+          "tag": "oss",
+          "task": 20,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "a778cd1b57e78f4a2a76bf2c9ae55eb4ce19f4aa216eff67711a51d0df991d4c"
+        },
+        {
+          "tag": "oss",
+          "task": 20,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "a778cd1b57e78f4a2a76bf2c9ae55eb4ce19f4aa216eff67711a51d0df991d4c"
+        }
+      ],
+      "seal_sha256": "895b18cc9bc39d20bd8ed5d73d23482e41830ca81acfc940a197830d571e435d"
+    },
+    {
+      "project": "svg-chart",
+      "builder": "mistral",
+      "arm": "self",
+      "public": "artifacts/backbone-matrix-20261124/inputs/svg-chart/public.json",
+      "deploy": {
+        "mistral": {
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": null,
+          "direct": 3
+        }
+      },
+      "status": "valid",
+      "reasons": [
+        {
+          "drawn": {
+            "line": 203,
+            "scatter": 34,
+            "step": 34,
+            "area": 37,
+            "bar": 21,
+            "pie": 10
+          },
+          "mounted": {
+            "line": 9,
+            "scatter": 1,
+            "step": 1,
+            "area": 1,
+            "bar": 1,
+            "pie": 1
+          },
+          "errors": {}
+        }
+      ],
+      "rows": [
+        {
+          "tag": "mistral",
+          "task": 1,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "53fdf379b9efae317b41755d7cfd1f4e4e6b5b2602de792a9fa91927f1dc1ae2"
+        },
+        {
+          "tag": "mistral",
+          "task": 1,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "5ce87c8a319321e3836efcce6bce8dc820cb5da71371b908d7099c6ec49bd007"
+        },
+        {
+          "tag": "mistral",
+          "task": 2,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "ce5ad30ab9d271bf76bd4154c75e11ca79b8db297a8601a6731a8a5e490f37d9"
+        },
+        {
+          "tag": "mistral",
+          "task": 2,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "8ba9f143a052a592fb164fd9e59b7c9ab58773c6b68a5f90733d281418510b91"
+        },
+        {
+          "tag": "mistral",
+          "task": 3,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "4fca7686e1bc6a3c9b5f09cb47882fb22ea56710f480c0960898ab24b940a2e4"
+        },
+        {
+          "tag": "mistral",
+          "task": 3,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "11574b90fa6276072fe3d8d03c7a188bab620da3efce8da31f19626225a9cd92"
+        },
+        {
+          "tag": "mistral",
+          "task": 4,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "51c482a34ea97bc9b8b13a321b741b1809c5fc5f281b10615989c806e2f2dcc0"
+        },
+        {
+          "tag": "mistral",
+          "task": 4,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "e8a12e97f8bf76de47a4c509456420cb3f7773292519c7078d373f11635eb4fb"
+        },
+        {
+          "tag": "mistral",
+          "task": 5,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "7f45c5c37ce1b72fc499dd00472a0f362a8f0a1f26f132d16b645b16123a9422"
+        },
+        {
+          "tag": "mistral",
+          "task": 5,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "804d82ae7e6eada23b239b455912463e8b2261b2ed188949564b2c5c87abaaf0"
+        },
+        {
+          "tag": "mistral",
+          "task": 6,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "70debea3c54c101d95b4dc6c5a43e4bf245a53583047f1bb48950780d30f79a5"
+        },
+        {
+          "tag": "mistral",
+          "task": 6,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "5dc46d74741c6f75eac82b3a457825d7c09fd514fbdd769b214d12b6a6ee1ffa"
+        },
+        {
+          "tag": "mistral",
+          "task": 7,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a1afef67fdab1ea2eb1378e0a8c792799f19c5f305203766b04ceac4dccb00e7"
+        },
+        {
+          "tag": "mistral",
+          "task": 7,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "8d5b9c7ca0b3b80af7e497b04ff70ecf95570ceaaa5f5ccca387e6f34cfc7a2e"
+        },
+        {
+          "tag": "mistral",
+          "task": 8,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "688b16918f076b409468293542a7b7ba7fda9f94d146c416d8e7e383f0e046a1"
+        },
+        {
+          "tag": "mistral",
+          "task": 8,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "507a0ab1390653b639f8161b8dfef82e1840542bb0d8355ba31b88e69a1fdf27"
+        },
+        {
+          "tag": "mistral",
+          "task": 9,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2a3ddbe2d34f212083cdebe3fadcd1f65f40ca29f3de216e4d2aae6820775522"
+        },
+        {
+          "tag": "mistral",
+          "task": 9,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "24d018e31ef917c1afef9ec23aa0a929f88ed72fe1919db139ccfe86a6d523e6"
+        },
+        {
+          "tag": "mistral",
+          "task": 10,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "12899075f45effdabd4f94202bf5566855a16609ed9e5a4ecee12c4817bedce7"
+        },
+        {
+          "tag": "mistral",
+          "task": 10,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c76e4e66db1084a326c299be065243cf7b58defcea35faf1decb554a9af8e169"
+        },
+        {
+          "tag": "mistral",
+          "task": 11,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "dcd6cde80a52b924fb05c35981ad559d69498e7c29d3e65f5110970b0da8e892"
+        },
+        {
+          "tag": "mistral",
+          "task": 11,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "473067a1dfcf2eda585258b12be90466679be44c2d26d74581a8dec7c606347d"
+        },
+        {
+          "tag": "mistral",
+          "task": 12,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "3754e9a527f22f12949cb9c72a1a6a005a2aaa7d5dd450476cd5a2dd6bd95d4a"
+        },
+        {
+          "tag": "mistral",
+          "task": 12,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "136d042cf7257849ac5951b8eecf0b532e04582e74cd63337f0dffd3b098b1c8"
+        },
+        {
+          "tag": "mistral",
+          "task": 13,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e2ae2a4ec5203fec274ed31aa253f404cb876ad02d249b454b2cf0188a3ec972"
+        },
+        {
+          "tag": "mistral",
+          "task": 13,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e2ae2a4ec5203fec274ed31aa253f404cb876ad02d249b454b2cf0188a3ec972"
+        },
+        {
+          "tag": "mistral",
+          "task": 14,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "6e0b5dd9bb075326c8e6094772741a2356986da6c5f882bfe1b1c95d158cdb6b"
+        },
+        {
+          "tag": "mistral",
+          "task": 14,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "78977822cf9eaa6a342a08b95157e4f19e5094434cc310f99cff10c0f5a7ccd8"
+        },
+        {
+          "tag": "mistral",
+          "task": 15,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c6f9b5e5b3cf1b691b2f8eeefc3b26d5f5fe60e43b4a7cf29b3396d4230af744"
+        },
+        {
+          "tag": "mistral",
+          "task": 15,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "da75c1cbd192a055233d2fc36a64308f6153742241eb20e7eb6e1a379773829b"
+        },
+        {
+          "tag": "mistral",
+          "task": 17,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e917a41150e4dba2ae9ac14d910e9ed1cf7179b6e658cb4b1a4a164a7472d0ef"
+        },
+        {
+          "tag": "mistral",
+          "task": 17,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0a3c7ee431188c21830c01850285e2b76f5c6641d044be793332d9ab1b60b111"
+        },
+        {
+          "tag": "mistral",
+          "task": 18,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "9ccb8b0945d61d26775e872bf7bf33be24f756f1e31d92272154f42866cc28a4"
+        },
+        {
+          "tag": "mistral",
+          "task": 18,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "9ccb8b0945d61d26775e872bf7bf33be24f756f1e31d92272154f42866cc28a4"
+        },
+        {
+          "tag": "mistral",
+          "task": 19,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "9cb3d2eb0b96e0371acc0c2efdac06045770cf23a429ed4f4d2e6ea80c895361"
+        },
+        {
+          "tag": "mistral",
+          "task": 19,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "9cb3d2eb0b96e0371acc0c2efdac06045770cf23a429ed4f4d2e6ea80c895361"
+        },
+        {
+          "tag": "mistral",
+          "task": 20,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2e7d397fca6590d38cd19331b7d0edba9d54edfab0c3ac411468f584dbbcfedc"
+        },
+        {
+          "tag": "mistral",
+          "task": 20,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2e7d397fca6590d38cd19331b7d0edba9d54edfab0c3ac411468f584dbbcfedc"
+        }
+      ],
+      "seal_sha256": "8ab389d77684980af888be708db94df8679d39c5dcd6b52a0e4702e22f5cd544"
+    }
+  ]
+}

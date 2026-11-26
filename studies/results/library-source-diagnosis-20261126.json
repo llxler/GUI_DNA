@@ -1,0 +1,7197 @@
+{
+  "web": {
+    "table": {
+      "model": "google/gemma-3-12b-it",
+      "n": 20,
+      "targets": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "2",
+        "20",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "arms": {
+        "direct": {
+          "passes": [],
+          "observed": 20,
+          "observed_passes": [],
+          "statuses": {
+            "invalid": 6,
+            "valid": 14
+          }
+        },
+        "before": {
+          "passes": [],
+          "observed": 20,
+          "observed_passes": [],
+          "statuses": {
+            "invalid": 20
+          }
+        },
+        "gpt5-library": {
+          "passes": [
+            "11",
+            "12",
+            "4"
+          ],
+          "observed": 20,
+          "observed_passes": [
+            "11",
+            "12",
+            "4"
+          ],
+          "statuses": {
+            "valid": 20
+          }
+        },
+        "example-0": {
+          "passes": [
+            "11",
+            "12",
+            "4"
+          ],
+          "observed": 20,
+          "observed_passes": [
+            "11",
+            "12",
+            "4"
+          ],
+          "statuses": {
+            "valid": 20
+          }
+        },
+        "example-1": {
+          "passes": [
+            "11",
+            "12",
+            "4"
+          ],
+          "observed": 20,
+          "observed_passes": [
+            "11",
+            "12",
+            "4"
+          ],
+          "statuses": {
+            "valid": 20
+          }
+        }
+      },
+      "example_union": [
+        "11",
+        "12",
+        "4"
+      ]
+    },
+    "svg-chart": {
+      "model": "qwen/qwen3.5-9b",
+      "n": 20,
+      "targets": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "2",
+        "20",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "arms": {
+        "direct": {
+          "passes": [],
+          "observed": 20,
+          "observed_passes": [],
+          "statuses": {
+            "invalid": 16,
+            "valid": 4
+          }
+        },
+        "before": {
+          "passes": [
+            "3"
+          ],
+          "observed": 20,
+          "observed_passes": [
+            "3"
+          ],
+          "statuses": {
+            "invalid": 18,
+            "valid": 2
+          }
+        },
+        "gpt5-library": {
+          "passes": [
+            "1",
+            "11",
+            "12",
+            "13",
+            "16",
+            "17",
+            "18",
+            "19",
+            "2",
+            "20",
+            "4",
+            "5",
+            "6",
+            "7",
+            "9"
+          ],
+          "observed": 20,
+          "observed_passes": [
+            "1",
+            "11",
+            "12",
+            "13",
+            "16",
+            "17",
+            "18",
+            "19",
+            "2",
+            "20",
+            "4",
+            "5",
+            "6",
+            "7",
+            "9"
+          ],
+          "statuses": {
+            "valid": 20
+          }
+        },
+        "example-0": {
+          "passes": [
+            "1",
+            "11",
+            "12",
+            "13",
+            "16",
+            "17",
+            "18",
+            "19",
+            "2",
+            "20",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "observed": 20,
+          "observed_passes": [
+            "1",
+            "11",
+            "12",
+            "13",
+            "16",
+            "17",
+            "18",
+            "19",
+            "2",
+            "20",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "statuses": {
+            "valid": 20
+          }
+        },
+        "example-1": {
+          "passes": [
+            "1",
+            "11",
+            "12",
+            "13",
+            "16",
+            "17",
+            "18",
+            "19",
+            "2",
+            "20",
+            "4",
+            "5",
+            "6",
+            "7",
+            "9"
+          ],
+          "observed": 20,
+          "observed_passes": [
+            "1",
+            "11",
+            "12",
+            "13",
+            "16",
+            "17",
+            "18",
+            "19",
+            "2",
+            "20",
+            "4",
+            "5",
+            "6",
+            "7",
+            "9"
+          ],
+          "statuses": {
+            "valid": 20
+          }
+        }
+      },
+      "example_union": [
+        "1",
+        "11",
+        "12",
+        "13",
+        "16",
+        "17",
+        "18",
+        "19",
+        "2",
+        "20",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    }
+  },
+  "todo": {
+    "google/gemma-3-4b-it": {
+      "n": 8,
+      "targets": [
+        "todo-01",
+        "todo-02",
+        "todo-03",
+        "todo-04",
+        "todo-05",
+        "todo-06",
+        "todo-07",
+        "todo-08"
+      ],
+      "arms": {
+        "a": {
+          "passes": [
+            "todo-01"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "b": {
+          "passes": [
+            "todo-01"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "before-gpt5": {
+          "passes": [],
+          "observed": 8,
+          "observed_passes": [],
+          "statuses": {
+            "invalid": 8
+          }
+        },
+        "direct": {
+          "passes": [
+            "todo-01",
+            "todo-05"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-05"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "fixed-a": {
+          "passes": [
+            "todo-01"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "fixed-b": {
+          "passes": [
+            "todo-01"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "fixed-gpt5-library": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "fixed-human": {
+          "passes": [
+            "todo-01"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "gpt5-library": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "human": {
+          "passes": [
+            "todo-01",
+            "todo-04"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-04"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        }
+      },
+      "libraries": {
+        "a": {
+          "status": "valid",
+          "initial": [
+            "append",
+            "blank",
+            "cancel",
+            "clear",
+            "edit",
+            "empty-view",
+            "filtered-view",
+            "flow-create-count",
+            "initial-state",
+            "persist",
+            "view"
+          ],
+          "public": [
+            "append",
+            "blank",
+            "cancel",
+            "clear",
+            "edit",
+            "empty-view",
+            "filtered-view",
+            "flow-create-count",
+            "initial-state",
+            "persist",
+            "view"
+          ],
+          "options": [
+            "edit",
+            "clearCompleted"
+          ],
+          "history": [
+            {
+              "name": "init",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "init",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "persist",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "persist",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "select",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "select",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "add",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "add",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "destroy",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "destroy",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "toggle",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "toggle",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "toggleAll",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "toggleAll",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "edit",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "edit",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "save",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "save",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "cancel",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "cancel",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "clearCompleted",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "clearCompleted",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "route",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            },
+            {
+              "name": "route",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "view"
+              ]
+            }
+          ]
+        },
+        "b": {
+          "status": "valid",
+          "initial": [
+            "append",
+            "blank",
+            "cancel",
+            "clear",
+            "edit",
+            "empty-view",
+            "filtered-view",
+            "flow-create-count",
+            "initial-state",
+            "persist",
+            "restore",
+            "view"
+          ],
+          "public": [
+            "append",
+            "blank",
+            "cancel",
+            "clear",
+            "edit",
+            "empty-view",
+            "filtered-view",
+            "flow-create-count",
+            "initial-state",
+            "persist",
+            "restore",
+            "view"
+          ],
+          "options": [
+            "edit",
+            "clearCompleted"
+          ],
+          "history": [
+            {
+              "name": "init",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "init",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "persist",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "persist",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "select",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "select",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "add",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "add",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "destroy",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "destroy",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "toggle",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "toggle",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "toggleAll",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "toggleAll",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "edit",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "edit",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "save",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "save",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "cancel",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "cancel",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "clearCompleted",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "clearCompleted",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "route",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            },
+            {
+              "name": "route",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "initial-state",
+                "persist",
+                "restore",
+                "view"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "qwen/qwen3.5-9b": {
+      "n": 8,
+      "targets": [
+        "todo-01",
+        "todo-02",
+        "todo-03",
+        "todo-04",
+        "todo-05",
+        "todo-06",
+        "todo-07",
+        "todo-08"
+      ],
+      "arms": {
+        "before-gpt5": {
+          "passes": [],
+          "observed": 8,
+          "observed_passes": [],
+          "statuses": {
+            "invalid": 8
+          }
+        },
+        "direct": {
+          "passes": [
+            "todo-02"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-02"
+          ],
+          "statuses": {
+            "invalid": 4,
+            "valid": 4
+          }
+        },
+        "fixed-gpt5-library": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "fixed-human": {
+          "passes": [
+            "todo-01"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "gpt5-library": {
+          "passes": [],
+          "observed": 8,
+          "observed_passes": [],
+          "statuses": {
+            "invalid": 8
+          }
+        },
+        "human": {
+          "passes": [],
+          "observed": 8,
+          "observed_passes": [],
+          "statuses": {
+            "invalid": 8
+          }
+        }
+      },
+      "libraries": {}
+    },
+    "deepseek/deepseek-v4-flash": {
+      "n": 8,
+      "targets": [
+        "todo-01",
+        "todo-02",
+        "todo-03",
+        "todo-04",
+        "todo-05",
+        "todo-06",
+        "todo-07",
+        "todo-08"
+      ],
+      "arms": {
+        "before-gpt5": {
+          "passes": [
+            "todo-05"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-05"
+          ],
+          "statuses": {
+            "invalid": 7,
+            "valid": 1
+          }
+        },
+        "direct": {
+          "passes": [
+            "todo-01",
+            "todo-02"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02"
+          ],
+          "statuses": {
+            "invalid": 6,
+            "valid": 2
+          }
+        },
+        "fixed-gpt5-library": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "fixed-human": {
+          "passes": [
+            "todo-01"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "gpt5-library": {
+          "passes": [],
+          "observed": 8,
+          "observed_passes": [],
+          "statuses": {
+            "invalid": 8
+          }
+        },
+        "human": {
+          "passes": [
+            "todo-02"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-02"
+          ],
+          "statuses": {
+            "invalid": 7,
+            "valid": 1
+          }
+        }
+      },
+      "libraries": {}
+    },
+    "mistralai/ministral-3b-2512": {
+      "n": 8,
+      "targets": [
+        "todo-01",
+        "todo-02",
+        "todo-03",
+        "todo-04",
+        "todo-05",
+        "todo-06",
+        "todo-07",
+        "todo-08"
+      ],
+      "arms": {
+        "a": {
+          "passes": [
+            "todo-01",
+            "todo-03"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-03"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "b": {
+          "passes": [
+            "todo-01"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "before-gpt5": {
+          "passes": [
+            "todo-03"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-03"
+          ],
+          "statuses": {
+            "invalid": 7,
+            "valid": 1
+          }
+        },
+        "direct": {
+          "passes": [
+            "todo-03",
+            "todo-07"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-03",
+            "todo-07"
+          ],
+          "statuses": {
+            "invalid": 1,
+            "valid": 7
+          }
+        },
+        "fixed-a": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-05",
+            "todo-07"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-05",
+            "todo-07"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "fixed-b": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-05",
+            "todo-07"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-05",
+            "todo-07"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "fixed-gpt5-library": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "fixed-human": {
+          "passes": [
+            "todo-01"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "gpt5-library": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "human": {
+          "passes": [
+            "todo-01"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        }
+      },
+      "libraries": {
+        "a": {
+          "status": "valid",
+          "initial": [
+            "append",
+            "blank",
+            "clear",
+            "edit",
+            "empty-view",
+            "filtered-view",
+            "flow-clear-and-restore",
+            "flow-create-count",
+            "flow-empty-save-removes",
+            "flow-restore-and-append",
+            "initial-state",
+            "persist",
+            "restore",
+            "route",
+            "save",
+            "toggle",
+            "view"
+          ],
+          "public": [
+            "append",
+            "blank",
+            "cancel",
+            "clear",
+            "edit",
+            "empty-view",
+            "filtered-view",
+            "flow-clear-and-restore",
+            "flow-create-count",
+            "flow-destroy-empty",
+            "flow-edit-save-cancel",
+            "flow-empty-save-removes",
+            "flow-restore-and-append",
+            "initial-state",
+            "persist",
+            "restore",
+            "route",
+            "save",
+            "toggle",
+            "view"
+          ],
+          "options": [
+            "toggle",
+            "edit",
+            "clearCompleted",
+            "routing"
+          ],
+          "history": [
+            {
+              "name": "select",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-empty-save-removes",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "select",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-empty-save-removes",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "destroy",
+              "attempt": 0,
+              "retained": true,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "toggle",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "toggle",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "toggleAll",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "toggleAll",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "edit",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "edit",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "save",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "save",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "cancel",
+              "attempt": 0,
+              "retained": true,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-edit-save-cancel",
+                "flow-empty-save-removes",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "route",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-edit-save-cancel",
+                "flow-empty-save-removes",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "route",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-edit-save-cancel",
+                "flow-empty-save-removes",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            }
+          ]
+        },
+        "b": {
+          "status": "valid",
+          "initial": [
+            "append",
+            "blank",
+            "clear",
+            "edit",
+            "empty-view",
+            "filtered-view",
+            "flow-clear-and-restore",
+            "flow-create-count",
+            "flow-restore-and-append",
+            "initial-state",
+            "persist",
+            "restore",
+            "route",
+            "save",
+            "toggle",
+            "view"
+          ],
+          "public": [
+            "append",
+            "blank",
+            "cancel",
+            "clear",
+            "edit",
+            "empty-view",
+            "filtered-view",
+            "flow-clear-and-restore",
+            "flow-create-count",
+            "flow-destroy-empty",
+            "flow-edit-save-cancel",
+            "flow-empty-save-removes",
+            "flow-restore-and-append",
+            "initial-state",
+            "persist",
+            "restore",
+            "route",
+            "save",
+            "toggle",
+            "view"
+          ],
+          "options": [
+            "toggle",
+            "edit",
+            "clearCompleted",
+            "routing"
+          ],
+          "history": [
+            {
+              "name": "select",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "select",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle"
+              ]
+            },
+            {
+              "name": "destroy",
+              "attempt": 0,
+              "retained": true,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "toggle",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "toggle",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "toggleAll",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "toggleAll",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "edit",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "edit",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "save",
+              "attempt": 0,
+              "retained": true,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "save",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "cancel",
+              "attempt": 0,
+              "retained": true,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-edit-save-cancel",
+                "flow-empty-save-removes",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "route",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-edit-save-cancel",
+                "flow-empty-save-removes",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "route",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "blank",
+                "cancel",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-clear-and-restore",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-edit-save-cancel",
+                "flow-empty-save-removes",
+                "flow-restore-and-append",
+                "initial-state",
+                "persist",
+                "restore",
+                "route",
+                "save",
+                "toggle",
+                "view"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "meta-llama/llama-3.2-3b-instruct": {
+      "n": 4,
+      "targets": [
+        "todo-02",
+        "todo-04",
+        "todo-05",
+        "todo-06"
+      ],
+      "arms": {
+        "a": {
+          "passes": [],
+          "observed": 5,
+          "observed_passes": [
+            "todo-03"
+          ],
+          "statuses": {
+            "invalid": 1,
+            "valid": 3
+          }
+        },
+        "b": {
+          "passes": [],
+          "observed": 6,
+          "observed_passes": [],
+          "statuses": {
+            "invalid": 1,
+            "valid": 3
+          }
+        },
+        "direct": {
+          "passes": [],
+          "observed": 8,
+          "observed_passes": [],
+          "statuses": {
+            "invalid": 2,
+            "valid": 2
+          }
+        },
+        "fixed-a": {
+          "passes": [],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-03"
+          ],
+          "statuses": {
+            "valid": 4
+          }
+        },
+        "fixed-b": {
+          "passes": [],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-03"
+          ],
+          "statuses": {
+            "valid": 4
+          }
+        }
+      },
+      "libraries": {
+        "a": {
+          "status": "valid",
+          "initial": [
+            "append",
+            "clear",
+            "edit",
+            "empty-view",
+            "filtered-view",
+            "flow-create-count",
+            "flow-destroy-empty",
+            "initial-state",
+            "persist",
+            "route",
+            "toggle",
+            "view"
+          ],
+          "public": [
+            "append",
+            "clear",
+            "edit",
+            "empty-view",
+            "filtered-view",
+            "flow-create-count",
+            "flow-destroy-empty",
+            "flow-empty-save-removes",
+            "initial-state",
+            "persist",
+            "route",
+            "toggle",
+            "view"
+          ],
+          "options": [
+            "toggle",
+            "edit",
+            "clearCompleted",
+            "routing"
+          ],
+          "history": [
+            {
+              "name": "init",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "init",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "persist",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "persist",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "select",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "select",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "add",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "add",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "toggle",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "toggle",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "toggleAll",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "toggleAll",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "edit",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "edit",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "save",
+              "attempt": 0,
+              "retained": true,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "save",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "cancel",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "cancel",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "clearCompleted",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "clearCompleted",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "route",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "route",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            }
+          ]
+        },
+        "b": {
+          "status": "valid",
+          "initial": [
+            "append",
+            "clear",
+            "edit",
+            "empty-view",
+            "filtered-view",
+            "flow-create-count",
+            "flow-destroy-empty",
+            "initial-state",
+            "persist",
+            "route",
+            "toggle",
+            "view"
+          ],
+          "public": [
+            "append",
+            "clear",
+            "edit",
+            "empty-view",
+            "filtered-view",
+            "flow-create-count",
+            "flow-destroy-empty",
+            "flow-empty-save-removes",
+            "initial-state",
+            "persist",
+            "route",
+            "toggle",
+            "view"
+          ],
+          "options": [
+            "toggle",
+            "edit",
+            "clearCompleted",
+            "routing"
+          ],
+          "history": [
+            {
+              "name": "init",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "init",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "persist",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "persist",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "select",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "select",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "add",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "add",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "toggle",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "toggle",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "toggleAll",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "toggleAll",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "edit",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "edit",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "save",
+              "attempt": 0,
+              "retained": true,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "save",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "cancel",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "cancel",
+              "error": "Two undelivered transmissions"
+            },
+            {
+              "name": "clearCompleted",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "clearCompleted",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "route",
+              "attempt": 0,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            },
+            {
+              "name": "route",
+              "attempt": 1,
+              "retained": false,
+              "passed": [
+                "append",
+                "clear",
+                "edit",
+                "empty-view",
+                "filtered-view",
+                "flow-create-count",
+                "flow-destroy-empty",
+                "flow-empty-save-removes",
+                "initial-state",
+                "persist",
+                "route",
+                "toggle",
+                "view"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "form": {
+    "qwen/qwen3.5-9b": {
+      "n": 20,
+      "targets": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "2",
+        "20",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "arms": {
+        "direct": {
+          "passes": [
+            "3",
+            "8"
+          ],
+          "observed": 20,
+          "observed_passes": [
+            "3",
+            "8"
+          ],
+          "statuses": {
+            "valid": 20
+          }
+        },
+        "fixed-gpt5-library": {
+          "passes": [],
+          "observed": 20,
+          "observed_passes": [],
+          "statuses": {
+            "valid": 20
+          }
+        },
+        "fixed-human": {
+          "passes": [],
+          "observed": 20,
+          "observed_passes": [],
+          "statuses": {
+            "valid": 20
+          }
+        },
+        "fixed-self-a": {
+          "passes": [],
+          "observed": 20,
+          "observed_passes": [],
+          "statuses": {
+            "valid": 20
+          }
+        },
+        "fixed-self-original": {
+          "passes": [],
+          "observed": 20,
+          "observed_passes": [],
+          "statuses": {
+            "valid": 20
+          }
+        },
+        "gpt5-library": {
+          "passes": [
+            "1",
+            "10",
+            "13",
+            "14",
+            "15",
+            "17",
+            "19",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "observed": 20,
+          "observed_passes": [
+            "1",
+            "10",
+            "13",
+            "14",
+            "15",
+            "17",
+            "19",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "statuses": {
+            "valid": 20
+          }
+        },
+        "human": {
+          "passes": [
+            "1",
+            "12",
+            "13",
+            "14",
+            "18",
+            "19",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "observed": 20,
+          "observed_passes": [
+            "1",
+            "12",
+            "13",
+            "14",
+            "18",
+            "19",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "statuses": {
+            "invalid": 5,
+            "valid": 15
+          }
+        },
+        "self-a": {
+          "passes": [
+            "1",
+            "2",
+            "3"
+          ],
+          "observed": 20,
+          "observed_passes": [
+            "1",
+            "2",
+            "3"
+          ],
+          "statuses": {
+            "invalid": 5,
+            "valid": 15
+          }
+        },
+        "self-original": {
+          "passes": [
+            "1",
+            "2",
+            "3"
+          ],
+          "observed": 20,
+          "observed_passes": [
+            "1",
+            "2",
+            "3"
+          ],
+          "statuses": {
+            "invalid": 5,
+            "valid": 15
+          }
+        }
+      },
+      "public": {
+        "a": {
+          "load": true,
+          "radio": true,
+          "text": true,
+          "export": true,
+          "retained": true
+        },
+        "original": {
+          "load": true,
+          "radio": true,
+          "text": true,
+          "export": true,
+          "retained": true
+        }
+      },
+      "public_errors": {
+        "a": [],
+        "original": []
+      },
+      "library_controls": {
+        "human": {
+          "checks": {
+            "load": true,
+            "radio": true,
+            "text": true,
+            "export": true,
+            "retained": true
+          },
+          "errors": []
+        },
+        "gpt5-library": {
+          "checks": {
+            "load": true,
+            "radio": true,
+            "text": true,
+            "export": true,
+            "retained": true
+          },
+          "errors": []
+        }
+      }
+    }
+  },
+  "files": {
+    "qwen/qwen3.5-9b": {
+      "a": {
+        "n": 20,
+        "targets": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "arms": {
+          "direct": {
+            "passes": [
+              "1",
+              "17",
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "17",
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "human": {
+            "passes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "statuses": {
+              "invalid": 15,
+              "valid": 5
+            }
+          },
+          "gpt5-library": {
+            "passes": [
+              "1",
+              "12",
+              "13",
+              "16",
+              "17",
+              "18",
+              "2",
+              "3",
+              "5",
+              "6"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "12",
+              "13",
+              "16",
+              "17",
+              "18",
+              "2",
+              "3",
+              "5",
+              "6"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "planned": {
+            "passes": [
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "old-fixed": {
+            "passes": [
+              "1",
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "fixed": {
+            "passes": [
+              "1",
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "core": {
+            "passes": [
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          }
+        },
+        "public_sequences": {
+          "before": [],
+          "after": []
+        },
+        "retained_edits": [],
+        "planned_only": [],
+        "fixed_only": [
+          "1"
+        ]
+      },
+      "b": {
+        "n": 20,
+        "targets": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "arms": {
+          "direct": {
+            "passes": [
+              "1",
+              "17",
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "17",
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "human": {
+            "passes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "statuses": {
+              "invalid": 15,
+              "valid": 5
+            }
+          },
+          "gpt5-library": {
+            "passes": [
+              "1",
+              "12",
+              "13",
+              "16",
+              "17",
+              "18",
+              "2",
+              "3",
+              "5",
+              "6"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "12",
+              "13",
+              "16",
+              "17",
+              "18",
+              "2",
+              "3",
+              "5",
+              "6"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "planned": {
+            "passes": [
+              "2",
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "2",
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "old-fixed": {
+            "passes": [
+              "1",
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "fixed": {
+            "passes": [
+              "1",
+              "2",
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "2",
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "core": {
+            "passes": [
+              "2",
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "2",
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          }
+        },
+        "public_sequences": {
+          "before": [],
+          "after": [
+            "insert",
+            "nest",
+            "reopen"
+          ]
+        },
+        "retained_edits": [
+          "core"
+        ],
+        "planned_only": [],
+        "fixed_only": [
+          "1"
+        ]
+      }
+    },
+    "deepseek/deepseek-v4-flash": {
+      "a": {
+        "n": 20,
+        "targets": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "arms": {
+          "direct": {
+            "passes": [
+              "1",
+              "11",
+              "17",
+              "18",
+              "19",
+              "2",
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "11",
+              "17",
+              "18",
+              "19",
+              "2",
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "human": {
+            "passes": [
+              "1",
+              "12",
+              "17",
+              "2",
+              "20",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "12",
+              "17",
+              "2",
+              "20",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7"
+            ],
+            "statuses": {
+              "invalid": 8,
+              "valid": 12
+            }
+          },
+          "gpt5-library": {
+            "passes": [
+              "1",
+              "12",
+              "13",
+              "16",
+              "17",
+              "18",
+              "2",
+              "3",
+              "5",
+              "6"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "12",
+              "13",
+              "16",
+              "17",
+              "18",
+              "2",
+              "3",
+              "5",
+              "6"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "planned": {
+            "passes": [
+              "1",
+              "11"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "11"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "old-fixed": {
+            "passes": [
+              "1",
+              "11"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "11"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "fixed": {
+            "passes": [
+              "1",
+              "11"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "11"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "core": {
+            "passes": [
+              "1"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          }
+        },
+        "public_sequences": {
+          "before": [
+            "focus",
+            "insert",
+            "nest"
+          ],
+          "after": [
+            "focus",
+            "insert",
+            "nest"
+          ]
+        },
+        "retained_edits": [],
+        "planned_only": [],
+        "fixed_only": []
+      },
+      "b": {
+        "n": 20,
+        "targets": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "arms": {
+          "direct": {
+            "passes": [
+              "1",
+              "11",
+              "17",
+              "18",
+              "19",
+              "2",
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "11",
+              "17",
+              "18",
+              "19",
+              "2",
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "human": {
+            "passes": [
+              "1",
+              "12",
+              "17",
+              "2",
+              "20",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "12",
+              "17",
+              "2",
+              "20",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7"
+            ],
+            "statuses": {
+              "invalid": 8,
+              "valid": 12
+            }
+          },
+          "gpt5-library": {
+            "passes": [
+              "1",
+              "12",
+              "13",
+              "16",
+              "17",
+              "18",
+              "2",
+              "3",
+              "5",
+              "6"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "12",
+              "13",
+              "16",
+              "17",
+              "18",
+              "2",
+              "3",
+              "5",
+              "6"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "planned": {
+            "passes": [
+              "1",
+              "19",
+              "2",
+              "3",
+              "7",
+              "8"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "19",
+              "2",
+              "3",
+              "7",
+              "8"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "old-fixed": {
+            "passes": [
+              "1",
+              "13",
+              "16",
+              "19",
+              "2",
+              "3",
+              "7",
+              "8"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "13",
+              "16",
+              "19",
+              "2",
+              "3",
+              "7",
+              "8"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "fixed": {
+            "passes": [
+              "1",
+              "13",
+              "16",
+              "19",
+              "2",
+              "3",
+              "7",
+              "8"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "13",
+              "16",
+              "19",
+              "2",
+              "3",
+              "7",
+              "8"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "core": {
+            "passes": [
+              "1",
+              "2",
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "2",
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          }
+        },
+        "public_sequences": {
+          "before": [
+            "copy",
+            "delete",
+            "focus",
+            "insert",
+            "menu_child",
+            "nest",
+            "rename",
+            "reopen"
+          ],
+          "after": [
+            "copy",
+            "delete",
+            "focus",
+            "insert",
+            "menu_child",
+            "nest",
+            "rename",
+            "reopen"
+          ]
+        },
+        "retained_edits": [],
+        "planned_only": [],
+        "fixed_only": [
+          "13",
+          "16"
+        ]
+      }
+    }
+  },
+  "files_initial": {
+    "qwen/qwen3.5-9b": {
+      "a": {
+        "n": 20,
+        "targets": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "arms": {
+          "direct": {
+            "passes": [
+              "1",
+              "17",
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "17",
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "human": {
+            "passes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "statuses": {
+              "invalid": 15,
+              "valid": 5
+            }
+          },
+          "gpt5-library": {
+            "passes": [
+              "1",
+              "12",
+              "13",
+              "16",
+              "17",
+              "18",
+              "2",
+              "3",
+              "5",
+              "6"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "12",
+              "13",
+              "16",
+              "17",
+              "18",
+              "2",
+              "3",
+              "5",
+              "6"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "planned": {
+            "passes": [
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "old-fixed": {
+            "passes": [
+              "1",
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "fixed": {
+            "passes": [
+              "1",
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "core": {
+            "passes": [
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          }
+        },
+        "public_sequences": {
+          "before": [
+            "insert",
+            "nest"
+          ],
+          "after": [
+            "insert",
+            "nest"
+          ]
+        },
+        "retained_edits": [],
+        "planned_only": [],
+        "fixed_only": [
+          "1"
+        ]
+      },
+      "b": {
+        "n": 20,
+        "targets": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "arms": {
+          "direct": {
+            "passes": [
+              "1",
+              "17",
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "17",
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "human": {
+            "passes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "statuses": {
+              "invalid": 15,
+              "valid": 5
+            }
+          },
+          "gpt5-library": {
+            "passes": [
+              "1",
+              "12",
+              "13",
+              "16",
+              "17",
+              "18",
+              "2",
+              "3",
+              "5",
+              "6"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "12",
+              "13",
+              "16",
+              "17",
+              "18",
+              "2",
+              "3",
+              "5",
+              "6"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "planned": {
+            "passes": [
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "old-fixed": {
+            "passes": [
+              "1",
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "fixed": {
+            "passes": [
+              "1",
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "core": {
+            "passes": [
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          }
+        },
+        "public_sequences": {
+          "before": [
+            "insert",
+            "nest"
+          ],
+          "after": [
+            "insert",
+            "nest"
+          ]
+        },
+        "retained_edits": [],
+        "planned_only": [],
+        "fixed_only": [
+          "1"
+        ]
+      }
+    },
+    "deepseek/deepseek-v4-flash": {
+      "a": {
+        "n": 20,
+        "targets": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "arms": {
+          "direct": {
+            "passes": [
+              "1",
+              "11",
+              "17",
+              "18",
+              "19",
+              "2",
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "11",
+              "17",
+              "18",
+              "19",
+              "2",
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "human": {
+            "passes": [
+              "1",
+              "12",
+              "17",
+              "2",
+              "20",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "12",
+              "17",
+              "2",
+              "20",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7"
+            ],
+            "statuses": {
+              "invalid": 8,
+              "valid": 12
+            }
+          },
+          "gpt5-library": {
+            "passes": [
+              "1",
+              "12",
+              "13",
+              "16",
+              "17",
+              "18",
+              "2",
+              "3",
+              "5",
+              "6"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "12",
+              "13",
+              "16",
+              "17",
+              "18",
+              "2",
+              "3",
+              "5",
+              "6"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "planned": {
+            "passes": [
+              "1",
+              "11"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "11"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "old-fixed": {
+            "passes": [
+              "1",
+              "11"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "11"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "fixed": {
+            "passes": [
+              "1",
+              "11"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "11"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "core": {
+            "passes": [
+              "1"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          }
+        },
+        "public_sequences": {
+          "before": [
+            "nest"
+          ],
+          "after": [
+            "nest"
+          ]
+        },
+        "retained_edits": [],
+        "planned_only": [],
+        "fixed_only": []
+      },
+      "b": {
+        "n": 20,
+        "targets": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "arms": {
+          "direct": {
+            "passes": [
+              "1",
+              "11",
+              "17",
+              "18",
+              "19",
+              "2",
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "11",
+              "17",
+              "18",
+              "19",
+              "2",
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "human": {
+            "passes": [
+              "1",
+              "12",
+              "17",
+              "2",
+              "20",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "12",
+              "17",
+              "2",
+              "20",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7"
+            ],
+            "statuses": {
+              "invalid": 8,
+              "valid": 12
+            }
+          },
+          "gpt5-library": {
+            "passes": [
+              "1",
+              "12",
+              "13",
+              "16",
+              "17",
+              "18",
+              "2",
+              "3",
+              "5",
+              "6"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "12",
+              "13",
+              "16",
+              "17",
+              "18",
+              "2",
+              "3",
+              "5",
+              "6"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "planned": {
+            "passes": [
+              "1",
+              "19",
+              "2",
+              "3",
+              "7",
+              "8"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "19",
+              "2",
+              "3",
+              "7",
+              "8"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "old-fixed": {
+            "passes": [
+              "1",
+              "13",
+              "16",
+              "19",
+              "2",
+              "3",
+              "7",
+              "8"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "13",
+              "16",
+              "19",
+              "2",
+              "3",
+              "7",
+              "8"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "fixed": {
+            "passes": [
+              "1",
+              "13",
+              "16",
+              "19",
+              "2",
+              "3",
+              "7",
+              "8"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "13",
+              "16",
+              "19",
+              "2",
+              "3",
+              "7",
+              "8"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          },
+          "core": {
+            "passes": [
+              "1",
+              "2",
+              "3"
+            ],
+            "observed": 20,
+            "observed_passes": [
+              "1",
+              "2",
+              "3"
+            ],
+            "statuses": {
+              "valid": 20
+            }
+          }
+        },
+        "public_sequences": {
+          "before": [
+            "delete",
+            "focus",
+            "insert",
+            "nest",
+            "rename",
+            "reopen"
+          ],
+          "after": [
+            "delete",
+            "focus",
+            "insert",
+            "nest",
+            "rename",
+            "reopen"
+          ]
+        },
+        "retained_edits": [],
+        "planned_only": [],
+        "fixed_only": [
+          "13",
+          "16"
+        ]
+      }
+    }
+  },
+  "svg_attributes": {
+    "qwen/qwen3.5-9b": {
+      "n": 20,
+      "targets": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "2",
+        "20",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "arms": {
+        "direct": {
+          "passes": [],
+          "observed": 20,
+          "observed_passes": [],
+          "statuses": {
+            "invalid": 16,
+            "valid": 4
+          }
+        },
+        "human": {
+          "passes": [
+            "10",
+            "15",
+            "19",
+            "4",
+            "9"
+          ],
+          "observed": 20,
+          "observed_passes": [
+            "10",
+            "15",
+            "19",
+            "4",
+            "9"
+          ],
+          "statuses": {
+            "invalid": 15,
+            "valid": 5
+          }
+        },
+        "gpt5-library": {
+          "passes": [
+            "3"
+          ],
+          "observed": 20,
+          "observed_passes": [
+            "3"
+          ],
+          "statuses": {
+            "invalid": 18,
+            "valid": 2
+          }
+        },
+        "planned": {
+          "passes": [
+            "1",
+            "4",
+            "6"
+          ],
+          "observed": 20,
+          "observed_passes": [
+            "1",
+            "4",
+            "6"
+          ],
+          "statuses": {
+            "valid": 20
+          }
+        },
+        "fixed": {
+          "passes": [
+            "1",
+            "17",
+            "4",
+            "6"
+          ],
+          "observed": 20,
+          "observed_passes": [
+            "1",
+            "17",
+            "4",
+            "6"
+          ],
+          "statuses": {
+            "valid": 20
+          }
+        },
+        "planned-no-new-functions": {
+          "passes": [
+            "1",
+            "4",
+            "6",
+            "7"
+          ],
+          "observed": 20,
+          "observed_passes": [
+            "1",
+            "4",
+            "6",
+            "7"
+          ],
+          "statuses": {
+            "valid": 20
+          }
+        },
+        "fixed-no-new-functions": {
+          "passes": [
+            "1",
+            "17",
+            "4",
+            "6",
+            "7"
+          ],
+          "observed": 20,
+          "observed_passes": [
+            "1",
+            "17",
+            "4",
+            "6",
+            "7"
+          ],
+          "statuses": {
+            "valid": 20
+          }
+        }
+      },
+      "retained": [
+        "rootAttributes",
+        "seriesLegend"
+      ],
+      "development_checks": [
+        36,
+        46
+      ],
+      "new_input_checks": {
+        "fixed": 46,
+        "fixed-no-new-functions": 36
+      },
+      "planned_only": [],
+      "fixed_only": [
+        "17"
+      ]
+    },
+    "mistralai/mistral-small-3.2-24b-instruct": {
+      "n": 19,
+      "targets": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "17",
+        "18",
+        "19",
+        "2",
+        "20",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "arms": {
+        "direct": {
+          "passes": [
+            "1",
+            "2",
+            "4"
+          ],
+          "observed": 20,
+          "observed_passes": [
+            "1",
+            "2",
+            "4"
+          ],
+          "statuses": {
+            "valid": 19
+          }
+        },
+        "human": {
+          "passes": [
+            "1",
+            "10",
+            "13",
+            "14",
+            "15",
+            "17",
+            "18",
+            "19",
+            "2",
+            "20",
+            "4",
+            "5"
+          ],
+          "observed": 20,
+          "observed_passes": [
+            "1",
+            "10",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "2",
+            "20",
+            "4",
+            "5"
+          ],
+          "statuses": {
+            "invalid": 7,
+            "valid": 12
+          }
+        },
+        "gpt5-library": {
+          "passes": [
+            "1",
+            "13",
+            "19",
+            "3",
+            "4",
+            "5",
+            "9"
+          ],
+          "observed": 19,
+          "observed_passes": [
+            "1",
+            "13",
+            "19",
+            "3",
+            "4",
+            "5",
+            "9"
+          ],
+          "statuses": {
+            "invalid": 12,
+            "valid": 7
+          }
+        },
+        "planned": {
+          "passes": [
+            "1",
+            "2",
+            "6"
+          ],
+          "observed": 19,
+          "observed_passes": [
+            "1",
+            "2",
+            "6"
+          ],
+          "statuses": {
+            "valid": 19
+          }
+        },
+        "fixed": {
+          "passes": [
+            "1",
+            "2",
+            "6"
+          ],
+          "observed": 19,
+          "observed_passes": [
+            "1",
+            "2",
+            "6"
+          ],
+          "statuses": {
+            "valid": 19
+          }
+        },
+        "planned-no-new-functions": {
+          "passes": [
+            "1",
+            "2",
+            "6"
+          ],
+          "observed": 19,
+          "observed_passes": [
+            "1",
+            "2",
+            "6"
+          ],
+          "statuses": {
+            "valid": 19
+          }
+        },
+        "fixed-no-new-functions": {
+          "passes": [
+            "1",
+            "2",
+            "6"
+          ],
+          "observed": 19,
+          "observed_passes": [
+            "1",
+            "2",
+            "6"
+          ],
+          "statuses": {
+            "valid": 19
+          }
+        }
+      },
+      "retained": [],
+      "development_checks": [
+        58,
+        58
+      ],
+      "new_input_checks": {
+        "fixed": 58,
+        "fixed-no-new-functions": 58
+      },
+      "planned_only": [],
+      "fixed_only": []
+    }
+  },
+  "visible_choices": {
+    "qwen/qwen3.5-9b": {
+      "n": 8,
+      "targets": [
+        "todo-01",
+        "todo-02",
+        "todo-03",
+        "todo-04",
+        "todo-05",
+        "todo-06",
+        "todo-07",
+        "todo-08"
+      ],
+      "arms": {
+        "direct": {
+          "passes": [
+            "todo-01"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01"
+          ],
+          "statuses": {
+            "invalid": 2,
+            "valid": 6
+          }
+        },
+        "human": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "gpt5-library": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-04",
+            "todo-05",
+            "todo-06"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-04",
+            "todo-05",
+            "todo-06"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "self": {
+          "passes": [],
+          "observed": 8,
+          "observed_passes": [],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "fixed-human": {
+          "passes": [
+            "todo-01"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "fixed-gpt5-library": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "fixed-self": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-05",
+            "todo-07"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-05",
+            "todo-07"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        }
+      },
+      "delivery": {
+        "old_delivery": {
+          "human": {
+            "joint/length/empty": 8,
+            "slot/length/empty": 8
+          },
+          "gpt5-library": {
+            "joint/length/empty": 8,
+            "slot/length/empty": 8
+          }
+        },
+        "new_delivery": {
+          "human": {
+            "joint/stop/visible": 8,
+            "slot/stop/visible": 55
+          },
+          "gpt5-library": {
+            "joint/stop/visible": 8,
+            "slot/stop/visible": 88
+          }
+        }
+      },
+      "single_function_losses": {
+        "todo-03": {
+          "fixed_passed": true,
+          "planned_passed": false,
+          "fixed_unique": [
+            "cancelClearEditing"
+          ],
+          "planned_unique": [
+            "cancelRestoreOriginalTitle"
+          ],
+          "changed_lines_by_kind": {
+            "function": 2,
+            "dispatch": 2
+          },
+          "fixed_file": "a062a8fd1f6fa12a6144d8b1d8f390086098f8a95c2f242eb2b9c1595a6407da",
+          "planned_file": "14333f1d3c72886084126a81c6862c101e77e361a67f37a8727fcb77995762e2"
+        }
+      }
+    },
+    "deepseek/deepseek-v4-flash": {
+      "n": 8,
+      "targets": [
+        "todo-01",
+        "todo-02",
+        "todo-03",
+        "todo-04",
+        "todo-05",
+        "todo-06",
+        "todo-07",
+        "todo-08"
+      ],
+      "arms": {
+        "direct": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "human": {
+          "passes": [
+            "todo-03",
+            "todo-04",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-03",
+            "todo-04",
+            "todo-07",
+            "todo-08"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "gpt5-library": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-04",
+            "todo-05",
+            "todo-06"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-04",
+            "todo-05",
+            "todo-06"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "self": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "fixed-human": {
+          "passes": [
+            "todo-01"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "fixed-gpt5-library": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "fixed-self": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        }
+      },
+      "delivery": {
+        "old_delivery": {
+          "human": {
+            "joint/length/empty": 7,
+            "joint/stop/visible": 1,
+            "slot/length/empty": 7,
+            "slot/stop/visible": 25
+          },
+          "gpt5-library": {
+            "joint/length/empty": 8,
+            "slot/length/empty": 8,
+            "slot/stop/visible": 8
+          }
+        },
+        "new_delivery": {
+          "human": {
+            "joint/stop/visible": 8,
+            "slot/stop/visible": 34
+          },
+          "gpt5-library": {
+            "joint/stop/visible": 8,
+            "slot/stop/visible": 88
+          }
+        }
+      },
+      "single_function_losses": {}
+    }
+  },
+  "core_profiles": {
+    "qwen/qwen3.5-9b": {
+      "n": 8,
+      "targets": [
+        "todo-01",
+        "todo-02",
+        "todo-03",
+        "todo-04",
+        "todo-05",
+        "todo-06",
+        "todo-07",
+        "todo-08"
+      ],
+      "arms": {
+        "direct": {
+          "passes": [
+            "todo-01"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01"
+          ],
+          "statuses": {
+            "invalid": 2,
+            "valid": 6
+          }
+        },
+        "human": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "gpt5-library": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-04",
+            "todo-05",
+            "todo-06"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-04",
+            "todo-05",
+            "todo-06"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "fixed-self": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-05",
+            "todo-07"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-05",
+            "todo-07"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "unfiltered": {
+          "passes": [],
+          "observed": 8,
+          "observed_passes": [],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "self": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-05",
+            "todo-07"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-05",
+            "todo-07"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "fixed-core": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-05",
+            "todo-07"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-05",
+            "todo-07"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "projected": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-05"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-05"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        }
+      },
+      "eligible": 4,
+      "enumerated": 32,
+      "universal": [
+        "persist",
+        "trimInput",
+        "validateEmpty"
+      ],
+      "previous_choices_violating_core": [
+        "todo-01",
+        "todo-02",
+        "todo-03",
+        "todo-05",
+        "todo-07",
+        "todo-08"
+      ],
+      "planned_only": [],
+      "fixed_only": []
+    },
+    "deepseek/deepseek-v4-flash": {
+      "n": 8,
+      "targets": [
+        "todo-01",
+        "todo-02",
+        "todo-03",
+        "todo-04",
+        "todo-05",
+        "todo-06",
+        "todo-07",
+        "todo-08"
+      ],
+      "arms": {
+        "direct": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "human": {
+          "passes": [
+            "todo-03",
+            "todo-04",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-03",
+            "todo-04",
+            "todo-07",
+            "todo-08"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "gpt5-library": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-04",
+            "todo-05",
+            "todo-06"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-04",
+            "todo-05",
+            "todo-06"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "fixed-self": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "unfiltered": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "self": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "fixed-core": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        },
+        "projected": {
+          "passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "observed": 8,
+          "observed_passes": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "statuses": {
+            "valid": 8
+          }
+        }
+      },
+      "eligible": 64,
+      "enumerated": 64,
+      "universal": [],
+      "previous_choices_violating_core": [],
+      "planned_only": [],
+      "fixed_only": []
+    }
+  },
+  "initial_self_distribution": {
+    "observed": 37,
+    "zero": 0,
+    "at_most_one_quarter": 20
+  },
+  "initial_visible_reversals": [
+    {
+      "model": "google/gemma-3-12b-it",
+      "project": "table",
+      "previous_gpt5": [
+        0,
+        20
+      ],
+      "previous_self": [
+        2,
+        20
+      ],
+      "diagnostic": "fixed_library_numbered_examples",
+      "displayed_after": {
+        "gpt5-library": [
+          3,
+          20
+        ],
+        "self": [
+          2,
+          20
+        ]
+      },
+      "configuration_status": {
+        "valid": 20
+      }
+    },
+    {
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "project": "table",
+      "previous_gpt5": [
+        1,
+        20
+      ],
+      "previous_self": [
+        3,
+        20
+      ],
+      "diagnostic": "document_listener_closes_context_menu",
+      "same_plans_after": 7,
+      "fixed_after": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "displayed_after": {
+        "gpt5-library": [
+          1,
+          20
+        ],
+        "self": [
+          3,
+          20
+        ]
+      }
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "project": "table",
+      "previous_gpt5": [
+        3,
+        20
+      ],
+      "previous_self": [
+        7,
+        20
+      ],
+      "diagnostic": "document_listener_closes_context_menu",
+      "same_plans_after": 8,
+      "fixed_after": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "displayed_after": {
+        "gpt5-library": [
+          3,
+          20
+        ],
+        "self": [
+          7,
+          20
+        ]
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash",
+      "project": "table",
+      "previous_gpt5": [
+        2,
+        20
+      ],
+      "previous_self": [
+        4,
+        20
+      ],
+      "diagnostic": "document_listener_closes_context_menu",
+      "same_plans_after": 8,
+      "fixed_after": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "displayed_after": {
+        "gpt5-library": [
+          2,
+          20
+        ],
+        "self": [
+          4,
+          20
+        ]
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4-pro-0813",
+      "project": "table",
+      "previous_gpt5": [
+        3,
+        20
+      ],
+      "previous_self": [
+        6,
+        20
+      ],
+      "diagnostic": "document_listener_closes_context_menu",
+      "same_plans_after": 8,
+      "fixed_after": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "displayed_after": {
+        "gpt5-library": [
+          3,
+          20
+        ],
+        "self": [
+          6,
+          20
+        ]
+      }
+    },
+    {
+      "model": "qwen/qwen3.5-9b",
+      "project": "svg-chart",
+      "previous_gpt5": [
+        1,
+        20
+      ],
+      "previous_self": [
+        4,
+        20
+      ],
+      "diagnostic": "fixed_library_numbered_examples",
+      "displayed_after": {
+        "gpt5-library": [
+          15,
+          20
+        ],
+        "self": [
+          3,
+          20
+        ]
+      },
+      "configuration_status": {
+        "valid": 20
+      }
+    },
+    {
+      "model": "qwen/qwen3.5-9b",
+      "project": "form",
+      "previous_gpt5": [
+        3,
+        20
+      ],
+      "previous_self": [
+        4,
+        20
+      ],
+      "diagnostic": "shared_survey_configuration",
+      "displayed_after": {
+        "gpt5-library": [
+          15,
+          20
+        ],
+        "self": [
+          3,
+          20
+        ]
+      },
+      "configuration_status": {
+        "valid": 20
+      }
+    },
+    {
+      "model": "qwen/qwen3.5-9b",
+      "project": "todomvc",
+      "previous_gpt5": [
+        0,
+        8
+      ],
+      "previous_self": [
+        4,
+        8
+      ],
+      "diagnostic": "same_functions_with_typed_slots",
+      "displayed_after": {
+        "gpt5-library": [
+          5,
+          8
+        ],
+        "self": [
+          5,
+          8
+        ]
+      },
+      "configuration_status": {
+        "valid": 8
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash",
+      "project": "todomvc",
+      "previous_gpt5": [
+        1,
+        8
+      ],
+      "previous_self": [
+        8,
+        8
+      ],
+      "diagnostic": "same_functions_with_typed_slots",
+      "displayed_after": {
+        "gpt5-library": [
+          5,
+          8
+        ],
+        "self": [
+          8,
+          8
+        ]
+      },
+      "configuration_status": {
+        "valid": 8
+      }
+    },
+    {
+      "model": "google/gemma-3-4b-it",
+      "project": "todomvc",
+      "previous_gpt5": [
+        0,
+        8
+      ],
+      "previous_self": [
+        1,
+        8
+      ],
+      "diagnostic": "same_functions_with_typed_slots",
+      "displayed_after": {
+        "gpt5-library": [
+          6,
+          8
+        ],
+        "self": [
+          1,
+          8
+        ]
+      },
+      "configuration_status": {
+        "valid": 8
+      }
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "project": "duo",
+      "previous_gpt5": [
+        3,
+        10
+      ],
+      "previous_self": [
+        4,
+        10
+      ],
+      "diagnostic": "published_cross_pair_donors",
+      "donor_controls": {
+        "n": 10,
+        "targets": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "arms": {
+          "planned": {
+            "passes": [
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_editComment",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "observed": 10,
+            "observed_passes": [
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_editComment",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "statuses": {
+              "valid": 10
+            }
+          },
+          "fixed": {
+            "passes": [
+              "addCanonicalUrl_addComment",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "observed": 10,
+            "observed_passes": [
+              "addCanonicalUrl_addComment",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "statuses": {
+              "valid": 10
+            }
+          },
+          "names": {
+            "passes": [
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "observed": 10,
+            "observed_passes": [
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "statuses": {
+              "valid": 10
+            }
+          }
+        }
+      },
+      "covered_features": 11,
+      "displayed_after": {
+        "gpt5-library": [
+          3,
+          10
+        ],
+        "self": [
+          4,
+          10
+        ]
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash",
+      "project": "duo",
+      "previous_gpt5": [
+        4,
+        10
+      ],
+      "previous_self": [
+        6,
+        10
+      ],
+      "diagnostic": "published_cross_pair_donors",
+      "donor_controls": {
+        "n": 10,
+        "targets": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "arms": {
+          "planned": {
+            "passes": [
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "observed": 10,
+            "observed_passes": [
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "statuses": {
+              "valid": 10
+            }
+          },
+          "fixed": {
+            "passes": [
+              "addCanonicalUrl_addComment",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "observed": 10,
+            "observed_passes": [
+              "addCanonicalUrl_addComment",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "statuses": {
+              "valid": 10
+            }
+          },
+          "names": {
+            "passes": [
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "observed": 10,
+            "observed_passes": [
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "statuses": {
+              "valid": 10
+            }
+          }
+        }
+      },
+      "covered_features": 11,
+      "self_controls": {
+        "n": 10,
+        "targets": [
+          "addAltTextToImage_postPerformanceReport",
+          "addCanonicalUrl_addComment",
+          "addCanonicalUrl_assignPostToCategory",
+          "addCanonicalUrl_editComment",
+          "addCanonicalUrl_editTag",
+          "addCommentToTask_setTaskDeadline",
+          "approveOrRejectTaskReview_compareTime",
+          "approveOrRejectTaskReview_projectCustomWorkflows",
+          "approveOrRejectTaskReview_setTaskPriority",
+          "assignTaskToProject_assignTaskToUser"
+        ],
+        "arms": {
+          "direct": {
+            "passes": [
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_assignPostToCategory",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "addCommentToTask_setTaskDeadline",
+              "approveOrRejectTaskReview_compareTime",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "observed": 10,
+            "observed_passes": [
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_assignPostToCategory",
+              "addCanonicalUrl_editComment",
+              "addCanonicalUrl_editTag",
+              "addCommentToTask_setTaskDeadline",
+              "approveOrRejectTaskReview_compareTime",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "statuses": {
+              "valid": 10
+            }
+          },
+          "a": {
+            "passes": [
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_editTag",
+              "addCommentToTask_setTaskDeadline",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "observed": 10,
+            "observed_passes": [
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_editTag",
+              "addCommentToTask_setTaskDeadline",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "statuses": {
+              "valid": 10
+            }
+          },
+          "fixed-a": {
+            "passes": [],
+            "observed": 10,
+            "observed_passes": [],
+            "statuses": {
+              "valid": 10
+            }
+          },
+          "b": {
+            "passes": [
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_editTag",
+              "addCommentToTask_setTaskDeadline",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "observed": 10,
+            "observed_passes": [
+              "addCanonicalUrl_addComment",
+              "addCanonicalUrl_editTag",
+              "addCommentToTask_setTaskDeadline",
+              "approveOrRejectTaskReview_projectCustomWorkflows",
+              "approveOrRejectTaskReview_setTaskPriority",
+              "assignTaskToProject_assignTaskToUser"
+            ],
+            "statuses": {
+              "valid": 10
+            }
+          },
+          "fixed-b": {
+            "passes": [],
+            "observed": 10,
+            "observed_passes": [],
+            "statuses": {
+              "valid": 10
+            }
+          }
+        }
+      },
+      "displayed_after": {
+        "gpt5-library": [
+          4,
+          10
+        ],
+        "self": [
+          6,
+          10
+        ]
+      }
+    }
+  ],
+  "round_budget": {
+    "calls": 5006,
+    "unsettled_calls": 60,
+    "settled_micro_usd": 3076773,
+    "exposure_micro_usd": 7572918
+  },
+  "costs": {
+    "source_diagnosis": {
+      "calls": 566,
+      "settled_usd": 0.033889,
+      "exposure_usd": 0.084433,
+      "unsettled_calls": 23,
+      "cap_usd": 1.8,
+      "stop_usd": 1.8,
+      "halted": 0
+    },
+    "source_cost_by_model_and_phase": {
+      "google/gemma-3-12b-it / plan": {
+        "calls": 20,
+        "settled_micro_usd": 842,
+        "exposure_micro_usd": 842,
+        "unsettled": 0
+      },
+      "qwen/qwen3.5-9b / plan": {
+        "calls": 52,
+        "settled_micro_usd": 7117,
+        "exposure_micro_usd": 7117,
+        "unsettled": 0
+      },
+      "meta-llama/llama-3.2-3b-instruct / build": {
+        "calls": 51,
+        "settled_micro_usd": 5095,
+        "exposure_micro_usd": 31925,
+        "unsettled": 8
+      },
+      "google/gemma-3-4b-it / build": {
+        "calls": 48,
+        "settled_micro_usd": 1793,
+        "exposure_micro_usd": 1793,
+        "unsettled": 0
+      },
+      "mistralai/ministral-3b-2512 / build": {
+        "calls": 28,
+        "settled_micro_usd": 2192,
+        "exposure_micro_usd": 2192,
+        "unsettled": 0
+      },
+      "google/gemma-3-4b-it / plan": {
+        "calls": 201,
+        "settled_micro_usd": 2406,
+        "exposure_micro_usd": 2406,
+        "unsettled": 0
+      },
+      "deepseek/deepseek-v4-flash / plan": {
+        "calls": 64,
+        "settled_micro_usd": 11313,
+        "exposure_micro_usd": 11313,
+        "unsettled": 0
+      },
+      "mistralai/ministral-3b-2512 / plan": {
+        "calls": 57,
+        "settled_micro_usd": 2172,
+        "exposure_micro_usd": 2172,
+        "unsettled": 0
+      },
+      "meta-llama/llama-3.2-3b-instruct / plan": {
+        "calls": 45,
+        "settled_micro_usd": 959,
+        "exposure_micro_usd": 24673,
+        "unsettled": 15
+      }
+    },
+    "survey": {
+      "calls": 40,
+      "settled_usd": 0.019652,
+      "exposure_usd": 0.019652,
+      "unsettled_calls": 0,
+      "cap_usd": 0.65,
+      "stop_usd": 0.65,
+      "halted": 0
+    },
+    "file_explorer_interactions": {
+      "calls": 106,
+      "settled_usd": 0.027039,
+      "exposure_usd": 0.027039,
+      "unsettled_calls": 0,
+      "cap_usd": 1.4,
+      "stop_usd": 1.4,
+      "halted": 0
+    },
+    "file_explorer_model_and_phase": {
+      "deepseek/deepseek-v4-flash / build": [
+        10,
+        13003,
+        13003
+      ],
+      "deepseek/deepseek-v4-flash / plan": [
+        40,
+        3046,
+        3046
+      ],
+      "qwen/qwen3.5-9b / build": [
+        16,
+        7830,
+        7830
+      ],
+      "qwen/qwen3.5-9b / plan": [
+        40,
+        3160,
+        3160
+      ]
+    },
+    "core_profiles": {
+      "calls": 16,
+      "settled_usd": 0.000953,
+      "exposure_usd": 0.000953,
+      "unsettled_calls": 0,
+      "cap_usd": 0.16,
+      "stop_usd": 0.16,
+      "halted": 0
+    },
+    "core_profiles_by_model": {
+      "qwen/qwen3.5-9b": {
+        "calls": 8,
+        "settled_micro_usd": 269,
+        "exposure_micro_usd": 269
+      },
+      "deepseek/deepseek-v4-flash": {
+        "calls": 8,
+        "settled_micro_usd": 684,
+        "exposure_micro_usd": 684
+      }
+    },
+    "visible_choices": {
+      "calls": 329,
+      "settled_usd": 0.015597,
+      "exposure_usd": 0.015597,
+      "unsettled_calls": 0,
+      "cap_usd": 0.5,
+      "stop_usd": 0.5,
+      "halted": 0
+    },
+    "visible_choices_by_model_arm": {
+      "qwen/qwen3.5-9b / direct": {
+        "calls": 8,
+        "settled_micro_usd": 1717,
+        "exposure_micro_usd": 1717
+      },
+      "qwen/qwen3.5-9b / gpt5-library": {
+        "calls": 96,
+        "settled_micro_usd": 3468,
+        "exposure_micro_usd": 3468
+      },
+      "qwen/qwen3.5-9b / human": {
+        "calls": 63,
+        "settled_micro_usd": 2188,
+        "exposure_micro_usd": 2188
+      },
+      "qwen/qwen3.5-9b / self": {
+        "calls": 8,
+        "settled_micro_usd": 1017,
+        "exposure_micro_usd": 1017
+      },
+      "deepseek/deepseek-v4-flash / direct": {
+        "calls": 8,
+        "settled_micro_usd": 3354,
+        "exposure_micro_usd": 3354
+      },
+      "deepseek/deepseek-v4-flash / gpt5-library": {
+        "calls": 96,
+        "settled_micro_usd": 2234,
+        "exposure_micro_usd": 2234
+      },
+      "deepseek/deepseek-v4-flash / human": {
+        "calls": 42,
+        "settled_micro_usd": 1074,
+        "exposure_micro_usd": 1074
+      },
+      "deepseek/deepseek-v4-flash / self": {
+        "calls": 8,
+        "settled_micro_usd": 545,
+        "exposure_micro_usd": 545
+      }
+    },
+    "svg_attributes": {
+      "calls": 11,
+      "settled_usd": 0.003028,
+      "exposure_usd": 0.003028,
+      "unsettled_calls": 0,
+      "cap_usd": 0.65,
+      "stop_usd": 0.65,
+      "halted": 0
+    },
+    "svg_by_builder": {
+      "mistralai/mistral-small-3.2-24b-instruct": {
+        "calls": 2,
+        "settled_micro_usd": 527,
+        "exposure_micro_usd": 527
+      },
+      "qwen/qwen3.5-9b": {
+        "calls": 9,
+        "settled_micro_usd": 2501,
+        "exposure_micro_usd": 2501
+      }
+    },
+    "file_entry_identity": {
+      "calls": 102,
+      "settled_usd": 0.02098,
+      "exposure_usd": 0.02098,
+      "unsettled_calls": 0,
+      "cap_usd": 0.75,
+      "stop_usd": 0.75,
+      "halted": 0
+    },
+    "entry_identity_model_and_phase": {
+      "deepseek/deepseek-v4-flash / build": [
+        8,
+        8735,
+        8735
+      ],
+      "deepseek/deepseek-v4-flash / plan": [
+        40,
+        3046,
+        3046
+      ],
+      "qwen/qwen3.5-9b / build": [
+        14,
+        6264,
+        6264
+      ],
+      "qwen/qwen3.5-9b / plan": [
+        40,
+        2935,
+        2935
+      ]
+    }
+  },
+  "sources": {
+    "studies/public_library_transfer/source_diagnosis/initial-comparisons.json": "388d6f689e919c74001590cbfc29469898500e1c1dec4f3b6ac0e08083217eca",
+    "studies/public_library_transfer/source_diagnosis/result.json": "bc41d434838137b8324300ec5bfb43e06e3b4e3aae3b6f67996b0b76fa2cf6cf",
+    "studies/webbench/form/survey_workflow/qwen_comparison/result.json": "673adf3b73ef6ad7e351fb784fc846da465aa57bc2ccc04c5f1b8db6d805cacb",
+    "studies/webbench/table/menu_propagation/result.json": "f73b26478200e17749a15dd119e50f4ee486d53313e08c96450aa3d71de648dd",
+    "studies/public_library_transfer/duo_donor_library/result.json": "0ad4c6b34696e83e89f6ad64e95ab254a6550f1f40f4da87bc388c4220850df1",
+    "studies/public_library_transfer/duo_react_callbacks/result.json": "24bc4b187f29db84d71db751efd987534e7a30cb1eb2f89b83f44cd77f693ed9",
+    "studies/webbench/file_explorer/interaction_contracts/result.json": "a29334ba56fcb5910142e5b4982d646d6add4afdef1f6e2fa0337d0794c220ea",
+    "studies/webbench/file_explorer/interaction_contracts/entry_identity/result.json": "cb81e560dbb31dca2f135430371c78f090604463279fa7bf1def004a7ed2ac06",
+    "studies/webbench/typed_components/svg_public_geometry/attribute_contracts/result.json": "ef0e43acdc3370d90cd7d92ea28172f60f1230fab5b58139f731cbd6814e7802",
+    "studies/public_library_transfer/source_diagnosis/visible_choices/result.json": "f79711b92367d72770497f072c070ad6a04a3ece25a85e045451e2a3a7df359c",
+    "studies/public_library_transfer/source_diagnosis/visible_choices/core_profiles/result.json": "cde26bdb2408272a7dfa7a776227dd19c0d8a411900388b37fd8be4109cc3223",
+    "studies/public_library_transfer/source_diagnosis/visible_choices/core_profiles/configurations.json": "2a0a1f9640e54f765d3c94c0f8217c8d2889688b08d64f66b525c5df4db031b6",
+    "studies/public_library_transfer/source_diagnosis/visible_choices/function-choices.json": "4a5ac04efeb17335050e3cdf9ce5b5d111ccc768249a046843e7121d1d40546a",
+    "studies/results/webgen-functional-20261126.json": "5d50ac303704b1686b998fb74acddc3b5f47f678488eca4c0123f76beb071852",
+    "studies/results/backbone-extension-20261124.json": "dd106ce607867c66aca2e56adc48a5e28608e1fbcf391862d8a33869336af1d6",
+    "studies/results/backbone-matrix-20261124.json": "4297c24cad773da768b64a4e40e3407b4c442ac6f233bdd3000ac2bc87dd2892"
+  }
+}

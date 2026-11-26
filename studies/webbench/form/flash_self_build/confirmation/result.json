@@ -1,0 +1,2478 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "project": "form",
+  "tasks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "upstream_commit": "7b31ca2b786eef120dd49ce63dd03d0c0006046d",
+  "contract_sha256": "5d780bc8312c4a84357909f3e4b66a668ebf374e45fa1e8a2915cf520214e78a",
+  "registration_sha256": "9f64d37856b5a9aee4bac050fd06d246e0b8e57a32956da40c13443f607d7d70",
+  "seal_sha256": "0238ff40bb3a0fc7729528c19b5c40c885a522cac9e19ce5aa14aa2f558f9f8c",
+  "registered_files_sha256": {
+    "studies/webbench/form/flash_self_build/confirmation/PROTOCOL.md": "628f3c4e2b04c88292e9d10bbf0a1230f03a658919e115ac658a69384cfa3ce7",
+    "studies/webbench/form/flash_self_build/confirmation/run.py": "a5611507b26bf4bd2ee9ccb953b8056dc02795514fe33478d8ea9e2dd1d9eb99",
+    "studies/webbench/form/flash_self_build/run.py": "5b35238a6ca5daa533b7a4a4939f1670da94050c0d078b0a62bb712e1a0fd066",
+    "studies/webbench/form/flash_self_build/staged.py": "d0f06b1218869d147636de235cdad5a9e806c3f958f292f2b7c3a45ff60a1a5f",
+    "studies/webbench/backbone_matrix/run.py": "911c23da722b5b5df1afd828548e9f441ac9afce921ac3c207db6140c7adeedd",
+    "studies/public_library_transfer/core.py": "f79d8318b1064eae22fd10771e26482f3dd7f282fe43a1763eaa292153718e65",
+    "studies/public_library_transfer/browser.py": "fc86233c04e6f2ccc93aa67c6a150ea313d28ba759d8d2db1512c7e45f4e8e3d",
+    "studies/webbench/form/flash_self_build/contract_repair/entry.py": "a606f8b5432f54e920cb3f36ade4ba271e9b6bc59f9f759e91498ae4a774d065",
+    "studies/webbench/form/flash_self_build/contract_repair/subset.py": "4f49ec6bf7e46cc8fa2cb47c510fb404ea7b0843a95734e2895c89e0ab32e19b",
+    "artifacts/flash-form-self-20261125/seal.json": "bfa36077d50c06825a2da4185d31a9b5840f5d1a092cbbc403f36aafa8bc107a",
+    "artifacts/backbone-form-20261124/inputs/form/public.json": "ab5d51686590a903041214800166e282c1a407a580d39e9ea1b19f032dc9a598",
+    "artifacts/backbone-form-20261124/inputs/form/browser.json": "2ad2558bb5b2a8a32aabe2b97ee4f6e41c25a77b849ddf0ac8982e87dd99f673",
+    "artifacts/flash-form-self-20261125/inputs/form/public.json": "ab5d51686590a903041214800166e282c1a407a580d39e9ea1b19f032dc9a598",
+    "artifacts/backbone-form-20261124/deepseek-flash/form/gpt5-library/1/call/request.json": "c6d6d7745ecabd7ea6f33b2cdc4d11077b1ca77812cb76cb1619c5db1cfec92c",
+    "artifacts/backbone-form-20261124/deepseek-flash/form/build/attempt-1/request.json": "eede734fcb841939c0dc9040925cfd5833f2c286a2b2bec331c8f288b467f5fe"
+  },
+  "original_report_sha256": "b66b7d82b0fca2e3111f4e2e13a0688100b61e598aec7ed6f1d3c7f125689caf",
+  "pilot": {
+    "report_sha256": "6875a69cb568552b257b26c76b881f85dd284ae1cce041895a527bea9ad77c77",
+    "seal_sha256": "bfa36077d50c06825a2da4185d31a9b5840f5d1a092cbbc403f36aafa8bc107a",
+    "candidate_sources": {
+      "delivery-a": {
+        "status": "valid",
+        "source_sha256": "1ad29689e96cc71d753e37819c8916063fc577d4344fc0ea07350a00bb440baf",
+        "script_sha256": "78271de8f532bb539ed6ffc25ea1248717709e523ddf71351d64fd8ed9660449"
+      },
+      "delivery-b": {
+        "status": "build_failed",
+        "source_sha256": null,
+        "script_sha256": null
+      },
+      "staged-a": {
+        "status": "build_failed",
+        "source_sha256": null,
+        "script_sha256": null
+      },
+      "staged-b": {
+        "status": "build_failed",
+        "source_sha256": null,
+        "script_sha256": null
+      },
+      "contract-b": {
+        "status": "build_failed",
+        "source_sha256": null,
+        "script_sha256": null
+      },
+      "contract-subset-b": {
+        "status": "build_failed",
+        "source_sha256": null,
+        "script_sha256": null
+      },
+      "contract-entry-b": {
+        "status": "valid",
+        "source_sha256": "13a3437efb152661eab338985b4b11957b2990a7385c412f7f39ea8e0d5f391e",
+        "script_sha256": "9937a42d241b832d159705b7562ca16ee2e9b3fd991cdb9929ec993ec5d9539a"
+      },
+      "staged-schema-a": {
+        "status": "valid",
+        "source_sha256": "f3046dcd7e0c8f60d23eb8377bed6b9634bdf5cd97e8dc57275027a94e245b3b",
+        "script_sha256": "312200d130c13c8aaa98edb6faf9d54f333d379dfa4534494a8519b4d4298efa"
+      },
+      "staged-schema-b": {
+        "status": "build_failed",
+        "source_sha256": null,
+        "script_sha256": null
+      }
+    },
+    "billing": {
+      "calls": 100,
+      "settled_usd": 0.118601,
+      "exposure_usd": 0.118601,
+      "unsettled_calls": 0,
+      "cap_usd": 5.0,
+      "stop_usd": 5.0,
+      "halted": 0
+    },
+    "published_report_sha256": {
+      "studies/webbench/form/flash_self_build/result.json": "6875a69cb568552b257b26c76b881f85dd284ae1cce041895a527bea9ad77c77",
+      "studies/webbench/form/flash_self_build/contract_repair/result.json": "cfc273ba94404998bcbb88f0b7a6161bf2c54d5e02bba87a0f45cf696f492ee3",
+      "studies/webbench/form/flash_self_build/manifest_schema/result.json": "0a7890384e98365fa32deb85bf7d75106011d46fa2221181e6db64a3a15479d3"
+    }
+  },
+  "branches": {
+    "fresh-a": {
+      "build": {
+        "status": "valid",
+        "status_sha256": "d020f8351b6ba8dd9bc443551dbd94e2020b60d79e2734c481e7759adeaacddc",
+        "package_sha256": "cc0b7783393b4fabbf53b1ed8fd88447d1577a332b7f95ca7e78c90c9a490b6a",
+        "source_sha256": "be7c589a7a763bdf3896d71be96ae678a63276cf73fdf137c36bb93a92966aa8",
+        "return_attempts": [
+          {
+            "request_sha256": "bc8242cde19af7037c40324f7f314a2ecbc0ffad439dbb8dcdc52fd185095d92",
+            "seed": 20261124,
+            "finish_reason": "stop",
+            "visible_characters": 30801,
+            "completion_tokens": 8938,
+            "reported_reasoning_tokens": 0,
+            "provider": "Relace",
+            "response_sha256": "3c930f223c315b627f4b8a45ae2e94f65e5c2b11a5a4577f19a3b42d0bc5518e"
+          },
+          {
+            "request_sha256": "276a71467bd85ab85cabbb614a2a674f384c15a2ba7df73a748b850d43d52e6c",
+            "seed": 20261124,
+            "finish_reason": "stop",
+            "visible_characters": 30809,
+            "completion_tokens": 8940,
+            "reported_reasoning_tokens": 0,
+            "provider": "Relace",
+            "response_sha256": "ddbdabcc20b320c8628975ea7db672b48a4c7873b62878e00fe96f20c1857c55"
+          }
+        ],
+        "script_sha256": "f78b75b5577fa085d8b87e8ef1b46be8c9f8e404c2c02cc19f9126e3fc5e8f58",
+        "adaptation": {
+          "domains": {},
+          "entry": {}
+        },
+        "public_probe_sha256": {
+          "default": "198f16cce9fb7b620244aed956fb230df67494304444d85a27aec68bf9cf21f5",
+          "first": "198f16cce9fb7b620244aed956fb230df67494304444d85a27aec68bf9cf21f5"
+        }
+      },
+      "rows": [
+        {
+          "task": 1,
+          "direct": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "a127f400d58d3dafd0ef4fdec521df5339718550ad79aab83e5fb9649b0ad83e",
+            "report_sha256": "ee01d3e6066b45cdcc611762b3e4ed1095122bf60e91c9cb0b247b7178f2139d",
+            "files_digest": "2bb294e6e3c18266f3350328b7132e6f7f64c962de795e396197a440b0b80d91"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "b1533705c64f021f1da6e7b39fed175a862f6ace4f0fcb5058754db95cc8f6d0",
+            "report_sha256": "69ef1b91bb2a344e2454e38fa73be2dad5b7f23dde2e7de554c95b389d4de148",
+            "files_digest": "b06b16ea0cb51206c4dee1aad8a7ced7d204ab58d79679fb1f4d68d78e787176"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "d9f9da1bcfe19f16b436e39b01081117582f206b0b9f30b8af201468fc18693d",
+            "report_sha256": "e964e5037302357223e218b79ae508a5663472938eff1af627646ce62075fe5b",
+            "files_digest": "a034f71a955b5821ba10d48ae63582e7cd621649ec1cba8e4bcc5a63ab69b7ca"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "valid",
+            "response_sha256": "ccc5e66842b055ad8ba2b60381c372af1f334c1131856e33fbeea07264567ec8",
+            "passed": true,
+            "report_sha256": "bac66861aa59d8ae457d2832bacc732c0c7d299a7c368891ea1b6e962737cd26",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          },
+          "fixed": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "bac66861aa59d8ae457d2832bacc732c0c7d299a7c368891ea1b6e962737cd26",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          }
+        },
+        {
+          "task": 2,
+          "direct": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "a3fbb47aa183c13bc6416f23d8995448460f981c31da21526811b9e6f4c81ba8",
+            "report_sha256": "dd2de9a616c5b0f000e8cd156a44233806954bb8b6a36d57a4f00d3a1a3a6c0f",
+            "files_digest": "012c3c2941c55b2c52dbca4d82e51e869cb40e27c7e7cb48967233041b174410"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "c0f22149fe1e29df0c91adff24fcb29a323fa8320be9c0b31c323de97300064f",
+            "report_sha256": "8494626f4a66c8830451f06a4cfe7fc37793f158e21c8b5f93f20e95eb1cb0c3",
+            "files_digest": "fe84002897920382a75aac4bc35788da4448ea33e66403ec2fbe35e083e733b8"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "35752fdba2d2d999682c80b94dd8f85e8d628e97b117320cb8e623f7f0cc75f8",
+            "report_sha256": "fb54615604a60672929ba6626cbafa104a0da5174a38961582dceb4b30430b9f",
+            "files_digest": "28eed275765107ada2a0b144cba43d566d4c809a11d5af247bc447db3b2677a7"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "valid",
+            "response_sha256": "7b500c533a89bcb11059dfe4a401f47e1ad427f586a454e574c2e1e0ec30144e",
+            "passed": true,
+            "report_sha256": "4a7f656569493c68ae748e52e17449afda69d768fd1265dfd4ba5f3b54c8eaa8",
+            "files_digest": "031c577932fbc7c2baeb990e5b5b705001ce3a780b8376eb2a74dacf43e581fe"
+          },
+          "fixed": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "c3f0f9324275c30a4d71a650907b06c8a35c3be24c99d2b004cb5448fa44af35",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          }
+        },
+        {
+          "task": 3,
+          "direct": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "9dbd7b891e84fa03fc5056ac471f27daab0166e1e2d494ba30efa660da0e5ab9",
+            "report_sha256": "8cf3d52eca88c29514c5f2214f5ea6b8055a93bc3f66b4c0f86efb6721c658cb",
+            "files_digest": "e7008bf0c20c718a01f36321ab970ee1d6ab568eeab41dad4c7fe021f44db307"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "af317fde6a92225e38ae35ccec90a9219028b819365ed5b9702e9269c665e998",
+            "report_sha256": "9fe4772e52621ed3cc263fc1ddd363a3200dbcbe2806550c66968cb05cd01252",
+            "files_digest": "8cf4ffa28115e29cccad3fe536b62279ac30674e63e18d7ba20996960b135a25"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "a6b5d3bd20fea09628f40435f4238cf4aafbe182209cd3ba675617d25e10cda8",
+            "report_sha256": "ff90247bd5fe20b3568b8dd844dd0836b03aea244703f6ce0d881fb2e6198c75",
+            "files_digest": "1a610c89fc852ed71a652582b7f1e80efca9549ce15ad2a9774e6f259942c68b"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "valid",
+            "response_sha256": "5c2c3f58129a61b0fc6fcf2b088a7161167c44ed35156a391b903b75ebe54e29",
+            "passed": true,
+            "report_sha256": "e0014d9a07ede4d50dca4d26726f8ce93ecd6e4173cd5a40bc20753a7ffb07fa",
+            "files_digest": "031c577932fbc7c2baeb990e5b5b705001ce3a780b8376eb2a74dacf43e581fe"
+          },
+          "fixed": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "109a9aedbae2992f956982c7d42c8bdd1e6f0499abd26e8cefbd0642c62acf59",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          }
+        },
+        {
+          "task": 4,
+          "direct": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "3498058daaf4369244ae3256e3dea8a309b60b6119547d70d1b9a419891bf95e",
+            "report_sha256": "31a50147c983c4d305c03eefb2e35ef56b1bb3bd7e5c74bfc99452abbc877dba",
+            "files_digest": "9b44e6fcdb7cfb8dc46adad5754b51b9defdb44de47d9a90eb138df5e5cfb091"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "1404cd96f4fe975c02cf1193af44d671853fd9cf2ecf9caa77179d08d335ac03",
+            "report_sha256": "cf249a891d36526d8bde5e9e8ddf026c9e29764a8b859373e3ce4a2ca843b164",
+            "files_digest": "cfb338678919e34f39d516f0531ac666571f81c10487dcda035b69ec42ba50ac"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "4e36557dbe621438e4a9a80244e75a4c33055ead72c1cb6a0095e9b8ebfdce7e",
+            "report_sha256": "8fe802a98a0fdd1e8b97aa3d4bfd866edff7dd1db9dea620a27679b89e66bd23",
+            "files_digest": "3b86cf857992d76dabbeda989635479b7d2cb9b97181d125d867b0c5599a769a"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "valid",
+            "response_sha256": "a15ff7fb93d668ba5f39ed7ec17c717eb66db49e6af4c53ee8a6637866393245",
+            "passed": true,
+            "report_sha256": "0ed9b2935fcf1aecce7602d93f5e7a62951644d6064cf34497e46ff8448f910a",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          },
+          "fixed": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "0ed9b2935fcf1aecce7602d93f5e7a62951644d6064cf34497e46ff8448f910a",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          }
+        },
+        {
+          "task": 5,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "de7f89f5727de57f516c2dc03c30acab87068a6b74ce7f3021bac413340490c7"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "87efe9d02077b9679b9e7ffd320b3951b7e91b5d796d08aa9bd40099dc7ea71d",
+            "report_sha256": "3419a7fa6d355e3739fcd32e28b371954296f41ba3f0dd526f3ea518fbe00f4d",
+            "files_digest": "a7389475a241fc2a5b606bc242eb138b8c7ee1411586cd56e9238cfef3a82490"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "2c9a5a25fe0b1383c2ea1136ace88a32d3fe9472cd1c3bd84a7eed25c51e06ef",
+            "report_sha256": "000db4a83b4af81d10956bff06a6f86623e7753d4a711aa1c62375ec40cb121f",
+            "files_digest": "6e6217c93df1627968febf51099e54787669bd0abd595a8deec5b99a3ee7b880"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "valid",
+            "response_sha256": "f4769933c6e686618f87f87729d8c2d16eb20a686cd9af1049326850ef2264ce",
+            "passed": true,
+            "report_sha256": "f166a9cfae342c09f8b7308ed49d9b0029bd7c039f0041b84f1f27d24a91ad41",
+            "files_digest": "031c577932fbc7c2baeb990e5b5b705001ce3a780b8376eb2a74dacf43e581fe"
+          },
+          "fixed": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "2d36fcb4d758d89d50aa5ea2b94db5cf7836a315b7c658fc2f0191f7452f9b9d",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          }
+        },
+        {
+          "task": 6,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "82ea6216fb478919f2eda93078eef3b48fa25d12258268509456f4c8a22b7bf7"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "981fd18502ff9ee6995cf3731aa3ad002e168831a156a707eb01e8107047312b",
+            "report_sha256": "b927afdb59e833b97a7545fbbbfdd82c6e8884e34393be80dc0b5cdab0b0ca47",
+            "files_digest": "a3f357a17c4efa0ad56eadeabcbff7902fef04e93b86cb103009bc3e8a060981"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "0ac51e5842b0f24cde7d0b14c849f7768b4ea849f8d56a926af20784e3b86ccb",
+            "report_sha256": "293f704835084b120f850dcd57b5379c01fbd7a241c5a658e46e33bfb1cd9a7a",
+            "files_digest": "9e6ed76e6371a0fd34371afa85a5550c5c8d8270c0ed1328cf0b547c34b64f73"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "valid",
+            "response_sha256": "f0ce33ca21cb02445a9d4f5ad548e68b76d336665a60542513beca4c76a603dc",
+            "passed": false,
+            "report_sha256": "76d11219f93ea315b21cb5c3632f4f8dc33e5e95b82eb0049fa65900d35efe76",
+            "files_digest": "031c577932fbc7c2baeb990e5b5b705001ce3a780b8376eb2a74dacf43e581fe"
+          },
+          "fixed": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "a2cce1398e32c6ef14f93579336a0e2ddd7208cd1158d5928e6189dcf4254648",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          }
+        },
+        {
+          "task": 7,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "88e6a8edefbc9ea1898d4faca9958a224de06b80dbda9498c34e0571bf2a6075"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "7f8c733187924cb427ec3f0084d3e782601894ba2f178ae0a8e46a8048ced7a2",
+            "report_sha256": "036eab9105a463d11233843ffbfcc037430e5e0908f8f25de37ab705f06fe232",
+            "files_digest": "d364817b2d75be3bea1bc7b481fbde394b9aa6ee605f54f88e52aae5c2967d73"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "d6a485a00bd9d9e904a3b66528cf5fd2417f34eb532bc87b744a7cde03f3ed0c",
+            "report_sha256": "da6ce4f784fb37ce312869b740b0a1e2e52cc9e6af8464b99c3569225bf341ab",
+            "files_digest": "2ff6a640bdb34c4492eca0c6acc736022d7d0a004c8cf0bc12376e3d077d1ff8"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "valid",
+            "response_sha256": "04f9e94e7d9ae9fe38a1954df4b12095aed0cec98af8afe90b5a5bc941d71716",
+            "passed": true,
+            "report_sha256": "a3847b4241ef5314e502ecbce64064651716a1fb4d5132a34b99bf55f6b0c3a7",
+            "files_digest": "031c577932fbc7c2baeb990e5b5b705001ce3a780b8376eb2a74dacf43e581fe"
+          },
+          "fixed": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "93e7d09d6c00f3e813f5f8532c78ec0045716354451fc228ea0b814b9db8d511",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          }
+        },
+        {
+          "task": 8,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "fbf41d51fdad34d93f7a62ab0a5004d05c7d3ec3a02be289309683b92f9fa33e"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "7c4ec09c3a270e9f3021e24328b7e5d11df657610c95ce02335dd1f9019e336e",
+            "report_sha256": "eac7ebeb4634542ae85176b189f1336edc03eb8fbd1dd16df152fb7696abb5b7",
+            "files_digest": "95f7093b0d266b8a84529d971e2afcdf9a9e72f153a776d2ed8591e533dd62c5"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "3d3a48af125e5f924a9b9498744d33a630e70fa95684374a2136eb3b56853468",
+            "report_sha256": "67d16f6a6faedf14a916e2e07c91f93b27e5567324f5fa54c3a23aafcf1e890e",
+            "files_digest": "ad523044fc5eb7bfa8807b430f2cdd716b4d40bbc6a5ec48f246e4a97d93fefe"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "valid",
+            "response_sha256": "433abf72ad41a818d259204bbefaa87db3f9a6310027e6fd326bd4adfe62575e",
+            "passed": true,
+            "report_sha256": "91cd52c7414561d82211e9110bacfb827539d25ed36d366cd0c06963dfb90b6d",
+            "files_digest": "3eccdc0923cd49d2cb51a3df69e6c93bd79087bdff0e64f17f50a86f955e59d6"
+          },
+          "fixed": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "e0c6a4cd62f25b3f511e86cf1140531c4fc7f865b9313bb2ae7eaac7df466085",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          }
+        },
+        {
+          "task": 9,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "085dd9bdd59e720899f1c049610757dfc1985e211b7ddb9d2d8ddf3960e83baf"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "92a3970b7a234444c861125eb7aa3b0c94cdf6b8c9717afea1c6a9d34e828bf0",
+            "report_sha256": "d5c2d13e8a420c418b0ee19e7ee89fbb0bda9dc95a9d9d25d00089f20e09dc9f",
+            "files_digest": "a29c055b0479630a49438006975651c39c1d80aaeb531683c572df35368a4e1b"
+          },
+          "gpt5-library": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "2094729844626138580b75c0c8d8696478969bb1d350015a57434e4ae351697e"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "valid",
+            "response_sha256": "d9689e73f9217a846202b5cbfedf1a750dd6b36d29b7a63d3c9dc61a6685a88a",
+            "passed": false,
+            "report_sha256": "e00a049b1f07d25743b05351427ab7e32459af968aaf71c1a4c30ba4842bbe67",
+            "files_digest": "031c577932fbc7c2baeb990e5b5b705001ce3a780b8376eb2a74dacf43e581fe"
+          },
+          "fixed": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "789f5d1abe853c1385e758425833b843d1d12ddb3c084c45603d3ea91026ceb8",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          }
+        },
+        {
+          "task": 10,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "821e8ed0301ee48ec34f687a77640372a3a42c3748183e5dcac246ec22d124fd"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "08113ce9d896eb46ddf75aee5035acd74018ada7c301321bd05b6e77ed12a6e4",
+            "report_sha256": "9aad81a4c1c5b3ba94f0f76a7eaa648ace394cf13a9c99b14d4c51fef2530646",
+            "files_digest": "b9b6cec035b3efdb0775fd11104b7ad20224f467040b75f58eb2787a96afe731"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "6127f8235be0c2a5f9ef6652f1763b9e31222e5d498bc6f25739a9322c70970f",
+            "report_sha256": "964e1349f111395cdadc44851b2c1ca95b20c26359c039511588d42cd0a3d91c",
+            "files_digest": "e176f694f496018d84d97017b2d2682ca72aba9e5ff162e4e82a793d19ec80ac"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "valid",
+            "response_sha256": "1b64d8c22c2695e4c1f9642aae3fd445653d99a35085e4b819577a750f947018",
+            "passed": true,
+            "report_sha256": "fdea469c4594a16a2d91663dba32f0aebfb8403210c3e97f536f0e8183448cf3",
+            "files_digest": "031c577932fbc7c2baeb990e5b5b705001ce3a780b8376eb2a74dacf43e581fe"
+          },
+          "fixed": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "d8b58399f3aabda46b1cb6c7787f1d60f033862a99879f3b8a6e2b8c9cdab6ab",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          }
+        },
+        {
+          "task": 11,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "66a56f6c2194da1e19bf2cbf6046648590e37967a5ee27935f4999a2ff88e1c0"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "4f7ceaa7f7f57fdb3d0e177aae072111185ff9dc300e6faaab86a58e10daa2cf",
+            "report_sha256": "d0d01c9f46b70ab0d13a52dfd8579b4dfbda78c0f6a18fc0996231926a5721f7",
+            "files_digest": "9d02553eaacc665d115db7978d7f222ff073cdcda09fa4f1a8ddb4cfadecab13"
+          },
+          "gpt5-library": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "91bc29fba250a4b268c1941997a1bb2ba78b3913f3394e6a18e5967b4db8c50d"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "valid",
+            "response_sha256": "fb8a253c7b9c39134109f84eb6c6bd564f17062420bec47cc61cfd655a6bc958",
+            "passed": true,
+            "report_sha256": "ce570e7b7c1ffe86e3103216190dcd2f0f20b0b8ce0f9287ea02d0d28f307da9",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          },
+          "fixed": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "ce570e7b7c1ffe86e3103216190dcd2f0f20b0b8ce0f9287ea02d0d28f307da9",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          }
+        },
+        {
+          "task": 12,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "372e3b52f57730289cbdeba51938d8e120623658b92d376f71948adb3cccd48e"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "d8ddfe2e5354a577c18cdb31bf27dc6785ab7e2552afbcd29c88e246ce220279",
+            "report_sha256": "45108406f8e783a927e676e97742eeae41c8432ff06288d831cc7df7d2f2ce74",
+            "files_digest": "30dfaccb90905b2b17c9969d5737c0836ce9f90b7abe8ab80cb98cd76d651556"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": false,
+            "response_sha256": "98704aca2a54d4c63c0ae0066d01dfc6803671806f4c7004784fc4dba88496f3",
+            "report_sha256": "5c3da577bd068583ace4701de8e10dad3616504c26a7c1423b818025b3b46485",
+            "files_digest": "6f32019728eda1ac2d6b8b33db2137b1d756a89884f23fa51b97d88c4253f834"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "valid",
+            "response_sha256": "92cb3a3421a186934b4b2b1898edb2e728ddf8a5bca70ca7f3b5ca4c5bc0585a",
+            "passed": false,
+            "report_sha256": "d5ba15991b81f72dc3c62b6ac2ce1fc263e4d33842e7cedd6f23053418460719",
+            "files_digest": "b542fa424213b4d4d72dd5f9eb19f18818c33f7b43a84c8bba95f699ae53adaa"
+          },
+          "fixed": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "5eaab33888924ddbb53f2da5c6fe8bb432a24b5aef5dc42c8b0eeb227b010ea5",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          }
+        },
+        {
+          "task": 13,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "80bc9f824815e74619c9678ea80edc28000bcf44dc4a6d565f0517398dcedf4e"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "a1b580b6ea86ef83e608d510539b781ba8094eb69043bc0681bf37f8eb304e29",
+            "report_sha256": "6605e834091695325150633c77017e60b5e517038dcdea08ee2d8b28b3d37d52",
+            "files_digest": "c811cbdd06d545d0a215cba41f558dbacf7ecbbb8bc902e7d867f26f48628063"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "9539c959e3e1626d66bee5c6f19eb512a95951304932f766a657f09542de4cec",
+            "report_sha256": "7d2e5680ed3bf50dc4ad4045fb8cfa67731780877a6237023c855b7d4721dd79",
+            "files_digest": "0803943fcd346bd24bb2c2fdef4ab86212d5679e43bfb37844e274d32ef9b5bd"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "valid",
+            "response_sha256": "3a21bc3b772ebb3337a32590c801a9cfab31156cf568e5054810a1fb2f9cc4ec",
+            "passed": true,
+            "report_sha256": "2f30e176776e6d555a6eb396ae2d921515db0834bbc969f84c1d9a91be7c8c2f",
+            "files_digest": "b542fa424213b4d4d72dd5f9eb19f18818c33f7b43a84c8bba95f699ae53adaa"
+          },
+          "fixed": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "6046b5f40dbf915519aa7e9259de1e95e622af4c971a0098888bd6ec913b88a4",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          }
+        },
+        {
+          "task": 14,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "09bd44c25247ebf3fc5da69c69ff95f5cd1b788547876848ced5ef990fcfa6a6"
+          },
+          "human": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "10d2796ac51208955d0fc431cf02c6a8596a1854e2b48814829f40b0391466c1"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "26f3b90e86789d72db5d990d72cdd0461caaef37b607d1dcb6a22d52768dfd8a",
+            "report_sha256": "b388ec2c4f3cba58b81f02626f75a240b1a4b50ba64de8dd2c2987b89f656e38",
+            "files_digest": "f96c3207b58173a8a97837a557eed309bcd01fefe7ca3558fca71d36d3438885"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "invalid",
+            "response_sha256": "636edcb41e748f3274ad59c7836318d117dcc3e99f82394102a775844da573f1",
+            "passed": false
+          },
+          "fixed": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "fa925fbb85d63d0ef5554c19686936ed74fd1ed867526fd4ba2d8ba79f264509",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          }
+        },
+        {
+          "task": 15,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "29ed113decafd1812dd8a0a87e46e42f5d0f1d332a138f0e3f727a016c02da19"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "6eb90c4f654bb4edb142b3a00a8b3a2b7e9431b295fe46d7c550aca0290b3b05",
+            "report_sha256": "47cb5c8774e67c2bf8068dab16da304480eb37a3a903a7dc5023b4865e9c273c",
+            "files_digest": "13aaa04d30b7d43b8eb64832453bf6e2b8caaa6e18ed134afb61fc86aee8f1d0"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "d7951813a99f327116b028a4ca5b1b771250e902bb5b2c29d71c9fc485d03e27",
+            "report_sha256": "1f3e26850d03ac77fc65b293ccab834d2940e6294a0f05d10749693ffb7cdf91",
+            "files_digest": "a8ffff09397d5b339a20f5df5ea1f98b3301e0176c7a7ae2db063ba4541188a6"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "valid",
+            "response_sha256": "0d022767e25d2f1a16c90b363cd9b7e4880851fecf5b759f41ac887ee2d9ece9",
+            "passed": true,
+            "report_sha256": "148af790289d67274ac304c11bd09ede54d0ee698ea72c73c729d7ff979f94eb",
+            "files_digest": "b542fa424213b4d4d72dd5f9eb19f18818c33f7b43a84c8bba95f699ae53adaa"
+          },
+          "fixed": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "a0202a9e472f54f9366a233c8b02b795a175e12b223a93460342cf48b83ac20e",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          }
+        },
+        {
+          "task": 16,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "fb30a3d4d0d04127b406672199fd64cc89268ada6122c00c9421a66d5af0e8f0"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "e90b5df377802b2d256fbd96dd6ad73cfece1d0a7487a585f7f160a83fc471a1",
+            "report_sha256": "2176e74cbf309ea6707018a8bde81b3a55f6e1c88b0b3f325cea08e909c5ac82",
+            "files_digest": "c811cbdd06d545d0a215cba41f558dbacf7ecbbb8bc902e7d867f26f48628063"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": false,
+            "response_sha256": "88d8143d56316b87b020eb8229ad10241309bf62745fd80d0fb11db36642f4bd",
+            "report_sha256": "aec75e6f6ba4771c8ed8d9a2f65c61f05b838e010e4148c2bae4c35efe69d8f7",
+            "files_digest": "e6c4bc8f43945317be8f6382d561fe24b30e5061c9bf966c52e222f8a9fb034c"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "valid",
+            "response_sha256": "ed637fba681e9840498bbe6420b7e02160bb6799089ac62e516d49a0f6c77fca",
+            "passed": false,
+            "report_sha256": "67580aa241c4627526f2a18cc17c59c50cc9acaf39004245162af83a0de62992",
+            "files_digest": "031c577932fbc7c2baeb990e5b5b705001ce3a780b8376eb2a74dacf43e581fe"
+          },
+          "fixed": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "8dfa0ada49e5c8c637aa78d2893eca82c5d948af002798ca3d83d9547509a071",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          }
+        },
+        {
+          "task": 17,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "71022836399126cf92edb8ae548b0832327387431c58bc87295588010b888175"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "cb265a37c227b606e60acbeb5f7a5228729bfef2d8be46efda575304c42286ea",
+            "report_sha256": "17ee40abed23ce42075278b8d934ef95a97ba6bdce676dd4c532acc37e99a414",
+            "files_digest": "e65b88110deac7ddb76e44dce92e634602eb5be3c589a25dabd64b4ddaaa7dab"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "f60d210ad30ccf6d883437308248a3644fafa9d5575727ad2fa45fa6fb9e9301",
+            "report_sha256": "d0ce7145da0c964deb35aff525d5eea35d158299c57b17cdf36e515fa24411ef",
+            "files_digest": "84c7ac3d8beebeee6d86fcf6e9724f0c9e69b10f9e6b77662d5c70f012b3c700"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "valid",
+            "response_sha256": "44da296750e9ad22f8c4797896de297575353a2b00ff6f65f7ced91ad28a60b5",
+            "passed": true,
+            "report_sha256": "108716e747bdf17bcd67f8f948ab6023b862cbbc4fa52412b4dc1dd96f737ecf",
+            "files_digest": "b542fa424213b4d4d72dd5f9eb19f18818c33f7b43a84c8bba95f699ae53adaa"
+          },
+          "fixed": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "10b010016582dd81d706710c0723188763e514eb7b9ffb4f6a33c6d55a8a7b7c",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          }
+        },
+        {
+          "task": 18,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "23a597b60f6817e484d3bbe961097eecfa997c66bb5619b58144c3094a473e38"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "83cb26843b599ae3c37b232475519591303780e01ccc4a681235039488444e37",
+            "report_sha256": "04ffab79ea5dbea2c1e1661fcf6fdc89707d521b2616b2a0002410137279a943",
+            "files_digest": "d61175c3a99d2c28866df02c59f92da9e5829d87e4236d39f187a33b51887073"
+          },
+          "gpt5-library": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "b58c9734ac5135c9b7ac47b39172cc48ede5cb98fdf4dbf517b4f28180938579"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "valid",
+            "response_sha256": "f0972a6ba60b070a1cd96c0c20ad8aff1b5deabfddb394f9ec21e9923164b1c8",
+            "passed": true,
+            "report_sha256": "a34561e054b3d340a0a77f1c84d336091f608cf8784adf7318434fe3e2157e1c",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          },
+          "fixed": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "a34561e054b3d340a0a77f1c84d336091f608cf8784adf7318434fe3e2157e1c",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          }
+        },
+        {
+          "task": 19,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "7084408923c99adb2d48a8343fcd47e8e517bc751127281c8c6abccd7895a7ed"
+          },
+          "human": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "9da4d1c3d0b93763bb0e97ab28122be502292630c31515b0d4f0add49d31d07d"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": false,
+            "response_sha256": "08bade0635d510e416cfaaa63344c5c766f5fc18b98edbc13be869d3c5bc17ba",
+            "report_sha256": "29f451587572c67c9c1f1700c43b8e299f9402efe6d00c1b363c71b061f03b55",
+            "files_digest": "8c01e2d6b0148fa11d8d32b6315d36ba920b9530bb8dd3103b0093105c7aa8d6"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "valid",
+            "response_sha256": "f26ef94cbabd7c9ef6b32e0bde1b531907724147968706d47baff27445821f21",
+            "passed": false,
+            "report_sha256": "f6b2e4240eb511b7bfdef6a3a2e5a511f1a40c7ef06101e37390f0aef158971b",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          },
+          "fixed": {
+            "status": "valid",
+            "passed": false,
+            "report_sha256": "f6b2e4240eb511b7bfdef6a3a2e5a511f1a40c7ef06101e37390f0aef158971b",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          }
+        },
+        {
+          "task": 20,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "ba1ecc32781f968553c8fdd90483e8160626994614f083fb00e0bb533bf1da65"
+          },
+          "human": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "68493a23038a4fedfd716f8ba484cdb0d14a8886faf9be825afd6d3bf4422258"
+          },
+          "gpt5-library": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "9abfed168798b7b3fb33b3fde0325afc4b05044293f22ed7a1fc03aba17dcfcf"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "valid",
+            "response_sha256": "8e94edf858c66f32a2f8f96ad5b614b51ac3f2d29efff1907e33ac741985ff15",
+            "passed": true,
+            "report_sha256": "55682a167cde80d19e8753ed4ee8c3babe0be42b4059bc1bddf00b9dea08a3bc",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          },
+          "fixed": {
+            "status": "valid",
+            "passed": true,
+            "report_sha256": "55682a167cde80d19e8753ed4ee8c3babe0be42b4059bc1bddf00b9dea08a3bc",
+            "files_digest": "6bd498816a45db336e137c8c5c601f026bfeedf7fcdb57d9cd7dfba367f04423"
+          }
+        }
+      ],
+      "comparisons": {
+        "direct": {
+          "tasks": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "denominator": 20,
+          "self_passed": 14,
+          "comparator_passed": 4,
+          "self_only": [
+            5,
+            7,
+            8,
+            10,
+            11,
+            13,
+            15,
+            17,
+            18,
+            20
+          ],
+          "comparator_only": []
+        },
+        "human": {
+          "tasks": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "denominator": 20,
+          "self_passed": 14,
+          "comparator_passed": 17,
+          "self_only": [
+            20
+          ],
+          "comparator_only": [
+            6,
+            9,
+            12,
+            16
+          ]
+        },
+        "gpt5-library": {
+          "tasks": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "denominator": 20,
+          "self_passed": 14,
+          "comparator_passed": 13,
+          "self_only": [
+            11,
+            18,
+            20
+          ],
+          "comparator_only": [
+            6,
+            14
+          ]
+        },
+        "original-self": {
+          "tasks": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "denominator": 20,
+          "self_passed": 14,
+          "comparator_passed": 0,
+          "self_only": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            10,
+            11,
+            13,
+            15,
+            17,
+            18,
+            20
+          ],
+          "comparator_only": []
+        },
+        "fixed": {
+          "tasks": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "denominator": 20,
+          "self_passed": 14,
+          "comparator_passed": 15,
+          "self_only": [],
+          "comparator_only": [
+            14
+          ]
+        }
+      },
+      "self_status_counts": {
+        "valid": 19,
+        "invalid": 1
+      }
+    },
+    "fresh-b": {
+      "build": {
+        "status": "build_failed",
+        "status_sha256": "81ec508ab1347f153f6ee63d498343a8d28909121b48d70fb1361c2f26338ca4",
+        "package_sha256": null,
+        "source_sha256": null,
+        "return_attempts": [
+          {
+            "request_sha256": "bd1846fd087faeb6beb9c51f9f003eaeb5f321debfbd0b82e83963255a10b564",
+            "seed": 20261125,
+            "finish_reason": "stop",
+            "visible_characters": 30209,
+            "completion_tokens": 8587,
+            "reported_reasoning_tokens": 0,
+            "provider": "Relace",
+            "response_sha256": "3a6fc0d3ec20d26fda671a6275e2e240fb08bdafe5ef797273420127818c4fc7"
+          },
+          {
+            "request_sha256": "6c7ec8d0f0f6df202d8e7b6e3eb47a8660b013b2dbaf103a8e0c5309d4921956",
+            "seed": 20261125,
+            "finish_reason": "stop",
+            "visible_characters": 30390,
+            "completion_tokens": 8626,
+            "reported_reasoning_tokens": 0,
+            "provider": "Relace",
+            "response_sha256": "6c6b1fd32bf17d16e129109dc2e087e2fa44432e14bcf96a03ea020fecf79764"
+          }
+        ],
+        "script_sha256": null
+      },
+      "rows": [
+        {
+          "task": 1,
+          "direct": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "a127f400d58d3dafd0ef4fdec521df5339718550ad79aab83e5fb9649b0ad83e",
+            "report_sha256": "ee01d3e6066b45cdcc611762b3e4ed1095122bf60e91c9cb0b247b7178f2139d",
+            "files_digest": "2bb294e6e3c18266f3350328b7132e6f7f64c962de795e396197a440b0b80d91"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "b1533705c64f021f1da6e7b39fed175a862f6ace4f0fcb5058754db95cc8f6d0",
+            "report_sha256": "69ef1b91bb2a344e2454e38fa73be2dad5b7f23dde2e7de554c95b389d4de148",
+            "files_digest": "b06b16ea0cb51206c4dee1aad8a7ced7d204ab58d79679fb1f4d68d78e787176"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "d9f9da1bcfe19f16b436e39b01081117582f206b0b9f30b8af201468fc18693d",
+            "report_sha256": "e964e5037302357223e218b79ae508a5663472938eff1af627646ce62075fe5b",
+            "files_digest": "a034f71a955b5821ba10d48ae63582e7cd621649ec1cba8e4bcc5a63ab69b7ca"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "fixed": {
+            "status": "build_failed",
+            "passed": false
+          }
+        },
+        {
+          "task": 2,
+          "direct": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "a3fbb47aa183c13bc6416f23d8995448460f981c31da21526811b9e6f4c81ba8",
+            "report_sha256": "dd2de9a616c5b0f000e8cd156a44233806954bb8b6a36d57a4f00d3a1a3a6c0f",
+            "files_digest": "012c3c2941c55b2c52dbca4d82e51e869cb40e27c7e7cb48967233041b174410"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "c0f22149fe1e29df0c91adff24fcb29a323fa8320be9c0b31c323de97300064f",
+            "report_sha256": "8494626f4a66c8830451f06a4cfe7fc37793f158e21c8b5f93f20e95eb1cb0c3",
+            "files_digest": "fe84002897920382a75aac4bc35788da4448ea33e66403ec2fbe35e083e733b8"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "35752fdba2d2d999682c80b94dd8f85e8d628e97b117320cb8e623f7f0cc75f8",
+            "report_sha256": "fb54615604a60672929ba6626cbafa104a0da5174a38961582dceb4b30430b9f",
+            "files_digest": "28eed275765107ada2a0b144cba43d566d4c809a11d5af247bc447db3b2677a7"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "fixed": {
+            "status": "build_failed",
+            "passed": false
+          }
+        },
+        {
+          "task": 3,
+          "direct": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "9dbd7b891e84fa03fc5056ac471f27daab0166e1e2d494ba30efa660da0e5ab9",
+            "report_sha256": "8cf3d52eca88c29514c5f2214f5ea6b8055a93bc3f66b4c0f86efb6721c658cb",
+            "files_digest": "e7008bf0c20c718a01f36321ab970ee1d6ab568eeab41dad4c7fe021f44db307"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "af317fde6a92225e38ae35ccec90a9219028b819365ed5b9702e9269c665e998",
+            "report_sha256": "9fe4772e52621ed3cc263fc1ddd363a3200dbcbe2806550c66968cb05cd01252",
+            "files_digest": "8cf4ffa28115e29cccad3fe536b62279ac30674e63e18d7ba20996960b135a25"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "a6b5d3bd20fea09628f40435f4238cf4aafbe182209cd3ba675617d25e10cda8",
+            "report_sha256": "ff90247bd5fe20b3568b8dd844dd0836b03aea244703f6ce0d881fb2e6198c75",
+            "files_digest": "1a610c89fc852ed71a652582b7f1e80efca9549ce15ad2a9774e6f259942c68b"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "fixed": {
+            "status": "build_failed",
+            "passed": false
+          }
+        },
+        {
+          "task": 4,
+          "direct": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "3498058daaf4369244ae3256e3dea8a309b60b6119547d70d1b9a419891bf95e",
+            "report_sha256": "31a50147c983c4d305c03eefb2e35ef56b1bb3bd7e5c74bfc99452abbc877dba",
+            "files_digest": "9b44e6fcdb7cfb8dc46adad5754b51b9defdb44de47d9a90eb138df5e5cfb091"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "1404cd96f4fe975c02cf1193af44d671853fd9cf2ecf9caa77179d08d335ac03",
+            "report_sha256": "cf249a891d36526d8bde5e9e8ddf026c9e29764a8b859373e3ce4a2ca843b164",
+            "files_digest": "cfb338678919e34f39d516f0531ac666571f81c10487dcda035b69ec42ba50ac"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "4e36557dbe621438e4a9a80244e75a4c33055ead72c1cb6a0095e9b8ebfdce7e",
+            "report_sha256": "8fe802a98a0fdd1e8b97aa3d4bfd866edff7dd1db9dea620a27679b89e66bd23",
+            "files_digest": "3b86cf857992d76dabbeda989635479b7d2cb9b97181d125d867b0c5599a769a"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "fixed": {
+            "status": "build_failed",
+            "passed": false
+          }
+        },
+        {
+          "task": 5,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "de7f89f5727de57f516c2dc03c30acab87068a6b74ce7f3021bac413340490c7"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "87efe9d02077b9679b9e7ffd320b3951b7e91b5d796d08aa9bd40099dc7ea71d",
+            "report_sha256": "3419a7fa6d355e3739fcd32e28b371954296f41ba3f0dd526f3ea518fbe00f4d",
+            "files_digest": "a7389475a241fc2a5b606bc242eb138b8c7ee1411586cd56e9238cfef3a82490"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "2c9a5a25fe0b1383c2ea1136ace88a32d3fe9472cd1c3bd84a7eed25c51e06ef",
+            "report_sha256": "000db4a83b4af81d10956bff06a6f86623e7753d4a711aa1c62375ec40cb121f",
+            "files_digest": "6e6217c93df1627968febf51099e54787669bd0abd595a8deec5b99a3ee7b880"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "fixed": {
+            "status": "build_failed",
+            "passed": false
+          }
+        },
+        {
+          "task": 6,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "82ea6216fb478919f2eda93078eef3b48fa25d12258268509456f4c8a22b7bf7"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "981fd18502ff9ee6995cf3731aa3ad002e168831a156a707eb01e8107047312b",
+            "report_sha256": "b927afdb59e833b97a7545fbbbfdd82c6e8884e34393be80dc0b5cdab0b0ca47",
+            "files_digest": "a3f357a17c4efa0ad56eadeabcbff7902fef04e93b86cb103009bc3e8a060981"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "0ac51e5842b0f24cde7d0b14c849f7768b4ea849f8d56a926af20784e3b86ccb",
+            "report_sha256": "293f704835084b120f850dcd57b5379c01fbd7a241c5a658e46e33bfb1cd9a7a",
+            "files_digest": "9e6ed76e6371a0fd34371afa85a5550c5c8d8270c0ed1328cf0b547c34b64f73"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "fixed": {
+            "status": "build_failed",
+            "passed": false
+          }
+        },
+        {
+          "task": 7,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "88e6a8edefbc9ea1898d4faca9958a224de06b80dbda9498c34e0571bf2a6075"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "7f8c733187924cb427ec3f0084d3e782601894ba2f178ae0a8e46a8048ced7a2",
+            "report_sha256": "036eab9105a463d11233843ffbfcc037430e5e0908f8f25de37ab705f06fe232",
+            "files_digest": "d364817b2d75be3bea1bc7b481fbde394b9aa6ee605f54f88e52aae5c2967d73"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "d6a485a00bd9d9e904a3b66528cf5fd2417f34eb532bc87b744a7cde03f3ed0c",
+            "report_sha256": "da6ce4f784fb37ce312869b740b0a1e2e52cc9e6af8464b99c3569225bf341ab",
+            "files_digest": "2ff6a640bdb34c4492eca0c6acc736022d7d0a004c8cf0bc12376e3d077d1ff8"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "fixed": {
+            "status": "build_failed",
+            "passed": false
+          }
+        },
+        {
+          "task": 8,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "fbf41d51fdad34d93f7a62ab0a5004d05c7d3ec3a02be289309683b92f9fa33e"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "7c4ec09c3a270e9f3021e24328b7e5d11df657610c95ce02335dd1f9019e336e",
+            "report_sha256": "eac7ebeb4634542ae85176b189f1336edc03eb8fbd1dd16df152fb7696abb5b7",
+            "files_digest": "95f7093b0d266b8a84529d971e2afcdf9a9e72f153a776d2ed8591e533dd62c5"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "3d3a48af125e5f924a9b9498744d33a630e70fa95684374a2136eb3b56853468",
+            "report_sha256": "67d16f6a6faedf14a916e2e07c91f93b27e5567324f5fa54c3a23aafcf1e890e",
+            "files_digest": "ad523044fc5eb7bfa8807b430f2cdd716b4d40bbc6a5ec48f246e4a97d93fefe"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "fixed": {
+            "status": "build_failed",
+            "passed": false
+          }
+        },
+        {
+          "task": 9,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "085dd9bdd59e720899f1c049610757dfc1985e211b7ddb9d2d8ddf3960e83baf"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "92a3970b7a234444c861125eb7aa3b0c94cdf6b8c9717afea1c6a9d34e828bf0",
+            "report_sha256": "d5c2d13e8a420c418b0ee19e7ee89fbb0bda9dc95a9d9d25d00089f20e09dc9f",
+            "files_digest": "a29c055b0479630a49438006975651c39c1d80aaeb531683c572df35368a4e1b"
+          },
+          "gpt5-library": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "2094729844626138580b75c0c8d8696478969bb1d350015a57434e4ae351697e"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "fixed": {
+            "status": "build_failed",
+            "passed": false
+          }
+        },
+        {
+          "task": 10,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "821e8ed0301ee48ec34f687a77640372a3a42c3748183e5dcac246ec22d124fd"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "08113ce9d896eb46ddf75aee5035acd74018ada7c301321bd05b6e77ed12a6e4",
+            "report_sha256": "9aad81a4c1c5b3ba94f0f76a7eaa648ace394cf13a9c99b14d4c51fef2530646",
+            "files_digest": "b9b6cec035b3efdb0775fd11104b7ad20224f467040b75f58eb2787a96afe731"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "6127f8235be0c2a5f9ef6652f1763b9e31222e5d498bc6f25739a9322c70970f",
+            "report_sha256": "964e1349f111395cdadc44851b2c1ca95b20c26359c039511588d42cd0a3d91c",
+            "files_digest": "e176f694f496018d84d97017b2d2682ca72aba9e5ff162e4e82a793d19ec80ac"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "fixed": {
+            "status": "build_failed",
+            "passed": false
+          }
+        },
+        {
+          "task": 11,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "66a56f6c2194da1e19bf2cbf6046648590e37967a5ee27935f4999a2ff88e1c0"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "4f7ceaa7f7f57fdb3d0e177aae072111185ff9dc300e6faaab86a58e10daa2cf",
+            "report_sha256": "d0d01c9f46b70ab0d13a52dfd8579b4dfbda78c0f6a18fc0996231926a5721f7",
+            "files_digest": "9d02553eaacc665d115db7978d7f222ff073cdcda09fa4f1a8ddb4cfadecab13"
+          },
+          "gpt5-library": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "91bc29fba250a4b268c1941997a1bb2ba78b3913f3394e6a18e5967b4db8c50d"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "fixed": {
+            "status": "build_failed",
+            "passed": false
+          }
+        },
+        {
+          "task": 12,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "372e3b52f57730289cbdeba51938d8e120623658b92d376f71948adb3cccd48e"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "d8ddfe2e5354a577c18cdb31bf27dc6785ab7e2552afbcd29c88e246ce220279",
+            "report_sha256": "45108406f8e783a927e676e97742eeae41c8432ff06288d831cc7df7d2f2ce74",
+            "files_digest": "30dfaccb90905b2b17c9969d5737c0836ce9f90b7abe8ab80cb98cd76d651556"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": false,
+            "response_sha256": "98704aca2a54d4c63c0ae0066d01dfc6803671806f4c7004784fc4dba88496f3",
+            "report_sha256": "5c3da577bd068583ace4701de8e10dad3616504c26a7c1423b818025b3b46485",
+            "files_digest": "6f32019728eda1ac2d6b8b33db2137b1d756a89884f23fa51b97d88c4253f834"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "fixed": {
+            "status": "build_failed",
+            "passed": false
+          }
+        },
+        {
+          "task": 13,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "80bc9f824815e74619c9678ea80edc28000bcf44dc4a6d565f0517398dcedf4e"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "a1b580b6ea86ef83e608d510539b781ba8094eb69043bc0681bf37f8eb304e29",
+            "report_sha256": "6605e834091695325150633c77017e60b5e517038dcdea08ee2d8b28b3d37d52",
+            "files_digest": "c811cbdd06d545d0a215cba41f558dbacf7ecbbb8bc902e7d867f26f48628063"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "9539c959e3e1626d66bee5c6f19eb512a95951304932f766a657f09542de4cec",
+            "report_sha256": "7d2e5680ed3bf50dc4ad4045fb8cfa67731780877a6237023c855b7d4721dd79",
+            "files_digest": "0803943fcd346bd24bb2c2fdef4ab86212d5679e43bfb37844e274d32ef9b5bd"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "fixed": {
+            "status": "build_failed",
+            "passed": false
+          }
+        },
+        {
+          "task": 14,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "09bd44c25247ebf3fc5da69c69ff95f5cd1b788547876848ced5ef990fcfa6a6"
+          },
+          "human": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "10d2796ac51208955d0fc431cf02c6a8596a1854e2b48814829f40b0391466c1"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "26f3b90e86789d72db5d990d72cdd0461caaef37b607d1dcb6a22d52768dfd8a",
+            "report_sha256": "b388ec2c4f3cba58b81f02626f75a240b1a4b50ba64de8dd2c2987b89f656e38",
+            "files_digest": "f96c3207b58173a8a97837a557eed309bcd01fefe7ca3558fca71d36d3438885"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "fixed": {
+            "status": "build_failed",
+            "passed": false
+          }
+        },
+        {
+          "task": 15,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "29ed113decafd1812dd8a0a87e46e42f5d0f1d332a138f0e3f727a016c02da19"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "6eb90c4f654bb4edb142b3a00a8b3a2b7e9431b295fe46d7c550aca0290b3b05",
+            "report_sha256": "47cb5c8774e67c2bf8068dab16da304480eb37a3a903a7dc5023b4865e9c273c",
+            "files_digest": "13aaa04d30b7d43b8eb64832453bf6e2b8caaa6e18ed134afb61fc86aee8f1d0"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "d7951813a99f327116b028a4ca5b1b771250e902bb5b2c29d71c9fc485d03e27",
+            "report_sha256": "1f3e26850d03ac77fc65b293ccab834d2940e6294a0f05d10749693ffb7cdf91",
+            "files_digest": "a8ffff09397d5b339a20f5df5ea1f98b3301e0176c7a7ae2db063ba4541188a6"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "fixed": {
+            "status": "build_failed",
+            "passed": false
+          }
+        },
+        {
+          "task": 16,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "fb30a3d4d0d04127b406672199fd64cc89268ada6122c00c9421a66d5af0e8f0"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "e90b5df377802b2d256fbd96dd6ad73cfece1d0a7487a585f7f160a83fc471a1",
+            "report_sha256": "2176e74cbf309ea6707018a8bde81b3a55f6e1c88b0b3f325cea08e909c5ac82",
+            "files_digest": "c811cbdd06d545d0a215cba41f558dbacf7ecbbb8bc902e7d867f26f48628063"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": false,
+            "response_sha256": "88d8143d56316b87b020eb8229ad10241309bf62745fd80d0fb11db36642f4bd",
+            "report_sha256": "aec75e6f6ba4771c8ed8d9a2f65c61f05b838e010e4148c2bae4c35efe69d8f7",
+            "files_digest": "e6c4bc8f43945317be8f6382d561fe24b30e5061c9bf966c52e222f8a9fb034c"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "fixed": {
+            "status": "build_failed",
+            "passed": false
+          }
+        },
+        {
+          "task": 17,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "71022836399126cf92edb8ae548b0832327387431c58bc87295588010b888175"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "cb265a37c227b606e60acbeb5f7a5228729bfef2d8be46efda575304c42286ea",
+            "report_sha256": "17ee40abed23ce42075278b8d934ef95a97ba6bdce676dd4c532acc37e99a414",
+            "files_digest": "e65b88110deac7ddb76e44dce92e634602eb5be3c589a25dabd64b4ddaaa7dab"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "f60d210ad30ccf6d883437308248a3644fafa9d5575727ad2fa45fa6fb9e9301",
+            "report_sha256": "d0ce7145da0c964deb35aff525d5eea35d158299c57b17cdf36e515fa24411ef",
+            "files_digest": "84c7ac3d8beebeee6d86fcf6e9724f0c9e69b10f9e6b77662d5c70f012b3c700"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "fixed": {
+            "status": "build_failed",
+            "passed": false
+          }
+        },
+        {
+          "task": 18,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "23a597b60f6817e484d3bbe961097eecfa997c66bb5619b58144c3094a473e38"
+          },
+          "human": {
+            "status": "valid",
+            "passed": true,
+            "response_sha256": "83cb26843b599ae3c37b232475519591303780e01ccc4a681235039488444e37",
+            "report_sha256": "04ffab79ea5dbea2c1e1661fcf6fdc89707d521b2616b2a0002410137279a943",
+            "files_digest": "d61175c3a99d2c28866df02c59f92da9e5829d87e4236d39f187a33b51887073"
+          },
+          "gpt5-library": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "b58c9734ac5135c9b7ac47b39172cc48ede5cb98fdf4dbf517b4f28180938579"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "fixed": {
+            "status": "build_failed",
+            "passed": false
+          }
+        },
+        {
+          "task": 19,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "7084408923c99adb2d48a8343fcd47e8e517bc751127281c8c6abccd7895a7ed"
+          },
+          "human": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "9da4d1c3d0b93763bb0e97ab28122be502292630c31515b0d4f0add49d31d07d"
+          },
+          "gpt5-library": {
+            "status": "valid",
+            "passed": false,
+            "response_sha256": "08bade0635d510e416cfaaa63344c5c766f5fc18b98edbc13be869d3c5bc17ba",
+            "report_sha256": "29f451587572c67c9c1f1700c43b8e299f9402efe6d00c1b363c71b061f03b55",
+            "files_digest": "8c01e2d6b0148fa11d8d32b6315d36ba920b9530bb8dd3103b0093105c7aa8d6"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "fixed": {
+            "status": "build_failed",
+            "passed": false
+          }
+        },
+        {
+          "task": 20,
+          "direct": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "ba1ecc32781f968553c8fdd90483e8160626994614f083fb00e0bb533bf1da65"
+          },
+          "human": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "68493a23038a4fedfd716f8ba484cdb0d14a8886faf9be825afd6d3bf4422258"
+          },
+          "gpt5-library": {
+            "status": "invalid",
+            "passed": false,
+            "response_sha256": "9abfed168798b7b3fb33b3fde0325afc4b05044293f22ed7a1fc03aba17dcfcf"
+          },
+          "original-self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "self": {
+            "status": "build_failed",
+            "passed": false
+          },
+          "fixed": {
+            "status": "build_failed",
+            "passed": false
+          }
+        }
+      ],
+      "comparisons": {
+        "direct": {
+          "tasks": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "denominator": 20,
+          "self_passed": 0,
+          "comparator_passed": 4,
+          "self_only": [],
+          "comparator_only": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "human": {
+          "tasks": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "denominator": 20,
+          "self_passed": 0,
+          "comparator_passed": 17,
+          "self_only": [],
+          "comparator_only": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            15,
+            16,
+            17,
+            18
+          ]
+        },
+        "gpt5-library": {
+          "tasks": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "denominator": 20,
+          "self_passed": 0,
+          "comparator_passed": 13,
+          "self_only": [],
+          "comparator_only": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            13,
+            14,
+            15,
+            17
+          ]
+        },
+        "original-self": {
+          "tasks": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "denominator": 20,
+          "self_passed": 0,
+          "comparator_passed": 0,
+          "self_only": [],
+          "comparator_only": []
+        },
+        "fixed": {
+          "tasks": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "denominator": 20,
+          "self_passed": 0,
+          "comparator_passed": 0,
+          "self_only": [],
+          "comparator_only": []
+        }
+      },
+      "self_status_counts": {
+        "build_failed": 20
+      }
+    }
+  },
+  "confirmation": {
+    "threshold": 10,
+    "denominator": 20,
+    "novel_source_relative_to_pilot": {
+      "fresh-a": true,
+      "fresh-b": false
+    },
+    "distinct_implementations": false,
+    "rep_passed": {
+      "fresh-a": true,
+      "fresh-b": false
+    },
+    "confirmed": false
+  },
+  "billing": {
+    "total": {
+      "calls": 24,
+      "settled_usd": 0.047812,
+      "exposure_usd": 0.047812,
+      "unsettled_calls": 0,
+      "cap_usd": 1.5,
+      "stop_usd": 1.5,
+      "halted": 0
+    },
+    "by_branch": {
+      "fresh-a": {
+        "build": {
+          "calls": 2,
+          "unsettled": 0,
+          "settled_microusd": 8782,
+          "exposure_microusd": 8782,
+          "finish_reasons": {
+            "stop": 2
+          },
+          "deliveries": [
+            {
+              "purpose": "fresh-a/build/build/form/1",
+              "request_sha256": "bc8242cde19af7037c40324f7f314a2ecbc0ffad439dbb8dcdc52fd185095d92",
+              "settings": {
+                "max_tokens": 16000,
+                "temperature": 0,
+                "seed": 20261124,
+                "reasoning": {
+                  "enabled": false
+                }
+              },
+              "finish_reason": "stop",
+              "visible_characters": 30801,
+              "completion_tokens": 8938,
+              "reported_reasoning_tokens": 0,
+              "provider": "Relace",
+              "response_sha256": "3c930f223c315b627f4b8a45ae2e94f65e5c2b11a5a4577f19a3b42d0bc5518e"
+            },
+            {
+              "purpose": "fresh-a/build/build/form/2",
+              "request_sha256": "276a71467bd85ab85cabbb614a2a674f384c15a2ba7df73a748b850d43d52e6c",
+              "settings": {
+                "max_tokens": 16000,
+                "temperature": 0,
+                "seed": 20261124,
+                "reasoning": {
+                  "enabled": false
+                }
+              },
+              "finish_reason": "stop",
+              "visible_characters": 30809,
+              "completion_tokens": 8940,
+              "reported_reasoning_tokens": 0,
+              "provider": "Relace",
+              "response_sha256": "ddbdabcc20b320c8628975ea7db672b48a4c7873b62878e00fe96f20c1857c55"
+            }
+          ]
+        },
+        "plan": {
+          "calls": 20,
+          "unsettled": 0,
+          "settled_microusd": 30565,
+          "exposure_microusd": 30565,
+          "finish_reasons": {
+            "stop": 19,
+            "length": 1
+          },
+          "deliveries": [
+            {
+              "purpose": "fresh-a/plan/target/form/self/1",
+              "request_sha256": "1f851ee8702376413c4775416b62f74b66b722908de2f684d54ea477a1f54a38",
+              "settings": {
+                "max_tokens": 8192,
+                "temperature": 0,
+                "seed": 20261124
+              },
+              "finish_reason": "stop",
+              "visible_characters": 56,
+              "completion_tokens": 1897,
+              "reported_reasoning_tokens": 2359,
+              "provider": "Relace",
+              "response_sha256": "ccc5e66842b055ad8ba2b60381c372af1f334c1131856e33fbeea07264567ec8"
+            },
+            {
+              "purpose": "fresh-a/plan/target/form/self/10",
+              "request_sha256": "fba339ad7877ef94e974b69f22716ce42a5fae2a102080448b6ab0a5fa1ea1e6",
+              "settings": {
+                "max_tokens": 8192,
+                "temperature": 0,
+                "seed": 20261124
+              },
+              "finish_reason": "stop",
+              "visible_characters": 59,
+              "completion_tokens": 2071,
+              "reported_reasoning_tokens": 2594,
+              "provider": "Relace",
+              "response_sha256": "1b64d8c22c2695e4c1f9642aae3fd445653d99a35085e4b819577a750f947018"
+            },
+            {
+              "purpose": "fresh-a/plan/target/form/self/11",
+              "request_sha256": "db717196432df6c90b7a8ab8ff3dec46dd9e45b05a4369b312bfca34094f6b55",
+              "settings": {
+                "max_tokens": 8192,
+                "temperature": 0,
+                "seed": 20261124
+              },
+              "finish_reason": "stop",
+              "visible_characters": 56,
+              "completion_tokens": 8030,
+              "reported_reasoning_tokens": 10175,
+              "provider": "Relace",
+              "response_sha256": "fb8a253c7b9c39134109f84eb6c6bd564f17062420bec47cc61cfd655a6bc958"
+            },
+            {
+              "purpose": "fresh-a/plan/target/form/self/12",
+              "request_sha256": "ff41c858dfd342a68f065ff2f0582e407c39a521c2c323a8fb0bf5c8f0ae8b89",
+              "settings": {
+                "max_tokens": 8192,
+                "temperature": 0,
+                "seed": 20261124
+              },
+              "finish_reason": "stop",
+              "visible_characters": 58,
+              "completion_tokens": 968,
+              "reported_reasoning_tokens": 1195,
+              "provider": "Relace",
+              "response_sha256": "92cb3a3421a186934b4b2b1898edb2e728ddf8a5bca70ca7f3b5ca4c5bc0585a"
+            },
+            {
+              "purpose": "fresh-a/plan/target/form/self/13",
+              "request_sha256": "21d054327f328a7f484633c79ae71efdff5fb810d7f004e0d63e7e0ece8c9699",
+              "settings": {
+                "max_tokens": 8192,
+                "temperature": 0,
+                "seed": 20261124
+              },
+              "finish_reason": "stop",
+              "visible_characters": 58,
+              "completion_tokens": 1829,
+              "reported_reasoning_tokens": 2285,
+              "provider": "Relace",
+              "response_sha256": "3a21bc3b772ebb3337a32590c801a9cfab31156cf568e5054810a1fb2f9cc4ec"
+            },
+            {
+              "purpose": "fresh-a/plan/target/form/self/14",
+              "request_sha256": "aeb4ac61d7692936b6d92aab05999ee0ee729723dc6f5073227994083bccbc47",
+              "settings": {
+                "max_tokens": 8192,
+                "temperature": 0,
+                "seed": 20261124
+              },
+              "finish_reason": "length",
+              "visible_characters": 0,
+              "completion_tokens": 8192,
+              "reported_reasoning_tokens": 10114,
+              "provider": "Relace",
+              "response_sha256": "636edcb41e748f3274ad59c7836318d117dcc3e99f82394102a775844da573f1"
+            },
+            {
+              "purpose": "fresh-a/plan/target/form/self/15",
+              "request_sha256": "e35cb0e233f7fb4b568ac0dd726bfda8580c03a35e1f16d1cee4fef776725aa9",
+              "settings": {
+                "max_tokens": 8192,
+                "temperature": 0,
+                "seed": 20261124
+              },
+              "finish_reason": "stop",
+              "visible_characters": 66,
+              "completion_tokens": 2559,
+              "reported_reasoning_tokens": 3231,
+              "provider": "Relace",
+              "response_sha256": "0d022767e25d2f1a16c90b363cd9b7e4880851fecf5b759f41ac887ee2d9ece9"
+            },
+            {
+              "purpose": "fresh-a/plan/target/form/self/16",
+              "request_sha256": "f5a55d67e1a52b8a018053e864347d7e8c43c932f3987b3322a8c8cd4ae41819",
+              "settings": {
+                "max_tokens": 8192,
+                "temperature": 0,
+                "seed": 20261124
+              },
+              "finish_reason": "stop",
+              "visible_characters": 54,
+              "completion_tokens": 2144,
+              "reported_reasoning_tokens": 2684,
+              "provider": "Relace",
+              "response_sha256": "ed637fba681e9840498bbe6420b7e02160bb6799089ac62e516d49a0f6c77fca"
+            },
+            {
+              "purpose": "fresh-a/plan/target/form/self/17",
+              "request_sha256": "ea56e919340989bd4890d65a0456ed4dd4cac12f3d26504a8a7bec36532a2bd3",
+              "settings": {
+                "max_tokens": 8192,
+                "temperature": 0,
+                "seed": 20261124
+              },
+              "finish_reason": "stop",
+              "visible_characters": 58,
+              "completion_tokens": 2557,
+              "reported_reasoning_tokens": 3116,
+              "provider": "Relace",
+              "response_sha256": "44da296750e9ad22f8c4797896de297575353a2b00ff6f65f7ced91ad28a60b5"
+            },
+            {
+              "purpose": "fresh-a/plan/target/form/self/18",
+              "request_sha256": "b59d3ace00659584efe4535bf6549ab89ad0c14815a6a3eb98706fe51e4a6212",
+              "settings": {
+                "max_tokens": 8192,
+                "temperature": 0,
+                "seed": 20261124
+              },
+              "finish_reason": "stop",
+              "visible_characters": 56,
+              "completion_tokens": 3070,
+              "reported_reasoning_tokens": 3828,
+              "provider": "Relace",
+              "response_sha256": "f0972a6ba60b070a1cd96c0c20ad8aff1b5deabfddb394f9ec21e9923164b1c8"
+            },
+            {
+              "purpose": "fresh-a/plan/target/form/self/19",
+              "request_sha256": "55f78c74a608e65977e8740ed93ec1f854c277d3ee48fa46b0df6272ee13d03b",
+              "settings": {
+                "max_tokens": 8192,
+                "temperature": 0,
+                "seed": 20261124
+              },
+              "finish_reason": "stop",
+              "visible_characters": 56,
+              "completion_tokens": 781,
+              "reported_reasoning_tokens": 955,
+              "provider": "Relace",
+              "response_sha256": "f26ef94cbabd7c9ef6b32e0bde1b531907724147968706d47baff27445821f21"
+            },
+            {
+              "purpose": "fresh-a/plan/target/form/self/2",
+              "request_sha256": "80e1515a84f1148b79ed2439fcac052f66d2cffe926d3596597aed1da055d8cc",
+              "settings": {
+                "max_tokens": 8192,
+                "temperature": 0,
+                "seed": 20261124
+              },
+              "finish_reason": "stop",
+              "visible_characters": 59,
+              "completion_tokens": 2194,
+              "reported_reasoning_tokens": 2786,
+              "provider": "Relace",
+              "response_sha256": "7b500c533a89bcb11059dfe4a401f47e1ad427f586a454e574c2e1e0ec30144e"
+            },
+            {
+              "purpose": "fresh-a/plan/target/form/self/20",
+              "request_sha256": "a65c2f143144384d2ac4d19baea8893c05263322ef5852ea6182ca3c3dff9121",
+              "settings": {
+                "max_tokens": 8192,
+                "temperature": 0,
+                "seed": 20261124
+              },
+              "finish_reason": "stop",
+              "visible_characters": 56,
+              "completion_tokens": 2148,
+              "reported_reasoning_tokens": 2652,
+              "provider": "Relace",
+              "response_sha256": "8e94edf858c66f32a2f8f96ad5b614b51ac3f2d29efff1907e33ac741985ff15"
+            },
+            {
+              "purpose": "fresh-a/plan/target/form/self/3",
+              "request_sha256": "5720718631714f33c0c4f21cd47c9ea8d5cda9f21caf6a47fe79bf40b8f9f77e",
+              "settings": {
+                "max_tokens": 8192,
+                "temperature": 0,
+                "seed": 20261124
+              },
+              "finish_reason": "stop",
+              "visible_characters": 59,
+              "completion_tokens": 4946,
+              "reported_reasoning_tokens": 6242,
+              "provider": "Relace",
+              "response_sha256": "5c2c3f58129a61b0fc6fcf2b088a7161167c44ed35156a391b903b75ebe54e29"
+            },
+            {
+              "purpose": "fresh-a/plan/target/form/self/4",
+              "request_sha256": "31841de8d9028995d7432d5dd63e9e1729e927f00774e93467dbcd58676aa612",
+              "settings": {
+                "max_tokens": 8192,
+                "temperature": 0,
+                "seed": 20261124
+              },
+              "finish_reason": "stop",
+              "visible_characters": 56,
+              "completion_tokens": 2574,
+              "reported_reasoning_tokens": 3252,
+              "provider": "Relace",
+              "response_sha256": "a15ff7fb93d668ba5f39ed7ec17c717eb66db49e6af4c53ee8a6637866393245"
+            },
+            {
+              "purpose": "fresh-a/plan/target/form/self/5",
+              "request_sha256": "a9efe7c54d10f8dbb8ee65c0acabdcd2f46627191d6bca44658edcffcf2614aa",
+              "settings": {
+                "max_tokens": 8192,
+                "temperature": 0,
+                "seed": 20261124
+              },
+              "finish_reason": "stop",
+              "visible_characters": 59,
+              "completion_tokens": 5146,
+              "reported_reasoning_tokens": 6282,
+              "provider": "Relace",
+              "response_sha256": "f4769933c6e686618f87f87729d8c2d16eb20a686cd9af1049326850ef2264ce"
+            },
+            {
+              "purpose": "fresh-a/plan/target/form/self/6",
+              "request_sha256": "8326ef8bf9636f50d6a9f29dd6cd5967c7f3699fd24097b7445e62b9fa76d9d5",
+              "settings": {
+                "max_tokens": 8192,
+                "temperature": 0,
+                "seed": 20261124
+              },
+              "finish_reason": "stop",
+              "visible_characters": 59,
+              "completion_tokens": 2605,
+              "reported_reasoning_tokens": 3264,
+              "provider": "Relace",
+              "response_sha256": "f0ce33ca21cb02445a9d4f5ad548e68b76d336665a60542513beca4c76a603dc"
+            },
+            {
+              "purpose": "fresh-a/plan/target/form/self/7",
+              "request_sha256": "ae455dec78c1d420965490b0c8394cd7d8c08637032d481991bca2e5222778b6",
+              "settings": {
+                "max_tokens": 8192,
+                "temperature": 0,
+                "seed": 20261124
+              },
+              "finish_reason": "stop",
+              "visible_characters": 59,
+              "completion_tokens": 3290,
+              "reported_reasoning_tokens": 4019,
+              "provider": "Relace",
+              "response_sha256": "04f9e94e7d9ae9fe38a1954df4b12095aed0cec98af8afe90b5a5bc941d71716"
+            },
+            {
+              "purpose": "fresh-a/plan/target/form/self/8",
+              "request_sha256": "c180be938316cefbb9880f269ae92126cc048961d762c786e488274fab035474",
+              "settings": {
+                "max_tokens": 8192,
+                "temperature": 0,
+                "seed": 20261124
+              },
+              "finish_reason": "stop",
+              "visible_characters": 57,
+              "completion_tokens": 5540,
+              "reported_reasoning_tokens": 6886,
+              "provider": "Relace",
+              "response_sha256": "433abf72ad41a818d259204bbefaa87db3f9a6310027e6fd326bd4adfe62575e"
+            },
+            {
+              "purpose": "fresh-a/plan/target/form/self/9",
+              "request_sha256": "b02b116bf296a2d6fbbac65441627ebdbcaed30777c8ee70f154d2811c30641c",
+              "settings": {
+                "max_tokens": 8192,
+                "temperature": 0,
+                "seed": 20261124
+              },
+              "finish_reason": "stop",
+              "visible_characters": 59,
+              "completion_tokens": 1736,
+              "reported_reasoning_tokens": 2118,
+              "provider": "Relace",
+              "response_sha256": "d9689e73f9217a846202b5cbfedf1a750dd6b36d29b7a63d3c9dc61a6685a88a"
+            }
+          ]
+        }
+      },
+      "fresh-b": {
+        "build": {
+          "calls": 2,
+          "unsettled": 0,
+          "settled_microusd": 8465,
+          "exposure_microusd": 8465,
+          "finish_reasons": {
+            "stop": 2
+          },
+          "deliveries": [
+            {
+              "purpose": "fresh-b/build/build/form/1",
+              "request_sha256": "bd1846fd087faeb6beb9c51f9f003eaeb5f321debfbd0b82e83963255a10b564",
+              "settings": {
+                "max_tokens": 16000,
+                "temperature": 0,
+                "seed": 20261125,
+                "reasoning": {
+                  "enabled": false
+                }
+              },
+              "finish_reason": "stop",
+              "visible_characters": 30209,
+              "completion_tokens": 8587,
+              "reported_reasoning_tokens": 0,
+              "provider": "Relace",
+              "response_sha256": "3a6fc0d3ec20d26fda671a6275e2e240fb08bdafe5ef797273420127818c4fc7"
+            },
+            {
+              "purpose": "fresh-b/build/build/form/2",
+              "request_sha256": "6c7ec8d0f0f6df202d8e7b6e3eb47a8660b013b2dbaf103a8e0c5309d4921956",
+              "settings": {
+                "max_tokens": 16000,
+                "temperature": 0,
+                "seed": 20261125,
+                "reasoning": {
+                  "enabled": false
+                }
+              },
+              "finish_reason": "stop",
+              "visible_characters": 30390,
+              "completion_tokens": 8626,
+              "reported_reasoning_tokens": 0,
+              "provider": "Relace",
+              "response_sha256": "6c6b1fd32bf17d16e129109dc2e087e2fa44432e14bcf96a03ea020fecf79764"
+            }
+          ]
+        },
+        "plan": {
+          "calls": 0,
+          "unsettled": 0,
+          "settled_microusd": 0,
+          "exposure_microusd": 0,
+          "finish_reasons": {},
+          "deliveries": []
+        }
+      }
+    },
+    "primary": {
+      "calls": 24,
+      "unsettled": 0,
+      "settled_microusd": 47812,
+      "exposure_microusd": 47812
+    },
+    "supplement": {
+      "calls": 0,
+      "unsettled": 0,
+      "settled_microusd": 0,
+      "exposure_microusd": 0
+    }
+  },
+  "pilot_and_confirmation_billing": {
+    "calls": 124,
+    "unsettled_calls": 0,
+    "settled_usd": 0.166413,
+    "exposure_usd": 0.166413
+  }
+}

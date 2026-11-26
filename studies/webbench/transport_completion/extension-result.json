@@ -1,0 +1,2393 @@
+{
+  "registration": "358dacb21e451e5eb021f81685c0127fdccbbb9754ffe460d164406e1435495d",
+  "restored_sha256": "a446acd6cf80da71a504351b216fa1940ed075e52ed0c74951a38e32424f789f",
+  "records": [
+    {
+      "project": "table",
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "arm": "direct",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 5,
+      "targets": [
+        16,
+        17
+      ],
+      "stage": "original",
+      "observations": {
+        "16": false,
+        "17": false
+      }
+    },
+    {
+      "project": "table",
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "arm": "human",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 18,
+      "targets": [
+        16,
+        17
+      ],
+      "stage": "original",
+      "observations": {
+        "16": true,
+        "17": true
+      }
+    },
+    {
+      "project": "table",
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "arm": "gpt5-library",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 3,
+      "targets": [
+        16,
+        17
+      ],
+      "stage": "original",
+      "observations": {
+        "16": false,
+        "17": false
+      }
+    },
+    {
+      "project": "table",
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "arm": "self",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 2,
+      "targets": [
+        16,
+        17
+      ],
+      "stage": "typed",
+      "source": "artifacts/public-integration-20261125/table/mistral",
+      "source_stage": "studies/webbench/typed_components/integration-result.json",
+      "rows": [
+        {
+          "task": 16,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "3b4b946ccb4fcaf92ce61e2442dacbfb86cd3ef876f1cd89c823badc5e3a7059"
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "3b4b946ccb4fcaf92ce61e2442dacbfb86cd3ef876f1cd89c823badc5e3a7059"
+        },
+        {
+          "task": 17,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "dd27e5dff3368324454710af6f83562a8db4e337265a56fcf26e8196cf51eb7b"
+        },
+        {
+          "task": 17,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "dd27e5dff3368324454710af6f83562a8db4e337265a56fcf26e8196cf51eb7b"
+        }
+      ],
+      "seal_sha256": "21f528d8636b66a9fa311ef6a29fdcd7c9a37af17314e1b256407d745d13a7cd",
+      "observations": {
+        "16": false,
+        "17": false
+      }
+    },
+    {
+      "project": "table",
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "arm": "direct",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        13,
+        14,
+        20
+      ],
+      "initial_passes": 3,
+      "targets": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "stage": "original",
+      "observations": {
+        "5": false,
+        "6": false,
+        "7": false,
+        "8": false,
+        "9": false,
+        "10": false,
+        "11": false,
+        "12": false,
+        "15": false,
+        "16": false,
+        "17": false,
+        "18": false,
+        "19": false
+      }
+    },
+    {
+      "project": "table",
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "arm": "human",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        13,
+        14,
+        20
+      ],
+      "initial_passes": 5,
+      "targets": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "stage": "menu",
+      "package": "artifacts/backbone-matrix-20261124/inputs/table/human.json",
+      "rows": [
+        {
+          "task": 5,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "26844216fd3b05ceaba1e5ed1e91fa15b93013c51f90cc3c8f13d349f7242da3"
+        },
+        {
+          "task": 5,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "b1086cce25cb6a1a05675179c89ff9c581d03fe8a3ff085bb7980e3051b78168"
+        },
+        {
+          "task": 6,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "d28254fdc45bbab51fb8bde9716fd77fd82d2bc333f3b316055d4b849526332d"
+        },
+        {
+          "task": 6,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "afbdeaadd128ec2923d1672e41fb64571da54e1316e6d5bde8c29110e910c013"
+        },
+        {
+          "task": 7,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "1e10a9d91b85ac21217b1952927a5cee4e25155dda46bcb7dc79b0d4e3216280"
+        },
+        {
+          "task": 7,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "4f95d7223a807fdcaf26ade8f87bcf66a11d9572fcdc882c50c85b0905133c47"
+        },
+        {
+          "task": 8,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "1d1ba3cc4eddfcd6f915795e18fa6108d8539aacefcdb181d7d1c965f02205a1"
+        },
+        {
+          "task": 8,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "ac721d513a08290430c7d04fa879b8a239fe7df0e859fa6d0bfc3387ab90e63f"
+        },
+        {
+          "task": 9,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "bf7751b0839a54935d100255d4df78d5aba4c25e3577700686f6307fd2b58a10"
+        },
+        {
+          "task": 9,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "14e41f26e2fa257b503efc577755b0a9b691f0d470d682f4f21c3d8ee448faec"
+        },
+        {
+          "task": 10,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "dfd9cb1889840499869c467d2a46ee2f326399492a541835c6be3ea1d91aba45"
+        },
+        {
+          "task": 10,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "b346a248bfdab6c81eaf863625443fc118dcf8fe0cbe247f46b24d02f6021d83"
+        },
+        {
+          "task": 11,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "08800a04a4b15a20ebf7b6eb61354a5257a9666f938196eeb68fa003b6585139"
+        },
+        {
+          "task": 11,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "fbf82fdf2db70f490518755ca642ea8b66d29063feb45a7873b9c84f3d1f1ed3"
+        },
+        {
+          "task": 12,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "f935f835ad2e568d526e005923ea99e06147076fd91129cf058f67040d47095a"
+        },
+        {
+          "task": 12,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "26a55de98b995891d4e51eeae16dfe79743542f28e07bb65c7c9133a2356d9a4"
+        },
+        {
+          "task": 15,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b11cf1655a2b3fd12f13a496757e24374d1791c2bd4f783442017f8d79f325eb"
+        },
+        {
+          "task": 15,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "bd16553a1023397df285c0a005928c78fad41ba79d5bace5ca49b6f76f7f1fd9"
+        },
+        {
+          "task": 16,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b6f476466b00502cdb5b3a37fbdf1c8a158d5ca007255496f49dbfdb5ee6d0a9"
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "e557c45c749aaa630324df53c4b7df1b2a99054f3d52c8f4e022f07489dec34a"
+        },
+        {
+          "task": 17,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "97abdd8d29eab47bcb13be0c804ea200b83bd86151f1d5e782081cb0da2670e1"
+        },
+        {
+          "task": 17,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "0d0073d16093d4b9ace342ce85f5c62d7230bb375d4f5107c3f705860e0f9102"
+        },
+        {
+          "task": 18,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "1b60ce719d851ff58f24e40b631ebf03f394522464f21756868e5de62be4c4ca"
+        },
+        {
+          "task": 18,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "0b8fcc3f5847e823b85757c460f4e7c0607138223c528e94b74dce2c979a2064"
+        },
+        {
+          "task": 19,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "1e490f0e79e7a733269fc3f825fe6e1fa6277c72aa75065c6dfa4f8af2e594f3"
+        },
+        {
+          "task": 19,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "84b6cc111b20384344bfedd4b5a1b7ca8f6f6377d326e29402e26e4effb4948e"
+        }
+      ],
+      "seal_sha256": "422062a3829718f32e3d68710995914be716fe220b09f842e7d8ca77e18f5bc8",
+      "observations": {
+        "5": true,
+        "6": true,
+        "7": true,
+        "8": false,
+        "9": false,
+        "10": true,
+        "11": true,
+        "12": false,
+        "15": false,
+        "16": false,
+        "17": false,
+        "18": false,
+        "19": false
+      }
+    },
+    {
+      "project": "table",
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "arm": "gpt5-library",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        13,
+        14,
+        20
+      ],
+      "initial_passes": 1,
+      "targets": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "stage": "menu",
+      "package": "artifacts/backbone-matrix-20261124/inputs/table/gpt5-library.json",
+      "rows": [
+        {
+          "task": 5,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "809dbd9f3b9a1a18e8eca6da7d76270ae7848d617a48d4ef6d2a82072cb5d815"
+        },
+        {
+          "task": 5,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ef7a992370ecfa4e64ce9ee24f7b71a8a75012baf3ce0d093348217dafb26de1"
+        },
+        {
+          "task": 6,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "38f0ff1fa841f709fd11ba8afecf125199d8cc847394e114ecc8afc9e8fe5fb0"
+        },
+        {
+          "task": 6,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "6969a2636582a22cfec80006540ca849a8fb56be43f6f7ef9e5d01a74c982845"
+        },
+        {
+          "task": 7,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "47feb7992e1b8330ac744aaf47e966990bb96fb1bef918b22b17887eec6118c6"
+        },
+        {
+          "task": 7,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "245fce8744a75eb5f2161b7146a209810879d3db9fd3ee0fcb201dcfca1a1b2e"
+        },
+        {
+          "task": 8,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "4eca77fa05fd0940c3b398571d759ae37b976569c8379a24e8fc76e1e7f210c2"
+        },
+        {
+          "task": 8,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "badfb54e44ac67846417fb7f5a7855d47aff14dbb5144d424fe6c5e94ec33b3a"
+        },
+        {
+          "task": 9,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e1a251a793df5ca2fc20ade0005ebd75e1c6fdf82e4157c43fe279b777ddfad3"
+        },
+        {
+          "task": 9,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b5f77a103ff70c312801c070cde449a7ed7da4865a6819657a4cc58d4204791e"
+        },
+        {
+          "task": 10,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ed2ccaafd111c4ade03757ac627d62eb05aba0f4016668c9e815aad928bbcd1f"
+        },
+        {
+          "task": 10,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c45caf1ff141f3730ef6b8e481310ed8e7875b76f121850b634f0dafce6704ab"
+        },
+        {
+          "task": 11,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "3938583fcdd5f7555be16988b944ca943610ad25a392fabb4ac0a0d1487d08c1"
+        },
+        {
+          "task": 11,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "32a4334a3ce82d2db151ac442b3f1eb325a3bae8b6fa2cc04322f66bb393f9bd"
+        },
+        {
+          "task": 12,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "85a5586753baedb50286d6aba05b27e81cbedc52bd15e84ff0c50523bc96bc8f"
+        },
+        {
+          "task": 12,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "6439e1c5dcf31c43cef36dac824af7c2424c529335b17b257be4eada389fed3d"
+        },
+        {
+          "task": 15,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2d7fe87361c8562e204d0e915cc04255af9065a8571e9a22dd03adbe8fbc461a"
+        },
+        {
+          "task": 15,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "4fc512a907d3284284b7dcee6895e29b701edc0c33409dbf2fd57121a56fe503"
+        },
+        {
+          "task": 16,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c29c9465726c657f747eca4dabdb2b3a34cf537b3cb589d64f1ec0d67191b72e"
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "f097c401343c63b84bca2e3d692d9e6114caa4ecea22096f403286c08211698a"
+        },
+        {
+          "task": 17,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b4f482de08cfc6704264a6192dd7326b7ca6a25406dadfd1a2e1c7662f9b86d0"
+        },
+        {
+          "task": 17,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "cc5bc8b34e4936ef62bdb21f8cc18ddfbed419df743df929bdea772a8575fa09"
+        },
+        {
+          "task": 18,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d955c6919027798f0337d7d99ef85c6828b600dc2576e7b47782ff510c7c4692"
+        },
+        {
+          "task": 18,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "23bebb586eeef15153d629ac9730544b96185e44ebead689a15dc50bb4d0a878"
+        },
+        {
+          "task": 19,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "8a019a06084b6ebaf7724fc6bcbefd7cb805994a3aa99f1c7fc48fd280d8a4ed"
+        },
+        {
+          "task": 19,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "20cbd524b1906314b8303321a71c5f66af28a6d51fa0301d17ce616a76a7a5f8"
+        }
+      ],
+      "seal_sha256": "f45d52ae76dce3e4e883d7ae43f19daaec50e84e2d04412e3c01b672d9795dd2",
+      "observations": {
+        "5": false,
+        "6": false,
+        "7": false,
+        "8": false,
+        "9": false,
+        "10": false,
+        "11": true,
+        "12": true,
+        "15": false,
+        "16": false,
+        "17": false,
+        "18": false,
+        "19": false
+      }
+    },
+    {
+      "project": "table",
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "arm": "self",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        13,
+        14,
+        20
+      ],
+      "initial_passes": 2,
+      "targets": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "stage": "typed",
+      "source": "artifacts/typed-components-20261125/table/qwen",
+      "source_stage": "studies/webbench/typed_components/result.json",
+      "rows": [
+        {
+          "task": 5,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "3e9ddfc145c5fe22c6bee99077743ac0ecd9139b8891c0ad511a88ebaa4cd1d7"
+        },
+        {
+          "task": 5,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "3e9ddfc145c5fe22c6bee99077743ac0ecd9139b8891c0ad511a88ebaa4cd1d7"
+        },
+        {
+          "task": 6,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ee1f15c174c43ea041a76763dd6724b3b8b01395fbbcb7c13ec113b0a25bb6b7"
+        },
+        {
+          "task": 6,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ee1f15c174c43ea041a76763dd6724b3b8b01395fbbcb7c13ec113b0a25bb6b7"
+        },
+        {
+          "task": 7,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d594c22dcb24acea3d8fda4e788dbdbbfaff3bcd166c4dc049e145bbe4663948"
+        },
+        {
+          "task": 7,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d594c22dcb24acea3d8fda4e788dbdbbfaff3bcd166c4dc049e145bbe4663948"
+        },
+        {
+          "task": 8,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "de9d51d680ce808abc924e8a6f7a418fae0d47435eedbfd7ebf11aa2aab46fff"
+        },
+        {
+          "task": 8,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "de9d51d680ce808abc924e8a6f7a418fae0d47435eedbfd7ebf11aa2aab46fff"
+        },
+        {
+          "task": 9,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "94cd8345149197d41d6ed637e28390d7a87580eea98c071d4ebb8bfef721fc58"
+        },
+        {
+          "task": 9,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "94cd8345149197d41d6ed637e28390d7a87580eea98c071d4ebb8bfef721fc58"
+        },
+        {
+          "task": 10,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "80b4f97254d2e7d3d30022aba3efeb9a05a4d127fcb0512adc5ba7f4bc56b6f9"
+        },
+        {
+          "task": 10,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "80b4f97254d2e7d3d30022aba3efeb9a05a4d127fcb0512adc5ba7f4bc56b6f9"
+        },
+        {
+          "task": 11,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e151fdc57e718af3dc2c414ea0566bfda237b09ed872328fefeb222e335a3869"
+        },
+        {
+          "task": 11,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e151fdc57e718af3dc2c414ea0566bfda237b09ed872328fefeb222e335a3869"
+        },
+        {
+          "task": 12,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "8d0643dd61d407f07c88659b5df674b4b05c511e71d26d655e966f80b481740e"
+        },
+        {
+          "task": 12,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "8d0643dd61d407f07c88659b5df674b4b05c511e71d26d655e966f80b481740e"
+        },
+        {
+          "task": 15,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a81e1a4cd65a51817e9faccf304a3c54dc428807dcea19cd5dbd2a5ef6809947"
+        },
+        {
+          "task": 15,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a81e1a4cd65a51817e9faccf304a3c54dc428807dcea19cd5dbd2a5ef6809947"
+        },
+        {
+          "task": 16,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c6422c728e766c2b08a1559c628eeb5d073533b04b343017824cf5652638d1ef"
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c6422c728e766c2b08a1559c628eeb5d073533b04b343017824cf5652638d1ef"
+        },
+        {
+          "task": 17,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a627972831ed178b28ab752a29237b2a8ede635370624bdb9e942253ffa6fc75"
+        },
+        {
+          "task": 17,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a627972831ed178b28ab752a29237b2a8ede635370624bdb9e942253ffa6fc75"
+        },
+        {
+          "task": 18,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "4f484be9d83a5e3f115df837325e7a4dadbd9a0ac877a1f265a317d8778224c5"
+        },
+        {
+          "task": 18,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "4f484be9d83a5e3f115df837325e7a4dadbd9a0ac877a1f265a317d8778224c5"
+        },
+        {
+          "task": 19,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "02e7fc9121173f3fdd3255cb24dde3aa3fd7d74d6fd004f484ced7fb9580e136"
+        },
+        {
+          "task": 19,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "02e7fc9121173f3fdd3255cb24dde3aa3fd7d74d6fd004f484ced7fb9580e136"
+        }
+      ],
+      "seal_sha256": "2a72fb52645581a51b5c85c287bb99c60b8ba37ef721a0af7557a365bd8b2407",
+      "observations": {
+        "5": false,
+        "6": false,
+        "7": false,
+        "8": false,
+        "9": false,
+        "10": true,
+        "11": false,
+        "12": false,
+        "15": false,
+        "16": false,
+        "17": false,
+        "18": false,
+        "19": false
+      }
+    },
+    {
+      "project": "svg-chart",
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "arm": "direct",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 3,
+      "targets": [
+        16
+      ],
+      "stage": "original",
+      "observations": {
+        "16": false
+      }
+    },
+    {
+      "project": "svg-chart",
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "arm": "human",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 12,
+      "targets": [
+        16
+      ],
+      "stage": "original",
+      "observations": {
+        "16": true
+      }
+    },
+    {
+      "project": "svg-chart",
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "arm": "gpt5-library",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 7,
+      "targets": [
+        16
+      ],
+      "stage": "original",
+      "observations": {
+        "16": null
+      }
+    },
+    {
+      "project": "svg-chart",
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "arm": "self",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 5,
+      "targets": [
+        16
+      ],
+      "stage": "typed",
+      "source": "artifacts/svg-admission-20261125/svg-chart/mistral",
+      "source_stage": "studies/webbench/typed_components/svg-admission-result.json",
+      "rows": [
+        {
+          "task": 16,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "11ee7f13b592d1bf96b4e49140604711c8896dfa1f98da2efe77492e4da0943f"
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d7f8601df741808fa7e8a184461c30aee889f534c2c06b4243d58027dbe68f33"
+        }
+      ],
+      "seal_sha256": "69500065a7a005bb541f1d64aeda933beaa49fd0aeaff505b6803e908b0205ad",
+      "observations": {
+        "16": false
+      }
+    },
+    {
+      "project": "svg-chart",
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "arm": "direct",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 0,
+      "targets": [
+        4,
+        7
+      ],
+      "stage": "original",
+      "observations": {
+        "4": false,
+        "7": false
+      }
+    },
+    {
+      "project": "svg-chart",
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "arm": "human",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 11,
+      "targets": [
+        4,
+        7
+      ],
+      "stage": "original",
+      "observations": {
+        "4": true,
+        "7": false
+      }
+    },
+    {
+      "project": "svg-chart",
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "arm": "gpt5-library",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 15,
+      "targets": [
+        4,
+        7
+      ],
+      "stage": "original",
+      "observations": {
+        "4": true,
+        "7": true
+      }
+    },
+    {
+      "project": "svg-chart",
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "arm": "self",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 6,
+      "targets": [
+        4,
+        7
+      ],
+      "stage": "typed",
+      "source": "artifacts/typed-components-20261125/svg-chart/qwen",
+      "source_stage": "studies/webbench/typed_components/result.json",
+      "rows": [
+        {
+          "task": 4,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "62e766ae1b4cef31746b866b0d24b4459b2e724be775ab130c5c684945b47989"
+        },
+        {
+          "task": 4,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "62e766ae1b4cef31746b866b0d24b4459b2e724be775ab130c5c684945b47989"
+        },
+        {
+          "task": 7,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0e0102ed2fb92406771be7425b93bb9f62ed361c2be2e3e169cbd5e89a09bb70"
+        },
+        {
+          "task": 7,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0e0102ed2fb92406771be7425b93bb9f62ed361c2be2e3e169cbd5e89a09bb70"
+        }
+      ],
+      "seal_sha256": "f2db221bc664644d626a616f7898de32b0c28dcaa9372eaa45eb1fae4394af2d",
+      "observations": {
+        "4": false,
+        "7": false
+      }
+    },
+    {
+      "project": "svg-chart",
+      "tag": "deepseek-pro",
+      "model": "deepseek/deepseek-v4-pro-0813",
+      "arm": "direct",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 3,
+      "targets": [
+        13
+      ],
+      "stage": "original",
+      "observations": {
+        "13": false
+      }
+    },
+    {
+      "project": "svg-chart",
+      "tag": "deepseek-pro",
+      "model": "deepseek/deepseek-v4-pro-0813",
+      "arm": "human",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 19,
+      "targets": [
+        13
+      ],
+      "stage": "original",
+      "observations": {
+        "13": true
+      }
+    },
+    {
+      "project": "svg-chart",
+      "tag": "deepseek-pro",
+      "model": "deepseek/deepseek-v4-pro-0813",
+      "arm": "gpt5-library",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 16,
+      "targets": [
+        13
+      ],
+      "stage": "original",
+      "observations": {
+        "13": true
+      }
+    },
+    {
+      "project": "svg-chart",
+      "tag": "deepseek-pro",
+      "model": "deepseek/deepseek-v4-pro-0813",
+      "arm": "self",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 9,
+      "targets": [
+        13
+      ],
+      "stage": "typed",
+      "source": "artifacts/typed-components-20261125/svg-chart/deepseek-pro",
+      "source_stage": "studies/webbench/typed_components/result.json",
+      "rows": [
+        {
+          "task": 13,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "a000958f8a15f64d2ac47f999911d8597861296132068f3e7a8f2fdbfae43886"
+        },
+        {
+          "task": 13,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "a000958f8a15f64d2ac47f999911d8597861296132068f3e7a8f2fdbfae43886"
+        }
+      ],
+      "seal_sha256": "4d03a1309f3b7f7d5644a22d58c235b2a944eb4817906839538036f034e4fef8",
+      "observations": {
+        "13": true
+      }
+    },
+    {
+      "project": "form",
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "arm": "direct",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 0,
+      "targets": [
+        13
+      ],
+      "stage": "original",
+      "observations": {
+        "13": false
+      }
+    },
+    {
+      "project": "form",
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "arm": "human",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 8,
+      "targets": [
+        13
+      ],
+      "stage": "original",
+      "observations": {
+        "13": true
+      }
+    },
+    {
+      "project": "form",
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "arm": "gpt5-library",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 2,
+      "targets": [
+        13
+      ],
+      "stage": "original",
+      "observations": {
+        "13": true
+      }
+    },
+    {
+      "project": "form",
+      "tag": "qwen9",
+      "model": "qwen/qwen3.5-9b",
+      "arm": "self",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 4,
+      "targets": [
+        13
+      ],
+      "stage": "typed",
+      "source": "artifacts/typed-components-20261125/form/qwen9",
+      "source_stage": "studies/webbench/typed_components/result.json",
+      "rows": [
+        {
+          "task": 13,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "506ae52adde826737ba172b0a82dc9851adf8a542331b794cfc7f0b4bc514dba"
+        },
+        {
+          "task": 13,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e13b5d10b34d1d97b3c25f6b7cf7e698bb38a7c9943ffdbaa65c4209857cfa0b"
+        }
+      ],
+      "seal_sha256": "3c81b77f8fb8655e2d128801769f59d9c1fc7a2687c8898ef2ca4fd8aba8fe21",
+      "observations": {
+        "13": false
+      }
+    },
+    {
+      "project": "form",
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "arm": "direct",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 2,
+      "targets": [
+        16
+      ],
+      "stage": "original",
+      "observations": {
+        "16": false
+      }
+    },
+    {
+      "project": "form",
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "arm": "human",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 19,
+      "targets": [
+        16
+      ],
+      "stage": "original",
+      "observations": {
+        "16": true
+      }
+    },
+    {
+      "project": "form",
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "arm": "gpt5-library",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 1,
+      "targets": [
+        16
+      ],
+      "stage": "original",
+      "observations": {
+        "16": null
+      }
+    },
+    {
+      "project": "form",
+      "tag": "mistral",
+      "model": "mistralai/mistral-small-3.2-24b-instruct",
+      "arm": "self",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 5,
+      "targets": [
+        16
+      ],
+      "stage": "typed",
+      "source": "artifacts/public-integration-20261125/form/mistral",
+      "source_stage": "studies/webbench/typed_components/integration-result.json",
+      "rows": [
+        {
+          "task": 16,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2ae489a873e788a89e28fcc1e7e4c7369f25ff8738644bcd07f5ea8fac0f5a48"
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0e2f195eab7562b9e8b9f36203423b21b61b1ef858266fa226f724df35b4068b"
+        }
+      ],
+      "seal_sha256": "bc0b1ce970202b83d63752f05bf7ca8fa5cf062d926b0ebac81e203d49bff5ad",
+      "observations": {
+        "16": false
+      }
+    },
+    {
+      "project": "form",
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "arm": "direct",
+      "initial_targets": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 5,
+      "targets": [
+        3,
+        5,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "stage": "original",
+      "observations": {
+        "3": true,
+        "5": true,
+        "8": true,
+        "9": false,
+        "10": false,
+        "11": false,
+        "12": false,
+        "13": true,
+        "14": false,
+        "15": false,
+        "16": false
+      }
+    },
+    {
+      "project": "form",
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "arm": "human",
+      "initial_targets": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 7,
+      "targets": [
+        3,
+        5,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "stage": "original",
+      "observations": {
+        "3": false,
+        "5": true,
+        "8": true,
+        "9": true,
+        "10": true,
+        "11": true,
+        "12": true,
+        "13": false,
+        "14": true,
+        "15": false,
+        "16": true
+      }
+    },
+    {
+      "project": "form",
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "arm": "gpt5-library",
+      "initial_targets": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 7,
+      "targets": [
+        3,
+        5,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "stage": "menu",
+      "package": "artifacts/backbone-form-20261124/inputs/form/gpt5-library.json",
+      "rows": [
+        {
+          "task": 3,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "43d6333b7502f4fd7fe80cab11bf16bd6681949defdf8842b53798cf9795cc9e"
+        },
+        {
+          "task": 3,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b6ad69b379c7dec60b309bdfa00939bd45df5467f18e1ba3923c56379d9cc034"
+        },
+        {
+          "task": 5,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "cf46bded6fdd745dae9875dfda1480e4d2afebd8ecb22ae711121fc7a96f57af"
+        },
+        {
+          "task": 5,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "bed5e329adb86b103a4631969fcda8218a9d054601c3f7286e918a966fc1ff74"
+        },
+        {
+          "task": 8,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "e72b66dc398b29ed1e6fd521f4910f4d35ba62a65410f906edb5a0f3abcc571c"
+        },
+        {
+          "task": 8,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "6349e9529c9cd71c801d3f1426f6693ac76c5f23973a1323d8bd8252dd3605b3"
+        },
+        {
+          "task": 9,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "d710c84852496c901821571ce7784365a21eca55bc863a81fe7c0e84b0c4d05c"
+        },
+        {
+          "task": 9,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0dfd024149784f5152faa143c9272b64da811a6355da1b013efba904e85a35bf"
+        },
+        {
+          "task": 10,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "6ac15ed124a916af28484e14205ff6141cb4221201fb307c289bdbe1e196917e"
+        },
+        {
+          "task": 10,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "722db9ca3dc4d1cc154c93058418368ebe925849957d1f4addf745633026c8a2"
+        },
+        {
+          "task": 11,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ded4961b3f6e43ce0ee9a9ba2c091a971eb96052ff3fe03c6f91ddb581a0c69a"
+        },
+        {
+          "task": 11,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c3294f3814820b4f9957a677327eceb666c27499218de6ce119318ee1f39f052"
+        },
+        {
+          "task": 12,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2198f0f51a9a0a2149a0d838f038fbcce9d939048713a2d4257dd362b96e2987"
+        },
+        {
+          "task": 12,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "45a5db72f9b370dd9a8e36daf1d7b923b29eab29148e26bea0fd6d1baaedbbe4"
+        },
+        {
+          "task": 13,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "f7fbe415c27a6108d4a2ec1143e14ced301d6194fd45a9c1ea57ba67d4ca30e6"
+        },
+        {
+          "task": 13,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d35005a8a76d50a9e98d21a2000956d1af9e59e2c844ca010c9d647944bd5e1b"
+        },
+        {
+          "task": 14,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "1a0d7724602047527f39f20cd6ae828254c0b8b406b59c9aeeaabb1a40d3eeaf"
+        },
+        {
+          "task": 14,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d173bfa5f837f330ec30759ebe3e40fca24723a5f8b2b29c063cebe4319f5da0"
+        },
+        {
+          "task": 15,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "4a459740eae268cbc0f408bcab8577cbf8f87b54527f1602dff3ae98b64a7156"
+        },
+        {
+          "task": 15,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ac756a680d415f681e19922978edd21b8a0167eae1dc096d1c446e7eff1a0b9a"
+        },
+        {
+          "task": 16,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "256ec5ec698c67b7ab058971ec7e6722b760baf9c5b46494cc3141cc5aae2d3d"
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "72789dd02025d5c7036c1d921dce6153dfa5fbf489ed9c6d3b8c5539e01734e8"
+        }
+      ],
+      "seal_sha256": "6e65cf8823706686257f0de25231c65d5ac28b73411c2658e4a1b8336f46982c",
+      "observations": {
+        "3": true,
+        "5": true,
+        "8": true,
+        "9": true,
+        "10": true,
+        "11": false,
+        "12": false,
+        "13": true,
+        "14": true,
+        "15": true,
+        "16": false
+      }
+    },
+    {
+      "project": "form",
+      "tag": "qwen",
+      "model": "qwen/qwen3-coder-30b-a3b-instruct",
+      "arm": "self",
+      "initial_targets": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        17,
+        18,
+        19,
+        20
+      ],
+      "initial_passes": 4,
+      "targets": [
+        3,
+        5,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "stage": "typed",
+      "source": "artifacts/typed-components-20261125/form/qwen",
+      "source_stage": "studies/webbench/typed_components/result.json",
+      "rows": [
+        {
+          "task": 3,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "e9d6c99ddca6ab2307eba30ab1d60c43723316fbfa21715185f15d4e937a192e"
+        },
+        {
+          "task": 3,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "eaa9ce934c44e11b235bba0f3653021f3d587826508ab8561e0a99547afebd4c"
+        },
+        {
+          "task": 5,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "f1324c822dfec78ab501263ce81df98a50b1428f310f89583b3d94ba25b8bef0"
+        },
+        {
+          "task": 5,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "cbfee684a4f07a1f914718ae405d11ed75faf9b3bb6b179fa1afc767ea8e3c65"
+        },
+        {
+          "task": 8,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "6bee66fb84e6c5475c037bc6578a52e1dfdc2751450d7cc6c6e3531a6a15c16d"
+        },
+        {
+          "task": 8,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "972c681f11336bd636a4052b7b0c3c4f124846ae807533b971aa0e062e40db2b"
+        },
+        {
+          "task": 9,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "666143ac51ca0236e092787f8cc2edfeeb5b8449592114445b32cf06aaf5e0dc"
+        },
+        {
+          "task": 9,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "67e360de728396460f630288818574eba371d24416bb135e22bdcaf6c36e5d42"
+        },
+        {
+          "task": 10,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d312bb28e652342455f1932eef26c3243396cc6179ecedf64222447e19840f7f"
+        },
+        {
+          "task": 10,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "31ff17efd7248a66fbccd81cdd4c6c25fecb6093427b18d3c9c18ccaf8da7b8b"
+        },
+        {
+          "task": 11,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b8eff989c06a5fddad45197595d433ed6b83d67ea43544d3ca679c12f090b209"
+        },
+        {
+          "task": 11,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b4d06122ccbeb7248c2c9bd906d5e25de7c113d7a01c3f32c6bc4887b2a5af2c"
+        },
+        {
+          "task": 12,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b33a88e5c9512ec1a6dfcd2433083f72fdc53ff129da5a84ae24f950235b3997"
+        },
+        {
+          "task": 12,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b6cbc6f2d573c97ac179175dbe4768239482d0f264206a6f99880abf09c0c458"
+        },
+        {
+          "task": 13,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c24c8bedd2990e621600972a5b36c49eaca8e58896cefbd83c9b7414bb7ca43d"
+        },
+        {
+          "task": 13,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "7e8cb57e44d71a130d5d771b01547c99ce9b2319010a724a9ee5c0b805aade20"
+        },
+        {
+          "task": 14,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "61d320cb58282977434ebefbd80bddb6bbec3823add37268b801d166fb43b629"
+        },
+        {
+          "task": 14,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "5cae99df283b590e2e734ad2a5b72a6dfd6ec43eca1e44020102d0ea2b1cbf34"
+        },
+        {
+          "task": 15,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0b57f72497b27bb433375d5e7c618cbff9946ea7b64bbb8ca53759146a54a8bc"
+        },
+        {
+          "task": 15,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "4ebf7a768159e020eb11b850ad876113bdf2f11698aac0616bc0aecfba18d5e7"
+        },
+        {
+          "task": 16,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "492ee8d9c1adb4b6e895fbae6fd4243c1144d12defe89a06d0b4f474fbf34638"
+        },
+        {
+          "task": 16,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "8b38bd692c8688da621842cb9dc21f97ab7ad714df098aa82447ca00ed8cc134"
+        }
+      ],
+      "seal_sha256": "b33c7aac241dea8435ac66b6cb87e08b9425330639a1093b56ad719845af46d6",
+      "observations": {
+        "3": true,
+        "5": true,
+        "8": true,
+        "9": false,
+        "10": false,
+        "11": false,
+        "12": false,
+        "13": false,
+        "14": false,
+        "15": false,
+        "16": false
+      }
+    },
+    {
+      "project": "form",
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "arm": "direct",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "initial_passes": 10,
+      "targets": [
+        19,
+        20
+      ],
+      "stage": "original",
+      "observations": {
+        "19": false,
+        "20": false
+      }
+    },
+    {
+      "project": "form",
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "arm": "human",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "initial_passes": 17,
+      "targets": [
+        19,
+        20
+      ],
+      "stage": "original",
+      "observations": {
+        "19": true,
+        "20": true
+      }
+    },
+    {
+      "project": "form",
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "arm": "gpt5-library",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "initial_passes": 13,
+      "targets": [
+        19,
+        20
+      ],
+      "stage": "original",
+      "observations": {
+        "19": true,
+        "20": false
+      }
+    },
+    {
+      "project": "form",
+      "tag": "oss",
+      "model": "openai/gpt-oss-120b",
+      "arm": "self",
+      "initial_targets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "initial_passes": 10,
+      "targets": [
+        19,
+        20
+      ],
+      "stage": "original",
+      "observations": {
+        "19": false,
+        "20": false
+      }
+    }
+  ],
+  "cost": {
+    "calls": 69,
+    "settled_usd": 0.011043,
+    "exposure_usd": 0.011043,
+    "unsettled_calls": 0,
+    "cap_usd": 1.25,
+    "stop_usd": 1.25,
+    "halted": 0
+  }
+}

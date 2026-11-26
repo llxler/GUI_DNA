@@ -52,5 +52,22 @@ def verify_or_publish(write=False):
         assert result == read(OUTPUT)
 
 
+def paper_replays():
+    """Pair replay scores only where the recovered library can be deployed."""
+    models = evidence()["models"]
+    for row in read(TODO)["rows"]:
+        if row["arm"] == "bound" and row["status"] == "valid":
+            models[row["model"]]["todomvc"]["admitted"] = True
+    adjusted = read(DIRECT)["rows"]
+    for model, tasks in read(DUO)["rows"].items():
+        eligible = [task for task, row in tasks.items() if row["matched"]["status"] == "assembled"]
+        models[model]["duo"]["admitted_comparison"] = (
+            comparison({"direct": {t: adjusted[model][t]["after"] for t in eligible},
+                        "bound": {t: tasks[t]["matched"]["passed"] for t in eligible}})
+            if eligible else {"excluded_build_arms": ["bound"]}
+        )
+    return models
+
+
 if __name__ == "__main__":
     verify_or_publish()

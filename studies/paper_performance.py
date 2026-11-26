@@ -3,6 +3,12 @@
 from collections import defaultdict
 
 from studies.study_io import ROOT, read
+from studies.webgen_bench import report as functional
+from studies.public_library_transfer.source_diagnosis import report as sources
+from studies.public_library_transfer.self_refinement.suite_recovery import paper as recovery
+from studies.webbench.form.flash_self_build import paper as flash_form
+from studies import paper_component_followup as components, paper_library_capabilities as capabilities
+from studies.webbench.table.event_modules import paper as table_protocols
 
 MISTRAL = "mistralai/mistral-small-3.2-24b-instruct"
 OSS = "openai/gpt-oss-120b"
@@ -26,13 +32,15 @@ FORM_RESULTS = "backbone-form-20261124.json"
 SUITE_RESULTS = "backbone-suites-20261124.json"
 FILES = ["backbone-matrix-20261124.json", "backbone-extension-20261124.json", FORM_RESULTS, SUITE_RESULTS]
 WEB_PROJECTS = {"table": "Table editor", "svg-chart": "SVG charts", "form": "Question form"}
+FEATURE_SUITES = {"todomvc": "TodoMVC", "duo": "WebApp1K-Duo"}
+METHODS = {"direct": "Direct", "human": "Human", "gpt5-library": "GPT-5", "self": "Self"}
 
 
-def joint_scores(arms, baseline="direct"):
+def joint_scores(arms, baseline="direct", *, allow_direct_only=False):
     """Use one common intersection. Keep invalid output as False, unavailable as None."""
     known = {a: {k: v for k, v in rows.items() if v is not None} for a, rows in arms.items()}
     known = {a: rows for a, rows in known.items() if rows}
-    if baseline not in known or len(known) < 2:
+    if baseline not in known or (len(known) < 2 and not allow_direct_only):
         return None
     targets = sorted(set.intersection(*(set(rows) for rows in known.values())))
     if not targets:
@@ -46,12 +54,14 @@ def joint_scores(arms, baseline="direct"):
 
 
 def performance_matrix(data, replay, trials, today, batches=None):
-    if batches is None:
+    published = batches is None
+    if published:
         batches = [read(ROOT / "studies/results" / name) for name in FILES]
     matrix = {
         model: {"current": {}, "supplied": {}, "sources": {}, "retrospective": {}} for model in BACKBONES
     }
     observations = defaultdict(lambda: defaultdict(dict))
+    failed_builds = defaultdict(lambda: defaultdict(set))
 
     def add(model, phase, project, method, task, value):
         arm = observations[model, phase, project][method]
@@ -66,6 +76,8 @@ def performance_matrix(data, replay, trials, today, batches=None):
                     continue
                 project = row.get("project") or ("todomvc" if row["group"] == "todomvc" else "duo")
                 add(model, "current", project, row["arm"], row["task"], row["passed"])
+                if row.get("status") == "build_failed":
+                    failed_builds[model, project][row["arm"]].add(row["task"])
 
     for project, study in (("table", today["table"]), ("expression-editor", today["editor"])):
         for task, row in study["targets"].items():
@@ -107,6 +119,26 @@ def performance_matrix(data, replay, trials, today, batches=None):
         scores = joint_scores(arms)
         if scores:
             matrix[model][phase][project] = scores
+    editor = today["editor"]
+    if editor.get("provenance", {}).get("ai", {}).get("preparation_status") == "returned_artifacts_failed_public_validation":
+        source = matrix[editor["model"]]["sources"].get("expression-editor")
+        if source:
+            source["excluded_build_arms"] = [GPT5]
+    for (model, project), failed in failed_builds.items():
+        arms = observations[model, "current", project]
+        eligible = {
+            arm: {task: passed for task, passed in tasks.items() if task not in failed.get(arm, ())}
+            for arm, tasks in arms.items()
+        }
+        scores = joint_scores(eligible, allow_direct_only=True)
+        if scores:
+            scores["excluded_build_arms"] = sorted(arm for arm in failed if arm not in scores["passed"])
+            scores["failed_build_targets"] = {arm: sorted(tasks) for arm, tasks in failed.items()}
+            matrix[model].setdefault("paper_current", {})[project] = scores
+    if published:
+        original = observations[flash_form.MODEL, "current", "form"]
+        matrix[flash_form.MODEL]["panel_a_self"] = {"form": flash_form.panel_a_self(original)}
+        recovery.attach(matrix)
     for suite in replay["suites"]:
         project = {"webbench": "dom1", "todomvc": "todomvc"}[suite["suite"]]
         for row in suite["models"]:
@@ -120,41 +152,123 @@ def performance_matrix(data, replay, trials, today, batches=None):
                 "replay_stage": suite["stage"],
                 "passed": {"direct": free["final_all"], "human": dna["final_all"]},
             }
+    if published:
+        components.attach(matrix)
+        components.extend(matrix)
+        table_protocols.attach(matrix)
+        capabilities.attach(matrix)
+        pilot = read(functional.RESULT)
+        for tag, model_name in pilot['registered_models'].items():
+            group = pilot['stages'][pilot['primary_stage']]['models'][tag]
+            matrix[model_name]['webgen_functional'] = {
+                'targets': group['targets'], 'n': group['n'], 'registered': group['registered'],
+                'passed': {a: v['points'] for a, v in group['methods'].items() if 'points' in v},
+                'excluded_build_arms': [a for a,v in group['methods'].items() if v['status']=={'build_failed':43}],
+                'measure': 'functional points', 'judge': pilot['stages'][pilot['primary_stage']]['route']['model'],
+            }
+        confirm = pilot['table']['interaction_repairs']
+        primary = confirm['libraries']['a']
+        if primary['status'] == 'valid' and primary['matched'] == list(range(1, 21)):
+            group = matrix[components.QWEN9]['library_capabilities']['table']
+            assert group['targets'] == primary['matched']
+            counts = {arm:len(confirm['arms'][source]['passes']) for arm,source in [('direct','direct'),('self','self-a')]}
+            matrix[components.QWEN9]['table_state_transitions'] = {
+                **group, 'passed':group['passed'] | counts, 'preparation':'incremental interaction repair',
+                'rep':'a', 'complete':True, 'build_status':'valid', 'observed':primary['matched'],
+                'markers':group['markers'] | {'self':'typed'},
+                'implementation_sources':group['implementation_sources'] | {'self':str((functional.TABLE_STAGES['interaction_repairs']/'result.json').relative_to(ROOT))},
+                'fixed_passes':confirm['arms']['fixed-a']['passes'],
+            }
+        sources.attach(matrix)
     return matrix
 
 
 def cell(group, method):
     counts = group.get("passed", {})
+    if method in group.get("excluded_build_arms", ()):
+        return ""
     if method not in counts:
         return r"\textcolor[gray]{0.55}{--}"
     value = f"{counts[method]}/{group['n']}"
+    marker = r"$^{\ddagger}$" if method == "self" and group.get("rep") == "a" else ""
+    stage = group.get("markers", {}).get(method)
+    if stage:
+        marker = {"menu": r"$^{*}$", "visible": r"$^{*}$", "rebuild": r"$^{\ddagger}$",
+                  "flash-visible": r"$^{\dagger}$", "flash-schema": r"$^{\dagger *}$", "profiles": r"$^{*}$", "handlers": r"\textsuperscript{\S}", "typed": r"\textsuperscript{\S}", "events": r"\textsuperscript{\S}", "blind": "", "donor": r"$^{t}$", "survey": r"$^{s}$", "source-plans": r"$^{p}$", "self-sequences": r"$^{u}$", "visible-choices": r"$^{v}$", "core-profile": r"$^{vc}$"}[stage]
     if min(counts.values()) < counts[method] == max(counts.values()):
-        return r"\textbf{" + value + "}"
-    return value
+        return r"\textbf{" + value + "}" + marker
+    return value + marker
 
 
 def values(group, methods):
     return [cell(group, method) for method in methods]
 
 
-def table_head(title, groups):
-    size = 1 + sum(len(columns) for _, columns in groups)
-    lines = [
-        r"\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l*{" + str(size - 1) + r"}{c}@{}}",
-        r"\toprule" if title.startswith("A.") else r"\addlinespace[1pt]",
-        r"\rowcolor[gray]{0.94}\multicolumn{" + str(size) + r"}{l}{\textbf{" + title + r"}} \\",
-    ]
-    lines.append(
-        " & "
-        + " & ".join(r"\multicolumn{" + str(len(cols)) + r"}{c}{" + label + "}" for label, cols in groups)
-        + r" \\"
-    )
-    start = 2
+def current_group(model, project):
+    original = model.get("paper_current", {}).get(project, model["current"].get(project, {}))
+    trial = model.get("self_recovery", {}).get(project)
+    if not trial:
+        return original
+    first = trial["first"]
+    if first["complete"] or "self" not in original.get("passed", {}):
+        return first
+    # A failed new preparation cannot displace an actual prior measurement.
+    return original
+
+
+def project_cells(model, project):
+    if project in model.get("source_diagnosis", {}):
+        return values(model["source_diagnosis"][project], METHODS)
+    if project == "table" and "table_state_transitions" in model:
+        return values(model["table_state_transitions"], METHODS)
+    if project in model.get("library_capabilities", {}):
+        return values(model["library_capabilities"][project], METHODS)
+    if project=="form" and "form_visible_targets" in model:
+        return values(model["form_visible_targets"], METHODS)
+    if project=="table" and "table_protocol_followup" in model:
+        return values(model["table_protocol_followup"], METHODS)
+    if project in model.get("extended_targets", {}):
+        return values(model["extended_targets"][project], METHODS)
+    if project in model.get("component_followup", {}):
+        return values(model["component_followup"][project], METHODS)
+    group = current_group(model, project)
+    rebuild = model.get("panel_a_self", {}).get(project)
+    if rebuild is None:
+        return values(group, METHODS)
+    original = model["current"][project]
+    assert rebuild["targets"] == original["targets"]
+    assert group["n"] == len(rebuild["targets"])
+    displayed = {"n": group["n"], "passed": original["passed"] | rebuild["passed"]}
+    cells = values(displayed, METHODS)
+    cells[-1] += r"$^{\dagger}$"
+    return cells
+
+
+def comparison_panel(title, projects, matrix):
+    methods = list(METHODS.values())
+    column_count = 1 + len(projects) * len(methods)
+    headings = []
     rules = []
-    for _, cols in groups:
-        rules.append(r"\cmidrule(lr){" + f"{start}-{start + len(cols) - 1}" + "}")
-        start += len(cols)
-    return lines + ["".join(rules)]
+    for index, label in enumerate(projects.values()):
+        first = 2 + index * len(methods)
+        last = first + len(methods) - 1
+        headings.append(rf"\multicolumn{{{len(methods)}}}{{c}}{{{label}}}")
+        rules.append(rf"\cmidrule(lr){{{first}-{last}}}")
+    lines = [
+        r"\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}p{1.18in}*{" + str(column_count - 1) + r"}{c}@{}}",
+        r"\toprule",
+        r"\rowcolor[gray]{0.94}\multicolumn{" + str(column_count) + r"}{l}{\textbf{" + title + r"}} \\",
+        " & " + " & ".join(headings) + r" \\",
+        "".join(rules),
+        " & ".join(["Target generator", *(methods * len(projects))]) + r" \\",
+        r"\midrule",
+    ]
+    for model, label in BACKBONES.items():
+        entry = matrix[model]
+        if any(current_group(entry, project) for project in projects):
+            cells = [value for project in projects for value in project_cells(entry, project)]
+            lines.append(" & ".join([label, *cells]) + r" \\")
+    return [*lines, r"\bottomrule\end{tabular*}\par"]
 
 
 def order_build_rows(rows):
@@ -163,103 +277,101 @@ def order_build_rows(rows):
     return sorted(rows, key=lambda r: (projects.index(r["project"]), models.index(r["target_generator"])))
 
 
-def render_matrix(matrix, followups=(), replays=None, domain_rows=()):
+def feature_panel(matrix):
+    labels = BACKBONES | components.LABELS
+    duo = [m for m in BACKBONES if current_group(matrix[m], "duo")]
     lines = [
-        r"\begin{table*}[p]",
-        r"\centering",
-        r"\caption{Current-task passes / matched targets. Bold marks a row maximum within each protocol. Dashes mark unavailable results.}",
-        r"\label{tab:endtoend}",
-        r"\fontsize{8.5}{9.5}\selectfont\setlength{\tabcolsep}{2pt}\renewcommand{\arraystretch}{0.97}",
-        r"\setlength{\aboverulesep}{0.8pt}\setlength{\belowrulesep}{1.25pt}",
-    ]
-    fresh = ["Direct", "Human", "GPT-5", "Self"]
-    groups = [(label, fresh) for label in WEB_PROJECTS.values()]
-    lines += table_head("A. Full-project Web-Bench comparison", groups)
-    lines += ["Target generator & " + " & ".join(fresh * len(groups)) + r" \\", r"\midrule"]
-    methods = ["direct", "human", "gpt5-library", "self"]
-    unavailable = []
-    for m, label in BACKBONES.items():
-        if all(project not in matrix[m]["current"] for project in WEB_PROJECTS):
-            unavailable.append(label)
-            continue
-        cells = [v for p in WEB_PROJECTS for v in values(matrix[m]["current"].get(p, {}), methods)]
-        lines += [" & ".join([label, *cells]) + r" \\"]
-    lines += [r"\bottomrule\end{tabular*}\par"]
-    if unavailable:
-        lines.append(
-            r"\begin{minipage}{\textwidth}\footnotesize\raggedright "
-            + r"\textit{-- Unavailable in Panel A.} "
-            + ", ".join(unavailable)
-            + r".\end{minipage}\par"
-        )
-    lines += [r"\vspace{1pt}"]
-    groups = [
-        ("TodoMVC", ["Direct", "Human", "Self"]),
-        ("WebApp1K-Duo", ["Direct", "Self"]),
-        ("TodoMVC (supplied)", ["Direct", "Human"]),
-        ("Files (supplied)", ["Edit", "Human"]),
-    ]
-    if replays:
-        groups[0] = ("TodoMVC", ["Direct", "Human", "Self", "Bind"])
-        groups.insert(2, ("Duo (replay)", [r"Direct$^*$", "Bind"]))
-    lines += table_head("B. Feature subsets, feature pairs and supplied-library studies", groups)
-    lines += [
-        "Target generator & " + " & ".join(name for _, cols in groups for name in cols) + r" \\",
+        r"\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{\hspace{1.1em}}lcccc@{}}",
+        r"\toprule\rowcolor[gray]{0.94}\multicolumn{10}{l}{\textbf{B. Feature subsets and pairs}} \\",
+        r"\multicolumn{5}{c}{TodoMVC} & \multicolumn{5}{c}{WebApp1K-Duo} \\",
+        r"\cmidrule(lr){1-5}\cmidrule(lr){6-10}",
+        " & ".join(["Target generator", *METHODS.values()] * 2) + r" \\",
         r"\midrule",
     ]
-    for m, label in BACKBONES.items():
-        series = [
-            (matrix[m][phase].get(project, {}), arms)
-            for phase, project, arms in (
-                ("current", "todomvc", ["direct", "human", "self"]),
-                ("current", "duo", ["direct", "self"]),
-                ("supplied", "todomvc", ["direct", "human"]),
-                ("supplied", "dom1", ["direct", "human"]),
-            )
-        ]
-        if replays:
-            suite = replays.get(m, {})
-            todo, arms = series[0]
-            if suite:
-                for index, key in ((0, "todomvc"), (1, "duo")):
-                    original = series[index][0]
-                    recovered = suite[key]
-                    assert original["targets"] == recovered["targets"]
-                    assert original["passed"]["direct"] == recovered["passed"]["strict_direct"]
-                    assert original["passed"]["self"] == recovered["passed"]["strict_self"]
-                assert suite["todomvc"]["passed"]["direct"] == todo["passed"]["direct"]
-                todo = {**todo, "passed": {**todo["passed"], "bound": suite["todomvc"]["passed"]["bound"]}}
-            series[0] = (todo, [*arms, "bound"])
-            replay = suite.get("duo", {})
-            if replay:
-                replay = {**replay, "passed": {k: replay["passed"][k] for k in ("direct", "bound")}}
-            series.insert(2, (replay, ["direct", "bound"]))
-        if any(group for group, _ in series):
-            lines += [
-                " & ".join([label, *(s for group, arms in series for s in values(group, arms))]) + r" \\"
-            ]
-    lines += [r"\bottomrule\end{tabular*}\par\vspace{1pt}"]
-    groups = [
-        ("Mistral / source comparison", ["Direct", "Human", "GPT-5"]),
-        ("Mistral / retrospective", ["Direct", "GPT-5", "Sonnet"]),
-        ("GPT-OSS / retrospective", ["Direct", "GPT-5", "Sonnet"]),
+    for left, right in zip(components.TODO_ROSTER, duo, strict=True):
+        fields = [labels[left], *project_cells(matrix[left], "todomvc"),
+                  labels[right], *project_cells(matrix[right], "duo")]
+        lines.append(" & ".join(fields) + r" \\")
+    return [*lines, r"\bottomrule\end{tabular*}\par"]
+
+
+def additional_web_projects(matrix):
+    lines = [
+        r"\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccccc@{}}",
+        r"& \multicolumn{4}{c}{File explorer} & \multicolumn{4}{c}{Calculator} \\",
+        r"\cmidrule(lr){2-5}\cmidrule(lr){6-9}",
+        " & ".join(["Target generator", *METHODS.values(), *METHODS.values()]) + r" \\",
+        r"\midrule",
     ]
-    lines += table_head("C. Earlier comparisons on full Web-Bench project schedules", groups)
-    lines += ["Project & " + " & ".join(name for _, cols in groups for name in cols) + r" \\", r"\midrule"]
-    for p, label in [
-        ("dom1", "File explorer"),
-        ("form", "Question form"),
-        ("calculator", "Calculator"),
-        ("table", "Table editor"),
-        ("bom", "Browser object model"),
-        ("svg-chart", "SVG charts"),
-        ("expression-editor", "Expression editor"),
-    ]:
-        cells = values(matrix[MISTRAL]["sources"].get(p, {}), ["direct", "human", GPT5])
-        for model in (MISTRAL, OSS):
-            cells += values(matrix[model]["retrospective"].get(p, {}), ["direct", GPT5, SONNET])
-        lines += [" & ".join([label, *cells]) + r" \\"]
-    lines += [r"\bottomrule\end{tabular*}\par\vspace{1pt}"]
+    for model in (components.QWEN9, components.FLASH):
+        fields = [BACKBONES[model]]
+        for project in ("dom1", "calculator"):
+            fields.extend(project_cells(matrix[model], project))
+        lines.append(" & ".join(fields) + r" \\")
+    return [*lines, r"\bottomrule\end{tabular*}\par"]
+
+
+def planned_panel():
+    study = read(components.PLANNED)
+    assert study["state"] == "planned" and study["measurements"] == [] and study["arms"] == list(METHODS)
+    names = [BACKBONES[m] for m in study["models"]]
+    return [
+        r"\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}",
+        r"\toprule\rowcolor[gray]{0.94}\multicolumn{5}{l}{\textbf{C. WebGen-Bench} (planned functional evaluation)} \\",
+        " & ".join(["Registered generators", *METHODS.values()]) + r" \\",
+        r"\midrule",
+        " & ".join([", ".join(names), *values({}, METHODS)]) + r" \\",
+        r"\bottomrule\end{tabular*}\par",
+    ]
+
+
+def functional_panel(matrix):
+    rows = [(BACKBONES[m], entry['webgen_functional']) for m, entry in matrix.items()
+            if 'webgen_functional' in entry]
+    if not rows:
+        return planned_panel()
+    lines = [
+        r"\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}",
+        r"\toprule\rowcolor[gray]{0.94}\multicolumn{5}{l}{\textbf{C. WebGen-Bench} (six websites, alternate vision judge)} \\",
+        " & ".join(["Target generator", *METHODS.values()]) + r" \\",
+        r"\midrule",
+    ]
+    for name, group in rows:
+        counts = {a:format(v,'g') for a,v in group['passed'].items()}
+        cells = []
+        for method in METHODS:
+            if method in group['excluded_build_arms']:
+                cells.append("")
+            elif method not in counts:
+                cells.append(r"\textcolor[gray]{0.55}{--}")
+            else:
+                value = counts[method]+'/'+str(group['n'])
+                scores = group['passed'].values()
+                if min(scores) < group['passed'][method] == max(scores):
+                    value = r"\textbf{" + value + "}"
+                cells.append(value)
+        lines.append(" & ".join([name, *cells]) + r" \\")
+    return [*lines, r"\bottomrule\end{tabular*}\par"]
+
+
+def render_matrix(matrix, followups=(), domain_rows=()):
+    updated = all(m in matrix for m in components.LABELS)
+    lines = [
+        r"\begin{table*}[p]" if followups or domain_rows else r"\begin{table*}[!t]",
+        r"\centering",
+        (r"\caption{A and B report current-task passes. C reports functional points (full 1, partial 0.5). Denominators count matched targets. Blank cells mark failed builds and dashes mark unavailable results. Bold marks each row maximum within a task group.}" if any('webgen_functional' in entry for entry in matrix.values()) else
+         r"\caption{Current-task passes / matched targets. Blank = failed build. Dash = unevaluated or unavailable. Bold = protocol maximum.}"),
+        r"\label{tab:endtoend}",
+        r"\fontsize{9}{10.5}\selectfont\setlength{\tabcolsep}{2pt}",
+        r"\setlength{\aboverulesep}{0.8pt}\setlength{\belowrulesep}{1.25pt}",
+    ]
+    lines += comparison_panel("A. Web-Bench projects", WEB_PROJECTS, matrix)
+    if "dom1" in matrix[components.FLASH].get("library_capabilities", {}):
+        lines += additional_web_projects(matrix)
+    lines.append(r"\vspace{3pt}")
+    lines += feature_panel(matrix) if updated else comparison_panel("B. Feature subsets and pairs", FEATURE_SUITES, matrix)
+    if updated:
+        lines += [r"\vspace{3pt}", *functional_panel(matrix)]
     if followups:
         lines += [
             r"\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lllcccccc@{}}",
@@ -274,7 +386,8 @@ def render_matrix(matrix, followups=(), replays=None, domain_rows=()):
             if previous_project and previous_project != row["project"]:
                 lines.append(r"\addlinespace[1pt]")
             previous_project = row["project"]
-            counts = {"passed": row["passed"], "n": len(row["targets"])} if row["targets"] else {}
+            counts = {"passed": row["passed"], "n": len(row["targets"]),
+                      "excluded_build_arms": row.get("excluded_build_arms", ())} if row["targets"] else {}
             fields = values(counts, ("direct", "self_a", "fixed_a", "self_b", "fixed_b"))
             protocol = row["decoding"]
             if len(row.get("libraries", ("a", "b"))) == 1:
@@ -296,11 +409,20 @@ def render_matrix(matrix, followups=(), replays=None, domain_rows=()):
         lines += [r"\bottomrule\end{tabular*}\par\vspace{1pt}"]
     lines += [
         r"\begin{minipage}{\textwidth}\footnotesize\raggedright "
-        r"Human supplies components. GPT-5 supplies a frozen library. Self uses one model for both stages. "
-        + (r"Bind links archived code. Direct$^*$ repairs exports. Edit updates the prior page. " if replays else "")
-        + (r"D uses each protocol's Direct. Variants reuse libraries. Fixed retains an example, pair, defaults, or all renderers. "
-           r"Relaxed files and DOM tokens use recovered Direct. New SVG builds C/D reuse those 20 replies. " if followups else "")
-        + (r"In E, fixed A/B retain/swap button order or enable/disable optional events." if domain_rows else "")
+        r"Direct writes code without a library. Human uses prepared components. GPT-5 uses a frozen GPT-5 library. "
+        r"Self uses the target model to build and configure its own library. "
+        + r"Each Duo domain contributes five pairs. "
+        + (r"$^t$ GPT-5 components from other public feature pairs. $^s$ Matched Direct and a shared questionnaire plan across libraries. " if "library_capabilities" in matrix[components.FLASH] else "")
+        + (r"$^p$ Revised configuration of a frozen library. $^u$ Public workflow checks and same-model repair. $^v$ Extra reasoning disabled. $^c$ Profiles satisfy shared public requirements. " if "source_diagnosis" in matrix[components.QWEN9] else "")
+        + (r"D uses protocol-specific Direct. Variants reuse libraries. "
+           r"Fixed replays an example, pair, defaults, or all renderers. Relaxed files, DOM tokens and SVG C/D share 20 recovered direct replies. Flash file checks include six retransmissions. " if followups else "")
+        + (r"In E, fixed A/B retain/swap button order or enable/disable optional events. " if domain_rows else "")
+        + (r"$\dagger$ Flash form uses matched decoding and the first file-checked Self library. " if matrix[flash_form.MODEL].get("form_visible_targets") else
+           r"$\dagger$ Flash form uses the first file-checked build. " if matrix[flash_form.MODEL].get("panel_a_self") else "")
+        + (r"$\ddagger$ First rebuild in the 25-cell follow-up. " if matrix[flash_form.MODEL].get("panel_a_self") else "")
+        + (r"$*$ Revised selection on the same library. \S\ First library with a project-specific interface. "
+           r"TodoMVC adds three 3--4B models; the three earlier Direct ceiling rows are reported in the text. "
+           if updated else "")
         + r"\end{minipage}",
         r"\end{table*}",
     ]
@@ -308,9 +430,4 @@ def render_matrix(matrix, followups=(), replays=None, domain_rows=()):
 
 
 if __name__ == "__main__":
-    from studies.public_library_transfer.self_replication.paper import rows
-    from studies.public_library_transfer.self_refinement.suite_comparisons import evidence
-    from studies.public_library_transfer.self_refinement import domain_panel, prospective_panel
-    print(render_matrix(read(ROOT / "studies/results/paper-performance-matrix.json"),
-                        [*rows(), *prospective_panel.rows(), *prospective_panel.confirmation_evidence()['rows']],
-                        evidence()["models"], domain_panel.rows()), end="")
+    print(render_matrix(read(ROOT / "studies/results/paper-performance-matrix.json")), end="")

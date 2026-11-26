@@ -1,0 +1,1099 @@
+{
+  "registration": "3158b8b1447e3d92f7eafd2ce0caf8d18c331e4c10ebb1be68caccb6972d3f27",
+  "changed": {
+    "llama3": [
+      {
+        "task": "todo-01",
+        "rep": "a",
+        "index": 0,
+        "response_sha256": "5d8eb1a710bcb94ca6bfcee7ef7a24265705dc1db8eabe1b9e8a8156b5d06c06"
+      },
+      {
+        "task": "todo-02",
+        "rep": "a",
+        "index": 0,
+        "response_sha256": "6242e805ecc2f975cfa4cc78b291dc78aedd353bfa02ae53c45415495660cc48"
+      },
+      {
+        "task": "todo-03",
+        "rep": "a",
+        "index": 0,
+        "response_sha256": "79b73d6c7087042578b99a606ff53bc154059a76ab73a18ca61e488967df07b4"
+      },
+      {
+        "task": "todo-01",
+        "rep": "b",
+        "index": 0,
+        "response_sha256": "f469a2aa4dcb7a7b9a132167b1b2c47827d534db647abfe9d9b48d3837dee155"
+      },
+      {
+        "task": "todo-02",
+        "rep": "b",
+        "index": 0,
+        "response_sha256": "92b4645a4189eb150d00ac6049eef0ef4a12330d49015f54ebbdd44d4803fd04"
+      },
+      {
+        "task": "todo-03",
+        "rep": "b",
+        "index": 0,
+        "response_sha256": "6d454900aeb84a9bb692eea5cba781ee14fb3d78fa13cd6f852dcbecff2a2589"
+      }
+    ],
+    "gemma4": [],
+    "ministral3": [
+      {
+        "task": "todo-07",
+        "rep": "a",
+        "index": 5,
+        "response_sha256": "78165c62831f3007ef74fbf4e3030a946aa6f35bb3c4e8b690b3e15c266517a5"
+      },
+      {
+        "task": "todo-08",
+        "rep": "a",
+        "index": 2,
+        "response_sha256": "2e4fd4b6cfe1297314161949907b9b0049c5f8cce91350fadadf643d780b9e51"
+      },
+      {
+        "task": "todo-05",
+        "rep": "b",
+        "index": 2,
+        "response_sha256": "d79d586f7f16adff44b062579a815eda09f30bc18ca4ea9c5ef0077b00de1b2c"
+      },
+      {
+        "task": "todo-07",
+        "rep": "b",
+        "index": 2,
+        "response_sha256": "bd85a5bcdeed895a1699b0c5fb0ab4ae6f1a18e1994d49823e20f039d9f2db68"
+      },
+      {
+        "task": "todo-08",
+        "rep": "b",
+        "index": 5,
+        "response_sha256": "0f861c237f5e668816fc721c1b75524dbdc7b887bb0c6b41fdf5c7c758cf6ea1"
+      }
+    ]
+  },
+  "new_calls": 0,
+  "models": {
+    "meta-llama/llama-3.2-3b-instruct": {
+      "rows": [
+        {
+          "task": "todo-01",
+          "arm": "direct",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 4,
+          "report_sha256": "1ee9c8e28177b09096262fbfe8e0e5bc3109d1672081382bcdd918ec3e427e30",
+          "files_sha256": "2fc6550da051023c637c0d85186e8504d18c43bf9f3994e02c5e161b5298e0ed"
+        },
+        {
+          "task": "todo-01",
+          "arm": "human",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-01",
+          "arm": "gpt5-library",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-01",
+          "arm": "a",
+          "status": "valid",
+          "passed": true,
+          "official_tests": 4,
+          "report_sha256": "ba289a6c4b083958d7ee079f3a1abc47c6f6c9b262acb58f4a13a6d3a40c32b4",
+          "files_sha256": "f1798223caae1e9f3d4e07a4cbf987ede54063175ccd6c1517f3f9b86032cef4"
+        },
+        {
+          "task": "todo-01",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": true,
+          "official_tests": 4,
+          "report_sha256": "ba289a6c4b083958d7ee079f3a1abc47c6f6c9b262acb58f4a13a6d3a40c32b4",
+          "files_sha256": "f1798223caae1e9f3d4e07a4cbf987ede54063175ccd6c1517f3f9b86032cef4"
+        },
+        {
+          "task": "todo-01",
+          "arm": "b",
+          "status": "valid",
+          "passed": true,
+          "official_tests": 4,
+          "report_sha256": "02ede95d6ba553d35ea43de1a662053cd9606d7d423293a24864a13a263075c2",
+          "files_sha256": "89e86692c08419e0cad6c0075dafef7fffc8e6e9998a07237b864c0b77dcc7bb"
+        },
+        {
+          "task": "todo-01",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": true,
+          "official_tests": 4,
+          "report_sha256": "02ede95d6ba553d35ea43de1a662053cd9606d7d423293a24864a13a263075c2",
+          "files_sha256": "89e86692c08419e0cad6c0075dafef7fffc8e6e9998a07237b864c0b77dcc7bb"
+        },
+        {
+          "task": "todo-02",
+          "arm": "direct",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 5,
+          "report_sha256": "c6d1f13b4cee0ebda1ceb3bb8a0fef5ddbf7e0ed51760119f26af698f7728f31",
+          "files_sha256": "0d0308d90eb8f5272e611f487cbf10299eac423f06321989d1ebf6d32a419856"
+        },
+        {
+          "task": "todo-02",
+          "arm": "human",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-02",
+          "arm": "gpt5-library",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-02",
+          "arm": "a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 5,
+          "report_sha256": "ffa1e3415b243791ebad80d2b7040e31acecaf9224b3308905b894e87d1f2086",
+          "files_sha256": "f1798223caae1e9f3d4e07a4cbf987ede54063175ccd6c1517f3f9b86032cef4"
+        },
+        {
+          "task": "todo-02",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 5,
+          "report_sha256": "ffa1e3415b243791ebad80d2b7040e31acecaf9224b3308905b894e87d1f2086",
+          "files_sha256": "f1798223caae1e9f3d4e07a4cbf987ede54063175ccd6c1517f3f9b86032cef4"
+        },
+        {
+          "task": "todo-02",
+          "arm": "b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 5,
+          "report_sha256": "2dda38a4def033c1f09e94ff9bbe6c7dd1aab0f574a40e212fb1eccba0b44b87",
+          "files_sha256": "89e86692c08419e0cad6c0075dafef7fffc8e6e9998a07237b864c0b77dcc7bb"
+        },
+        {
+          "task": "todo-02",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 5,
+          "report_sha256": "2dda38a4def033c1f09e94ff9bbe6c7dd1aab0f574a40e212fb1eccba0b44b87",
+          "files_sha256": "89e86692c08419e0cad6c0075dafef7fffc8e6e9998a07237b864c0b77dcc7bb"
+        },
+        {
+          "task": "todo-03",
+          "arm": "direct",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-03",
+          "arm": "human",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-03",
+          "arm": "gpt5-library",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-03",
+          "arm": "a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "ae61ddd3ecdfcd697d8817c5aaa0c43eefa35501ee0b20bbdb3e0f9a17c997eb",
+          "files_sha256": "f1798223caae1e9f3d4e07a4cbf987ede54063175ccd6c1517f3f9b86032cef4"
+        },
+        {
+          "task": "todo-03",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "ae61ddd3ecdfcd697d8817c5aaa0c43eefa35501ee0b20bbdb3e0f9a17c997eb",
+          "files_sha256": "f1798223caae1e9f3d4e07a4cbf987ede54063175ccd6c1517f3f9b86032cef4"
+        },
+        {
+          "task": "todo-03",
+          "arm": "b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "ed50ce716a1f051263bac29fa9784019d27c19fd825b2d9506a9a7e23288c09e",
+          "files_sha256": "89e86692c08419e0cad6c0075dafef7fffc8e6e9998a07237b864c0b77dcc7bb"
+        },
+        {
+          "task": "todo-03",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "ed50ce716a1f051263bac29fa9784019d27c19fd825b2d9506a9a7e23288c09e",
+          "files_sha256": "89e86692c08419e0cad6c0075dafef7fffc8e6e9998a07237b864c0b77dcc7bb"
+        },
+        {
+          "task": "todo-04",
+          "arm": "direct",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-04",
+          "arm": "human",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-04",
+          "arm": "gpt5-library",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-04",
+          "arm": "a",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-04",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "13a36cf4e7f9681312110ab7a07a78836fcb30edfbe7554f781d406b993752be",
+          "files_sha256": "f1798223caae1e9f3d4e07a4cbf987ede54063175ccd6c1517f3f9b86032cef4"
+        },
+        {
+          "task": "todo-04",
+          "arm": "b",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-04",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "9351e29069815cf5a747a52b5777812a5e314c22e1b2f7eac2186e28976753f8",
+          "files_sha256": "89e86692c08419e0cad6c0075dafef7fffc8e6e9998a07237b864c0b77dcc7bb"
+        },
+        {
+          "task": "todo-05",
+          "arm": "direct",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "e7beee791cd887f96a6832bf6b465a8ce8055ddfec67ea2839bdbff3955332db",
+          "files_sha256": "0d0308d90eb8f5272e611f487cbf10299eac423f06321989d1ebf6d32a419856"
+        },
+        {
+          "task": "todo-05",
+          "arm": "human",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-05",
+          "arm": "gpt5-library",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-05",
+          "arm": "a",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-05",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "cc812c554d9f43e34387199f19298e1486d140430bc6c697f36dde5064bb9fc0",
+          "files_sha256": "f1798223caae1e9f3d4e07a4cbf987ede54063175ccd6c1517f3f9b86032cef4"
+        },
+        {
+          "task": "todo-05",
+          "arm": "b",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-05",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "c6e08ba34b3111be9a5590718df53e22d749cb1d9d6e1e38a23f670cf9464f26",
+          "files_sha256": "89e86692c08419e0cad6c0075dafef7fffc8e6e9998a07237b864c0b77dcc7bb"
+        },
+        {
+          "task": "todo-06",
+          "arm": "direct",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-06",
+          "arm": "human",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-06",
+          "arm": "gpt5-library",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-06",
+          "arm": "a",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-06",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 10,
+          "report_sha256": "e5d2dfd244c62de3dc9d82aaf687d5c79db77aaab2b14a91906afcefe8347027",
+          "files_sha256": "f1798223caae1e9f3d4e07a4cbf987ede54063175ccd6c1517f3f9b86032cef4"
+        },
+        {
+          "task": "todo-06",
+          "arm": "b",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-06",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 10,
+          "report_sha256": "d89237e1ac901fc30a4418ac91c1eb810b38d246b45031634d3cfe8b93b11523",
+          "files_sha256": "89e86692c08419e0cad6c0075dafef7fffc8e6e9998a07237b864c0b77dcc7bb"
+        },
+        {
+          "task": "todo-07",
+          "arm": "direct",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-07",
+          "arm": "human",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-07",
+          "arm": "gpt5-library",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-07",
+          "arm": "a",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-07",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 16,
+          "report_sha256": "56256622f8f2c651964a82623be5628f635cc2e677f342ecf398ea84cd4cbb6a",
+          "files_sha256": "f1798223caae1e9f3d4e07a4cbf987ede54063175ccd6c1517f3f9b86032cef4"
+        },
+        {
+          "task": "todo-07",
+          "arm": "b",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-07",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 16,
+          "report_sha256": "16ed5b4c7eead3ff5414f9126475c20458f25272598158660ae1961e3f7acb7d",
+          "files_sha256": "89e86692c08419e0cad6c0075dafef7fffc8e6e9998a07237b864c0b77dcc7bb"
+        },
+        {
+          "task": "todo-08",
+          "arm": "direct",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 24,
+          "report_sha256": "52c4e4ae975abd6aedab7294e5d5429be05d96bc1109a7cbab4db5e06e00d6ba",
+          "files_sha256": "74dd4a11e58646ee0bf436ca951759f8c297e3feb335c0f61c7e040a7534ea24"
+        },
+        {
+          "task": "todo-08",
+          "arm": "human",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 24,
+          "report_sha256": "d8e8a9d22b3fdd63ada4a14e934552653233373bec85c279e3e8b10a0dd4d69d",
+          "files_sha256": "0e1196b991b26e96352ab3ba91cb2e426cce3c60ad13d3714c798935bb353442"
+        },
+        {
+          "task": "todo-08",
+          "arm": "gpt5-library",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-08",
+          "arm": "a",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-08",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 24,
+          "report_sha256": "002cd9315fa06a458e6ba248183c73aeb32113d8de9af55eacbffd871e6158dd",
+          "files_sha256": "f1798223caae1e9f3d4e07a4cbf987ede54063175ccd6c1517f3f9b86032cef4"
+        },
+        {
+          "task": "todo-08",
+          "arm": "b",
+          "status": "invalid",
+          "passed": false
+        },
+        {
+          "task": "todo-08",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 24,
+          "report_sha256": "aa2ebb374e38e6db261ce0c182a01dd201449a19cce12d3288e72b881d2d0e74",
+          "files_sha256": "89e86692c08419e0cad6c0075dafef7fffc8e6e9998a07237b864c0b77dcc7bb"
+        }
+      ],
+      "seal_sha256": "4f802403e917653995d8301dac4fe54e5c2d21cf51915e608e85d56c4550019e",
+      "libraries": {
+        "a": "valid",
+        "b": "valid"
+      }
+    },
+    "google/gemma-3-4b-it": {
+      "rows": [
+        {
+          "task": "todo-01",
+          "arm": "a",
+          "status": "valid",
+          "passed": true,
+          "official_tests": 4,
+          "report_sha256": "b99bda85beda6b45ec8857183fec5e06026a055df22775e3951f677e3c4c4fbb",
+          "files_sha256": "38c4331c215c60c5373f8a8abf3e1072fd3d0a196366ffb92b0092ad0f0c73ae"
+        },
+        {
+          "task": "todo-01",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": true,
+          "official_tests": 4,
+          "report_sha256": "b99bda85beda6b45ec8857183fec5e06026a055df22775e3951f677e3c4c4fbb",
+          "files_sha256": "38c4331c215c60c5373f8a8abf3e1072fd3d0a196366ffb92b0092ad0f0c73ae"
+        },
+        {
+          "task": "todo-01",
+          "arm": "b",
+          "status": "valid",
+          "passed": true,
+          "official_tests": 4,
+          "report_sha256": "4ff266f38fb865bc556ebecdcacfc1b71ef7aa02e4b7260343c6f9c572c7d7ce",
+          "files_sha256": "d7867e75d9e1c1cf854ce8ec53916492c57b85c3b47d98b66b1e35141cccdda7"
+        },
+        {
+          "task": "todo-01",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": true,
+          "official_tests": 4,
+          "report_sha256": "4ff266f38fb865bc556ebecdcacfc1b71ef7aa02e4b7260343c6f9c572c7d7ce",
+          "files_sha256": "d7867e75d9e1c1cf854ce8ec53916492c57b85c3b47d98b66b1e35141cccdda7"
+        },
+        {
+          "task": "todo-02",
+          "arm": "a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 5,
+          "report_sha256": "68b3f6864fd65c8d43adeab4c6a3dca7ff405109826bcee3ae0505c424f70c35",
+          "files_sha256": "38c4331c215c60c5373f8a8abf3e1072fd3d0a196366ffb92b0092ad0f0c73ae"
+        },
+        {
+          "task": "todo-02",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 5,
+          "report_sha256": "68b3f6864fd65c8d43adeab4c6a3dca7ff405109826bcee3ae0505c424f70c35",
+          "files_sha256": "38c4331c215c60c5373f8a8abf3e1072fd3d0a196366ffb92b0092ad0f0c73ae"
+        },
+        {
+          "task": "todo-02",
+          "arm": "b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 5,
+          "report_sha256": "4ca96d76a4b4f7b07e69e58282d57e5a271f17fda950e2ca80785f24221631b0",
+          "files_sha256": "d7867e75d9e1c1cf854ce8ec53916492c57b85c3b47d98b66b1e35141cccdda7"
+        },
+        {
+          "task": "todo-02",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 5,
+          "report_sha256": "4ca96d76a4b4f7b07e69e58282d57e5a271f17fda950e2ca80785f24221631b0",
+          "files_sha256": "d7867e75d9e1c1cf854ce8ec53916492c57b85c3b47d98b66b1e35141cccdda7"
+        },
+        {
+          "task": "todo-03",
+          "arm": "a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "789bbe25bea47c603eb76e9c721dfaefd6831a1b88f4204b11fa0c4ecb805572",
+          "files_sha256": "38c4331c215c60c5373f8a8abf3e1072fd3d0a196366ffb92b0092ad0f0c73ae"
+        },
+        {
+          "task": "todo-03",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "789bbe25bea47c603eb76e9c721dfaefd6831a1b88f4204b11fa0c4ecb805572",
+          "files_sha256": "38c4331c215c60c5373f8a8abf3e1072fd3d0a196366ffb92b0092ad0f0c73ae"
+        },
+        {
+          "task": "todo-03",
+          "arm": "b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "434eceafc56655800aed49b5a80e353b084747e734b63974b9fee1da90f498e1",
+          "files_sha256": "d7867e75d9e1c1cf854ce8ec53916492c57b85c3b47d98b66b1e35141cccdda7"
+        },
+        {
+          "task": "todo-03",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "434eceafc56655800aed49b5a80e353b084747e734b63974b9fee1da90f498e1",
+          "files_sha256": "d7867e75d9e1c1cf854ce8ec53916492c57b85c3b47d98b66b1e35141cccdda7"
+        },
+        {
+          "task": "todo-04",
+          "arm": "a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "3f717bff035a1bb62cff63c9ab8e416fa95d6da81db63e7c5b39f8d33e7ee8dc",
+          "files_sha256": "38c4331c215c60c5373f8a8abf3e1072fd3d0a196366ffb92b0092ad0f0c73ae"
+        },
+        {
+          "task": "todo-04",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "3f717bff035a1bb62cff63c9ab8e416fa95d6da81db63e7c5b39f8d33e7ee8dc",
+          "files_sha256": "38c4331c215c60c5373f8a8abf3e1072fd3d0a196366ffb92b0092ad0f0c73ae"
+        },
+        {
+          "task": "todo-04",
+          "arm": "b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "a479a6db67178b6864f8b1578cd83b042fdbdedb4755b1ee27ff888b9d177650",
+          "files_sha256": "d7867e75d9e1c1cf854ce8ec53916492c57b85c3b47d98b66b1e35141cccdda7"
+        },
+        {
+          "task": "todo-04",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "a479a6db67178b6864f8b1578cd83b042fdbdedb4755b1ee27ff888b9d177650",
+          "files_sha256": "d7867e75d9e1c1cf854ce8ec53916492c57b85c3b47d98b66b1e35141cccdda7"
+        },
+        {
+          "task": "todo-05",
+          "arm": "a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "5af6773a6f9208016999132c06a3c6e053e8ee238811409f01d43054b95165f3",
+          "files_sha256": "38c4331c215c60c5373f8a8abf3e1072fd3d0a196366ffb92b0092ad0f0c73ae"
+        },
+        {
+          "task": "todo-05",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "5af6773a6f9208016999132c06a3c6e053e8ee238811409f01d43054b95165f3",
+          "files_sha256": "38c4331c215c60c5373f8a8abf3e1072fd3d0a196366ffb92b0092ad0f0c73ae"
+        },
+        {
+          "task": "todo-05",
+          "arm": "b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "c93639d4a1e48bc4d23603c6338f1b6bbda4c3945093215c12204c34c5cc060f",
+          "files_sha256": "d7867e75d9e1c1cf854ce8ec53916492c57b85c3b47d98b66b1e35141cccdda7"
+        },
+        {
+          "task": "todo-05",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "c93639d4a1e48bc4d23603c6338f1b6bbda4c3945093215c12204c34c5cc060f",
+          "files_sha256": "d7867e75d9e1c1cf854ce8ec53916492c57b85c3b47d98b66b1e35141cccdda7"
+        },
+        {
+          "task": "todo-06",
+          "arm": "a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 10,
+          "report_sha256": "71a5ad582679597afcff8cb1d2933216a969b64b9f91a1464fc29dc69d0dcdd1",
+          "files_sha256": "38c4331c215c60c5373f8a8abf3e1072fd3d0a196366ffb92b0092ad0f0c73ae"
+        },
+        {
+          "task": "todo-06",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 10,
+          "report_sha256": "71a5ad582679597afcff8cb1d2933216a969b64b9f91a1464fc29dc69d0dcdd1",
+          "files_sha256": "38c4331c215c60c5373f8a8abf3e1072fd3d0a196366ffb92b0092ad0f0c73ae"
+        },
+        {
+          "task": "todo-06",
+          "arm": "b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 10,
+          "report_sha256": "6af48c539663aa411b244905f84c36963205f2b131385085f5b170abc9a4ce65",
+          "files_sha256": "d7867e75d9e1c1cf854ce8ec53916492c57b85c3b47d98b66b1e35141cccdda7"
+        },
+        {
+          "task": "todo-06",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 10,
+          "report_sha256": "6af48c539663aa411b244905f84c36963205f2b131385085f5b170abc9a4ce65",
+          "files_sha256": "d7867e75d9e1c1cf854ce8ec53916492c57b85c3b47d98b66b1e35141cccdda7"
+        },
+        {
+          "task": "todo-07",
+          "arm": "a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 16,
+          "report_sha256": "39481961fafa6efec0e39aef9b6300173a9f5f2453179b043fb6a833fab9ef21",
+          "files_sha256": "38c4331c215c60c5373f8a8abf3e1072fd3d0a196366ffb92b0092ad0f0c73ae"
+        },
+        {
+          "task": "todo-07",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 16,
+          "report_sha256": "39481961fafa6efec0e39aef9b6300173a9f5f2453179b043fb6a833fab9ef21",
+          "files_sha256": "38c4331c215c60c5373f8a8abf3e1072fd3d0a196366ffb92b0092ad0f0c73ae"
+        },
+        {
+          "task": "todo-07",
+          "arm": "b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 16,
+          "report_sha256": "101d91eede6daaa8667f470cd9b6caf8d45628c150e0861715fa13f6001f2cd5",
+          "files_sha256": "d7867e75d9e1c1cf854ce8ec53916492c57b85c3b47d98b66b1e35141cccdda7"
+        },
+        {
+          "task": "todo-07",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 16,
+          "report_sha256": "101d91eede6daaa8667f470cd9b6caf8d45628c150e0861715fa13f6001f2cd5",
+          "files_sha256": "d7867e75d9e1c1cf854ce8ec53916492c57b85c3b47d98b66b1e35141cccdda7"
+        },
+        {
+          "task": "todo-08",
+          "arm": "a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 24,
+          "report_sha256": "13291eadd6385121404498449e2819b713d18a42895a70f88385629aaaa7fe90",
+          "files_sha256": "38c4331c215c60c5373f8a8abf3e1072fd3d0a196366ffb92b0092ad0f0c73ae"
+        },
+        {
+          "task": "todo-08",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 24,
+          "report_sha256": "13291eadd6385121404498449e2819b713d18a42895a70f88385629aaaa7fe90",
+          "files_sha256": "38c4331c215c60c5373f8a8abf3e1072fd3d0a196366ffb92b0092ad0f0c73ae"
+        },
+        {
+          "task": "todo-08",
+          "arm": "b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 24,
+          "report_sha256": "930c30d20ca8b5783fe65557590bb3ac479a4dca52b1c2028dc90282a6824774",
+          "files_sha256": "d7867e75d9e1c1cf854ce8ec53916492c57b85c3b47d98b66b1e35141cccdda7"
+        },
+        {
+          "task": "todo-08",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 24,
+          "report_sha256": "930c30d20ca8b5783fe65557590bb3ac479a4dca52b1c2028dc90282a6824774",
+          "files_sha256": "d7867e75d9e1c1cf854ce8ec53916492c57b85c3b47d98b66b1e35141cccdda7"
+        }
+      ],
+      "seal_sha256": "2eba221530b0897259feb0e409bd2941c027fbf18bf12d18e3ab3ace9e29f961",
+      "libraries": {
+        "a": "valid",
+        "b": "valid"
+      }
+    },
+    "mistralai/ministral-3b-2512": {
+      "rows": [
+        {
+          "task": "todo-01",
+          "arm": "a",
+          "status": "valid",
+          "passed": true,
+          "official_tests": 4,
+          "report_sha256": "ef6e6bf44e2b94d3145227afdf21fae76a4e4f53927e86ac15410fabb486f775",
+          "files_sha256": "165f8576afc1f3e8c9d5509e01ade4face43415c62638ef87129de03698b3651"
+        },
+        {
+          "task": "todo-01",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": true,
+          "official_tests": 4,
+          "report_sha256": "22abedc71d5d5f571cb9bce4ac80813fcc896d842ae3fdc2e911688f0e1742ab",
+          "files_sha256": "fa5e060e1815675559f9d3e5891c3e7b9cf02f69b576c2a221d42466f798532d"
+        },
+        {
+          "task": "todo-01",
+          "arm": "b",
+          "status": "valid",
+          "passed": true,
+          "official_tests": 4,
+          "report_sha256": "ae4ed09b7e6ba8a237cf4e9cf7e4fc1f8ae53af1f6b107902a6625f751d5bbec",
+          "files_sha256": "a5872b677699ab189c6719f1d3f9f531f9a50935927e2bcd184e8a82f348a868"
+        },
+        {
+          "task": "todo-01",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": true,
+          "official_tests": 4,
+          "report_sha256": "d12992bf59d1242c5bd42f5a20d54f5bb5333ec5a2a0f8224566058e3c90cb1e",
+          "files_sha256": "c60bc9702e432569b7688828fcd2d4ffa9377f7dc88d275622fc3e57971881cd"
+        },
+        {
+          "task": "todo-02",
+          "arm": "a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 5,
+          "report_sha256": "0607afc3c9e4081b77644318d87a4adb3922eae583a52b4e06be73dedbeb57f5",
+          "files_sha256": "0f529b225ef82bd45c92624455f822013ed12fcd71db98d3df896bf37ee4ec9b"
+        },
+        {
+          "task": "todo-02",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": true,
+          "official_tests": 5,
+          "report_sha256": "07f65c66f1c44bab2482ca7a161cdb7c0ff65fae320fd796145ae4b6ead25c62",
+          "files_sha256": "fa5e060e1815675559f9d3e5891c3e7b9cf02f69b576c2a221d42466f798532d"
+        },
+        {
+          "task": "todo-02",
+          "arm": "b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 5,
+          "report_sha256": "6d437a098b69115b33f6ef24c53d9edc38df980c5e854642ba1bdd236d5cf45c",
+          "files_sha256": "e8a1fe3017d65dcc93274fd8fc375221c10f23c539e1b575878ef366ebe6da18"
+        },
+        {
+          "task": "todo-02",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": true,
+          "official_tests": 5,
+          "report_sha256": "dfcb8e95ae7cb368d267841a6ebd8bc193c19359e63cde95f74d98b162426740",
+          "files_sha256": "c60bc9702e432569b7688828fcd2d4ffa9377f7dc88d275622fc3e57971881cd"
+        },
+        {
+          "task": "todo-03",
+          "arm": "a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "ec981844bc8cef41d8b1a4149790d7067df7f7b0e8d82057b49b2559bc7319c7",
+          "files_sha256": "165f8576afc1f3e8c9d5509e01ade4face43415c62638ef87129de03698b3651"
+        },
+        {
+          "task": "todo-03",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "cb19364c429f20788b7bf8efcbebf12a0a197fe9a4bad32644b34940039b3703",
+          "files_sha256": "fa5e060e1815675559f9d3e5891c3e7b9cf02f69b576c2a221d42466f798532d"
+        },
+        {
+          "task": "todo-03",
+          "arm": "b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "2257426bb68bbedb5483e2fa57c437c2c8953702e3d2b6da60f8e03a95ecfc9d",
+          "files_sha256": "a5872b677699ab189c6719f1d3f9f531f9a50935927e2bcd184e8a82f348a868"
+        },
+        {
+          "task": "todo-03",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "49d8390fa0ccb1774853805343d0dac635366cf02d2ef3a570d2ceb66885139f",
+          "files_sha256": "c60bc9702e432569b7688828fcd2d4ffa9377f7dc88d275622fc3e57971881cd"
+        },
+        {
+          "task": "todo-04",
+          "arm": "a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "92f22b368e1de98da3216385ed869cc3d8d1ce1f431b7aa006eb931c2ebe987d",
+          "files_sha256": "165f8576afc1f3e8c9d5509e01ade4face43415c62638ef87129de03698b3651"
+        },
+        {
+          "task": "todo-04",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "ac1e4756df2ee52d7b1364900625644bce0f843fca9862d413bac21242409d42",
+          "files_sha256": "fa5e060e1815675559f9d3e5891c3e7b9cf02f69b576c2a221d42466f798532d"
+        },
+        {
+          "task": "todo-04",
+          "arm": "b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "81515a09506cd0e5be7ed3e24f5af71957330bed6cc73b219e2cbce2fa7de0e3",
+          "files_sha256": "a5872b677699ab189c6719f1d3f9f531f9a50935927e2bcd184e8a82f348a868"
+        },
+        {
+          "task": "todo-04",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "23cdf952b701122e7f56baab482ab786090c1488f47289f2311645abc169c8d9",
+          "files_sha256": "c60bc9702e432569b7688828fcd2d4ffa9377f7dc88d275622fc3e57971881cd"
+        },
+        {
+          "task": "todo-05",
+          "arm": "a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "4ba686bb98c26b8d71dabed8009ceb5d8bdbad1ea17ca4c5d48514a0d24a5326",
+          "files_sha256": "0f529b225ef82bd45c92624455f822013ed12fcd71db98d3df896bf37ee4ec9b"
+        },
+        {
+          "task": "todo-05",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": true,
+          "official_tests": 8,
+          "report_sha256": "1f80df82ef37590f85b0a7d047c3f8904fcd42078eb4d03c62fc7766b2e4f5bd",
+          "files_sha256": "fa5e060e1815675559f9d3e5891c3e7b9cf02f69b576c2a221d42466f798532d"
+        },
+        {
+          "task": "todo-05",
+          "arm": "b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 8,
+          "report_sha256": "7b9c686111d65d892d80a1bac8bfec15871acdc9d55f77054bee81d77607a40f",
+          "files_sha256": "530cd38656b6d9a06d85045197ef4b58d5e6c1ab461626df8e94cc975e7bb1c3"
+        },
+        {
+          "task": "todo-05",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": true,
+          "official_tests": 8,
+          "report_sha256": "bb0f3c709ccfe0d69fa17d14a2e3f8b68b6decab20f6606ff52a298b25508f19",
+          "files_sha256": "c60bc9702e432569b7688828fcd2d4ffa9377f7dc88d275622fc3e57971881cd"
+        },
+        {
+          "task": "todo-06",
+          "arm": "a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 10,
+          "report_sha256": "b6efa513417acc645b6224e63412ce614010547bab60ac9f8b49b253bd76c632",
+          "files_sha256": "165f8576afc1f3e8c9d5509e01ade4face43415c62638ef87129de03698b3651"
+        },
+        {
+          "task": "todo-06",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 10,
+          "report_sha256": "11a684b9fc74966e6b0b67b3add338a7b2ee7485b558e9d345ab4911fcfc5849",
+          "files_sha256": "fa5e060e1815675559f9d3e5891c3e7b9cf02f69b576c2a221d42466f798532d"
+        },
+        {
+          "task": "todo-06",
+          "arm": "b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 10,
+          "report_sha256": "680fcbfa0e26faf934df66eda5617d4919ad361529963e306c419b7b91354278",
+          "files_sha256": "a5872b677699ab189c6719f1d3f9f531f9a50935927e2bcd184e8a82f348a868"
+        },
+        {
+          "task": "todo-06",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 10,
+          "report_sha256": "f89dcce980c67f92c533a4386376b41c5727105fb2238214fbbb2e73bd544d20",
+          "files_sha256": "c60bc9702e432569b7688828fcd2d4ffa9377f7dc88d275622fc3e57971881cd"
+        },
+        {
+          "task": "todo-07",
+          "arm": "a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 16,
+          "report_sha256": "52b6a21a604ad057a5cbca4a17ab325bb8e6558c0dbe3bf8785d9b159e6fa367",
+          "files_sha256": "165f8576afc1f3e8c9d5509e01ade4face43415c62638ef87129de03698b3651"
+        },
+        {
+          "task": "todo-07",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 16,
+          "report_sha256": "81ce28a1c8316c16c1284f04de7d8b152a36f9bc738fbcff233ae922bf6bc77e",
+          "files_sha256": "fa5e060e1815675559f9d3e5891c3e7b9cf02f69b576c2a221d42466f798532d"
+        },
+        {
+          "task": "todo-07",
+          "arm": "b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 16,
+          "report_sha256": "47b70445edff7101c962db77234a927f62b5481f7b4a8a7fcc7d12447a9c1c97",
+          "files_sha256": "530cd38656b6d9a06d85045197ef4b58d5e6c1ab461626df8e94cc975e7bb1c3"
+        },
+        {
+          "task": "todo-07",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 16,
+          "report_sha256": "fe82b4288abd8b40cab4d23eec8ff8f6325ae1ea71e3b848cefede8856e8871c",
+          "files_sha256": "c60bc9702e432569b7688828fcd2d4ffa9377f7dc88d275622fc3e57971881cd"
+        },
+        {
+          "task": "todo-08",
+          "arm": "a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 24,
+          "report_sha256": "cae2671924832411303be63eea74ee747524b61e9aa9b3899b7d0ed4298b9e1b",
+          "files_sha256": "8f32a7a654cb1d8e30734d9c4af82c4d15eec64090fc8c923b75525312ff8204"
+        },
+        {
+          "task": "todo-08",
+          "arm": "fixed-a",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 24,
+          "report_sha256": "1a6aa5e8c6cd731ab342a7c63f8bac192f67a9e233a1b32696ee7bec1739fcb2",
+          "files_sha256": "fa5e060e1815675559f9d3e5891c3e7b9cf02f69b576c2a221d42466f798532d"
+        },
+        {
+          "task": "todo-08",
+          "arm": "b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 24,
+          "report_sha256": "5d8e90fd069c83c0a14dd6760f2382150c9462707b38bbaa454e2f673a369b69",
+          "files_sha256": "a5872b677699ab189c6719f1d3f9f531f9a50935927e2bcd184e8a82f348a868"
+        },
+        {
+          "task": "todo-08",
+          "arm": "fixed-b",
+          "status": "valid",
+          "passed": false,
+          "official_tests": 24,
+          "report_sha256": "949c7c70ef4b348728c6e619764a725283123fa12454e94ff1c17969660da90f",
+          "files_sha256": "c60bc9702e432569b7688828fcd2d4ffa9377f7dc88d275622fc3e57971881cd"
+        }
+      ],
+      "seal_sha256": "036a300221ae076148d92856ed7e5c52a397bbcf2bfa52bbc940e54a8117393e",
+      "libraries": {
+        "a": "valid",
+        "b": "valid"
+      }
+    }
+  }
+}

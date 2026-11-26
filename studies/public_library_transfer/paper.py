@@ -139,17 +139,11 @@ def tables(today, table):
         rows,
         wide=True,
     )
-    authors = {}
-    recovered = {}
-    for project in today["transfer_open"]["projects"]:
-        for group in project["groups"]:
-            authors.setdefault(group["builder"], []).append(group["admission"])
     recovered_pages = []
     for project in today["transfer_boolean"]["projects"]:
         for group in project["groups"]:
             builder = group["builder"]
             admission = group["public_admission"]["status"]
-            recovered.setdefault(builder, []).append(admission)
             if admission == "valid":
                 recovered_pages.append(
                     [
@@ -159,29 +153,6 @@ def tables(today, table):
                         match(group["plan_vs_fixed"]),
                     ]
                 )
-    prep_rows = []
-    for builder, statuses in sorted(authors.items()):
-        label = "GPT-OSS-120B" if builder == "openai/gpt-oss-120b" else "Mistral Small"
-        n = len(statuses)
-        assert len(recovered[builder]) == n
-        prep_rows.append(
-            [
-                label,
-                str(n),
-                fraction(n - statuses.count("missing"), n),
-                fraction(statuses.count("valid"), n),
-                fraction(recovered[builder].count("valid"), n),
-            ]
-        )
-    opened = table(
-        "tab:transfer-open",
-        "API library preparation. Mistral builds table and svg-chart; GPT-OSS builds all ten projects. "
-        "Canonicalization reuses the archived responses and treats an explicit pair of true and false strings as the equivalent declared Boolean domain. "
-        "All other admission and public load checks are retained.",
-        ["Builder", "Libraries", "Responded", "Strictly admitted", "Canonicalized"],
-        prep_rows,
-        wide=True,
-    )
     normalized = table(
         "tab:transfer-boolean",
         "Fresh Qwen configurations on the packages admitted by the format-only analysis. "
@@ -294,7 +265,6 @@ def tables(today, table):
         main,
         remote,
         other,
-        opened,
         normalized,
         prompt,
         unseen,

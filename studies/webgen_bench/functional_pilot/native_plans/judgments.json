@@ -1,0 +1,5295 @@
+{
+  "registration": "3cd3b2846b84c2ba434bc20a4d0ffa3913af3a42f311d45008f8877a100536b6",
+  "candidates": "715b1f69cb546dcabfa320a4e629bda1e97684c8515cd332cd1b066634e839a1",
+  "route": {
+    "model": "qwen/qwen3-vl-30b-a3b-instruct",
+    "exact_unavailable": "HTTP 404"
+  },
+  "calibration": {
+    "model": "qwen/qwen3-vl-30b-a3b-instruct",
+    "results": {
+      "working": {
+        "status": "judged",
+        "verdict": "YES",
+        "reason": null,
+        "trail": [
+          {
+            "step": 1,
+            "action": "click",
+            "target": [
+              "0"
+            ]
+          },
+          {
+            "step": 2,
+            "verdict": "YES"
+          }
+        ]
+      },
+      "inert": {
+        "status": "judged",
+        "verdict": "NO",
+        "reason": null,
+        "trail": [
+          {
+            "step": 1,
+            "action": "click",
+            "target": [
+              "0"
+            ]
+          },
+          {
+            "step": 2,
+            "action": "wait",
+            "target": []
+          },
+          {
+            "step": 3,
+            "verdict": "NO"
+          }
+        ]
+      }
+    },
+    "qualified": true
+  },
+  "original_judgments": "5b72058a85a939f33036d36ebb8fd150dfb787de7d1de7660d5ac98dde8f3733",
+  "cost": {
+    "calls": 1422,
+    "settled_usd": 1.036653,
+    "exposure_usd": 1.036653,
+    "unsettled_calls": 0,
+    "cap_usd": 5.854093,
+    "stop_usd": 5.854093,
+    "halted": 0
+  },
+  "rows": [
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 5,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 5,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "31ab519af33e68d2c5336b381b1bfc58c4d3e25fe5e4d33053ebb16b3f2cf454",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 0,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 1,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 7,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 6,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "329d19375d6295d293883b1f5eeca0c1bf84a909361af8071ca7247ba91fb39a",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 5,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "PARTIAL",
+      "reason": null,
+      "source": "bcf84af2b025d28eae3410a32428634d224b59dcd8ee43681ba463008c280cc0"
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 1,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000030",
+      "check": 2,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "PARTIAL",
+      "source": "23a4a4fc5ec1bd90705eaf5b2be7bc29fb9ca4d9cf1217733b0c51d72da8d2bd",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000030",
+      "check": 1,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "9b2d69ed4661e7879d8a31b541b3e84ca01cc441e6c4be7ae1df24c340f9d7fe"
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 2,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 4,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 0,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 2,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "ce6fe7da0e4d37dabfbf71d3fec42d6a7ddf6934861cc2d41b13e4d7d62d6450"
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 4,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 0,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 5,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "7c32871ed9c99cbe396e96aa06f6c32300d28605d4aa2e05abb6fb85f0a5933f"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 4,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 4,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 7,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "9e19434fe0836ad5691626e9d9cef84acd962b16c50f3ffcda92e0f2944bdea3",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 0,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 3,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "72d7e3d9bcc457095639754e2ce2101520e757da01894f494849ebf243e1d0d6",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 7,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "31ab519af33e68d2c5336b381b1bfc58c4d3e25fe5e4d33053ebb16b3f2cf454"
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 6,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa"
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 7,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 1,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "eece69271d21a49ab90aaed5d631e42621a11a3ded4130913e83f3461bfbcc5a",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 5,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 4,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "0967a67239ea3b3aa84f7694390b1ebbbdb0f74cc563ae21b435d438421b0cf2"
+    },
+    {
+      "model": "gemma",
+      "site": "000030",
+      "check": 2,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "c92c866e31e08e72ababfc16cdacb25d2bdc54b97f17834f6e33d6b418ad6f9e",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 5,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 6,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "a854f861cb39007d5bf9ecb5249ebf27fd62816fdb922a092385ff2a93b32aab"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 3,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "9851bd6e85a1a55ab009a85051d96b5132bbd36a60d382bd4cb3d2b984dc03d4"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 5,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "72ea4892446e7926c272560967e2a21abaad546acbcdf1468265b99fe6a86435"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 7,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "31ab519af33e68d2c5336b381b1bfc58c4d3e25fe5e4d33053ebb16b3f2cf454"
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 0,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "24bbc61a6d31f21c4c7e62c245ff827672186a339008c98874b71a400c1ca9cc"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 8,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "31ab519af33e68d2c5336b381b1bfc58c4d3e25fe5e4d33053ebb16b3f2cf454"
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 6,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "df70d694d465c18a8f13d169dcef54ae3dac213e2c28d9f01bcea5fd37f57e9a"
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 3,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "cdba9fddd6cdc75d7d869054c95964c5eabdec218652c279eae7c9b1d7b4e922"
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 0,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "ca4440eabafb64fb6e2aa9665d76e97ae73065e8cbcff72505b2a006df65c37d"
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 7,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 8,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "31ab519af33e68d2c5336b381b1bfc58c4d3e25fe5e4d33053ebb16b3f2cf454"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 5,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "e00eb719f134fd1044af6ba8fd818a708e9de6282d2fd3466335a77665ab2eac",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 5,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "304dc07e365cca320be18af2dbbaad3a8b5c668a4cd7a58f2a2adb6638d4b7ee"
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 1,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "9a6a8f489e27e22ecc56b8c733020940fbd8ff70fe6d02794538b43bd5ec6ea2"
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 6,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "15fe5f60abbeb5d338d4f081e2ce5e0941e3825b2c929c2c84f4965be90875b8"
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 3,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "f3632ec85bde2118cf6fecd74d18f07306f181fcf3b9e3fa69d29ca9036b5ff3",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 6,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 4,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 3,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 5,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 3,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "6364f8fa642306e82bb6741bde63c9a95cf1a7764f24fa3d6fa48bd2d23b8289",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 4,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "c93014c3f572a862985f1caa820474576ac471e18711b2badd6a491c39839534",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 4,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 4,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "c29d5d41a83b248fdd7d4102707444db60b6870bf41cc6f8b88f94e37920eb41",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 6,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 7,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "deead72d169a98e1ecee1d44fc4cf7004c80c0fc73b1b0648bdebe426a7b8fe7",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 1,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "05f432833fc3a3196f0f184703fd0c2715d85b1f6b1723147fdfa85703b95b8b",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 2,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 7,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 3,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "ce48b8e14f030ab32ba9f2938b1fc53ce5b5f5cdf37e14b06113745f2993ce57"
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 3,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "a080e4a2531d3b918375b88efa8040a12f1ef7425204f96736a76121b449a7ef"
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 3,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000030",
+      "check": 0,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "2662c04cfb6fcbaaccdde78863837ef3562558efdfa0cd1eb43fd5e642a37ec5",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 2,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 0,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "1e2afd6c9c18997fa1b69e87f43b94fcaaed21e8d72edbf2c79af9fd5fe13705"
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 6,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 2,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 4,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "PARTIAL",
+      "reason": null,
+      "source": "758f3a952ed46bf7dc2fe18a7f38027d27100151d5400ce0cc22cec5f63b3649"
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 2,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "74c01981e804981f6fac07b00bd7c2e405f98de94993de999c3495acdf3d9ff2"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000030",
+      "check": 0,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 1,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "971f4c85b114cf40662c1b1b8fcdcdf757b5f29c0a5a9ec4e06055ade02a0a0d"
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 7,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 3,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "fc8c5b01bc17f63e32add912ba337caffe920b5bd5e0fcb490058edf21f181f2",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000030",
+      "check": 3,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 7,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 7,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 2,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "9aa0b65f09e3b4637a770f7e72c5a5097639d8e463f8d5a4282c5d2b995ccaf3",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 3,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "9063181801c73502fbcfe4c52299172c15f65f28c676af0915746aeb5ad54ba7"
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 1,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 2,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 4,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "be3a0f3d15d27997a385cd52e0d422773daac6c7e868e42eda5ab6b18af6f730",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000030",
+      "check": 2,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "710558032e770cbb00507f9abe4ed53a686b97387231abd34fc06d421c62b6f9"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 1,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "PARTIAL",
+      "reason": null,
+      "source": "61b07cde63eeb18a519f56e6776409155d4bf2387d6ddd3c12b8edfd507dbfeb"
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 0,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 0,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 7,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 2,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "9f47bbe9a89323736bca0a024a140dc7c5aee72a0faacfcc3154c8ef403f9e56"
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 5,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 3,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 3,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "bdd09b2b8e8ac76aef0d644bade9c588899c7d3c63afc692a27f240bf1fbea84"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 3,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "67de13af605d9d14f12cd6bc66d12305eb92abfc5902afdf8c9a85b3bd3a5556",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 3,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "6d12fa4c282252f21cc3ad4491a62f06a7a2e248837855cabc85e7f7fd5fd567"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 6,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 3,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "8659796b81194929c8e7ccbe939086c626a7022a811c0e0ba8904ab8a8a7e82e"
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 6,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "deead72d169a98e1ecee1d44fc4cf7004c80c0fc73b1b0648bdebe426a7b8fe7",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 3,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 0,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "44fb872bdf820d9c6fb38461592ac3aa655b68834ea115a563d5afd198d91112"
+    },
+    {
+      "model": "gemma",
+      "site": "000030",
+      "check": 1,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 0,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "5fadbaed2f6a74d9d06d5d351b20bb7991ff24fd273862f72fd36f768c3f699d"
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 2,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 5,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "0a4a7556d0407049ea7a70bab69afa07eb8885534f98618860744c3e8cb1b9db",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 0,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 1,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 6,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 1,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "07922b3062244e8a7001177eab5b2159cdd36e69fc24214032c4d6965d5feeea"
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 3,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "9873bdfed1b40a0de4884a7b98620f26d39162f5ce2ad19ca85ca6e8dddfab5e",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 4,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 0,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "5c600c60066d6adc0e61e20976b89307fcd317051d825b5c7e7fe9d813ba00f8"
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 3,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "5d36e8834d6c476704858cba11102cc400b494d525e638398af991af31ec5263"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 1,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "a87b6477b659b51dadddfb29ecd550384619d3f92045ac2bda1335b297403979"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 1,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000030",
+      "check": 2,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "673b2803890ab4b7b6797dd8b652874f7faa83b85fd5537d0586b76f97ce96d6"
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 2,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 0,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "53bc2d52728440212e597463e7038979d5f34819702681d7675c5cff63f19cdd"
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 4,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 8,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 6,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 2,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "fdc824ecd08702f4be21bc37b772eab186df285adaed63ce3df7d12e07cfedda",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 4,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "18fef40ae02df703d2519c7bcaf750e56e4b3c50b18d7a5641300a0c41f27a16"
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 0,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 4,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "7c62c13f5d9436a3364a3f4b63539e2d4a3daf54ed948414f314cdba35bf9227"
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 3,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 4,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "0d09d0916b47b2df9c9abea18e0dc14d5a27b3f1a1410074318f1ed1cd3ec91f",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 8,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 0,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "fc847d08a3ce2af8f0bc0d6240d2f5589fbf3b7ada09a35ad513e0d645433efd"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 2,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "951c0f08cee602a69e16fe5a411c82c032977734a62c0847beb265d49acfbca9",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 3,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "98fe84fadc7141ce91949cbd1e1dcbbbf033435050dc125e1d8a8e5667a9830d"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000030",
+      "check": 3,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "31ab519af33e68d2c5336b381b1bfc58c4d3e25fe5e4d33053ebb16b3f2cf454"
+    },
+    {
+      "model": "gemma",
+      "site": "000030",
+      "check": 1,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "9dc536a2f85c638c693bc99da834bcf8f7f7eaeba255afd2f8d2cdb9d336e6d9"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 6,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "dc701970db6977881df53130c9ee1ce8f36a7fdff91f091cc5ca9635bbcb8fd5"
+    },
+    {
+      "model": "qwen9",
+      "site": "000030",
+      "check": 0,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "b3facab3de59098443f3e61523c8b9a2ba256301bd11e51be76e766a6008ce41"
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 0,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 5,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 0,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "31c95f86c2c37b723de1ed72ad302305302c4e49a0316f64d732a843f2f46b81"
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 0,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "a2e5feabec622ab72b82f2561d111b50f267b01b3c6f98d51c802458c66872c8",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 6,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "b55bbba93752b874e0f9fe437fc7a8ffd88448bb0cfdceeb2147594ff34fd940",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 5,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 0,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "8e227bf100d37452dffbfdc577c12ce5520b35a17b8a060dcd937807781052e0",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 4,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 1,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "84b357fdf6be1f76d88750c4079b5a936f1e2ffe1ecde020f572436d572a89ff"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 3,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "c499fa6900df728378271b1dd6657120e90a263797c6a7153279d59b29676303",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 5,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "46313c2341810afba419fd62e11cde5c2b917e9c56b6adf4c93577ea6acc077f"
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 5,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 7,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "82f7b24cbfeb1a09246e8a99f0a1b3fbc5579f2d1655aac2d9b2208660983d35"
+    },
+    {
+      "model": "qwen9",
+      "site": "000030",
+      "check": 0,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 1,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 1,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 6,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "e51f37de3ac6e06328ca977cd7c3656beb599b3da8c4fca10c2b4ff55de651fc",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 2,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 5,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "7570ac7822002c22c845f9232840fd6812fcf8c3f1d1ee0996c61532bc8ecf7b"
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 2,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "49e10556107ef43d864777ce63a98c4cc67a2d41aaf95256c305f3fdb1f11478",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 5,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 2,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000030",
+      "check": 3,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 4,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 8,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "3367066a0fe8141d2847f9e89362eb1274a536bb331fdfbd7ad2fcfbcb9fb175"
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 2,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 1,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 7,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 7,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "46f06adb423916661fe96c66f75ce2e62def7b07c6cd662458128e6044005b47",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 6,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 0,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "b3facab3de59098443f3e61523c8b9a2ba256301bd11e51be76e766a6008ce41"
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 3,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 7,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 2,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 1,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "0ec8af97423a548a5ce7e290e9d5b5c7b2b8a42394d37a28facd880e36128439"
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 1,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 2,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "59cef1e43e7b7ab142fe848f9e957f6e386129d521a03638cee9c8648986196d"
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 3,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 6,
+      "arm": "direct",
+      "status": "start_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 2,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "deead72d169a98e1ecee1d44fc4cf7004c80c0fc73b1b0648bdebe426a7b8fe7",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 3,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "c159705c4f476790f639d1abb3049b02fe0ca428318d620d365ca77f9d8b7300",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 3,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 5,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "139a41c778cc1c93ce66b229315f0dfb4ac04d989d4eda637a17db979ce64ba2"
+    },
+    {
+      "model": "gemma",
+      "site": "000030",
+      "check": 3,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 4,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "619fd46958a81b9f0dccbde7809ecdae4c9a573ebaf23112bca1a9cbc1448243"
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 5,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 1,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "3d6a053baed27bd7ac68a8bd88030ef6aa24830c43d2a269700ca47e02dedf89"
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 0,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "b3facab3de59098443f3e61523c8b9a2ba256301bd11e51be76e766a6008ce41",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 8,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 2,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "f6cc25001063d28a18389ac2605482d05a156206970e8979f184b33ed9f84159"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 1,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "c2b2f14ff846860cdcd6a05f6d2d12005a2529670ea245a52d3ba8cf3efe7b0e"
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 8,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 7,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "6e2820369b2519537b577ec6fab75f97d781e629a905a2ccfae6f1f679a7b436"
+    },
+    {
+      "model": "gemma",
+      "site": "000030",
+      "check": 1,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 6,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 7,
+      "arm": "direct",
+      "status": "start_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 3,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 6,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "66a2a80de9623e3a0af1a724b276828e380093a8db4ea7782e73e1563166e91c",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 5,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "47ca0db64603f5bda84fb9fd3cafa99b623ca30a6000d2f73359d758973a0c1c"
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 3,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "b928c1a318f1ce6265e8554a73300d4924f186a98e9ef2fc1e9041629f2cbcf7",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000030",
+      "check": 3,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "31ab519af33e68d2c5336b381b1bfc58c4d3e25fe5e4d33053ebb16b3f2cf454",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 2,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "0ec8af97423a548a5ce7e290e9d5b5c7b2b8a42394d37a28facd880e36128439",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 1,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000030",
+      "check": 2,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 1,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "5bd00cc8b93e62611a2fb226b19e4846280c53d4891f70d9eca140536e3323ed"
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 3,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "PARTIAL",
+      "source": "9ba237bbe595dc98b64c6160078c6ab3ba592fe43339210997d9f60141a988b1",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 7,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000030",
+      "check": 3,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 3,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 1,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "1383cf3940e90c43e6e5f71af3eb7dcfede4dfe16c0fe18872621625f49ca366"
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 6,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "e4bc0bbbfa1e132cccc8caf42f3a236429a40f230aace84c1fb711bfb2278f05",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 5,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "d557959435df89aaef8f3f3bfeea726f2d6dd6abe9a4b0bfb62d4dc2882e5462",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 5,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "e531d0242da1e93990b862989cad8dc0dbffb646b36637568aeab9edf41fb621",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 1,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 2,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 2,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "ffb752ad13f5edd411f2d5c4cc897f54ca5914185c15d0edc64f8a164f1833df"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000030",
+      "check": 2,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "PARTIAL",
+      "reason": null,
+      "source": "2cec59a25897627e50d52f7199d957dcd1fcf65aae6244f71d2e436ebfe6ba63"
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 5,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "d4ee5db43027520b3bbae0178db46aa46b19d69ebf7f6b515299d07796bea3bf",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 3,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "bc4879bb221c661f0509868f35761581f10afd1742c9ec955099834490fb1802",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 3,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 0,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "ee9a2e20bf2114ad73b48c583abe213b6b24fe7c24f77ef78cda440f32f146dc",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 2,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 1,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 2,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000030",
+      "check": 1,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "fe59f706833533bedcc0dcc2ad430b6ca8817f85dfaead5f463828b5a31c4fbb"
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 7,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 2,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "d6772cc9b40ede0ae06bd28185e96f4d9b1d17ed6b18b4e16dfb415fd585a95a",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 5,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "9ca4df390ab76960b6f16a547f5ac2512a6b7826f34e5c8f57fe7d9543162742",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 0,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 3,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 5,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "7c32871ed9c99cbe396e96aa06f6c32300d28605d4aa2e05abb6fb85f0a5933f"
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 2,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "31bb5d24e486952074d0526209fecc10decbdba57ff2dec59e2e988193adcc37",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 6,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000030",
+      "check": 1,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 4,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 0,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "9e820b492be9babd3dfa147f7e150bf56ca2434a48f138a1b748da9d7348d944",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000030",
+      "check": 0,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 6,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "dd6b5470901100e7c86517c5893e5a98a2b9f1e293f9632aa59d82cd79fa1b3e",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 0,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 6,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "51b37270c3a968370b5b67c68726c61e2c20386ebedac306e4eee898830f7f01"
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 7,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "PARTIAL",
+      "source": "bdfdbbd4d4b25d75f50a005b151ac383b35bdff34e1cc49d9a80d5554552c280",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 6,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 8,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 8,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "31ab519af33e68d2c5336b381b1bfc58c4d3e25fe5e4d33053ebb16b3f2cf454"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 2,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "266d82d6794a654b0217a180f47728ba1a1b97f75d73191853674be14844c0ba"
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 0,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "381c8d45f957385a6376023ad5c236f5557c40e673357cbf5be66c542b484270"
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 5,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 5,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "ecf486fff85d506e5da4701909777572037770ae57a7c452dae353c42013521b"
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 1,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "72f1f41a5ea2549512207d3bd0b9db4ae6d0504d1c5eb2856c983a5b3da25115"
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 2,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "31bb5d24e486952074d0526209fecc10decbdba57ff2dec59e2e988193adcc37"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000030",
+      "check": 2,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 4,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "8fa595da4846679be81534a949f9933e6230c6b547eacb4f825b7cbf3f2f3494",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 5,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 3,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "397ace8d512147dec9c4c76ad0c126d28157da90ceeea6606b43b4509f6aa3cd"
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 4,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "74c01981e804981f6fac07b00bd7c2e405f98de94993de999c3495acdf3d9ff2"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 5,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "74c01981e804981f6fac07b00bd7c2e405f98de94993de999c3495acdf3d9ff2"
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 1,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 1,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 3,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 6,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000030",
+      "check": 1,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 4,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "ef60e24246c1d139545912f85ab020ab72a58d4f6bb151eb8ca33ed883559019"
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 5,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "e0e099ab0a51b790bb38cf33a31ab25314c3b543222667f0ea9a07fc67c0a9c2",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 0,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000030",
+      "check": 3,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "31bb5d24e486952074d0526209fecc10decbdba57ff2dec59e2e988193adcc37",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000030",
+      "check": 3,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000030",
+      "check": 1,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 3,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 3,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 6,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 7,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "33e3c04a62133d30dcf0b01bf5199b33c8c58a22c6676d201333d250f3e15e55",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 6,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 1,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "9e28c916f779ed69f7066f3d9e04de2b59c4a6d89045716885d8226c152b2201"
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 6,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa"
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 8,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 6,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 2,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "7fb20fd17877b4e0ce2ff60a33e9e7b9bebbfb180f42cce970474c263fd94477"
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 6,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "3995db9fc8477e404e2d4d9b3afa0ac8bb4a431e60232bd79882d6fe23e1328f"
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 3,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "a6bc22ff922f4a0f2eb0bd8fe511eaf5edeb597ce13c599c5f4b154f436cc4b6"
+    },
+    {
+      "model": "qwen9",
+      "site": "000030",
+      "check": 2,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "304dc07e365cca320be18af2dbbaad3a8b5c668a4cd7a58f2a2adb6638d4b7ee",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 5,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 4,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "ff7f65609326550bc1f0960fa2fb90259ed51d0cfea1c677337ad6beaa9dfb97"
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 7,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "0e3804bbf6fb10899300a69c79118f1616dc262d8ae7d0fa1b8f3f3c450f2a14"
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 4,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 0,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 2,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "8e227bf100d37452dffbfdc577c12ce5520b35a17b8a060dcd937807781052e0"
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 4,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "89ea9ef1628460ab1e28afd7f2c0a234af633f7ad40d8a8ea003e3da1cd703e6"
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 0,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000030",
+      "check": 1,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "aa3bdb417af25aab832d6db270654ade2f637c7a456a27685732b1b2f4cd599b"
+    },
+    {
+      "model": "qwen9",
+      "site": "000030",
+      "check": 3,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "31ab519af33e68d2c5336b381b1bfc58c4d3e25fe5e4d33053ebb16b3f2cf454"
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 2,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 5,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 2,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "ca8e0ca786bc896a2b24b3c9dcad92bcf18c2d5e13c580d1502085c7889f8501"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 0,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "ce946cb8ff3b3a5e09f2ace61a25f03c84e195064df65033b72af1334e871685"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 4,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 8,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000030",
+      "check": 2,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 5,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "942f29c6491df14a5c0876a06360d4522f5ed8485a1f599e266ecdfaa252aa9b"
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 0,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "c1cd2e93be503524c0ec615b6f8780fcedb479720aae3fbb226f42c777bbb5ef",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 7,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "f042fc292c21684aad1aedad5166d42fc9881c7ce29aab8a703b8a2770bc5af6"
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 2,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 1,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 4,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 3,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "1b51dbd2d494ac1a7b792a25ea0e33e869bcdc22ff025a8555e0b3403f17bc4b"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 1,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "87d7afe4d7e5d174d430607f7547a2d35d240b525beffd9b85c4432e3529d4c9",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 1,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 4,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 0,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "PARTIAL",
+      "source": "117bf47e5ef03a8afb325bfc0f0720ad184ca51fb2dec5e4726813747f58f987",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 1,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "PARTIAL",
+      "reason": null,
+      "source": "f4a8b658442278262d9065334e363836b8be48cfa6d7a6d161657dcefa36438c"
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 0,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000030",
+      "check": 0,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 3,
+      "arm": "direct",
+      "status": "start_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 8,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "88d77a61b4769ca719a0dc51ef6ac2d795cf4f79f73b12e081f6861e50b7f56a"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 8,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 0,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "37dc6bce11a6d715cba92b6b244a9dc2b4435199ef9b31d800a680dea609839f"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 4,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "7085fc63a4fd28831d13a0b98ab0ce92bbc07ee61f2c7a96122315e09929d294"
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 4,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "bd29d5c11ddec28a92906131d38a1c4f3ec3668c5e2bac2c2dc761214ceb24b1",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 6,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 0,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 3,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "1f5bf4eb8ffe8c2ba2ac6802f478f0bbf7d5862af47d3487519a8817cac750c3",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 3,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 5,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "0844810c336cf2172032186257cc97d16eba2c4624072645796485d36d2fe75c"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 7,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "3367066a0fe8141d2847f9e89362eb1274a536bb331fdfbd7ad2fcfbcb9fb175"
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 0,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "664e3abd1d9a4cc20de2fef87e7634d7e1c44abb8092026ee133c63363351036",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 1,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "b3facab3de59098443f3e61523c8b9a2ba256301bd11e51be76e766a6008ce41"
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 0,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 3,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "PARTIAL",
+      "reason": null,
+      "source": "c7bb57f4e087ba90c3276fa335adde5f3569f66f597ab28c859aca47f6af048e"
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 3,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "3135a8130af7f44641179298994e98946b7465d59959b1f4a90305528a8f5467"
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 1,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "deead72d169a98e1ecee1d44fc4cf7004c80c0fc73b1b0648bdebe426a7b8fe7",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000030",
+      "check": 1,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "cf26c2400dbddab6683f42cfe15fa98a94fee8cb9796c088feb1e68144a73639",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000030",
+      "check": 3,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "9d4659ec272205971517471d29f1ce1614e4c23ffaf6b1a61778ff6d55af00ab",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 4,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "d688e1ba476ea4dba5fdaa9a634db749f76a67841748da90ed9333dc7a433024",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 2,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "7fb20fd17877b4e0ce2ff60a33e9e7b9bebbfb180f42cce970474c263fd94477"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 2,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 2,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "b3facab3de59098443f3e61523c8b9a2ba256301bd11e51be76e766a6008ce41",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 7,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 7,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 5,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "66caa54d632c13af108f3491e837d14d8bf312c7ef9dcaf640bd403958a59cfd",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 6,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "dd1e9c7a0b67ffcef19351e6f5aaea6ee04c3324598859d1e608295a84b5ea27",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 3,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 6,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "14b789142e2a072abc73e1b88523f076f81b2d9b08877e3f645dab3a399beca5"
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 0,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 2,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 1,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 3,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "df4064a020ef83d644b18af129817978d2be96518fa057426e7e997f3dc1b43c"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 8,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 0,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 6,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "f0a38250b86c0e621d6ea5ce16424a76e029c58c97630ee84560bcb79e65c8da"
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 4,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 0,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "c46c1e9e9a2bc04b04a444d361764462013d51cc186f61e9baf5614e8a296542"
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 1,
+      "arm": "direct",
+      "status": "start_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 4,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "6a54f55224aedf62f6c9d5db7e3456b7ca24d174e3880037ca62ecbd22f61118"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 1,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 5,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "c040aa91a08ec7b93df1a324785f7edf4e8710e596609c35f05f78e429904d7b"
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 4,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 4,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "8429746f5373bb23af1c2d117d3da145fe46b8824539bd4d49eec58ce1720059"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 5,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 5,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 6,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "9e28c916f779ed69f7066f3d9e04de2b59c4a6d89045716885d8226c152b2201"
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 0,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 6,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 4,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000030",
+      "check": 0,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 2,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "86a080fa768646994fa32c3007104b6c7925012c024cac2374e8922821865cf9"
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 0,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 4,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "b0e66aeebc586a6ce155b1812eba6678185da4d0142d170f1e575a1bb61978be",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 3,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 5,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 2,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 2,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 6,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 4,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "66fefdc4c433953df75f6bf0e48dfd73206c969baa6b0e6fa0c90b82d6905310"
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 7,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "71bcedd56837db58c63033031607d7043f9982a26ae650e83b295a4b3486b925",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 4,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "54eab76e0194602404a7a8520ea06a620fb866e1763c77d4a70c16680531dc09"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 6,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "PARTIAL",
+      "reason": null,
+      "source": "313d265619af5f1aaa1dd7cb13215aaee7424d11d6f8c3b4cc2071e0a84f9c64"
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 4,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "aafed49cc7fc16fa2d35ecf2ed043aa4b8f2c9a6e3611d2372c2e7030965aa4e",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 7,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 3,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 1,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "85629355e3de8309aa762cbbb56033c02bd85861508c30ff3ff9442a8e48b58b",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 5,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "7fb20fd17877b4e0ce2ff60a33e9e7b9bebbfb180f42cce970474c263fd94477",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 4,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "792f0217809340c0d6708b7954984b2906e507f29b46abd5a733bb00de78e78f"
+    },
+    {
+      "model": "qwen9",
+      "site": "000030",
+      "check": 2,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 2,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "d5b29cd7f699e37b1b36ed1610daaf08a3a1dd87618b62765e7f5431ab9be6f8",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000030",
+      "check": 1,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "62229f917894e6c553964dbaba369c0cb839ac64f0fa802942130c0e06185a1e",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 4,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "adcb601af756a03414ada217abd656432ffaeff9f923e3e810038b1da69a8926",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 4,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "74c01981e804981f6fac07b00bd7c2e405f98de94993de999c3495acdf3d9ff2"
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 6,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "1eaee2a845b74b4ce7b202a6aadc0b575ff85ab81e82820462444889ff7be2a3"
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 0,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 2,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "b3facab3de59098443f3e61523c8b9a2ba256301bd11e51be76e766a6008ce41"
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 4,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 8,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 6,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 3,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "efd4096ed53d3df64f69e2e1a9342ab6bd391e5620ffb336afd0e08e5cfab9b0"
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 0,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 2,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 4,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "76b176a2c40ad7e98167c15a352d16985a2cdd9064b641ba93862eda6a1eb4d4"
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 3,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "8341d47e7368234272abf6fac234506cc3a8ba62c17803e726c980dc46cb1828",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 3,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000030",
+      "check": 3,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "4396c349c5881d045a0f6cb936f36898ba3e23d740adbf25ed4321314ab7653f"
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 8,
+      "arm": "direct",
+      "status": "start_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 2,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "27c6284aa67c6591d95220fac970449bb5e6c9553ca7ad3fc52a38f05e3a3cdd",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 1,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 8,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "aa8ed5931d0fc5de40b51db5064a3fd477371057f0b243875071853631369879"
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 3,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 1,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "9becdebbb6c92d06eefef93501be07c1b0911fad56027e7416b8de6c5b41a8c3",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 0,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 4,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "50a7365a4170c731007576b1e6676ce866fe1450a89bd892f361fb4636ca4e4d",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 0,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "e13a853493d0821b5ad3d79775a08a288c0e2019374a3faf8d72627b112d8007",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 4,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 1,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 6,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 0,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "7dda557ef031f957df51f02c330052f94087b23d7542e93134a0605f73d93d13"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 5,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "54e62bf80f065fd4790eb1a094d2442e6cb54ff3d4a2f4fc5b2be6bf5c32e284"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 7,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "eed1c828e7840d367cce971fe8240b7830360f89811e08875d87d33c4e934b01"
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 7,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 0,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 2,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "5dfda8a89f8fb818feaa5ab79a21393d302ab4aa3b0f3a4d8fe41fc9c522b3fd"
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 1,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "ef2e1db531aa80cef6342c76e5cae2c1133192d96edcbae4c3dd46acfa9e1127",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 1,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "878ba3b14d55c197f6b909e28cb3fa415428da647d1165bcc5cfc912025ed9d6",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 3,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "0aee419ebdc995d4c7706b246703c6a7da75b32a61a109cc69e00e0ba912d8d2",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 1,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 4,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 4,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "02f797677d20c017a28d4fb851b4777163e0064515f95fe82ed970c61b23ecf0"
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 5,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 5,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "3747874e0f7047f81f4c90376633a2eefbabd6f59a02ab78bd48bfc8f4b19c63"
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 0,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000030",
+      "check": 0,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "7fb20fd17877b4e0ce2ff60a33e9e7b9bebbfb180f42cce970474c263fd94477"
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 2,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "c10be6d2f67f619a528f44bdc084e5190c8178b5fe544221b6fb5f15247beb4c"
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 6,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 4,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 0,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "5823080bb05c5993ea6375fde1b53b9e940e63431a611a63707829c0e471ed40",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 3,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 1,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 8,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "31ab519af33e68d2c5336b381b1bfc58c4d3e25fe5e4d33053ebb16b3f2cf454"
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 4,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 1,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "cd40e59da80ae2f67d45b4879fb06437bdf690303b2e84e28df05813fda2944c",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 2,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 2,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 1,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "a4148607d622cb51a107c286bb69d7ca9004697f4e6b573d2feb52898cc07e69"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 3,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 0,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "PARTIAL",
+      "reason": null,
+      "source": "8a073471e18f81a2fe098fe2652faf83f8d969deec419ea42d87501911cc56cf"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 4,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 6,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "2587bba0b0f7201012e14c64843b161a0ff7f83417e6f9aba720796dee4d2774"
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 2,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000030",
+      "check": 2,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 1,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "07fb2208d532f0179bc93271ded753d7c84df17aadd14f0d7d4c56638a676b6e",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 1,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "28f5f80bf7ceb0121c089e021908dfe44988f94288d0b9971651967e6f3d3b01"
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 5,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "3aed397ca209409e045ad5bd0a7b299161c88af86c1312900ef66e25b9fae762"
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 1,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "3c2a1b545a49ab7fd184ad19291d4323012068c5046d95a61f0c35ed9d6637c4",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000101",
+      "check": 5,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000030",
+      "check": 0,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 7,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "396116af1e70f3488384e1eebf2f02bacaab46c748a23a82eb07b813dae20091"
+    },
+    {
+      "model": "gemma",
+      "site": "000030",
+      "check": 3,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "PARTIAL",
+      "reason": null,
+      "source": "117bf47e5ef03a8afb325bfc0f0720ad184ca51fb2dec5e4726813747f58f987"
+    },
+    {
+      "model": "gemma",
+      "site": "000030",
+      "check": 0,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 2,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "8e227bf100d37452dffbfdc577c12ce5520b35a17b8a060dcd937807781052e0"
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 5,
+      "arm": "direct",
+      "status": "start_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 2,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "25a23928b2d8d8cd7e26d3e427a447d95b45f5ed8de31dc01b57d099a091cfc9",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 8,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 4,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 5,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 6,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 5,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "e119817760b94f856a38320d4f65c1c7614717c3b7d61ade9fdb87d9b5331f99",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 2,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 5,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "7c32871ed9c99cbe396e96aa06f6c32300d28605d4aa2e05abb6fb85f0a5933f"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 3,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "PARTIAL",
+      "reason": null,
+      "source": "b07ae0ba8204a2f9b8cdbb6d75f3b656ea15192594afec88e523bab8162f1ebb"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 5,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 8,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 6,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "45d76715095ab9b5c462e29ac7c1fc0216a946aedd94fc8af5b4ed1eb66a8c5f"
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 6,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 0,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 4,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "1d8f34e64592b33080dad132eea048630d6287665efac979031664948cf15208"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 8,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 7,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "d93146df5f39e6b5ba16f502570ad90d8d334a47bef4ed49ebdfb91e68670bed"
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 5,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 0,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "deead72d169a98e1ecee1d44fc4cf7004c80c0fc73b1b0648bdebe426a7b8fe7",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000090",
+      "check": 5,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 0,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "2a39419d32f1b4d8f47e0ec446bd74740eff678eed3cef97b261ba03a143d9f1",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 4,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "b2cdc5f93e7e36130005ec7c6bf9e5c85ae6d5d6fe99717b5c8da279f48da274",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 2,
+      "arm": "direct",
+      "status": "start_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 0,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "PARTIAL",
+      "reason": null,
+      "source": "bdb01e295e8b42e465462a1f00d23f8c9b19878715e74f2e03fae56872ce9501"
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 3,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "c19ac2e32e19423da8629b8264a7f2fbf481580489897b30fadeeebfe727a518"
+    },
+    {
+      "model": "qwen9",
+      "site": "000101",
+      "check": 5,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 0,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 7,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "ffb752ad13f5edd411f2d5c4cc897f54ca5914185c15d0edc64f8a164f1833df"
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 5,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 5,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "7e1a60505844ea6447281a7787f28437d52763f5a6daed5ee0a5b06e19b701a1"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 2,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "f0a38250b86c0e621d6ea5ce16424a76e029c58c97630ee84560bcb79e65c8da"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 2,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "9e28c916f779ed69f7066f3d9e04de2b59c4a6d89045716885d8226c152b2201"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 2,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "0ec8af97423a548a5ce7e290e9d5b5c7b2b8a42394d37a28facd880e36128439",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 1,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "034ac8ec8a5985a313367113b737b2f8e31442bd1aedf6e5be33de2e6477e91c"
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 5,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 4,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "35ae52a9dbcf543fc7be6771db0b51f07a8402cf4a7a22864057034e86bd8dc3",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 6,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 1,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 0,
+      "arm": "direct",
+      "status": "start_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 4,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "e531d0242da1e93990b862989cad8dc0dbffb646b36637568aeab9edf41fb621",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000030",
+      "check": 0,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 5,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000101",
+      "check": 1,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "266d82d6794a654b0217a180f47728ba1a1b97f75d73191853674be14844c0ba",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 0,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "b36d96c655c767f4c97e997e0e80dacd56fdfb1ba901d4807a08e738e6537a10"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 0,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "08f1fa0b4feb6a23f7a9f4d4f08f5485785fd6454555700bc1c9bf203f89c8d8"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 4,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "266d82d6794a654b0217a180f47728ba1a1b97f75d73191853674be14844c0ba"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000030",
+      "check": 0,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa"
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 3,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000030",
+      "check": 1,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "174d5040706bd62237597364bc980a04431f4adc73f52bcbf76dd6a8548ccef6",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 3,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "f61649fe6df92fea51b586c6779a6d879774db7b80842fc4fe2b597b36ebe3c6"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 1,
+      "arm": "self",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "2587bba0b0f7201012e14c64843b161a0ff7f83417e6f9aba720796dee4d2774"
+    },
+    {
+      "model": "qwen9",
+      "site": "000011",
+      "check": 4,
+      "arm": "direct",
+      "status": "start_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 2,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "b3facab3de59098443f3e61523c8b9a2ba256301bd11e51be76e766a6008ce41",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000030",
+      "check": 2,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "00169d93d6dc6adee74f977a838879633fc996a628b5203aecfcefdfa1464385"
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 5,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "31ab519af33e68d2c5336b381b1bfc58c4d3e25fe5e4d33053ebb16b3f2cf454"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 3,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 7,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "f0a38250b86c0e621d6ea5ce16424a76e029c58c97630ee84560bcb79e65c8da"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 1,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 8,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "NO",
+      "reason": null,
+      "source": "31ab519af33e68d2c5336b381b1bfc58c4d3e25fe5e4d33053ebb16b3f2cf454"
+    },
+    {
+      "model": "qwen9",
+      "site": "000090",
+      "check": 8,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000057",
+      "check": 7,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "49cbd2a0747a479b23d8c0e1ea0be8981f5dcf57e9cc0c034d62efeb8ba209aa",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000016",
+      "check": 1,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "NO",
+      "source": "3c2a1b545a49ab7fd184ad19291d4323012068c5046d95a61f0c35ed9d6637c4",
+      "reason": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000011",
+      "check": 5,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000057",
+      "check": 1,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "f144f4596833bd765f34432831af8c3f9a635a6b191b8086bb68f0e9ca292728"
+    },
+    {
+      "model": "qwen9",
+      "site": "000057",
+      "check": 6,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "gemma",
+      "site": "000016",
+      "check": 1,
+      "arm": "self",
+      "status": "build_failed",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "qwen9",
+      "site": "000016",
+      "check": 2,
+      "arm": "human",
+      "reused": false,
+      "status": "judged",
+      "verdict": "YES",
+      "reason": null,
+      "source": "7fb20fd17877b4e0ce2ff60a33e9e7b9bebbfb180f42cce970474c263fd94477"
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000011",
+      "check": 8,
+      "arm": "gpt5-library",
+      "status": "missing",
+      "verdict": null,
+      "reused": true
+    },
+    {
+      "model": "deepseek-flash",
+      "site": "000090",
+      "check": 1,
+      "arm": "direct",
+      "status": "judged",
+      "verdict": "YES",
+      "source": "8b61e977e5640fb42d2b39b6923323a29552dd69ed27e0463738fdb6b1356d14",
+      "reason": null,
+      "reused": true
+    }
+  ]
+}

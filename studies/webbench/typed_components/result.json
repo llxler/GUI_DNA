@@ -1,0 +1,2363 @@
+{
+  "registration_sha256": "b1cf51ff9073a7623f92e85e0aab48b7aa4eca5fff80f4ba72d0753c043f452f",
+  "cost": {
+    "calls": 226,
+    "settled_usd": 0.155217,
+    "exposure_usd": 0.35307,
+    "unsettled_calls": 2,
+    "cap_usd": 2.5,
+    "stop_usd": 2.5,
+    "halted": 0
+  },
+  "cases": [
+    {
+      "project": "table",
+      "builder": "gpt5",
+      "public": "artifacts/backbone-matrix-20261124/inputs/table/public.json",
+      "arm": "gpt5-library",
+      "deploy": {
+        "gemma": {
+          "model": "google/gemma-3-12b-it",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": 0,
+          "direct": 0
+        },
+        "qwen9": {
+          "model": "qwen/qwen3.5-9b",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": 1,
+          "direct": 0
+        },
+        "mistral": {
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            19,
+            20
+          ],
+          "previous": 3,
+          "direct": 5
+        },
+        "qwen": {
+          "model": "qwen/qwen3-coder-30b-a3b-instruct",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            13,
+            14,
+            20
+          ],
+          "previous": 0,
+          "direct": 3
+        },
+        "oss": {
+          "model": "openai/gpt-oss-120b",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": 3,
+          "direct": 7
+        },
+        "deepseek-flash": {
+          "model": "deepseek/deepseek-v4-flash",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": 3,
+          "direct": 1
+        },
+        "deepseek-pro": {
+          "model": "deepseek/deepseek-v4-pro-0813",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": 3,
+          "direct": 2
+        }
+      },
+      "status": "missing",
+      "reasons": [
+        "HTTP 403"
+      ],
+      "rows": [],
+      "seal_sha256": "d37f50b6f9745c45fdbcd9a0cd41fce054e6887585d518a2a4e1c7f920c1c83b"
+    },
+    {
+      "project": "table",
+      "builder": "qwen",
+      "public": "artifacts/backbone-matrix-20261124/inputs/table/public.json",
+      "arm": "self",
+      "deploy": {
+        "qwen": {
+          "model": "qwen/qwen3-coder-30b-a3b-instruct",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            13,
+            14,
+            20
+          ],
+          "previous": 2,
+          "direct": 3
+        }
+      },
+      "status": "valid",
+      "reasons": [],
+      "rows": [
+        {
+          "tag": "qwen",
+          "task": 1,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "3058aa5d9c2935bcc218eaad05792bdc536318e0a3d8559eda57717d4917d3bb"
+        },
+        {
+          "tag": "qwen",
+          "task": 1,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "3058aa5d9c2935bcc218eaad05792bdc536318e0a3d8559eda57717d4917d3bb"
+        },
+        {
+          "tag": "qwen",
+          "task": 2,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "4cd40521de0c380a01989492245cd9e973e491039832bd643d99687deb253ba3"
+        },
+        {
+          "tag": "qwen",
+          "task": 2,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "4cd40521de0c380a01989492245cd9e973e491039832bd643d99687deb253ba3"
+        },
+        {
+          "tag": "qwen",
+          "task": 3,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c6eec035259a1232ba01c658d55fd46216e43315352e4f6d8371365008e2a373"
+        },
+        {
+          "tag": "qwen",
+          "task": 3,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c6eec035259a1232ba01c658d55fd46216e43315352e4f6d8371365008e2a373"
+        },
+        {
+          "tag": "qwen",
+          "task": 4,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "3bb09d944e97800cf94b76f245383f7a2d4fc36648702a5a01b4a8fa8fbdbb77"
+        },
+        {
+          "tag": "qwen",
+          "task": 4,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "3bb09d944e97800cf94b76f245383f7a2d4fc36648702a5a01b4a8fa8fbdbb77"
+        },
+        {
+          "tag": "qwen",
+          "task": 13,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "977baa4983fe97629834c0c811f814fc6009118be388f6be6057d17c794ee1d3"
+        },
+        {
+          "tag": "qwen",
+          "task": 13,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "977baa4983fe97629834c0c811f814fc6009118be388f6be6057d17c794ee1d3"
+        },
+        {
+          "tag": "qwen",
+          "task": 14,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "fc850e2f417e5df67abcdba5cea8f3fde847479d7bbd088330f3dd7962da9dc6"
+        },
+        {
+          "tag": "qwen",
+          "task": 14,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "fc850e2f417e5df67abcdba5cea8f3fde847479d7bbd088330f3dd7962da9dc6"
+        },
+        {
+          "tag": "qwen",
+          "task": 20,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "3c42ea426b5af52d9cd353fce7b1edaad90af03d6814628e185aa666833423b5"
+        },
+        {
+          "tag": "qwen",
+          "task": 20,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "3c42ea426b5af52d9cd353fce7b1edaad90af03d6814628e185aa666833423b5"
+        }
+      ],
+      "seal_sha256": "0f7f31994fb1dfc21087c9a463c2cefbf83ba3dda503f5b8683ee2dc76e55da3"
+    },
+    {
+      "project": "table",
+      "builder": "mistral",
+      "public": "artifacts/backbone-matrix-20261124/inputs/table/public.json",
+      "arm": "self",
+      "deploy": {
+        "mistral": {
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            19,
+            20
+          ],
+          "previous": 0,
+          "direct": 5
+        }
+      },
+      "status": "build_failed",
+      "reasons": [
+        "Public context menu probe: [True, ['setupCellEditing is not defined']]",
+        "Candidate changed"
+      ],
+      "rows": [],
+      "seal_sha256": "702f8b3013e9e38b7c2f559085425b78b433a7c09efa2ae10137e21f5935f47b"
+    },
+    {
+      "project": "form",
+      "builder": "gemma",
+      "public": "artifacts/backbone-form-20261124/inputs/form/public.json",
+      "arm": "self",
+      "deploy": {
+        "gemma": {
+          "model": "google/gemma-3-12b-it",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": 0,
+          "direct": 4
+        }
+      },
+      "status": "build_failed",
+      "reasons": [],
+      "rows": [],
+      "seal_sha256": "ee09cf5e0e09b646123f7d0c1a2d27f2b51c363a52b1e94db137b61e9d6ec53f"
+    },
+    {
+      "project": "form",
+      "builder": "qwen9",
+      "public": "artifacts/backbone-form-20261124/inputs/form/public.json",
+      "arm": "self",
+      "deploy": {
+        "qwen9": {
+          "model": "qwen/qwen3.5-9b",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": 0,
+          "direct": 0
+        }
+      },
+      "status": "valid",
+      "reasons": [],
+      "rows": [
+        {
+          "tag": "qwen9",
+          "task": 1,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "0218478806ffb7431c346cbc75c9e4c2a9d1a3e2190ee1d852b201d315c52388"
+        },
+        {
+          "tag": "qwen9",
+          "task": 1,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "abd3bb345231178bc3525fbbb8fed3446ab3e39231602ebda3d55e00c6f8b776"
+        },
+        {
+          "tag": "qwen9",
+          "task": 2,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "abeb764c7432096274cfb24f165f27fea1af3d24339859ffaba3f7ba474b1acb"
+        },
+        {
+          "tag": "qwen9",
+          "task": 2,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "ffdf7ec1792a7c0c08f61b1a106ce25d2e83d7829dbad9055e614559952c9f76"
+        },
+        {
+          "tag": "qwen9",
+          "task": 3,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "cf8e242646b9ea1c316241a11f90982df15c73feeaa83d579d5ecff32397228c"
+        },
+        {
+          "tag": "qwen9",
+          "task": 3,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "e024533cd451fc2b1a20761a4765403545f6f3f5eb777960b872393eb14f7374"
+        },
+        {
+          "tag": "qwen9",
+          "task": 4,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c3518ea3e054832a9e6c684f1db306301bff6a1caa7502d90e69483c6fcfc36f"
+        },
+        {
+          "tag": "qwen9",
+          "task": 4,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "abef7d1eb2d1219cff78c8db46061ee13084e5191bf21c402a7f870594e4499a"
+        },
+        {
+          "tag": "qwen9",
+          "task": 5,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a0fcf606a0acb3e95121ea7be56fc408b75a86fce66e2e1eb7318b14bddb7657"
+        },
+        {
+          "tag": "qwen9",
+          "task": 5,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "774e5da335df282ea572449a35987265725491025162c5c5115d956a4d13b743"
+        },
+        {
+          "tag": "qwen9",
+          "task": 6,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "f58d7018f49176c18a1bb520f955403458d5515d04d5c02f1cdf388968bb7dfc"
+        },
+        {
+          "tag": "qwen9",
+          "task": 6,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "57d40a25a248a2e7f4fbab010ec8c581200a066ee89482c42be62aa9455e15cf"
+        },
+        {
+          "tag": "qwen9",
+          "task": 7,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ece5a667c2094af6449ce07a83335acf39f216448e5bb82e85a1be76190a9e7f"
+        },
+        {
+          "tag": "qwen9",
+          "task": 7,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "f7232a3b25febc75663385c71fbd0d2848c140f892bf02d161fd901b7a17bc87"
+        },
+        {
+          "tag": "qwen9",
+          "task": 8,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "de74c60c0ba430cca020bf26ab69ffb1c4cf6b823d3ae003ad239347d8d77eb0"
+        },
+        {
+          "tag": "qwen9",
+          "task": 8,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "240461017bab3829f2998a6805b28b6a80e91be5bd1813d201d3e7f6ad642a52"
+        },
+        {
+          "tag": "qwen9",
+          "task": 9,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "83cb6186d4303f7b72dd7297e2203a4b30ff124d0951c1db3338338c04a1f85f"
+        },
+        {
+          "tag": "qwen9",
+          "task": 9,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "fbeb1fa80469e2c3c1eded1042b7e3583e62a8405569642a0bcad38520770614"
+        },
+        {
+          "tag": "qwen9",
+          "task": 10,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "91dcc798df05c8572ad34357a41aa71b2601ecfb9a543b74302f47ac96c8781c"
+        },
+        {
+          "tag": "qwen9",
+          "task": 10,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "cd451b3741894717e5959d3f1f3e94b76d59810f3baf408523c6c98fcf316686"
+        },
+        {
+          "tag": "qwen9",
+          "task": 11,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "9c9b572294a839ff82ca0062e0e343d65c7dde1573a92ea26f129109ebcc39d1"
+        },
+        {
+          "tag": "qwen9",
+          "task": 11,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "5c84b3187bde89edc5bcef2d9db5a80356ad9e6368d66e86194420c852bf33d2"
+        },
+        {
+          "tag": "qwen9",
+          "task": 12,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "f63c037d945345053fe102e071c9ad96a959e84fb5427a7ec50d892ec0700099"
+        },
+        {
+          "tag": "qwen9",
+          "task": 12,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "049624a4ab65c0c5012f7212af0e153c1e53628a9652db0e87ea7d4aa7d821a5"
+        },
+        {
+          "tag": "qwen9",
+          "task": 14,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "48cd1b18eca3a760b87000d9fa56eb21e47d0cbfb91ea285c3a55a1e7d4ea05b"
+        },
+        {
+          "tag": "qwen9",
+          "task": 14,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "4c761a2833d8bd38069753a6fc6202c753f10d214c4f2d041c9135480c66e740"
+        },
+        {
+          "tag": "qwen9",
+          "task": 15,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "fbb4faf080def7566dab77fe7442a219c1e89933cd106a5c026e49fb221e9b7b"
+        },
+        {
+          "tag": "qwen9",
+          "task": 15,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "e35ee1f788dc56d4dfde200ce27eb03fb7745e54b10abc54bce57db280964ec6"
+        },
+        {
+          "tag": "qwen9",
+          "task": 16,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "6519ea57526b23efe733130407036f065259d425563d67824e2d7a26e0984db5"
+        },
+        {
+          "tag": "qwen9",
+          "task": 16,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c104f12050c6f87f3980474a1d37a82a87c5b53518fc3534e4d4eb919097c1e8"
+        },
+        {
+          "tag": "qwen9",
+          "task": 17,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c31c436511f8bec32901d9a2422a20f2cdf87c50da717618872cca0a715953b8"
+        },
+        {
+          "tag": "qwen9",
+          "task": 17,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "764e01f150a4336ada7ce7444aeb17c04b4c1748cc6b409fbacbfc0ad696e05f"
+        },
+        {
+          "tag": "qwen9",
+          "task": 18,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0104e8f202add05371ab551199472f9b5e40f667fa282a871cc197bc2948c739"
+        },
+        {
+          "tag": "qwen9",
+          "task": 18,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d7b1adb98e1537c241ad38649938728ef475d5384762d0de7f60c3fa97eed8e1"
+        },
+        {
+          "tag": "qwen9",
+          "task": 19,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d326ce7a9d222b41a3ba5e2f7eaf3f07ea606572000ec57be6162d5687b54e04"
+        },
+        {
+          "tag": "qwen9",
+          "task": 19,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a9a2a5cd2a42ecd9bf93679f758290976e7b9759f285ca403e7cb4471350a42c"
+        },
+        {
+          "tag": "qwen9",
+          "task": 20,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "cf046c008c036a3d2c0381120275628cca037fe2927baa451a724aec862a1ed2"
+        },
+        {
+          "tag": "qwen9",
+          "task": 20,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "9787a83e9ea1b4d60daf731932459c724c136c6ace7702bc99d4fdb2e0d8ee47"
+        }
+      ],
+      "seal_sha256": "cfc3c1113e4ea1ea435e422b039755eca250e486e7fdf8bdb2d3b1cb061a70ce"
+    },
+    {
+      "project": "form",
+      "builder": "mistral",
+      "public": "artifacts/backbone-form-20261124/inputs/form/public.json",
+      "arm": "self",
+      "deploy": {
+        "mistral": {
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": 0,
+          "direct": 2
+        }
+      },
+      "status": "build_failed",
+      "reasons": [],
+      "rows": [],
+      "seal_sha256": "63be2950d4972387861cae69516c63b487587c3bde4b259f1681e6bffb8b6766"
+    },
+    {
+      "project": "form",
+      "builder": "qwen",
+      "public": "artifacts/backbone-form-20261124/inputs/form/public.json",
+      "arm": "self",
+      "deploy": {
+        "qwen": {
+          "model": "qwen/qwen3-coder-30b-a3b-instruct",
+          "targets": [
+            1,
+            2,
+            4,
+            6,
+            7,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": 0,
+          "direct": 5
+        }
+      },
+      "status": "valid",
+      "reasons": [],
+      "rows": [
+        {
+          "tag": "qwen",
+          "task": 1,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "4a3777a6ca8bdcf9fcf1c69182201627ab41a1c8937d8b8c40f2a9e0553b32f9"
+        },
+        {
+          "tag": "qwen",
+          "task": 1,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "cb13dec35fa9ef4a1ed2c49dfaf2ed03c5c275f681fff3201c355e745a642525"
+        },
+        {
+          "tag": "qwen",
+          "task": 2,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "ee94a6e20e336e9503756fac5e45fdb974ef9bbe38da866ec8c5b75bb4fbd131"
+        },
+        {
+          "tag": "qwen",
+          "task": 2,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "240ecccb71502df96aa5b67bfac3e21d4c48c4091d2cc5122a7b86fc2d13cca2"
+        },
+        {
+          "tag": "qwen",
+          "task": 4,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "79792e08c44fb40c43fb3dd284cef2aefc73a37fbe21d891bc0483e0a117c9c2"
+        },
+        {
+          "tag": "qwen",
+          "task": 4,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "faff5153179d21732b5004be02898b24b31114fbc6cfbe4a9471253794d888ca"
+        },
+        {
+          "tag": "qwen",
+          "task": 6,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d3e3102f144eabd42f4755402f0f067445bc798959498dc9c0787eecde315280"
+        },
+        {
+          "tag": "qwen",
+          "task": 6,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "60e0244fd175632e39800f31207eab11a8cf774ed5cdb646e64ed37f9d89acd4"
+        },
+        {
+          "tag": "qwen",
+          "task": 7,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "5d15ccbde75b3c14c00714d6764c83edf3216aec98442b1a7e83f01cf8d28aa9"
+        },
+        {
+          "tag": "qwen",
+          "task": 7,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "26bb6d2ca6449ded0e69dda61be67350d5e676fc01b8dea0d89f7e575d3d840f"
+        },
+        {
+          "tag": "qwen",
+          "task": 17,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "da93a4b475fc3c3285d2738504dc4476d6c76013c9ba09d51a0374d37fd2f98e"
+        },
+        {
+          "tag": "qwen",
+          "task": 17,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e46015912f07fe321b7e2483f67b0dad9380890d84c02a1ba603dd02cf498b72"
+        },
+        {
+          "tag": "qwen",
+          "task": 18,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "5c86d40df2acc33142cef1ce38d2baded0e2aa03f01f7db1d4a16a9a48f4f0b8"
+        },
+        {
+          "tag": "qwen",
+          "task": 18,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "25374b7a62be4d26f21e47e6f387f21edf4f17c1b763db2b57954d2c41ff3a11"
+        },
+        {
+          "tag": "qwen",
+          "task": 19,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a571bcbc24abc7176f7586dc6f92b6f9aff8ba822cbc6c8c92d0995737df9b99"
+        },
+        {
+          "tag": "qwen",
+          "task": 19,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "5a6016c00418e139a56a77269ac4887b888c24b75b948af9588593830e1d2eec"
+        },
+        {
+          "tag": "qwen",
+          "task": 20,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "9b298b664ffd9844a45cd77c8fdeae74ff3c6b7ff7e6d1f7b5b1dda5f3dd44f5"
+        },
+        {
+          "tag": "qwen",
+          "task": 20,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "3f5c5396f4d4bce704e39538cbbdc7b1ef514ac44b0286ae6792fcfb34b488f6"
+        }
+      ],
+      "seal_sha256": "46ac48982c52db9f2ec7e5a963de2a09e2340087b9ee3a7d8ce1cb6e4f3a67b1"
+    },
+    {
+      "project": "svg-chart",
+      "builder": "gemma",
+      "public": "artifacts/backbone-matrix-20261124/inputs/svg-chart/public.json",
+      "arm": "self",
+      "deploy": {
+        "gemma": {
+          "model": "google/gemma-3-12b-it",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": 0,
+          "direct": 2
+        }
+      },
+      "status": "valid",
+      "reasons": [],
+      "rows": [
+        {
+          "tag": "gemma",
+          "task": 1,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "83d18f08bd4fe8805d8e29b28b54c013ae4e4a4ab690c5567863b3e7b0c6093d"
+        },
+        {
+          "tag": "gemma",
+          "task": 1,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "83d18f08bd4fe8805d8e29b28b54c013ae4e4a4ab690c5567863b3e7b0c6093d"
+        },
+        {
+          "tag": "gemma",
+          "task": 2,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "d66ea07d600da47e1e4708ed3779bf2b4c83391d6c7bedcd90d3804fafb33823"
+        },
+        {
+          "tag": "gemma",
+          "task": 2,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "d66ea07d600da47e1e4708ed3779bf2b4c83391d6c7bedcd90d3804fafb33823"
+        },
+        {
+          "tag": "gemma",
+          "task": 3,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "78bd066ee4ffe5105efcf4e24fe5b8e6d81b99a1500a4eac35ac81813a53df9f"
+        },
+        {
+          "tag": "gemma",
+          "task": 3,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "78bd066ee4ffe5105efcf4e24fe5b8e6d81b99a1500a4eac35ac81813a53df9f"
+        },
+        {
+          "tag": "gemma",
+          "task": 4,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "20440beac7abe8b38dea23c6794e6f6c45a2e5419e7f5d3c0c61376d12d092c1"
+        },
+        {
+          "tag": "gemma",
+          "task": 4,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "20440beac7abe8b38dea23c6794e6f6c45a2e5419e7f5d3c0c61376d12d092c1"
+        },
+        {
+          "tag": "gemma",
+          "task": 5,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "23f3de6ecaeb456fe915796a177018683db51f3c943ef83dd1e0a34f9d890e51"
+        },
+        {
+          "tag": "gemma",
+          "task": 5,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "23f3de6ecaeb456fe915796a177018683db51f3c943ef83dd1e0a34f9d890e51"
+        },
+        {
+          "tag": "gemma",
+          "task": 6,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "3dd0e26476381ccfdac8865c6d1b266f218a314696f2fc6576355d020a1b1b37"
+        },
+        {
+          "tag": "gemma",
+          "task": 6,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "3dd0e26476381ccfdac8865c6d1b266f218a314696f2fc6576355d020a1b1b37"
+        },
+        {
+          "tag": "gemma",
+          "task": 7,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "bc86346c07372438ee879c52da0398eaf2a63d43558d546f9805a85c08744e42"
+        },
+        {
+          "tag": "gemma",
+          "task": 7,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "bc86346c07372438ee879c52da0398eaf2a63d43558d546f9805a85c08744e42"
+        },
+        {
+          "tag": "gemma",
+          "task": 8,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0d77badb454fff4727066f20fc57142266d45ac3a27da65337ee95582fe1cb26"
+        },
+        {
+          "tag": "gemma",
+          "task": 8,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0d77badb454fff4727066f20fc57142266d45ac3a27da65337ee95582fe1cb26"
+        },
+        {
+          "tag": "gemma",
+          "task": 9,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2833572d3f9d864bed16c3d78483bed98f6b36f9b4703f09bc25ca3900c263df"
+        },
+        {
+          "tag": "gemma",
+          "task": 9,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2833572d3f9d864bed16c3d78483bed98f6b36f9b4703f09bc25ca3900c263df"
+        },
+        {
+          "tag": "gemma",
+          "task": 10,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "64c1608c864117c663a55a1312217920c70ccbb177009af4779b4114904e6941"
+        },
+        {
+          "tag": "gemma",
+          "task": 10,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "64c1608c864117c663a55a1312217920c70ccbb177009af4779b4114904e6941"
+        },
+        {
+          "tag": "gemma",
+          "task": 11,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "76377e7798183edb93d90ef4324c6d3e76cac90f27b88a446cc8585b67cb3ff3"
+        },
+        {
+          "tag": "gemma",
+          "task": 11,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "76377e7798183edb93d90ef4324c6d3e76cac90f27b88a446cc8585b67cb3ff3"
+        },
+        {
+          "tag": "gemma",
+          "task": 12,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "16d55cc70d80f47167329d658ce907264a036eae457a5bb32e25ffc5b3f3fc51"
+        },
+        {
+          "tag": "gemma",
+          "task": 12,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "16d55cc70d80f47167329d658ce907264a036eae457a5bb32e25ffc5b3f3fc51"
+        },
+        {
+          "tag": "gemma",
+          "task": 13,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "45ba1efb330d574b2fa117d9f5ed1686c10886d88078fbf053f5dab1bbe79279"
+        },
+        {
+          "tag": "gemma",
+          "task": 13,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "45ba1efb330d574b2fa117d9f5ed1686c10886d88078fbf053f5dab1bbe79279"
+        },
+        {
+          "tag": "gemma",
+          "task": 14,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "04b617f7c4b96b443f51695224e0ea8f46c9f9b3fe272b94b861237b7b546dc7"
+        },
+        {
+          "tag": "gemma",
+          "task": 14,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "04b617f7c4b96b443f51695224e0ea8f46c9f9b3fe272b94b861237b7b546dc7"
+        },
+        {
+          "tag": "gemma",
+          "task": 15,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0efbca9bbc3e80edb4d6684f3fe4deba400a50065438b55d8723ec5e6e71ff12"
+        },
+        {
+          "tag": "gemma",
+          "task": 15,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0efbca9bbc3e80edb4d6684f3fe4deba400a50065438b55d8723ec5e6e71ff12"
+        },
+        {
+          "tag": "gemma",
+          "task": 16,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2257e91ce29aa693392ceeed3d453d5bf63adacc809871fb589a4cc114512d42"
+        },
+        {
+          "tag": "gemma",
+          "task": 16,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2257e91ce29aa693392ceeed3d453d5bf63adacc809871fb589a4cc114512d42"
+        },
+        {
+          "tag": "gemma",
+          "task": 17,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "8c1a3ffe5c0999c21c89149e2ba483506f5872dd3c37ea7e8e03601f3cfa652f"
+        },
+        {
+          "tag": "gemma",
+          "task": 17,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "8c1a3ffe5c0999c21c89149e2ba483506f5872dd3c37ea7e8e03601f3cfa652f"
+        },
+        {
+          "tag": "gemma",
+          "task": 18,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "145622e001460731401fb7ab432bc96e90e8d2957a81e1da37ab09a5b342340c"
+        },
+        {
+          "tag": "gemma",
+          "task": 18,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "145622e001460731401fb7ab432bc96e90e8d2957a81e1da37ab09a5b342340c"
+        },
+        {
+          "tag": "gemma",
+          "task": 19,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d579bfcf8a77a5de4807539c5c0f92d7d8fc11e313d530745cc0890dee511872"
+        },
+        {
+          "tag": "gemma",
+          "task": 19,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d579bfcf8a77a5de4807539c5c0f92d7d8fc11e313d530745cc0890dee511872"
+        },
+        {
+          "tag": "gemma",
+          "task": 20,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "128ad684efe28de2a7a95be237b8ee149027cac2c02ec4d6f1b686dd42d0405f"
+        },
+        {
+          "tag": "gemma",
+          "task": 20,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "128ad684efe28de2a7a95be237b8ee149027cac2c02ec4d6f1b686dd42d0405f"
+        }
+      ],
+      "seal_sha256": "a6bb72356dcb5000e3331500a5724c260da7ce21c405057cd74971f851d5ab03"
+    },
+    {
+      "project": "svg-chart",
+      "builder": "qwen",
+      "public": "artifacts/backbone-matrix-20261124/inputs/svg-chart/public.json",
+      "arm": "self",
+      "deploy": {
+        "qwen": {
+          "model": "qwen/qwen3-coder-30b-a3b-instruct",
+          "targets": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": 1,
+          "direct": 0
+        }
+      },
+      "status": "valid",
+      "reasons": [],
+      "rows": [
+        {
+          "tag": "qwen",
+          "task": 1,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "99313f968034c2a9ef17c103d89bdc55f0b735db0c14d6e66cf541e5737c27a5"
+        },
+        {
+          "tag": "qwen",
+          "task": 1,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "99313f968034c2a9ef17c103d89bdc55f0b735db0c14d6e66cf541e5737c27a5"
+        },
+        {
+          "tag": "qwen",
+          "task": 2,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "839d8b32ce2ea05f96aaf7a8d57f83e1fbec9ff04cf44ff5adc3da2d23eb084c"
+        },
+        {
+          "tag": "qwen",
+          "task": 2,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "839d8b32ce2ea05f96aaf7a8d57f83e1fbec9ff04cf44ff5adc3da2d23eb084c"
+        },
+        {
+          "tag": "qwen",
+          "task": 3,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "fa9d06780fb65d380abe6c8ec4ae2040d924167551f903908fe7972ce1b1f3f3"
+        },
+        {
+          "tag": "qwen",
+          "task": 3,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "fa9d06780fb65d380abe6c8ec4ae2040d924167551f903908fe7972ce1b1f3f3"
+        },
+        {
+          "tag": "qwen",
+          "task": 5,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "b1b2c47bb29e7e252b899f541a33116de938ba7ccd68df4ff18fe85d3ed56ce5"
+        },
+        {
+          "tag": "qwen",
+          "task": 5,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "b1b2c47bb29e7e252b899f541a33116de938ba7ccd68df4ff18fe85d3ed56ce5"
+        },
+        {
+          "tag": "qwen",
+          "task": 6,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "dbb215dbdad2e295e797bde067e4f9d2699c4ac1339b6eea5064ac796535b1bf"
+        },
+        {
+          "tag": "qwen",
+          "task": 6,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "dbb215dbdad2e295e797bde067e4f9d2699c4ac1339b6eea5064ac796535b1bf"
+        },
+        {
+          "tag": "qwen",
+          "task": 8,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b658eb603aa7b90109d2bd1cc148f2ca665078569aa5d5da72769b3f6a857b99"
+        },
+        {
+          "tag": "qwen",
+          "task": 8,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b658eb603aa7b90109d2bd1cc148f2ca665078569aa5d5da72769b3f6a857b99"
+        },
+        {
+          "tag": "qwen",
+          "task": 9,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "306c930d74672d8ee00bbcc6dd2450fdec6df7a8e81d373d7cf14711716772fa"
+        },
+        {
+          "tag": "qwen",
+          "task": 9,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "306c930d74672d8ee00bbcc6dd2450fdec6df7a8e81d373d7cf14711716772fa"
+        },
+        {
+          "tag": "qwen",
+          "task": 10,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "91c304e798a41425155ecc8a607026cc6f9b5a02ee8c4d0c6180420cfbe145e4"
+        },
+        {
+          "tag": "qwen",
+          "task": 10,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "91c304e798a41425155ecc8a607026cc6f9b5a02ee8c4d0c6180420cfbe145e4"
+        },
+        {
+          "tag": "qwen",
+          "task": 11,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "1ccd1dfaea37c74cae23f3dbd5a028c45ed6a3f8adc41681bba48a539312d4eb"
+        },
+        {
+          "tag": "qwen",
+          "task": 11,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "1ccd1dfaea37c74cae23f3dbd5a028c45ed6a3f8adc41681bba48a539312d4eb"
+        },
+        {
+          "tag": "qwen",
+          "task": 12,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "eb6f3dca316c13986e2e0f86cb181617e6e82bdaeb11e213354a8e4241c875de"
+        },
+        {
+          "tag": "qwen",
+          "task": 12,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "eb6f3dca316c13986e2e0f86cb181617e6e82bdaeb11e213354a8e4241c875de"
+        },
+        {
+          "tag": "qwen",
+          "task": 13,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "fda43105147f33d0cff36f82808bb444b7f47490848be5e39341c1a1790a05e2"
+        },
+        {
+          "tag": "qwen",
+          "task": 13,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "fda43105147f33d0cff36f82808bb444b7f47490848be5e39341c1a1790a05e2"
+        },
+        {
+          "tag": "qwen",
+          "task": 14,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c1eea64e4a6a6c9f01d2e1657813ad5751d2dab1c5aa301638c01e593d2be6e9"
+        },
+        {
+          "tag": "qwen",
+          "task": 14,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c1eea64e4a6a6c9f01d2e1657813ad5751d2dab1c5aa301638c01e593d2be6e9"
+        },
+        {
+          "tag": "qwen",
+          "task": 15,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "eea466eec85c3c28ea7dd122d54d8f4c9d30e25f6ee10d2ae0a6e9bdc5311920"
+        },
+        {
+          "tag": "qwen",
+          "task": 15,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "eea466eec85c3c28ea7dd122d54d8f4c9d30e25f6ee10d2ae0a6e9bdc5311920"
+        },
+        {
+          "tag": "qwen",
+          "task": 16,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a725d132792baa0140c750f6da07fff8887208cab90b53d19eb06b2db54e7de2"
+        },
+        {
+          "tag": "qwen",
+          "task": 16,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a725d132792baa0140c750f6da07fff8887208cab90b53d19eb06b2db54e7de2"
+        },
+        {
+          "tag": "qwen",
+          "task": 17,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "cd9eb0990df48f87d4b79d4da0aca4c24744a1434075d0bf87afeba07a3bcfd0"
+        },
+        {
+          "tag": "qwen",
+          "task": 17,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "cd9eb0990df48f87d4b79d4da0aca4c24744a1434075d0bf87afeba07a3bcfd0"
+        },
+        {
+          "tag": "qwen",
+          "task": 18,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2be8ac2a944a243e28c2c864167f64612df42e8549acfbd5721245ce78ba31d2"
+        },
+        {
+          "tag": "qwen",
+          "task": 18,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2be8ac2a944a243e28c2c864167f64612df42e8549acfbd5721245ce78ba31d2"
+        },
+        {
+          "tag": "qwen",
+          "task": 19,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "6603e3e317b750b9be26064725af2e5cf0039444a786e62577dcece58eb0239c"
+        },
+        {
+          "tag": "qwen",
+          "task": 19,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "6603e3e317b750b9be26064725af2e5cf0039444a786e62577dcece58eb0239c"
+        },
+        {
+          "tag": "qwen",
+          "task": 20,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "6c927f49071612064085c709a04dcf77730a0038841fac3f51330d17346e4c8e"
+        },
+        {
+          "tag": "qwen",
+          "task": 20,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "6c927f49071612064085c709a04dcf77730a0038841fac3f51330d17346e4c8e"
+        }
+      ],
+      "seal_sha256": "e009af7acfd43308f8a4eeae184618e98c05c6353774f3dec37ba261fe52ca4d"
+    },
+    {
+      "project": "svg-chart",
+      "builder": "deepseek-flash",
+      "public": "artifacts/backbone-matrix-20261124/inputs/svg-chart/public.json",
+      "arm": "self",
+      "deploy": {
+        "deepseek-flash": {
+          "model": "deepseek/deepseek-v4-flash",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": 1,
+          "direct": 1
+        }
+      },
+      "status": "valid",
+      "reasons": [],
+      "rows": [
+        {
+          "tag": "deepseek-flash",
+          "task": 1,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "c36aefad2d76ce72ef9f24323424cebee887760755f60b3e6927e3625d1a99ae"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 1,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "c36aefad2d76ce72ef9f24323424cebee887760755f60b3e6927e3625d1a99ae"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 2,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "5141dd35a89394296332575a2d2a3c1b3a7cef0898b99dcfc133b01a52ee359d"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 2,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "5141dd35a89394296332575a2d2a3c1b3a7cef0898b99dcfc133b01a52ee359d"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 3,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "37bb09f0b667e6a529dd5bc9157600829341467a20a58083d7f9dfb4d509ea59"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 3,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d7794774de3e5256add40ede8b5f2d76382a049dcd2b8036ce911fb1c292cb12"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 4,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "1c48849211bcc3dcea75cb90a69e90f66db03d3eaf46d01d74be3cd7198257dd"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 4,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "1c48849211bcc3dcea75cb90a69e90f66db03d3eaf46d01d74be3cd7198257dd"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 5,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "031ae0623495c8801b1f9e40ddad088318c9949729321c77a26b0135c5bd886c"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 5,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "031ae0623495c8801b1f9e40ddad088318c9949729321c77a26b0135c5bd886c"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 6,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "7d94b2237c954985381b85efe9b6ff60bf19f81ed25468421d429b591e9359b5"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 6,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "7d94b2237c954985381b85efe9b6ff60bf19f81ed25468421d429b591e9359b5"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 7,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "efd3849503622f5a84e9fbae7cc612221c11636219439c9207d12bdf32010b4c"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 7,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "efd3849503622f5a84e9fbae7cc612221c11636219439c9207d12bdf32010b4c"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 8,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "6ab95b6e5b565d69983d2af497cffeee8e5be8d933cdd35b8fd81dcd18cac2c7"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 8,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "6ab95b6e5b565d69983d2af497cffeee8e5be8d933cdd35b8fd81dcd18cac2c7"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 9,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e45c257b9f39115b6bcab0b3d71f9534f9c2a6c4f7dc78d23343919064598cf4"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 9,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e45c257b9f39115b6bcab0b3d71f9534f9c2a6c4f7dc78d23343919064598cf4"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 10,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c592dea1bb6059e83426deb3e301a3835a1d5fed8097cd8687057fb6e888b17c"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 10,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c592dea1bb6059e83426deb3e301a3835a1d5fed8097cd8687057fb6e888b17c"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 11,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d5a9b5633d8be2461f76781cc58ddce51ea12ac2d765f9cb7cde4fe33e24537d"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 11,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d5a9b5633d8be2461f76781cc58ddce51ea12ac2d765f9cb7cde4fe33e24537d"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 12,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "b4502bf62580a8e3cdb657e104f95cb00b5fe89170665d4dd337a9a89ab7233a"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 12,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "b4502bf62580a8e3cdb657e104f95cb00b5fe89170665d4dd337a9a89ab7233a"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 13,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "491bb30d9b49e8e491bff2b27204a0d33a9e7861b6261049870a706389d492e3"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 13,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "491bb30d9b49e8e491bff2b27204a0d33a9e7861b6261049870a706389d492e3"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 14,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "84257e867f7a71704b0508fc257aa1dbcb33156c76ef7233e73f9a6a45335c93"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 14,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "84257e867f7a71704b0508fc257aa1dbcb33156c76ef7233e73f9a6a45335c93"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 15,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "6886c21aa73d77f8b6f3715aa9181857e172b1ff7bf5ebd3f0137ec10ffb2e54"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 15,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "6886c21aa73d77f8b6f3715aa9181857e172b1ff7bf5ebd3f0137ec10ffb2e54"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 16,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "7795954cc108101355b1f54b8be91b0bc57b3c475d0a9e4e42a784540ba24064"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 16,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "1b58258643768408ff0cea6eb513cce01521276219c92ed715b36b49eb1a134c"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 17,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "fb9cdd502dbbad0ee53d83a862e7035d69260a2a16757f02e13e3500a1dda1c8"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 17,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "fb9cdd502dbbad0ee53d83a862e7035d69260a2a16757f02e13e3500a1dda1c8"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 18,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2101a01ff0b69dd8250072d550168f63b08aa2b4e560c325218c7d32fb8b6a3d"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 18,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2101a01ff0b69dd8250072d550168f63b08aa2b4e560c325218c7d32fb8b6a3d"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 19,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "21a4608d110b7dca8237d33cf45e9bde7b16f60f0f48f32528985375b3f85445"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 19,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "21a4608d110b7dca8237d33cf45e9bde7b16f60f0f48f32528985375b3f85445"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 20,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "fef9cc9664a23dae296411a1357286568a9ada5a4d758bae722cf9d5807eaaf9"
+        },
+        {
+          "tag": "deepseek-flash",
+          "task": 20,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "fef9cc9664a23dae296411a1357286568a9ada5a4d758bae722cf9d5807eaaf9"
+        }
+      ],
+      "seal_sha256": "09cff4ce5d40eae1c0db27bcd796012a3ba60305754bbe41449baff258c29e6a"
+    },
+    {
+      "project": "svg-chart",
+      "builder": "deepseek-pro",
+      "public": "artifacts/backbone-matrix-20261124/inputs/svg-chart/public.json",
+      "arm": "self",
+      "deploy": {
+        "deepseek-pro": {
+          "model": "deepseek/deepseek-v4-pro-0813",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": 5,
+          "direct": 3
+        }
+      },
+      "status": "valid",
+      "reasons": [],
+      "rows": [
+        {
+          "tag": "deepseek-pro",
+          "task": 1,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "f9b222fc59feeb423cec25f3994bcc8204f7270457bff04117a0b765aadcba87"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 1,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "f9b222fc59feeb423cec25f3994bcc8204f7270457bff04117a0b765aadcba87"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 2,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "6b00359d3b2353bea95730faae2b9394dd925e56f192c819ef685d85f267264b"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 2,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "d0146eb187303069f6ae95c2e8e6185ee9bcd5ffe15d5575b952fc1d7387b4fe"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 3,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e0854aefc7ce7ea9a40a68f6d1e5b6267fbf7a73612ce750819ed1c23bc0425e"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 3,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b9a2eadecb3a2f9e036900e61b6205ee42617f956a20b134176b91dd0c513da4"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 4,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "5ee5fcf0d1c17f6d18afc0a16f84eace711a0b36ecb3b3ac6a43d4954e53d5b4"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 4,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "43f11909586a75e3d58c14e69d7ca55952f5d0824ffe03a2da2d8bbd3cb916bb"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 5,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "170031db53a6ff9d42b06d1f46cb37b2e21b4db1da0551d3d01de3efbad138a1"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 5,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "170031db53a6ff9d42b06d1f46cb37b2e21b4db1da0551d3d01de3efbad138a1"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 6,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "887d657be72e447048583b04ce503524f689f6e6e62ccfd312a7b7fd238f210f"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 6,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "3f003de3e99762a5064f159c356f45b079f5d7cdcc0354a82e9cd9f9c4fa0073"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 7,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "9770a6b483c918f38cb533996ff88cb4d6c3c8541d6bdaadec3d4e95f9a7bdb4"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 7,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "7fd6b75101ade51409f45625cca2d66dd01300c22ca77497d0b70981e1df9191"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 8,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "45be264af9b2d02fc85900371c54d9745d1beba260ed65f5509c46a9df44ca3c"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 8,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "3813e4e8526531b7bd5cdcdf199f17dd36e745c4316ba8f27e185afa43b169c0"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 9,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a7019433b8fe9a1e1eef80eefdef2d52a2e19cbff1d5517d281989976204e140"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 9,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "562ac2ccf4b2834a1eeb5b4f64068396bbca274d7fa4b947b813a60c94d4a30a"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 10,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d19eef2c14fa8d90a0dd38d867f98d40055fb45f5443f2841a541ed779f1e30f"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 10,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "85847347180b7f4bdc2693b7ad6f084eb1e70c82e86d093013f79c3e17436af1"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 11,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e74b857a87399681bbadd86d8c6f48183283a05a34518b64377a443c6368d571"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 11,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "8e01f1cce59193971ed429eb4f35429d01d27e736fee759bc4c699ee6bf473bf"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 12,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "bad883bfcccfe642564e40fc354de6c50ce65f697eeb829a26d5206dc62601dd"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 12,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "f1bfc821cfcf13ba9ca6d33a97ad3d5d64dbcb93f6819593d66ee2985c39011f"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 14,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "663189b43378d2df38a922ce715531b9b1e5f0f97303adb4b276bff96d8fd001"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 14,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "808a081bf846e3e0ce1bdc83341f8dc218006f5924724695776a8aef3484c13c"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 15,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "f9938f6c54c9f3d5d5f28566e5f48699d3463bc3c218a988045a1682fdcf45bd"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 15,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "9c3abeeca5f2e60f1e5f4917f5c655b3576420189d00e3040c066096b5b76d51"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 16,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "55e69501c5a3925b8d54e4cd8107c30794d86c880504ba9e9d0036585307515e"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 16,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "0cf7554f79112254ec10fba0d8f2e9ed503366e295ab816226e6012c922011ac"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 17,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "cb4763b5fe15f8bee0432826e103ee36782ff9d87d24ae4266ea57bc6edcfdf0"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 17,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "cb4763b5fe15f8bee0432826e103ee36782ff9d87d24ae4266ea57bc6edcfdf0"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 18,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0bce3e73361acbe2c3c9676e0887a9d56ccbddac4afbc3993d8ec050f65d4cc8"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 18,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "9692265a838fc6ce19aad7db7b03af38d053479a1116057bd3490ddc41bd99c7"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 19,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "2070b687a84ea3bf0bcd16a94e04dea691796079157f3e4fc0bed5af6be92562"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 19,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "2070b687a84ea3bf0bcd16a94e04dea691796079157f3e4fc0bed5af6be92562"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 20,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "5fb702d9a99ca9445aee7fe870c8d6cf0382235bbc8f50152fe0dddc45a9675d"
+        },
+        {
+          "tag": "deepseek-pro",
+          "task": 20,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "5fb702d9a99ca9445aee7fe870c8d6cf0382235bbc8f50152fe0dddc45a9675d"
+        }
+      ],
+      "seal_sha256": "01dea001485c5469ba6b9d7d5159c93dabdec948a47e416f6fbcbf8482c6c9cd"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "dataset": "WebGen-Bench",
+  "state": "planned",
+  "source": "https://huggingface.co/datasets/luzimu/WebGen-Bench/tree/c061fe8326459846ac020ceb54d750c859cb059f",
+  "evaluation": "https://github.com/mnluzimu/WebGen-Bench/tree/c89e0743438e458d617cebaf7a682e0e66e41049",
+  "publication": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/6841eed8bb6a2ec49e49235c8115efee-Abstract-Datasets_and_Benchmarks_Track.html",
+  "split": "test",
+  "file": "data/test-00000-of-00001.parquet",
+  "sha256": "4b3b3ee629902babdea71950385f916f30cdab0078895cc5c06a8096de638d44",
+  "sites": 101,
+  "checks": 647,
+  "sample_rule": "Within Category.primary_category, sort by ascending SHA-256 of the UTF-8 string gui-dna-webgen-v1: followed by the exact site id, then by site id. Take the first two per category; include every functional check on every sampled site.",
+  "pilot_sites": {"Content Presentation":["000016","000030"],"Data Management":["000057","000101"],"User Interaction":["000011","000090"]},
+  "pilot_checks": 43,
+  "models": ["google/gemma-3-12b-it","qwen/qwen3.5-9b","deepseek/deepseek-v4-flash"],
+  "arms": ["direct","human","gpt5-library","self"],
+  "measurements": [],
+  "information": "Generation may use the website instruction. Keep ui_instruct, expected outcomes and judge traces on the evaluator side. Freeze per-arm build scope, reusable reference provenance, judge version and common budget before evaluation.",
+  "endpoint": "Official functional browser-agent judgment, summarized separately from the Web-Bench task-file verdict."
+}

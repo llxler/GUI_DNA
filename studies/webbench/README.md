@@ -1,5 +1,13 @@
 # Web-Bench 分项目研究
 
+11 月 26 日的完整项目补测包括[文件管理器](file_explorer/document_library/PROTOCOL.md)和[计算器](calculator/key_groups/PROTOCOL.md)。旧表格的低分核查见[选区绑定的独立建库](table/selection_binding/replication/PROTOCOL.md)与[菜单事件传播](table/menu_propagation/PROTOCOL.md)。[问卷整页操作](form/survey_workflow/PROTOCOL.md)与[SVG 公开数据变化](typed_components/svg_public_geometry/PROTOCOL.md)均在官方评分前冻结候选。
+
+11 月 25 日的主表复验分为[固定原库改配置](compact_planning/PROTOCOL.md)、[原模型实现类型化组件](typed_components/PROTOCOL.md)及[无回执目标补传](transport_completion/PROTOCOL.md)。原题上的方法变化和扩展到其他目标后的分母分别核对。
+
+11 月 25 日的[自建库复验](self_build_modules/README.md)覆盖主表 A 的 17 个原准备失败或零通过格，保留每份库的两种部署与原同题对照。
+
+11 月 25 日的[问卷 Flash 自建库专项](form/flash_self_build/README.md)单列完整源码交付、接口与 ES 模块入口修复，以及在全新库上的重复验证。
+
 11 月 24 日的[多模型比较](backbone_matrix/README.md)包含表格与 SVG 的全项目实验。以下索引收录 11 月 21 日和 23 日的 26 个研究阶段。各项目下按研究问题查阅协议、实现和复算入口。[研究总览](../README.md) · [结果数据](../results/)
 
 | 项目 | 研究阶段 |
@@ -13,3 +21,5 @@
 | React 博客 | [官方参考页、起始页和空白页校准](react_blog/runtime_calibration/PROTOCOL.md) |
 
 冻结清单使用原始的仓库相对路径和文件哈希。复算既有阶段时使用其记录的模块入口。新目录和原路径的对应关系见[目录映射](layout.json)。
+
+文件管理器对两份原库各自重放创建、嵌套、菜单、编辑与 JSON 往返等公开操作；逐个修复断点后再比较同题固定页与二十份模型方案。[操作与准入](file_explorer/interaction_contracts/PROTOCOL.md) · [跟踪刚刚创建的条目](file_explorer/interaction_contracts/entry_identity/PROTOCOL.md)

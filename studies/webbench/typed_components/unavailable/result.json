@@ -1,0 +1,214 @@
+{
+  "registration_sha256": "a39c87b846cb620b4f76cb556d98f1a799dc61a45e3e529e21f452ae985a61b7",
+  "cost": {
+    "calls": 36,
+    "settled_usd": 0.037888,
+    "exposure_usd": 0.050592,
+    "unsettled_calls": 1,
+    "cap_usd": 0.35,
+    "stop_usd": 0.35,
+    "halted": 0
+  },
+  "cases": [
+    {
+      "project": "table",
+      "builder": "gemma",
+      "arm": "self",
+      "public": "artifacts/backbone-matrix-20261124/inputs/table/public.json",
+      "deploy": {
+        "gemma": {
+          "model": "google/gemma-3-12b-it",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": null,
+          "direct": 0
+        }
+      },
+      "status": "build_failed",
+      "reasons": [
+        "Duplicate or reserved source path",
+        "Duplicate or reserved source path"
+      ],
+      "rows": [],
+      "seal_sha256": "1c30f52e97fbf15e8d6cb287e860116c73ddbf3cc43b96d74a4baf3bd2be5ee1"
+    },
+    {
+      "project": "table",
+      "builder": "qwen9",
+      "arm": "self",
+      "public": "artifacts/backbone-matrix-20261124/inputs/table/public.json",
+      "deploy": {
+        "qwen9": {
+          "model": "qwen/qwen3.5-9b",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": null,
+          "direct": 0
+        }
+      },
+      "status": "build_failed",
+      "reasons": [
+        "string indices must be integers, not 'str'",
+        "Public context menu probe: [False, [\"The requested module './table.js' does not provide an export named 'selectCell'\"]]"
+      ],
+      "rows": [],
+      "seal_sha256": "736735badfe392ba415513102ef8e5275ad3217c2ba79d49a0db9f3bf81ad69e"
+    },
+    {
+      "project": "svg-chart",
+      "builder": "qwen9",
+      "arm": "self",
+      "public": "artifacts/backbone-matrix-20261124/inputs/svg-chart/public.json",
+      "deploy": {
+        "qwen9": {
+          "model": "qwen/qwen3.5-9b",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": null,
+          "direct": 0
+        }
+      },
+      "status": "build_failed",
+      "reasons": [],
+      "rows": [],
+      "seal_sha256": "bb9ecdaf67764ede4c61d5fa437eec998c362daa846610e757765c8c7af69e6e"
+    },
+    {
+      "project": "svg-chart",
+      "builder": "oss",
+      "arm": "self",
+      "public": "artifacts/backbone-matrix-20261124/inputs/svg-chart/public.json",
+      "deploy": {
+        "oss": {
+          "model": "openai/gpt-oss-120b",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": null,
+          "direct": 2
+        }
+      },
+      "status": "build_failed",
+      "reasons": [],
+      "rows": [],
+      "seal_sha256": "54f90dea4ed00dd6ab7a16f34dfd46d47286bbc62796aacd84e4af1e1d28c044"
+    },
+    {
+      "project": "svg-chart",
+      "builder": "mistral",
+      "arm": "self",
+      "public": "artifacts/backbone-matrix-20261124/inputs/svg-chart/public.json",
+      "deploy": {
+        "mistral": {
+          "model": "mistralai/mistral-small-3.2-24b-instruct",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": null,
+          "direct": 3
+        }
+      },
+      "status": "build_failed",
+      "reasons": [],
+      "rows": [],
+      "seal_sha256": "3c2001a63f152022b0366950b3b9eebd39f4934fb5d048c0fecb6ef900a2eec5"
+    }
+  ]
+}

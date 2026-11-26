@@ -1,0 +1,416 @@
+{
+  "registration_sha256": "637bf176581ae5a7f79075da04d01d61ec85dc3f29892202dbd4c5dc05fc70b3",
+  "cost": {
+    "calls": 22,
+    "settled_usd": 0.005985,
+    "exposure_usd": 0.005985,
+    "unsettled_calls": 0,
+    "cap_usd": 0.4,
+    "stop_usd": 0.4,
+    "halted": 0
+  },
+  "cases": [
+    {
+      "project": "table",
+      "builder": "qwen9",
+      "arm": "self",
+      "public": "artifacts/backbone-matrix-20261124/inputs/table/public.json",
+      "deploy": {
+        "qwen9": {
+          "model": "qwen/qwen3.5-9b",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": null,
+          "direct": 0
+        }
+      },
+      "status": "build_failed",
+      "reasons": [
+        "{'context_menu': False, 'errors': []}"
+      ],
+      "rows": [],
+      "seal_sha256": "e77c00724a326156b9d09573afd7cc8ac23c52c9a09e6c289a5353eab5720579"
+    },
+    {
+      "project": "form",
+      "builder": "gemma",
+      "public": "artifacts/backbone-form-20261124/inputs/form/public.json",
+      "arm": "self",
+      "deploy": {
+        "gemma": {
+          "model": "google/gemma-3-12b-it",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "previous": 0,
+          "direct": 4
+        }
+      },
+      "status": "valid",
+      "reasons": [],
+      "rows": [
+        {
+          "tag": "gemma",
+          "task": 1,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "8c61853068c2a8e7cf976685821e93b1abd04f669d0e5543f3329f56758486e4"
+        },
+        {
+          "tag": "gemma",
+          "task": 1,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b47ca0cfa554e515874a5834ec76a78c58372067113ab9d44e5cfda1cf02f6d5"
+        },
+        {
+          "tag": "gemma",
+          "task": 2,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "5af00d83d715482d8727f6df06ab6653ceee2960253897ba4322a39c8934a277"
+        },
+        {
+          "tag": "gemma",
+          "task": 2,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2ebd6431909d06415cc2b0a76cc0927c57611b8aaf3ac97defcd1f6f07cd0aaa"
+        },
+        {
+          "tag": "gemma",
+          "task": 3,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "78be3698eda5b0fbf9e8dcdf536df2e244adfcfd0fc67011f8dede82407f8468"
+        },
+        {
+          "tag": "gemma",
+          "task": 3,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c875add79cf385e1306d42d9c9a31d582798fcfc007abee2f822262c8744d1b2"
+        },
+        {
+          "tag": "gemma",
+          "task": 4,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "10213a96eb7ae4b9807f8157724472188e886b8730cb974924549629975df842"
+        },
+        {
+          "tag": "gemma",
+          "task": 4,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "575e85d7dc0c462004a023f42f3daf936c2a77f4a63d6f2347eb26f2e437f7b3"
+        },
+        {
+          "tag": "gemma",
+          "task": 5,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "2b127ea46d6711cdcdea8868ef32c2bc8a60a00bc1858ae9c93743d11f5f797a"
+        },
+        {
+          "tag": "gemma",
+          "task": 5,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "41e9565d7a5ff41d7c57e1d2b138144f8b47e8d48827203a0b17caa354af4632"
+        },
+        {
+          "tag": "gemma",
+          "task": 6,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a9c3306d4c0cc62fab0c625a9b4f356148474deb81a7eff3cb2ee878ff53b10f"
+        },
+        {
+          "tag": "gemma",
+          "task": 6,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "56c4bdd40d2615404b0e1066edd9ed6098e73c96f47d0a9655c4249e65a2b867"
+        },
+        {
+          "tag": "gemma",
+          "task": 7,
+          "arm": "planned",
+          "status": "invalid",
+          "reason": "compiler: Error: export requires Survey",
+          "passed": false,
+          "report_sha256": null
+        },
+        {
+          "tag": "gemma",
+          "task": 7,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "24c8d4e503c4ddb6d731245cd5a004cf32dc45c370601dd2426e6bdf51a369b8"
+        },
+        {
+          "tag": "gemma",
+          "task": 8,
+          "arm": "planned",
+          "status": "valid",
+          "passed": true,
+          "report_sha256": "a219a4aef5a1e5bfffa9821123b79b642a1c7409a56bcd042e04bbab83e5d876"
+        },
+        {
+          "tag": "gemma",
+          "task": 8,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "1ad24ff7e7a29404f5a4aced8a42bc8e46a74e876bfc37d06576eb22391e5324"
+        },
+        {
+          "tag": "gemma",
+          "task": 9,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0748a60c99ce3dfaf1a2c076a2c279ec14c232be718089381ce171c3afddf0ec"
+        },
+        {
+          "tag": "gemma",
+          "task": 9,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "78830d2fe458f8b93558e69ad3f1d1c9cc93d7dac7a9bc2390c57ff930e8a24c"
+        },
+        {
+          "tag": "gemma",
+          "task": 10,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "f106f290209a533c329f86644714a3ecf703de57d7b54bb6f14bb152fb66d570"
+        },
+        {
+          "tag": "gemma",
+          "task": 10,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e69a52d23301e2b05bfa0b10e6efb06996a90c0b657f55f9d7b74be348c5272b"
+        },
+        {
+          "tag": "gemma",
+          "task": 11,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "dc3cc1fb51be37ae8f6d253b042c4aeda921455afb302e5f0d9a32f81d7af777"
+        },
+        {
+          "tag": "gemma",
+          "task": 11,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "698b8a3008ef198c7c95ad6a93b0bd39a5d94c17581cf30d770ca383713ebccb"
+        },
+        {
+          "tag": "gemma",
+          "task": 12,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "e3406f73490c4b1322451fafc1b164cf0e7c1d99d0b7ff73c2af5191e44f33ce"
+        },
+        {
+          "tag": "gemma",
+          "task": 12,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "84741215d29654c90345f19419fe1ecc4bc73efd4374aabe11f91c787df30e18"
+        },
+        {
+          "tag": "gemma",
+          "task": 13,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "c129a0d5192664660fbd6894a705f73c091db2e940517a00a83f4b2fcde81ac1"
+        },
+        {
+          "tag": "gemma",
+          "task": 13,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b69a64b5a2a70f8e3f4190be452c4781e44b46e59bfeae3e6b653028ad33d8a3"
+        },
+        {
+          "tag": "gemma",
+          "task": 14,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "9c39eb8bc88d051c662c206017484d62d0a04b8eeef02475b3d45829834d6668"
+        },
+        {
+          "tag": "gemma",
+          "task": 14,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "ffd7809a78cbefe4df1353594400e5acc830156b88a9c9bd278226cc864a3449"
+        },
+        {
+          "tag": "gemma",
+          "task": 15,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "b56649ec01092165023be47e87a8daf75d1846282fb7d3689a72bc1284e286f3"
+        },
+        {
+          "tag": "gemma",
+          "task": 15,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "10d458d9ec857789bdaa165c4116f45193436e612dfd7b4dd8769cc19e99e4c6"
+        },
+        {
+          "tag": "gemma",
+          "task": 16,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "6e807850a54e6f08b8499016d4d4670dc7b149efa97759185c0ee97ef6dcdc4b"
+        },
+        {
+          "tag": "gemma",
+          "task": 16,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "7dd26e9f7c8c5ea7f0f284a40fcbdd3225c0ade78efd40cfec7bbe7f57417fdb"
+        },
+        {
+          "tag": "gemma",
+          "task": 17,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "0ddd14e70cb85f035d2d51f3c427fdf06737702a3771c36d329733c67d569d40"
+        },
+        {
+          "tag": "gemma",
+          "task": 17,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "26595645527251acd438af61e90c2ad0801632729258fadca0aaf9135550d86d"
+        },
+        {
+          "tag": "gemma",
+          "task": 18,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "d234411902929826c3c588f7365e8da043b466b645087a3d164642ffb56389f7"
+        },
+        {
+          "tag": "gemma",
+          "task": 18,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "43a6fa289b2a052ce0e459820edc05807c9a6485fa27c3e03ab8f308083d3d8f"
+        },
+        {
+          "tag": "gemma",
+          "task": 19,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "f1500002cb3d4b00ea0fb7db56e16810a7ba33c4cc9f6c8d374ea95bc37ba70f"
+        },
+        {
+          "tag": "gemma",
+          "task": 19,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a42f49552d60c60fc1ea0e6c10c43af1d89c442ca7fdc6f17fdf5b653288d65f"
+        },
+        {
+          "tag": "gemma",
+          "task": 20,
+          "arm": "planned",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "cc6e8a441e18988cf36120ec1b2dfcf62912704f05b3250feb330f4eb2dc44c8"
+        },
+        {
+          "tag": "gemma",
+          "task": 20,
+          "arm": "fixed",
+          "status": "valid",
+          "passed": false,
+          "report_sha256": "a70ac24511b86c53a6fc7c4a4e97980071a3a997b366eeae380f055f08c4ffe6"
+        }
+      ],
+      "seal_sha256": "ccfc1d8d07933f6c0a116bb068e3fe5ac5934cd684aff7827c5320dae69501eb"
+    }
+  ]
+}

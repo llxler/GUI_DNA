@@ -10,6 +10,12 @@
 
 主研究保留每个生成请求、页面文件哈希、当前官方文件报告和建库者固定首例；原模型对照、两个其他基准、留出与交付敏感性均有独立登记。历史清单可用 `uv run python -m studies.public_library_transfer.history --check` 从旧冻结结果离线恢复。其余复验入口及本地原始产物位置见[研究说明](../studies/public_library_transfer/README.md)。
 
+## WebGen-Bench 六站与表格交互修复
+
+离线运行 `uv run python -m studies.webgen_bench.report --portable`，可从版本库中的逐项判决重算六站同题得分，并核对五种建库接口、每阶段原始成本和两个 Qwen 表格库的固定页对照。本机有原账本时，`uv run python -m studies.webgen_bench.report` 进一步核对模型、阶段及未决敞口。恢复六站数据、作者评估器及 amis SDK 使用 `uv run python -m studies.webgen_bench.fetch_sources`。[新基准目录](../studies/webgen_bench/README.md) · [Qwen 原库逐交互修复](../studies/webbench/table/selection_binding/interaction_repairs/PROTOCOL.md)
+
+运行 `uv run python -m studies.public_library_transfer.source_diagnosis.report`，根据逐题记录重算库来源比较、固定方案和独立重复。该命令还检查文件管理器新增条目的身份、SVG 封存后的新数组，以及 TodoMVC 的四种方法。具备本机原始页面与回执时，`uv run python -m studies.public_library_transfer.source_diagnosis.visible_choices.core_profiles.choices` 可复原模型选择和每个配置未通过的公共操作。[来源比较及复核入口](../studies/public_library_transfer/source_diagnosis/README.md)
+
 ## 零 API 复算
 
 ```bash
@@ -37,6 +43,42 @@ SVG 的原始规划、固定示例与部署回退可按[图表冻结实验](../s
 主视图脚本直接读取两项目/三项目的原当前成绩与 draw 的 current 行，按真实候选去重；保留 BOM 敏感性和建库费用。它不读取累计前缀复验结果，不重新运行浏览器。完整旧研究命令见 [历史索引](../studies/REVIEW.md)。
 
 本地拥有完整 `artifacts/` 时可进一步复验研究快照与原报告。旧快照必须在登记的源码版本复算，见 [退役说明](archive/full-history-retirement.md)。当前分支不再提供已删除实验的复验入口；不要修改旧清单来迁就新源码。代码 checkout 不包含被忽略的响应、页面、账本、浏览器缓存或上游 checkout；仅有源码不能重放全部历史结果。
+
+### 核对 Table 1 的红框复验、弱模型和扩展分母
+
+`uv run python -m studies.webbench.table_interactions.diagnose` 离线复放表格库全部四种开关组合中的右键、Delete 和双击。逐研究费用及五组问卷解码请求都由下述汇总的源记录核对；建库费用、逐题费用和未决预留分别保存。
+
+以下命令只读封存的候选、逐题判定和账本。第二条核对红框 18 格的原题、最终采用的协议、固定配置与费用。不执行 `generate`。
+
+```bash
+uv run --offline python -m studies.paper_end_to_end
+uv run --offline python -m studies.webbench.compact_planning.report
+```
+
+本地重新编译并将新成稿放回 `DNA_latex/main.pdf` 后，以下命令从正文的实际表题定位 Table 1，同时刷新单页 PDF 和 PNG。正文中的表号引用不计作表题。
+
+```bash
+uv run --offline --with pymupdf python -m studies.paper_format --report studies/results/paper_format_end_to_end.json --table-preview artifacts/paper-build/performance-matrix
+```
+
+原样本上的变化见[编号配置试验](../studies/webbench/compact_planning/PROTOCOL.md)和[类型化组件](../studies/webbench/typed_components/PROTOCOL.md)；额外目标只使用同一套已冻结的库和部署方式，独立保存在[补传与扩展](../studies/webbench/transport_completion/extension.md)。小模型的主结果与第二份独立库见[八个功能子集](../studies/public_library_transfer/compact_todomvc/PROTOCOL.md)。C 区的采样可由[数据版本与分层规则](../studies/webgen_bench/README.md)复算。
+
+### 核对主表 A、B 的 25 格自建库复测
+
+主表使用每格第一份独立建库的逐题方案。统一审计核对两次重复的可部署目标、固定首例、原始同题对照和本轮七份账本。初版接收器产生的费用也在其中。有本地原始产物时运行以下只读命令。[复验阶段与数据](../studies/webbench/self_build_modules/README.md)
+
+```sh
+uv run --offline python -m studies.webbench.self_build_modules.audit
+```
+
+### 核对 11 月 25 日的 Flash 问卷复测
+
+下列命令分别核对两次全新建库的首次响应，以及原样补交传输中断请求后的同目标结果。带本机原始收据时，把 `check-public` 换成 `check` 可核对模型响应、页面与官方评分。[协议、原批和中间结果](../studies/webbench/form/flash_self_build/README.md)
+
+```bash
+uv run python -m studies.webbench.form.flash_self_build.file_repair.report check-public
+uv run python -m studies.webbench.form.flash_self_build.transport_completion.report check-public
+```
 
 ### 核对 11 月 24 日的自建库诊断
 
@@ -104,7 +146,7 @@ uv run python -m studies.canvas_model_replication.run analyze
 
 ## 本地论文与展示
 
-正文总表及其[逐格数据](../studies/results/paper-performance-matrix.json)由 `studies.paper_end_to_end --write` 一起生成。用 `uv run python -m studies.webbench.backbone_matrix.audit` 可从公开逐题 JSON 核对模型、共同目标、实测零分、服务缺测和四批独立账本。四批的预算上限只在上一批封存后按实际敞口释放，逐笔授权可查。固定首例用相同自建库配对另报；表中“自建”表示该行的同一模型既建库又选配置。[实验协议及本地复验入口](../studies/webbench/backbone_matrix/README.md)
+正文总表及其[逐格数据](../studies/results/paper-performance-matrix.json)由 `studies.paper_end_to_end --write` 一起生成。矩阵中 `current` 保存原始口径，`paper_current` 记录因建库失败需从论文成绩中排除的目标与重算分母。Flash 的 `panel_a_self.form` 记录 A 区主格采用的第一份库（file-a）及其逐题来源，`current.form` 保留原批次，用于核对同题对照及建库历史。用 `uv run python -m studies.webbench.backbone_matrix.audit` 可从公开逐题 JSON 核对模型、共同目标、实测零分、服务缺测和四批独立账本。四批的预算上限只在上一批封存后按实际敞口释放，逐笔授权可查。固定首例用相同自建库配对另报；表中“自建”表示该行的同一模型既建库又选配置。[实验协议及本地复验入口](../studies/webbench/backbone_matrix/README.md)
 
 ```bash
 uv run python -m studies.paper_end_to_end --write
@@ -126,10 +168,18 @@ artifacts/presentation-build/venv/bin/python artifacts/presentation-build/render
 
 2026-11-18 的当前报告包为 `current-report-20261118.zip`，使用 [导出与解包说明](../studies/current_bundle/README.md)。在本机另行解包后，正式、兼容两个入口重算一致，核对 80 个预定位置、147 条精简浏览器报告（127 份不同原件），两个项目共七次真实浏览器抽查与原判定一致。哈希与逐页结果见 [验收记录](../studies/results/current-report-validation-20261118.json)。
 
-Table 1 B 区的离线绑定列可从公开的逐题 JSON 直接重建：运行 `uv run python -m studies.public_library_transfer.self_refinement.suite_comparisons` 核对两个套件的六个模型、每格目标与从零差集。逐个浏览器/Jest 收据的本机检查见 [TodoMVC](../studies/public_library_transfer/self_refinement/todomvc/source_binding/README.md) 和 [Duo](../studies/public_library_transfer/self_refinement/duo_composition/README.md)。人工库的来源、项目差异与建库模型的已知交付问题单列在[设计依据](library-preparation-design.md)。
+TodoMVC 和 Duo 的离线绑定结果可从逐题 JSON 重建。运行 `uv run python -m studies.public_library_transfer.self_refinement.suite_comparisons` 核对两个套件的六个模型、每格目标与从零差集。逐个浏览器/Jest 收据的本机检查见 [TodoMVC](../studies/public_library_transfer/self_refinement/todomvc/source_binding/README.md) 和 [Duo](../studies/public_library_transfer/self_refinement/duo_composition/README.md)。人工库的来源、项目差异与建库模型的已知交付问题单列在[设计依据](library-preparation-design.md)。
 
 Duo 初批两模型与 Qwen 精简契约的另外两份库，分别用 `uv run python -m studies.public_library_transfer.self_refinement.duo_components.report check` 和 `uv run python -m studies.public_library_transfer.self_refinement.duo_components.compact.report check`。Gemma 的两份控制器用 `uv run python -m studies.public_library_transfer.self_refinement.todomvc.verified_controller.run check`，分支语法修复用同目录 `switch_scope.run check`。这些核对从发布记录取数，不调用模型。
 
-最新 20 项问卷及图表的官方结果和源文件接收灵敏度分别见 [问卷核验命令](../studies/public_library_transfer/self_refinement/form_components/README.md) 和 [图表核验命令](../studies/public_library_transfer/self_refinement/svg_renderers/README.md)。主表 D 区逐行保留目标标识及输入哈希。[原 18 行的逐行来源](../studies/results/prospective-domain-builds-20261124.json) · [前瞻确认行与复用对照](../studies/results/prospective-domain-confirmation-20261124.json) · [七账本计费收据](../studies/results/domain-construction-accounting-20261124.json)
+最新 20 项问卷及图表的官方结果和源文件接收灵敏度分别见 [问卷核验命令](../studies/public_library_transfer/self_refinement/form_components/README.md) 和 [图表核验命令](../studies/public_library_transfer/self_refinement/svg_renderers/README.md)。主表 双库复验记录逐行保留目标标识及输入哈希。[原 18 行的逐行来源](../studies/results/prospective-domain-builds-20261124.json) · [前瞻确认行与复用对照](../studies/results/prospective-domain-confirmation-20261124.json) · [七账本计费收据](../studies/results/domain-construction-accounting-20261124.json)
 
 图表两份全新确认库和共用的旧 Direct 可用 `uv run python -m studies.public_library_transfer.self_refinement.svg_renderers.confirmation.report check` 逐题核验。最终八个账本用 `uv run python -m studies.public_library_transfer.self_refinement.prospective_accounting check-final`。[前瞻确认](../studies/public_library_transfer/self_refinement/svg_renderers/confirmation/result.json) · [合计费用与未决预留](../studies/results/domain-construction-accounting-final-20261124.json)
+
+### 核对 11 月 26 日的组件库复验
+
+`uv run python -m studies.library_capabilities` 只读核对各阶段的原始账本、主库、独立重复和固定页。`uv run python -m studies.paper_end_to_end --write` 依据同题交集生成论文表。文件管理器 Direct 每题从公开起始页生成，旧逐步编辑结果保存在原协议中。Duo 使用 OneKQ 固定数据集提交的 `gpt-5.code`；在本地下载的 Parquet 上运行 `uv run --with duckdb python -m studies.public_library_transfer.duo_donor_library.run prepare` 可核对他组来源与公开单功能验收。原始库、传输请求、测试报告和账本保存在本机 artifacts。
+
+同线程中页面服务与浏览器共用一个并发名额，可用 `uv run python -m studies.browser_worker studies.webbench.calculator.key_groups.run score` 在封存后重放。独立种子表格若运行模型 JavaScript 造成公开页面卡死，先在两个受时限保护的独立浏览器中重放；已超时的交互保留状态与收据。[重复实验的执行器](../studies/webbench/table/selection_binding/replication/bounded.py)
+
+11 月 26 日的总账保留分槽决策的三批回执。先在旧的已结算响应中逐字比较请求体、校验响应哈希，再补真正缺失的选择；重传不会释放原未知预留。逐格索引同时记录原截图的目标 ID、当时的通过数、最新协议在这些原目标上的通过数、以及扩充后的实际分母。主表生成时会逐格核对。[汇总程序](../studies/library_capabilities.py) · [最后两个限流位置](../studies/public_library_transfer/compact_todomvc/slot_choices/last_delivery.md)
