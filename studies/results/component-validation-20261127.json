@@ -1,0 +1,3893 @@
+{
+  "webgen": {
+    "cohorts": {
+      "development": {
+        "google/gemma-3-12b-it": {
+          "registered": 43,
+          "n": 43,
+          "targets": [
+            "000011/0",
+            "000011/1",
+            "000011/2",
+            "000011/3",
+            "000011/4",
+            "000011/5",
+            "000011/6",
+            "000011/7",
+            "000011/8",
+            "000016/0",
+            "000016/1",
+            "000016/2",
+            "000016/3",
+            "000016/4",
+            "000016/5",
+            "000030/0",
+            "000030/1",
+            "000030/2",
+            "000030/3",
+            "000057/0",
+            "000057/1",
+            "000057/2",
+            "000057/3",
+            "000057/4",
+            "000057/5",
+            "000057/6",
+            "000057/7",
+            "000090/0",
+            "000090/1",
+            "000090/2",
+            "000090/3",
+            "000090/4",
+            "000090/5",
+            "000090/6",
+            "000090/7",
+            "000090/8",
+            "000101/0",
+            "000101/1",
+            "000101/2",
+            "000101/3",
+            "000101/4",
+            "000101/5",
+            "000101/6"
+          ],
+          "methods": {
+            "direct": {
+              "observed": 43,
+              "status": {
+                "judged": 43
+              },
+              "verdicts": {
+                "NO": 29,
+                "PARTIAL": 2,
+                "YES": 12
+              },
+              "start_failed_in_common": 0,
+              "points": 13.0
+            },
+            "human": {
+              "observed": 43,
+              "status": {
+                "judged": 43
+              },
+              "verdicts": {
+                "NO": 23,
+                "PARTIAL": 2,
+                "YES": 18
+              },
+              "start_failed_in_common": 0,
+              "points": 19.0
+            },
+            "gpt5-library": {
+              "observed": 0,
+              "status": {
+                "missing": 43
+              },
+              "verdicts": {},
+              "start_failed_in_common": 0
+            },
+            "self": {
+              "observed": 43,
+              "status": {
+                "judged": 43
+              },
+              "verdicts": {
+                "NO": 26,
+                "PARTIAL": 1,
+                "YES": 16
+              },
+              "start_failed_in_common": 0,
+              "points": 16.5
+            }
+          },
+          "sites": [
+            "000011",
+            "000016",
+            "000030",
+            "000057",
+            "000090",
+            "000101"
+          ],
+          "sources": {
+            "direct": {
+              "candidates": "studies/webgen_bench/functional_pilot/function_binding/candidates.json",
+              "judgments": "studies/webgen_bench/functional_pilot/function_binding/judgments.json"
+            },
+            "human": {
+              "candidates": "studies/webgen_bench/functional_pilot/function_binding/candidates.json",
+              "judgments": "studies/webgen_bench/functional_pilot/function_binding/judgments.json"
+            },
+            "gpt5-library": {
+              "candidates": "studies/webgen_bench/functional_pilot/function_binding/candidates.json",
+              "judgments": "studies/webgen_bench/functional_pilot/function_binding/judgments.json"
+            },
+            "self": {
+              "candidates": "studies/webgen_bench/component_contracts/typed_inputs/edit-candidates.json",
+              "judgments": "studies/webgen_bench/component_contracts/typed_inputs/edit-judgments.json"
+            }
+          },
+          "by_site": {
+            "000011": {
+              "n": 9,
+              "points": {
+                "direct": 1.5,
+                "human": 4.5,
+                "self": 2
+              }
+            },
+            "000016": {
+              "n": 6,
+              "points": {
+                "direct": 2,
+                "human": 5,
+                "self": 5
+              }
+            },
+            "000030": {
+              "n": 4,
+              "points": {
+                "direct": 2,
+                "human": 1.5,
+                "self": 2
+              }
+            },
+            "000057": {
+              "n": 8,
+              "points": {
+                "direct": 3.5,
+                "human": 4,
+                "self": 2.5
+              }
+            },
+            "000090": {
+              "n": 9,
+              "points": {
+                "direct": 2,
+                "human": 2,
+                "self": 3
+              }
+            },
+            "000101": {
+              "n": 7,
+              "points": {
+                "direct": 2,
+                "human": 2,
+                "self": 2
+              }
+            }
+          },
+          "jointly_runnable": {
+            "targets": [
+              "000011/0",
+              "000011/1",
+              "000011/2",
+              "000011/3",
+              "000011/4",
+              "000011/5",
+              "000011/6",
+              "000011/7",
+              "000011/8",
+              "000016/0",
+              "000016/1",
+              "000016/2",
+              "000016/3",
+              "000016/4",
+              "000016/5",
+              "000030/0",
+              "000030/1",
+              "000030/2",
+              "000030/3",
+              "000057/0",
+              "000057/1",
+              "000057/2",
+              "000057/3",
+              "000057/4",
+              "000057/5",
+              "000057/6",
+              "000057/7",
+              "000090/0",
+              "000090/1",
+              "000090/2",
+              "000090/3",
+              "000090/4",
+              "000090/5",
+              "000090/6",
+              "000090/7",
+              "000090/8",
+              "000101/0",
+              "000101/1",
+              "000101/2",
+              "000101/3",
+              "000101/4",
+              "000101/5",
+              "000101/6"
+            ],
+            "n": 43,
+            "points": {
+              "direct": 13.0,
+              "human": 19.0,
+              "self": 16.5
+            }
+          }
+        },
+        "qwen/qwen3.5-9b": {
+          "registered": 43,
+          "n": 43,
+          "targets": [
+            "000011/0",
+            "000011/1",
+            "000011/2",
+            "000011/3",
+            "000011/4",
+            "000011/5",
+            "000011/6",
+            "000011/7",
+            "000011/8",
+            "000016/0",
+            "000016/1",
+            "000016/2",
+            "000016/3",
+            "000016/4",
+            "000016/5",
+            "000030/0",
+            "000030/1",
+            "000030/2",
+            "000030/3",
+            "000057/0",
+            "000057/1",
+            "000057/2",
+            "000057/3",
+            "000057/4",
+            "000057/5",
+            "000057/6",
+            "000057/7",
+            "000090/0",
+            "000090/1",
+            "000090/2",
+            "000090/3",
+            "000090/4",
+            "000090/5",
+            "000090/6",
+            "000090/7",
+            "000090/8",
+            "000101/0",
+            "000101/1",
+            "000101/2",
+            "000101/3",
+            "000101/4",
+            "000101/5",
+            "000101/6"
+          ],
+          "methods": {
+            "direct": {
+              "observed": 43,
+              "status": {
+                "judged": 34,
+                "start_failed": 9
+              },
+              "verdicts": {
+                "NO": 22,
+                "PARTIAL": 1,
+                "YES": 11
+              },
+              "start_failed_in_common": 9,
+              "points": 11.5
+            },
+            "human": {
+              "observed": 43,
+              "status": {
+                "judged": 43
+              },
+              "verdicts": {
+                "NO": 17,
+                "PARTIAL": 3,
+                "YES": 23
+              },
+              "start_failed_in_common": 0,
+              "points": 24.5
+            },
+            "gpt5-library": {
+              "observed": 0,
+              "status": {
+                "missing": 43
+              },
+              "verdicts": {},
+              "start_failed_in_common": 0
+            },
+            "self": {
+              "observed": 43,
+              "status": {
+                "judged": 43
+              },
+              "verdicts": {
+                "NO": 13,
+                "PARTIAL": 3,
+                "YES": 27
+              },
+              "start_failed_in_common": 0,
+              "points": 28.5
+            }
+          },
+          "sites": [
+            "000011",
+            "000016",
+            "000030",
+            "000057",
+            "000090",
+            "000101"
+          ],
+          "sources": {
+            "direct": {
+              "candidates": "studies/webgen_bench/functional_pilot/function_binding/candidates.json",
+              "judgments": "studies/webgen_bench/functional_pilot/function_binding/judgments.json"
+            },
+            "human": {
+              "candidates": "studies/webgen_bench/functional_pilot/function_binding/candidates.json",
+              "judgments": "studies/webgen_bench/functional_pilot/function_binding/judgments.json"
+            },
+            "gpt5-library": {
+              "candidates": "studies/webgen_bench/functional_pilot/function_binding/candidates.json",
+              "judgments": "studies/webgen_bench/functional_pilot/function_binding/judgments.json"
+            },
+            "self": {
+              "candidates": "studies/webgen_bench/component_contracts/typed_inputs/visibility-candidates.json",
+              "judgments": "studies/webgen_bench/component_contracts/typed_inputs/visibility-judgments.json"
+            }
+          },
+          "by_site": {
+            "000011": {
+              "n": 9,
+              "points": {
+                "direct": 0,
+                "human": 3.5,
+                "self": 6.0
+              }
+            },
+            "000016": {
+              "n": 6,
+              "points": {
+                "direct": 4,
+                "human": 5,
+                "self": 5
+              }
+            },
+            "000030": {
+              "n": 4,
+              "points": {
+                "direct": 3,
+                "human": 2,
+                "self": 1
+              }
+            },
+            "000057": {
+              "n": 8,
+              "points": {
+                "direct": 2.5,
+                "human": 4.5,
+                "self": 5
+              }
+            },
+            "000090": {
+              "n": 9,
+              "points": {
+                "direct": 1,
+                "human": 4,
+                "self": 5
+              }
+            },
+            "000101": {
+              "n": 7,
+              "points": {
+                "direct": 1,
+                "human": 5.5,
+                "self": 6.5
+              }
+            }
+          },
+          "jointly_runnable": {
+            "targets": [
+              "000016/0",
+              "000016/1",
+              "000016/2",
+              "000016/3",
+              "000016/4",
+              "000016/5",
+              "000030/0",
+              "000030/1",
+              "000030/2",
+              "000030/3",
+              "000057/0",
+              "000057/1",
+              "000057/2",
+              "000057/3",
+              "000057/4",
+              "000057/5",
+              "000057/6",
+              "000057/7",
+              "000090/0",
+              "000090/1",
+              "000090/2",
+              "000090/3",
+              "000090/4",
+              "000090/5",
+              "000090/6",
+              "000090/7",
+              "000090/8",
+              "000101/0",
+              "000101/1",
+              "000101/2",
+              "000101/3",
+              "000101/4",
+              "000101/5",
+              "000101/6"
+            ],
+            "n": 34,
+            "points": {
+              "direct": 11.5,
+              "human": 21.0,
+              "self": 22.5
+            }
+          }
+        },
+        "deepseek/deepseek-v4-flash": {
+          "registered": 43,
+          "n": 43,
+          "targets": [
+            "000011/0",
+            "000011/1",
+            "000011/2",
+            "000011/3",
+            "000011/4",
+            "000011/5",
+            "000011/6",
+            "000011/7",
+            "000011/8",
+            "000016/0",
+            "000016/1",
+            "000016/2",
+            "000016/3",
+            "000016/4",
+            "000016/5",
+            "000030/0",
+            "000030/1",
+            "000030/2",
+            "000030/3",
+            "000057/0",
+            "000057/1",
+            "000057/2",
+            "000057/3",
+            "000057/4",
+            "000057/5",
+            "000057/6",
+            "000057/7",
+            "000090/0",
+            "000090/1",
+            "000090/2",
+            "000090/3",
+            "000090/4",
+            "000090/5",
+            "000090/6",
+            "000090/7",
+            "000090/8",
+            "000101/0",
+            "000101/1",
+            "000101/2",
+            "000101/3",
+            "000101/4",
+            "000101/5",
+            "000101/6"
+          ],
+          "methods": {
+            "direct": {
+              "observed": 43,
+              "status": {
+                "judged": 43
+              },
+              "verdicts": {
+                "NO": 7,
+                "PARTIAL": 1,
+                "YES": 35
+              },
+              "start_failed_in_common": 0,
+              "points": 35.5
+            },
+            "human": {
+              "observed": 43,
+              "status": {
+                "judged": 43
+              },
+              "verdicts": {
+                "NO": 20,
+                "PARTIAL": 4,
+                "YES": 19
+              },
+              "start_failed_in_common": 0,
+              "points": 21.0
+            },
+            "gpt5-library": {
+              "observed": 0,
+              "status": {
+                "missing": 43
+              },
+              "verdicts": {},
+              "start_failed_in_common": 0
+            },
+            "self": {
+              "observed": 43,
+              "status": {
+                "judged": 43
+              },
+              "verdicts": {
+                "NO": 13,
+                "PARTIAL": 2,
+                "YES": 28
+              },
+              "start_failed_in_common": 0,
+              "points": 29.0
+            }
+          },
+          "sites": [
+            "000011",
+            "000016",
+            "000030",
+            "000057",
+            "000090",
+            "000101"
+          ],
+          "sources": {
+            "direct": {
+              "candidates": "studies/webgen_bench/functional_pilot/function_binding/candidates.json",
+              "judgments": "studies/webgen_bench/functional_pilot/function_binding/judgments.json"
+            },
+            "human": {
+              "candidates": "studies/webgen_bench/functional_pilot/function_binding/candidates.json",
+              "judgments": "studies/webgen_bench/functional_pilot/function_binding/judgments.json"
+            },
+            "gpt5-library": {
+              "candidates": "studies/webgen_bench/functional_pilot/function_binding/candidates.json",
+              "judgments": "studies/webgen_bench/functional_pilot/function_binding/judgments.json"
+            },
+            "self": {
+              "candidates": "studies/webgen_bench/functional_pilot/function_binding/candidates.json",
+              "judgments": "studies/webgen_bench/functional_pilot/function_binding/judgments.json"
+            }
+          },
+          "by_site": {
+            "000011": {
+              "n": 9,
+              "points": {
+                "direct": 9,
+                "human": 1.0,
+                "self": 8
+              }
+            },
+            "000016": {
+              "n": 6,
+              "points": {
+                "direct": 5,
+                "human": 5,
+                "self": 5
+              }
+            },
+            "000030": {
+              "n": 4,
+              "points": {
+                "direct": 3.5,
+                "human": 2.5,
+                "self": 2
+              }
+            },
+            "000057": {
+              "n": 8,
+              "points": {
+                "direct": 7,
+                "human": 5,
+                "self": 5.5
+              }
+            },
+            "000090": {
+              "n": 9,
+              "points": {
+                "direct": 6,
+                "human": 4,
+                "self": 4
+              }
+            },
+            "000101": {
+              "n": 7,
+              "points": {
+                "direct": 5,
+                "human": 3.5,
+                "self": 4.5
+              }
+            }
+          },
+          "jointly_runnable": {
+            "targets": [
+              "000011/0",
+              "000011/1",
+              "000011/2",
+              "000011/3",
+              "000011/4",
+              "000011/5",
+              "000011/6",
+              "000011/7",
+              "000011/8",
+              "000016/0",
+              "000016/1",
+              "000016/2",
+              "000016/3",
+              "000016/4",
+              "000016/5",
+              "000030/0",
+              "000030/1",
+              "000030/2",
+              "000030/3",
+              "000057/0",
+              "000057/1",
+              "000057/2",
+              "000057/3",
+              "000057/4",
+              "000057/5",
+              "000057/6",
+              "000057/7",
+              "000090/0",
+              "000090/1",
+              "000090/2",
+              "000090/3",
+              "000090/4",
+              "000090/5",
+              "000090/6",
+              "000090/7",
+              "000090/8",
+              "000101/0",
+              "000101/1",
+              "000101/2",
+              "000101/3",
+              "000101/4",
+              "000101/5",
+              "000101/6"
+            ],
+            "n": 43,
+            "points": {
+              "direct": 35.5,
+              "human": 21.0,
+              "self": 29.0
+            }
+          }
+        }
+      },
+      "holdout": {
+        "google/gemma-3-12b-it": {
+          "registered": 21,
+          "n": 21,
+          "targets": [
+            "000034/0",
+            "000034/1",
+            "000034/2",
+            "000034/3",
+            "000034/4",
+            "000034/5",
+            "000037/0",
+            "000037/1",
+            "000037/2",
+            "000037/3",
+            "000037/4",
+            "000037/5",
+            "000037/6",
+            "000037/7",
+            "000085/0",
+            "000085/1",
+            "000085/2",
+            "000085/3",
+            "000085/4",
+            "000085/5",
+            "000085/6"
+          ],
+          "methods": {
+            "direct": {
+              "observed": 21,
+              "status": {
+                "judged": 21
+              },
+              "verdicts": {
+                "NO": 13,
+                "PARTIAL": 3,
+                "YES": 5
+              },
+              "start_failed_in_common": 0,
+              "points": 6.5
+            },
+            "human": {
+              "observed": 21,
+              "status": {
+                "judged": 21
+              },
+              "verdicts": {
+                "NO": 11,
+                "PARTIAL": 3,
+                "YES": 7
+              },
+              "start_failed_in_common": 0,
+              "points": 8.5
+            },
+            "gpt5-library": {
+              "observed": 0,
+              "status": {
+                "missing": 21
+              },
+              "verdicts": {},
+              "start_failed_in_common": 0
+            },
+            "self": {
+              "observed": 21,
+              "status": {
+                "judged": 21
+              },
+              "verdicts": {
+                "NO": 15,
+                "PARTIAL": 1,
+                "YES": 5
+              },
+              "start_failed_in_common": 0,
+              "points": 5.5
+            }
+          },
+          "sites": [
+            "000034",
+            "000037",
+            "000085"
+          ],
+          "sources": {
+            "direct": {
+              "candidates": "studies/webgen_bench/component_contracts/candidates.json",
+              "judgments": "studies/webgen_bench/component_contracts/judgments.json"
+            },
+            "human": {
+              "candidates": "studies/webgen_bench/component_contracts/candidates.json",
+              "judgments": "studies/webgen_bench/component_contracts/judgments.json"
+            },
+            "gpt5-library": {
+              "candidates": "studies/webgen_bench/component_contracts/candidates.json",
+              "judgments": "studies/webgen_bench/component_contracts/judgments.json"
+            },
+            "self": {
+              "candidates": "studies/webgen_bench/component_contracts/typed_inputs/edit-candidates.json",
+              "judgments": "studies/webgen_bench/component_contracts/typed_inputs/edit-judgments.json"
+            }
+          },
+          "by_site": {
+            "000034": {
+              "n": 6,
+              "points": {
+                "direct": 2,
+                "human": 3,
+                "self": 1
+              }
+            },
+            "000037": {
+              "n": 8,
+              "points": {
+                "direct": 3,
+                "human": 3.5,
+                "self": 2.5
+              }
+            },
+            "000085": {
+              "n": 7,
+              "points": {
+                "direct": 1.5,
+                "human": 2.0,
+                "self": 2
+              }
+            }
+          },
+          "jointly_runnable": {
+            "targets": [
+              "000034/0",
+              "000034/1",
+              "000034/2",
+              "000034/3",
+              "000034/4",
+              "000034/5",
+              "000037/0",
+              "000037/1",
+              "000037/2",
+              "000037/3",
+              "000037/4",
+              "000037/5",
+              "000037/6",
+              "000037/7",
+              "000085/0",
+              "000085/1",
+              "000085/2",
+              "000085/3",
+              "000085/4",
+              "000085/5",
+              "000085/6"
+            ],
+            "n": 21,
+            "points": {
+              "direct": 6.5,
+              "human": 8.5,
+              "self": 5.5
+            }
+          }
+        },
+        "qwen/qwen3.5-9b": {
+          "registered": 21,
+          "n": 21,
+          "targets": [
+            "000034/0",
+            "000034/1",
+            "000034/2",
+            "000034/3",
+            "000034/4",
+            "000034/5",
+            "000037/0",
+            "000037/1",
+            "000037/2",
+            "000037/3",
+            "000037/4",
+            "000037/5",
+            "000037/6",
+            "000037/7",
+            "000085/0",
+            "000085/1",
+            "000085/2",
+            "000085/3",
+            "000085/4",
+            "000085/5",
+            "000085/6"
+          ],
+          "methods": {
+            "direct": {
+              "observed": 21,
+              "status": {
+                "judged": 14,
+                "start_failed": 7
+              },
+              "verdicts": {
+                "NO": 7,
+                "PARTIAL": 1,
+                "YES": 6
+              },
+              "start_failed_in_common": 7,
+              "points": 6.5
+            },
+            "human": {
+              "observed": 21,
+              "status": {
+                "judged": 21
+              },
+              "verdicts": {
+                "NO": 10,
+                "PARTIAL": 5,
+                "YES": 6
+              },
+              "start_failed_in_common": 0,
+              "points": 8.5
+            },
+            "gpt5-library": {
+              "observed": 0,
+              "status": {
+                "missing": 21
+              },
+              "verdicts": {},
+              "start_failed_in_common": 0
+            },
+            "self": {
+              "observed": 21,
+              "status": {
+                "judged": 21
+              },
+              "verdicts": {
+                "NO": 10,
+                "PARTIAL": 1,
+                "YES": 10
+              },
+              "start_failed_in_common": 0,
+              "points": 10.5
+            }
+          },
+          "sites": [
+            "000034",
+            "000037",
+            "000085"
+          ],
+          "sources": {
+            "direct": {
+              "candidates": "studies/webgen_bench/component_contracts/candidates.json",
+              "judgments": "studies/webgen_bench/component_contracts/judgments.json"
+            },
+            "human": {
+              "candidates": "studies/webgen_bench/component_contracts/candidates.json",
+              "judgments": "studies/webgen_bench/component_contracts/judgments.json"
+            },
+            "gpt5-library": {
+              "candidates": "studies/webgen_bench/component_contracts/candidates.json",
+              "judgments": "studies/webgen_bench/component_contracts/judgments.json"
+            },
+            "self": {
+              "candidates": "studies/webgen_bench/component_contracts/typed_inputs/visibility-candidates.json",
+              "judgments": "studies/webgen_bench/component_contracts/typed_inputs/visibility-judgments.json"
+            }
+          },
+          "by_site": {
+            "000034": {
+              "n": 6,
+              "points": {
+                "direct": 2.5,
+                "human": 2.5,
+                "self": 1
+              }
+            },
+            "000037": {
+              "n": 8,
+              "points": {
+                "direct": 4,
+                "human": 4.0,
+                "self": 5.5
+              }
+            },
+            "000085": {
+              "n": 7,
+              "points": {
+                "direct": 0,
+                "human": 2.0,
+                "self": 4
+              }
+            }
+          },
+          "jointly_runnable": {
+            "targets": [
+              "000034/0",
+              "000034/1",
+              "000034/2",
+              "000034/3",
+              "000034/4",
+              "000034/5",
+              "000037/0",
+              "000037/1",
+              "000037/2",
+              "000037/3",
+              "000037/4",
+              "000037/5",
+              "000037/6",
+              "000037/7"
+            ],
+            "n": 14,
+            "points": {
+              "direct": 6.5,
+              "human": 6.5,
+              "self": 6.5
+            }
+          }
+        },
+        "deepseek/deepseek-v4-flash": {
+          "registered": 21,
+          "n": 21,
+          "targets": [
+            "000034/0",
+            "000034/1",
+            "000034/2",
+            "000034/3",
+            "000034/4",
+            "000034/5",
+            "000037/0",
+            "000037/1",
+            "000037/2",
+            "000037/3",
+            "000037/4",
+            "000037/5",
+            "000037/6",
+            "000037/7",
+            "000085/0",
+            "000085/1",
+            "000085/2",
+            "000085/3",
+            "000085/4",
+            "000085/5",
+            "000085/6"
+          ],
+          "methods": {
+            "direct": {
+              "observed": 21,
+              "status": {
+                "judged": 21
+              },
+              "verdicts": {
+                "NO": 6,
+                "PARTIAL": 3,
+                "YES": 12
+              },
+              "start_failed_in_common": 0,
+              "points": 13.5
+            },
+            "human": {
+              "observed": 21,
+              "status": {
+                "judged": 21
+              },
+              "verdicts": {
+                "NO": 9,
+                "PARTIAL": 5,
+                "YES": 7
+              },
+              "start_failed_in_common": 0,
+              "points": 9.5
+            },
+            "gpt5-library": {
+              "observed": 0,
+              "status": {
+                "missing": 21
+              },
+              "verdicts": {},
+              "start_failed_in_common": 0
+            },
+            "self": {
+              "observed": 21,
+              "status": {
+                "judged": 21
+              },
+              "verdicts": {
+                "NO": 9,
+                "PARTIAL": 3,
+                "YES": 9
+              },
+              "start_failed_in_common": 0,
+              "points": 10.5
+            }
+          },
+          "sites": [
+            "000034",
+            "000037",
+            "000085"
+          ],
+          "sources": {
+            "direct": {
+              "candidates": "studies/webgen_bench/heldout_transfer/candidates.json",
+              "judgments": "studies/webgen_bench/heldout_transfer/judgments.json"
+            },
+            "human": {
+              "candidates": "studies/webgen_bench/heldout_transfer/candidates.json",
+              "judgments": "studies/webgen_bench/heldout_transfer/judgments.json"
+            },
+            "gpt5-library": {
+              "candidates": "studies/webgen_bench/heldout_transfer/candidates.json",
+              "judgments": "studies/webgen_bench/heldout_transfer/judgments.json"
+            },
+            "self": {
+              "candidates": "studies/webgen_bench/heldout_transfer/candidates.json",
+              "judgments": "studies/webgen_bench/heldout_transfer/judgments.json"
+            }
+          },
+          "by_site": {
+            "000034": {
+              "n": 6,
+              "points": {
+                "direct": 4.5,
+                "human": 2,
+                "self": 2.5
+              }
+            },
+            "000037": {
+              "n": 8,
+              "points": {
+                "direct": 5,
+                "human": 3.0,
+                "self": 3
+              }
+            },
+            "000085": {
+              "n": 7,
+              "points": {
+                "direct": 4.0,
+                "human": 4.5,
+                "self": 5
+              }
+            }
+          },
+          "jointly_runnable": {
+            "targets": [
+              "000034/0",
+              "000034/1",
+              "000034/2",
+              "000034/3",
+              "000034/4",
+              "000034/5",
+              "000037/0",
+              "000037/1",
+              "000037/2",
+              "000037/3",
+              "000037/4",
+              "000037/5",
+              "000037/6",
+              "000037/7",
+              "000085/0",
+              "000085/1",
+              "000085/2",
+              "000085/3",
+              "000085/4",
+              "000085/5",
+              "000085/6"
+            ],
+            "n": 21,
+            "points": {
+              "direct": 13.5,
+              "human": 9.5,
+              "self": 10.5
+            }
+          }
+        }
+      }
+    },
+    "admission": {
+      "components": {
+        "gemma": {
+          "status": "build_failed",
+          "public": {
+            "start": true,
+            "tabs": false,
+            "record": false,
+            "details": false,
+            "form": false
+          },
+          "changed": [
+            "input-number",
+            "textarea"
+          ]
+        },
+        "qwen9": {
+          "status": "build_failed",
+          "public": {
+            "start": true,
+            "tabs": false,
+            "record": false,
+            "details": false,
+            "form": false
+          },
+          "changed": [
+            "page",
+            "tpl"
+          ]
+        },
+        "gpt5": {
+          "status": "missing",
+          "public": {},
+          "changed": [],
+          "reason": "HTTP 403"
+        }
+      },
+      "function_bodies": {
+        "gemma": {
+          "status": "build_failed",
+          "public": {
+            "start": true,
+            "tabs": false,
+            "record": false,
+            "details": false,
+            "form": false
+          },
+          "changed": [
+            "dialog"
+          ],
+          "empty": {
+            "start": false,
+            "tabs": false,
+            "record": false,
+            "details": false,
+            "form": false
+          }
+        },
+        "qwen9": {
+          "status": "build_failed",
+          "public": {
+            "start": true,
+            "tabs": true,
+            "record": true,
+            "details": false,
+            "form": false
+          },
+          "changed": [
+            "tabs",
+            "container",
+            "panel"
+          ],
+          "empty": {
+            "start": false,
+            "tabs": false,
+            "record": false,
+            "details": false,
+            "form": false
+          }
+        }
+      },
+      "named_inputs": {
+        "gemma": {
+          "status": "build_failed",
+          "public": {
+            "start": true,
+            "tabs": false,
+            "record": false,
+            "details": false,
+            "form": false
+          },
+          "changed": [],
+          "empty": {
+            "start": true,
+            "tabs": false,
+            "record": false,
+            "details": false,
+            "form": false
+          }
+        },
+        "qwen9": {
+          "status": "build_failed",
+          "public": {
+            "start": true,
+            "tabs": true,
+            "record": true,
+            "details": false,
+            "form": false
+          },
+          "changed": [
+            "checkbox"
+          ],
+          "empty": {
+            "start": true,
+            "tabs": true,
+            "record": true,
+            "details": false,
+            "form": false
+          }
+        }
+      },
+      "fragment_replay": {
+        "gemma": {
+          "status": "build_failed",
+          "public": {
+            "start": true,
+            "tabs": false,
+            "record": false,
+            "details": false,
+            "form": false
+          },
+          "changed": [],
+          "empty": {
+            "start": true,
+            "tabs": false,
+            "record": false,
+            "details": false,
+            "form": false
+          }
+        },
+        "qwen9": {
+          "status": "build_failed",
+          "public": {
+            "start": true,
+            "tabs": true,
+            "record": true,
+            "details": false,
+            "form": false
+          },
+          "changed": [
+            "checkbox"
+          ],
+          "empty": {
+            "start": true,
+            "tabs": true,
+            "record": true,
+            "details": false,
+            "form": false
+          }
+        }
+      },
+      "local_edits": {
+        "gemma": {
+          "status": "valid",
+          "public": {
+            "start": true,
+            "tabs": true,
+            "record": true,
+            "details": true,
+            "form": true
+          },
+          "changed": [
+            "tabs"
+          ],
+          "empty": {
+            "start": false,
+            "tabs": false,
+            "record": false,
+            "details": false,
+            "form": false
+          }
+        },
+        "qwen9": {
+          "status": "build_failed",
+          "public": {
+            "start": true,
+            "tabs": true,
+            "record": true,
+            "details": false,
+            "form": false
+          },
+          "changed": [],
+          "empty": {
+            "start": true,
+            "tabs": true,
+            "record": true,
+            "details": false,
+            "form": false
+          }
+        }
+      },
+      "dom_inputs": {
+        "qwen9": {
+          "status": "build_failed",
+          "public": {
+            "start": true,
+            "tabs": true,
+            "record": true,
+            "details": false,
+            "form": false
+          },
+          "changed": [
+            "form"
+          ],
+          "empty": {
+            "start": true,
+            "tabs": true,
+            "record": true,
+            "details": false,
+            "form": false
+          }
+        }
+      },
+      "native_visibility": {
+        "qwen9": {
+          "status": "valid",
+          "public": {
+            "start": true,
+            "tabs": true,
+            "record": true,
+            "details": true,
+            "form": true
+          },
+          "changed": [
+            "dialog",
+            "form"
+          ],
+          "empty": {
+            "start": true,
+            "tabs": true,
+            "record": true,
+            "details": false,
+            "form": false
+          }
+        }
+      }
+    },
+    "judge": "qwen/qwen3-vl-30b-a3b-instruct",
+    "official": {
+      "model": "qwen/qwen2.5-vl-32b-instruct",
+      "reason": "HTTP 404",
+      "qualified": false
+    },
+    "weights": {
+      "YES": 1,
+      "PARTIAL": 0.5,
+      "NO": 0
+    },
+    "secondary": {
+      "model": "qwen/qwen2.5-vl-72b-instruct",
+      "qualified": true,
+      "paced_endpoint_qualified": true,
+      "cohorts": {
+        "development": {
+          "scheduled": 12,
+          "runnable": 12,
+          "paired": 8,
+          "exact": 2,
+          "second_higher": 4,
+          "second_lower": 2,
+          "both_yes": 0
+        },
+        "holdout": {
+          "scheduled": 27,
+          "runnable": 26,
+          "paired": 20,
+          "exact": 11,
+          "second_higher": 6,
+          "second_lower": 3,
+          "both_yes": 7
+        }
+      },
+      "controls": {
+        "working": "YES",
+        "inert": "NO",
+        "partial": "PARTIAL"
+      }
+    },
+    "native_direct": {
+      "development": {
+        "site": "000011",
+        "original": 11.5,
+        "scheduled": 9,
+        "observed": 9,
+        "new_site_points": 1.5,
+        "matched_n": 43,
+        "direct": 13.0,
+        "self": 28.5,
+        "direct_bounds": [
+          13.0,
+          13.0
+        ],
+        "full_n": 43,
+        "browser_first_reply": {
+          "attempt": 0,
+          "visible_text_characters": 317,
+          "visible_buttons": 1,
+          "inline_classic_scripts": [
+            "SyntaxError"
+          ]
+        }
+      },
+      "holdout": {
+        "site": "000085",
+        "original": 6.5,
+        "scheduled": 7,
+        "observed": 7,
+        "new_site_points": 1,
+        "matched_n": 21,
+        "direct": 7.5,
+        "self": 10.5,
+        "direct_bounds": [
+          7.5,
+          7.5
+        ],
+        "full_n": 21,
+        "browser_first_reply": {
+          "attempt": 0,
+          "visible_text_characters": 171,
+          "visible_buttons": 6,
+          "inline_classic_scripts": [
+            "SyntaxError"
+          ]
+        }
+      }
+    }
+  },
+  "todomvc": {
+    "google/gemma-3-4b-it": {
+      "state_examples": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "arms": {
+          "direct": {
+            "passes": [
+              "todo-01",
+              "todo-05"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-01",
+              "todo-05"
+            ],
+            "statuses": {
+              "valid": 8
+            }
+          },
+          "human": {
+            "passes": [
+              "todo-01",
+              "todo-04"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-01",
+              "todo-04"
+            ],
+            "statuses": {
+              "valid": 8
+            }
+          },
+          "gpt5-library": {
+            "passes": [
+              "todo-01",
+              "todo-02",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-01",
+              "todo-02",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07"
+            ],
+            "statuses": {
+              "valid": 8
+            }
+          },
+          "a": {
+            "passes": [
+              "todo-01",
+              "todo-02",
+              "todo-05"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-01",
+              "todo-02",
+              "todo-05"
+            ],
+            "statuses": {
+              "valid": 8
+            }
+          }
+        }
+      },
+      "uncited_defaults": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "arms": {
+          "direct": {
+            "passes": [
+              "todo-01",
+              "todo-05"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-01",
+              "todo-05"
+            ],
+            "statuses": {
+              "valid": 8
+            }
+          },
+          "human": {
+            "passes": [
+              "todo-01",
+              "todo-04"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-01",
+              "todo-04"
+            ],
+            "statuses": {
+              "valid": 8
+            }
+          },
+          "gpt5-library": {
+            "passes": [
+              "todo-01",
+              "todo-02",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-01",
+              "todo-02",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07"
+            ],
+            "statuses": {
+              "valid": 8
+            }
+          },
+          "a": {
+            "passes": [],
+            "observed": 8,
+            "observed_passes": [],
+            "statuses": {
+              "invalid": 8
+            }
+          }
+        }
+      },
+      "primary": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "arms": {
+          "direct": {
+            "passes": [
+              "todo-01",
+              "todo-05"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-01",
+              "todo-05"
+            ],
+            "statuses": {
+              "valid": 8
+            }
+          },
+          "human": {
+            "passes": [
+              "todo-01",
+              "todo-04"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-01",
+              "todo-04"
+            ],
+            "statuses": {
+              "valid": 8
+            }
+          },
+          "gpt5-library": {
+            "passes": [
+              "todo-01",
+              "todo-02",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-01",
+              "todo-02",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07"
+            ],
+            "statuses": {
+              "valid": 8
+            }
+          },
+          "a": {
+            "passes": [
+              "todo-01",
+              "todo-02",
+              "todo-05"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-01",
+              "todo-02",
+              "todo-05"
+            ],
+            "statuses": {
+              "invalid": 5,
+              "valid": 3
+            }
+          }
+        }
+      },
+      "replicas": {
+        "a": {
+          "status": "valid",
+          "changed": [
+            "init",
+            "destroy",
+            "toggle"
+          ],
+          "public_before": [
+            "append",
+            "blank",
+            "cancel",
+            "clear",
+            "edit",
+            "empty-view",
+            "filtered-view",
+            "flow-create-count",
+            "initial-state",
+            "persist",
+            "view"
+          ],
+          "public_after": [
+            "append",
+            "blank",
+            "cancel",
+            "clear",
+            "edit",
+            "empty-view",
+            "filtered-view",
+            "flow-clear-and-restore",
+            "flow-create-count",
+            "flow-destroy-empty",
+            "flow-restore-and-append",
+            "initial-state",
+            "persist",
+            "restore",
+            "toggle",
+            "view"
+          ],
+          "unseen": {
+            "before": {
+              "init": 0,
+              "persist": 1,
+              "select": 0,
+              "add": 2,
+              "destroy": 0,
+              "toggle": 0,
+              "toggleAll": 0,
+              "edit": 2,
+              "save": 0,
+              "cancel": 1,
+              "clearCompleted": 2,
+              "route": 0
+            },
+            "after": {
+              "init": 2,
+              "persist": 1,
+              "select": 0,
+              "add": 2,
+              "destroy": 2,
+              "toggle": 2,
+              "toggleAll": 0,
+              "edit": 2,
+              "save": 0,
+              "cancel": 1,
+              "clearCompleted": 2,
+              "route": 0
+            }
+          },
+          "measurements": {
+            "a": {
+              "passes": [
+                "todo-01",
+                "todo-02",
+                "todo-05"
+              ],
+              "n": 8
+            },
+            "original-a": {
+              "passes": [
+                "todo-01"
+              ],
+              "n": 8
+            },
+            "fixed-a": {
+              "passes": [
+                "todo-01",
+                "todo-02",
+                "todo-05"
+              ],
+              "n": 8
+            },
+            "original-fixed-a": {
+              "passes": [
+                "todo-01"
+              ],
+              "n": 8
+            },
+            "old-choice-a": {
+              "passes": [
+                "todo-01",
+                "todo-02"
+              ],
+              "n": 8
+            },
+            "envelope-a": {
+              "passes": [
+                "todo-01"
+              ],
+              "n": 8
+            }
+          },
+          "planned_only": [],
+          "fixed_only": [],
+          "matched": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "default_policy": {
+            "n": 8,
+            "passes": [
+              "todo-01",
+              "todo-02",
+              "todo-05"
+            ],
+            "fixed": [
+              "todo-01",
+              "todo-02",
+              "todo-05"
+            ],
+            "planned_only": [],
+            "fixed_only": [],
+            "counterfactual": {
+              "permit-toggle": {
+                "status": "observed",
+                "observations": [
+                  {
+                    "toggled": true,
+                    "passed": true
+                  },
+                  {
+                    "toggled": true,
+                    "passed": true
+                  }
+                ],
+                "passed": true
+              },
+              "forbid-toggle": {
+                "status": "observed",
+                "observations": [
+                  {
+                    "toggled": false,
+                    "passed": true
+                  },
+                  {
+                    "toggled": false,
+                    "passed": true
+                  }
+                ],
+                "passed": true
+              }
+            },
+            "decisions": {
+              "todo-01": {
+                "status": "valid",
+                "disabled": [
+                  "edit"
+                ]
+              },
+              "todo-02": {
+                "status": "valid",
+                "disabled": [
+                  "edit"
+                ]
+              },
+              "todo-03": {
+                "status": "invalid"
+              },
+              "todo-04": {
+                "status": "invalid"
+              },
+              "todo-05": {
+                "status": "valid",
+                "disabled": [
+                  "edit"
+                ]
+              },
+              "todo-06": {
+                "status": "invalid"
+              },
+              "todo-07": {
+                "status": "invalid"
+              },
+              "todo-08": {
+                "status": "invalid"
+              },
+              "permit-toggle": {
+                "status": "valid",
+                "disabled": []
+              },
+              "forbid-toggle": {
+                "status": "valid",
+                "disabled": [
+                  "toggle"
+                ]
+              }
+            }
+          }
+        },
+        "b": {
+          "status": "valid",
+          "changed": [
+            "destroy",
+            "toggle"
+          ],
+          "public_before": [
+            "append",
+            "blank",
+            "cancel",
+            "clear",
+            "edit",
+            "empty-view",
+            "filtered-view",
+            "flow-create-count",
+            "initial-state",
+            "persist",
+            "restore",
+            "view"
+          ],
+          "public_after": [
+            "append",
+            "blank",
+            "cancel",
+            "clear",
+            "edit",
+            "empty-view",
+            "filtered-view",
+            "flow-clear-and-restore",
+            "flow-create-count",
+            "flow-destroy-empty",
+            "initial-state",
+            "persist",
+            "restore",
+            "toggle",
+            "view"
+          ],
+          "unseen": {
+            "before": {
+              "init": 2,
+              "persist": 1,
+              "select": 0,
+              "add": 2,
+              "destroy": 0,
+              "toggle": 0,
+              "toggleAll": 0,
+              "edit": 2,
+              "save": 0,
+              "cancel": 1,
+              "clearCompleted": 2,
+              "route": 0
+            },
+            "after": {
+              "init": 2,
+              "persist": 1,
+              "select": 0,
+              "add": 2,
+              "destroy": 2,
+              "toggle": 2,
+              "toggleAll": 0,
+              "edit": 2,
+              "save": 0,
+              "cancel": 1,
+              "clearCompleted": 2,
+              "route": 0
+            }
+          },
+          "measurements": {
+            "b": {
+              "passes": [
+                "todo-01",
+                "todo-02",
+                "todo-05"
+              ],
+              "n": 8
+            },
+            "original-b": {
+              "passes": [
+                "todo-01"
+              ],
+              "n": 8
+            },
+            "fixed-b": {
+              "passes": [
+                "todo-01",
+                "todo-02",
+                "todo-05"
+              ],
+              "n": 8
+            },
+            "original-fixed-b": {
+              "passes": [
+                "todo-01"
+              ],
+              "n": 8
+            },
+            "old-choice-b": {
+              "passes": [
+                "todo-01",
+                "todo-02"
+              ],
+              "n": 8
+            },
+            "envelope-b": {
+              "passes": [
+                "todo-01",
+                "todo-02",
+                "todo-05"
+              ],
+              "n": 8
+            }
+          },
+          "planned_only": [],
+          "fixed_only": [],
+          "matched": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "default_policy": {
+            "n": 8,
+            "passes": [
+              "todo-01",
+              "todo-02",
+              "todo-05"
+            ],
+            "fixed": [
+              "todo-01",
+              "todo-02",
+              "todo-05"
+            ],
+            "planned_only": [],
+            "fixed_only": [],
+            "counterfactual": {
+              "permit-toggle": {
+                "status": "observed",
+                "observations": [
+                  {
+                    "toggled": true,
+                    "passed": true
+                  },
+                  {
+                    "toggled": true,
+                    "passed": true
+                  }
+                ],
+                "passed": true
+              },
+              "forbid-toggle": {
+                "status": "observed",
+                "observations": [
+                  {
+                    "toggled": false,
+                    "passed": true
+                  },
+                  {
+                    "toggled": false,
+                    "passed": true
+                  }
+                ],
+                "passed": true
+              }
+            },
+            "decisions": {
+              "todo-01": {
+                "status": "valid",
+                "disabled": [
+                  "edit"
+                ]
+              },
+              "todo-02": {
+                "status": "valid",
+                "disabled": [
+                  "edit"
+                ]
+              },
+              "todo-03": {
+                "status": "invalid"
+              },
+              "todo-04": {
+                "status": "invalid"
+              },
+              "todo-05": {
+                "status": "valid",
+                "disabled": [
+                  "edit"
+                ]
+              },
+              "todo-06": {
+                "status": "invalid"
+              },
+              "todo-07": {
+                "status": "invalid"
+              },
+              "todo-08": {
+                "status": "invalid"
+              },
+              "permit-toggle": {
+                "status": "valid",
+                "disabled": []
+              },
+              "forbid-toggle": {
+                "status": "valid",
+                "disabled": [
+                  "toggle"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "mistralai/ministral-3b-2512": {
+      "state_examples": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "arms": {
+          "direct": {
+            "passes": [
+              "todo-03",
+              "todo-07"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-03",
+              "todo-07"
+            ],
+            "statuses": {
+              "invalid": 1,
+              "valid": 7
+            }
+          },
+          "human": {
+            "passes": [
+              "todo-01"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-01"
+            ],
+            "statuses": {
+              "valid": 8
+            }
+          },
+          "gpt5-library": {
+            "passes": [
+              "todo-01",
+              "todo-02",
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-01",
+              "todo-02",
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07"
+            ],
+            "statuses": {
+              "valid": 8
+            }
+          },
+          "a": {
+            "passes": [
+              "todo-01",
+              "todo-02",
+              "todo-03"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-01",
+              "todo-02",
+              "todo-03"
+            ],
+            "statuses": {
+              "valid": 8
+            }
+          }
+        }
+      },
+      "uncited_defaults": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "arms": {
+          "direct": {
+            "passes": [
+              "todo-03",
+              "todo-07"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-03",
+              "todo-07"
+            ],
+            "statuses": {
+              "invalid": 1,
+              "valid": 7
+            }
+          },
+          "human": {
+            "passes": [
+              "todo-01"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-01"
+            ],
+            "statuses": {
+              "valid": 8
+            }
+          },
+          "gpt5-library": {
+            "passes": [
+              "todo-01",
+              "todo-02",
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-01",
+              "todo-02",
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07"
+            ],
+            "statuses": {
+              "valid": 8
+            }
+          },
+          "a": {
+            "passes": [
+              "todo-01",
+              "todo-02",
+              "todo-05"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-01",
+              "todo-02",
+              "todo-05"
+            ],
+            "statuses": {
+              "valid": 8
+            }
+          }
+        }
+      },
+      "primary": {
+        "n": 8,
+        "targets": [
+          "todo-01",
+          "todo-02",
+          "todo-03",
+          "todo-04",
+          "todo-05",
+          "todo-06",
+          "todo-07",
+          "todo-08"
+        ],
+        "arms": {
+          "direct": {
+            "passes": [
+              "todo-03",
+              "todo-07"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-03",
+              "todo-07"
+            ],
+            "statuses": {
+              "invalid": 1,
+              "valid": 7
+            }
+          },
+          "human": {
+            "passes": [
+              "todo-01"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-01"
+            ],
+            "statuses": {
+              "valid": 8
+            }
+          },
+          "gpt5-library": {
+            "passes": [
+              "todo-01",
+              "todo-02",
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-01",
+              "todo-02",
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-06",
+              "todo-07"
+            ],
+            "statuses": {
+              "valid": 8
+            }
+          },
+          "a": {
+            "passes": [
+              "todo-01",
+              "todo-02",
+              "todo-05"
+            ],
+            "observed": 8,
+            "observed_passes": [
+              "todo-01",
+              "todo-02",
+              "todo-05"
+            ],
+            "statuses": {
+              "valid": 8
+            }
+          }
+        }
+      },
+      "replicas": {
+        "a": {
+          "status": "valid",
+          "changed": [
+            "toggleAll",
+            "save"
+          ],
+          "public_before": [
+            "append",
+            "blank",
+            "cancel",
+            "clear",
+            "edit",
+            "empty-view",
+            "filtered-view",
+            "flow-clear-and-restore",
+            "flow-create-count",
+            "flow-destroy-empty",
+            "flow-edit-save-cancel",
+            "flow-empty-save-removes",
+            "flow-restore-and-append",
+            "initial-state",
+            "persist",
+            "restore",
+            "route",
+            "save",
+            "toggle",
+            "view"
+          ],
+          "public_after": [
+            "append",
+            "blank",
+            "cancel",
+            "clear",
+            "edit",
+            "empty-view",
+            "filtered-view",
+            "flow-all-cycle",
+            "flow-clear-and-restore",
+            "flow-create-count",
+            "flow-destroy-empty",
+            "flow-edit-save-cancel",
+            "flow-empty-save-removes",
+            "flow-restore-and-append",
+            "initial-state",
+            "persist",
+            "restore",
+            "route",
+            "save",
+            "toggle",
+            "toggle-all",
+            "view"
+          ],
+          "unseen": {
+            "before": {
+              "init": 1,
+              "persist": 1,
+              "select": 0,
+              "add": 2,
+              "destroy": 2,
+              "toggle": 2,
+              "toggleAll": 0,
+              "edit": 2,
+              "save": 1,
+              "cancel": 1,
+              "clearCompleted": 2,
+              "route": 2
+            },
+            "after": {
+              "init": 1,
+              "persist": 1,
+              "select": 0,
+              "add": 2,
+              "destroy": 2,
+              "toggle": 2,
+              "toggleAll": 2,
+              "edit": 2,
+              "save": 2,
+              "cancel": 1,
+              "clearCompleted": 2,
+              "route": 2
+            }
+          },
+          "measurements": {
+            "a": {
+              "passes": [
+                "todo-01",
+                "todo-02",
+                "todo-03"
+              ],
+              "n": 8
+            },
+            "original-a": {
+              "passes": [
+                "todo-01",
+                "todo-03"
+              ],
+              "n": 8
+            },
+            "fixed-a": {
+              "passes": [
+                "todo-01",
+                "todo-02",
+                "todo-03",
+                "todo-04",
+                "todo-05",
+                "todo-07"
+              ],
+              "n": 8
+            },
+            "original-fixed-a": {
+              "passes": [
+                "todo-01",
+                "todo-02",
+                "todo-03",
+                "todo-05",
+                "todo-07"
+              ],
+              "n": 8
+            },
+            "old-choice-a": {
+              "passes": [
+                "todo-01",
+                "todo-03"
+              ],
+              "n": 8
+            },
+            "envelope-a": {
+              "passes": [
+                "todo-01",
+                "todo-02",
+                "todo-03",
+                "todo-05",
+                "todo-07"
+              ],
+              "n": 8
+            }
+          },
+          "planned_only": [],
+          "fixed_only": [
+            "todo-04",
+            "todo-05",
+            "todo-07"
+          ],
+          "matched": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "default_policy": {
+            "n": 8,
+            "passes": [
+              "todo-01",
+              "todo-02",
+              "todo-05"
+            ],
+            "fixed": [
+              "todo-01",
+              "todo-02",
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-07"
+            ],
+            "planned_only": [],
+            "fixed_only": [
+              "todo-03",
+              "todo-04",
+              "todo-07"
+            ],
+            "counterfactual": {
+              "permit-toggle": {
+                "status": "observed",
+                "observations": [
+                  {
+                    "toggled": true,
+                    "passed": true
+                  },
+                  {
+                    "toggled": true,
+                    "passed": true
+                  }
+                ],
+                "passed": true
+              },
+              "forbid-toggle": {
+                "status": "observed",
+                "observations": [
+                  {
+                    "toggled": false,
+                    "passed": true
+                  },
+                  {
+                    "toggled": false,
+                    "passed": true
+                  }
+                ],
+                "passed": true
+              }
+            },
+            "decisions": {
+              "todo-01": {
+                "status": "valid",
+                "disabled": [
+                  "edit"
+                ]
+              },
+              "todo-02": {
+                "status": "valid",
+                "disabled": [
+                  "edit"
+                ]
+              },
+              "todo-03": {
+                "status": "valid",
+                "disabled": [
+                  "edit"
+                ]
+              },
+              "todo-04": {
+                "status": "valid",
+                "disabled": [
+                  "toggleAll",
+                  "edit"
+                ]
+              },
+              "todo-05": {
+                "status": "valid",
+                "disabled": [
+                  "edit"
+                ]
+              },
+              "todo-06": {
+                "status": "valid",
+                "disabled": [
+                  "toggleAll",
+                  "edit"
+                ]
+              },
+              "todo-07": {
+                "status": "valid",
+                "disabled": [
+                  "toggleAll",
+                  "edit"
+                ]
+              },
+              "todo-08": {
+                "status": "valid",
+                "disabled": [
+                  "edit",
+                  "clearCompleted"
+                ]
+              },
+              "permit-toggle": {
+                "status": "valid",
+                "disabled": []
+              },
+              "forbid-toggle": {
+                "status": "valid",
+                "disabled": [
+                  "toggle"
+                ]
+              }
+            }
+          }
+        },
+        "b": {
+          "status": "valid",
+          "changed": [
+            "init",
+            "toggleAll"
+          ],
+          "public_before": [
+            "append",
+            "blank",
+            "cancel",
+            "clear",
+            "edit",
+            "empty-view",
+            "filtered-view",
+            "flow-clear-and-restore",
+            "flow-create-count",
+            "flow-destroy-empty",
+            "flow-edit-save-cancel",
+            "flow-empty-save-removes",
+            "flow-restore-and-append",
+            "initial-state",
+            "persist",
+            "restore",
+            "route",
+            "save",
+            "toggle",
+            "view"
+          ],
+          "public_after": [
+            "append",
+            "blank",
+            "cancel",
+            "clear",
+            "edit",
+            "empty-view",
+            "filtered-view",
+            "flow-all-cycle",
+            "flow-clear-and-restore",
+            "flow-create-count",
+            "flow-destroy-empty",
+            "flow-edit-save-cancel",
+            "flow-empty-save-removes",
+            "flow-restore-and-append",
+            "initial-state",
+            "persist",
+            "restore",
+            "route",
+            "save",
+            "toggle",
+            "toggle-all",
+            "view"
+          ],
+          "unseen": {
+            "before": {
+              "init": 1,
+              "persist": 1,
+              "select": 0,
+              "add": 2,
+              "destroy": 2,
+              "toggle": 2,
+              "toggleAll": 0,
+              "edit": 2,
+              "save": 2,
+              "cancel": 1,
+              "clearCompleted": 2,
+              "route": 0
+            },
+            "after": {
+              "init": 2,
+              "persist": 1,
+              "select": 0,
+              "add": 2,
+              "destroy": 2,
+              "toggle": 2,
+              "toggleAll": 2,
+              "edit": 2,
+              "save": 2,
+              "cancel": 1,
+              "clearCompleted": 2,
+              "route": 0
+            }
+          },
+          "measurements": {
+            "b": {
+              "passes": [
+                "todo-01",
+                "todo-02",
+                "todo-03"
+              ],
+              "n": 8
+            },
+            "original-b": {
+              "passes": [
+                "todo-01"
+              ],
+              "n": 8
+            },
+            "fixed-b": {
+              "passes": [
+                "todo-01",
+                "todo-02",
+                "todo-03",
+                "todo-04",
+                "todo-05",
+                "todo-07"
+              ],
+              "n": 8
+            },
+            "original-fixed-b": {
+              "passes": [
+                "todo-01",
+                "todo-02",
+                "todo-03",
+                "todo-05",
+                "todo-07"
+              ],
+              "n": 8
+            },
+            "old-choice-b": {
+              "passes": [
+                "todo-01"
+              ],
+              "n": 8
+            },
+            "envelope-b": {
+              "passes": [
+                "todo-01",
+                "todo-02",
+                "todo-03",
+                "todo-05",
+                "todo-07"
+              ],
+              "n": 8
+            }
+          },
+          "planned_only": [],
+          "fixed_only": [
+            "todo-04",
+            "todo-05",
+            "todo-07"
+          ],
+          "matched": [
+            "todo-01",
+            "todo-02",
+            "todo-03",
+            "todo-04",
+            "todo-05",
+            "todo-06",
+            "todo-07",
+            "todo-08"
+          ],
+          "default_policy": {
+            "n": 8,
+            "passes": [
+              "todo-01",
+              "todo-02"
+            ],
+            "fixed": [
+              "todo-01",
+              "todo-02",
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-07"
+            ],
+            "planned_only": [],
+            "fixed_only": [
+              "todo-03",
+              "todo-04",
+              "todo-05",
+              "todo-07"
+            ],
+            "counterfactual": {
+              "permit-toggle": {
+                "status": "observed",
+                "observations": [
+                  {
+                    "toggled": true,
+                    "passed": true
+                  },
+                  {
+                    "toggled": true,
+                    "passed": true
+                  }
+                ],
+                "passed": true
+              },
+              "forbid-toggle": {
+                "status": "observed",
+                "observations": [
+                  {
+                    "toggled": false,
+                    "passed": true
+                  },
+                  {
+                    "toggled": false,
+                    "passed": true
+                  }
+                ],
+                "passed": true
+              }
+            },
+            "decisions": {
+              "todo-01": {
+                "status": "valid",
+                "disabled": [
+                  "toggleAll",
+                  "edit"
+                ]
+              },
+              "todo-02": {
+                "status": "valid",
+                "disabled": [
+                  "toggleAll",
+                  "edit"
+                ]
+              },
+              "todo-03": {
+                "status": "valid",
+                "disabled": [
+                  "edit"
+                ]
+              },
+              "todo-04": {
+                "status": "valid",
+                "disabled": [
+                  "toggleAll",
+                  "edit"
+                ]
+              },
+              "todo-05": {
+                "status": "valid",
+                "disabled": [
+                  "toggle",
+                  "toggleAll",
+                  "edit"
+                ]
+              },
+              "todo-06": {
+                "status": "valid",
+                "disabled": [
+                  "toggleAll",
+                  "edit"
+                ]
+              },
+              "todo-07": {
+                "status": "valid",
+                "disabled": [
+                  "edit"
+                ]
+              },
+              "todo-08": {
+                "status": "valid",
+                "disabled": [
+                  "edit"
+                ]
+              },
+              "permit-toggle": {
+                "status": "valid",
+                "disabled": []
+              },
+              "forbid-toggle": {
+                "status": "valid",
+                "disabled": [
+                  "toggle"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "table": {
+    "libraries": {
+      "a": {
+        "status": "valid",
+        "checks": [
+          "clear",
+          "column",
+          "columns-insert",
+          "edit",
+          "editing-select",
+          "restoration-relocate",
+          "restoration-select-after-insert",
+          "row",
+          "selection"
+        ],
+        "matched": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "planned_only": [],
+        "fixed_only": []
+      },
+      "b": {
+        "status": "valid",
+        "checks": [
+          "clear",
+          "column",
+          "columns-insert",
+          "edit",
+          "editing-select",
+          "restoration-relocate",
+          "restoration-select-after-insert",
+          "row",
+          "selection"
+        ],
+        "matched": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "planned_only": [],
+        "fixed_only": []
+      }
+    },
+    "arms": {
+      "self-a": {
+        "observed": 20,
+        "passes": [
+          1,
+          2,
+          4
+        ]
+      },
+      "fixed-a": {
+        "observed": 20,
+        "passes": [
+          1,
+          2,
+          4
+        ]
+      },
+      "self-b": {
+        "observed": 20,
+        "passes": [
+          1,
+          2,
+          4
+        ]
+      },
+      "fixed-b": {
+        "observed": 20,
+        "passes": [
+          1,
+          2,
+          4
+        ]
+      },
+      "starter": {
+        "observed": 20,
+        "passes": []
+      },
+      "direct": {
+        "observed": 20,
+        "passes": []
+      }
+    },
+    "release_checks": {
+      "columns": true,
+      "editing": true,
+      "restoration": true
+    },
+    "action_sequences": {
+      "direct": {
+        "columns": {
+          "passed": false,
+          "first_failure": "browser"
+        },
+        "editing": {
+          "passed": false,
+          "first_failure": "select"
+        },
+        "restoration": {
+          "passed": false,
+          "first_failure": "browser"
+        }
+      },
+      "new-a": {
+        "columns": {
+          "passed": true,
+          "first_failure": null
+        },
+        "editing": {
+          "passed": false,
+          "first_failure": "enter"
+        },
+        "restoration": {
+          "passed": false,
+          "first_failure": "vertical-move"
+        }
+      },
+      "new-b": {
+        "columns": {
+          "passed": true,
+          "first_failure": null
+        },
+        "editing": {
+          "passed": false,
+          "first_failure": "enter"
+        },
+        "restoration": {
+          "passed": false,
+          "first_failure": "vertical-move"
+        }
+      },
+      "fixed-a": {
+        "columns": {
+          "passed": true,
+          "first_failure": null
+        },
+        "editing": {
+          "passed": false,
+          "first_failure": "enter"
+        },
+        "restoration": {
+          "passed": false,
+          "first_failure": "vertical-move"
+        }
+      },
+      "fixed-b": {
+        "columns": {
+          "passed": true,
+          "first_failure": null
+        },
+        "editing": {
+          "passed": false,
+          "first_failure": "enter"
+        },
+        "restoration": {
+          "passed": false,
+          "first_failure": "vertical-move"
+        }
+      },
+      "old-fixed-a": {
+        "columns": {
+          "passed": false,
+          "first_failure": "insert"
+        },
+        "editing": {
+          "passed": false,
+          "first_failure": "escape"
+        },
+        "restoration": {
+          "passed": false,
+          "first_failure": "relocate"
+        }
+      },
+      "old-fixed-b": {
+        "columns": {
+          "passed": false,
+          "first_failure": "insert"
+        },
+        "editing": {
+          "passed": false,
+          "first_failure": "escape"
+        },
+        "restoration": {
+          "passed": false,
+          "first_failure": "relocate"
+        }
+      },
+      "empty": {
+        "columns": {
+          "passed": false,
+          "first_failure": "browser"
+        },
+        "editing": {
+          "passed": false,
+          "first_failure": "select"
+        },
+        "restoration": {
+          "passed": false,
+          "first_failure": "browser"
+        }
+      }
+    },
+    "same_plans_repaired_handlers": {
+      "libraries": {
+        "a": {
+          "status": "valid",
+          "checks": [
+            "clear",
+            "column",
+            "columns/insert",
+            "edit",
+            "editing/enter",
+            "editing/escape",
+            "editing/select",
+            "editing/selected-without-editing",
+            "restoration/relocate",
+            "restoration/select-after-insert",
+            "restoration/selected-without-editing",
+            "row",
+            "selection"
+          ],
+          "matched": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "planned_only": [],
+          "fixed_only": [],
+          "changed": [
+            "cellClick",
+            "editingKeys",
+            "markSelection",
+            "navigate"
+          ]
+        },
+        "b": {
+          "status": "valid",
+          "checks": [
+            "clear",
+            "column",
+            "columns/insert",
+            "edit",
+            "editing/enter",
+            "editing/escape",
+            "editing/select",
+            "editing/selected-without-editing",
+            "restoration/relocate",
+            "restoration/select-after-insert",
+            "restoration/selected-without-editing",
+            "row",
+            "selection"
+          ],
+          "matched": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "planned_only": [],
+          "fixed_only": [],
+          "changed": [
+            "cellClick",
+            "editingKeys",
+            "markSelection",
+            "navigate"
+          ]
+        }
+      },
+      "arms": {
+        "self-a": {
+          "observed": 20,
+          "passes": [
+            1,
+            2,
+            4
+          ]
+        },
+        "fixed-a": {
+          "observed": 20,
+          "passes": [
+            1,
+            2,
+            4
+          ]
+        },
+        "self-b": {
+          "observed": 20,
+          "passes": [
+            1,
+            2,
+            4
+          ]
+        },
+        "fixed-b": {
+          "observed": 20,
+          "passes": [
+            1,
+            2,
+            4
+          ]
+        },
+        "starter": {
+          "observed": 20,
+          "passes": []
+        },
+        "direct": {
+          "observed": 20,
+          "passes": []
+        }
+      },
+      "calibrated": {
+        "successive_edits": true,
+        "arrow_cycle": true
+      },
+      "identical_initial_handlers": [
+        "cellClick",
+        "editingKeys",
+        "markSelection"
+      ],
+      "sequences": {
+        "reference": {
+          "successive_edits": true,
+          "arrow_cycle": true
+        },
+        "starter": {
+          "successive_edits": false,
+          "arrow_cycle": false
+        },
+        "original-a": {
+          "successive_edits": false,
+          "arrow_cycle": false
+        },
+        "original-b": {
+          "successive_edits": false,
+          "arrow_cycle": false
+        },
+        "updated-a": {
+          "successive_edits": true,
+          "arrow_cycle": false
+        },
+        "updated-b": {
+          "successive_edits": true,
+          "arrow_cycle": false
+        }
+      }
+    }
+  },
+  "budget": {
+    "phases": {
+      "components_generation": {
+        "calls": 35,
+        "settled_usd": 0.009488,
+        "exposure_usd": 0.084685,
+        "unsettled_calls": 1,
+        "cap_usd": 1.05,
+        "stop_usd": 1.05,
+        "halted": 0
+      },
+      "components_judge": {
+        "calls": 712,
+        "settled_usd": 0.48189,
+        "exposure_usd": 0.48658,
+        "unsettled_calls": 1,
+        "cap_usd": 5.75,
+        "stop_usd": 5.75,
+        "halted": 0
+      },
+      "bodies_generation": {
+        "calls": 12,
+        "settled_usd": 0.000435,
+        "exposure_usd": 0.000435,
+        "unsettled_calls": 0,
+        "cap_usd": 0.55,
+        "stop_usd": 0.55,
+        "halted": 0
+      },
+      "bodies_judge": {
+        "calls": 0,
+        "settled_usd": 0.0,
+        "exposure_usd": 0.0,
+        "unsettled_calls": 0,
+        "cap_usd": 5.26342,
+        "stop_usd": 5.26342,
+        "halted": 0
+      },
+      "typed_generation": {
+        "calls": 7,
+        "settled_usd": 0.000823,
+        "exposure_usd": 0.000823,
+        "unsettled_calls": 0,
+        "cap_usd": 0.48,
+        "stop_usd": 0.48,
+        "halted": 0
+      },
+      "typed_judge": {
+        "calls": 0,
+        "settled_usd": 0.0,
+        "exposure_usd": 0.0,
+        "unsettled_calls": 0,
+        "cap_usd": 5.26342,
+        "stop_usd": 5.26342,
+        "halted": 0
+      },
+      "edits_generation": {
+        "calls": 8,
+        "settled_usd": 0.000611,
+        "exposure_usd": 0.000611,
+        "unsettled_calls": 0,
+        "cap_usd": 0.25,
+        "stop_usd": 0.25,
+        "halted": 0
+      },
+      "edits_judge": {
+        "calls": 611,
+        "settled_usd": 0.413928,
+        "exposure_usd": 0.413928,
+        "unsettled_calls": 0,
+        "cap_usd": 5.26342,
+        "stop_usd": 5.26342,
+        "halted": 0
+      },
+      "dom_generation": {
+        "calls": 3,
+        "settled_usd": 8.8e-05,
+        "exposure_usd": 8.8e-05,
+        "unsettled_calls": 0,
+        "cap_usd": 0.2,
+        "stop_usd": 0.2,
+        "halted": 0
+      },
+      "dom_judge": {
+        "calls": 0,
+        "settled_usd": 0.0,
+        "exposure_usd": 0.0,
+        "unsettled_calls": 0,
+        "cap_usd": 4.849492,
+        "stop_usd": 4.849492,
+        "halted": 0
+      },
+      "visibility_generation": {
+        "calls": 2,
+        "settled_usd": 7.7e-05,
+        "exposure_usd": 7.7e-05,
+        "unsettled_calls": 0,
+        "cap_usd": 0.15,
+        "stop_usd": 0.15,
+        "halted": 0
+      },
+      "visibility_judge": {
+        "calls": 472,
+        "settled_usd": 0.31173,
+        "exposure_usd": 0.31173,
+        "unsettled_calls": 0,
+        "cap_usd": 4.471135,
+        "stop_usd": 4.471135,
+        "halted": 0
+      },
+      "native_html_judge": {
+        "calls": 0,
+        "settled_usd": 0.0,
+        "exposure_usd": 0.0,
+        "unsettled_calls": 0,
+        "cap_usd": 0.03003,
+        "stop_usd": 0.03003,
+        "halted": 0
+      },
+      "html_confirmation": {
+        "calls": 132,
+        "settled_usd": 0.078763,
+        "exposure_usd": 0.078763,
+        "unsettled_calls": 0,
+        "cap_usd": 0.5,
+        "stop_usd": 0.5,
+        "halted": 0
+      },
+      "flash_generation": {
+        "calls": 6,
+        "settled_usd": 0.010938,
+        "exposure_usd": 0.010938,
+        "unsettled_calls": 0,
+        "cap_usd": 0.3,
+        "stop_usd": 0.3,
+        "halted": 0
+      },
+      "flash_judge": {
+        "calls": 537,
+        "settled_usd": 0.378357,
+        "exposure_usd": 0.378357,
+        "unsettled_calls": 0,
+        "cap_usd": 4.849492,
+        "stop_usd": 4.849492,
+        "halted": 0
+      },
+      "secondary_judge": {
+        "calls": 34,
+        "settled_usd": 0.058384,
+        "exposure_usd": 1.481164,
+        "unsettled_calls": 6,
+        "cap_usd": 1.6,
+        "stop_usd": 1.6,
+        "halted": 0
+      },
+      "paced_judge": {
+        "calls": 261,
+        "settled_usd": 0.683611,
+        "exposure_usd": 2.648211,
+        "unsettled_calls": 19,
+        "cap_usd": 2.678241,
+        "stop_usd": 2.678241,
+        "halted": 0
+      },
+      "todo_generation": {
+        "calls": 128,
+        "settled_usd": 0.003385,
+        "exposure_usd": 0.003385,
+        "unsettled_calls": 0,
+        "cap_usd": 0.65,
+        "stop_usd": 0.65,
+        "halted": 0
+      },
+      "todo_defaults": {
+        "calls": 40,
+        "settled_usd": 0.000495,
+        "exposure_usd": 0.000495,
+        "unsettled_calls": 0,
+        "cap_usd": 0.16,
+        "stop_usd": 0.16,
+        "halted": 0
+      },
+      "todo_evidence": {
+        "calls": 40,
+        "settled_usd": 0.000687,
+        "exposure_usd": 0.000687,
+        "unsettled_calls": 0,
+        "cap_usd": 0.12,
+        "stop_usd": 0.12,
+        "halted": 0
+      },
+      "table_generation": {
+        "calls": 48,
+        "settled_usd": 0.004368,
+        "exposure_usd": 0.004368,
+        "unsettled_calls": 0,
+        "cap_usd": 0.573497,
+        "stop_usd": 0.573497,
+        "halted": 0
+      },
+      "initial_table_generation": {
+        "calls": 37,
+        "settled_usd": 0.006503,
+        "exposure_usd": 0.006503,
+        "unsettled_calls": 0,
+        "cap_usd": 0.58,
+        "stop_usd": 0.58,
+        "halted": 0
+      },
+      "selection_generation": {
+        "calls": 8,
+        "settled_usd": 0.002116,
+        "exposure_usd": 0.002116,
+        "unsettled_calls": 0,
+        "cap_usd": 0.16,
+        "stop_usd": 0.16,
+        "halted": 0
+      }
+    },
+    "by_model_and_phase": {
+      "components_generation": {
+        "google/gemma-3-12b-it / build": {
+          "calls": 6,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 315,
+          "exposure_micro_usd": 315
+        },
+        "google/gemma-3-12b-it / direct": {
+          "calls": 3,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 1157,
+          "exposure_micro_usd": 1157
+        },
+        "google/gemma-3-12b-it / plan": {
+          "calls": 3,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 806,
+          "exposure_micro_usd": 806
+        },
+        "openai/gpt-5 / build": {
+          "calls": 1,
+          "unsettled_calls": 1,
+          "settled_micro_usd": 0,
+          "exposure_micro_usd": 75197
+        },
+        "qwen/qwen3.5-9b / build": {
+          "calls": 14,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 1468,
+          "exposure_micro_usd": 1468
+        },
+        "qwen/qwen3.5-9b / direct": {
+          "calls": 4,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 4353,
+          "exposure_micro_usd": 4353
+        },
+        "qwen/qwen3.5-9b / plan": {
+          "calls": 4,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 1389,
+          "exposure_micro_usd": 1389
+        }
+      },
+      "components_judge": {
+        "qwen/qwen2.5-vl-32b-instruct / route": {
+          "calls": 1,
+          "unsettled_calls": 1,
+          "settled_micro_usd": 0,
+          "exposure_micro_usd": 4690
+        },
+        "qwen/qwen3-vl-30b-a3b-instruct / judge": {
+          "calls": 711,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 481890,
+          "exposure_micro_usd": 481890
+        }
+      },
+      "bodies_generation": {
+        "google/gemma-3-12b-it / build": {
+          "calls": 3,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 112,
+          "exposure_micro_usd": 112
+        },
+        "qwen/qwen3.5-9b / build": {
+          "calls": 9,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 323,
+          "exposure_micro_usd": 323
+        }
+      },
+      "bodies_judge": {},
+      "typed_generation": {
+        "google/gemma-3-12b-it / build": {
+          "calls": 2,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 124,
+          "exposure_micro_usd": 124
+        },
+        "qwen/qwen3.5-9b / build": {
+          "calls": 5,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 699,
+          "exposure_micro_usd": 699
+        }
+      },
+      "typed_judge": {},
+      "edits_generation": {
+        "google/gemma-3-12b-it / build": {
+          "calls": 2,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 60,
+          "exposure_micro_usd": 60
+        },
+        "qwen/qwen3.5-9b / build": {
+          "calls": 6,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 551,
+          "exposure_micro_usd": 551
+        }
+      },
+      "edits_judge": {
+        "qwen/qwen3-vl-30b-a3b-instruct / judge": {
+          "calls": 611,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 413928,
+          "exposure_micro_usd": 413928
+        }
+      },
+      "dom_generation": {
+        "qwen/qwen3.5-9b / build": {
+          "calls": 3,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 88,
+          "exposure_micro_usd": 88
+        }
+      },
+      "dom_judge": {},
+      "visibility_generation": {
+        "qwen/qwen3.5-9b / build": {
+          "calls": 2,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 77,
+          "exposure_micro_usd": 77
+        }
+      },
+      "visibility_judge": {
+        "qwen/qwen3-vl-30b-a3b-instruct / judge": {
+          "calls": 472,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 311730,
+          "exposure_micro_usd": 311730
+        }
+      },
+      "flash_generation": {
+        "deepseek/deepseek-v4-flash / direct": {
+          "calls": 3,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 7571,
+          "exposure_micro_usd": 7571
+        },
+        "deepseek/deepseek-v4-flash / plan": {
+          "calls": 3,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 3367,
+          "exposure_micro_usd": 3367
+        }
+      },
+      "flash_judge": {
+        "qwen/qwen3-vl-30b-a3b-instruct / judge": {
+          "calls": 537,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 378357,
+          "exposure_micro_usd": 378357
+        }
+      },
+      "secondary_judge": {
+        "qwen/qwen2.5-vl-72b-instruct / judge": {
+          "calls": 34,
+          "unsettled_calls": 6,
+          "settled_micro_usd": 58384,
+          "exposure_micro_usd": 1481164
+        }
+      },
+      "paced_judge": {
+        "qwen/qwen2.5-vl-72b-instruct / judge": {
+          "calls": 261,
+          "unsettled_calls": 19,
+          "settled_micro_usd": 683611,
+          "exposure_micro_usd": 2648211
+        }
+      },
+      "todo_generation": {
+        "google/gemma-3-4b-it / build": {
+          "calls": 21,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 943,
+          "exposure_micro_usd": 943
+        },
+        "google/gemma-3-4b-it / plan": {
+          "calls": 64,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 658,
+          "exposure_micro_usd": 658
+        },
+        "mistralai/ministral-3b-2512 / build": {
+          "calls": 12,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 1029,
+          "exposure_micro_usd": 1029
+        },
+        "mistralai/ministral-3b-2512 / plan": {
+          "calls": 31,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 755,
+          "exposure_micro_usd": 755
+        }
+      },
+      "todo_defaults": {
+        "google/gemma-3-4b-it / plan": {
+          "calls": 20,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 173,
+          "exposure_micro_usd": 173
+        },
+        "mistralai/ministral-3b-2512 / plan": {
+          "calls": 20,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 322,
+          "exposure_micro_usd": 322
+        }
+      },
+      "todo_evidence": {
+        "google/gemma-3-4b-it / plan": {
+          "calls": 20,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 227,
+          "exposure_micro_usd": 227
+        },
+        "mistralai/ministral-3b-2512 / plan": {
+          "calls": 20,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 460,
+          "exposure_micro_usd": 460
+        }
+      },
+      "table_generation": {
+        "qwen/qwen3.5-9b / build": {
+          "calls": 8,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 1513,
+          "exposure_micro_usd": 1513
+        },
+        "qwen/qwen3.5-9b / plan": {
+          "calls": 40,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 2855,
+          "exposure_micro_usd": 2855
+        }
+      },
+      "initial_table_generation": {
+        "qwen/qwen3.5-9b / build": {
+          "calls": 37,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 6503,
+          "exposure_micro_usd": 6503
+        }
+      },
+      "selection_generation": {
+        "qwen/qwen3.5-9b / build": {
+          "calls": 8,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 2116,
+          "exposure_micro_usd": 2116
+        }
+      },
+      "native_html_judge": {},
+      "html_confirmation": {
+        "qwen/qwen3-vl-30b-a3b-instruct / judge": {
+          "calls": 132,
+          "unsettled_calls": 0,
+          "settled_micro_usd": 78763,
+          "exposure_micro_usd": 78763
+        }
+      }
+    },
+    "total": {
+      "calls": 3133,
+      "unsettled_calls": 27,
+      "settled_micro_usd": 2446677,
+      "exposure_micro_usd": 5913944
+    }
+  },
+  "sources": {
+    "studies/public_library_transfer/compact_todomvc/state_examples/result.json": "03ee27d4b2bd8a3e485dc8106ff8f9346eb9e6cd46bab8043200cb40be473fe4",
+    "studies/public_library_transfer/compact_todomvc/state_examples/default-result.json": "93fcbf9f463bff0a9ba34a6f5dcedb72e8abc562755b2505a96a4625d3a7a321",
+    "studies/public_library_transfer/compact_todomvc/state_examples/evidence-result.json": "bc1756f36be8960539c4c3e94d0fed92901ee30474c998d0b28ba5e243aab9c3",
+    "studies/public_library_transfer/compact_todomvc/state_examples/evidence-decisions.json": "6ddb1eeea3be10a02b8d055d1dfa561dd9d82082005e8a732338aa7d89d31bd7",
+    "studies/public_library_transfer/source_diagnosis/result.json": "bc41d434838137b8324300ec5bfb43e06e3b4e3aae3b6f67996b0b76fa2cf6cf",
+    "studies/webbench/table/action_sequences/single_slot/result.json": "be4f07d834ff124491be15202d5fd139aa3a46281aa747e3f255668adc457eec",
+    "studies/webbench/table/action_sequences/single_slot/heldout-result.json": "89431c614aba49116144800b7ed5e6e3a727d64ed487e1ff1cf6fd03216da7b4",
+    "studies/webbench/table/action_sequences/single_slot/interrupted.json": "8e23773ffb1c8cba57715b5077842f26dd3d58429bf242ae9c4652dbd7635f92",
+    "studies/webgen_bench/component_contracts/accounting.json": "d804d7c9b097be2c3c526312eda1aca4ecbf3a6e18e73d9553ddda6971b3ea8f",
+    "studies/webgen_bench/functional_pilot/function_binding/judgments.json": "db4f4786e779b99b7a786b05f1bf8e53647469793472c898c50c8f2ff2dd28a4",
+    "studies/webgen_bench/functional_pilot/function_binding/candidates.json": "82cb8ed3da505a55df81c36a38d45be6414bf2b12a99aa6760b619eca5e7595a",
+    "studies/webgen_bench/heldout_transfer/candidates.json": "a791d21d11fb9ede3cbcfb402a2f5eb27bb94b87d2ea2b6b9e4494d01a04f8e5",
+    "studies/webgen_bench/heldout_transfer/judgments.json": "df70dc9d622c5065370f88fdbe53a764d17c485660ec545520592fbbfe5e40d2",
+    "studies/webgen_bench/heldout_transfer/secondary.json": "4ea15e05210d2e89be2e84ba0a7cb49ba9aa81076f2d232ba3affa4019ae7654",
+    "studies/webgen_bench/heldout_transfer/secondary-completion.json": "57380ea79629f6aac42ecbd9f41cb84ab4d65a78de3e0410d19fcfe842d38abd",
+    "studies/webbench/table/action_sequences/selection_mode/result.json": "691549ae0b882d9403ff38b84ec5956c801af3c5f5e465b69bf433d18f9ed207",
+    "studies/webbench/table/action_sequences/selection_mode/validation.json": "82434743a7cedd07496e74e6066e57de1bf5b681fd03b499d50e1cd600a09904",
+    "studies/webbench/table/action_sequences/selection_mode/function-hashes.json": "46ac4d7f05c88d458bf89b59bacc858bf182f006ab7d3d0543195296d871a56f",
+    "studies/webgen_bench/heldout_transfer/incomplete_html/candidates.json": "92f4849dd7a7906aa1743890ec49698e4a1f8094d9400ac33e846d312157a92f",
+    "studies/webgen_bench/heldout_transfer/incomplete_html/judgments.json": "b38f64ba78dcc115c8d396113dd7e93a4fb24cf279fe26089ff84b1aa94ccc24",
+    "studies/webgen_bench/heldout_transfer/incomplete_html/functional-confirmation.json": "dd55e3fd2f3a660a6324459f88caaac6f563cd1a7359aaa6c308fa6e3ca1f370",
+    "studies/webgen_bench/heldout_transfer/incomplete_html/browser.json": "b148cbabd68486cfa5364b3fccade32bbb57cc82904dd57ed7d3f3f5f5f1ddc9",
+    "studies/webgen_bench/heldout_transfer/incomplete_html/transport.json": "fcbaf3f52387f8e26a943ffd995848210e4b343b4dcd25c9334c1444e793e49f",
+    "studies/webgen_bench/component_contracts/candidates.json": "3547d4fc8de642728937e3841132fad37c175eb803f26e9745bbca908e117b5b",
+    "studies/webgen_bench/component_contracts/judgments.json": "5b04cc1a230ed807b00510f6fe1b22927b430358a427de863a0b2a58131e6131",
+    "studies/webgen_bench/component_contracts/function_bodies/candidates.json": "5e8fb29ee258a8c756d617016c3161e2a74f899d486e663859cea9b84e7c946f",
+    "studies/webgen_bench/component_contracts/function_bodies/judgments.json": "bb471f4b091e3b6934d59fb3d70986b4bef8a6bb434f14b127e42af78054b0d3",
+    "studies/webgen_bench/component_contracts/typed_inputs/candidates.json": "51f0b354d668400c3a44858edf5e0fe6e72fd6d54e1b0908d151b847c328fc46",
+    "studies/webgen_bench/component_contracts/typed_inputs/judgments.json": "6854060b69ae1bfb7475f5a6db6239fe7e609cd417809377ab82ca07615e80a4",
+    "studies/webgen_bench/component_contracts/typed_inputs/replay-candidates.json": "62768a15fe82513c2174579841e5284a27ceee9445f67841387c78b43570d920",
+    "studies/webgen_bench/component_contracts/typed_inputs/replay-judgments.json": "685147db6e3f3a9be94f9e45365531d576aff61a619cedd06df86b7f5900a934",
+    "studies/webgen_bench/component_contracts/typed_inputs/edit-candidates.json": "cedbdfe55e740ed353b28a73d72d9ec637f9184e6019b1be1407c89c374128f8",
+    "studies/webgen_bench/component_contracts/typed_inputs/edit-judgments.json": "fe1ea617520f64e96571e4d781de69d6837934a7d5630cbeca8c3e7a7ce471a1",
+    "studies/webgen_bench/component_contracts/typed_inputs/dom-candidates.json": "ea4d2cda03924da6ce903ed2d9eec87644f92eb2021f8b0a8e7f9dd3b9996117",
+    "studies/webgen_bench/component_contracts/typed_inputs/dom-judgments.json": "5a67350c71fdb3e7bc5e631c8c48495266a4ea937e1db6d5e9b443121dd7da1d",
+    "studies/webgen_bench/component_contracts/typed_inputs/visibility-candidates.json": "091576660937fded29efaad4b0e9c056aef0ea2e2fd818cd7235d3447b4c3414",
+    "studies/webgen_bench/component_contracts/typed_inputs/visibility-judgments.json": "011e528771518291687544c3a18b29004dbc20d6cb73e92da530c91d13544608"
+  }
+}

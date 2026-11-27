@@ -1,0 +1,94 @@
+{
+  "utc": "2026-11-27T10:00:06.717516+00:00",
+  "records": {
+    "development": {
+      "model": "qwen9",
+      "site": "000011",
+      "method": "direct",
+      "evaluated_attempt": 0,
+      "original": {
+        "candidates": "studies/webgen_bench/functional_pilot/function_binding/candidates.json",
+        "judgments": "studies/webgen_bench/functional_pilot/function_binding/judgments.json"
+      },
+      "attempts": [
+        {
+          "attempt": 0,
+          "response_sha256": "7bc49a7db4abfe1acebb598fe81420b6110a3f658f54f0751b6bfbebf9bda1ae",
+          "finish_reason": "length",
+          "length": 30393,
+          "tokens": 7500,
+          "found": true,
+          "html": "artifacts/webgen-native-html-20261127/development/000011/0/index.html",
+          "sha256": "31ea242234ff8433cee7da98c5359916fa9fdd7b38fd92e01e011a5f0f128079"
+        },
+        {
+          "attempt": 1,
+          "response_sha256": "71902557ab0145ebc85e99537a6006a27fb3c939f74f75bb8fe21baec469ec88",
+          "finish_reason": "length",
+          "length": 30255,
+          "tokens": 7500,
+          "found": true,
+          "html": "artifacts/webgen-native-html-20261127/development/000011/1/index.html",
+          "sha256": "e21fc8861fd4b9284ed29a1350a1e335723f80c82c2c11917ee28c86b0817629"
+        }
+      ]
+    },
+    "holdout": {
+      "model": "qwen9",
+      "site": "000085",
+      "method": "direct",
+      "evaluated_attempt": 0,
+      "original": {
+        "candidates": "studies/webgen_bench/component_contracts/candidates.json",
+        "judgments": "studies/webgen_bench/component_contracts/judgments.json"
+      },
+      "attempts": [
+        {
+          "attempt": 0,
+          "response_sha256": "94917e781392ad8b419378e4c35e16cacf0b3d5a644b75a533bf4cf5e2ebf1ad",
+          "finish_reason": "length",
+          "length": 31088,
+          "tokens": 7500,
+          "found": true,
+          "html": "artifacts/webgen-native-html-20261127/holdout/000085/0/index.html",
+          "sha256": "4b3f9aec7aab6386bb7ecc164a0b68f298bb16bddfb201edb42b2cbafd438f13"
+        },
+        {
+          "attempt": 1,
+          "response_sha256": "812af048d86cf7487ed121e1e656c7936f179c148af5a32a902cfe100f1496db",
+          "finish_reason": "length",
+          "length": 31090,
+          "tokens": 7500,
+          "found": true,
+          "html": "artifacts/webgen-native-html-20261127/holdout/000085/1/index.html",
+          "sha256": "4b3f9aec7aab6386bb7ecc164a0b68f298bb16bddfb201edb42b2cbafd438f13"
+        }
+      ]
+    }
+  },
+  "sources": {
+    "studies/webgen_bench/heldout_transfer/incomplete_html/run.py": "977a6ed20b76290559adf823b7a2f1cbd89a79f649f180fd6cd0aa9cfbde2a7a",
+    "studies/webgen_bench/heldout_transfer/incomplete_html/PROTOCOL.md": "5c8edb9f5312c2ba8dd9c7387e4e2121e0482639410635a72bca8489a2b53dfd",
+    "artifacts/webgen-bench/test.parquet": "4b3b3ee629902babdea71950385f916f30cdab0078895cc5c06a8096de638d44",
+    "studies/webgen_bench/functional_pilot/evaluate.py": "7b68fba0e84ddabcf1ce77d87f8910432f4236465318f713d036cad3ea2f9da8",
+    "studies/webgen_bench/functional_pilot/judge_api.py": "ece8cb1b8c19fe0a028cc0af37eb13dccf4eea32db852b818e4d6eb3882cf19f",
+    "studies/webgen_bench/functional_pilot/function_binding/candidates.json": "82cb8ed3da505a55df81c36a38d45be6414bf2b12a99aa6760b619eca5e7595a",
+    "studies/webgen_bench/functional_pilot/function_binding/judgments.json": "db4f4786e779b99b7a786b05f1bf8e53647469793472c898c50c8f2ff2dd28a4",
+    "artifacts/webgen-sites-20261126pm/jobs/qwen9/000011/direct/record.json": "07f465ef190e1566b01c431e049ddbad9f9e178efc70ce9b3b16c739fe9fbfd1",
+    "artifacts/webgen-sites-20261126pm/jobs/qwen9/000011/direct/0/transmission-1/request.json": "7999a1621ead9bebaa5eee7fd3dbd2ee7842893cc9c9e738930f62911644e096",
+    "artifacts/webgen-sites-20261126pm/jobs/qwen9/000011/direct/0/transmission-1/response.json": "7bc49a7db4abfe1acebb598fe81420b6110a3f658f54f0751b6bfbebf9bda1ae",
+    "artifacts/webgen-sites-20261126pm/jobs/qwen9/000011/direct/0/transmission-1/settled.json": "3586f49e0b6f61e9656cee1cbbe415f5ca0900b4a8a721be5c8a38fbd1e659d3",
+    "artifacts/webgen-sites-20261126pm/jobs/qwen9/000011/direct/1/transmission-1/request.json": "3240d99bb63ed8203889e136a6e18c1ef8c4aed8ea23af211be6d98bb7f758f9",
+    "artifacts/webgen-sites-20261126pm/jobs/qwen9/000011/direct/1/transmission-1/response.json": "71902557ab0145ebc85e99537a6006a27fb3c939f74f75bb8fe21baec469ec88",
+    "artifacts/webgen-sites-20261126pm/jobs/qwen9/000011/direct/1/transmission-1/settled.json": "33ca564b8b407a5886e60b793e3b0826ca20b3194b34ebb37771ed4edf883b3d",
+    "studies/webgen_bench/component_contracts/candidates.json": "3547d4fc8de642728937e3841132fad37c175eb803f26e9745bbca908e117b5b",
+    "studies/webgen_bench/component_contracts/judgments.json": "5b04cc1a230ed807b00510f6fe1b22927b430358a427de863a0b2a58131e6131",
+    "artifacts/webgen-component-contracts-20261127/jobs/qwen9/000085/direct/record.json": "07f465ef190e1566b01c431e049ddbad9f9e178efc70ce9b3b16c739fe9fbfd1",
+    "artifacts/webgen-component-contracts-20261127/jobs/qwen9/000085/direct/0/transmission-1/request.json": "f63da13bd016f06a559295da590cb44c08b37394dc8f878cd6c235834a7d8341",
+    "artifacts/webgen-component-contracts-20261127/jobs/qwen9/000085/direct/0/transmission-1/response.json": "94917e781392ad8b419378e4c35e16cacf0b3d5a644b75a533bf4cf5e2ebf1ad",
+    "artifacts/webgen-component-contracts-20261127/jobs/qwen9/000085/direct/0/transmission-1/settled.json": "06f5d95ced09903fcb6e2eaf0097e283a0c274adcfb10c4c8f6d6ed3b15de1d6",
+    "artifacts/webgen-component-contracts-20261127/jobs/qwen9/000085/direct/1/transmission-1/request.json": "a7bc5b0db19fa0e036fe12e209605d8ef8729122e7d51192f3b981cdfa677e06",
+    "artifacts/webgen-component-contracts-20261127/jobs/qwen9/000085/direct/1/transmission-1/response.json": "812af048d86cf7487ed121e1e656c7936f179c148af5a32a902cfe100f1496db",
+    "artifacts/webgen-component-contracts-20261127/jobs/qwen9/000085/direct/1/transmission-1/settled.json": "d0ed8465731b1ce6de6ea134247636c7fbc2c211f5f11c012747dd57e6080463"
+  }
+}

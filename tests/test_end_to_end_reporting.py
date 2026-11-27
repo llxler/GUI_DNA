@@ -216,6 +216,8 @@ def test_paper_omits_failed_builds_and_keeps_measured_zeros():
         model.pop("form_visible_targets", None)
         model.pop("library_capabilities", None)
         model.pop("table_state_transitions", None)
+        model.pop("state_examples", None)
+        model.pop("webgen_holdout", None)
         model.pop("source_diagnosis", None)
         model.pop("webgen_functional", None)
     from studies.paper_component_followup import LABELS
@@ -371,6 +373,12 @@ def test_lookup_separates_weighted_scores_build_failure_and_unavailable():
 
     weighted = query("deepseek/deepseek-v4-flash", "direct")
     assert (weighted["score"], weighted["denominator"], weighted["unit"]) == (35.5, 43, "functional points")
-    for method, status in (("self", "build_failed"), ("gpt5-library", "unavailable")):
-        cell = query("google/gemma-3-12b-it", method)
-        assert cell["status"] == status and "score" not in cell
+    model = "google/gemma-3-12b-it"
+    development = query(model, "self")
+    heldout = find_cell(matrix, "webgen-bench/heldout", model, "self")
+    assert (development["denominator"], heldout["denominator"]) == (43, 21)
+    assert set(development["sites"]).isdisjoint(heldout["sites"])
+    for cell in (development, heldout):
+        assert cell["status"] == "measured" and cell["method_record"].endswith("edit-judgments.json")
+    missing = query(model, "gpt5-library")
+    assert missing["status"] == "unavailable" and "score" not in missing

@@ -13,14 +13,15 @@ python -m studies.lookup web-bench/form "DeepSeek V4 Flash"           # 列出�
 python -m studies.lookup web-bench/form "DeepSeek V4 Flash" Self      # 查看一个格子的成绩和出处
 ```
 
-最后一条查询返回 **11/20**。打开输出的 `matrix`，按 `row_keys` 依次进入模型和实验记录，在 `passed.self` 看分子，在 `n` 和 `targets` 看分母和目标。再打开 `method_record`。这次实验把首份自建库记作 `file-a`，其 20 行分别给出任务编号、是否通过和浏览器报告哈希。同目录的协议说明建库及解码条件，运行器给出实现。早期协议的 0/20 仍保存在矩阵的 `current.form` 中。[主表 JSON](studies/results/paper-performance-matrix.json) · [本格逐题记录](studies/webbench/form/flash_self_build/visible_targets/result.json) · [协议](studies/webbench/form/flash_self_build/visible_targets/PROTOCOL.md) · [运行代码](studies/webbench/form/flash_self_build/visible_targets/run.py)
+最后一条查询返回 **11/20**。打开输出的 `matrix`，按 `row_keys` 依次进入模型和实验记录，在 `passed.self` 看分子，在 `n` 和 `targets` 看分母和目标。再打开 `method_record`。这次实验把首份自建库记作 `file-a`，其 20 行分别给出任务编号、是否通过和浏览器报告哈希。同目录的协议说明建库及解码条件，运行器给出实现。旧矩阵 `current.form` 留有历史计数 0/20。其两次建库均未交付源码，20 题都没有进入规划；当前表展示准入后的实测成绩。[主表 JSON](studies/results/paper-performance-matrix.json) · [本格逐题记录](studies/webbench/form/flash_self_build/visible_targets/result.json) · [协议](studies/webbench/form/flash_self_build/visible_targets/PROTOCOL.md) · [运行代码](studies/webbench/form/flash_self_build/visible_targets/run.py)
 
 | Table 1 | 查询用的数据集／项目名 | 实验代码入口 |
 | --- | --- | --- |
 | A · Web-Bench 完整项目 | `web-bench/table`、`web-bench/svg-chart`、`web-bench/form`、`web-bench/dom1`（文件管理器）、`web-bench/calculator` | [Web-Bench 分项目索引](studies/webbench/README.md) |
 | B · TodoMVC 功能子集 | `todomvc` | [人工库](studies/todomvc_dna/README.md) · [小模型建库](studies/public_library_transfer/compact_todomvc/PROTOCOL.md) · [配置筛选](studies/public_library_transfer/source_diagnosis/visible_choices/core_profiles/PROTOCOL.md) |
 | B · WebApp1K-Duo 双功能组合 | `webapp1k-duo` | [公开功能与配对](studies/public_library_transfer/other_benchmarks/README.md) · [GPT-5 组件来源](studies/public_library_transfer/duo_donor_library/PROTOCOL.md) · [Self 回调与视图](studies/public_library_transfer/duo_react_callbacks/PROTOCOL.md) |
-| C · WebGen-Bench 网站功能 | `webgen-bench` | [站点、页面生成、逐项评分与评判器](studies/webgen_bench/README.md) |
+| C · WebGen-Bench 六个开发网站 | `webgen-bench` | [站点、页面生成及原评判器](studies/webgen_bench/README.md) |
+| C · WebGen-Bench 三个留出网站 | `webgen-bench/heldout` | [冻结库的跨站迁移、每项判决与复评](studies/webgen_bench/component_contracts/README.md) |
 
 模型名指负责当前目标的**生成模型**，支持上表命令列出的显示名和完整模型 ID。四种方法的 JSON 标识分别为 `direct`（从零写代码）、`human`（人工库＋GUI-DNA）、`gpt5-library`（冻结 GPT-5 库＋GUI-DNA）和 `self`（目标模型建库并配置）。固定示例和第二次独立建库可在对应研究记录中查阅。
 
@@ -39,7 +40,7 @@ GUI_DNA/
 │   ├── results/                   随仓库发布的 JSON 汇总与主表矩阵
 │   ├── webbench/                  Web-Bench 各项目的协议、运行器与逐题结果
 │   ├── public_library_transfer/   跨项目建库、TodoMVC、Duo、固定页与独立重复
-│   ├── webgen_bench/              六站生成、功能评分与评判器校准
+│   ├── webgen_bench/              六站开发、三站留出验证与评判器校准
 │   ├── todomvc_dna/               TodoMVC 人工库研究
 │   ├── webapp1k_dna/              WebApp1K-Duo 早期研究
 │   └── webbench_dna/              早期 Web-Bench 文件管理器研究
@@ -59,7 +60,7 @@ GUI_DNA/
 | --- | --- | --- |
 | 人工组件能提供多少可复用行为？ | 在同一批 20 项表格任务上，GPT-OSS-120B 从零生成通过 7 项，人工库组装通过 20 项。 | [组件与对照](docs/method.md) |
 | 低分出在实现还是选配置？ | Qwen3.5 使用同一份 GPT-5 图表库，长配置通过 1/20，改选已有示例通过 15/20，固定首例通过 17/20。它自己的待办库限选满足共同操作的配置后从 0/8 升至 5/8，固定首例也通过相同五题。 | [原配置、固定对照与复验](studies/results/library-source-diagnosis-20261126.json) |
-| 换到完整网站，哪种方法得分更高？ | 六站共 43 分。Gemma 从零得 13 分，人工库得 19 分；Qwen3.5 分别得 11.5 和 24.5 分。Flash 从零、人工库、自建库分别得 35.5、21 和 29 分。两款替代评判器在 32 个抽样配对中有 15 个等级一致。 | [六站逐项判决与校准](studies/results/webgen-functional-20261126.json) |
+| 换到未见网站，自建库还能提高得分吗？ | 六个开发站上，Qwen3.5 从零 11.5/43、自建库 28.5/43。三个留出站上分别为 6.5/21、10.5/21；在双方都启动的 14 项上同为 6.5 分。Gemma 在留出站从零 6.5/21、自建库 5.5/21，Flash 分别为 13.5/21、10.5/21。[逐站分数、启动失败与复评](studies/results/component-validation-20261127.json) |
 
 ## 安装与核验
 
@@ -68,6 +69,7 @@ GUI_DNA/
 ```bash
 uv sync --extra dev
 uv run python -m studies.webgen_bench.report --portable
+uv run python -m studies.webgen_bench.component_contracts.report
 uv run python -m studies.public_library_transfer.source_diagnosis.report
 ```
 

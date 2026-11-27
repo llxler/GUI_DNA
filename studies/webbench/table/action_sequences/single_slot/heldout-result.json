@@ -1,0 +1,2504 @@
+{
+  "official": "be4f07d834ff124491be15202d5fd139aa3a46281aa747e3f255668adc457eec",
+  "cases": "3a08fc86c49a388ae6d1042c301ac8ff28cdfaf8d27dd5cba71c0fd4afa43954",
+  "controls": {
+    "reference": {
+      "columns": {
+        "passed": true,
+        "steps": [
+          {
+            "action": "insert",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "remove",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          }
+        ]
+      },
+      "editing": {
+        "passed": true,
+        "steps": [
+          {
+            "action": "select",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            }
+          },
+          {
+            "action": "enter",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": [
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          },
+          {
+            "action": "escape",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            }
+          },
+          {
+            "action": "move",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            }
+          }
+        ]
+      },
+      "restoration": {
+        "passed": true,
+        "steps": [
+          {
+            "action": "relocate",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "",
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "",
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "",
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "select-after-insert",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "",
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "",
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "",
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            }
+          },
+          {
+            "action": "vertical-move",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "",
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "",
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "",
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  1,
+                  2
+                ]
+              ],
+              "editing": []
+            }
+          }
+        ]
+      }
+    },
+    "starter": {
+      "columns": {
+        "passed": false,
+        "steps": [
+          {
+            "action": "browser",
+            "passed": false,
+            "error": "Locator.click: Timeout 1000ms exceeded."
+          }
+        ]
+      },
+      "editing": {
+        "passed": false,
+        "steps": [
+          {
+            "action": "select",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "enter",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "escape",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "move",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          }
+        ]
+      },
+      "restoration": {
+        "passed": false,
+        "steps": [
+          {
+            "action": "browser",
+            "passed": false,
+            "error": "Locator.click: Timeout 1000ms exceeded."
+          }
+        ]
+      }
+    }
+  },
+  "calibrated": {
+    "columns": true,
+    "editing": true,
+    "restoration": true
+  },
+  "rows": {
+    "direct": {
+      "columns": {
+        "status": "observed",
+        "candidate": {
+          "common/menu.js": "7dec63b82e0383646783332f939212b4624a903dc3b5ad5c47f36fe5130d3f37",
+          "index.css": "f46d3344abe2e1c8edb677be8f2047b3d323b6c315ab74b202faeb4a3b517857",
+          "index.html": "60dd4aa06a89fa0f6985c4f17a0e6c0923d1f0305ee2ebee32a7d7c9fbb906d7",
+          "index.js": "e4801611f19b47f36664929f10e01e9dbde8db66d732bd1b568384e5cea6a2ef"
+        },
+        "passed": false,
+        "steps": [
+          {
+            "action": "browser",
+            "passed": false,
+            "error": "Locator.click: Timeout 1000ms exceeded."
+          }
+        ]
+      },
+      "editing": {
+        "status": "observed",
+        "candidate": {
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "86c44a53ecac5b21ac108622e64f3dbf5ed304955bd89d32f9a417c58757784d",
+          "index.js": "4896e0ee69da7710afb1218e0eca48c62ac0bdda16bffdb918b65f6edd072c30"
+        },
+        "passed": false,
+        "steps": [
+          {
+            "action": "select",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "enter",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "escape",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "move",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          }
+        ]
+      },
+      "restoration": {
+        "status": "observed",
+        "candidate": {
+          "common/key.js": "130b5c56b9646cd39839aa2bae9bf102c51642e9f469ffd736d21963984c926b",
+          "common/menu.js": "9314346fb169033be06cd7c365af8b2f7866e796ef11d4a8ff449a2a19c55edd",
+          "common/table.js": "1f89ab5604a146cecd5ec5ab2b7d3d628d1ddda3f4da61e67d671e03e67908a6",
+          "index.css": "fe9e825c7e1878321a1d0e73086e4a9da779a54716025346598a0b0370ee7014",
+          "index.html": "7b711e8c8c1641ab4b1955146db9ed485aa356854a027278817117ea6f510061",
+          "index.js": "931afc52cb1945d6b3a458465f3dad1706bbf6db8229d9a5fca70ea504f016d9"
+        },
+        "passed": false,
+        "steps": [
+          {
+            "action": "browser",
+            "passed": false,
+            "error": "Locator.click: Timeout 1000ms exceeded."
+          }
+        ]
+      }
+    },
+    "new-a": {
+      "columns": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "13de55134eec74e6b74325c668c40edd79b5fd66b975b23bc47816bbeb74ad5e",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "b774513e332f07260164c14418a2fead5377d8473c74210badbbbbf2f34366df",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "61bc66a081520b940f7ae76f775026d8d2be0d240d5bcbaf3a308e0cca831364"
+        },
+        "passed": true,
+        "steps": [
+          {
+            "action": "insert",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "New Column",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "New Column",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "New Column",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "remove",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          }
+        ]
+      },
+      "editing": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "a29e37df8fc924cda973f4e8b8dd740fb958a073521ac3a75bc416e3de7cef17",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "13de55134eec74e6b74325c668c40edd79b5fd66b975b23bc47816bbeb74ad5e",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "b774513e332f07260164c14418a2fead5377d8473c74210badbbbbf2f34366df",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "eed229db7e77962720b58a545762f7c47620c35c9236ad16888dc64733a16c3c"
+        },
+        "passed": false,
+        "steps": [
+          {
+            "action": "select",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": [
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          },
+          {
+            "action": "enter",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            }
+          },
+          {
+            "action": "escape",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "move",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  1,
+                  0
+                ]
+              ],
+              "editing": []
+            }
+          }
+        ]
+      },
+      "restoration": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "a29e37df8fc924cda973f4e8b8dd740fb958a073521ac3a75bc416e3de7cef17",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "13de55134eec74e6b74325c668c40edd79b5fd66b975b23bc47816bbeb74ad5e",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "b774513e332f07260164c14418a2fead5377d8473c74210badbbbbf2f34366df",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "eed229db7e77962720b58a545762f7c47620c35c9236ad16888dc64733a16c3c"
+        },
+        "passed": false,
+        "steps": [
+          {
+            "action": "relocate",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "New Column",
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "New Column",
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "New Column",
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "select-after-insert",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "New Column",
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "New Column",
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "New Column",
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": [
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          },
+          {
+            "action": "vertical-move",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "New Column",
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "New Column",
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "New Column",
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": [
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "new-b": {
+      "columns": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "b9dbe0293f657624de924e253cac37e6d329569ccbbc906128a9dee397c021a5",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "b70d174aa5d247aa2a4baaebae0dc1a03743ee05fd853d8012cb87267ea1f04e",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "61bc66a081520b940f7ae76f775026d8d2be0d240d5bcbaf3a308e0cca831364"
+        },
+        "passed": true,
+        "steps": [
+          {
+            "action": "insert",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "New Column",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "New Column",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "New Column",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "remove",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          }
+        ]
+      },
+      "editing": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "ad96a0c11a159cc420338e29077b59c769f4014e9c50e8de2e8dfab806b4f289",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "b9dbe0293f657624de924e253cac37e6d329569ccbbc906128a9dee397c021a5",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "b70d174aa5d247aa2a4baaebae0dc1a03743ee05fd853d8012cb87267ea1f04e",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "eed229db7e77962720b58a545762f7c47620c35c9236ad16888dc64733a16c3c"
+        },
+        "passed": false,
+        "steps": [
+          {
+            "action": "select",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": [
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          },
+          {
+            "action": "enter",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            }
+          },
+          {
+            "action": "escape",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "move",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  1,
+                  0
+                ]
+              ],
+              "editing": []
+            }
+          }
+        ]
+      },
+      "restoration": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "ad96a0c11a159cc420338e29077b59c769f4014e9c50e8de2e8dfab806b4f289",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "b9dbe0293f657624de924e253cac37e6d329569ccbbc906128a9dee397c021a5",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "b70d174aa5d247aa2a4baaebae0dc1a03743ee05fd853d8012cb87267ea1f04e",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "eed229db7e77962720b58a545762f7c47620c35c9236ad16888dc64733a16c3c"
+        },
+        "passed": false,
+        "steps": [
+          {
+            "action": "relocate",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "New Column",
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "New Column",
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "New Column",
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "select-after-insert",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "New Column",
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "New Column",
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "New Column",
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": [
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          },
+          {
+            "action": "vertical-move",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "New Column",
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "New Column",
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "New Column",
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": [
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "fixed-a": {
+      "columns": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "a29e37df8fc924cda973f4e8b8dd740fb958a073521ac3a75bc416e3de7cef17",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "13de55134eec74e6b74325c668c40edd79b5fd66b975b23bc47816bbeb74ad5e",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "b774513e332f07260164c14418a2fead5377d8473c74210badbbbbf2f34366df",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "eed229db7e77962720b58a545762f7c47620c35c9236ad16888dc64733a16c3c"
+        },
+        "passed": true,
+        "steps": [
+          {
+            "action": "insert",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "New Column",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "New Column",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "New Column",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "remove",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          }
+        ]
+      },
+      "editing": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "a29e37df8fc924cda973f4e8b8dd740fb958a073521ac3a75bc416e3de7cef17",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "13de55134eec74e6b74325c668c40edd79b5fd66b975b23bc47816bbeb74ad5e",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "b774513e332f07260164c14418a2fead5377d8473c74210badbbbbf2f34366df",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "eed229db7e77962720b58a545762f7c47620c35c9236ad16888dc64733a16c3c"
+        },
+        "passed": false,
+        "steps": [
+          {
+            "action": "select",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": [
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          },
+          {
+            "action": "enter",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            }
+          },
+          {
+            "action": "escape",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "move",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  1,
+                  0
+                ]
+              ],
+              "editing": []
+            }
+          }
+        ]
+      },
+      "restoration": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "a29e37df8fc924cda973f4e8b8dd740fb958a073521ac3a75bc416e3de7cef17",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "13de55134eec74e6b74325c668c40edd79b5fd66b975b23bc47816bbeb74ad5e",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "b774513e332f07260164c14418a2fead5377d8473c74210badbbbbf2f34366df",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "eed229db7e77962720b58a545762f7c47620c35c9236ad16888dc64733a16c3c"
+        },
+        "passed": false,
+        "steps": [
+          {
+            "action": "relocate",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "New Column",
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "New Column",
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "New Column",
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "select-after-insert",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "New Column",
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "New Column",
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "New Column",
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": [
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          },
+          {
+            "action": "vertical-move",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "New Column",
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "New Column",
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "New Column",
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": [
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "fixed-b": {
+      "columns": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "ad96a0c11a159cc420338e29077b59c769f4014e9c50e8de2e8dfab806b4f289",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "b9dbe0293f657624de924e253cac37e6d329569ccbbc906128a9dee397c021a5",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "b70d174aa5d247aa2a4baaebae0dc1a03743ee05fd853d8012cb87267ea1f04e",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "eed229db7e77962720b58a545762f7c47620c35c9236ad16888dc64733a16c3c"
+        },
+        "passed": true,
+        "steps": [
+          {
+            "action": "insert",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "New Column",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "New Column",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "New Column",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "remove",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          }
+        ]
+      },
+      "editing": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "ad96a0c11a159cc420338e29077b59c769f4014e9c50e8de2e8dfab806b4f289",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "b9dbe0293f657624de924e253cac37e6d329569ccbbc906128a9dee397c021a5",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "b70d174aa5d247aa2a4baaebae0dc1a03743ee05fd853d8012cb87267ea1f04e",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "eed229db7e77962720b58a545762f7c47620c35c9236ad16888dc64733a16c3c"
+        },
+        "passed": false,
+        "steps": [
+          {
+            "action": "select",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": [
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          },
+          {
+            "action": "enter",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            }
+          },
+          {
+            "action": "escape",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "move",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  1,
+                  0
+                ]
+              ],
+              "editing": []
+            }
+          }
+        ]
+      },
+      "restoration": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "ad96a0c11a159cc420338e29077b59c769f4014e9c50e8de2e8dfab806b4f289",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "b9dbe0293f657624de924e253cac37e6d329569ccbbc906128a9dee397c021a5",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "b70d174aa5d247aa2a4baaebae0dc1a03743ee05fd853d8012cb87267ea1f04e",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "eed229db7e77962720b58a545762f7c47620c35c9236ad16888dc64733a16c3c"
+        },
+        "passed": false,
+        "steps": [
+          {
+            "action": "relocate",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "New Column",
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "New Column",
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "New Column",
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "select-after-insert",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "New Column",
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "New Column",
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "New Column",
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": [
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          },
+          {
+            "action": "vertical-move",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "New Column",
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "New Column",
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "New Column",
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": [
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "old-fixed-a": {
+      "columns": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "c672c16de5a1ca171243f7807e98ea2283eec1b8617b835a00ae8fb42a05f84a",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "95dfd5d71d10cd9daabebe5a36a1a979562adba13132d5867209a32b502a647a",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "aafdbcaef2ccbaf8bcce04a1959d30062d929e8c265493cdd2cdd0635d491277",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "eed229db7e77962720b58a545762f7c47620c35c9236ad16888dc64733a16c3c"
+        },
+        "passed": false,
+        "steps": [
+          {
+            "action": "insert",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "New Header Cell"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          }
+        ]
+      },
+      "editing": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "c672c16de5a1ca171243f7807e98ea2283eec1b8617b835a00ae8fb42a05f84a",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "95dfd5d71d10cd9daabebe5a36a1a979562adba13132d5867209a32b502a647a",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "aafdbcaef2ccbaf8bcce04a1959d30062d929e8c265493cdd2cdd0635d491277",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "eed229db7e77962720b58a545762f7c47620c35c9236ad16888dc64733a16c3c"
+        },
+        "passed": false,
+        "steps": [
+          {
+            "action": "select",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": [
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          },
+          {
+            "action": "enter",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": [
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          },
+          {
+            "action": "escape",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "move",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          }
+        ]
+      },
+      "restoration": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "c672c16de5a1ca171243f7807e98ea2283eec1b8617b835a00ae8fb42a05f84a",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "95dfd5d71d10cd9daabebe5a36a1a979562adba13132d5867209a32b502a647a",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "aafdbcaef2ccbaf8bcce04a1959d30062d929e8c265493cdd2cdd0635d491277",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "eed229db7e77962720b58a545762f7c47620c35c9236ad16888dc64733a16c3c"
+        },
+        "passed": false,
+        "steps": [
+          {
+            "action": "relocate",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "New Header Cell"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          }
+        ]
+      }
+    },
+    "old-fixed-b": {
+      "columns": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "2f1be64b8ea1df263739465ae91f882f204fbb6c11baf81530b746c7d1cf3d75",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "71a80d684d663dd978ef1bf24e96106bdd6bc866bd8e3c11d640093c7417bfcf",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "957c9613422828d969ffc81a88b4f275a79032d8ddaf7a41a6c4c7dea0c8ede6",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "eed229db7e77962720b58a545762f7c47620c35c9236ad16888dc64733a16c3c"
+        },
+        "passed": false,
+        "steps": [
+          {
+            "action": "insert",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "New Header Cell"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          }
+        ]
+      },
+      "editing": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "2f1be64b8ea1df263739465ae91f882f204fbb6c11baf81530b746c7d1cf3d75",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "71a80d684d663dd978ef1bf24e96106bdd6bc866bd8e3c11d640093c7417bfcf",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "957c9613422828d969ffc81a88b4f275a79032d8ddaf7a41a6c4c7dea0c8ede6",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "eed229db7e77962720b58a545762f7c47620c35c9236ad16888dc64733a16c3c"
+        },
+        "passed": false,
+        "steps": [
+          {
+            "action": "select",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            }
+          },
+          {
+            "action": "enter",
+            "passed": true,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": [
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          },
+          {
+            "action": "escape",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "move",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          }
+        ]
+      },
+      "restoration": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "2f1be64b8ea1df263739465ae91f882f204fbb6c11baf81530b746c7d1cf3d75",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "71a80d684d663dd978ef1bf24e96106bdd6bc866bd8e3c11d640093c7417bfcf",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "957c9613422828d969ffc81a88b4f275a79032d8ddaf7a41a6c4c7dea0c8ede6",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "eed229db7e77962720b58a545762f7c47620c35c9236ad16888dc64733a16c3c"
+        },
+        "passed": false,
+        "steps": [
+          {
+            "action": "relocate",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "New Header Cell"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          }
+        ]
+      }
+    },
+    "empty": {
+      "columns": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "ac31f7816cc888285abe94dc1826262e0364f49d2d8adfbbafb386cf58a7e16d"
+        },
+        "passed": false,
+        "steps": [
+          {
+            "action": "browser",
+            "passed": false,
+            "error": "Locator.click: Timeout 1000ms exceeded."
+          }
+        ]
+      },
+      "editing": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "ac31f7816cc888285abe94dc1826262e0364f49d2d8adfbbafb386cf58a7e16d"
+        },
+        "passed": false,
+        "steps": [
+          {
+            "action": "select",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "enter",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "escape",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          },
+          {
+            "action": "move",
+            "passed": false,
+            "state": {
+              "rows": [
+                [
+                  "cell 1 1",
+                  "cell 1 2",
+                  "cell 1 3"
+                ],
+                [
+                  "cell 2 1",
+                  "cell 2 2",
+                  "cell 2 3"
+                ],
+                [
+                  "cell 3 1",
+                  "cell 3 2",
+                  "cell 3 3"
+                ]
+              ],
+              "selected": [],
+              "editing": []
+            }
+          }
+        ]
+      },
+      "restoration": {
+        "status": "observed",
+        "candidate": {
+          "common/drag.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/key.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/layout.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/menu.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/mouse.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "common/table.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "index.css": "448500a69a549ae6820706ed55f906cc3adc1b5d9a1baf0f36062c2f951e82e1",
+          "index.html": "4f92e4213482a84ddb69db10924b59c441d3c5e4989712e69f35dceed17781fc",
+          "index.js": "ac31f7816cc888285abe94dc1826262e0364f49d2d8adfbbafb386cf58a7e16d"
+        },
+        "passed": false,
+        "steps": [
+          {
+            "action": "browser",
+            "passed": false,
+            "error": "Locator.click: Timeout 1000ms exceeded."
+          }
+        ]
+      }
+    }
+  }
+}

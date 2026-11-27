@@ -15,7 +15,7 @@
 | 范围 | 研究入口 |
 |---|---|
 | Web-Bench 的部署与建库模型 | [历史部署模型](deployments/historical/README.md) · [开放权重建库](deployments/open_weights/PROTOCOL.md) |
-| TodoMVC 与 WebApp1K-Duo | [基准、原模型复测与公开单功能检查](other_benchmarks/README.md) |
+| TodoMVC 与 WebApp1K-Duo | [基准、原模型复测与公开单功能检查](other_benchmarks/README.md) · [TodoMVC 小模型状态函数与公开禁用依据](compact_todomvc/state_examples/EVIDENCE.md) |
 | 固定方案与提示 | [表格完整配置空间](diagnostics/table_configurations/README.md) · [同模型提示对照](diagnostics/prompt_guidance/PROTOCOL.md) |
 | 准备与交付 | [编辑器留出目标](diagnostics/editor_holdout/PROTOCOL.md) · [无库文件交付](diagnostics/delivery/PROTOCOL.md) · [布尔域规范化](diagnostics/boolean_domains/PROTOCOL.md) |
 

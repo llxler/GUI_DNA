@@ -5,7 +5,6 @@ import json
 from pathlib import Path
 
 from studies import paper_performance as paper
-from studies.webgen_bench import report as functional
 from studies.study_io import ROOT, read
 
 MATRIX = Path("studies/results/paper-performance-matrix.json")
@@ -16,6 +15,7 @@ DATASETS = {
     "todomvc": "todomvc",
     "webapp1k-duo": "duo",
     "webgen-bench": "webgen-bench",
+    "webgen-bench/heldout": "webgen-heldout",
 }
 MODEL_NAMES = paper.BACKBONES | paper.components.LABELS
 # Some rows combine multiple registered runs. Point readers to the actual join
@@ -28,7 +28,9 @@ ASSEMBLERS = {
     "extended_targets": paper.components,
     "component_followup": paper.components,
     "self_recovery": paper.recovery,
-    "webgen_functional": functional,
+    "webgen_functional": paper.validation,
+    "webgen_holdout": paper.validation,
+    "state_examples": paper.validation,
 }
 
 
@@ -49,16 +51,18 @@ def find_cell(matrix, dataset, model, method):
     }
     if status == "measured":
         cell.update(score=row["passed"][method], denominator=row["n"],
-                    unit="functional points" if project == "webgen-bench" else "current-task passes")
+                    unit="functional points" if project in ("webgen-bench","webgen-heldout") else "current-task passes")
 
     receipt = row.get("implementation_sources", {}).get(method)
     if path == ("form_visible_targets",):
         receipt = row.get("schema_source", row["source"]) if method == "gpt5-library" else row["source"]
-    if project == "webgen-bench":
-        primary_stage = read(functional.RESULT)["primary_stage"]
-        directory = functional.STAGES[primary_stage]
-        receipt = str((directory / "judgments.json").relative_to(ROOT))
-        cell["candidates"] = str((directory / "candidates.json").relative_to(ROOT))
+    if project in ("webgen-bench", "webgen-heldout"):
+        cell["candidates"] = row["candidate_sources"][method]
+        cell["sites"] = row["sites"]
+        runnable = row["jointly_runnable"]
+        if method in runnable["points"]:
+            cell["startup_failures"] = row["start_failures"][method]
+            cell["jointly_runnable"] = {"score": runnable["points"][method], "denominator": runnable["n"]}
     if receipt:
         cell["method_record"] = receipt
     if row.get("additional_targets"):
@@ -67,7 +71,7 @@ def find_cell(matrix, dataset, model, method):
         cell["row_source"] = row["source"]
     if dataset.startswith("web-bench/"):
         guide = Path("studies/webbench/README.md")
-    elif project == "webgen-bench":
+    elif project in ("webgen-bench", "webgen-heldout"):
         guide = WEBGEN / "README.md"
     else:
         guide = TRANSFER / "README.md"

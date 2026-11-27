@@ -1,5 +1,7 @@
 # Web-Bench 分项目研究
 
+11 月 27 日的表格复验分别检验[两次从零建库后的连续操作](table/action_sequences/PROTOCOL.md)和[同一配置下修改选择与编辑函数](table/action_sequences/selection_mode/PROTOCOL.md)。
+
 11 月 26 日的完整项目补测包括[文件管理器](file_explorer/document_library/PROTOCOL.md)和[计算器](calculator/key_groups/PROTOCOL.md)。旧表格的低分核查见[选区绑定的独立建库](table/selection_binding/replication/PROTOCOL.md)与[菜单事件传播](table/menu_propagation/PROTOCOL.md)。[问卷整页操作](form/survey_workflow/PROTOCOL.md)与[SVG 公开数据变化](typed_components/svg_public_geometry/PROTOCOL.md)均在官方评分前冻结候选。
 
 11 月 25 日的主表复验分为[固定原库改配置](compact_planning/PROTOCOL.md)、[原模型实现类型化组件](typed_components/PROTOCOL.md)及[无回执目标补传](transport_completion/PROTOCOL.md)。原题上的方法变化和扩展到其他目标后的分母分别核对。

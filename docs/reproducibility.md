@@ -183,3 +183,9 @@ Duo 初批两模型与 Qwen 精简契约的另外两份库，分别用 `uv run p
 同线程中页面服务与浏览器共用一个并发名额，可用 `uv run python -m studies.browser_worker studies.webbench.calculator.key_groups.run score` 在封存后重放。独立种子表格若运行模型 JavaScript 造成公开页面卡死，先在两个受时限保护的独立浏览器中重放；已超时的交互保留状态与收据。[重复实验的执行器](../studies/webbench/table/selection_binding/replication/bounded.py)
 
 11 月 26 日的总账保留分槽决策的三批回执。先在旧的已结算响应中逐字比较请求体、校验响应哈希，再补真正缺失的选择；重传不会释放原未知预留。逐格索引同时记录原截图的目标 ID、当时的通过数、最新协议在这些原目标上的通过数、以及扩充后的实际分母。主表生成时会逐格核对。[汇总程序](../studies/library_capabilities.py) · [最后两个限流位置](../studies/public_library_transfer/compact_todomvc/slot_choices/last_delivery.md)
+
+### 核对 11 月 27 日的跨站与组件验证
+
+在仓库根目录运行 `uv run python -m studies.webgen_bench.component_contracts.report`，可从发布的逐项记录复算六站、三站、TodoMVC 两次建库及表格序列诊断。有原始账本的本地环境可加 `--ledgers` 复核各模型建库、选配置、写整页与评判支出。查询主表用 `uv run python -m studies.lookup webgen-bench/heldout "Gemma 3 12B" Self`；把数据集换成 `webgen-bench` 即查六站开发结果。两次查询给出各自的站点、分母和逐项回执。[阶段索引](../studies/webgen_bench/component_contracts/README.md)
+
+本机保留原始生成及浏览器时运行 `uv run python -m studies.webgen_bench.heldout_transfer.incomplete_html.inspect`，可离线核对两站首答和重试的可见按钮、文本和内联 JavaScript 语法。表格新处理函数的回放记录同时给出与旧配置相同的逐题对照以及两段独立顺序的每步状态。[HTML 浏览器诊断](../studies/webgen_bench/heldout_transfer/incomplete_html/inspect.py) · [表格功能验证](../studies/webbench/table/action_sequences/selection_mode/validation.json)

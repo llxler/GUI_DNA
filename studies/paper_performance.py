@@ -5,6 +5,7 @@ from collections import defaultdict
 from studies.study_io import ROOT, read
 from studies.webgen_bench import report as functional
 from studies.public_library_transfer.source_diagnosis import report as sources
+from studies.webgen_bench.component_contracts import report as validation
 from studies.public_library_transfer.self_refinement.suite_recovery import paper as recovery
 from studies.webbench.form.flash_self_build import paper as flash_form
 from studies import paper_component_followup as components, paper_library_capabilities as capabilities
@@ -180,6 +181,7 @@ def performance_matrix(data, replay, trials, today, batches=None):
                 'fixed_passes':confirm['arms']['fixed-a']['passes'],
             }
         sources.attach(matrix)
+        validation.attach(matrix)
     return matrix
 
 
@@ -189,12 +191,12 @@ def cell(group, method):
         return ""
     if method not in counts:
         return r"\textcolor[gray]{0.55}{--}"
-    value = f"{counts[method]}/{group['n']}"
+    value = f"{counts[method]:g}/{group['n']}"
     marker = r"$^{\ddagger}$" if method == "self" and group.get("rep") == "a" else ""
     stage = group.get("markers", {}).get(method)
     if stage:
         marker = {"menu": r"$^{*}$", "visible": r"$^{*}$", "rebuild": r"$^{\ddagger}$",
-                  "flash-visible": r"$^{\dagger}$", "flash-schema": r"$^{\dagger *}$", "profiles": r"$^{*}$", "handlers": r"\textsuperscript{\S}", "typed": r"\textsuperscript{\S}", "events": r"\textsuperscript{\S}", "blind": "", "donor": r"$^{t}$", "survey": r"$^{s}$", "source-plans": r"$^{p}$", "self-sequences": r"$^{u}$", "visible-choices": r"$^{v}$", "core-profile": r"$^{vc}$"}[stage]
+                  "flash-visible": r"$^{\dagger}$", "flash-schema": r"$^{\dagger *}$", "profiles": r"$^{*}$", "handlers": r"\textsuperscript{\S}", "typed": r"\textsuperscript{\S}", "events": r"\textsuperscript{\S}", "blind": "", "donor": r"$^{t}$", "survey": r"$^{s}$", "source-plans": r"$^{p}$", "self-sequences": r"$^{u}$", "visible-choices": r"$^{v}$", "core-profile": r"$^{vc}$", "quoted-exclusions": r"$^{e}$"}[stage]
     if min(counts.values()) < counts[method] == max(counts.values()):
         return r"\textbf{" + value + "}" + marker
     return value + marker
@@ -221,7 +223,10 @@ def table_record(model, project):
     """Return the matrix key path and the record used to render this generator's row."""
     if project == "webgen-bench":
         return ("webgen_functional",), model.get("webgen_functional", {})
+    if project == "webgen-heldout":
+        return ("webgen_holdout",), model.get("webgen_holdout", {})
     ordered = (
+        ("state_examples", project),
         ("source_diagnosis", project),
         ("table_state_transitions",) if project == "table" else (),
         ("library_capabilities", project),
@@ -268,12 +273,12 @@ def table_models(matrix, project):
         return components.TODO_ROSTER
     if project == "duo":
         return [m for m in BACKBONES if current_group(matrix[m], project)]
-    if project == "webgen-bench":
-        return [m for m, entry in matrix.items() if "webgen_functional" in entry]
+    if project in ("webgen-bench", "webgen-heldout"):
+        return [m for m, entry in matrix.items() if table_record(entry, project)[1]]
     raise KeyError(project)
 
 
-def comparison_panel(title, projects, matrix):
+def comparison_panel(title, projects, matrix, models=None):
     methods = list(METHODS.values())
     column_count = 1 + len(projects) * len(methods)
     headings = []
@@ -292,8 +297,9 @@ def comparison_panel(title, projects, matrix):
         " & ".join(["Target generator", *(methods * len(projects))]) + r" \\",
         r"\midrule",
     ]
-    models = (table_models(matrix, "table") if projects == WEB_PROJECTS else
-              [m for m in BACKBONES if any(current_group(matrix[m], p) for p in projects)])
+    if models is None:
+        models = (table_models(matrix, "table") if projects == WEB_PROJECTS else
+                  [m for m in BACKBONES if any(current_group(matrix[m], p) for p in projects)])
     for model in models:
         cells = [value for project in projects for value in project_cells(matrix[model], project)]
         lines.append(" & ".join([BACKBONES[model], *cells]) + r" \\")
@@ -355,32 +361,13 @@ def planned_panel():
 
 
 def functional_panel(matrix):
-    rows = [(BACKBONES[m], table_record(matrix[m], "webgen-bench")[1])
-            for m in table_models(matrix, "webgen-bench")]
-    if not rows:
+    models = table_models(matrix, "webgen-bench")
+    if not models:
         return planned_panel()
-    lines = [
-        r"\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}",
-        r"\toprule\rowcolor[gray]{0.94}\multicolumn{5}{l}{\textbf{C. WebGen-Bench} (six websites, alternate vision judge)} \\",
-        " & ".join(["Target generator", *METHODS.values()]) + r" \\",
-        r"\midrule",
-    ]
-    for name, group in rows:
-        counts = {a:format(v,'g') for a,v in group['passed'].items()}
-        cells = []
-        for method in METHODS:
-            if method in group['excluded_build_arms']:
-                cells.append("")
-            elif method not in counts:
-                cells.append(r"\textcolor[gray]{0.55}{--}")
-            else:
-                value = counts[method]+'/'+str(group['n'])
-                scores = group['passed'].values()
-                if min(scores) < group['passed'][method] == max(scores):
-                    value = r"\textbf{" + value + "}"
-                cells.append(value)
-        lines.append(" & ".join([name, *cells]) + r" \\")
-    return [*lines, r"\bottomrule\end{tabular*}\par"]
+    projects = {"webgen-bench": "Six development sites"}
+    if any("webgen_holdout" in matrix[m] for m in models):
+        projects["webgen-heldout"] = "Three held-out sites"
+    return comparison_panel("C. WebGen-Bench (alternate vision judge)", projects, matrix, models)
 
 
 def render_matrix(matrix, followups=(), domain_rows=()):
@@ -442,7 +429,7 @@ def render_matrix(matrix, followups=(), domain_rows=()):
         r"Self uses the target model to build and configure its own library. "
         + r"Each Duo domain contributes five pairs. "
         + (r"$^t$ GPT-5 components from other public feature pairs. $^s$ Matched Direct and a shared questionnaire plan across libraries. " if "library_capabilities" in matrix[components.FLASH] else "")
-        + (r"$^p$ Revised configuration of a frozen library. $^u$ Public workflow checks and same-model repair. $^v$ Extra reasoning disabled. $^c$ Profiles satisfy shared public requirements. " if "source_diagnosis" in matrix[components.QWEN9] else "")
+        + (r"$^p$ Revised configuration of a frozen library. $^u$ Public workflow checks and same-model repair. $^v$ Extra reasoning disabled. $^c$ Profiles satisfy shared public requirements. $^e$ Disabling a feature requires a quote from the brief. " if "source_diagnosis" in matrix[components.QWEN9] else "")
         + (r"D uses protocol-specific Direct. Variants reuse libraries. "
            r"Fixed replays an example, pair, defaults, or all renderers. Relaxed files, DOM tokens and SVG C/D share 20 recovered direct replies. Flash file checks include six retransmissions. " if followups else "")
         + (r"In E, fixed A/B retain/swap button order or enable/disable optional events. " if domain_rows else "")

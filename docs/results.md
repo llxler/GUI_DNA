@@ -2659,3 +2659,40 @@ Qwen 的 GPT-5 库在第 3 个待办目标上只换了取消编辑函数与对�
 - DeepSeek V4 Flash 的 Direct、人工和 GPT-5 为 7/20、10/20、10/20。两份 Self 的逐题／固定全开依次为 2/20／2/20、6/20／8/20。
 
 本轮 5,006 笔计量调用，已结算 $3.076773。60 笔未知占用按全额保留，总敞口 $7.572918，低于授权的 20 美元。旧库建造费用及人工 SDK 开发时间另列。补充研究的范围是同一批开发目标，各方法更换协议的条件、原始负结果与独立建库失败照录。[只读复算入口](../studies/public_library_transfer/source_diagnosis/report.py)
+
+## 56. 行为库在新站点与连续操作上的表现
+
+WebGen-Bench 开发集沿用原六站，三个类别各两站。留出集取同一哈希顺序中各类的第三站（000034、000037、000085）。建库时只使用开发材料，留出站各自的公开需求到部署时才给目标模型。下表为 Qwen3-VL-30B 的功能分，完整操作 1 分，部分 0.5 分。GPT-5 共享建库返回 403，作者指定的 32B 评判器返回 404。[站点与协议](../studies/webgen_bench/component_contracts/README.md)
+
+| 目标模型 | 六站 Direct | 六站 Human | 六站 Self | 三站 Direct | 三站 Human | 三站 Self |
+|---|---:|---:|---:|---:|---:|---:|
+| Gemma 3 12B | 13/43 | 19/43 | 16.5/43 | 6.5/21 | 8.5/21 | 5.5/21 |
+| Qwen3.5-9B | 11.5/43 | 24.5/43 | 28.5/43 | 6.5/21 | 8.5/21 | 10.5/21 |
+| DeepSeek V4 Flash | 35.5/43 | 21/43 | 29/43 | 13.5/21 | 9.5/21 | 10.5/21 |
+
+- Gemma 原库和 Qwen 原库均只通过起始页检查。Gemma 在局部源码编辑中修正标签数组引用与初次挂载。Qwen 先修通标签和记录，再用自己渲染的子组件填充表单、打开对话框，将提交消息放进独立可见的元素。两库均通过原五项公开检查；相同宿主把新函数替换为空后，Gemma 过 0/5，Qwen 过 3/5。前期运行还发现独立探针把真实宿主支持的 DocumentFragment 拒之门外；离线校正只恢复了 Qwen 的复选框，仍不足以让库准入。[Gemma 两次局部修改](../studies/webgen_bench/component_contracts/typed_inputs/edit-candidates.json) · [Qwen 公开浏览器观察](../studies/webgen_bench/component_contracts/typed_inputs/visibility-candidates.json)
+- 在六站共同成功启动的 34 项上，Qwen 的 Direct、Human、Self 分别为 11.5、21、22.5。留出站 000085 的两次 Direct 回复都用满 7,500 个输出 token，缺少结束标签，生成器没有交付完整页面，七项按原接收规则计零，Self 得 4 分。另外两站合计 14 项，三组均为 6.5 分，逐站得分不同。Gemma 在新站的 Self 低于 Direct。Flash 跨站沿用原库；加入 Flash 前已观察到两个小模型的 Direct、Human 分数，三个站点早已锁定。[逐站、共同启动及来源](../studies/results/component-validation-20261127.json)
+
+三个留出站各自的 Self 减 Direct 功能分如下。Qwen 在两个都能启动的站点上一升一降。Flash 在数据管理站得到 1 分优势，在另外两站各少 2 分。
+
+| 站点（上游类别） | 操作数 | Gemma 3 12B | Qwen3.5-9B | DeepSeek V4 Flash |
+|---|---:|---:|---:|---:|
+| 000034 · 内容展示 | 6 | −1 | −1.5 | −2 |
+| 000037 · 用户交互 | 8 | −0.5 | +1.5 | −2 |
+| 000085 · 数据管理 | 7 | +0.5 | +4 | +1 |
+
+**TodoMVC，两个模型各两份既有实现。** Gemma 4B 首库修正初始化、删除和切换，第二库修正删除和切换。两库的公开动作分别从 11/23、12/23 增至 16/23、15/23；八个原任务均从 1/8 增至 3/8，两份全开页均过相同三题。Ministral 3B 两库公开动作均从 20/23 到 22/23，修函数后的逐题选择各过 3/8，固定全开均过 6/8。相同新代码配上修复前的配置，Gemma 为 2/8、2/8，Ministral 为 2/8、1/8。[两个独立库、原配置和事件信封对照](../studies/public_library_transfer/compact_todomvc/state_examples/result.json)
+
+固定代码后，直接要求“仅禁用需求明确禁止的能力”，Gemma 的所有正式输出都在数组前多出一个右方括号，两库计 0/8；Ministral 为 3/8、4/8。最终协议要求模型提供需求原文，分别接受合格提案、保留缺乏依据的默认和记录格式无效。首库 Gemma、Ministral 各为 3/8，第二库为 3/8、2/8。Gemma 首库仅三份配置编译；Ministral 常将“编辑状态不得持久化”错误套用于禁用编辑。四库在另外两条允许/禁止单项切换的相反指令上都实际产生了对应行为，两条不进入基准分母。这几轮由原低分和固定页结果触发，属于开发复验。[无引用结果](../studies/public_library_transfer/compact_todomvc/state_examples/default-result.json) · [最终决策与逐题结果](../studies/public_library_transfer/compact_todomvc/state_examples/evidence-result.json)
+
+**Web-Bench 表格。** 两个新种子各从空目录建库，原 20 个任务各过 3/20，分别与各自全开页通过相同的第 1、2、4 项；同模型 Direct 和空宿主均为 0/20。另行预设的三段连续操作均由上游最终实现通过、空起始页失败。两个新库都能在另一列插入且删除列，旧两库固定页在插入时就失败。两库的单击与编辑键函数逐字相同。上游页面单击单元格时只选中它，Enter 才进入编辑，Escape 退出后仍保留选区。两份新库在单击时已经将单元格置为可编辑，Enter 随即退出编辑，Escape 又把选区清空。插列后都能找回原单元格，按向上键后 A 清空选区、B 停在原格。第一次流程因父子进程重复占用浏览器名额，在无正式成绩时中止；保留原账本，只复用已结算且请求完全一致的初始函数。[四个函数的修复前后指纹](../studies/webbench/table/action_sequences/selection_mode/function-hashes.json) · [三段流程、正负对照与各步状态](../studies/webbench/table/action_sequences/single_slot/heldout-result.json) · [新库正式结果](../studies/webbench/table/action_sequences/single_slot/result.json)
+
+固定原来 40 份逐题配置和两份全开配置，让同一 Qwen 各修改单击、编辑键、选区和导航四个函数。原函数重编逐页核对哈希。两库各由 9 项公开检查通过增至 13 项；两份修订库均能在两个不同单元格连续进入编辑和退出，原库均失败。预留四方向闭环在两份修订库处都先败于 ArrowUp。上游正例两段均通过，空起始页两段均失败。换过函数后逐题与固定页的官方成绩仍全部是 3/20，仍为同三题。运行器最初把无法点到“删除列”菜单的真实超时当作基础设施中断；核对已结算的八份请求和回答后在新目录离线完成同批评分。[原配置回放](../studies/webbench/table/action_sequences/selection_mode/result.json) · [预留两段逐步状态](../studies/webbench/table/action_sequences/selection_mode/validation.json)
+
+**从零页面的接收条件。** Qwen 的两个未交付站分别影响开发集 9 项和留出集 7 项。两站的首答和格式重试四次都在 7,500 token 截断。将四份回复从文档开头原样交给 Chromium，开发站两份各显示一个按钮，留出站两份各显示六个按钮；每份唯一的内联脚本都不能通过 JavaScript 语法解析。可见按钮数量只描述页面渲染。[浏览器记录](../studies/webgen_bench/heldout_transfer/incomplete_html/browser.json) · [各次交付回执与页面指纹](../studies/webgen_bench/heldout_transfer/incomplete_html/candidates.json)
+
+补充的 72B 独立复评按每站预选一项。开发六站上新增的两款 Self 有 8/12 个可运行位置取得双判，2 个等级一致，二判较高、较低各 4、2 个。留出三站有 20/26 个可运行位置取得双判，11 个一致，二判较高、较低各 6、3 个。一份不完整的留出站 Direct 页面没有送入严格协议的独立复评。模型通过工作与失效开关校准，双动作只完成其一的校准页判为部分完成。原六站旧页面的 15/32 一致度另列。[逐项独立判决](../studies/webgen_bench/heldout_transfer/secondary-completion.json)
+
+按首次原始回复放宽完整 HTML 的接收条件。原判分批次仅余 $0.03003，未能发送图像；另登记 $0.50 上限复核全部 16 项。开发站原截断页有 9/9 项得到判决，合计 1.5 分；在这批共 43 项有结果的同题操作上，Direct 与 Self 分别是 13、28.5 分。留出站原截断页有 7/7 项得到判决，合计 1 分；在这批共 21 项有结果的同题操作上，Direct 与 Self 分别是 7.5、10.5 分。[逐操作判决](../studies/webgen_bench/heldout_transfer/incomplete_html/functional-confirmation.json) · [首次预算不足记录](../studies/webgen_bench/heldout_transfer/incomplete_html/judgments.json) · [路线与价格](../studies/webgen_bench/heldout_transfer/incomplete_html/transport.json)
+
+本轮账本共 3,133 笔计量请求，已结算 $2.446677，27 笔未结按全额预留后敞口 $5.913944。已结算中，网站建库和部署 $0.022460、网站评判 $2.406663、表格 $0.012987、TodoMVC $0.004567。网站自建库的本轮增量修改，Gemma 12B 与 Qwen 9B 各结算 $0.000611、$0.003206；Flash 原库复用。此前原库费用和未记录的人工工时在此小计之外。[按模型、阶段与用途的只读账本汇总](../studies/webgen_bench/component_contracts/accounting.json)
