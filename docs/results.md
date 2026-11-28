@@ -2824,3 +2824,29 @@ Gemma 的自建首个完整页把数字 3、6、9 分别标成减、乘、除，
 剩余未准入的库另用公共事件绑定重建。研究者把右键、菜单项激活、外部点击和单击单元格交给四个函数，模型编写菜单、命令、关闭和选区的实现。只在原设计负责菜单的模块启用时挂载。当模型调用设计中声明、实际页面却未提供的应用 API 时，原作者只使用真实 DOM 参数修订原函数。当操作已经成功却有浏览器异常时，以登记顺序检查同一模型四个新处理函数的子集。保留全部既有通过项且无异常的首个组合进入正式评估。Mistral Small 3.2 用完全相同的选择，采用全部新增处理函数的对照过 1/20，改后过 1/20；对照与筛选后的固定页各过 2/20、2/20。Mistral Small 3.2 第 5 个受检组合关闭 select，单击选格由原库继续完成。未额外接线的同配置原库过 1/20，固定原库为 1/20。Qwen3-Coder-30B 的 16 个受检组合均未通过。[四函数与同配置复算](../studies/webbench/table/event_hooks/result.json) · [真实 DOM 参数](../studies/webbench/table/event_hooks/dom_contract/result.json) · [同作者处理函数的子集对照](../studies/webbench/table/event_hooks/handler_selection/result.json)
 
 本轮新增 808 笔调用，已结算 $0.181140，含 6 笔未结预留的最高支出为 $0.365682。与本轮之前的记录合计，已结算 $7.902216，最高支出 $11.085610，低于 $20 上限。逐模型建库、部署和历史建库费用单独保存。[账本摘要](../studies/results/library-rebuild-costs-20261128.json)
+
+<a id="duo-verified-features"></a>
+## 60. WebApp1K-Duo 的组件覆盖、业务绑定与新组合
+
+按每款模型原来的题号统计。一道题同时测试两个功能，每个功能都有成功和失败两例，四例全过才计一题。前两行只含五个博客组合，后四行另含五个任务管理组合。GPT-5 和 Self 的箭头依次给出原表和本轮得分。Direct 沿用先前该模型在同题的页面。
+
+| 目标模型 | 原组合数 | Direct | Human（表单 SDK） | GPT-5 原→本轮 | Self 原→本轮 |
+|---|---:|---:|---:|---:|---:|
+| Gemma 3 12B | 5 | 1 | 1 | 1→4 | 1→3 |
+| Qwen3.5-9B | 5 | 2 | 2 | 1→4 | 1→4 |
+| Mistral Small 3.2 | 10 | 0 | 8 | 4→9 | 3→8 |
+| Qwen3-Coder-30B | 10 | 4 | 4 | 3→9 | 1→8 |
+| GPT-OSS-120B | 10 | 5 | 8 | 3→9 | 4→9 |
+| DeepSeek V4 Flash | 10 | 9 | 7 | 4→9 | 6→9 |
+
+原 Direct 按原协议将无效交付和无法加载的候选记作失败。Qwen3.5 有三份无效回复，Mistral 的十个套件及 GPT-OSS 的一个套件在加载时失败。此前把 Mistral 的默认导出声明接好，原页面可过 4/10，仍低于本轮 Self 的 8/10 和 GPT-5 的 9/10。本轮新增的三个库来源在主表所有 150 个模型－方法－目标位置都实际执行了四例。[运行器与模型交付核验](../studies/public_library_transfer/duo_verified_features/verification.json) · [Mistral 原页格式复算](../studies/public_library_transfer/self_refinement/duo_composition/README.md)
+
+**Human 的来源。** 在锁定的上游 Git 树及四个 Hugging Face 发布版本中，查到了官方用例与模型生成代码，未找到可核实作者的人工业务实现。新 Human 让目标模型为人工维护的 Final Form 5.0.0 和 React Final Form 7.0.0 填业务配置。SDK 管理字段值与提交流程，研究者的宿主转发真实请求并显示响应，模型填写字段、动作和消息。两个另外设计的校准请求验证了实际输入、201 成功响应和 409 错误响应。模型仍可能填错，Flash 的这组通过 7/10。[上游版本审计](../studies/public_library_transfer/duo_verified_features/source-audit.json) · [SDK 官方接口](https://final-form.org/docs/react-final-form/api/Form) · [六款模型的绑定与结果](../studies/public_library_transfer/duo_verified_features/form_sdk/declared_config/result.json)
+
+**为什么原 AI 库失分。** 排除受测组合后，原 GPT-5 供体只覆盖 15 个单功能中的 11 个。抽出各自的视图后，GPT-5 又实际交付了图片替代文本、任务评论、任务审批三个可验收组件，覆盖升至 14/15。在四个十题行固定相同模型选择，补写前的库均过 5/10，补写后的库均过 9/10。Self 只用同一模型准备的代码。Qwen3.5 的三个博客组件需要宿主传入资源 ID，其原有请求代码并未收到该值。按真实路由或业务属性传值，给可一一对应的输入绑定公开标签，修复后同样选择从 1/5 升至 4/5。另用资源 23 实测 Flash 的编辑请求发至 23，未误发到样例 1。三种库按域固定复用头两个功能，在全部六行都过零题。[同配置旧组件](../studies/public_library_transfer/duo_verified_features/author_completion/same-choices.json) · [逐题、固定对照与组件来源](../studies/public_library_transfer/duo_verified_features/field_bindings/result.json)
+
+**Flash 原十题的共同失分。** 性能报告用例注册带查询串的 URL，计数时查询裸路径。在锁定的 fetch-mock 9.11.0 下，向文档地址发一次正确请求后，成功响应和错误响应两种情况下裸路径计数都为零。这题仍在分母中。[最小复现](../studies/public_library_transfer/duo_verified_features/harness.test.js) · [两例实测](../studies/public_library_transfer/duo_verified_features/source-audit.json)
+
+**Flash 的另外十个组合。** 先排除原功能和所有用过的供体功能，从两个域分别剩余的 28、19 个组合中，按题名哈希各取五个。Direct 可在同一份页面上测试两个公开功能，建库者分别测试各单功能，每次生成后均最多修正两次。三份官方测试的模块导入名与题目名不同。首次打包按题目名提供页面，这三份测试没有运行断言。给所有组的每份封存页面按官方名称导出同一组件后，两批各 50 个方法与目标记录都实际运行四例。首次候选 Direct 为 6/10、GPT-5 为 10/10、Self 为 7/10；两种固定功能对均为 0/10。GPT-5 包含 Direct 通过的六题，另过四题。Self 比 Direct 多过三题、少过两题，净多一题。公开检查中，Flash 有四个组件调用运行环境已移除的 useHistory。对所有方法连接第 6 版的真实路由并重测，Direct、GPT-5、Self 分别为 7/10、10/10、8/10，固定对照仍均为 0/10。Self 新增资源分配与截止日排序，Direct 新增任务依赖与进度更新。这十题检验在两个既有域内复用给定功能。题名给出两个功能，单功能规格也公开双功能断言。[抽样与候选](../studies/public_library_transfer/duo_verified_features/unseen_pairs/result.json) · [真实导航校准](../studies/public_library_transfer/duo_verified_features/unseen_pairs/router/result.json) · [逐题最终判决与入口修复](../studies/public_library_transfer/duo_verified_features/unseen_pairs/entry_points/result.json)
+
+本轮新增 376 次调用，已结算 $0.332518，含一笔未结预留的最高敞口为 $0.345139。其中原作者补建和共享选项已结算 $0.073835，首次 SDK 绑定 $0.014903，接收与补交绑定 $0.001586，新组合建库与从零对照 $0.242194。旧准备费用另列。基准作者原 GPT-5 供体的生成成本和 SDK 的开发人时没有记录。[按模型和用途分账](../studies/public_library_transfer/duo_verified_features/accounting.json)

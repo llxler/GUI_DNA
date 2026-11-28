@@ -2169,6 +2169,62 @@
           "gpt5-library": "Non-overlapping GPT-5 self-review files and its own event-trace entry repair with fresh profile choices."
         }
       }
+    },
+    "duo_feature_bindings": {
+      "n": 5,
+      "targets": [
+        "addAltTextToImage_postPerformanceReport",
+        "addCanonicalUrl_addComment",
+        "addCanonicalUrl_assignPostToCategory",
+        "addCanonicalUrl_editComment",
+        "addCanonicalUrl_editTag"
+      ],
+      "passed": {
+        "direct": 1,
+        "human": 1,
+        "gpt5-library": 4,
+        "self": 3
+      },
+      "excluded_build_arms": [],
+      "implementation_sources": {
+        "direct": "studies/results/backbone-suites-20261124.json",
+        "human": "studies/public_library_transfer/duo_verified_features/form_sdk/declared_config/result.json",
+        "gpt5-library": "studies/public_library_transfer/duo_verified_features/field_bindings/result.json",
+        "self": "studies/public_library_transfer/duo_verified_features/field_bindings/result.json"
+      },
+      "record_filters": {
+        "direct": {
+          "arm": "direct"
+        },
+        "human": {
+          "arm": "human"
+        },
+        "gpt5-library": {
+          "arm": "gpt5-library"
+        },
+        "self": {
+          "arm": "self"
+        }
+      },
+      "previous_row": "library_capabilities",
+      "source": "studies/public_library_transfer/duo_verified_features/field_bindings/result.json",
+      "measure": "fully passed four-case feature pairs",
+      "fixed_passed": {
+        "human": 0,
+        "gpt5-library": 0,
+        "self": 0
+      },
+      "same_choice_previous": {
+        "self": 3,
+        "gpt5-library": 4
+      },
+      "protocols": {
+        "human": "Target-authored finite bindings for Final Form 5.0.0 and React Final Form 7.0.0, followed by the shared feature choice.",
+        "self": "Same-model single-feature source, checked independently, repaired by its owner and mounted with declared resource and field bindings.",
+        "gpt5-library": "Isolated GPT-5 donor views from disjoint pairs, supplemented by genuine GPT-5 single-feature builds under public-only checks. The target model selects features.",
+        "direct": "Frozen same-model direct code on precisely the same pairs."
+      },
+      "configuration_source": "studies/public_library_transfer/duo_verified_features/author_completion/result.json"
     }
   },
   "qwen/qwen3.5-9b": {
@@ -4299,6 +4355,62 @@
           "gpt5-library": "Non-overlapping GPT-5 self-review files and its own event-trace entry repair with fresh profile choices."
         }
       }
+    },
+    "duo_feature_bindings": {
+      "n": 5,
+      "targets": [
+        "addAltTextToImage_postPerformanceReport",
+        "addCanonicalUrl_addComment",
+        "addCanonicalUrl_assignPostToCategory",
+        "addCanonicalUrl_editComment",
+        "addCanonicalUrl_editTag"
+      ],
+      "passed": {
+        "direct": 2,
+        "human": 2,
+        "gpt5-library": 4,
+        "self": 4
+      },
+      "excluded_build_arms": [],
+      "implementation_sources": {
+        "direct": "studies/results/backbone-suites-20261124.json",
+        "human": "studies/public_library_transfer/duo_verified_features/form_sdk/declared_config/result.json",
+        "gpt5-library": "studies/public_library_transfer/duo_verified_features/field_bindings/result.json",
+        "self": "studies/public_library_transfer/duo_verified_features/field_bindings/result.json"
+      },
+      "record_filters": {
+        "direct": {
+          "arm": "direct"
+        },
+        "human": {
+          "arm": "human"
+        },
+        "gpt5-library": {
+          "arm": "gpt5-library"
+        },
+        "self": {
+          "arm": "self"
+        }
+      },
+      "previous_row": "library_capabilities",
+      "source": "studies/public_library_transfer/duo_verified_features/field_bindings/result.json",
+      "measure": "fully passed four-case feature pairs",
+      "fixed_passed": {
+        "human": 0,
+        "gpt5-library": 0,
+        "self": 0
+      },
+      "same_choice_previous": {
+        "self": 1,
+        "gpt5-library": 4
+      },
+      "protocols": {
+        "human": "Target-authored finite bindings for Final Form 5.0.0 and React Final Form 7.0.0, followed by the shared feature choice.",
+        "self": "Same-model single-feature source, checked independently, repaired by its owner and mounted with declared resource and field bindings.",
+        "gpt5-library": "Isolated GPT-5 donor views from disjoint pairs, supplemented by genuine GPT-5 single-feature builds under public-only checks. The target model selects features.",
+        "direct": "Frozen same-model direct code on precisely the same pairs."
+      },
+      "configuration_source": "studies/public_library_transfer/duo_verified_features/author_completion/result.json"
     }
   },
   "mistralai/mistral-small-3.2-24b-instruct": {
@@ -6353,6 +6465,67 @@
           }
         ]
       }
+    },
+    "duo_feature_bindings": {
+      "n": 10,
+      "targets": [
+        "addAltTextToImage_postPerformanceReport",
+        "addCanonicalUrl_addComment",
+        "addCanonicalUrl_assignPostToCategory",
+        "addCanonicalUrl_editComment",
+        "addCanonicalUrl_editTag",
+        "addCommentToTask_setTaskDeadline",
+        "approveOrRejectTaskReview_compareTime",
+        "approveOrRejectTaskReview_projectCustomWorkflows",
+        "approveOrRejectTaskReview_setTaskPriority",
+        "assignTaskToProject_assignTaskToUser"
+      ],
+      "passed": {
+        "direct": 0,
+        "human": 8,
+        "gpt5-library": 9,
+        "self": 8
+      },
+      "excluded_build_arms": [],
+      "implementation_sources": {
+        "direct": "studies/results/backbone-suites-20261124.json",
+        "human": "studies/public_library_transfer/duo_verified_features/form_sdk/declared_config/result.json",
+        "gpt5-library": "studies/public_library_transfer/duo_verified_features/field_bindings/result.json",
+        "self": "studies/public_library_transfer/duo_verified_features/field_bindings/result.json"
+      },
+      "record_filters": {
+        "direct": {
+          "arm": "direct"
+        },
+        "human": {
+          "arm": "human"
+        },
+        "gpt5-library": {
+          "arm": "gpt5-library"
+        },
+        "self": {
+          "arm": "self"
+        }
+      },
+      "previous_row": "library_capabilities",
+      "source": "studies/public_library_transfer/duo_verified_features/field_bindings/result.json",
+      "measure": "fully passed four-case feature pairs",
+      "fixed_passed": {
+        "human": 0,
+        "gpt5-library": 0,
+        "self": 0
+      },
+      "same_choice_previous": {
+        "self": 7,
+        "gpt5-library": 5
+      },
+      "protocols": {
+        "human": "Target-authored finite bindings for Final Form 5.0.0 and React Final Form 7.0.0, followed by the shared feature choice.",
+        "self": "Same-model single-feature source, checked independently, repaired by its owner and mounted with declared resource and field bindings.",
+        "gpt5-library": "Isolated GPT-5 donor views from disjoint pairs, supplemented by genuine GPT-5 single-feature builds under public-only checks. The target model selects features.",
+        "direct": "Frozen same-model direct code on precisely the same pairs."
+      },
+      "configuration_source": "studies/public_library_transfer/duo_verified_features/author_completion/result.json"
     }
   },
   "qwen/qwen3-coder-30b-a3b-instruct": {
@@ -7426,6 +7599,67 @@
           }
         ]
       }
+    },
+    "duo_feature_bindings": {
+      "n": 10,
+      "targets": [
+        "addAltTextToImage_postPerformanceReport",
+        "addCanonicalUrl_addComment",
+        "addCanonicalUrl_assignPostToCategory",
+        "addCanonicalUrl_editComment",
+        "addCanonicalUrl_editTag",
+        "addCommentToTask_setTaskDeadline",
+        "approveOrRejectTaskReview_compareTime",
+        "approveOrRejectTaskReview_projectCustomWorkflows",
+        "approveOrRejectTaskReview_setTaskPriority",
+        "assignTaskToProject_assignTaskToUser"
+      ],
+      "passed": {
+        "direct": 4,
+        "human": 4,
+        "gpt5-library": 9,
+        "self": 8
+      },
+      "excluded_build_arms": [],
+      "implementation_sources": {
+        "direct": "studies/results/backbone-suites-20261124.json",
+        "human": "studies/public_library_transfer/duo_verified_features/form_sdk/declared_config/result.json",
+        "gpt5-library": "studies/public_library_transfer/duo_verified_features/field_bindings/result.json",
+        "self": "studies/public_library_transfer/duo_verified_features/field_bindings/result.json"
+      },
+      "record_filters": {
+        "direct": {
+          "arm": "direct"
+        },
+        "human": {
+          "arm": "human"
+        },
+        "gpt5-library": {
+          "arm": "gpt5-library"
+        },
+        "self": {
+          "arm": "self"
+        }
+      },
+      "previous_row": "library_capabilities",
+      "source": "studies/public_library_transfer/duo_verified_features/field_bindings/result.json",
+      "measure": "fully passed four-case feature pairs",
+      "fixed_passed": {
+        "human": 0,
+        "gpt5-library": 0,
+        "self": 0
+      },
+      "same_choice_previous": {
+        "self": 4,
+        "gpt5-library": 5
+      },
+      "protocols": {
+        "human": "Target-authored finite bindings for Final Form 5.0.0 and React Final Form 7.0.0, followed by the shared feature choice.",
+        "self": "Same-model single-feature source, checked independently, repaired by its owner and mounted with declared resource and field bindings.",
+        "gpt5-library": "Isolated GPT-5 donor views from disjoint pairs, supplemented by genuine GPT-5 single-feature builds under public-only checks. The target model selects features.",
+        "direct": "Frozen same-model direct code on precisely the same pairs."
+      },
+      "configuration_source": "studies/public_library_transfer/duo_verified_features/author_completion/result.json"
     }
   },
   "openai/gpt-oss-120b": {
@@ -9061,6 +9295,67 @@
           }
         ]
       }
+    },
+    "duo_feature_bindings": {
+      "n": 10,
+      "targets": [
+        "addAltTextToImage_postPerformanceReport",
+        "addCanonicalUrl_addComment",
+        "addCanonicalUrl_assignPostToCategory",
+        "addCanonicalUrl_editComment",
+        "addCanonicalUrl_editTag",
+        "addCommentToTask_setTaskDeadline",
+        "approveOrRejectTaskReview_compareTime",
+        "approveOrRejectTaskReview_projectCustomWorkflows",
+        "approveOrRejectTaskReview_setTaskPriority",
+        "assignTaskToProject_assignTaskToUser"
+      ],
+      "passed": {
+        "direct": 5,
+        "human": 8,
+        "gpt5-library": 9,
+        "self": 9
+      },
+      "excluded_build_arms": [],
+      "implementation_sources": {
+        "direct": "studies/results/backbone-suites-20261124.json",
+        "human": "studies/public_library_transfer/duo_verified_features/form_sdk/declared_config/result.json",
+        "gpt5-library": "studies/public_library_transfer/duo_verified_features/field_bindings/result.json",
+        "self": "studies/public_library_transfer/duo_verified_features/field_bindings/result.json"
+      },
+      "record_filters": {
+        "direct": {
+          "arm": "direct"
+        },
+        "human": {
+          "arm": "human"
+        },
+        "gpt5-library": {
+          "arm": "gpt5-library"
+        },
+        "self": {
+          "arm": "self"
+        }
+      },
+      "previous_row": "library_capabilities",
+      "source": "studies/public_library_transfer/duo_verified_features/field_bindings/result.json",
+      "measure": "fully passed four-case feature pairs",
+      "fixed_passed": {
+        "human": 0,
+        "gpt5-library": 0,
+        "self": 0
+      },
+      "same_choice_previous": {
+        "self": 9,
+        "gpt5-library": 5
+      },
+      "protocols": {
+        "human": "Target-authored finite bindings for Final Form 5.0.0 and React Final Form 7.0.0, followed by the shared feature choice.",
+        "self": "Same-model single-feature source, checked independently, repaired by its owner and mounted with declared resource and field bindings.",
+        "gpt5-library": "Isolated GPT-5 donor views from disjoint pairs, supplemented by genuine GPT-5 single-feature builds under public-only checks. The target model selects features.",
+        "direct": "Frozen same-model direct code on precisely the same pairs."
+      },
+      "configuration_source": "studies/public_library_transfer/duo_verified_features/author_completion/result.json"
     }
   },
   "deepseek/deepseek-v4-flash": {
@@ -10808,6 +11103,67 @@
           "gpt5-library": "Non-overlapping GPT-5 self-review files and its own event-trace entry repair with fresh profile choices."
         }
       }
+    },
+    "duo_feature_bindings": {
+      "n": 10,
+      "targets": [
+        "addAltTextToImage_postPerformanceReport",
+        "addCanonicalUrl_addComment",
+        "addCanonicalUrl_assignPostToCategory",
+        "addCanonicalUrl_editComment",
+        "addCanonicalUrl_editTag",
+        "addCommentToTask_setTaskDeadline",
+        "approveOrRejectTaskReview_compareTime",
+        "approveOrRejectTaskReview_projectCustomWorkflows",
+        "approveOrRejectTaskReview_setTaskPriority",
+        "assignTaskToProject_assignTaskToUser"
+      ],
+      "passed": {
+        "direct": 9,
+        "human": 7,
+        "gpt5-library": 9,
+        "self": 9
+      },
+      "excluded_build_arms": [],
+      "implementation_sources": {
+        "direct": "studies/public_library_transfer/duo_react_callbacks/result.json",
+        "human": "studies/public_library_transfer/duo_verified_features/form_sdk/declared_config/result.json",
+        "gpt5-library": "studies/public_library_transfer/duo_verified_features/field_bindings/result.json",
+        "self": "studies/public_library_transfer/duo_verified_features/field_bindings/result.json"
+      },
+      "record_filters": {
+        "direct": {
+          "arm": "direct"
+        },
+        "human": {
+          "arm": "human"
+        },
+        "gpt5-library": {
+          "arm": "gpt5-library"
+        },
+        "self": {
+          "arm": "self"
+        }
+      },
+      "previous_row": "library_capabilities",
+      "source": "studies/public_library_transfer/duo_verified_features/field_bindings/result.json",
+      "measure": "fully passed four-case feature pairs",
+      "fixed_passed": {
+        "human": 0,
+        "gpt5-library": 0,
+        "self": 0
+      },
+      "same_choice_previous": {
+        "self": 9,
+        "gpt5-library": 5
+      },
+      "protocols": {
+        "human": "Target-authored finite bindings for Final Form 5.0.0 and React Final Form 7.0.0, followed by the shared feature choice.",
+        "self": "Same-model single-feature source, checked independently, repaired by its owner and mounted with declared resource and field bindings.",
+        "gpt5-library": "Isolated GPT-5 donor views from disjoint pairs, supplemented by genuine GPT-5 single-feature builds under public-only checks. The target model selects features.",
+        "direct": "Frozen same-model direct code on precisely the same pairs."
+      },
+      "configuration_source": "studies/public_library_transfer/duo_verified_features/author_completion/result.json"
     }
   },
   "deepseek/deepseek-v4-pro-0813": {

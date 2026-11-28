@@ -206,3 +206,12 @@ Duo 初批两模型与 Qwen 精简契约的另外两份库，分别用 `uv run p
 计算器逐键补交和表格轨迹修复会各生成一份与父阶段的关联收据。原始评分文件保持冻结。本机保有封存候选时，用 `uv run python -m studies.rebuild_lineage calculator` 或 `table` 核对，同一选择的源码哈希或每次修复的输入哈希必须一致。两个初版运行器先封存逐题判决，随后尝试在同一个文件追加父库来源，冻结写入器会拒绝这次追加。下列完整入口把该指纹另存到 `lineage.json`，保留已封存评分。从头运行这两个阶段的完整入口是 `uv run python -m studies.browser_worker studies.rebuild_lineage calculator --execute`（表格将项目名改为 `table`）。
 
 运行 `uv run python -m studies.webbench.calculator.memory_recall.diagnose` 可按报告哈希核对已经封存的完整页在记忆任务上的失败断言。该命令只读取既有浏览器报告。[逐项核对](../studies/webbench/calculator/memory_recall/browser-errors.json)
+
+<a id="duo-feature-check"></a>
+### WebApp1K-Duo 的公开检查、收据与新组合
+
+`python -m studies.lookup webapp1k-duo "Qwen3.5-9B" Self` 返回 4/5 和五个题号。按 `method_record`、模型、`record_filter.arm` 及这五个题号过滤记录。三种库的 `fixed_configuration_score` 使用相同分母，字段 `configuration_record` 指向共用的真实模型配置。查任意方法都只需 Python 标准库。逐阶段的冻结边界见[实验目录](../studies/public_library_transfer/duo_verified_features/README.md)。
+
+本机保留原始候选与固定版本的 Jest 环境后，运行 `uv run --offline python -m studies.public_library_transfer.duo_verified_features.report` 可只读核对四本调用账本、费用和源指纹。新组合的抽样和候选在 `unseen_pairs/result.json`。最终判分在 `unseen_pairs/entry_points/result.json`，其 `phases.initial` 是首次生成的代码，`phases.router` 是同题的路由适配复测。按 `entries` 核对三份名称不同的官方导入口，按 `official_cases` 复算每题的四项判决。用 `uv run --offline python -m studies.public_library_transfer.duo_verified_features.unseen_pairs.entry_points.run` 可从两批封存页面复核，两组都使用相同导入规则，无新增模型调用。
+
+运行 `uv run --offline python -m studies.public_library_transfer.duo_verified_features.verify` 可独立核对十个阶段注册时的输入指纹、375 份收到的响应与实际请求模型、主表三种库的逐题执行和新十题两批各 50 份目标判分。[本轮核验](../studies/public_library_transfer/duo_verified_features/verification.json)

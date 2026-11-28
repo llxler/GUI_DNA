@@ -1,0 +1,160 @@
+{
+  "upstream_commit": "00895306c81d5329904827b65f4a933ce3cb8746",
+  "application_js_outside_tests": [],
+  "releases": {
+    "WebApp1K-React": {
+      "repository": "onekq-ai/WebApp1K-React",
+      "revision": "9ed6037a3b7021d43f37e54d918660398195bb9a",
+      "files": [
+        ".gitattributes",
+        "README.md",
+        "dataset.parquet"
+      ],
+      "columns": [
+        "Category",
+        "Scenario",
+        "Success Case",
+        "Failure Case",
+        "Github URL"
+      ]
+    },
+    "WebApp1K-Duo-React": {
+      "repository": "onekq-ai/WebApp1K-Duo-React",
+      "revision": "7531b3a892b05a464c2fe4ccc8e002f5ed516eb9",
+      "files": [
+        ".gitattributes",
+        "README.md",
+        "dataset.parquet"
+      ],
+      "columns": [
+        "Category",
+        "Scenario",
+        "Success Case 1",
+        "Failure Case 1",
+        "Success Case 2",
+        "Failure Case 2",
+        "Github URL"
+      ]
+    },
+    "WebApp1K-React-Generations": {
+      "repository": "onekq-ai/WebApp1K-React-Generations",
+      "revision": "41a2605f5b9591f8e412a3d5e08755909789a2cc",
+      "files": [
+        ".gitattributes",
+        "README.md",
+        "data/train-00000-of-00001.parquet"
+      ],
+      "columns": [
+        "Category",
+        "Scenario",
+        "Success Case",
+        "Failure Case",
+        "Github URL",
+        "claude-3.5-sonnet-20240620",
+        "deepseek-coder-v2-instruct",
+        "deepseek-coder-v2-lite-instruct",
+        "deepseek-r1",
+        "deepseek-r1-distill-qwen-32b",
+        "deepseek-v2.5",
+        "deepseek-v3",
+        "gemini-1.5-flash",
+        "gemini-1.5-pro",
+        "gemini-2.0-flash",
+        "gemini-2.0-flash-thinking",
+        "gemma-3-27b",
+        "gpt-4o-2024-05-13",
+        "gpt-4o-2024-08-06",
+        "gpt-4o-mini",
+        "llama-3.1-nemotron-70b-instruct",
+        "llama-v3-70b-instruct",
+        "llama-v3-8b-instruct",
+        "llama-v3p1-405b-instruct",
+        "llama-v3p1-70b-instruct",
+        "llama-v3p1-8b-instruct",
+        "llama-v3p3-70b-instruct",
+        "llama4-maverick",
+        "mistral-large-2",
+        "mistral-small-3",
+        "mixtral-8x22b-instruct",
+        "mixtral-8x7b-instruct",
+        "o1-mini",
+        "o1-preview",
+        "o3-mini",
+        "qwen2p5-72b-instruct",
+        "qwen2p5-coder-32b-instruct",
+        "qwen2p5-max",
+        "qwq-32b"
+      ]
+    },
+    "WebApp1K-Duo-React-Generations": {
+      "repository": "onekq-ai/WebApp1K-Duo-React-Generations",
+      "revision": "fbda49ea521d9ddd22d2425d01237e17e3d6831c",
+      "files": [
+        ".gitattributes",
+        "README.md",
+        "data/train-00000-of-00001.parquet"
+      ],
+      "columns": [
+        "Category",
+        "Scenario",
+        "Success Case 1",
+        "Failure Case 1",
+        "Success Case 2",
+        "Failure Case 2",
+        "Github URL",
+        "chatgpt-4o-latest",
+        "claude-3-5-sonnet-20240620",
+        "claude-3-5-sonnet-20241022",
+        "claude-3-7-sonnet-20250219",
+        "claude-opus-4-1-20250805",
+        "claude-opus-4-20250514",
+        "deepseek-r1",
+        "deepseek-r1-distill-qwen-32b",
+        "deepseek-v2.5",
+        "deepseek-v3",
+        "deepseek-v3-0324",
+        "gemini-2.0-flash",
+        "gemini-2.0-flash-thinking",
+        "gemini-2.5-flash-preview-04-17",
+        "gemini-2.5-pro-preview-03-25",
+        "gemini-2.5-pro-preview-05-06",
+        "gemma-3-27b",
+        "gpt-4.1",
+        "gpt-4.5-preview-2025-02-27",
+        "gpt-5",
+        "gpt-oss-120b",
+        "grok-3-beta",
+        "mistral-large-2",
+        "mistral-medium-3",
+        "o1-mini",
+        "o1-preview",
+        "o3-mini",
+        "o4-mini",
+        "qwen2p5-coder-32b-instruct",
+        "qwen3-235b-a22b",
+        "qwen3-32b",
+        "qwq-32b"
+      ]
+    }
+  },
+  "human_status": "unavailable",
+  "human_reason": "No attributable human feature implementation in the audited releases.",
+  "local_sanity": "One local alternative-text smoke component, without documented human authorship.",
+  "runtime_version": "9.11.0",
+  "harness": {
+    "test_sha256": "e6b7c08f69c178e69237c300855edb4f77200c5bdfabf36ee4c80b48f6c31587",
+    "cases": {
+      "one documented request, response status 200": "passed",
+      "one documented request, response status 500": "passed"
+    },
+    "report_sha256": "f46fb9230b5d92fb4a8dc7c83ef8f9d85d9eeba7fd71f60827e76fb63d0c7d27"
+  },
+  "alternate_resource": {
+    "test_sha256": "000f39767ba84b425bc86553b7f4db11a37bdec42684a21f6075c8ec841a016f",
+    "cases": {
+      "one real PUT uses the resource supplied to the mounted editor": "passed"
+    },
+    "report_sha256": "f92cf68edc2da5ad1ac9bc47cd9558e2f363943dd9f57524d5f5c0e6dc4314c0",
+    "candidate_sha256": "f28fdd301b6e99dcd620601c146231430a859e3bc052f126653356526423e026"
+  }
+}

@@ -22,6 +22,7 @@ MODEL_NAMES = paper.BACKBONES | paper.components.LABELS
 # Some rows combine multiple registered runs. Point readers to the actual join
 # instead of attributing every method to the latest run.
 ASSEMBLERS = {
+    "duo_feature_bindings": paper.duo_features,
     "source_diagnosis": paper.sources,
     "library_capabilities": paper.capabilities,
     "form_visible_targets": paper.table_protocols,
@@ -88,8 +89,13 @@ def find_cell(matrix, dataset, model, method):
         cell["method_record"] = receipt
     if record_filter := row.get("record_filters", {}).get(method):
         cell["record_filter"] = record_filter
-    if path[0] in ("target_extensions", "module_rebuilds") and status == "measured":
+    if path[0] in ("target_extensions", "module_rebuilds", "duo_feature_bindings") and status == "measured":
         cell["targets"] = row["targets"]
+    if path[0] == "duo_feature_bindings" and method != "direct":
+        cell["protocol"] = row["protocols"][method]
+        cell["configuration_record"] = row["configuration_source"]
+        if method in row["fixed_passed"]:
+            cell["fixed_configuration_score"] = row["fixed_passed"][method]
     if method == "self" and "configuration_source" in row:
         cell["configuration_record"] = row["configuration_source"]
     if method == "self" and "first_builds" in row:

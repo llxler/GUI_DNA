@@ -218,6 +218,7 @@ def test_paper_omits_failed_builds_and_keeps_measured_zeros():
         model.pop("table_state_transitions", None)
         model.pop("state_examples", None)
         model.pop("module_rebuilds", None)
+        model.pop("duo_feature_bindings", None)
         model.pop("target_extensions", None)
         model.pop("webgen_completion", None)
         model.pop("webgen_holdout", None)

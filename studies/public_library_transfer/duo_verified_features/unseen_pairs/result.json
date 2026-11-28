@@ -1,0 +1,3034 @@
+{
+  "registration": "96d08498083f44c16cc464a6302ffc96af180835ff60f3fbdf41118dd3905625",
+  "seal": "ab8e6cdba05be2321bd25232fe1c1db20a835a386e18433975267c9fe7be5ef7",
+  "groups": {
+    "blogging": {
+      "excluded": [
+        "addAltTextToImage",
+        "addCanonicalUrl",
+        "addComment",
+        "approveRejectComments",
+        "assignPostToCategory",
+        "createCategory",
+        "editComment",
+        "editTag",
+        "postPerformanceReport",
+        "publishBlogPost",
+        "retrieveAllBlogPosts",
+        "retrievePostsByCategory"
+      ],
+      "eligible": 28,
+      "targets": [
+        "seoAuditReport_trackUniqueVisitorsPerPost",
+        "createBlogPost_retrievePostsByTag",
+        "deleteBlogPost_trackBounceRate",
+        "addSitemap_retrieveScheduledBlogPosts",
+        "retrieveCommentCount_trackPostViews"
+      ],
+      "features": [
+        "addSitemap",
+        "createBlogPost",
+        "deleteBlogPost",
+        "retrieveCommentCount",
+        "retrievePostsByTag",
+        "retrieveScheduledBlogPosts",
+        "seoAuditReport",
+        "trackBounceRate",
+        "trackPostViews",
+        "trackUniqueVisitorsPerPost"
+      ]
+    },
+    "taskmanagement": {
+      "excluded": [
+        "addCommentToTask",
+        "approveOrRejectTaskReview",
+        "assignTaskToProject",
+        "assignTaskToUser",
+        "attachFileToTask",
+        "changeTaskDeadline",
+        "compareTime",
+        "projectBudgetSetup",
+        "projectCustomWorkflows",
+        "reopenTask",
+        "setTaskDeadline",
+        "setTaskPriority",
+        "taskFilterStatus",
+        "taskSortPriority"
+      ],
+      "eligible": 19,
+      "targets": [
+        "setTaskDependencies_updateTaskProgress",
+        "customNotificationsForUsers_viewTaskHistory",
+        "projectMilestoneAddition_viewUserPerformanceMetrics",
+        "removeTaskDependencies_updateTaskProgress",
+        "taskResourcesAllocation_taskSortDueDate"
+      ],
+      "features": [
+        "customNotificationsForUsers",
+        "projectMilestoneAddition",
+        "removeTaskDependencies",
+        "setTaskDependencies",
+        "taskResourcesAllocation",
+        "taskSortDueDate",
+        "updateTaskProgress",
+        "viewTaskHistory",
+        "viewUserPerformanceMetrics"
+      ]
+    }
+  },
+  "test_files": {
+    "seoAuditReport_trackUniqueVisitorsPerPost": {
+      "path": "artifacts/benchmark-probe/WebApp1k/duo_tests/react/blogging/seoAuditReport_trackUniqueVisitorsPerPost.test.js",
+      "sha256": "7c2049b8403bff7e5eda1d540325bce079b2070d04367feffbb94c96906656e6"
+    },
+    "createBlogPost_retrievePostsByTag": {
+      "path": "artifacts/benchmark-probe/WebApp1k/duo_tests/react/blogging/createBlogPost_retrievePostsByTag.test.js",
+      "sha256": "a8bdc6cfb55eef137b99ca936ecced0c0801d69c18b138639c5f92ac7cb2e7eb"
+    },
+    "deleteBlogPost_trackBounceRate": {
+      "path": "artifacts/benchmark-probe/WebApp1k/duo_tests/react/blogging/deleteBlogPost_trackBounceRate.test.js",
+      "sha256": "89d274f6b8a7d29e6afb541b6238f8be9e6376afacb51bbbcc691006c6e9c576"
+    },
+    "addSitemap_retrieveScheduledBlogPosts": {
+      "path": "artifacts/benchmark-probe/WebApp1k/duo_tests/react/blogging/addSitemap_retrieveScheduledBlogPosts.test.js",
+      "sha256": "f0812058b6f36f1413f7ec461a5907d0901b9116e671cbcaa4ec9c48e286b57f"
+    },
+    "retrieveCommentCount_trackPostViews": {
+      "path": "artifacts/benchmark-probe/WebApp1k/duo_tests/react/blogging/retrieveCommentCount_trackPostViews.test.js",
+      "sha256": "3047a2817f53cc365292499c18b9af32b9a7ab1c2ba630ae998c54920b57d2bb"
+    },
+    "setTaskDependencies_updateTaskProgress": {
+      "path": "artifacts/benchmark-probe/WebApp1k/duo_tests/react/taskmanagement/setTaskDependencies_updateTaskProgress.test.js",
+      "sha256": "4f20d2ff948cbca822b6eebd6791d1aeca4f919e7bbab695c61fbf6e4c0f78bf"
+    },
+    "customNotificationsForUsers_viewTaskHistory": {
+      "path": "artifacts/benchmark-probe/WebApp1k/duo_tests/react/taskmanagement/customNotificationsForUsers_viewTaskHistory.test.js",
+      "sha256": "7e4872ed1d53cd4e0fa079bf5e574c019608e4a2a078a3d8f19c5bb9551eab29"
+    },
+    "projectMilestoneAddition_viewUserPerformanceMetrics": {
+      "path": "artifacts/benchmark-probe/WebApp1k/duo_tests/react/taskmanagement/projectMilestoneAddition_viewUserPerformanceMetrics.test.js",
+      "sha256": "f6d265b0ec99f9a888b8304294694fecd4730778e218612b15fcf6a84f5dc746"
+    },
+    "removeTaskDependencies_updateTaskProgress": {
+      "path": "artifacts/benchmark-probe/WebApp1k/duo_tests/react/taskmanagement/removeTaskDependencies_updateTaskProgress.test.js",
+      "sha256": "988eb018a61876310c972964ba25118954d370cf1775c00eb85e4b74923836f4"
+    },
+    "taskResourcesAllocation_taskSortDueDate": {
+      "path": "artifacts/benchmark-probe/WebApp1k/duo_tests/react/taskmanagement/taskResourcesAllocation_taskSortDueDate.test.js",
+      "sha256": "471af865108ca0f188971e46fcefb308ad71b15bb35b61b6b98f28d2a69d08ae"
+    }
+  },
+  "choices": {
+    "seoAuditReport_trackUniqueVisitorsPerPost": {
+      "status": "valid",
+      "names": [
+        "seoAuditReport",
+        "trackUniqueVisitorsPerPost"
+      ]
+    },
+    "createBlogPost_retrievePostsByTag": {
+      "status": "valid",
+      "names": [
+        "createBlogPost",
+        "retrievePostsByTag"
+      ]
+    },
+    "deleteBlogPost_trackBounceRate": {
+      "status": "valid",
+      "names": [
+        "deleteBlogPost",
+        "trackBounceRate"
+      ]
+    },
+    "addSitemap_retrieveScheduledBlogPosts": {
+      "status": "valid",
+      "names": [
+        "addSitemap",
+        "retrieveScheduledBlogPosts"
+      ]
+    },
+    "retrieveCommentCount_trackPostViews": {
+      "status": "valid",
+      "names": [
+        "retrieveCommentCount",
+        "trackPostViews"
+      ]
+    },
+    "setTaskDependencies_updateTaskProgress": {
+      "status": "valid",
+      "names": [
+        "setTaskDependencies",
+        "updateTaskProgress"
+      ]
+    },
+    "customNotificationsForUsers_viewTaskHistory": {
+      "status": "valid",
+      "names": [
+        "customNotificationsForUsers",
+        "viewTaskHistory"
+      ]
+    },
+    "projectMilestoneAddition_viewUserPerformanceMetrics": {
+      "status": "valid",
+      "names": [
+        "projectMilestoneAddition",
+        "viewUserPerformanceMetrics"
+      ]
+    },
+    "removeTaskDependencies_updateTaskProgress": {
+      "status": "valid",
+      "names": [
+        "removeTaskDependencies",
+        "updateTaskProgress"
+      ]
+    },
+    "taskResourcesAllocation_taskSortDueDate": {
+      "status": "valid",
+      "names": [
+        "taskResourcesAllocation",
+        "taskSortDueDate"
+      ]
+    }
+  },
+  "receipts": {
+    "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/addSitemap_retrieveScheduledBlogPosts/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/addSitemap_retrieveScheduledBlogPosts/1/source.json",
+        "source_sha256": "8a2f56608427fd1452dbd53169b716ab2ea4a8833828e8c1f0ddb151b415b070",
+        "public": {
+          "addSitemap": {
+            "passed": false,
+            "report_sha256": "a2ba24433066d38d5c16a65627515b4e72719b180304fc238c9313f2ab766c23",
+            "test_sha256": "f2a6748d84107a26058f72381746306627e21dc009c5d1b2ff5c7125e742894f",
+            "source_sha256": "8a2f56608427fd1452dbd53169b716ab2ea4a8833828e8c1f0ddb151b415b070"
+          },
+          "retrieveScheduledBlogPosts": {
+            "passed": true,
+            "report_sha256": "a2b4f7d21ccd9ed6e6b0786d2513a30c979dd4e258631f7366ab3e1e600251fe",
+            "test_sha256": "2c847d1493afcdac50de9f147007c44b82d0012946d02d26938d7bca6ecc2f30",
+            "source_sha256": "8a2f56608427fd1452dbd53169b716ab2ea4a8833828e8c1f0ddb151b415b070"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/addSitemap_retrieveScheduledBlogPosts/1/source.json",
+          "source_sha256": "8a2f56608427fd1452dbd53169b716ab2ea4a8833828e8c1f0ddb151b415b070",
+          "public": {
+            "addSitemap": {
+              "passed": false,
+              "report_sha256": "a2ba24433066d38d5c16a65627515b4e72719b180304fc238c9313f2ab766c23",
+              "test_sha256": "f2a6748d84107a26058f72381746306627e21dc009c5d1b2ff5c7125e742894f",
+              "source_sha256": "8a2f56608427fd1452dbd53169b716ab2ea4a8833828e8c1f0ddb151b415b070"
+            },
+            "retrieveScheduledBlogPosts": {
+              "passed": true,
+              "report_sha256": "a2b4f7d21ccd9ed6e6b0786d2513a30c979dd4e258631f7366ab3e1e600251fe",
+              "test_sha256": "2c847d1493afcdac50de9f147007c44b82d0012946d02d26938d7bca6ecc2f30",
+              "source_sha256": "8a2f56608427fd1452dbd53169b716ab2ea4a8833828e8c1f0ddb151b415b070"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/addSitemap_retrieveScheduledBlogPosts/2/source.json",
+          "source_sha256": "8a2f56608427fd1452dbd53169b716ab2ea4a8833828e8c1f0ddb151b415b070",
+          "public": {
+            "addSitemap": {
+              "passed": false,
+              "report_sha256": "a2ba24433066d38d5c16a65627515b4e72719b180304fc238c9313f2ab766c23",
+              "test_sha256": "f2a6748d84107a26058f72381746306627e21dc009c5d1b2ff5c7125e742894f",
+              "source_sha256": "8a2f56608427fd1452dbd53169b716ab2ea4a8833828e8c1f0ddb151b415b070"
+            },
+            "retrieveScheduledBlogPosts": {
+              "passed": true,
+              "report_sha256": "a2b4f7d21ccd9ed6e6b0786d2513a30c979dd4e258631f7366ab3e1e600251fe",
+              "test_sha256": "2c847d1493afcdac50de9f147007c44b82d0012946d02d26938d7bca6ecc2f30",
+              "source_sha256": "8a2f56608427fd1452dbd53169b716ab2ea4a8833828e8c1f0ddb151b415b070"
+            }
+          },
+          "attempt": 2
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/addSitemap_retrieveScheduledBlogPosts/3/source.json",
+          "source_sha256": "8a2f56608427fd1452dbd53169b716ab2ea4a8833828e8c1f0ddb151b415b070",
+          "public": {
+            "addSitemap": {
+              "passed": false,
+              "report_sha256": "a2ba24433066d38d5c16a65627515b4e72719b180304fc238c9313f2ab766c23",
+              "test_sha256": "f2a6748d84107a26058f72381746306627e21dc009c5d1b2ff5c7125e742894f",
+              "source_sha256": "8a2f56608427fd1452dbd53169b716ab2ea4a8833828e8c1f0ddb151b415b070"
+            },
+            "retrieveScheduledBlogPosts": {
+              "passed": true,
+              "report_sha256": "a2b4f7d21ccd9ed6e6b0786d2513a30c979dd4e258631f7366ab3e1e600251fe",
+              "test_sha256": "2c847d1493afcdac50de9f147007c44b82d0012946d02d26938d7bca6ecc2f30",
+              "source_sha256": "8a2f56608427fd1452dbd53169b716ab2ea4a8833828e8c1f0ddb151b415b070"
+            }
+          },
+          "attempt": 3
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/createBlogPost_retrievePostsByTag/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/createBlogPost_retrievePostsByTag/1/source.json",
+        "source_sha256": "c6f9db30d47c8b41d996bcd1158a44ee814bfde786e78eb23b1395953a062516",
+        "public": {
+          "createBlogPost": {
+            "passed": false,
+            "report_sha256": "5bae2210df99d43ce6566426eeffa7ef13d08e0f4bef83c38ea9c434ebd536d6",
+            "test_sha256": "c258ccb99c34aab0403b4165dcaee0aaa33fb4188f362b8cf7d27912ec540fba",
+            "source_sha256": "c6f9db30d47c8b41d996bcd1158a44ee814bfde786e78eb23b1395953a062516"
+          },
+          "retrievePostsByTag": {
+            "passed": false,
+            "report_sha256": "692389a7f5b0f02c8f427684a82ab12412364417c3e3d2162236d037d87d0ba8",
+            "test_sha256": "0cd214a2d331af6503378b33c4588e019a04e76560036014a4f62ddc63a80479",
+            "source_sha256": "c6f9db30d47c8b41d996bcd1158a44ee814bfde786e78eb23b1395953a062516"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/createBlogPost_retrievePostsByTag/1/source.json",
+          "source_sha256": "c6f9db30d47c8b41d996bcd1158a44ee814bfde786e78eb23b1395953a062516",
+          "public": {
+            "createBlogPost": {
+              "passed": false,
+              "report_sha256": "5bae2210df99d43ce6566426eeffa7ef13d08e0f4bef83c38ea9c434ebd536d6",
+              "test_sha256": "c258ccb99c34aab0403b4165dcaee0aaa33fb4188f362b8cf7d27912ec540fba",
+              "source_sha256": "c6f9db30d47c8b41d996bcd1158a44ee814bfde786e78eb23b1395953a062516"
+            },
+            "retrievePostsByTag": {
+              "passed": false,
+              "report_sha256": "692389a7f5b0f02c8f427684a82ab12412364417c3e3d2162236d037d87d0ba8",
+              "test_sha256": "0cd214a2d331af6503378b33c4588e019a04e76560036014a4f62ddc63a80479",
+              "source_sha256": "c6f9db30d47c8b41d996bcd1158a44ee814bfde786e78eb23b1395953a062516"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/createBlogPost_retrievePostsByTag/2/source.json",
+          "source_sha256": "c6f9db30d47c8b41d996bcd1158a44ee814bfde786e78eb23b1395953a062516",
+          "public": {
+            "createBlogPost": {
+              "passed": false,
+              "report_sha256": "5bae2210df99d43ce6566426eeffa7ef13d08e0f4bef83c38ea9c434ebd536d6",
+              "test_sha256": "c258ccb99c34aab0403b4165dcaee0aaa33fb4188f362b8cf7d27912ec540fba",
+              "source_sha256": "c6f9db30d47c8b41d996bcd1158a44ee814bfde786e78eb23b1395953a062516"
+            },
+            "retrievePostsByTag": {
+              "passed": false,
+              "report_sha256": "692389a7f5b0f02c8f427684a82ab12412364417c3e3d2162236d037d87d0ba8",
+              "test_sha256": "0cd214a2d331af6503378b33c4588e019a04e76560036014a4f62ddc63a80479",
+              "source_sha256": "c6f9db30d47c8b41d996bcd1158a44ee814bfde786e78eb23b1395953a062516"
+            }
+          },
+          "attempt": 2
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/createBlogPost_retrievePostsByTag/3/source.json",
+          "source_sha256": "c6f9db30d47c8b41d996bcd1158a44ee814bfde786e78eb23b1395953a062516",
+          "public": {
+            "createBlogPost": {
+              "passed": false,
+              "report_sha256": "5bae2210df99d43ce6566426eeffa7ef13d08e0f4bef83c38ea9c434ebd536d6",
+              "test_sha256": "c258ccb99c34aab0403b4165dcaee0aaa33fb4188f362b8cf7d27912ec540fba",
+              "source_sha256": "c6f9db30d47c8b41d996bcd1158a44ee814bfde786e78eb23b1395953a062516"
+            },
+            "retrievePostsByTag": {
+              "passed": false,
+              "report_sha256": "692389a7f5b0f02c8f427684a82ab12412364417c3e3d2162236d037d87d0ba8",
+              "test_sha256": "0cd214a2d331af6503378b33c4588e019a04e76560036014a4f62ddc63a80479",
+              "source_sha256": "c6f9db30d47c8b41d996bcd1158a44ee814bfde786e78eb23b1395953a062516"
+            }
+          },
+          "attempt": 3
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/deleteBlogPost_trackBounceRate/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/deleteBlogPost_trackBounceRate/1/source.json",
+        "source_sha256": "7e0aa3c97515e87dcf07aca7342b623c5da80f338b6a136f371c2ca6cc6704b8",
+        "public": {
+          "deleteBlogPost": {
+            "passed": true,
+            "report_sha256": "a82fcadff110689d228c5f1b31a05d441afa16b67e10072e0a808d408be2ebad",
+            "test_sha256": "331e921d5c657a068ac49f335fe32f87cfe49b3104e5c78fddbda2218fe2865c",
+            "source_sha256": "7e0aa3c97515e87dcf07aca7342b623c5da80f338b6a136f371c2ca6cc6704b8"
+          },
+          "trackBounceRate": {
+            "passed": true,
+            "report_sha256": "b610e6f4607c3bdddee50f68a1e3ec7bc5a134c74b58fadc40af8d961dd9ab51",
+            "test_sha256": "9e161f0a485baa0a41b5725a214589cb54c5ad0df3289c57ca12bf84aefd2b6f",
+            "source_sha256": "7e0aa3c97515e87dcf07aca7342b623c5da80f338b6a136f371c2ca6cc6704b8"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/deleteBlogPost_trackBounceRate/1/source.json",
+          "source_sha256": "7e0aa3c97515e87dcf07aca7342b623c5da80f338b6a136f371c2ca6cc6704b8",
+          "public": {
+            "deleteBlogPost": {
+              "passed": true,
+              "report_sha256": "a82fcadff110689d228c5f1b31a05d441afa16b67e10072e0a808d408be2ebad",
+              "test_sha256": "331e921d5c657a068ac49f335fe32f87cfe49b3104e5c78fddbda2218fe2865c",
+              "source_sha256": "7e0aa3c97515e87dcf07aca7342b623c5da80f338b6a136f371c2ca6cc6704b8"
+            },
+            "trackBounceRate": {
+              "passed": true,
+              "report_sha256": "b610e6f4607c3bdddee50f68a1e3ec7bc5a134c74b58fadc40af8d961dd9ab51",
+              "test_sha256": "9e161f0a485baa0a41b5725a214589cb54c5ad0df3289c57ca12bf84aefd2b6f",
+              "source_sha256": "7e0aa3c97515e87dcf07aca7342b623c5da80f338b6a136f371c2ca6cc6704b8"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/retrieveCommentCount_trackPostViews/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/retrieveCommentCount_trackPostViews/1/source.json",
+        "source_sha256": "346060f2780c7720100c244ec94e1df6e544be6208e10eb9e3633aa570fcab7f",
+        "public": {
+          "retrieveCommentCount": {
+            "passed": true,
+            "report_sha256": "7b361edbf5f357f42ddb7197598b37bd1b44526cb697ddc5262e072498c21e3c",
+            "test_sha256": "0e07583084c686171e13cc21bc5e7d4e2095576b0c7f28ee25c4d8bd7293712e",
+            "source_sha256": "346060f2780c7720100c244ec94e1df6e544be6208e10eb9e3633aa570fcab7f"
+          },
+          "trackPostViews": {
+            "passed": true,
+            "report_sha256": "25bc401d45c918e19772c4bd47b5a8f5739272941b6502e72f62d4dd43dd70de",
+            "test_sha256": "4d0510300eaa0feb87eb0c953233f9763d39441a74f3bbae81b980a935834bae",
+            "source_sha256": "346060f2780c7720100c244ec94e1df6e544be6208e10eb9e3633aa570fcab7f"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/retrieveCommentCount_trackPostViews/1/source.json",
+          "source_sha256": "346060f2780c7720100c244ec94e1df6e544be6208e10eb9e3633aa570fcab7f",
+          "public": {
+            "retrieveCommentCount": {
+              "passed": true,
+              "report_sha256": "7b361edbf5f357f42ddb7197598b37bd1b44526cb697ddc5262e072498c21e3c",
+              "test_sha256": "0e07583084c686171e13cc21bc5e7d4e2095576b0c7f28ee25c4d8bd7293712e",
+              "source_sha256": "346060f2780c7720100c244ec94e1df6e544be6208e10eb9e3633aa570fcab7f"
+            },
+            "trackPostViews": {
+              "passed": true,
+              "report_sha256": "25bc401d45c918e19772c4bd47b5a8f5739272941b6502e72f62d4dd43dd70de",
+              "test_sha256": "4d0510300eaa0feb87eb0c953233f9763d39441a74f3bbae81b980a935834bae",
+              "source_sha256": "346060f2780c7720100c244ec94e1df6e544be6208e10eb9e3633aa570fcab7f"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/seoAuditReport_trackUniqueVisitorsPerPost/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/seoAuditReport_trackUniqueVisitorsPerPost/1/source.json",
+        "source_sha256": "8d4b04cc48af24ab5b4e074c75a9b8961fc90882fba423d1a3e29ff833155813",
+        "public": {
+          "seoAuditReport": {
+            "passed": true,
+            "report_sha256": "8706d410f6afcd2c7c06e429aab8cbf3db9ddf9c9430f9bea5f3a82165f9be5d",
+            "test_sha256": "87f541bbea7e8bd4d2a5448c97edb9d031ce458d9b40b90a8e39ad4a7d1a804b",
+            "source_sha256": "8d4b04cc48af24ab5b4e074c75a9b8961fc90882fba423d1a3e29ff833155813"
+          },
+          "trackUniqueVisitorsPerPost": {
+            "passed": false,
+            "report_sha256": "31d2c03932ca738bb1b4f5dc1dc4ed452e4edf29f04fc31683a8fbaf23806817",
+            "test_sha256": "2b30ae91af70558955ff7c315c08e6f6a1d4998913ba847120394a8220944be8",
+            "source_sha256": "8d4b04cc48af24ab5b4e074c75a9b8961fc90882fba423d1a3e29ff833155813"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/seoAuditReport_trackUniqueVisitorsPerPost/1/source.json",
+          "source_sha256": "8d4b04cc48af24ab5b4e074c75a9b8961fc90882fba423d1a3e29ff833155813",
+          "public": {
+            "seoAuditReport": {
+              "passed": true,
+              "report_sha256": "8706d410f6afcd2c7c06e429aab8cbf3db9ddf9c9430f9bea5f3a82165f9be5d",
+              "test_sha256": "87f541bbea7e8bd4d2a5448c97edb9d031ce458d9b40b90a8e39ad4a7d1a804b",
+              "source_sha256": "8d4b04cc48af24ab5b4e074c75a9b8961fc90882fba423d1a3e29ff833155813"
+            },
+            "trackUniqueVisitorsPerPost": {
+              "passed": false,
+              "report_sha256": "31d2c03932ca738bb1b4f5dc1dc4ed452e4edf29f04fc31683a8fbaf23806817",
+              "test_sha256": "2b30ae91af70558955ff7c315c08e6f6a1d4998913ba847120394a8220944be8",
+              "source_sha256": "8d4b04cc48af24ab5b4e074c75a9b8961fc90882fba423d1a3e29ff833155813"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/seoAuditReport_trackUniqueVisitorsPerPost/2/source.json",
+          "source_sha256": "8d4b04cc48af24ab5b4e074c75a9b8961fc90882fba423d1a3e29ff833155813",
+          "public": {
+            "seoAuditReport": {
+              "passed": true,
+              "report_sha256": "8706d410f6afcd2c7c06e429aab8cbf3db9ddf9c9430f9bea5f3a82165f9be5d",
+              "test_sha256": "87f541bbea7e8bd4d2a5448c97edb9d031ce458d9b40b90a8e39ad4a7d1a804b",
+              "source_sha256": "8d4b04cc48af24ab5b4e074c75a9b8961fc90882fba423d1a3e29ff833155813"
+            },
+            "trackUniqueVisitorsPerPost": {
+              "passed": false,
+              "report_sha256": "31d2c03932ca738bb1b4f5dc1dc4ed452e4edf29f04fc31683a8fbaf23806817",
+              "test_sha256": "2b30ae91af70558955ff7c315c08e6f6a1d4998913ba847120394a8220944be8",
+              "source_sha256": "8d4b04cc48af24ab5b4e074c75a9b8961fc90882fba423d1a3e29ff833155813"
+            }
+          },
+          "attempt": 2
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/blogging/seoAuditReport_trackUniqueVisitorsPerPost/3/source.json",
+          "source_sha256": "8d4b04cc48af24ab5b4e074c75a9b8961fc90882fba423d1a3e29ff833155813",
+          "public": {
+            "seoAuditReport": {
+              "passed": true,
+              "report_sha256": "8706d410f6afcd2c7c06e429aab8cbf3db9ddf9c9430f9bea5f3a82165f9be5d",
+              "test_sha256": "87f541bbea7e8bd4d2a5448c97edb9d031ce458d9b40b90a8e39ad4a7d1a804b",
+              "source_sha256": "8d4b04cc48af24ab5b4e074c75a9b8961fc90882fba423d1a3e29ff833155813"
+            },
+            "trackUniqueVisitorsPerPost": {
+              "passed": false,
+              "report_sha256": "31d2c03932ca738bb1b4f5dc1dc4ed452e4edf29f04fc31683a8fbaf23806817",
+              "test_sha256": "2b30ae91af70558955ff7c315c08e6f6a1d4998913ba847120394a8220944be8",
+              "source_sha256": "8d4b04cc48af24ab5b4e074c75a9b8961fc90882fba423d1a3e29ff833155813"
+            }
+          },
+          "attempt": 3
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/taskmanagement/customNotificationsForUsers_viewTaskHistory/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/taskmanagement/customNotificationsForUsers_viewTaskHistory/3/source.json",
+        "source_sha256": "4ff37fec4c3a6cba06807b06ff1803b83bcc88ef71b70a2e9586c26c0c544edd",
+        "public": {
+          "customNotificationsForUsers": {
+            "passed": true,
+            "report_sha256": "e790160fce65db5c622e43af35be99735230e6f90cfae0624a5409d99254b5e9",
+            "test_sha256": "2a2320b0fceb27f3f272aebc7f234c148a44b15f74e59afe9d0af2aa490a7a02",
+            "source_sha256": "4ff37fec4c3a6cba06807b06ff1803b83bcc88ef71b70a2e9586c26c0c544edd"
+          },
+          "viewTaskHistory": {
+            "passed": true,
+            "report_sha256": "fc41cdc282c9168f0319178c00dab296643a0a0915f0eb146f722c8796a79470",
+            "test_sha256": "bf3217aa7f1c70f045ae409070abce822cb5de300cbf8b38f636da864fb681f2",
+            "source_sha256": "4ff37fec4c3a6cba06807b06ff1803b83bcc88ef71b70a2e9586c26c0c544edd"
+          }
+        },
+        "attempt": 3
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/taskmanagement/customNotificationsForUsers_viewTaskHistory/1/source.json",
+          "source_sha256": "97eb5367a6117424a3dce282b631dd5746f78bd007aaf8d17c1db96a7f64f25c",
+          "public": {
+            "customNotificationsForUsers": {
+              "passed": false,
+              "report_sha256": "0357173bc3df2f6a9cfeb637a3bd6c332c678596805769808117fe40cf8966a8",
+              "test_sha256": "2a2320b0fceb27f3f272aebc7f234c148a44b15f74e59afe9d0af2aa490a7a02",
+              "source_sha256": "97eb5367a6117424a3dce282b631dd5746f78bd007aaf8d17c1db96a7f64f25c"
+            },
+            "viewTaskHistory": {
+              "passed": false,
+              "report_sha256": "cc91144775025e8ec6066b743fe734018bde25b7079c658c76a8f682a8b2cbe6",
+              "test_sha256": "bf3217aa7f1c70f045ae409070abce822cb5de300cbf8b38f636da864fb681f2",
+              "source_sha256": "97eb5367a6117424a3dce282b631dd5746f78bd007aaf8d17c1db96a7f64f25c"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/taskmanagement/customNotificationsForUsers_viewTaskHistory/2/source.json",
+          "source_sha256": "97eb5367a6117424a3dce282b631dd5746f78bd007aaf8d17c1db96a7f64f25c",
+          "public": {
+            "customNotificationsForUsers": {
+              "passed": false,
+              "report_sha256": "0357173bc3df2f6a9cfeb637a3bd6c332c678596805769808117fe40cf8966a8",
+              "test_sha256": "2a2320b0fceb27f3f272aebc7f234c148a44b15f74e59afe9d0af2aa490a7a02",
+              "source_sha256": "97eb5367a6117424a3dce282b631dd5746f78bd007aaf8d17c1db96a7f64f25c"
+            },
+            "viewTaskHistory": {
+              "passed": false,
+              "report_sha256": "cc91144775025e8ec6066b743fe734018bde25b7079c658c76a8f682a8b2cbe6",
+              "test_sha256": "bf3217aa7f1c70f045ae409070abce822cb5de300cbf8b38f636da864fb681f2",
+              "source_sha256": "97eb5367a6117424a3dce282b631dd5746f78bd007aaf8d17c1db96a7f64f25c"
+            }
+          },
+          "attempt": 2
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/taskmanagement/customNotificationsForUsers_viewTaskHistory/3/source.json",
+          "source_sha256": "4ff37fec4c3a6cba06807b06ff1803b83bcc88ef71b70a2e9586c26c0c544edd",
+          "public": {
+            "customNotificationsForUsers": {
+              "passed": true,
+              "report_sha256": "e790160fce65db5c622e43af35be99735230e6f90cfae0624a5409d99254b5e9",
+              "test_sha256": "2a2320b0fceb27f3f272aebc7f234c148a44b15f74e59afe9d0af2aa490a7a02",
+              "source_sha256": "4ff37fec4c3a6cba06807b06ff1803b83bcc88ef71b70a2e9586c26c0c544edd"
+            },
+            "viewTaskHistory": {
+              "passed": true,
+              "report_sha256": "fc41cdc282c9168f0319178c00dab296643a0a0915f0eb146f722c8796a79470",
+              "test_sha256": "bf3217aa7f1c70f045ae409070abce822cb5de300cbf8b38f636da864fb681f2",
+              "source_sha256": "4ff37fec4c3a6cba06807b06ff1803b83bcc88ef71b70a2e9586c26c0c544edd"
+            }
+          },
+          "attempt": 3
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/taskmanagement/projectMilestoneAddition_viewUserPerformanceMetrics/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/taskmanagement/projectMilestoneAddition_viewUserPerformanceMetrics/2/source.json",
+        "source_sha256": "d2a7b0a023f248eae76d6fe1361906446adcc70d6fb0fdb0820a1efe8d117808",
+        "public": {
+          "projectMilestoneAddition": {
+            "passed": true,
+            "report_sha256": "ca77f824b1f14d4a7d983a1937405beab22313a1e08c9bc65a8abe784197a933",
+            "test_sha256": "844a38a99892bbb1e23583ece508dafb84f211738814805071b3e527fa7d2c9b",
+            "source_sha256": "d2a7b0a023f248eae76d6fe1361906446adcc70d6fb0fdb0820a1efe8d117808"
+          },
+          "viewUserPerformanceMetrics": {
+            "passed": true,
+            "report_sha256": "2310dceb1a9783da7cc673dd486446af37e8c21b6394b8dbccf7af7e8f0ac249",
+            "test_sha256": "9246f33fb711b90cd38c1478d3fc83de3f39110507fd790f16b4a6edcd5647ea",
+            "source_sha256": "d2a7b0a023f248eae76d6fe1361906446adcc70d6fb0fdb0820a1efe8d117808"
+          }
+        },
+        "attempt": 2
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/taskmanagement/projectMilestoneAddition_viewUserPerformanceMetrics/1/source.json",
+          "source_sha256": "ae066cb1e42e60f95b92cba3ed9d31dade8fa5e950b7bea0411721a6d1065326",
+          "public": {
+            "projectMilestoneAddition": {
+              "passed": false,
+              "report_sha256": "6cb179a88792f8492e807a09591be1f9b62268560a49734ade12090ded890e18",
+              "test_sha256": "844a38a99892bbb1e23583ece508dafb84f211738814805071b3e527fa7d2c9b",
+              "source_sha256": "ae066cb1e42e60f95b92cba3ed9d31dade8fa5e950b7bea0411721a6d1065326"
+            },
+            "viewUserPerformanceMetrics": {
+              "passed": false,
+              "report_sha256": "1e12430a0f38689594eb7f1c2df31afc257bb1c362c4fb8b3d88f0ad7a4ae151",
+              "test_sha256": "9246f33fb711b90cd38c1478d3fc83de3f39110507fd790f16b4a6edcd5647ea",
+              "source_sha256": "ae066cb1e42e60f95b92cba3ed9d31dade8fa5e950b7bea0411721a6d1065326"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/taskmanagement/projectMilestoneAddition_viewUserPerformanceMetrics/2/source.json",
+          "source_sha256": "d2a7b0a023f248eae76d6fe1361906446adcc70d6fb0fdb0820a1efe8d117808",
+          "public": {
+            "projectMilestoneAddition": {
+              "passed": true,
+              "report_sha256": "ca77f824b1f14d4a7d983a1937405beab22313a1e08c9bc65a8abe784197a933",
+              "test_sha256": "844a38a99892bbb1e23583ece508dafb84f211738814805071b3e527fa7d2c9b",
+              "source_sha256": "d2a7b0a023f248eae76d6fe1361906446adcc70d6fb0fdb0820a1efe8d117808"
+            },
+            "viewUserPerformanceMetrics": {
+              "passed": true,
+              "report_sha256": "2310dceb1a9783da7cc673dd486446af37e8c21b6394b8dbccf7af7e8f0ac249",
+              "test_sha256": "9246f33fb711b90cd38c1478d3fc83de3f39110507fd790f16b4a6edcd5647ea",
+              "source_sha256": "d2a7b0a023f248eae76d6fe1361906446adcc70d6fb0fdb0820a1efe8d117808"
+            }
+          },
+          "attempt": 2
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/taskmanagement/removeTaskDependencies_updateTaskProgress/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/taskmanagement/removeTaskDependencies_updateTaskProgress/1/source.json",
+        "source_sha256": "9e88ddf093f7a6894e9dc82293718403b2865c759bf8817e81838652e182a6c0",
+        "public": {
+          "removeTaskDependencies": {
+            "passed": true,
+            "report_sha256": "b7ec0f64def837b9e99fc34435c61c594e808f0f462f76eb9573acd12d10f257",
+            "test_sha256": "3b794da065edb9d9208bbbcca4f297a875beda64db2a35dba731265e37de2544",
+            "source_sha256": "9e88ddf093f7a6894e9dc82293718403b2865c759bf8817e81838652e182a6c0"
+          },
+          "updateTaskProgress": {
+            "passed": true,
+            "report_sha256": "d09544befa790f17d9289c4004f32eee3dfad22c6c53c3383e724fa492666905",
+            "test_sha256": "3fe14b68a703f699e8525b9085893c64ac2c50fe0a276c0645638c8d436b2951",
+            "source_sha256": "9e88ddf093f7a6894e9dc82293718403b2865c759bf8817e81838652e182a6c0"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/taskmanagement/removeTaskDependencies_updateTaskProgress/1/source.json",
+          "source_sha256": "9e88ddf093f7a6894e9dc82293718403b2865c759bf8817e81838652e182a6c0",
+          "public": {
+            "removeTaskDependencies": {
+              "passed": true,
+              "report_sha256": "b7ec0f64def837b9e99fc34435c61c594e808f0f462f76eb9573acd12d10f257",
+              "test_sha256": "3b794da065edb9d9208bbbcca4f297a875beda64db2a35dba731265e37de2544",
+              "source_sha256": "9e88ddf093f7a6894e9dc82293718403b2865c759bf8817e81838652e182a6c0"
+            },
+            "updateTaskProgress": {
+              "passed": true,
+              "report_sha256": "d09544befa790f17d9289c4004f32eee3dfad22c6c53c3383e724fa492666905",
+              "test_sha256": "3fe14b68a703f699e8525b9085893c64ac2c50fe0a276c0645638c8d436b2951",
+              "source_sha256": "9e88ddf093f7a6894e9dc82293718403b2865c759bf8817e81838652e182a6c0"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/taskmanagement/setTaskDependencies_updateTaskProgress/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/taskmanagement/setTaskDependencies_updateTaskProgress/1/source.json",
+        "source_sha256": "bdedcfa4006178a7ae0df0760baabbde9dd6fc7280d4cf450196829fac338b5a",
+        "public": {
+          "setTaskDependencies": {
+            "passed": false,
+            "report_sha256": "886e05733fdc483c4f01506d3a84449ef4a851b40c018eb0b20255e088e1012c",
+            "test_sha256": "8f4820116155caef9f52dcb4c5e5afa8f4e877eaf1df74b0f37e8ceb5702d9ad",
+            "source_sha256": "bdedcfa4006178a7ae0df0760baabbde9dd6fc7280d4cf450196829fac338b5a"
+          },
+          "updateTaskProgress": {
+            "passed": false,
+            "report_sha256": "b17a8f8c9ecbf55e4936de6dbc519535be5d6a47a8e8b3603b29ebae484f9a2b",
+            "test_sha256": "3fe14b68a703f699e8525b9085893c64ac2c50fe0a276c0645638c8d436b2951",
+            "source_sha256": "bdedcfa4006178a7ae0df0760baabbde9dd6fc7280d4cf450196829fac338b5a"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/taskmanagement/setTaskDependencies_updateTaskProgress/1/source.json",
+          "source_sha256": "bdedcfa4006178a7ae0df0760baabbde9dd6fc7280d4cf450196829fac338b5a",
+          "public": {
+            "setTaskDependencies": {
+              "passed": false,
+              "report_sha256": "886e05733fdc483c4f01506d3a84449ef4a851b40c018eb0b20255e088e1012c",
+              "test_sha256": "8f4820116155caef9f52dcb4c5e5afa8f4e877eaf1df74b0f37e8ceb5702d9ad",
+              "source_sha256": "bdedcfa4006178a7ae0df0760baabbde9dd6fc7280d4cf450196829fac338b5a"
+            },
+            "updateTaskProgress": {
+              "passed": false,
+              "report_sha256": "b17a8f8c9ecbf55e4936de6dbc519535be5d6a47a8e8b3603b29ebae484f9a2b",
+              "test_sha256": "3fe14b68a703f699e8525b9085893c64ac2c50fe0a276c0645638c8d436b2951",
+              "source_sha256": "bdedcfa4006178a7ae0df0760baabbde9dd6fc7280d4cf450196829fac338b5a"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/taskmanagement/setTaskDependencies_updateTaskProgress/2/source.json",
+          "source_sha256": "bdedcfa4006178a7ae0df0760baabbde9dd6fc7280d4cf450196829fac338b5a",
+          "public": {
+            "setTaskDependencies": {
+              "passed": false,
+              "report_sha256": "886e05733fdc483c4f01506d3a84449ef4a851b40c018eb0b20255e088e1012c",
+              "test_sha256": "8f4820116155caef9f52dcb4c5e5afa8f4e877eaf1df74b0f37e8ceb5702d9ad",
+              "source_sha256": "bdedcfa4006178a7ae0df0760baabbde9dd6fc7280d4cf450196829fac338b5a"
+            },
+            "updateTaskProgress": {
+              "passed": false,
+              "report_sha256": "b17a8f8c9ecbf55e4936de6dbc519535be5d6a47a8e8b3603b29ebae484f9a2b",
+              "test_sha256": "3fe14b68a703f699e8525b9085893c64ac2c50fe0a276c0645638c8d436b2951",
+              "source_sha256": "bdedcfa4006178a7ae0df0760baabbde9dd6fc7280d4cf450196829fac338b5a"
+            }
+          },
+          "attempt": 2
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/taskmanagement/setTaskDependencies_updateTaskProgress/3/source.json",
+          "source_sha256": "bdedcfa4006178a7ae0df0760baabbde9dd6fc7280d4cf450196829fac338b5a",
+          "public": {
+            "setTaskDependencies": {
+              "passed": false,
+              "report_sha256": "886e05733fdc483c4f01506d3a84449ef4a851b40c018eb0b20255e088e1012c",
+              "test_sha256": "8f4820116155caef9f52dcb4c5e5afa8f4e877eaf1df74b0f37e8ceb5702d9ad",
+              "source_sha256": "bdedcfa4006178a7ae0df0760baabbde9dd6fc7280d4cf450196829fac338b5a"
+            },
+            "updateTaskProgress": {
+              "passed": false,
+              "report_sha256": "b17a8f8c9ecbf55e4936de6dbc519535be5d6a47a8e8b3603b29ebae484f9a2b",
+              "test_sha256": "3fe14b68a703f699e8525b9085893c64ac2c50fe0a276c0645638c8d436b2951",
+              "source_sha256": "bdedcfa4006178a7ae0df0760baabbde9dd6fc7280d4cf450196829fac338b5a"
+            }
+          },
+          "attempt": 3
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/taskmanagement/taskResourcesAllocation_taskSortDueDate/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/taskmanagement/taskResourcesAllocation_taskSortDueDate/1/source.json",
+        "source_sha256": "e03a7acbbd7ee9fe46c9af1e72f27c654f769f68e9417554653fccdce56148bd",
+        "public": {
+          "taskResourcesAllocation": {
+            "passed": true,
+            "report_sha256": "33890e1ea7de5cb32ec799b9e89d6f7bfc874fae54be081480888a7113fdfd38",
+            "test_sha256": "a12c9e8a88bff56e29e266e6e2bbdb93fa0b4e0a7256da0f0476d03272a0ae44",
+            "source_sha256": "e03a7acbbd7ee9fe46c9af1e72f27c654f769f68e9417554653fccdce56148bd"
+          },
+          "taskSortDueDate": {
+            "passed": true,
+            "report_sha256": "8d4b2e65fcd92907f1fd6144bfc5c10ffbd207c432440452ff9b34defb31dbb3",
+            "test_sha256": "54ed9cfd8b50f34e166448c621b92a8062110043358c8a7609f2a7562af3fb14",
+            "source_sha256": "e03a7acbbd7ee9fe46c9af1e72f27c654f769f68e9417554653fccdce56148bd"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/direct/deepseek-flash/taskmanagement/taskResourcesAllocation_taskSortDueDate/1/source.json",
+          "source_sha256": "e03a7acbbd7ee9fe46c9af1e72f27c654f769f68e9417554653fccdce56148bd",
+          "public": {
+            "taskResourcesAllocation": {
+              "passed": true,
+              "report_sha256": "33890e1ea7de5cb32ec799b9e89d6f7bfc874fae54be081480888a7113fdfd38",
+              "test_sha256": "a12c9e8a88bff56e29e266e6e2bbdb93fa0b4e0a7256da0f0476d03272a0ae44",
+              "source_sha256": "e03a7acbbd7ee9fe46c9af1e72f27c654f769f68e9417554653fccdce56148bd"
+            },
+            "taskSortDueDate": {
+              "passed": true,
+              "report_sha256": "8d4b2e65fcd92907f1fd6144bfc5c10ffbd207c432440452ff9b34defb31dbb3",
+              "test_sha256": "54ed9cfd8b50f34e166448c621b92a8062110043358c8a7609f2a7562af3fb14",
+              "source_sha256": "e03a7acbbd7ee9fe46c9af1e72f27c654f769f68e9417554653fccdce56148bd"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/addSitemap/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/addSitemap/1/source.json",
+        "source_sha256": "9735a6d351214effa6347ebf24f5cdb3dcfce4db3fda666cb712ee8fe601f4c1",
+        "public": {
+          "addSitemap": {
+            "passed": true,
+            "report_sha256": "a5971bdbb89d26ea99a09a75b30c92b1149dff5b32dd1d1b45548d271815db18",
+            "test_sha256": "f2a6748d84107a26058f72381746306627e21dc009c5d1b2ff5c7125e742894f",
+            "source_sha256": "9735a6d351214effa6347ebf24f5cdb3dcfce4db3fda666cb712ee8fe601f4c1"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/addSitemap/1/source.json",
+          "source_sha256": "9735a6d351214effa6347ebf24f5cdb3dcfce4db3fda666cb712ee8fe601f4c1",
+          "public": {
+            "addSitemap": {
+              "passed": true,
+              "report_sha256": "a5971bdbb89d26ea99a09a75b30c92b1149dff5b32dd1d1b45548d271815db18",
+              "test_sha256": "f2a6748d84107a26058f72381746306627e21dc009c5d1b2ff5c7125e742894f",
+              "source_sha256": "9735a6d351214effa6347ebf24f5cdb3dcfce4db3fda666cb712ee8fe601f4c1"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/createBlogPost/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/createBlogPost/1/source.json",
+        "source_sha256": "282eaaa0f3aac1629837f4d3f28837aa91fd50de48f12524220f88f0ef1a11ac",
+        "public": {
+          "createBlogPost": {
+            "passed": false,
+            "report_sha256": "7287e6d176d7a99ad5a28c5eb836a7d5357888f560d2282c5847a6b60a925c34",
+            "test_sha256": "c258ccb99c34aab0403b4165dcaee0aaa33fb4188f362b8cf7d27912ec540fba",
+            "source_sha256": "282eaaa0f3aac1629837f4d3f28837aa91fd50de48f12524220f88f0ef1a11ac"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/createBlogPost/1/source.json",
+          "source_sha256": "282eaaa0f3aac1629837f4d3f28837aa91fd50de48f12524220f88f0ef1a11ac",
+          "public": {
+            "createBlogPost": {
+              "passed": false,
+              "report_sha256": "7287e6d176d7a99ad5a28c5eb836a7d5357888f560d2282c5847a6b60a925c34",
+              "test_sha256": "c258ccb99c34aab0403b4165dcaee0aaa33fb4188f362b8cf7d27912ec540fba",
+              "source_sha256": "282eaaa0f3aac1629837f4d3f28837aa91fd50de48f12524220f88f0ef1a11ac"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/createBlogPost/2/source.json",
+          "source_sha256": "282eaaa0f3aac1629837f4d3f28837aa91fd50de48f12524220f88f0ef1a11ac",
+          "public": {
+            "createBlogPost": {
+              "passed": false,
+              "report_sha256": "7287e6d176d7a99ad5a28c5eb836a7d5357888f560d2282c5847a6b60a925c34",
+              "test_sha256": "c258ccb99c34aab0403b4165dcaee0aaa33fb4188f362b8cf7d27912ec540fba",
+              "source_sha256": "282eaaa0f3aac1629837f4d3f28837aa91fd50de48f12524220f88f0ef1a11ac"
+            }
+          },
+          "attempt": 2
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/createBlogPost/3/source.json",
+          "source_sha256": "282eaaa0f3aac1629837f4d3f28837aa91fd50de48f12524220f88f0ef1a11ac",
+          "public": {
+            "createBlogPost": {
+              "passed": false,
+              "report_sha256": "7287e6d176d7a99ad5a28c5eb836a7d5357888f560d2282c5847a6b60a925c34",
+              "test_sha256": "c258ccb99c34aab0403b4165dcaee0aaa33fb4188f362b8cf7d27912ec540fba",
+              "source_sha256": "282eaaa0f3aac1629837f4d3f28837aa91fd50de48f12524220f88f0ef1a11ac"
+            }
+          },
+          "attempt": 3
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/deleteBlogPost/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/deleteBlogPost/1/source.json",
+        "source_sha256": "10852f59942aeac08314b12a2a7d5f2c909bfc18ea783392b15e3383d6edfd81",
+        "public": {
+          "deleteBlogPost": {
+            "passed": false,
+            "report_sha256": "c58b09c4c6dd8a9b5c78a4524413a064233bd08c820b8479abdd2cd5ea2ec5a1",
+            "test_sha256": "331e921d5c657a068ac49f335fe32f87cfe49b3104e5c78fddbda2218fe2865c",
+            "source_sha256": "10852f59942aeac08314b12a2a7d5f2c909bfc18ea783392b15e3383d6edfd81"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/deleteBlogPost/1/source.json",
+          "source_sha256": "10852f59942aeac08314b12a2a7d5f2c909bfc18ea783392b15e3383d6edfd81",
+          "public": {
+            "deleteBlogPost": {
+              "passed": false,
+              "report_sha256": "c58b09c4c6dd8a9b5c78a4524413a064233bd08c820b8479abdd2cd5ea2ec5a1",
+              "test_sha256": "331e921d5c657a068ac49f335fe32f87cfe49b3104e5c78fddbda2218fe2865c",
+              "source_sha256": "10852f59942aeac08314b12a2a7d5f2c909bfc18ea783392b15e3383d6edfd81"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/deleteBlogPost/2/source.json",
+          "source_sha256": "202bebf43775ff3432cfaf8180afc323d3f870207523d061dbc865256b5ce97c",
+          "public": {
+            "deleteBlogPost": {
+              "passed": false,
+              "report_sha256": "09835cc80dfa4f5a12b1b8aaeacdf20ddbfc2eb089e60c60a30a3973ab5f3ba8",
+              "test_sha256": "331e921d5c657a068ac49f335fe32f87cfe49b3104e5c78fddbda2218fe2865c",
+              "source_sha256": "202bebf43775ff3432cfaf8180afc323d3f870207523d061dbc865256b5ce97c"
+            }
+          },
+          "attempt": 2
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/deleteBlogPost/3/source.json",
+          "source_sha256": "202bebf43775ff3432cfaf8180afc323d3f870207523d061dbc865256b5ce97c",
+          "public": {
+            "deleteBlogPost": {
+              "passed": false,
+              "report_sha256": "09835cc80dfa4f5a12b1b8aaeacdf20ddbfc2eb089e60c60a30a3973ab5f3ba8",
+              "test_sha256": "331e921d5c657a068ac49f335fe32f87cfe49b3104e5c78fddbda2218fe2865c",
+              "source_sha256": "202bebf43775ff3432cfaf8180afc323d3f870207523d061dbc865256b5ce97c"
+            }
+          },
+          "attempt": 3
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/retrieveCommentCount/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/retrieveCommentCount/2/source.json",
+        "source_sha256": "cb8943268c475f357b43c1f3929ae9eaa6560e50c365c87873cc36b4b2bd145f",
+        "public": {
+          "retrieveCommentCount": {
+            "passed": true,
+            "report_sha256": "7010cabc6a52c932149cf63876589db164bd56965430286841b26d5bc1c2489f",
+            "test_sha256": "0e07583084c686171e13cc21bc5e7d4e2095576b0c7f28ee25c4d8bd7293712e",
+            "source_sha256": "cb8943268c475f357b43c1f3929ae9eaa6560e50c365c87873cc36b4b2bd145f"
+          }
+        },
+        "attempt": 2
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/retrieveCommentCount/1/source.json",
+          "source_sha256": "19f1b1b6558ab6ac481ba8d54017fd363da08b76489d04f989436abd575ca3c3",
+          "public": {
+            "retrieveCommentCount": {
+              "passed": false,
+              "report_sha256": "e833491f420439d42b38dc99a7d138ae6a6b274a38e8d2123564c895e1c83f59",
+              "test_sha256": "0e07583084c686171e13cc21bc5e7d4e2095576b0c7f28ee25c4d8bd7293712e",
+              "source_sha256": "19f1b1b6558ab6ac481ba8d54017fd363da08b76489d04f989436abd575ca3c3"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/retrieveCommentCount/2/source.json",
+          "source_sha256": "cb8943268c475f357b43c1f3929ae9eaa6560e50c365c87873cc36b4b2bd145f",
+          "public": {
+            "retrieveCommentCount": {
+              "passed": true,
+              "report_sha256": "7010cabc6a52c932149cf63876589db164bd56965430286841b26d5bc1c2489f",
+              "test_sha256": "0e07583084c686171e13cc21bc5e7d4e2095576b0c7f28ee25c4d8bd7293712e",
+              "source_sha256": "cb8943268c475f357b43c1f3929ae9eaa6560e50c365c87873cc36b4b2bd145f"
+            }
+          },
+          "attempt": 2
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/retrievePostsByTag/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/retrievePostsByTag/2/source.json",
+        "source_sha256": "61d1f10da83b6166bfda9a84a5ea2883c52c0e8f3a0a6f96b8c516ff43a4e2a9",
+        "public": {
+          "retrievePostsByTag": {
+            "passed": true,
+            "report_sha256": "db0179678ce94e7b7af4feac7549e156161989ae1375cfb8162359bc2a765e60",
+            "test_sha256": "0cd214a2d331af6503378b33c4588e019a04e76560036014a4f62ddc63a80479",
+            "source_sha256": "61d1f10da83b6166bfda9a84a5ea2883c52c0e8f3a0a6f96b8c516ff43a4e2a9"
+          }
+        },
+        "attempt": 2
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/retrievePostsByTag/1/source.json",
+          "source_sha256": "092d0660b660d67f3e01526194cec79d4b4aff9ea08d8ecfa2a98cc143757e99",
+          "public": {
+            "retrievePostsByTag": {
+              "passed": false,
+              "report_sha256": "4eeeea3849ef40e69ab40aaa5ca000bb09121d177e6672bf89eb23d875000dd6",
+              "test_sha256": "0cd214a2d331af6503378b33c4588e019a04e76560036014a4f62ddc63a80479",
+              "source_sha256": "092d0660b660d67f3e01526194cec79d4b4aff9ea08d8ecfa2a98cc143757e99"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/retrievePostsByTag/2/source.json",
+          "source_sha256": "61d1f10da83b6166bfda9a84a5ea2883c52c0e8f3a0a6f96b8c516ff43a4e2a9",
+          "public": {
+            "retrievePostsByTag": {
+              "passed": true,
+              "report_sha256": "db0179678ce94e7b7af4feac7549e156161989ae1375cfb8162359bc2a765e60",
+              "test_sha256": "0cd214a2d331af6503378b33c4588e019a04e76560036014a4f62ddc63a80479",
+              "source_sha256": "61d1f10da83b6166bfda9a84a5ea2883c52c0e8f3a0a6f96b8c516ff43a4e2a9"
+            }
+          },
+          "attempt": 2
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/retrieveScheduledBlogPosts/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/retrieveScheduledBlogPosts/2/source.json",
+        "source_sha256": "d913432c6815d074bf1a7e4d8120f224e2d5f815aa8498236c8dacb666af334f",
+        "public": {
+          "retrieveScheduledBlogPosts": {
+            "passed": true,
+            "report_sha256": "1c876f6f850e03f766c581596da9573cba40dae886c467d793fc9baf8fdbecd3",
+            "test_sha256": "2c847d1493afcdac50de9f147007c44b82d0012946d02d26938d7bca6ecc2f30",
+            "source_sha256": "d913432c6815d074bf1a7e4d8120f224e2d5f815aa8498236c8dacb666af334f"
+          }
+        },
+        "attempt": 2
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/retrieveScheduledBlogPosts/1/source.json",
+          "source_sha256": "8b8e2f12789ace2acc2d182ac0d146fad4c5d9ad9571cd7e956fd2affaac2328",
+          "public": {
+            "retrieveScheduledBlogPosts": {
+              "passed": false,
+              "report_sha256": "4d54565ac2579a281c0b80205ad79a64f4887ceacb1489cc0c7ade541d3270fc",
+              "test_sha256": "2c847d1493afcdac50de9f147007c44b82d0012946d02d26938d7bca6ecc2f30",
+              "source_sha256": "8b8e2f12789ace2acc2d182ac0d146fad4c5d9ad9571cd7e956fd2affaac2328"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/retrieveScheduledBlogPosts/2/source.json",
+          "source_sha256": "d913432c6815d074bf1a7e4d8120f224e2d5f815aa8498236c8dacb666af334f",
+          "public": {
+            "retrieveScheduledBlogPosts": {
+              "passed": true,
+              "report_sha256": "1c876f6f850e03f766c581596da9573cba40dae886c467d793fc9baf8fdbecd3",
+              "test_sha256": "2c847d1493afcdac50de9f147007c44b82d0012946d02d26938d7bca6ecc2f30",
+              "source_sha256": "d913432c6815d074bf1a7e4d8120f224e2d5f815aa8498236c8dacb666af334f"
+            }
+          },
+          "attempt": 2
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/seoAuditReport/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/seoAuditReport/3/source.json",
+        "source_sha256": "14c684ae9dd08d2072348606938e3108a5cb8ca3ef72110d77aded048ba24129",
+        "public": {
+          "seoAuditReport": {
+            "passed": true,
+            "report_sha256": "6792503d5277a9f0e258f27e21f1da088443d0276c350528c7eca537a7f7cf00",
+            "test_sha256": "87f541bbea7e8bd4d2a5448c97edb9d031ce458d9b40b90a8e39ad4a7d1a804b",
+            "source_sha256": "14c684ae9dd08d2072348606938e3108a5cb8ca3ef72110d77aded048ba24129"
+          }
+        },
+        "attempt": 3
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/seoAuditReport/1/source.json",
+          "source_sha256": "240bb60c7bf97054ed6a29de097250147bedf9e1f7fdbea9405fe201ecb8d540",
+          "public": {
+            "seoAuditReport": {
+              "passed": false,
+              "report_sha256": "2decd34830f277e4f1e889b8e46d40a42db949016197d55abcb0ebb8042d69d2",
+              "test_sha256": "87f541bbea7e8bd4d2a5448c97edb9d031ce458d9b40b90a8e39ad4a7d1a804b",
+              "source_sha256": "240bb60c7bf97054ed6a29de097250147bedf9e1f7fdbea9405fe201ecb8d540"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/seoAuditReport/2/source.json",
+          "source_sha256": "240bb60c7bf97054ed6a29de097250147bedf9e1f7fdbea9405fe201ecb8d540",
+          "public": {
+            "seoAuditReport": {
+              "passed": false,
+              "report_sha256": "2decd34830f277e4f1e889b8e46d40a42db949016197d55abcb0ebb8042d69d2",
+              "test_sha256": "87f541bbea7e8bd4d2a5448c97edb9d031ce458d9b40b90a8e39ad4a7d1a804b",
+              "source_sha256": "240bb60c7bf97054ed6a29de097250147bedf9e1f7fdbea9405fe201ecb8d540"
+            }
+          },
+          "attempt": 2
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/seoAuditReport/3/source.json",
+          "source_sha256": "14c684ae9dd08d2072348606938e3108a5cb8ca3ef72110d77aded048ba24129",
+          "public": {
+            "seoAuditReport": {
+              "passed": true,
+              "report_sha256": "6792503d5277a9f0e258f27e21f1da088443d0276c350528c7eca537a7f7cf00",
+              "test_sha256": "87f541bbea7e8bd4d2a5448c97edb9d031ce458d9b40b90a8e39ad4a7d1a804b",
+              "source_sha256": "14c684ae9dd08d2072348606938e3108a5cb8ca3ef72110d77aded048ba24129"
+            }
+          },
+          "attempt": 3
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/trackBounceRate/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/trackBounceRate/1/source.json",
+        "source_sha256": "e793f325d62f45acf328e5f06b00d4239e12fc8ea63d4303ea4bfde1f954cd49",
+        "public": {
+          "trackBounceRate": {
+            "passed": false,
+            "report_sha256": "2f28a618bd6afa747b207ddc80e696bf1b8d763d964fe15ac6aa10d521d36302",
+            "test_sha256": "9e161f0a485baa0a41b5725a214589cb54c5ad0df3289c57ca12bf84aefd2b6f",
+            "source_sha256": "e793f325d62f45acf328e5f06b00d4239e12fc8ea63d4303ea4bfde1f954cd49"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/trackBounceRate/1/source.json",
+          "source_sha256": "e793f325d62f45acf328e5f06b00d4239e12fc8ea63d4303ea4bfde1f954cd49",
+          "public": {
+            "trackBounceRate": {
+              "passed": false,
+              "report_sha256": "2f28a618bd6afa747b207ddc80e696bf1b8d763d964fe15ac6aa10d521d36302",
+              "test_sha256": "9e161f0a485baa0a41b5725a214589cb54c5ad0df3289c57ca12bf84aefd2b6f",
+              "source_sha256": "e793f325d62f45acf328e5f06b00d4239e12fc8ea63d4303ea4bfde1f954cd49"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/trackBounceRate/2/source.json",
+          "source_sha256": "e793f325d62f45acf328e5f06b00d4239e12fc8ea63d4303ea4bfde1f954cd49",
+          "public": {
+            "trackBounceRate": {
+              "passed": false,
+              "report_sha256": "2f28a618bd6afa747b207ddc80e696bf1b8d763d964fe15ac6aa10d521d36302",
+              "test_sha256": "9e161f0a485baa0a41b5725a214589cb54c5ad0df3289c57ca12bf84aefd2b6f",
+              "source_sha256": "e793f325d62f45acf328e5f06b00d4239e12fc8ea63d4303ea4bfde1f954cd49"
+            }
+          },
+          "attempt": 2
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/trackBounceRate/3/source.json",
+          "source_sha256": "e793f325d62f45acf328e5f06b00d4239e12fc8ea63d4303ea4bfde1f954cd49",
+          "public": {
+            "trackBounceRate": {
+              "passed": false,
+              "report_sha256": "2f28a618bd6afa747b207ddc80e696bf1b8d763d964fe15ac6aa10d521d36302",
+              "test_sha256": "9e161f0a485baa0a41b5725a214589cb54c5ad0df3289c57ca12bf84aefd2b6f",
+              "source_sha256": "e793f325d62f45acf328e5f06b00d4239e12fc8ea63d4303ea4bfde1f954cd49"
+            }
+          },
+          "attempt": 3
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/trackPostViews/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/trackPostViews/2/source.json",
+        "source_sha256": "b366547c32ceebed36c102ab1ba9eb2d001b06ae223706a1b5adbc720f8ca489",
+        "public": {
+          "trackPostViews": {
+            "passed": true,
+            "report_sha256": "582abd3c15a0554b306ab044d77c3ae68e00be0ec8bba1660fa99a2d6cf9444d",
+            "test_sha256": "4d0510300eaa0feb87eb0c953233f9763d39441a74f3bbae81b980a935834bae",
+            "source_sha256": "b366547c32ceebed36c102ab1ba9eb2d001b06ae223706a1b5adbc720f8ca489"
+          }
+        },
+        "attempt": 2
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/trackPostViews/1/source.json",
+          "source_sha256": "452be8ca57612dc966598a4545c37dd3b78b33586225e7c1db7e2b9caf4bbe3d",
+          "public": {
+            "trackPostViews": {
+              "passed": false,
+              "report_sha256": "100005badb1de65d5627746f2597284305914530322315237e35fa14817fcb7b",
+              "test_sha256": "4d0510300eaa0feb87eb0c953233f9763d39441a74f3bbae81b980a935834bae",
+              "source_sha256": "452be8ca57612dc966598a4545c37dd3b78b33586225e7c1db7e2b9caf4bbe3d"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/trackPostViews/2/source.json",
+          "source_sha256": "b366547c32ceebed36c102ab1ba9eb2d001b06ae223706a1b5adbc720f8ca489",
+          "public": {
+            "trackPostViews": {
+              "passed": true,
+              "report_sha256": "582abd3c15a0554b306ab044d77c3ae68e00be0ec8bba1660fa99a2d6cf9444d",
+              "test_sha256": "4d0510300eaa0feb87eb0c953233f9763d39441a74f3bbae81b980a935834bae",
+              "source_sha256": "b366547c32ceebed36c102ab1ba9eb2d001b06ae223706a1b5adbc720f8ca489"
+            }
+          },
+          "attempt": 2
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/trackUniqueVisitorsPerPost/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/trackUniqueVisitorsPerPost/1/source.json",
+        "source_sha256": "178557988f58e192eafe91c2acc9f6e0c66e15b12fc809fffe4ce6809b8bfd28",
+        "public": {
+          "trackUniqueVisitorsPerPost": {
+            "passed": true,
+            "report_sha256": "20a6df59fc609d4f7e3f49ee4e5cc09dc706af109d3085489b040111ae2cf251",
+            "test_sha256": "2b30ae91af70558955ff7c315c08e6f6a1d4998913ba847120394a8220944be8",
+            "source_sha256": "178557988f58e192eafe91c2acc9f6e0c66e15b12fc809fffe4ce6809b8bfd28"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/blogging/trackUniqueVisitorsPerPost/1/source.json",
+          "source_sha256": "178557988f58e192eafe91c2acc9f6e0c66e15b12fc809fffe4ce6809b8bfd28",
+          "public": {
+            "trackUniqueVisitorsPerPost": {
+              "passed": true,
+              "report_sha256": "20a6df59fc609d4f7e3f49ee4e5cc09dc706af109d3085489b040111ae2cf251",
+              "test_sha256": "2b30ae91af70558955ff7c315c08e6f6a1d4998913ba847120394a8220944be8",
+              "source_sha256": "178557988f58e192eafe91c2acc9f6e0c66e15b12fc809fffe4ce6809b8bfd28"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/customNotificationsForUsers/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/customNotificationsForUsers/2/source.json",
+        "source_sha256": "1086b2546078ae676bca9b34140ef948ddb6ecba3c4a269c08285fa32fa78426",
+        "public": {
+          "customNotificationsForUsers": {
+            "passed": true,
+            "report_sha256": "a3883a5192e2cea55d1aca9118d2d4092d2417403d82cc6010be2821f916563f",
+            "test_sha256": "2a2320b0fceb27f3f272aebc7f234c148a44b15f74e59afe9d0af2aa490a7a02",
+            "source_sha256": "1086b2546078ae676bca9b34140ef948ddb6ecba3c4a269c08285fa32fa78426"
+          }
+        },
+        "attempt": 2
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/customNotificationsForUsers/1/source.json",
+          "source_sha256": "413d68eae5c9b004f5f094487a635cdb103455d0f3d9b2bc007bb766975a42d1",
+          "public": {
+            "customNotificationsForUsers": {
+              "passed": false,
+              "report_sha256": "45998f4d19157ce607dfaff3c42f7a981cd4575180c8729d42f5d6271db7b658",
+              "test_sha256": "2a2320b0fceb27f3f272aebc7f234c148a44b15f74e59afe9d0af2aa490a7a02",
+              "source_sha256": "413d68eae5c9b004f5f094487a635cdb103455d0f3d9b2bc007bb766975a42d1"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/customNotificationsForUsers/2/source.json",
+          "source_sha256": "1086b2546078ae676bca9b34140ef948ddb6ecba3c4a269c08285fa32fa78426",
+          "public": {
+            "customNotificationsForUsers": {
+              "passed": true,
+              "report_sha256": "a3883a5192e2cea55d1aca9118d2d4092d2417403d82cc6010be2821f916563f",
+              "test_sha256": "2a2320b0fceb27f3f272aebc7f234c148a44b15f74e59afe9d0af2aa490a7a02",
+              "source_sha256": "1086b2546078ae676bca9b34140ef948ddb6ecba3c4a269c08285fa32fa78426"
+            }
+          },
+          "attempt": 2
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/projectMilestoneAddition/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/projectMilestoneAddition/3/source.json",
+        "source_sha256": "5f0cecdf1cdfd58c35ce970010e53c0d66b50b089010eb5a2aaf854f35331653",
+        "public": {
+          "projectMilestoneAddition": {
+            "passed": true,
+            "report_sha256": "54c46a58e9c85bfe2616b6fea6b0b0d92d6dd3a464da2d853e9e47ab4783a318",
+            "test_sha256": "844a38a99892bbb1e23583ece508dafb84f211738814805071b3e527fa7d2c9b",
+            "source_sha256": "5f0cecdf1cdfd58c35ce970010e53c0d66b50b089010eb5a2aaf854f35331653"
+          }
+        },
+        "attempt": 3
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/projectMilestoneAddition/1/source.json",
+          "source_sha256": "3300a98c431ac9bbe98dff71c8fcf65368a4994b3feea46fbd90a437f7e7660d",
+          "public": {
+            "projectMilestoneAddition": {
+              "passed": false,
+              "report_sha256": "1070d973f2f60ae5271dcaaeb7e6ba23bcfed35986239e66a1bff5f5b0f69050",
+              "test_sha256": "844a38a99892bbb1e23583ece508dafb84f211738814805071b3e527fa7d2c9b",
+              "source_sha256": "3300a98c431ac9bbe98dff71c8fcf65368a4994b3feea46fbd90a437f7e7660d"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/projectMilestoneAddition/2/source.json",
+          "source_sha256": "3300a98c431ac9bbe98dff71c8fcf65368a4994b3feea46fbd90a437f7e7660d",
+          "public": {
+            "projectMilestoneAddition": {
+              "passed": false,
+              "report_sha256": "1070d973f2f60ae5271dcaaeb7e6ba23bcfed35986239e66a1bff5f5b0f69050",
+              "test_sha256": "844a38a99892bbb1e23583ece508dafb84f211738814805071b3e527fa7d2c9b",
+              "source_sha256": "3300a98c431ac9bbe98dff71c8fcf65368a4994b3feea46fbd90a437f7e7660d"
+            }
+          },
+          "attempt": 2
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/projectMilestoneAddition/3/source.json",
+          "source_sha256": "5f0cecdf1cdfd58c35ce970010e53c0d66b50b089010eb5a2aaf854f35331653",
+          "public": {
+            "projectMilestoneAddition": {
+              "passed": true,
+              "report_sha256": "54c46a58e9c85bfe2616b6fea6b0b0d92d6dd3a464da2d853e9e47ab4783a318",
+              "test_sha256": "844a38a99892bbb1e23583ece508dafb84f211738814805071b3e527fa7d2c9b",
+              "source_sha256": "5f0cecdf1cdfd58c35ce970010e53c0d66b50b089010eb5a2aaf854f35331653"
+            }
+          },
+          "attempt": 3
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/removeTaskDependencies/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/removeTaskDependencies/2/source.json",
+        "source_sha256": "eb55c06f6eaa6a330e04ce0a07895037c24f034a01cdcc694561629840a8f798",
+        "public": {
+          "removeTaskDependencies": {
+            "passed": true,
+            "report_sha256": "01f77b474bd14825044f796f4d03bf9bae382d1e09b2c80dc336cf8b990f541a",
+            "test_sha256": "3b794da065edb9d9208bbbcca4f297a875beda64db2a35dba731265e37de2544",
+            "source_sha256": "eb55c06f6eaa6a330e04ce0a07895037c24f034a01cdcc694561629840a8f798"
+          }
+        },
+        "attempt": 2
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/removeTaskDependencies/1/source.json",
+          "source_sha256": "97b4cef5c63454eeab12d5618f28103ff2193e9795f6d4600725eae455071686",
+          "public": {
+            "removeTaskDependencies": {
+              "passed": false,
+              "report_sha256": "88c8612e0e1ca1084a51e85521d40ce34014ea997fb5128fc5b2ea5e64d93472",
+              "test_sha256": "3b794da065edb9d9208bbbcca4f297a875beda64db2a35dba731265e37de2544",
+              "source_sha256": "97b4cef5c63454eeab12d5618f28103ff2193e9795f6d4600725eae455071686"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/removeTaskDependencies/2/source.json",
+          "source_sha256": "eb55c06f6eaa6a330e04ce0a07895037c24f034a01cdcc694561629840a8f798",
+          "public": {
+            "removeTaskDependencies": {
+              "passed": true,
+              "report_sha256": "01f77b474bd14825044f796f4d03bf9bae382d1e09b2c80dc336cf8b990f541a",
+              "test_sha256": "3b794da065edb9d9208bbbcca4f297a875beda64db2a35dba731265e37de2544",
+              "source_sha256": "eb55c06f6eaa6a330e04ce0a07895037c24f034a01cdcc694561629840a8f798"
+            }
+          },
+          "attempt": 2
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/setTaskDependencies/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/setTaskDependencies/3/source.json",
+        "source_sha256": "f45f0d2be714269f9694b442d686cb9d685d5a2d1cdaf6273a6491e54d3dedcb",
+        "public": {
+          "setTaskDependencies": {
+            "passed": true,
+            "report_sha256": "0db0be0cf9020e0d018db908f146d06d2b2f66bef66f6bce19f7b8faed974c2a",
+            "test_sha256": "8f4820116155caef9f52dcb4c5e5afa8f4e877eaf1df74b0f37e8ceb5702d9ad",
+            "source_sha256": "f45f0d2be714269f9694b442d686cb9d685d5a2d1cdaf6273a6491e54d3dedcb"
+          }
+        },
+        "attempt": 3
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/setTaskDependencies/1/source.json",
+          "source_sha256": "5e1ca0918af0ac81b60f02f61075cde6fb904ae9f2046912afdc197014b0823b",
+          "public": {
+            "setTaskDependencies": {
+              "passed": false,
+              "report_sha256": "b1dc24ac9f38192bfced5ee4917b467fd73a45054a19f1ba9469bf0169fac471",
+              "test_sha256": "8f4820116155caef9f52dcb4c5e5afa8f4e877eaf1df74b0f37e8ceb5702d9ad",
+              "source_sha256": "5e1ca0918af0ac81b60f02f61075cde6fb904ae9f2046912afdc197014b0823b"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/setTaskDependencies/2/source.json",
+          "source_sha256": "5e1ca0918af0ac81b60f02f61075cde6fb904ae9f2046912afdc197014b0823b",
+          "public": {
+            "setTaskDependencies": {
+              "passed": false,
+              "report_sha256": "b1dc24ac9f38192bfced5ee4917b467fd73a45054a19f1ba9469bf0169fac471",
+              "test_sha256": "8f4820116155caef9f52dcb4c5e5afa8f4e877eaf1df74b0f37e8ceb5702d9ad",
+              "source_sha256": "5e1ca0918af0ac81b60f02f61075cde6fb904ae9f2046912afdc197014b0823b"
+            }
+          },
+          "attempt": 2
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/setTaskDependencies/3/source.json",
+          "source_sha256": "f45f0d2be714269f9694b442d686cb9d685d5a2d1cdaf6273a6491e54d3dedcb",
+          "public": {
+            "setTaskDependencies": {
+              "passed": true,
+              "report_sha256": "0db0be0cf9020e0d018db908f146d06d2b2f66bef66f6bce19f7b8faed974c2a",
+              "test_sha256": "8f4820116155caef9f52dcb4c5e5afa8f4e877eaf1df74b0f37e8ceb5702d9ad",
+              "source_sha256": "f45f0d2be714269f9694b442d686cb9d685d5a2d1cdaf6273a6491e54d3dedcb"
+            }
+          },
+          "attempt": 3
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/taskResourcesAllocation/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/taskResourcesAllocation/1/source.json",
+        "source_sha256": "ce3f1bee11d5511afeae1963f941c77d8ea003e801ca0fbf7bb32586a87973f8",
+        "public": {
+          "taskResourcesAllocation": {
+            "passed": false,
+            "report_sha256": "8515391c2d8cb1654ba7f40be191f76d3347601b9e8386382dc767276296f13c",
+            "test_sha256": "a12c9e8a88bff56e29e266e6e2bbdb93fa0b4e0a7256da0f0476d03272a0ae44",
+            "source_sha256": "ce3f1bee11d5511afeae1963f941c77d8ea003e801ca0fbf7bb32586a87973f8"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/taskResourcesAllocation/1/source.json",
+          "source_sha256": "ce3f1bee11d5511afeae1963f941c77d8ea003e801ca0fbf7bb32586a87973f8",
+          "public": {
+            "taskResourcesAllocation": {
+              "passed": false,
+              "report_sha256": "8515391c2d8cb1654ba7f40be191f76d3347601b9e8386382dc767276296f13c",
+              "test_sha256": "a12c9e8a88bff56e29e266e6e2bbdb93fa0b4e0a7256da0f0476d03272a0ae44",
+              "source_sha256": "ce3f1bee11d5511afeae1963f941c77d8ea003e801ca0fbf7bb32586a87973f8"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/taskResourcesAllocation/2/source.json",
+          "source_sha256": "ce3f1bee11d5511afeae1963f941c77d8ea003e801ca0fbf7bb32586a87973f8",
+          "public": {
+            "taskResourcesAllocation": {
+              "passed": false,
+              "report_sha256": "8515391c2d8cb1654ba7f40be191f76d3347601b9e8386382dc767276296f13c",
+              "test_sha256": "a12c9e8a88bff56e29e266e6e2bbdb93fa0b4e0a7256da0f0476d03272a0ae44",
+              "source_sha256": "ce3f1bee11d5511afeae1963f941c77d8ea003e801ca0fbf7bb32586a87973f8"
+            }
+          },
+          "attempt": 2
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/taskResourcesAllocation/3/source.json",
+          "source_sha256": "ce3f1bee11d5511afeae1963f941c77d8ea003e801ca0fbf7bb32586a87973f8",
+          "public": {
+            "taskResourcesAllocation": {
+              "passed": false,
+              "report_sha256": "8515391c2d8cb1654ba7f40be191f76d3347601b9e8386382dc767276296f13c",
+              "test_sha256": "a12c9e8a88bff56e29e266e6e2bbdb93fa0b4e0a7256da0f0476d03272a0ae44",
+              "source_sha256": "ce3f1bee11d5511afeae1963f941c77d8ea003e801ca0fbf7bb32586a87973f8"
+            }
+          },
+          "attempt": 3
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/taskSortDueDate/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/taskSortDueDate/2/source.json",
+        "source_sha256": "4c83e038141d257dc873c2e4486947bf32bbf07f3b99826af4a7ad6c850516b2",
+        "public": {
+          "taskSortDueDate": {
+            "passed": true,
+            "report_sha256": "f6e7ec7baeab5103987e2f127a47a5e65c32a71373630319688f8addf4137638",
+            "test_sha256": "54ed9cfd8b50f34e166448c621b92a8062110043358c8a7609f2a7562af3fb14",
+            "source_sha256": "4c83e038141d257dc873c2e4486947bf32bbf07f3b99826af4a7ad6c850516b2"
+          }
+        },
+        "attempt": 2
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/taskSortDueDate/1/source.json",
+          "source_sha256": "d77ed254d8e76d579a2b9653775ea5b461663328ef714029fd714acc739c8601",
+          "public": {
+            "taskSortDueDate": {
+              "passed": false,
+              "report_sha256": "9bc6140c38c03059e3613282bf28b9476a4c5096589ef1cd96f02092b4deba90",
+              "test_sha256": "54ed9cfd8b50f34e166448c621b92a8062110043358c8a7609f2a7562af3fb14",
+              "source_sha256": "d77ed254d8e76d579a2b9653775ea5b461663328ef714029fd714acc739c8601"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/taskSortDueDate/2/source.json",
+          "source_sha256": "4c83e038141d257dc873c2e4486947bf32bbf07f3b99826af4a7ad6c850516b2",
+          "public": {
+            "taskSortDueDate": {
+              "passed": true,
+              "report_sha256": "f6e7ec7baeab5103987e2f127a47a5e65c32a71373630319688f8addf4137638",
+              "test_sha256": "54ed9cfd8b50f34e166448c621b92a8062110043358c8a7609f2a7562af3fb14",
+              "source_sha256": "4c83e038141d257dc873c2e4486947bf32bbf07f3b99826af4a7ad6c850516b2"
+            }
+          },
+          "attempt": 2
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/updateTaskProgress/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/updateTaskProgress/2/source.json",
+        "source_sha256": "fa9acab0a87b8dc544050a54b0c2af021fb13a3b9600391bfd275bce1cacf5e2",
+        "public": {
+          "updateTaskProgress": {
+            "passed": true,
+            "report_sha256": "9d25bab05445b0e515db1d7929e9af7786130a5bbb8e9d59849acc295c2b895e",
+            "test_sha256": "3fe14b68a703f699e8525b9085893c64ac2c50fe0a276c0645638c8d436b2951",
+            "source_sha256": "fa9acab0a87b8dc544050a54b0c2af021fb13a3b9600391bfd275bce1cacf5e2"
+          }
+        },
+        "attempt": 2
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/updateTaskProgress/1/source.json",
+          "source_sha256": "5742699c1972ab929531681fa98eba0320d9ea70ef3edc57e168dd311907d16a",
+          "public": {
+            "updateTaskProgress": {
+              "passed": false,
+              "report_sha256": "ccb860bce5ea3148b2e4a07a9bd5d13ea0db4110c2b445c96739efed7d430e3f",
+              "test_sha256": "3fe14b68a703f699e8525b9085893c64ac2c50fe0a276c0645638c8d436b2951",
+              "source_sha256": "5742699c1972ab929531681fa98eba0320d9ea70ef3edc57e168dd311907d16a"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/updateTaskProgress/2/source.json",
+          "source_sha256": "fa9acab0a87b8dc544050a54b0c2af021fb13a3b9600391bfd275bce1cacf5e2",
+          "public": {
+            "updateTaskProgress": {
+              "passed": true,
+              "report_sha256": "9d25bab05445b0e515db1d7929e9af7786130a5bbb8e9d59849acc295c2b895e",
+              "test_sha256": "3fe14b68a703f699e8525b9085893c64ac2c50fe0a276c0645638c8d436b2951",
+              "source_sha256": "fa9acab0a87b8dc544050a54b0c2af021fb13a3b9600391bfd275bce1cacf5e2"
+            }
+          },
+          "attempt": 2
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/viewTaskHistory/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/viewTaskHistory/2/source.json",
+        "source_sha256": "d4c282afb9e3eb55ee723e8d405d530e2b21a74eebfa71eb0f0bb89a9ecfac8e",
+        "public": {
+          "viewTaskHistory": {
+            "passed": true,
+            "report_sha256": "0835187f79a28e794143ecdb8e7ac1d2ed11c6b54531158dfb757139c79e45e7",
+            "test_sha256": "bf3217aa7f1c70f045ae409070abce822cb5de300cbf8b38f636da864fb681f2",
+            "source_sha256": "d4c282afb9e3eb55ee723e8d405d530e2b21a74eebfa71eb0f0bb89a9ecfac8e"
+          }
+        },
+        "attempt": 2
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/viewTaskHistory/1/source.json",
+          "source_sha256": "bac6a58d265985c0231f47107efed363f810c6f24ad749a952021bb913d1e04f",
+          "public": {
+            "viewTaskHistory": {
+              "passed": false,
+              "report_sha256": "e71769a3043487ab7b78e07f5122688a634f60a8b9c6ed6cd2616659763f49c2",
+              "test_sha256": "bf3217aa7f1c70f045ae409070abce822cb5de300cbf8b38f636da864fb681f2",
+              "source_sha256": "bac6a58d265985c0231f47107efed363f810c6f24ad749a952021bb913d1e04f"
+            }
+          },
+          "attempt": 1
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/viewTaskHistory/2/source.json",
+          "source_sha256": "d4c282afb9e3eb55ee723e8d405d530e2b21a74eebfa71eb0f0bb89a9ecfac8e",
+          "public": {
+            "viewTaskHistory": {
+              "passed": true,
+              "report_sha256": "0835187f79a28e794143ecdb8e7ac1d2ed11c6b54531158dfb757139c79e45e7",
+              "test_sha256": "bf3217aa7f1c70f045ae409070abce822cb5de300cbf8b38f636da864fb681f2",
+              "source_sha256": "d4c282afb9e3eb55ee723e8d405d530e2b21a74eebfa71eb0f0bb89a9ecfac8e"
+            }
+          },
+          "attempt": 2
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/viewUserPerformanceMetrics/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/viewUserPerformanceMetrics/1/source.json",
+        "source_sha256": "bcc4c040457a7b9cf0ad155159e15d42d32ab1deb575e2fbb7e55009425c5b42",
+        "public": {
+          "viewUserPerformanceMetrics": {
+            "passed": true,
+            "report_sha256": "bc01c5acb87aa923a204c66d5d3865a6b34b0f3b44819a74b33e614aadcc2427",
+            "test_sha256": "9246f33fb711b90cd38c1478d3fc83de3f39110507fd790f16b4a6edcd5647ea",
+            "source_sha256": "bcc4c040457a7b9cf0ad155159e15d42d32ab1deb575e2fbb7e55009425c5b42"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/deepseek-flash/taskmanagement/viewUserPerformanceMetrics/1/source.json",
+          "source_sha256": "bcc4c040457a7b9cf0ad155159e15d42d32ab1deb575e2fbb7e55009425c5b42",
+          "public": {
+            "viewUserPerformanceMetrics": {
+              "passed": true,
+              "report_sha256": "bc01c5acb87aa923a204c66d5d3865a6b34b0f3b44819a74b33e614aadcc2427",
+              "test_sha256": "9246f33fb711b90cd38c1478d3fc83de3f39110507fd790f16b4a6edcd5647ea",
+              "source_sha256": "bcc4c040457a7b9cf0ad155159e15d42d32ab1deb575e2fbb7e55009425c5b42"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/addSitemap/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/addSitemap/1/source.json",
+        "source_sha256": "15a9ee3a38763d2d6765af6d1f5306813b41932dde99f2c9b8cd7170ef99bd71",
+        "public": {
+          "addSitemap": {
+            "passed": true,
+            "report_sha256": "961c22d36b9870c5c8a36dc63c152875b3cc0aa840730454604c61fa5cf387fd",
+            "test_sha256": "f2a6748d84107a26058f72381746306627e21dc009c5d1b2ff5c7125e742894f",
+            "source_sha256": "15a9ee3a38763d2d6765af6d1f5306813b41932dde99f2c9b8cd7170ef99bd71"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/addSitemap/1/source.json",
+          "source_sha256": "15a9ee3a38763d2d6765af6d1f5306813b41932dde99f2c9b8cd7170ef99bd71",
+          "public": {
+            "addSitemap": {
+              "passed": true,
+              "report_sha256": "961c22d36b9870c5c8a36dc63c152875b3cc0aa840730454604c61fa5cf387fd",
+              "test_sha256": "f2a6748d84107a26058f72381746306627e21dc009c5d1b2ff5c7125e742894f",
+              "source_sha256": "15a9ee3a38763d2d6765af6d1f5306813b41932dde99f2c9b8cd7170ef99bd71"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/createBlogPost/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/createBlogPost/1/source.json",
+        "source_sha256": "2a8c28c3701172c3dce8a10fac8a24bc94afbededa3810b9ddc1dbcb3f9a517d",
+        "public": {
+          "createBlogPost": {
+            "passed": true,
+            "report_sha256": "040d4e12e83b70f3df12a38a63e174f6062afe3afa03c5a11341ee32d80cb096",
+            "test_sha256": "c258ccb99c34aab0403b4165dcaee0aaa33fb4188f362b8cf7d27912ec540fba",
+            "source_sha256": "2a8c28c3701172c3dce8a10fac8a24bc94afbededa3810b9ddc1dbcb3f9a517d"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/createBlogPost/1/source.json",
+          "source_sha256": "2a8c28c3701172c3dce8a10fac8a24bc94afbededa3810b9ddc1dbcb3f9a517d",
+          "public": {
+            "createBlogPost": {
+              "passed": true,
+              "report_sha256": "040d4e12e83b70f3df12a38a63e174f6062afe3afa03c5a11341ee32d80cb096",
+              "test_sha256": "c258ccb99c34aab0403b4165dcaee0aaa33fb4188f362b8cf7d27912ec540fba",
+              "source_sha256": "2a8c28c3701172c3dce8a10fac8a24bc94afbededa3810b9ddc1dbcb3f9a517d"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/deleteBlogPost/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/deleteBlogPost/2/source.json",
+        "source_sha256": "bea8c1304de38816489f4fe8d0b512a145a8f6c2e4cae5069d1784db42585cca",
+        "public": {
+          "deleteBlogPost": {
+            "passed": true,
+            "report_sha256": "a4718cbf184fac7fc97c95bdceee1d8c9b40c58e4eeb68e1540da7e4bba322a8",
+            "test_sha256": "331e921d5c657a068ac49f335fe32f87cfe49b3104e5c78fddbda2218fe2865c",
+            "source_sha256": "bea8c1304de38816489f4fe8d0b512a145a8f6c2e4cae5069d1784db42585cca"
+          }
+        },
+        "attempt": 2
+      },
+      "history": [
+        {
+          "status": "invalid"
+        },
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/deleteBlogPost/2/source.json",
+          "source_sha256": "bea8c1304de38816489f4fe8d0b512a145a8f6c2e4cae5069d1784db42585cca",
+          "public": {
+            "deleteBlogPost": {
+              "passed": true,
+              "report_sha256": "a4718cbf184fac7fc97c95bdceee1d8c9b40c58e4eeb68e1540da7e4bba322a8",
+              "test_sha256": "331e921d5c657a068ac49f335fe32f87cfe49b3104e5c78fddbda2218fe2865c",
+              "source_sha256": "bea8c1304de38816489f4fe8d0b512a145a8f6c2e4cae5069d1784db42585cca"
+            }
+          },
+          "attempt": 2
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/retrieveCommentCount/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/retrieveCommentCount/1/source.json",
+        "source_sha256": "c246fa0728e36144bec4935d4f8d2353d4af42544ca308c5a89e05ab75b2b707",
+        "public": {
+          "retrieveCommentCount": {
+            "passed": true,
+            "report_sha256": "d5ef19bfb293afc00dfe4f3b5c28c66978d73794fa1d9b1fe23183202384a1d5",
+            "test_sha256": "0e07583084c686171e13cc21bc5e7d4e2095576b0c7f28ee25c4d8bd7293712e",
+            "source_sha256": "c246fa0728e36144bec4935d4f8d2353d4af42544ca308c5a89e05ab75b2b707"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/retrieveCommentCount/1/source.json",
+          "source_sha256": "c246fa0728e36144bec4935d4f8d2353d4af42544ca308c5a89e05ab75b2b707",
+          "public": {
+            "retrieveCommentCount": {
+              "passed": true,
+              "report_sha256": "d5ef19bfb293afc00dfe4f3b5c28c66978d73794fa1d9b1fe23183202384a1d5",
+              "test_sha256": "0e07583084c686171e13cc21bc5e7d4e2095576b0c7f28ee25c4d8bd7293712e",
+              "source_sha256": "c246fa0728e36144bec4935d4f8d2353d4af42544ca308c5a89e05ab75b2b707"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/retrievePostsByTag/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/retrievePostsByTag/1/source.json",
+        "source_sha256": "e5fbed0cb45f62bacc021e3446f6ed843273c71c8f9ea19427ecfa5578ba9744",
+        "public": {
+          "retrievePostsByTag": {
+            "passed": true,
+            "report_sha256": "f941cc262b5248757562120886d75fe01588034cdef704ea3929207516da8f86",
+            "test_sha256": "0cd214a2d331af6503378b33c4588e019a04e76560036014a4f62ddc63a80479",
+            "source_sha256": "e5fbed0cb45f62bacc021e3446f6ed843273c71c8f9ea19427ecfa5578ba9744"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/retrievePostsByTag/1/source.json",
+          "source_sha256": "e5fbed0cb45f62bacc021e3446f6ed843273c71c8f9ea19427ecfa5578ba9744",
+          "public": {
+            "retrievePostsByTag": {
+              "passed": true,
+              "report_sha256": "f941cc262b5248757562120886d75fe01588034cdef704ea3929207516da8f86",
+              "test_sha256": "0cd214a2d331af6503378b33c4588e019a04e76560036014a4f62ddc63a80479",
+              "source_sha256": "e5fbed0cb45f62bacc021e3446f6ed843273c71c8f9ea19427ecfa5578ba9744"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/retrieveScheduledBlogPosts/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/retrieveScheduledBlogPosts/1/source.json",
+        "source_sha256": "90c7e16920455771fbd79b106533753cc045799b46009a4731f4c880e11f9511",
+        "public": {
+          "retrieveScheduledBlogPosts": {
+            "passed": true,
+            "report_sha256": "62baf36a6049642ad5fb10802f68df103d83b9993aed1799981225932a363b56",
+            "test_sha256": "2c847d1493afcdac50de9f147007c44b82d0012946d02d26938d7bca6ecc2f30",
+            "source_sha256": "90c7e16920455771fbd79b106533753cc045799b46009a4731f4c880e11f9511"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/retrieveScheduledBlogPosts/1/source.json",
+          "source_sha256": "90c7e16920455771fbd79b106533753cc045799b46009a4731f4c880e11f9511",
+          "public": {
+            "retrieveScheduledBlogPosts": {
+              "passed": true,
+              "report_sha256": "62baf36a6049642ad5fb10802f68df103d83b9993aed1799981225932a363b56",
+              "test_sha256": "2c847d1493afcdac50de9f147007c44b82d0012946d02d26938d7bca6ecc2f30",
+              "source_sha256": "90c7e16920455771fbd79b106533753cc045799b46009a4731f4c880e11f9511"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/seoAuditReport/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/seoAuditReport/1/source.json",
+        "source_sha256": "6cbddafc9384437884f03f15502f03192d1cf7be2d451c0cd570ea3bffc07963",
+        "public": {
+          "seoAuditReport": {
+            "passed": true,
+            "report_sha256": "2a57cda8b58a40cdeb45a83add0e347a864c5412bf3b3bcb3d6b108b2b6529e0",
+            "test_sha256": "87f541bbea7e8bd4d2a5448c97edb9d031ce458d9b40b90a8e39ad4a7d1a804b",
+            "source_sha256": "6cbddafc9384437884f03f15502f03192d1cf7be2d451c0cd570ea3bffc07963"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/seoAuditReport/1/source.json",
+          "source_sha256": "6cbddafc9384437884f03f15502f03192d1cf7be2d451c0cd570ea3bffc07963",
+          "public": {
+            "seoAuditReport": {
+              "passed": true,
+              "report_sha256": "2a57cda8b58a40cdeb45a83add0e347a864c5412bf3b3bcb3d6b108b2b6529e0",
+              "test_sha256": "87f541bbea7e8bd4d2a5448c97edb9d031ce458d9b40b90a8e39ad4a7d1a804b",
+              "source_sha256": "6cbddafc9384437884f03f15502f03192d1cf7be2d451c0cd570ea3bffc07963"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/trackBounceRate/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/trackBounceRate/1/source.json",
+        "source_sha256": "39d7e827298068a9e617049d1e2986b79a489de7ac9db113f562e8fc53fff842",
+        "public": {
+          "trackBounceRate": {
+            "passed": true,
+            "report_sha256": "78ffb98fcdad8973d95fb59365b094441129050fce4ae8f8b0b3cafd4e41339d",
+            "test_sha256": "9e161f0a485baa0a41b5725a214589cb54c5ad0df3289c57ca12bf84aefd2b6f",
+            "source_sha256": "39d7e827298068a9e617049d1e2986b79a489de7ac9db113f562e8fc53fff842"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/trackBounceRate/1/source.json",
+          "source_sha256": "39d7e827298068a9e617049d1e2986b79a489de7ac9db113f562e8fc53fff842",
+          "public": {
+            "trackBounceRate": {
+              "passed": true,
+              "report_sha256": "78ffb98fcdad8973d95fb59365b094441129050fce4ae8f8b0b3cafd4e41339d",
+              "test_sha256": "9e161f0a485baa0a41b5725a214589cb54c5ad0df3289c57ca12bf84aefd2b6f",
+              "source_sha256": "39d7e827298068a9e617049d1e2986b79a489de7ac9db113f562e8fc53fff842"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/trackPostViews/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/trackPostViews/1/source.json",
+        "source_sha256": "31c27767f0d322dfcfeda4b9eb2faddd19fe8b74f40d333efd36eefe6a77b4f9",
+        "public": {
+          "trackPostViews": {
+            "passed": true,
+            "report_sha256": "f88e153b992402e583457270eed42b121510da80728e1d6e4de523d80833a301",
+            "test_sha256": "4d0510300eaa0feb87eb0c953233f9763d39441a74f3bbae81b980a935834bae",
+            "source_sha256": "31c27767f0d322dfcfeda4b9eb2faddd19fe8b74f40d333efd36eefe6a77b4f9"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/trackPostViews/1/source.json",
+          "source_sha256": "31c27767f0d322dfcfeda4b9eb2faddd19fe8b74f40d333efd36eefe6a77b4f9",
+          "public": {
+            "trackPostViews": {
+              "passed": true,
+              "report_sha256": "f88e153b992402e583457270eed42b121510da80728e1d6e4de523d80833a301",
+              "test_sha256": "4d0510300eaa0feb87eb0c953233f9763d39441a74f3bbae81b980a935834bae",
+              "source_sha256": "31c27767f0d322dfcfeda4b9eb2faddd19fe8b74f40d333efd36eefe6a77b4f9"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/trackUniqueVisitorsPerPost/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/trackUniqueVisitorsPerPost/1/source.json",
+        "source_sha256": "355c96b68775b731e00f53e77930ac762ed0a79d270554fcdacff0e0138a8c78",
+        "public": {
+          "trackUniqueVisitorsPerPost": {
+            "passed": true,
+            "report_sha256": "0fb5789dc5dba9f5a93af0c6b3a1779186ed8d16ab69a4b036044682f4004348",
+            "test_sha256": "2b30ae91af70558955ff7c315c08e6f6a1d4998913ba847120394a8220944be8",
+            "source_sha256": "355c96b68775b731e00f53e77930ac762ed0a79d270554fcdacff0e0138a8c78"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/blogging/trackUniqueVisitorsPerPost/1/source.json",
+          "source_sha256": "355c96b68775b731e00f53e77930ac762ed0a79d270554fcdacff0e0138a8c78",
+          "public": {
+            "trackUniqueVisitorsPerPost": {
+              "passed": true,
+              "report_sha256": "0fb5789dc5dba9f5a93af0c6b3a1779186ed8d16ab69a4b036044682f4004348",
+              "test_sha256": "2b30ae91af70558955ff7c315c08e6f6a1d4998913ba847120394a8220944be8",
+              "source_sha256": "355c96b68775b731e00f53e77930ac762ed0a79d270554fcdacff0e0138a8c78"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/customNotificationsForUsers/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/customNotificationsForUsers/1/source.json",
+        "source_sha256": "2a9ede966149fadc3e21d0f918163fcf9f3bd87cbf8804928b4c32a6f8602ba7",
+        "public": {
+          "customNotificationsForUsers": {
+            "passed": true,
+            "report_sha256": "9cc51d53faf07e0fd82a963aea9383352e5858039522acfe21383322a4cb15c9",
+            "test_sha256": "2a2320b0fceb27f3f272aebc7f234c148a44b15f74e59afe9d0af2aa490a7a02",
+            "source_sha256": "2a9ede966149fadc3e21d0f918163fcf9f3bd87cbf8804928b4c32a6f8602ba7"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/customNotificationsForUsers/1/source.json",
+          "source_sha256": "2a9ede966149fadc3e21d0f918163fcf9f3bd87cbf8804928b4c32a6f8602ba7",
+          "public": {
+            "customNotificationsForUsers": {
+              "passed": true,
+              "report_sha256": "9cc51d53faf07e0fd82a963aea9383352e5858039522acfe21383322a4cb15c9",
+              "test_sha256": "2a2320b0fceb27f3f272aebc7f234c148a44b15f74e59afe9d0af2aa490a7a02",
+              "source_sha256": "2a9ede966149fadc3e21d0f918163fcf9f3bd87cbf8804928b4c32a6f8602ba7"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/projectMilestoneAddition/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/projectMilestoneAddition/1/source.json",
+        "source_sha256": "a602c48bb15ad032c5585e86d3bb785c55365a371773c8f334ad1d5c61182091",
+        "public": {
+          "projectMilestoneAddition": {
+            "passed": true,
+            "report_sha256": "9d08faf50d3a9355290edd850c1475b77a576e0af81bf75e7f45e334efdef2b2",
+            "test_sha256": "844a38a99892bbb1e23583ece508dafb84f211738814805071b3e527fa7d2c9b",
+            "source_sha256": "a602c48bb15ad032c5585e86d3bb785c55365a371773c8f334ad1d5c61182091"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/projectMilestoneAddition/1/source.json",
+          "source_sha256": "a602c48bb15ad032c5585e86d3bb785c55365a371773c8f334ad1d5c61182091",
+          "public": {
+            "projectMilestoneAddition": {
+              "passed": true,
+              "report_sha256": "9d08faf50d3a9355290edd850c1475b77a576e0af81bf75e7f45e334efdef2b2",
+              "test_sha256": "844a38a99892bbb1e23583ece508dafb84f211738814805071b3e527fa7d2c9b",
+              "source_sha256": "a602c48bb15ad032c5585e86d3bb785c55365a371773c8f334ad1d5c61182091"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/removeTaskDependencies/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/removeTaskDependencies/1/source.json",
+        "source_sha256": "51ce1f19121b849613a8b81ca79bcab08efa10224eb1d80212a97ae6a1608d20",
+        "public": {
+          "removeTaskDependencies": {
+            "passed": true,
+            "report_sha256": "747dfe78910a083c0e456f3ea0b91d3cfee326c0eb0201f731fb3cec3e5ac6ab",
+            "test_sha256": "3b794da065edb9d9208bbbcca4f297a875beda64db2a35dba731265e37de2544",
+            "source_sha256": "51ce1f19121b849613a8b81ca79bcab08efa10224eb1d80212a97ae6a1608d20"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/removeTaskDependencies/1/source.json",
+          "source_sha256": "51ce1f19121b849613a8b81ca79bcab08efa10224eb1d80212a97ae6a1608d20",
+          "public": {
+            "removeTaskDependencies": {
+              "passed": true,
+              "report_sha256": "747dfe78910a083c0e456f3ea0b91d3cfee326c0eb0201f731fb3cec3e5ac6ab",
+              "test_sha256": "3b794da065edb9d9208bbbcca4f297a875beda64db2a35dba731265e37de2544",
+              "source_sha256": "51ce1f19121b849613a8b81ca79bcab08efa10224eb1d80212a97ae6a1608d20"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/setTaskDependencies/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/setTaskDependencies/1/source.json",
+        "source_sha256": "8ba95cd203158dfc9efbf69e6e383ad8d84cb54c73dc18fed7645d3efa7e1cfc",
+        "public": {
+          "setTaskDependencies": {
+            "passed": true,
+            "report_sha256": "57a3acfed8dd02fbba1086aae195e7c48dbdc8afffc6b96e72e06029b0838779",
+            "test_sha256": "8f4820116155caef9f52dcb4c5e5afa8f4e877eaf1df74b0f37e8ceb5702d9ad",
+            "source_sha256": "8ba95cd203158dfc9efbf69e6e383ad8d84cb54c73dc18fed7645d3efa7e1cfc"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/setTaskDependencies/1/source.json",
+          "source_sha256": "8ba95cd203158dfc9efbf69e6e383ad8d84cb54c73dc18fed7645d3efa7e1cfc",
+          "public": {
+            "setTaskDependencies": {
+              "passed": true,
+              "report_sha256": "57a3acfed8dd02fbba1086aae195e7c48dbdc8afffc6b96e72e06029b0838779",
+              "test_sha256": "8f4820116155caef9f52dcb4c5e5afa8f4e877eaf1df74b0f37e8ceb5702d9ad",
+              "source_sha256": "8ba95cd203158dfc9efbf69e6e383ad8d84cb54c73dc18fed7645d3efa7e1cfc"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/taskResourcesAllocation/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/taskResourcesAllocation/1/source.json",
+        "source_sha256": "f37a314799da89faf2fa281afc4ef164254eabee9353507e5ed284ba7b52fb7e",
+        "public": {
+          "taskResourcesAllocation": {
+            "passed": true,
+            "report_sha256": "d4c8ccd7bd86a333edf4fca9c92945743b935bf8a3b20255b6294ddfeaddaef6",
+            "test_sha256": "a12c9e8a88bff56e29e266e6e2bbdb93fa0b4e0a7256da0f0476d03272a0ae44",
+            "source_sha256": "f37a314799da89faf2fa281afc4ef164254eabee9353507e5ed284ba7b52fb7e"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/taskResourcesAllocation/1/source.json",
+          "source_sha256": "f37a314799da89faf2fa281afc4ef164254eabee9353507e5ed284ba7b52fb7e",
+          "public": {
+            "taskResourcesAllocation": {
+              "passed": true,
+              "report_sha256": "d4c8ccd7bd86a333edf4fca9c92945743b935bf8a3b20255b6294ddfeaddaef6",
+              "test_sha256": "a12c9e8a88bff56e29e266e6e2bbdb93fa0b4e0a7256da0f0476d03272a0ae44",
+              "source_sha256": "f37a314799da89faf2fa281afc4ef164254eabee9353507e5ed284ba7b52fb7e"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/taskSortDueDate/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/taskSortDueDate/1/source.json",
+        "source_sha256": "dbe1248294c33c057cdeb49dc95ff1045abddbc6560fbf33b8d622eb89c4b9d3",
+        "public": {
+          "taskSortDueDate": {
+            "passed": true,
+            "report_sha256": "0a48c0b61e7f0cc7688d00065ae9f1c2d69851d81ac2b0582352465916467784",
+            "test_sha256": "54ed9cfd8b50f34e166448c621b92a8062110043358c8a7609f2a7562af3fb14",
+            "source_sha256": "dbe1248294c33c057cdeb49dc95ff1045abddbc6560fbf33b8d622eb89c4b9d3"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/taskSortDueDate/1/source.json",
+          "source_sha256": "dbe1248294c33c057cdeb49dc95ff1045abddbc6560fbf33b8d622eb89c4b9d3",
+          "public": {
+            "taskSortDueDate": {
+              "passed": true,
+              "report_sha256": "0a48c0b61e7f0cc7688d00065ae9f1c2d69851d81ac2b0582352465916467784",
+              "test_sha256": "54ed9cfd8b50f34e166448c621b92a8062110043358c8a7609f2a7562af3fb14",
+              "source_sha256": "dbe1248294c33c057cdeb49dc95ff1045abddbc6560fbf33b8d622eb89c4b9d3"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/updateTaskProgress/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/updateTaskProgress/1/source.json",
+        "source_sha256": "01a83a54dab5fbb263315f12da3f2f434e43119b7e0d5c4d6d21029d2a8cee63",
+        "public": {
+          "updateTaskProgress": {
+            "passed": true,
+            "report_sha256": "d43f5289df83e0b8687caf1b6b88b9afc34937d7d382f591c62e38e25a53a1e1",
+            "test_sha256": "3fe14b68a703f699e8525b9085893c64ac2c50fe0a276c0645638c8d436b2951",
+            "source_sha256": "01a83a54dab5fbb263315f12da3f2f434e43119b7e0d5c4d6d21029d2a8cee63"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/updateTaskProgress/1/source.json",
+          "source_sha256": "01a83a54dab5fbb263315f12da3f2f434e43119b7e0d5c4d6d21029d2a8cee63",
+          "public": {
+            "updateTaskProgress": {
+              "passed": true,
+              "report_sha256": "d43f5289df83e0b8687caf1b6b88b9afc34937d7d382f591c62e38e25a53a1e1",
+              "test_sha256": "3fe14b68a703f699e8525b9085893c64ac2c50fe0a276c0645638c8d436b2951",
+              "source_sha256": "01a83a54dab5fbb263315f12da3f2f434e43119b7e0d5c4d6d21029d2a8cee63"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/viewTaskHistory/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/viewTaskHistory/1/source.json",
+        "source_sha256": "2b909328a2731d854a4d0be463becda84d2102d2fb0ba3f32ca65515c3483a6c",
+        "public": {
+          "viewTaskHistory": {
+            "passed": true,
+            "report_sha256": "3936790c3a198df29af7717c921b336c72ba5a63ed4f8b85fe110d0fb9b79e8a",
+            "test_sha256": "bf3217aa7f1c70f045ae409070abce822cb5de300cbf8b38f636da864fb681f2",
+            "source_sha256": "2b909328a2731d854a4d0be463becda84d2102d2fb0ba3f32ca65515c3483a6c"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/viewTaskHistory/1/source.json",
+          "source_sha256": "2b909328a2731d854a4d0be463becda84d2102d2fb0ba3f32ca65515c3483a6c",
+          "public": {
+            "viewTaskHistory": {
+              "passed": true,
+              "report_sha256": "3936790c3a198df29af7717c921b336c72ba5a63ed4f8b85fe110d0fb9b79e8a",
+              "test_sha256": "bf3217aa7f1c70f045ae409070abce822cb5de300cbf8b38f636da864fb681f2",
+              "source_sha256": "2b909328a2731d854a4d0be463becda84d2102d2fb0ba3f32ca65515c3483a6c"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    },
+    "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/viewUserPerformanceMetrics/record.json": {
+      "status": "valid",
+      "selected": {
+        "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/viewUserPerformanceMetrics/1/source.json",
+        "source_sha256": "cd867e6155d8af42702963bf3c588b63fb2a47d8ccb9c84bc83a6d361107938c",
+        "public": {
+          "viewUserPerformanceMetrics": {
+            "passed": true,
+            "report_sha256": "47bb494c638a0ee34ffd1cea6650f6fceb21f7934ca61a738d6f55f09e6505ad",
+            "test_sha256": "9246f33fb711b90cd38c1478d3fc83de3f39110507fd790f16b4a6edcd5647ea",
+            "source_sha256": "cd867e6155d8af42702963bf3c588b63fb2a47d8ccb9c84bc83a6d361107938c"
+          }
+        },
+        "attempt": 1
+      },
+      "history": [
+        {
+          "status": "valid",
+          "file": "artifacts/duo-unseen-pairs-20261128/library/gpt5/taskmanagement/viewUserPerformanceMetrics/1/source.json",
+          "source_sha256": "cd867e6155d8af42702963bf3c588b63fb2a47d8ccb9c84bc83a6d361107938c",
+          "public": {
+            "viewUserPerformanceMetrics": {
+              "passed": true,
+              "report_sha256": "47bb494c638a0ee34ffd1cea6650f6fceb21f7934ca61a738d6f55f09e6505ad",
+              "test_sha256": "9246f33fb711b90cd38c1478d3fc83de3f39110507fd790f16b4a6edcd5647ea",
+              "source_sha256": "cd867e6155d8af42702963bf3c588b63fb2a47d8ccb9c84bc83a6d361107938c"
+            }
+          },
+          "attempt": 1
+        }
+      ]
+    }
+  },
+  "models": {
+    "deepseek/deepseek-v4-flash": [
+      {
+        "task": "seoAuditReport_trackUniqueVisitorsPerPost",
+        "arm": "direct",
+        "status": "valid",
+        "file": "8fe5953201d33c8c4db4782e01cdc5b0186ba443c0f12dcfbe165a0e77cb688e",
+        "passed": false,
+        "official_cases": [
+          "passed",
+          "passed",
+          "failed",
+          "passed"
+        ],
+        "report_sha256": "4da3de6f860bcc4e42f769cf46295a582a7771b09927d89cb9e4f0acfcb57b40"
+      },
+      {
+        "task": "seoAuditReport_trackUniqueVisitorsPerPost",
+        "arm": "self",
+        "status": "valid",
+        "file": "32d00c73a51d5c8d99b7121a97bf4aff8cf0b659ffb2f72393a9273e71ae10b8",
+        "passed": true,
+        "official_cases": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "report_sha256": "9e99efecbe5329ff657873c8d062ceece623e3a0dfbc80608363af12bf4ff867"
+      },
+      {
+        "task": "seoAuditReport_trackUniqueVisitorsPerPost",
+        "arm": "self-fixed",
+        "status": "valid",
+        "file": "87fde41105a846b231e0591304d5aa9a54b399ddddd85eec67dba7e66c60de31",
+        "passed": false,
+        "official_cases": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "report_sha256": "ef208e739b8f5d1068f3662e097ffb2dbdd1aae36e5cfd093eedb1d546ca8971"
+      },
+      {
+        "task": "seoAuditReport_trackUniqueVisitorsPerPost",
+        "arm": "gpt5-library",
+        "status": "valid",
+        "file": "6258d821a0a268e2c9c5cb485b0e404fd4dd9437af11de401ccd62bd7fd81fa1",
+        "passed": true,
+        "official_cases": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "report_sha256": "9373a19ccdc9a5e47fd526ae2b826300dac5145377a2e6bef2282f46778db525"
+      },
+      {
+        "task": "seoAuditReport_trackUniqueVisitorsPerPost",
+        "arm": "gpt5-library-fixed",
+        "status": "valid",
+        "file": "32ece3d33db2c63e5ad76f4db7e794889e3ecf76228c544852f2df437b11aa2e",
+        "passed": false,
+        "official_cases": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "report_sha256": "5cf80b10f7b2bfb669a256b78c17a3ec0ec5b423e34a22c8fb77e4d1d1586d3a"
+      },
+      {
+        "task": "createBlogPost_retrievePostsByTag",
+        "arm": "direct",
+        "status": "valid",
+        "file": "f95498a110340f410e4ea08cc51d0c58efca38dd0a9e1df6fc8a55756fc49f89",
+        "passed": false,
+        "official_cases": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "report_sha256": "7ba3522d7f8a423cae02872419f6fe80724d178294ff8e5cbacb977c0b9b58d4"
+      },
+      {
+        "task": "createBlogPost_retrievePostsByTag",
+        "arm": "self",
+        "status": "valid",
+        "file": "ccba055a28b8ef73fb7ca170634fb8de7f6c5a8db3f7c554b9bb32f5325d5585",
+        "passed": false,
+        "official_cases": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "report_sha256": "98365e42f92b096d6bbf4cbe14c6ae17a92a0b1775a2be7c9db6693cb673cf00"
+      },
+      {
+        "task": "createBlogPost_retrievePostsByTag",
+        "arm": "self-fixed",
+        "status": "valid",
+        "file": "a80d0720e40e7258c899f808aa3c406229f2ac114a88ad3526887f2b2d617c79",
+        "passed": false,
+        "official_cases": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "report_sha256": "0adb5b272beee52f24da899e035a54a2749a08bf53594d61210c5492b0a3c5f6"
+      },
+      {
+        "task": "createBlogPost_retrievePostsByTag",
+        "arm": "gpt5-library",
+        "status": "valid",
+        "file": "a43b5bcffcd1bb3253e00231e060abe6fee878821d409974fdb97fd873f42c3e",
+        "passed": true,
+        "official_cases": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "report_sha256": "f9ae6a86b712d3758b8e65585c5c0411bc8db4e529a29075c6d6d64720435343"
+      },
+      {
+        "task": "createBlogPost_retrievePostsByTag",
+        "arm": "gpt5-library-fixed",
+        "status": "valid",
+        "file": "57c5f70664f76ba2e2208d997a4e1d1dce0bee4360e5e1a44e8a8d72977a2d45",
+        "passed": false,
+        "official_cases": [
+          "passed",
+          "passed",
+          "failed",
+          "failed"
+        ],
+        "report_sha256": "c9e551aeffc3f07c6d2c65a05561343cef328a56cb23ab3385ccacef357e978a"
+      },
+      {
+        "task": "deleteBlogPost_trackBounceRate",
+        "arm": "direct",
+        "status": "valid",
+        "file": "8596b3806feae49804481a32e28f7714ddf0466cb644faf7a6fc7cd4b598420c",
+        "passed": true,
+        "official_cases": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "report_sha256": "61b541e8766f0211c4fbba792a3f7318c57f5bb10d1da1c132882774d0cb5d52"
+      },
+      {
+        "task": "deleteBlogPost_trackBounceRate",
+        "arm": "self",
+        "status": "valid",
+        "file": "d2aee681032d517f3ac81422f4665abee3628929b364156b8b5c74983e792322",
+        "passed": false,
+        "official_cases": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "report_sha256": "895afe46765ee2a5fa2dd01e0e7b79754a9b0a822144df6333f9e49f4d9c7f60"
+      },
+      {
+        "task": "deleteBlogPost_trackBounceRate",
+        "arm": "self-fixed",
+        "status": "valid",
+        "file": "331d3e6f569a9346e86704659728e11e2bcc053c9530ce3deeaabc0422dbc913",
+        "passed": false,
+        "official_cases": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "report_sha256": "baf4598ed458f26dedd3b5a885973229ae0469b258f7626f1e28e745347ceaf3"
+      },
+      {
+        "task": "deleteBlogPost_trackBounceRate",
+        "arm": "gpt5-library",
+        "status": "valid",
+        "file": "9a7706d2cdfa718c6eb36d322f6eee8a3e34383d0237fa0720069d158df2cb81",
+        "passed": true,
+        "official_cases": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "report_sha256": "95000ea54746361ee4a567d40379c7bfda1907d884ec9ef13634a2625f590017"
+      },
+      {
+        "task": "deleteBlogPost_trackBounceRate",
+        "arm": "gpt5-library-fixed",
+        "status": "valid",
+        "file": "e7b8151ac45c21de1f6117d5e6c052972c87ef0019a0eab1463e846fad070b0c",
+        "passed": false,
+        "official_cases": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "report_sha256": "a5d83e173f27686da5d03e77e12f3179fb767e51726f78682dd44b7657da4a51"
+      },
+      {
+        "task": "addSitemap_retrieveScheduledBlogPosts",
+        "arm": "direct",
+        "status": "valid",
+        "file": "fba8215e775cf462a3017af41e5a79ec7c020b8f027b9692eab7a43f1b7da6cc",
+        "passed": false,
+        "official_cases": [
+          "failed",
+          "failed",
+          "passed",
+          "passed"
+        ],
+        "report_sha256": "fcd4ea04031856629a9350e9d16682289607ab9110e1dd18bbe9f038c1f3d957"
+      },
+      {
+        "task": "addSitemap_retrieveScheduledBlogPosts",
+        "arm": "self",
+        "status": "valid",
+        "file": "9fda9ff5daf3a85a7748888ec38ac2ad8bafa9850434319727626f5d73680d0a",
+        "passed": true,
+        "official_cases": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "report_sha256": "13ffca0c65557f9b9cee36291eb025fce478f6e1eebc363d68f5c141c4022010"
+      },
+      {
+        "task": "addSitemap_retrieveScheduledBlogPosts",
+        "arm": "self-fixed",
+        "status": "valid",
+        "file": "07ff9ee7a357034040022ada39850f573a52034e4d6a385000f81664abe8a687",
+        "passed": false,
+        "official_cases": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "report_sha256": "9653942bb2805635d901920ec1ea391270c89d5d828ab41760ad756f894de805"
+      },
+      {
+        "task": "addSitemap_retrieveScheduledBlogPosts",
+        "arm": "gpt5-library",
+        "status": "valid",
+        "file": "83c11af1c1ec797fba6c2a0e55ca47249d8aaea179cf85c8d32ac11a3eb4f6b1",
+        "passed": true,
+        "official_cases": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "report_sha256": "b9c8c71a558e4265a07e44f682502e86f31ab68e51de2206ae2b816154834770"
+      },
+      {
+        "task": "addSitemap_retrieveScheduledBlogPosts",
+        "arm": "gpt5-library-fixed",
+        "status": "valid",
+        "file": "818a0336abb10b473255a70a10544456efdcca4c791491ebf1c9cc03e88df023",
+        "passed": false,
+        "official_cases": [
+          "passed",
+          "passed",
+          "failed",
+          "failed"
+        ],
+        "report_sha256": "25aadcf60b05ffc7b265a2ccff041a51d40c714f87952f1f137a05ea20175dde"
+      },
+      {
+        "task": "retrieveCommentCount_trackPostViews",
+        "arm": "direct",
+        "status": "valid",
+        "file": "1079ab6af6ca104a41a1efcd192b498e78fde6251a4b5f7297ce5758742ab384",
+        "passed": true,
+        "official_cases": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "report_sha256": "2fb5262ff694cd85e436a3311d7eb23ffb4a3e0930d72dea9f1c9ae7daff75d4"
+      },
+      {
+        "task": "retrieveCommentCount_trackPostViews",
+        "arm": "self",
+        "status": "valid",
+        "file": "0a744ca558aeec30010288522bd9050201354889772007556d19bc750aee9238",
+        "passed": true,
+        "official_cases": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "report_sha256": "22e8101b422a9c095de16b591b09ce7d2163965385baf1b5e50f83a204d78f1e"
+      },
+      {
+        "task": "retrieveCommentCount_trackPostViews",
+        "arm": "self-fixed",
+        "status": "valid",
+        "file": "e44486334522612b0efd2d7caec22dd964e6a73022f02a1dfdbc4d1b100a25dc",
+        "passed": false,
+        "official_cases": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "report_sha256": "c2f0c570f9389490cc32cacb2ac2ee9c8296a6396476f400b617a329293ee71d"
+      },
+      {
+        "task": "retrieveCommentCount_trackPostViews",
+        "arm": "gpt5-library",
+        "status": "valid",
+        "file": "5f94de615dad3fd84ec70159c9dbc46cca11fc2bd26da7711e8337896fa2f7fc",
+        "passed": true,
+        "official_cases": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "report_sha256": "4d56a8314346be70f74ad9a7a5d69397aa684fdf64c15cb7c9bd0abc0adf6f2e"
+      },
+      {
+        "task": "retrieveCommentCount_trackPostViews",
+        "arm": "gpt5-library-fixed",
+        "status": "valid",
+        "file": "63052c28f8213575ea16a089e4036640b7223b7d1c5b8e2106b9c2d31e19d509",
+        "passed": false,
+        "official_cases": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "report_sha256": "b759980ced3453788492ecccfb0cd5fcb4b799317855b852f6b38806a52d7375"
+      },
+      {
+        "task": "setTaskDependencies_updateTaskProgress",
+        "arm": "direct",
+        "status": "valid",
+        "file": "3273db562f50c9bceb44251447ebbe69b22856749301b677d3085d13ab99ad47",
+        "passed": false,
+        "official_cases": [],
+        "report_sha256": "c637cb1abb152f501a70fc72c28cad012b0dd58f3a5445674ff0267d8e8dc633"
+      },
+      {
+        "task": "setTaskDependencies_updateTaskProgress",
+        "arm": "self",
+        "status": "valid",
+        "file": "0043a3f1951846f1d1ddaf94f1b05b32e6ed11747014b6defcd40ad7e66ff358",
+        "passed": false,
+        "official_cases": [],
+        "report_sha256": "d5df631f39d257b432209840281eeef717413159f3b421c26fac47633cea9b26"
+      },
+      {
+        "task": "setTaskDependencies_updateTaskProgress",
+        "arm": "self-fixed",
+        "status": "valid",
+        "file": "3edcec3324a9b5a011b198268fc3b76526ecc8a39a54448d88cde0a64a43d4b6",
+        "passed": false,
+        "official_cases": [],
+        "report_sha256": "d8ebd48d6136e7b20d8389afca798c35a4559d5673717f0e5e85bf6e200756a2"
+      },
+      {
+        "task": "setTaskDependencies_updateTaskProgress",
+        "arm": "gpt5-library",
+        "status": "valid",
+        "file": "97ca109c494331cd79252a002736aebc05f9e5c4edaecd10d0183f62bf525601",
+        "passed": false,
+        "official_cases": [],
+        "report_sha256": "5017d4aca3648cd33ffb84d36ee6f6e3a67fd846f9d383984072eea3b3db86a2"
+      },
+      {
+        "task": "setTaskDependencies_updateTaskProgress",
+        "arm": "gpt5-library-fixed",
+        "status": "valid",
+        "file": "1529b6314f91dc7574051525bbea29bc6073ba024357f1c0fdcf9a0040029d4f",
+        "passed": false,
+        "official_cases": [],
+        "report_sha256": "227d28ef10c17a035511b65118cdef5e262cc97e331ada840ddde60445a1d221"
+      },
+      {
+        "task": "customNotificationsForUsers_viewTaskHistory",
+        "arm": "direct",
+        "status": "valid",
+        "file": "f51ffd7145f080f9fb76a557d1b173ae2ea581ec37883406ef291ad915f06ee8",
+        "passed": false,
+        "official_cases": [],
+        "report_sha256": "0e92b99c4e687d661bd2eb0a1b355c129cba192ff16e5fd6109a3dd4444e328b"
+      },
+      {
+        "task": "customNotificationsForUsers_viewTaskHistory",
+        "arm": "self",
+        "status": "valid",
+        "file": "7398be0870066c6b25633699bbc59c99f297c041222113abf2ec3b277aaf96fe",
+        "passed": false,
+        "official_cases": [],
+        "report_sha256": "f072215f1b96a1ea688e88f4644c90ce449fe7ce95eec63b93fce35f9fa6d652"
+      },
+      {
+        "task": "customNotificationsForUsers_viewTaskHistory",
+        "arm": "self-fixed",
+        "status": "valid",
+        "file": "ca84341db8615a29c84b7c0249c3095f24ab5c75832f4760366ab48a5d1a93fc",
+        "passed": false,
+        "official_cases": [],
+        "report_sha256": "ae8b7decb815190b157e3a146a5d3f05254221c5c39e90b69f2b83a3d1d823b0"
+      },
+      {
+        "task": "customNotificationsForUsers_viewTaskHistory",
+        "arm": "gpt5-library",
+        "status": "valid",
+        "file": "a562ddc1d530d9103e2838e2ceba74f8510aea119853a564ca5f5066b4535126",
+        "passed": false,
+        "official_cases": [],
+        "report_sha256": "ecff7dcbaf7a3253f38339ccc36d576cdb565f5b908b7688a627b4c03e831b42"
+      },
+      {
+        "task": "customNotificationsForUsers_viewTaskHistory",
+        "arm": "gpt5-library-fixed",
+        "status": "valid",
+        "file": "39595d3a069811d8799f21cff949731847252dd27ac84b6a47e44bea4814554c",
+        "passed": false,
+        "official_cases": [],
+        "report_sha256": "7b7aab80089f167da19f8876cd3a201dc7ebbacae065b2b86502e71c8e32f6b1"
+      },
+      {
+        "task": "projectMilestoneAddition_viewUserPerformanceMetrics",
+        "arm": "direct",
+        "status": "valid",
+        "file": "f2450a5c0f52ddbb0f27653b3b35bad9755095f9afa55a74513f67b0bcff643e",
+        "passed": true,
+        "official_cases": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "report_sha256": "b4baf6259d3580ba17ff4e4905114c126ea157fa65e157c6263efadb88ec9363"
+      },
+      {
+        "task": "projectMilestoneAddition_viewUserPerformanceMetrics",
+        "arm": "self",
+        "status": "valid",
+        "file": "eee5cc4a6420a04124ff29505ba0ec0eb83b436cbe7bddce1adfae3daaf65a22",
+        "passed": true,
+        "official_cases": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "report_sha256": "0a207e055ac14e7145b0d69ed3b9c9b5792c2b7932ac2c87ab887c6509678123"
+      },
+      {
+        "task": "projectMilestoneAddition_viewUserPerformanceMetrics",
+        "arm": "self-fixed",
+        "status": "valid",
+        "file": "7f95fd9bbaf0b67c5a6fe5f8b28052e1a2189e316fe5bab152cf7ddce7c045f7",
+        "passed": false,
+        "official_cases": [
+          "passed",
+          "passed",
+          "failed",
+          "failed"
+        ],
+        "report_sha256": "397659bf0c169f6e6536f3afe1c5ded78afe34d1712c20a05212f043b6cfd739"
+      },
+      {
+        "task": "projectMilestoneAddition_viewUserPerformanceMetrics",
+        "arm": "gpt5-library",
+        "status": "valid",
+        "file": "e6859e7c40e3f1fd38d55c8375de0d38cef3c7da0dac97e6eee39d1d182811a1",
+        "passed": true,
+        "official_cases": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "report_sha256": "e1c226ed4e7edf0e301ad2ce71366ccd0faf8051119e08408bb5790ba973214d"
+      },
+      {
+        "task": "projectMilestoneAddition_viewUserPerformanceMetrics",
+        "arm": "gpt5-library-fixed",
+        "status": "valid",
+        "file": "ed1c11a5ed4d34019b60ec489af4f83c0f4103b5b2939b61000d630cdbebaba7",
+        "passed": false,
+        "official_cases": [
+          "passed",
+          "passed",
+          "failed",
+          "failed"
+        ],
+        "report_sha256": "703832571d77e6b46c1b29547a6e4b1a3efe7474ee0688ae7a3a3a9889dffa89"
+      },
+      {
+        "task": "removeTaskDependencies_updateTaskProgress",
+        "arm": "direct",
+        "status": "valid",
+        "file": "60a6097f4bf6e9e02986af224d8791a6a47a3505b5f01fb9b498c03629c3439a",
+        "passed": false,
+        "official_cases": [],
+        "report_sha256": "5f8ed3ea49f29d745e9bd87da2510d4ebb5ad37eab4c5e1da9192d0fe66f9453"
+      },
+      {
+        "task": "removeTaskDependencies_updateTaskProgress",
+        "arm": "self",
+        "status": "valid",
+        "file": "37bb02b2e66379b3443bf9f2771bba30682d44e0415b1815e35be1db54423969",
+        "passed": false,
+        "official_cases": [],
+        "report_sha256": "d02fe5852c93a272526e0fd279550914589ce89e6afb9426e51c21f4f7b5db0a"
+      },
+      {
+        "task": "removeTaskDependencies_updateTaskProgress",
+        "arm": "self-fixed",
+        "status": "valid",
+        "file": "3156909fe33a5262b2be7145b10d71ed39376ce5fecbcf0a48952a383a4254f5",
+        "passed": false,
+        "official_cases": [],
+        "report_sha256": "44bc74ac9fd3e18f87b6e8956271105f5515c966529d8ec5f037cd9ff1e6f94e"
+      },
+      {
+        "task": "removeTaskDependencies_updateTaskProgress",
+        "arm": "gpt5-library",
+        "status": "valid",
+        "file": "f8a8b4959070817f61a0fa1f517fd889d440968adb55836cc27fa32a3ade988e",
+        "passed": false,
+        "official_cases": [],
+        "report_sha256": "8204cfc741b97779c136131442d88e2a7a90367787e26f50bf04d15f7c45aafd"
+      },
+      {
+        "task": "removeTaskDependencies_updateTaskProgress",
+        "arm": "gpt5-library-fixed",
+        "status": "valid",
+        "file": "c5b27ca8026b39396a9dd0db457dc797a0ac6ae0dd2157352be609c1394bcf8a",
+        "passed": false,
+        "official_cases": [],
+        "report_sha256": "afe878b40b83b667d07622fdb0a6b9c089f65df20acfd03d95bf813820401eef"
+      },
+      {
+        "task": "taskResourcesAllocation_taskSortDueDate",
+        "arm": "direct",
+        "status": "valid",
+        "file": "d06c8d02f9e3239d234a5307b0dbc8c1c70e1c43b0c7de79ec9426300f7efe59",
+        "passed": true,
+        "official_cases": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "report_sha256": "f5ed7cd9f076d65713d5939690d80d65d8dd125981b964cf358c46c974f08c58"
+      },
+      {
+        "task": "taskResourcesAllocation_taskSortDueDate",
+        "arm": "self",
+        "status": "valid",
+        "file": "546a2c4dcefff849de8e1c86903cb651d34c16df01e89163dbce4480c4fdd72f",
+        "passed": false,
+        "official_cases": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "report_sha256": "eae8a193b2a06986fa4779d40691ed873002f915ea9a3c7098fcad743550abd3"
+      },
+      {
+        "task": "taskResourcesAllocation_taskSortDueDate",
+        "arm": "self-fixed",
+        "status": "valid",
+        "file": "caadbf8322e99238822b1b29f300293d081e32fa46b2159851c154aa6de3a249",
+        "passed": false,
+        "official_cases": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "report_sha256": "258d77b903c264cacf0d08018e2a91f3d4eb54836646743efacf84a42ee918dd"
+      },
+      {
+        "task": "taskResourcesAllocation_taskSortDueDate",
+        "arm": "gpt5-library",
+        "status": "valid",
+        "file": "0d9f498ed07f17031d11c879799e554a37281f8a22115a525d07119c1c87edab",
+        "passed": true,
+        "official_cases": [
+          "passed",
+          "passed",
+          "passed",
+          "passed"
+        ],
+        "report_sha256": "ef18e77f3a594720d3148a103c56c5e9050b65c267b046ab653497f6c6ab3f3d"
+      },
+      {
+        "task": "taskResourcesAllocation_taskSortDueDate",
+        "arm": "gpt5-library-fixed",
+        "status": "valid",
+        "file": "f244f24f3c504f7b625a76c4232d3a8a3bf62b00e2e1dd1e70adf39c8ee4ccee",
+        "passed": false,
+        "official_cases": [
+          "failed",
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "report_sha256": "1cc398461365ec7573856924ae0b83287ce2a25dcaa7b3d7433499df9413615c"
+      }
+    ]
+  },
+  "cost": {
+    "calls": 93,
+    "settled_usd": 0.242194,
+    "exposure_usd": 0.242194,
+    "unsettled_calls": 0,
+    "cap_usd": 2.45,
+    "stop_usd": 2.45,
+    "halted": 0
+  }
+}

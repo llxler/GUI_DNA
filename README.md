@@ -1,6 +1,8 @@
 # GUI-DNA: Building and Reusing Behavior Libraries for GUI Generation
 
-GUI-DNA 将「用户操作如何改变应用状态」写进可复用的行为库，让模型根据需求选择配置。例如，文件管理器中同一个「新建」按钮，要根据当前选中的是目录还是文件来决定插入位置。论文比较从零生成代码、组装人工组件，以及组装模型从公开需求建立的库。[方法说明](docs/method.md)
+GUI-DNA 将「用户操作如何改变应用状态」写进可复用的行为库，让模型根据需求选择配置。查询 `python -m studies.lookup webapp1k-duo "DeepSeek V4 Flash" Human` 可定位 Duo 的 7/10。此处 Human 使用人工维护的 React Final Form，Flash 填写业务绑定。同一行 Direct、GPT-5、Self 均通过 9/10。新抽的十个组合另行报告。[Duo 逐题来源与独立抽样](studies/public_library_transfer/duo_verified_features/README.md)
+
+例如，文件管理器中同一个「新建」按钮，要根据当前选中的是目录还是文件来决定插入位置。论文比较从零生成代码、组装人工组件，以及组装模型从公开需求建立的库。[方法说明](docs/method.md)
 
 ## 按数据集、模型和方法查 Table 1
 
@@ -21,7 +23,7 @@ python -m studies.lookup web-bench/form "DeepSeek V4 Flash" Self      # 查看�
 | --- | --- | --- |
 | A · Web-Bench 完整项目 | `web-bench/table`、`web-bench/svg-chart`、`web-bench/form`、`web-bench/dom1`（文件管理器）、`web-bench/calculator` | [Web-Bench 分项目索引](studies/webbench/README.md) |
 | B · TodoMVC 功能子集 | `todomvc` | [人工库](studies/todomvc_dna/README.md) · [小模型建库](studies/public_library_transfer/compact_todomvc/PROTOCOL.md) · [配置筛选](studies/public_library_transfer/source_diagnosis/visible_choices/core_profiles/PROTOCOL.md) · [逐开关配置](studies/public_library_transfer/compact_todomvc/edit_choices/PROTOCOL.md) |
-| B · WebApp1K-Duo 双功能组合 | `webapp1k-duo` | [公开功能与配对](studies/public_library_transfer/other_benchmarks/README.md) · [GPT-5 组件来源](studies/public_library_transfer/duo_donor_library/PROTOCOL.md) · [Self 回调与视图](studies/public_library_transfer/duo_react_callbacks/PROTOCOL.md) |
+| B · WebApp1K-Duo 双功能组合 | `webapp1k-duo` | [公开功能与配对](studies/public_library_transfer/other_benchmarks/README.md) · [四种来源、逐题收据与十个新组合](studies/public_library_transfer/duo_verified_features/README.md) |
 | C · WebGen-Bench 网站操作 | `webgen-bench` | [九站与四种方法](studies/webgen_bench/site_completion/PROTOCOL.md) · [人工库的导航设置](studies/webgen_bench/site_completion/SDK_NAVIGATION.md) |
 
 模型名指负责当前目标的**生成模型**，支持上表命令列出的显示名和完整模型 ID。四种方法的 JSON 标识分别为 `direct`（从零写代码）、`human`（人工库＋GUI-DNA）、`gpt5-library`（冻结 GPT-5 库＋GUI-DNA）和 `self`（目标模型建库并配置）。固定示例和第二次独立建库可在对应研究记录中查阅。

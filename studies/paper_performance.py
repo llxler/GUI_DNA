@@ -11,6 +11,7 @@ from studies.public_library_transfer.self_refinement.suite_recovery import paper
 from studies.webbench.form.flash_self_build import paper as flash_form
 from studies import paper_component_followup as components, paper_library_capabilities as capabilities
 from studies import paper_target_extensions as extensions, paper_module_rebuilds as rebuilds
+from studies.public_library_transfer.duo_verified_features import report as duo_features
 from studies.webbench.table.event_modules import paper as table_protocols
 
 MISTRAL = "mistralai/mistral-small-3.2-24b-instruct"
@@ -187,6 +188,7 @@ def performance_matrix(data, replay, trials, today, batches=None):
         completion.attach(matrix)
         extensions.attach(matrix)
         rebuilds.attach(matrix)
+        duo_features.attach(matrix)
     return matrix
 
 
@@ -230,6 +232,7 @@ def table_record(model, project):
     if project == "webgen-heldout":
         return ("webgen_holdout",), model.get("webgen_holdout", {})
     ordered = (
+        ("duo_feature_bindings",) if project == "duo" else (),
         ("module_rebuilds", project),
         ("target_extensions", project),
         ("state_examples", project),
@@ -444,7 +447,7 @@ def render_matrix(matrix, followups=(), domain_rows=()):
         r"Direct writes code without a library. In Human, the target model configures human-written components. GPT-5 uses a frozen GPT-5 library. "
         r"Self uses the target model to build and configure its own library. "
         + calculator_note
-        + r"Each Duo domain contributes five pairs. "
+        + (r"Each Duo domain has five pairs. Duo Human configures React Final Form. " if any("duo_feature_bindings" in m for m in matrix.values()) else r"Each Duo domain contributes five pairs. ")
         + (r"D uses protocol-specific Direct. Variants reuse libraries. "
            r"Fixed replays an example, pair, defaults, or all renderers. Relaxed files, DOM tokens and SVG C/D share 20 recovered direct replies. Flash file checks include six retransmissions. " if followups else "")
         + (r"In E, fixed A/B retain/swap button order or enable/disable optional events. " if domain_rows else "")
