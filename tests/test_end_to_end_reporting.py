@@ -218,6 +218,7 @@ def test_paper_omits_failed_builds_and_keeps_measured_zeros():
         model.pop("table_state_transitions", None)
         model.pop("state_examples", None)
         model.pop("module_rebuilds", None)
+        model.pop("calculator_profiles", None)
         model.pop("duo_feature_bindings", None)
         model.pop("target_extensions", None)
         model.pop("webgen_completion", None)
@@ -400,7 +401,7 @@ def test_new_full_project_rows_and_todo_method_records_match_the_registered_sour
 
     matrix = read(ROOT / MATRIX)
     # Reproduce the registered target-extension cohort, before the later library rebuilds.
-    matrix = {m: {k: v for k, v in row.items() if k != "module_rebuilds"} for m, row in matrix.items()}
+    matrix = {m: {k: v for k, v in row.items() if k not in ("module_rebuilds", "calculator_profiles")} for m, row in matrix.items()}
     for project in ("dom1", "calculator"):
         assert set(ext.WEB_MODELS.values()).issubset(paper.table_models(matrix, project))
         for model in ext.WEB_MODELS.values():
@@ -492,8 +493,10 @@ def test_module_rebuild_scores_and_missing_delivery_are_traceable_to_receipts():
     from studies.study_io import ROOT, read
 
     matrix = read(ROOT / MATRIX)
+    # Audit the original 403 receipt independently of the subsequent GPT-5 delivery.
+    matrix = {m: {k: v for k, v in row.items() if k != "calculator_profiles"} for m, row in matrix.items()}
     earlier = {
-        model: {k: v for k, v in row.items() if k != "module_rebuilds"}
+        model: {k: v for k, v in row.items() if k not in ("module_rebuilds", "calculator_profiles")}
         for model, row in matrix.items()
     }
     for model, entry in matrix.items():

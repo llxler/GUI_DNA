@@ -23,6 +23,7 @@ MODEL_NAMES = paper.BACKBONES | paper.components.LABELS
 # instead of attributing every method to the latest run.
 ASSEMBLERS = {
     "duo_feature_bindings": paper.duo_features,
+    "calculator_profiles": paper.calc_profiles,
     "source_diagnosis": paper.sources,
     "library_capabilities": paper.capabilities,
     "form_visible_targets": paper.table_protocols,
@@ -42,9 +43,9 @@ ASSEMBLERS = {
 def find_cell(matrix, dataset, model, method):
     project = DATASETS[dataset]
     path, row = paper.table_record(matrix[model], project)
-    if path[0] == "module_rebuilds" and method in row["inherited_methods"]:
+    if path[0] in ("module_rebuilds", "calculator_profiles") and method in row["inherited_methods"]:
         earlier = dict(matrix)
-        earlier[model] = {k: v for k, v in matrix[model].items() if k != "module_rebuilds"}
+        earlier[model] = {k: v for k, v in matrix[model].items() if k != path[0]}
         cell = find_cell(earlier, dataset, model, method)
         if partial := row.get("partial_followups", {}).get(method):
             cell["partial_followup_record"] = partial
@@ -89,8 +90,15 @@ def find_cell(matrix, dataset, model, method):
         cell["method_record"] = receipt
     if record_filter := row.get("record_filters", {}).get(method):
         cell["record_filter"] = record_filter
-    if path[0] in ("target_extensions", "module_rebuilds", "duo_feature_bindings") and status == "measured":
+    if path[0] in ("target_extensions", "module_rebuilds", "duo_feature_bindings", "calculator_profiles") and status == "measured":
         cell["targets"] = row["targets"]
+    if path[0] == "calculator_profiles":
+        cell["earlier_delivery_record"] = row["earlier_delivery_record"]
+        cell["verification_record"] = row["verification_record"]
+        if "fixed_score" in row:
+            cell["fixed_configuration_score"] = row["fixed_score"]
+        if "self_choice_score" in row:
+            cell["same_self_configuration_score"] = row["self_choice_score"]
     if path[0] == "duo_feature_bindings" and method != "direct":
         cell["protocol"] = row["protocols"][method]
         cell["configuration_record"] = row["configuration_source"]
@@ -106,7 +114,7 @@ def find_cell(matrix, dataset, model, method):
         cell["unavailable_reason"] = row["unavailable_reasons"][method]
     if path[0] == "module_rebuilds" and status != "measured":
         earlier = dict(matrix)
-        earlier[model] = {k: v for k, v in matrix[model].items() if k != "module_rebuilds"}
+        earlier[model] = {k: v for k, v in matrix[model].items() if k != path[0]}
         previous = find_cell(earlier, dataset, model, method)
         if previous["status"] == "measured":
             cell["previous_measurement"] = {

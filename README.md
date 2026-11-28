@@ -17,7 +17,7 @@ python -m studies.lookup web-bench/form "DeepSeek V4 Flash" Self      # 查看�
 
 最后一条查询返回 **11/20**。打开输出的 `matrix`，按 `row_keys` 依次进入模型和实验记录，在 `passed.self` 看分子，在 `n` 和 `targets` 看分母和目标。再打开 `method_record`。这次实验把首份自建库记作 `file-a`，其 20 行分别给出任务编号、是否通过和浏览器报告哈希。同目录的协议说明建库及解码条件，运行器给出实现。旧矩阵 `current.form` 留有历史计数 0/20。其两次建库均未交付源码，20 题都没有进入规划；当前表展示准入后的实测成绩。[主表 JSON](studies/results/paper-performance-matrix.json) · [本格逐题记录](studies/webbench/form/flash_self_build/visible_targets/result.json) · [协议](studies/webbench/form/flash_self_build/visible_targets/PROTOCOL.md) · [运行代码](studies/webbench/form/flash_self_build/visible_targets/run.py)
 
-例如，`python -m studies.lookup web-bench/table "Gemma 3 12B" GPT-5` 可查 GPT-5 表格库的 9/20。打开 `method_record`，在该模型的 20 行 `arm=combined` 中逐项复算；同一文件还保留原库、自查版、仅修菜单版和各自的固定页。计算器的 `Self` 可查按键实现及实际配置。计算器新接口未收到 GPT-5 源码，查询 `GPT-5` 时，`method_record` 给出缺测原因，`historical_method_record` 给出旧接口的实测结果。[表格建库协议](studies/webbench/table/author_modules/PROTOCOL.md) · [计算器建库协议](studies/webbench/calculator/key_programs/PROTOCOL.md)
+例如，`python -m studies.lookup web-bench/table "Gemma 3 12B" GPT-5` 可查 GPT-5 表格库的 9/20。打开 `method_record`，在该模型的 20 行 `arm=combined` 中逐项复算；同一文件还保留原库、自查版、仅修菜单版和各自的固定页。计算器的 `Self` 可查按键实现及实际配置。计算器的 `GPT-5` 查询指向四组按键模块的逐题部署；`fixed_configuration_score` 是同一库固定全开的分数，`historical_method_record` 指向早期 JSON 接口。[表格建库协议](studies/webbench/table/author_modules/PROTOCOL.md) · [计算器四种方法与 GPT-5 逐题记录](studies/webbench/calculator/gpt5_profiles/README.md)
 
 | Table 1 | 查询用的数据集／项目名 | 实验代码入口 |
 | --- | --- | --- |

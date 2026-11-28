@@ -14,6 +14,7 @@ from studies.webbench.form.flash_self_build import paper as flash_form
 from studies.public_library_transfer.self_refinement.suite_recovery import paper as recovery
 from studies.public_library_transfer.self_refinement import domain_panel, prospective_panel, suite_comparisons
 from studies.public_library_transfer.duo_verified_features import report as duo_features
+from studies.webbench.calculator.gpt5_profiles import report as calc_profiles
 from studies import paper_component_followup as component_trials
 from studies.webbench.table.event_modules import paper as table_protocols
 from studies import paper_library_capabilities as capabilities, paper_target_extensions as extensions, paper_module_rebuilds as rebuilds
@@ -377,7 +378,7 @@ def audit(data, generated):
                                                  "domain-construction-accounting-final-20261124.json")},
                                     **{str(p.relative_to(ROOT)): sha(p) for p in NOVEMBER_RESULTS.values()},
                                     **{str(p.relative_to(ROOT)): sha(p) for p in (*self_followups.SOURCES, *flash_form.SOURCES, *recovery.SOURCES)},
-                                    **{str(p.relative_to(ROOT)): sha(p) for p in (*duo_features.SOURCES, *rebuilds.SOURCES, *extensions.SOURCES, *completion.RECEIPTS, completion.RESULT, *validation.RECEIPTS, validation.RESULT, *sources.SOURCES, sources.OUTPUT, *functional.SOURCES, functional.RESULT, *capabilities.SOURCES, capabilities.SUMMARY, *component_trials.SOURCES, component_trials.EXTENSION, table_protocols.PROFILES, table_protocols.EVENTS, table_protocols.RECOVERED, table_protocols.FOCUSED, table_protocols.FLASH, table_protocols.FLASH_SCHEMA)},
+                                    **{str(p.relative_to(ROOT)): sha(p) for p in (calc_profiles.RESULT, calc_profiles.VERIFICATION, *duo_features.SOURCES, *rebuilds.SOURCES, *extensions.SOURCES, *completion.RECEIPTS, completion.RESULT, *validation.RECEIPTS, validation.RESULT, *sources.SOURCES, sources.OUTPUT, *functional.SOURCES, functional.RESULT, *capabilities.SOURCES, capabilities.SUMMARY, *component_trials.SOURCES, component_trials.EXTENSION, table_protocols.PROFILES, table_protocols.EVENTS, table_protocols.RECOVERED, table_protocols.FOCUSED, table_protocols.FLASH, table_protocols.FLASH_SCHEMA)},
                                     **{str(p.relative_to(ROOT)): sha(p) for p in (*suite_comparisons.SOURCES, suite_comparisons.OUTPUT)},
                                     **{str(p.relative_to(ROOT)): sha(p) for p in (*domain_panel.SOURCES, *domain_panel.DIAGNOSTICS,
                                                                                 *prospective_panel.SOURCES, prospective_panel.OUTPUT,
@@ -403,14 +404,14 @@ def main():
     from studies.paper_performance import METHODS, project_cells
     for row in json.loads(capabilities.SUMMARY.read_text())["annotated_cells"]["rows"]:
         # Preserve the published 18-cell development audit when a later protocol supersedes a cell.
-        snapshot = {k:v for k,v in matrix[row["model"]].items() if k not in ("source_diagnosis", "state_examples", "target_extensions", "module_rebuilds", "duo_feature_bindings")}
+        snapshot = {k:v for k,v in matrix[row["model"]].items() if k not in ("source_diagnosis", "state_examples", "target_extensions", "module_rebuilds", "duo_feature_bindings", "calculator_profiles")}
         rendered = project_cells(snapshot, row["project"])[list(METHODS).index(row["method"])]
         pair = re.search(r"(\d+)/(\d+)", rendered)
         expected = row["displayed"]
         assert pair and (int(pair[1]), int(pair[2])) == (expected["passed"], len(expected["targets"])), row
     for model in matrix.values():
         for project,group in model.get("source_diagnosis",{}).items():
-            archived = {k:v for k,v in model.items() if k not in ("state_examples", "target_extensions", "module_rebuilds", "duo_feature_bindings")}
+            archived = {k:v for k,v in model.items() if k not in ("state_examples", "target_extensions", "module_rebuilds", "duo_feature_bindings", "calculator_profiles")}
             for method,cell in zip(METHODS,project_cells(archived,project),strict=True):
                 match = re.search(r"(\d+)/(\d+)",cell)
                 if method in group["passed"]:
@@ -419,7 +420,7 @@ def main():
                     assert match is None
     source_report = json.loads(sources.OUTPUT.read_text())
     for row in source_report["initial_visible_reversals"]:
-        archived = {k:v for k,v in matrix[row["model"]].items() if k not in ("state_examples", "target_extensions", "module_rebuilds", "duo_feature_bindings")}
+        archived = {k:v for k,v in matrix[row["model"]].items() if k not in ("state_examples", "target_extensions", "module_rebuilds", "duo_feature_bindings", "calculator_profiles")}
         cells = dict(zip(METHODS, project_cells(archived, row["project"]), strict=True))
         for arm, expected in row["displayed_after"].items():
             match = re.search(r"(\d+)/(\d+)", cells[arm])

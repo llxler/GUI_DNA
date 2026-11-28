@@ -2850,3 +2850,21 @@ Gemma 的自建首个完整页把数字 3、6、9 分别标成减、乘、除，
 **Flash 的另外十个组合。** 先排除原功能和所有用过的供体功能，从两个域分别剩余的 28、19 个组合中，按题名哈希各取五个。Direct 可在同一份页面上测试两个公开功能，建库者分别测试各单功能，每次生成后均最多修正两次。三份官方测试的模块导入名与题目名不同。首次打包按题目名提供页面，这三份测试没有运行断言。给所有组的每份封存页面按官方名称导出同一组件后，两批各 50 个方法与目标记录都实际运行四例。首次候选 Direct 为 6/10、GPT-5 为 10/10、Self 为 7/10；两种固定功能对均为 0/10。GPT-5 包含 Direct 通过的六题，另过四题。Self 比 Direct 多过三题、少过两题，净多一题。公开检查中，Flash 有四个组件调用运行环境已移除的 useHistory。对所有方法连接第 6 版的真实路由并重测，Direct、GPT-5、Self 分别为 7/10、10/10、8/10，固定对照仍均为 0/10。Self 新增资源分配与截止日排序，Direct 新增任务依赖与进度更新。这十题检验在两个既有域内复用给定功能。题名给出两个功能，单功能规格也公开双功能断言。[抽样与候选](../studies/public_library_transfer/duo_verified_features/unseen_pairs/result.json) · [真实导航校准](../studies/public_library_transfer/duo_verified_features/unseen_pairs/router/result.json) · [逐题最终判决与入口修复](../studies/public_library_transfer/duo_verified_features/unseen_pairs/entry_points/result.json)
 
 本轮新增 376 次调用，已结算 $0.332518，含一笔未结预留的最高敞口为 $0.345139。其中原作者补建和共享选项已结算 $0.073835，首次 SDK 绑定 $0.014903，接收与补交绑定 $0.001586，新组合建库与从零对照 $0.242194。旧准备费用另列。基准作者原 GPT-5 供体的生成成本和 SDK 的开发人时没有记录。[按模型和用途分账](../studies/public_library_transfer/duo_verified_features/accounting.json)
+
+<a id="calculator-gpt5-profiles"></a>
+## 61. Calculator 的 GPT-5 建库与固定全开对照
+
+同一份 GPT-5 库交给四款目标模型，各自依据公开需求，从十种真实页面配置中逐题选择。每行四种方法使用相同的 20 个官方当前任务。Direct、Human 和 Self 沿用该行已有的逐题记录。GPT-5 列来自本次实际生成的安装函数与 80 份新配置。另将同一库固定全开，或沿用各模型先前在自己库上做的配置选择。
+
+| 目标模型 | Direct | Human | GPT-5 库 | Self | GPT-5 固定全开 | GPT-5 沿用 Self 配置 |
+|---|---:|---:|---:|---:|---:|---:|
+| Gemma 3 12B | 8/20 | 16/20 | 7/20 | 6/20 | 11/20 | 9/20 |
+| Qwen3.5-9B | 4/20 | 20/20 | 11/20 | 2/20 | 11/20 | 9/20 |
+| GPT-OSS-120B | 10/20 | 20/20 | 11/20 | 10/20 | 11/20 | 11/20 |
+| DeepSeek V4 Flash | 10/20 | 16/20 | 10/20 | 11/20 | 11/20 | 11/20 |
+
+**公开验收。** 上次新接口曾收到 403。本次 GPT-5 交付了科学键、外观、记忆、历史四个安装函数。单独挂载记忆模块和四组全开都会超时，去掉记忆后能加载。该模块监听外观类名变化，并在回调中重复写入同一类名。GPT-5 修改了这段逻辑，其他三份首次源码原样保留。两份额外的外观修订均未保留全部已有检查并增加通过项。首份准入库在原输入和另一组操作数上分别通过 13/15 项公开检查，两组都在模式切换和布局上失分。[协议与原作者修复](../studies/webbench/calculator/gpt5_profiles/mount_recovery/PROTOCOL.md) · [实际交付与公开检查](../studies/webbench/calculator/gpt5_profiles/mount_recovery/result.json)
+
+**逐题选择的作用。** GPT-5 固定全开通过 11/20。Qwen3.5 和 GPT-OSS 的 20 次选择都取了全开。Gemma 有 18 次关闭外观组，相对全开少过第 7–10 题，包括 Clear 键宽度、主题按钮及默认主题。Flash 两次选择早期科学键布局，少过第 6 题的 sin 与 π 按键换位。四个模型都没有只靠逐题选择新增通过的任务。此前原生 JSON 接口的 10/20 与那次固定首例仍独立存档。[逐题选择与通过题号](../studies/webbench/calculator/gpt5_profiles/verification.json) · [旧接口记录](../studies/webbench/calculator/compiler_fallback/result.json)
+
+本轮 87 次调用全部结算，共 $0.220775。其中 GPT-5 的四份首次交付及三次补交或修订合计 $0.212881，四款目标模型各 20 次部署合计 $0.007894。两个对照复用已保存源码或配置，没有新增模型调用。[分模型账单](../studies/webbench/calculator/gpt5_profiles/mount_recovery/result.json) · [两本账的完整核对](../studies/webbench/calculator/gpt5_profiles/verification.json)

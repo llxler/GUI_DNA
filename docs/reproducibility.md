@@ -215,3 +215,5 @@ Duo 初批两模型与 Qwen 精简契约的另外两份库，分别用 `uv run p
 本机保留原始候选与固定版本的 Jest 环境后，运行 `uv run --offline python -m studies.public_library_transfer.duo_verified_features.report` 可只读核对四本调用账本、费用和源指纹。新组合的抽样和候选在 `unseen_pairs/result.json`。最终判分在 `unseen_pairs/entry_points/result.json`，其 `phases.initial` 是首次生成的代码，`phases.router` 是同题的路由适配复测。按 `entries` 核对三份名称不同的官方导入口，按 `official_cases` 复算每题的四项判决。用 `uv run --offline python -m studies.public_library_transfer.duo_verified_features.unseen_pairs.entry_points.run` 可从两批封存页面复核，两组都使用相同导入规则，无新增模型调用。
 
 运行 `uv run --offline python -m studies.public_library_transfer.duo_verified_features.verify` 可独立核对十个阶段注册时的输入指纹、375 份收到的响应与实际请求模型、主表三种库的逐题执行和新十题两批各 50 份目标判分。[本轮核验](../studies/public_library_transfer/duo_verified_features/verification.json)
+
+Calculator 的 GPT-5 格由四个安装函数生成。运行 `python -m studies.lookup web-bench/calculator "DeepSeek V4 Flash" GPT-5` 查逐题记录、固定全开及相同 Self 配置的得分。本机保留来源时，运行 `uv run --offline python -m studies.webbench.calculator.gpt5_profiles.verify` 可核对模型回复、每份页面的官方浏览器判决和两本账。首次 403 和旧原生接口可从同一条查询追溯。[实验说明](../studies/webbench/calculator/gpt5_profiles/README.md)

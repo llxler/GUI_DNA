@@ -11,6 +11,7 @@ from studies.public_library_transfer.self_refinement.suite_recovery import paper
 from studies.webbench.form.flash_self_build import paper as flash_form
 from studies import paper_component_followup as components, paper_library_capabilities as capabilities
 from studies import paper_target_extensions as extensions, paper_module_rebuilds as rebuilds
+from studies.webbench.calculator.gpt5_profiles import report as calc_profiles
 from studies.public_library_transfer.duo_verified_features import report as duo_features
 from studies.webbench.table.event_modules import paper as table_protocols
 
@@ -189,6 +190,7 @@ def performance_matrix(data, replay, trials, today, batches=None):
         extensions.attach(matrix)
         rebuilds.attach(matrix)
         duo_features.attach(matrix)
+        calc_profiles.attach(matrix)
     return matrix
 
 
@@ -233,6 +235,7 @@ def table_record(model, project):
         return ("webgen_holdout",), model.get("webgen_holdout", {})
     ordered = (
         ("duo_feature_bindings",) if project == "duo" else (),
+        ("calculator_profiles",) if project == "calculator" else (),
         ("module_rebuilds", project),
         ("target_extensions", project),
         ("state_examples", project),
@@ -438,7 +441,9 @@ def render_matrix(matrix, followups=(), domain_rows=()):
             lines.append(" & ".join([row["project"], *values(row, methods)]) + r" \\")
         lines += [r"\bottomrule\end{tabular*}\par\vspace{1pt}"]
     calculator_note = ""
-    if any("calculator" in m.get("module_rebuilds", {}) for m in matrix.values()):
+    if any("calculator_profiles" in m for m in matrix.values()):
+        calculator_note = "Calculator GPT-5 and Self use ten observed configurations. "
+    elif any("calculator" in m.get("module_rebuilds", {}) for m in matrix.values()):
         calculator_note = "GPT-5 did not deliver a library for the new calculator interface. "
     elif any("calculator" in m.get("target_extensions", {}) for m in matrix.values()):
         calculator_note = "Calculator GPT-5 requests an example only after compiler rejection. "

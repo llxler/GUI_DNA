@@ -10,7 +10,7 @@ WebApp1K-Duo 按题名给出的两个功能组装。Human 使用第三方人工�
 
 计算器保留公开起始工程可用的数字与四则运算。每个 Self 模型自己实现科学键、记忆、外观及历史。通用绑定器负责接收按键、传递显示值和记忆值，具体运算由模型编写。修订只看公开操作，必须保留原先通过的检查并至少多过一项，按登记顺序最多重建三次。部署模型根据实际页面的按钮和操作结果选配置。正式评分分别交叉新旧源码和新旧选择，也重放固定页、无效按键和空宿主。Gemma 与 Qwen3.5 的按键清单混入了起始页按钮或重复列出运算。先从本模型的原始交付读取功能键，再逐键补交缺失运算，复用已封存的 20 份选择。另用已有数字的显示框检验召回。缺整组记忆键时由同模型分别写每键的显示表达式和记忆表达式，沿用其早晚按键顺序。[非空显示与独立数据](../studies/webbench/calculator/memory_recall/PROTOCOL.md)
 
-GPT-5 在此接口的请求未交付，旧原生接口的成绩单列。[建库与固定页](../studies/webbench/calculator/behavior_modules/PROTOCOL.md) · [按键与配置的交叉实验](../studies/webbench/calculator/key_programs/PROTOCOL.md)
+GPT-5 在相同起始页上编写四个安装函数。首次补交的记忆模块单独挂载即超时，去掉它可加载整页；让原模型修复之后，四款目标模型各自根据该库十种页面的真实按键与操作结果，选择当前目标的配置。另以固定全开、沿用该模型在 Self 库上的原选择两种方式重放同一份代码。旧原生 JSON 接口的成绩单列。[建库、挂载与部署](../studies/webbench/calculator/gpt5_profiles/README.md) [建库与固定页](../studies/webbench/calculator/behavior_modules/PROTOCOL.md) · [按键与配置的交叉实验](../studies/webbench/calculator/key_programs/PROTOCOL.md)
 
 公开回放在同一个右键事件的表格阶段与文档阶段分别读取菜单可见性，另测单击后 Delete 的结果。Self 表格组件另行固定安装接口，按公开需求指定的文件拆分实现，并实际验证右键操作能增加一行。Flash 问卷将从零、人工库、GPT-5 库及两份原 Self 库的全部逐题请求分别复用，仅在五组同时关闭额外推理；保留原输出上限和评分文件。[四种配置的事件记录](../studies/webbench/table_interactions/public-actions.json) · [按职责生成组件](../studies/webbench/table/event_modules/focused.md) · [Flash 同解码协议](../studies/webbench/form/flash_self_build/visible_targets/PROTOCOL.md)
 
