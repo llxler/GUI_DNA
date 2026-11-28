@@ -217,6 +217,7 @@ def test_paper_omits_failed_builds_and_keeps_measured_zeros():
         model.pop("library_capabilities", None)
         model.pop("table_state_transitions", None)
         model.pop("state_examples", None)
+        model.pop("module_rebuilds", None)
         model.pop("target_extensions", None)
         model.pop("webgen_completion", None)
         model.pop("webgen_holdout", None)
@@ -397,6 +398,8 @@ def test_new_full_project_rows_and_todo_method_records_match_the_registered_sour
     from studies.study_io import ROOT, read
 
     matrix = read(ROOT / MATRIX)
+    # Reproduce the registered target-extension cohort, before the later library rebuilds.
+    matrix = {m: {k: v for k, v in row.items() if k != "module_rebuilds"} for m, row in matrix.items()}
     for project in ("dom1", "calculator"):
         assert set(ext.WEB_MODELS.values()).issubset(paper.table_models(matrix, project))
         for model in ext.WEB_MODELS.values():
@@ -479,3 +482,91 @@ def test_file_baseline_publishes_all_four_decodings_including_malformed_deliveri
         assert all(len(r["response"]) == 64 for r in rows)
         assert all(r["passed"] is False for r in rows if r["format"] == "invalid")
         assert sum(r["passed"] is True for r in rows) == info["score"]
+
+
+def test_module_rebuild_scores_and_missing_delivery_are_traceable_to_receipts():
+    from studies import paper_module_rebuilds as rebuilds
+    from studies.lookup import MATRIX, find_cell
+    from studies.paper_component_followup import outcomes
+    from studies.study_io import ROOT, read
+
+    matrix = read(ROOT / MATRIX)
+    earlier = {
+        model: {k: v for k, v in row.items() if k != "module_rebuilds"}
+        for model, row in matrix.items()
+    }
+    for model, entry in matrix.items():
+        for project, row in entry.get("module_rebuilds", {}).items():
+            dataset = "web-bench/" + project
+            for method in row["inherited_methods"]:
+                assert find_cell(matrix, dataset, model, method) == find_cell(earlier, dataset, model, method)
+            for method in ("self", "gpt5-library"):
+                if method in row["inherited_methods"]:
+                    continue
+                cell = find_cell(matrix, dataset, model, method)
+                record = read(ROOT / cell["method_record"])
+                arm = cell["record_filter"]["arm"]
+                observations = outcomes(record["models"][model], arm)
+                assert set(observations) == set(row["targets"]) == set(range(1, 21))
+                if cell["status"] == "measured":
+                    assert None not in observations.values()
+                    assert (cell["score"], cell["denominator"]) == (sum(observations.values()), 20)
+                else:
+                    assert "score" not in cell and "denominator" not in cell
+                    assert all(v is None for v in observations.values())
+                    prior = find_cell(earlier, dataset, model, method)
+                    if prior["status"] == "measured":
+                        assert cell["previous_measurement"]["score"] == prior["score"]
+                        assert cell["previous_measurement"]["denominator"] == prior["denominator"]
+                if project == "calculator" and method == "gpt5-library":
+                    assert cell["status"] == "unavailable" and "403" in cell["unavailable_reason"]
+                    assert ROOT / cell["historical_method_record"] == rebuilds.previous.FALLBACK
+                    assert find_cell(earlier, dataset, model, method)["score"] == 10
+                if project == "table" and method == "gpt5-library":
+                    assert arm == "combined" and ROOT / cell["method_record"] == rebuilds.TABLE
+                    profiles = {
+                        a: {r["task"]: r["profile"] for r in record["models"][model] if r["arm"] == a}
+                        for a in ("original", "review", "trace", "combined")
+                    }
+                    assert all(p == profiles["original"] for p in profiles.values())
+
+
+def test_frozen_table_event_handlers_share_target_choices_with_the_original_implementation():
+    from studies import paper_module_rebuilds as builds
+    from studies.study_io import read
+
+    result = read(builds.HOOKS)
+    for rows in result["models"].values():
+        planned = {r["task"]: r["count"] for r in rows if r["arm"] == "self"}
+        original = {r["task"]: r["count"] for r in rows if r["arm"] == "original-same-choice"}
+        assert planned == original and set(planned) == set(range(1, 21))
+        assert not any(r["passed"] for r in rows if r["arm"] == "binding-only")
+    for library in result["libraries"].values():
+        if library["status"] == "valid":
+            admitted = [t for t in library["trials"] if t["status"] == "valid"]
+            assert len(admitted) == 1 and admitted[0]["attempt"] == library["attempt"]
+            final = admitted[0]["events"][-1]["checks"]
+            assert not final["errors"] and all(final["checks"][k] for k in ("menu", "insert", "outside", "click"))
+
+
+def test_handler_subsets_keep_the_first_admitted_composition_and_compare_identical_choices():
+    from studies import paper_module_rebuilds as builds
+    from studies.study_io import read
+
+    selected, prior = read(builds.SELECT), read(builds.DOM)
+    for tag, library in selected["libraries"].items():
+        assert prior["libraries"][tag]["status"] == "build_failed"
+        tested = [obs for trial in library["trials"] for obs in trial["checks"]]
+        if library["status"] == "valid":
+            assert not any(t["admitted"] for t in tested[:-1]) and tested[-1]["admitted"]
+            final = tested[-1]["checks"]
+            assert not final["errors"] and all(final["checks"][key] for key in ("menu", "insert", "outside", "click"))
+        else:
+            assert not any(t["admitted"] for t in tested)
+    for rows in selected["models"].values():
+        counts = {
+            arm: {r["task"]: r["count"] for r in rows if r["arm"] == arm}
+            for arm in ("self", "original-same-choice", "unpatched-same-choice")
+        }
+        assert set(counts["self"]) == set(range(1, 21))
+        assert counts["self"] == counts["original-same-choice"] == counts["unpatched-same-choice"]

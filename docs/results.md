@@ -2779,3 +2779,48 @@ Gemma 的自建首个完整页把数字 3、6、9 分别标成减、乘、除，
 **表格导航的边界。** 第二份 Qwen3.5 库改正 HTMLCollection 的索引后不再抛出该异常，但普通单元格仍不能选中。相同种子下附原函数与只给公开接口，两组各两份回复均未通过开发导航。让模型只写行列转移，研究者绑定器读取 DOM 坐标并显示模型的结果。初版接收器把 Markdown 围栏送入 JS 解析，两条原回复均被误拒。去除外层围栏后不再调用模型，两份函数均能通过公开准入和新箭头序列。各自总计 1/3 个新序列，固定不移动 0/3，参考页 3/3；反向 Tab 在两个生成函数中均先进入普通 Tab 分支。两份函数的逐题和固定页均为 3/20。该绑定实验单列。[直接修导航](../studies/webbench/table/keyboard_contract/result.json) · [是否提供旧源码](../studies/webbench/table/navigation_context/result.json) · [原接收记录](../studies/webbench/table/coordinate_navigation/result.json) · [同回复复验](../studies/webbench/table/coordinate_navigation/documented_reception/result.json)
 
 本次新增 957 笔请求，全部结算，共 $0.145891。连同 §57，同轮已结算 $7.721076；计入此前 76 笔未结预留后，最高支出为 $10.719928，低于 $20 上限。冻结 GPT-5 库的原建库费分别是文件管理器 $0.206237、计算器 $0.3426745，本次复用没有再支付建库费。人工组件的原始准备工时未记录。[分模型、建库和部署账本摘要](../studies/results/target-extension-costs-20261128.json)
+
+<a id="ai-library-rebuilds"></a>
+
+## 59. 从公开点击轨迹修表格库，从可见按键修自建计算器
+
+**GPT-5 表格库。** 七个目标模型分别为同一项目的 20 项任务选配置。每份选择在四种实现上各跑一次。下表所有成绩的分母均为 20。原库、自查与入口修复都来自 GPT-5。自查改了单元格、键盘、鼠标和拖动四个文件，入口修复改的是右键菜单刚打开就被文档监听器关闭的问题。研究者合并互不重叠的文件，并提供开关、点击轨迹与宿主。此次重用了已经交付的 GPT-5 源码，新调用只用于让各目标模型选配置。
+
+| 目标模型 | Direct | 原库 | 只自查 | 只修入口 | 合并两项修订 | 合并后固定首例 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Gemma 3 12B | 0 | 1 | 2 | 8 | 9 | 8 |
+| Qwen3.5-9B | 0 | 3 | 3 | 8 | 8 | 8 |
+| Mistral Small 3.2 | 5 | 3 | 3 | 8 | 8 | 8 |
+| Qwen3-Coder-30B | 3 | 1 | 2 | 8 | 9 | 8 |
+| GPT-OSS-120B | 7 | 3 | 3 | 8 | 8 | 8 |
+| DeepSeek V4 Flash | 1 | 2 | 3 | 8 | 9 | 8 |
+| DeepSeek V4 Pro | 2 | 1 | 1 | 6 | 6 | 8 |
+
+修订后七款模型均超过各自的 Direct，证据来自一个用于开发的编辑器。Gemma 与 Qwen3-Coder 相对固定页多过任务 7、8、13，少过 11、12。Flash 多过 8、13，少过 12。Pro 少过 11、12。其余三款的通过目标与固定页完全相同。冻结原始 GPT-5 表格库花费 $0.209028，按公开需求自查为 $0.165729，两次右键轨迹入口修复合计 $0.016634。本阶段 140 个新部署请求共 $0.013050。[逐题配置与四个后端](../studies/webbench/table/author_modules/result.json) · [两份入口修复](../studies/webbench/table/menu_propagation/event_trace/result.json)
+
+**计算器 Self。** 原公开起始页已经能做四则运算，在全部正式目标上过 0/20。首个分模块版本保留这份起始页，并让同一模型写科学键、外观、记忆、历史四组实现。Gemma 与 Qwen3.5 的公开检查最初仅过 4、6 项。两者把早期功能与后期扩展分开生成，各重建三次均没能保留原有检查并增加通过项，按规则沿用原已准入版本。随后让模型写出按键的显示值和记忆值转移，并从十个实际页面的按钮与操作观察中逐题选择。初次选择只见四个抽象组名。
+
+| 目标模型 | Direct | 此前 Self | 模块＋原选择 | 按键＋原选择 | 按键＋可见配置 | 最终 Self | 最终固定全开 | 最终公开检查 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Gemma 3 12B | 8 | 建库未过 | 0 | 0 | 5 | 6 | 6 | 8/15 |
+| Qwen3.5-9B | 4 | 6 | 2 | 2 | 2 | 2 | 2 | 7/15 |
+| GPT-OSS-120B | 10 | 8 | 9 | 9 | 10 | 10 | 10 | 14/15 |
+| DeepSeek V4 Flash | 10 | 6 | 4 | 4 | 11 | 11 | 11 | 14/15 |
+
+前七个成绩列均按同一行相同的 20 题计分。Gemma 的 20 份回复全选同一早期科学键配置。GPT-OSS 与 Flash 各 20 份回复全选完整页，Qwen 有 16 份选早期、4 份选完整页。Flash 从初次组名选择的 4/20 到可见配置的 11/20，增加的七题在相同源码和固定完整页上都能复现。Gemma 的回复给出了平方根、平方、倒数等算式，却在扩展键清单中重复列了起始页的数字键。只移除已存在的基本键、保持它所写功能键的顺序与算式，就把公开检查从 4/15 提到 8/15。Qwen3.5 的记忆显示修订使公开检查从 6/15 提到 7/15，科学组仍有不可执行的表达式。最后两款弱建库模型沿用此前封存的同一批配置编号复测。在逐键阶段禁用新接入按键的状态转移、保留同一完整页面的其余代码与顺序，四款模型依表中顺序分别过 0、2、10、11 题。当某模型未采用任何新公式时，此对照和原完整页相同。绑定宿主本身在这四组均过 0/20。[分组建库](../studies/webbench/calculator/behavior_modules/result.json) · [按序重建](../studies/webbench/calculator/behavior_modules/incremental/result.json) · [换实现与换配置的交叉复验](../studies/webbench/calculator/key_programs/result.json) · [保留同一选择逐键补交](../studies/webbench/calculator/key_programs/individual_keys/result.json)
+
+最后补查记忆键。在非空显示中召回、连续存入、扣减、清零和按钮顺序五项检查，Qwen、GPT-OSS 和 Flash 全过。Gemma 的页面缺全部记忆键。保留它以前声明的按钮顺序，只让它逐个写显示值和寄存器的表达式。按登记顺序尝试 3 次，三份候选都把显示 2 后召回 4 算成 6，按协议沿用原组件。同一批配置补建前后分别为 6/20、6/20，单独禁用记忆新公式的完整页为 6/20。公开召回通过也无法保证正式任务整段操作通过。Qwen、GPT-OSS 和 Flash 的原候选在官方记忆任务中仍会在存入或扣减后保留显示值，或在面板中额外显示文字。此项是对封存页面的事后诊断。[原始判决的首次显示差异](../studies/webbench/calculator/memory_recall/browser-errors.json) · [五项检查、独立数字与逐题对照](../studies/webbench/calculator/memory_recall/result.json)
+
+**计算器 GPT-5 交付。** 同一模型在新接口的请求被供应方以 HTTP 403 拒绝，返回原因是当前地区不可用。主表记缺测。另已核对其历史公开自查前后源码包逐字节相同。旧接口在原生编译失败时允许改选示例，四款模型各过 10/20，与固定首例过相同十题。新旧接口和账本分别保留。[新接口交付回执](../studies/webbench/calculator/behavior_modules/gpt5_delivery/result.json) · [旧接口的实测候选](../studies/webbench/calculator/compiler_fallback/result.json)
+
+**表格 Self。** Mistral、Qwen3-Coder 和 GPT-OSS 自己设计模块、实现接口，再逐题选择要安装的模块数。第一版接收器只允许用字符串说明接口，拒绝了对象形态的接口声明，三款各三份库均在实现前中止。改为保留模型给出的结构化声明后，重新使用可核对的原答。公开验收要求打开菜单、实际插行、表外关闭菜单、单击选格，并且浏览器无异常。三份实现仍未通过时，原作者按顺序看到自己页面的公开事件轨迹，对已生成的文件局部修复。若答复直接给出编辑数组，保持其中每项替换与原请求文件不变，按原序用浏览器复验。[原数组与准入记录](../studies/webbench/table/model_modules/public_trace/array_reception/result.json) · [初次接收](../studies/webbench/table/model_modules/result.json) · [结构化声明与完整重建](../studies/webbench/table/model_modules/structured_design/result.json) · [原作者事件轨迹与修复](../studies/webbench/table/model_modules/public_trace/result.json)
+
+| 目标模型 | Direct /20 | 此前 Self /20 | 最终 Self /20 | 新库固定 /20 | 准入的原库序号 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Mistral Small 3.2 | 5 | 2 | 1 | 2 | 1 |
+| Qwen3-Coder-30B | 3 | 3 | 建库未过 | 建库未过 | — |
+| GPT-OSS-120B | 7 | 7 | 建库未过 | 建库未过 | — |
+
+剩余未准入的库另用公共事件绑定重建。研究者把右键、菜单项激活、外部点击和单击单元格交给四个函数，模型编写菜单、命令、关闭和选区的实现。只在原设计负责菜单的模块启用时挂载。当模型调用设计中声明、实际页面却未提供的应用 API 时，原作者只使用真实 DOM 参数修订原函数。当操作已经成功却有浏览器异常时，以登记顺序检查同一模型四个新处理函数的子集。保留全部既有通过项且无异常的首个组合进入正式评估。Mistral Small 3.2 用完全相同的选择，采用全部新增处理函数的对照过 1/20，改后过 1/20；对照与筛选后的固定页各过 2/20、2/20。Mistral Small 3.2 第 5 个受检组合关闭 select，单击选格由原库继续完成。未额外接线的同配置原库过 1/20，固定原库为 1/20。Qwen3-Coder-30B 的 16 个受检组合均未通过。[四函数与同配置复算](../studies/webbench/table/event_hooks/result.json) · [真实 DOM 参数](../studies/webbench/table/event_hooks/dom_contract/result.json) · [同作者处理函数的子集对照](../studies/webbench/table/event_hooks/handler_selection/result.json)
+
+本轮新增 808 笔调用，已结算 $0.181140，含 6 笔未结预留的最高支出为 $0.365682。与本轮之前的记录合计，已结算 $7.902216，最高支出 $11.085610，低于 $20 上限。逐模型建库、部署和历史建库费用单独保存。[账本摘要](../studies/results/library-rebuild-costs-20261128.json)

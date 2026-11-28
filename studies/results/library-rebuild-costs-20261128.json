@@ -1,0 +1,672 @@
+{
+  "previous_source": "studies/results/target-extension-costs-20261128.json",
+  "previous": {
+    "settled_usd": 7.721076,
+    "exposure_usd": 10.719928,
+    "calls": 7909,
+    "unsettled_calls": 76
+  },
+  "stages": {
+    "calculator-behavior-modules": {
+      "result": "studies/webbench/calculator/behavior_modules/result.json",
+      "sha256": "ef5ef090596d5e9f8d063c6aef91209851474acd2993d13c6b14162decd6a88e",
+      "registration": "3d06610aa06eeb72d5937fb5db02df10eb5e4fa0493cfe55df2488fa2b4c0765",
+      "registered_at": "2026-11-28T08:34:32.237682+00:00",
+      "public_sources": {
+        "studies/webbench/calculator/behavior_modules/run.py": "ab91f123f2f685246f0a2622119fdbdce3058d71bf20229b41c2edea73226f72",
+        "studies/webbench/calculator/behavior_modules/PROTOCOL.md": "39b9a8923fa0fc8057081efac1f2317b84d41aa7318d03057ce762a4b02db2e8",
+        "studies/webbench/calculator/behavior_modules/host.js": "382827402076cce631c072cb1a2211b9f708db9df53fbf3bb91dc8790b86458b",
+        "studies/webbench/calculator/behavior_modules/probe.js": "418a0244a50abefd426acafd182b789c93308b74c62131e3fe4e59b0e6bd96b8",
+        "studies/webbench/self_build_modules/run.py": "f37242f2e964b5fb5b579888301264078e843b41f1ac14cbc6f5ca888a792ead",
+        "studies/webbench/calculator/key_groups/run.py": "1261609d8a0e57eb339f266b2a56917af57c2764e8ce42552dd1f2ec3994c197",
+        "studies/webbench/calculator/target_models/result.json": "d6524dea6a0b204e3c372b9c387b15f2bb5b2b7e4548ed5cf764dfb8db8854f6",
+        "studies/webbench/calculator/key_groups/result.json": "3fb356f7cb48dc211aab6dbdf7f63cb90d49a8c2955ab71308359e2b1bc9c0a9",
+        "studies/results/target-extension-costs-20261128.json": "cbc53c01bbf80677bb3793970b78ab561193a06bda4846a1049c459cf00d9b09"
+      },
+      "totals": {
+        "calls": 131,
+        "settled_usd": 0.016065,
+        "exposure_usd": 0.092738,
+        "unsettled_calls": 1,
+        "cap_usd": 5.5,
+        "stop_usd": 5.5,
+        "halted": 0
+      },
+      "model_phases": {
+        "openai/gpt-5": {
+          "build": {
+            "calls": 1,
+            "settled_micro_usd": 0,
+            "exposure_micro_usd": 76673
+          }
+        },
+        "qwen/qwen3.5-9b": {
+          "build": {
+            "calls": 12,
+            "settled_micro_usd": 3714,
+            "exposure_micro_usd": 3714
+          },
+          "plan": {
+            "calls": 21,
+            "settled_micro_usd": 1780,
+            "exposure_micro_usd": 1780
+          }
+        },
+        "google/gemma-3-12b-it": {
+          "build": {
+            "calls": 12,
+            "settled_micro_usd": 2230,
+            "exposure_micro_usd": 2230
+          },
+          "plan": {
+            "calls": 33,
+            "settled_micro_usd": 2256,
+            "exposure_micro_usd": 2256
+          }
+        },
+        "deepseek/deepseek-v4-flash": {
+          "build": {
+            "calls": 6,
+            "settled_micro_usd": 3136,
+            "exposure_micro_usd": 3136
+          },
+          "plan": {
+            "calls": 20,
+            "settled_micro_usd": 857,
+            "exposure_micro_usd": 857
+          }
+        },
+        "openai/gpt-oss-120b": {
+          "build": {
+            "calls": 6,
+            "settled_micro_usd": 1250,
+            "exposure_micro_usd": 1250
+          },
+          "plan": {
+            "calls": 20,
+            "settled_micro_usd": 842,
+            "exposure_micro_usd": 842
+          }
+        }
+      }
+    },
+    "calculator-behavior-gpt5-delivery": {
+      "result": "studies/webbench/calculator/behavior_modules/gpt5_delivery/result.json",
+      "sha256": "c7c4000128dfd1f233a36593691f16889c1afeee52bf5e8c2aedfe29793bd812",
+      "registration": "7fd979223313e6fa0da4f36bff8201e345881b9f68d1c01a7ca0989059084883",
+      "registered_at": "2026-11-28T08:36:36.495723+00:00",
+      "public_sources": {
+        "studies/webbench/calculator/behavior_modules/gpt5_delivery/PROTOCOL.md": "f49c7d02d8385e8dc470b78b3f35a309d65267b4901b952413e2f33384946d9f",
+        "studies/webbench/calculator/behavior_modules/gpt5_delivery/run.py": "dd644e5eaafc535638cea6f2c99d8ca6f17e60abaa9df538adf4a4b96fa0eada",
+        "studies/webbench/calculator/behavior_modules/run.py": "ab91f123f2f685246f0a2622119fdbdce3058d71bf20229b41c2edea73226f72",
+        "studies/webbench/calculator/behavior_modules/host.js": "382827402076cce631c072cb1a2211b9f708db9df53fbf3bb91dc8790b86458b",
+        "studies/webbench/calculator/behavior_modules/probe.js": "418a0244a50abefd426acafd182b789c93308b74c62131e3fe4e59b0e6bd96b8"
+      },
+      "totals": {
+        "calls": 1,
+        "settled_usd": 0.0,
+        "exposure_usd": 0.076733,
+        "unsettled_calls": 1,
+        "cap_usd": 2.0,
+        "stop_usd": 2.0,
+        "halted": 0
+      },
+      "model_phases": {
+        "openai/gpt-5": {
+          "build": {
+            "calls": 1,
+            "settled_micro_usd": 0,
+            "exposure_micro_usd": 76733
+          }
+        }
+      }
+    },
+    "calculator-additive-modules": {
+      "result": "studies/webbench/calculator/behavior_modules/incremental/result.json",
+      "sha256": "12e6fac1940335baa95b06439f00a1fdeafff41ac3bcfefc7f12f0674b495df2",
+      "registration": "3512a6257b1d145eb5e52049e6eddd11f7806eae98b1e3c4f74c6606cd5d01bc",
+      "registered_at": "2026-11-28T08:42:55.217201+00:00",
+      "public_sources": {
+        "studies/webbench/calculator/behavior_modules/incremental/run.py": "cd6394a8773609aecc6358245ccdd104f15e023c7fdf4fe16db35f2d86753969",
+        "studies/webbench/calculator/behavior_modules/incremental/PROTOCOL.md": "c451af0f1013b6c9b889cddc610e67e3218b52b84dd4a258455fde0fd464abe3",
+        "studies/webbench/calculator/behavior_modules/run.py": "ab91f123f2f685246f0a2622119fdbdce3058d71bf20229b41c2edea73226f72",
+        "studies/webbench/calculator/behavior_modules/host.js": "382827402076cce631c072cb1a2211b9f708db9df53fbf3bb91dc8790b86458b",
+        "studies/webbench/calculator/behavior_modules/probe.js": "418a0244a50abefd426acafd182b789c93308b74c62131e3fe4e59b0e6bd96b8"
+      },
+      "totals": {
+        "calls": 146,
+        "settled_usd": 0.015711,
+        "exposure_usd": 0.027686,
+        "unsettled_calls": 2,
+        "cap_usd": 2.5,
+        "stop_usd": 2.5,
+        "halted": 0
+      },
+      "model_phases": {
+        "qwen/qwen3.5-9b": {
+          "build": {
+            "calls": 73,
+            "settled_micro_usd": 7861,
+            "exposure_micro_usd": 14905
+          }
+        },
+        "google/gemma-3-12b-it": {
+          "build": {
+            "calls": 73,
+            "settled_micro_usd": 7850,
+            "exposure_micro_usd": 12781
+          }
+        }
+      }
+    },
+    "table-author-modules": {
+      "result": "studies/webbench/table/author_modules/result.json",
+      "sha256": "9c12a891bdf418a92491158e4f3a47c453d89de1c5577af5a49408ad16a143bc",
+      "registration": "b61b98fc3fab87894051cb37c5857f37e23da5257b2cc84d93cc8c7db46ade0d",
+      "registered_at": "2026-11-28T08:40:27.715614+00:00",
+      "public_sources": {
+        "studies/webbench/table/author_modules/run.py": "dcb8719ff857026661e13261f669662e04bc3a09b87cbe7b2ca344d636a3482e",
+        "studies/webbench/table/author_modules/PROTOCOL.md": "3f27febe634ad877778de91119c1faaac053a5b0c389c6e0f8701f155bb99490",
+        "studies/webbench/table/menu_propagation/author_repair/run.py": "7d37960b03f08274d44e5d1a2154236fe0fe13aaf72cc280f1a35b9e733b6baf",
+        "studies/webbench/table_interactions/run.py": "b839ac6e736ddb9fef75da3a62d5f05791be92a0137d232cb016ac77c0eb8c67",
+        "studies/webbench/table/menu_propagation/event_trace/result.json": "bcd51293fe360169217969e6c595bb976fe8b1cb0b9c5239783090dbfdeee989",
+        "studies/results/target-extension-costs-20261128.json": "cbc53c01bbf80677bb3793970b78ab561193a06bda4846a1049c459cf00d9b09",
+        "studies/webbench/calculator/compiler_fallback/result.json": "2420e556173f277336dc77a5c2ebc15a87a3cacc3765e54686e8e76a919ea596"
+      },
+      "totals": {
+        "calls": 140,
+        "settled_usd": 0.01305,
+        "exposure_usd": 0.01305,
+        "unsettled_calls": 0,
+        "cap_usd": 1.5,
+        "stop_usd": 1.5,
+        "halted": 0
+      },
+      "model_phases": {
+        "google/gemma-3-12b-it": {
+          "plan": {
+            "calls": 20,
+            "settled_micro_usd": 1517,
+            "exposure_micro_usd": 1517
+          }
+        },
+        "qwen/qwen3.5-9b": {
+          "plan": {
+            "calls": 20,
+            "settled_micro_usd": 2022,
+            "exposure_micro_usd": 2022
+          }
+        },
+        "mistralai/mistral-small-3.2-24b-instruct": {
+          "plan": {
+            "calls": 20,
+            "settled_micro_usd": 2279,
+            "exposure_micro_usd": 2279
+          }
+        },
+        "qwen/qwen3-coder-30b-a3b-instruct": {
+          "plan": {
+            "calls": 20,
+            "settled_micro_usd": 2087,
+            "exposure_micro_usd": 2087
+          }
+        },
+        "openai/gpt-oss-120b": {
+          "plan": {
+            "calls": 20,
+            "settled_micro_usd": 890,
+            "exposure_micro_usd": 890
+          }
+        },
+        "deepseek/deepseek-v4-flash": {
+          "plan": {
+            "calls": 20,
+            "settled_micro_usd": 882,
+            "exposure_micro_usd": 882
+          }
+        },
+        "deepseek/deepseek-v4-pro-0813": {
+          "plan": {
+            "calls": 20,
+            "settled_micro_usd": 3373,
+            "exposure_micro_usd": 3373
+          }
+        }
+      }
+    },
+    "table-model-modules": {
+      "result": "studies/webbench/table/model_modules/result.json",
+      "sha256": "05b021b1fdd01bd32a4dfefd81cef937c8d79d211224252c04c5990978395c9c",
+      "registration": "49e19644f9175928dcb48454e82cb3ba562073f5ad1fa5ae74d542b83417d4bf",
+      "registered_at": "2026-11-28T08:46:04.358900+00:00",
+      "public_sources": {
+        "studies/webbench/table/model_modules/run.py": "7495849f99597e1d6de06dbc9c3288d0b8e05fd7dbf24e96ecfaea0c8a9cb2a7",
+        "studies/webbench/table/model_modules/PROTOCOL.md": "f01b518bfc1c519ad9dfee309ef8f1b5bd6f8dd1a9b72aee12021ca066b3f95d",
+        "studies/webbench/table/model_modules/probes.py": "886573d75f5975289b9597657de35f32209b4dd3008cceca5b3fa467bfbdb6e1",
+        "studies/results/target-extension-costs-20261128.json": "cbc53c01bbf80677bb3793970b78ab561193a06bda4846a1049c459cf00d9b09",
+        "studies/webbench/self_build_modules/run.py": "f37242f2e964b5fb5b579888301264078e843b41f1ac14cbc6f5ca888a792ead"
+      },
+      "totals": {
+        "calls": 18,
+        "settled_usd": 0.007028,
+        "exposure_usd": 0.007028,
+        "unsettled_calls": 0,
+        "cap_usd": 2.25,
+        "stop_usd": 2.25,
+        "halted": 0
+      },
+      "model_phases": {
+        "qwen/qwen3-coder-30b-a3b-instruct": {
+          "build": {
+            "calls": 6,
+            "settled_micro_usd": 2457,
+            "exposure_micro_usd": 2457
+          }
+        },
+        "mistralai/mistral-small-3.2-24b-instruct": {
+          "build": {
+            "calls": 6,
+            "settled_micro_usd": 2715,
+            "exposure_micro_usd": 2715
+          }
+        },
+        "openai/gpt-oss-120b": {
+          "build": {
+            "calls": 6,
+            "settled_micro_usd": 1856,
+            "exposure_micro_usd": 1856
+          }
+        }
+      }
+    },
+    "table-structured-design": {
+      "result": "studies/webbench/table/model_modules/structured_design/result.json",
+      "sha256": "63d10ea000b5b891c2d26f842cbb2f475349f5a793ff03d00ab455e8b927fa85",
+      "registration": "bb25167713c81f2d5832739c678d825d89d13fdd21625e00d9cb53adc02747cf",
+      "registered_at": "2026-11-28T08:51:33.448309+00:00",
+      "public_sources": {
+        "studies/webbench/table/model_modules/structured_design/run.py": "9bee1e8088700bba0ebb205bb6937209184c8141f7e7e8f57109683c4efcb80e",
+        "studies/webbench/table/model_modules/structured_design/PROTOCOL.md": "16c0113e6a8a58d7ac5b63c3036b199d4a6075de31010913ce78b423e6749610",
+        "studies/webbench/table/model_modules/run.py": "7495849f99597e1d6de06dbc9c3288d0b8e05fd7dbf24e96ecfaea0c8a9cb2a7",
+        "studies/webbench/table/model_modules/probes.py": "886573d75f5975289b9597657de35f32209b4dd3008cceca5b3fa467bfbdb6e1"
+      },
+      "totals": {
+        "calls": 121,
+        "settled_usd": 0.073139,
+        "exposure_usd": 0.0923,
+        "unsettled_calls": 2,
+        "cap_usd": 2.5,
+        "stop_usd": 2.5,
+        "halted": 0
+      },
+      "model_phases": {
+        "mistralai/mistral-small-3.2-24b-instruct": {
+          "build": {
+            "calls": 48,
+            "settled_micro_usd": 31317,
+            "exposure_micro_usd": 41013
+          }
+        },
+        "openai/gpt-oss-120b": {
+          "build": {
+            "calls": 41,
+            "settled_micro_usd": 17882,
+            "exposure_micro_usd": 27347
+          }
+        },
+        "qwen/qwen3-coder-30b-a3b-instruct": {
+          "build": {
+            "calls": 32,
+            "settled_micro_usd": 23940,
+            "exposure_micro_usd": 23940
+          }
+        }
+      }
+    },
+    "table-self-public-trace": {
+      "result": "studies/webbench/table/model_modules/public_trace/result.json",
+      "sha256": "72c41c00fc3c9fa0dab589fdc5d72f7aa2e9fa2a6f0cb1e23ac7a0c347d811b3",
+      "registration": "0e6933ad235eee4c1006503d255eb630f57c038c8d5cc37cbcf5c29365f7b94b",
+      "registered_at": "2026-11-28T09:07:17.696759+00:00",
+      "public_sources": {
+        "studies/webbench/table/model_modules/public_trace/run.py": "0c305e128b5c40ad909a1087f0e612ec26b3c85966d89d4c3470921119e6aaf1",
+        "studies/webbench/table/model_modules/public_trace/PROTOCOL.md": "7c677e5837886fe77fbe0533f34358cca0f074476f896dd22f919df8d059d7d8",
+        "studies/webbench/table/model_modules/structured_design/run.py": "9bee1e8088700bba0ebb205bb6937209184c8141f7e7e8f57109683c4efcb80e",
+        "studies/webbench/table/model_modules/run.py": "7495849f99597e1d6de06dbc9c3288d0b8e05fd7dbf24e96ecfaea0c8a9cb2a7",
+        "studies/webbench/table/model_modules/probes.py": "886573d75f5975289b9597657de35f32209b4dd3008cceca5b3fa467bfbdb6e1"
+      },
+      "totals": {
+        "calls": 27,
+        "settled_usd": 0.029056,
+        "exposure_usd": 0.029056,
+        "unsettled_calls": 0,
+        "cap_usd": 1.1,
+        "stop_usd": 1.1,
+        "halted": 0
+      },
+      "model_phases": {
+        "openai/gpt-oss-120b": {
+          "build": {
+            "calls": 11,
+            "settled_micro_usd": 3877,
+            "exposure_micro_usd": 3877
+          }
+        },
+        "qwen/qwen3-coder-30b-a3b-instruct": {
+          "build": {
+            "calls": 8,
+            "settled_micro_usd": 14974,
+            "exposure_micro_usd": 14974
+          }
+        },
+        "mistralai/mistral-small-3.2-24b-instruct": {
+          "build": {
+            "calls": 8,
+            "settled_micro_usd": 10205,
+            "exposure_micro_usd": 10205
+          }
+        }
+      }
+    },
+    "table-self-edit-arrays": {
+      "result": "studies/webbench/table/model_modules/public_trace/array_reception/result.json",
+      "sha256": "358be5be50de07e84f2635ec7f228b82399e56da7ef1b363e3b00d614cfcc250",
+      "registration": "ef41b10e2b275ccbf03852b92da57a3d91385f7d00982a0d9e88d96a3249c267",
+      "registered_at": "2026-11-28T09:32:55.598518+00:00",
+      "public_sources": {
+        "studies/webbench/table/model_modules/public_trace/array_reception/run.py": "b32e95af6aa703e925f84eb678e48950e018b7eb9b20bb61ab138c8ae71e6b9c",
+        "studies/webbench/table/model_modules/public_trace/array_reception/PROTOCOL.md": "abcef02ec83481de78c5580519fd043d364983983940fb39dc18ff54d6e5c0e6",
+        "studies/webbench/table/model_modules/public_trace/run.py": "0c305e128b5c40ad909a1087f0e612ec26b3c85966d89d4c3470921119e6aaf1",
+        "studies/webbench/table/model_modules/run.py": "7495849f99597e1d6de06dbc9c3288d0b8e05fd7dbf24e96ecfaea0c8a9cb2a7",
+        "studies/webbench/table/model_modules/probes.py": "886573d75f5975289b9597657de35f32209b4dd3008cceca5b3fa467bfbdb6e1"
+      },
+      "totals": {
+        "calls": 0,
+        "settled_usd": 0.0,
+        "exposure_usd": 0.0,
+        "unsettled_calls": 0,
+        "cap_usd": 0.5,
+        "stop_usd": 0.5,
+        "halted": 0
+      },
+      "model_phases": {}
+    },
+    "table-event-hooks": {
+      "result": "studies/webbench/table/event_hooks/result.json",
+      "sha256": "209b9c89bf0dfa00c709599fa2d1dc006cae5cfa2660962795908aa192684ec1",
+      "registration": "41e662174d28068a98d9d2b35a0e6f7ae8c37674e44b17686b5c078be337a369",
+      "registered_at": "2026-11-28T09:38:28.041203+00:00",
+      "public_sources": {
+        "studies/webbench/table/event_hooks/run.py": "8481335ff0db83d4779bd8f0de934735f73e66424cddc472aad25a51daa7dc4d",
+        "studies/webbench/table/event_hooks/dispatch.js": "50e738d543f9e3c7f2db5b3fe9fc99b41a4ae20773e4a0bfc66d3627cb27e1de",
+        "studies/webbench/table/event_hooks/PROTOCOL.md": "57f2938e881fc4fa62323c7fbed4f364e4dd294fe0c9cafee3310744f10f478f",
+        "studies/webbench/table/model_modules/run.py": "7495849f99597e1d6de06dbc9c3288d0b8e05fd7dbf24e96ecfaea0c8a9cb2a7",
+        "studies/webbench/table/model_modules/probes.py": "886573d75f5975289b9597657de35f32209b4dd3008cceca5b3fa467bfbdb6e1",
+        "studies/webbench/table/model_modules/public_trace/array_reception/run.py": "b32e95af6aa703e925f84eb678e48950e018b7eb9b20bb61ab138c8ae71e6b9c"
+      },
+      "totals": {
+        "calls": 41,
+        "settled_usd": 0.011638,
+        "exposure_usd": 0.011638,
+        "unsettled_calls": 0,
+        "cap_usd": 1.0,
+        "stop_usd": 1.0,
+        "halted": 0
+      },
+      "model_phases": {
+        "qwen/qwen3-coder-30b-a3b-instruct": {
+          "build": {
+            "calls": 14,
+            "settled_micro_usd": 4147,
+            "exposure_micro_usd": 4147
+          }
+        },
+        "mistralai/mistral-small-3.2-24b-instruct": {
+          "build": {
+            "calls": 14,
+            "settled_micro_usd": 3484,
+            "exposure_micro_usd": 3484
+          }
+        },
+        "openai/gpt-oss-120b": {
+          "build": {
+            "calls": 13,
+            "settled_micro_usd": 4007,
+            "exposure_micro_usd": 4007
+          }
+        }
+      }
+    },
+    "table-dom-contract": {
+      "result": "studies/webbench/table/event_hooks/dom_contract/result.json",
+      "sha256": "2c0429469703d22d324a5275ea4040e562cc324de5b93cbd8cc220eb9d8673dd",
+      "registration": "52069362387a5be2d702b8459b61fb3c7076903c59742d7ce9da598d7fd805c4",
+      "registered_at": "2026-11-28T09:42:30.671240+00:00",
+      "public_sources": {
+        "studies/webbench/table/event_hooks/dom_contract/run.py": "a9b6f7bc84c2e205f53a9e355e267d549eaabfcc48b664e6da3cb42562f8933e",
+        "studies/webbench/table/event_hooks/dom_contract/PROTOCOL.md": "6b4ff17355ff280bf7c00fc6b569da55883d65d5a46691ae9b4d42c90b2a8296",
+        "studies/webbench/table/event_hooks/run.py": "8481335ff0db83d4779bd8f0de934735f73e66424cddc472aad25a51daa7dc4d",
+        "studies/webbench/table/event_hooks/dispatch.js": "50e738d543f9e3c7f2db5b3fe9fc99b41a4ae20773e4a0bfc66d3627cb27e1de",
+        "studies/webbench/table/model_modules/run.py": "7495849f99597e1d6de06dbc9c3288d0b8e05fd7dbf24e96ecfaea0c8a9cb2a7",
+        "studies/webbench/table/model_modules/probes.py": "886573d75f5975289b9597657de35f32209b4dd3008cceca5b3fa467bfbdb6e1"
+      },
+      "totals": {
+        "calls": 16,
+        "settled_usd": 0.004414,
+        "exposure_usd": 0.004414,
+        "unsettled_calls": 0,
+        "cap_usd": 0.65,
+        "stop_usd": 0.65,
+        "halted": 0
+      },
+      "model_phases": {
+        "openai/gpt-oss-120b": {
+          "build": {
+            "calls": 7,
+            "settled_micro_usd": 2013,
+            "exposure_micro_usd": 2013
+          }
+        },
+        "qwen/qwen3-coder-30b-a3b-instruct": {
+          "build": {
+            "calls": 5,
+            "settled_micro_usd": 1408,
+            "exposure_micro_usd": 1408
+          }
+        },
+        "mistralai/mistral-small-3.2-24b-instruct": {
+          "build": {
+            "calls": 4,
+            "settled_micro_usd": 993,
+            "exposure_micro_usd": 993
+          }
+        }
+      }
+    },
+    "table-handler-selection": {
+      "result": "studies/webbench/table/event_hooks/handler_selection/result.json",
+      "sha256": "15d6e8c58be33817bd4ce2e3b73a4cf876022b7bbe6cb47865326110480cd2d7",
+      "registration": "1f9048e9f1db9f0e4ee48de4928cb64279bd47f57aa831fd3de6b1c8f0ac4cbf",
+      "registered_at": "2026-11-28T09:45:20.942015+00:00",
+      "public_sources": {
+        "studies/webbench/table/event_hooks/handler_selection/run.py": "72781f49dadd2a0883ea722e9ab9b9f34b52e353e7c08ecb23e0e2aad39c8bee",
+        "studies/webbench/table/event_hooks/handler_selection/PROTOCOL.md": "bd907e49dea70f92f985e53c76b3c51b417ece6e15e3a933df1e144dfd5c224f",
+        "studies/webbench/table/event_hooks/dom_contract/run.py": "a9b6f7bc84c2e205f53a9e355e267d549eaabfcc48b664e6da3cb42562f8933e",
+        "studies/webbench/table/event_hooks/run.py": "8481335ff0db83d4779bd8f0de934735f73e66424cddc472aad25a51daa7dc4d",
+        "studies/webbench/table/event_hooks/dispatch.js": "50e738d543f9e3c7f2db5b3fe9fc99b41a4ae20773e4a0bfc66d3627cb27e1de",
+        "studies/webbench/table/model_modules/probes.py": "886573d75f5975289b9597657de35f32209b4dd3008cceca5b3fa467bfbdb6e1"
+      },
+      "totals": {
+        "calls": 20,
+        "settled_usd": 0.002054,
+        "exposure_usd": 0.002054,
+        "unsettled_calls": 0,
+        "cap_usd": 0.35,
+        "stop_usd": 0.35,
+        "halted": 0
+      },
+      "model_phases": {
+        "mistralai/mistral-small-3.2-24b-instruct": {
+          "plan": {
+            "calls": 20,
+            "settled_micro_usd": 2054,
+            "exposure_micro_usd": 2054
+          }
+        }
+      }
+    },
+    "calculator-key-programs": {
+      "result": "studies/webbench/calculator/key_programs/result.json",
+      "sha256": "190618dcf4748f2e05773dcf06b292d922493ed8395dbe3a4927ba53315770cc",
+      "registration": "fd306c9f09f055083b8e8001a4931dd855f6c71e7e42a7537b3b0a4266cf49aa",
+      "registered_at": "2026-11-28T08:53:36.881486+00:00",
+      "public_sources": {
+        "studies/webbench/calculator/key_programs/run.py": "6e23056c7c84097a3fffee3949d5b456ee28f6ea2b5ddc08caf2c0a2d59ebda5",
+        "studies/webbench/calculator/key_programs/PROTOCOL.md": "7e3aaca154afa777f3bd0a51745f94041c77cb741d7f6c66683924bed00ed409",
+        "studies/webbench/calculator/behavior_modules/run.py": "ab91f123f2f685246f0a2622119fdbdce3058d71bf20229b41c2edea73226f72",
+        "studies/webbench/calculator/behavior_modules/incremental/run.py": "cd6394a8773609aecc6358245ccdd104f15e023c7fdf4fe16db35f2d86753969",
+        "studies/webbench/calculator/behavior_modules/host.js": "382827402076cce631c072cb1a2211b9f708db9df53fbf3bb91dc8790b86458b",
+        "studies/webbench/calculator/behavior_modules/probe.js": "418a0244a50abefd426acafd182b789c93308b74c62131e3fe4e59b0e6bd96b8",
+        "studies/results/target-extension-costs-20261128.json": "cbc53c01bbf80677bb3793970b78ab561193a06bda4846a1049c459cf00d9b09"
+      },
+      "totals": {
+        "calls": 109,
+        "settled_usd": 0.008347,
+        "exposure_usd": 0.008347,
+        "unsettled_calls": 0,
+        "cap_usd": 1.65,
+        "stop_usd": 1.65,
+        "halted": 0
+      },
+      "model_phases": {
+        "google/gemma-3-12b-it": {
+          "build": {
+            "calls": 12,
+            "settled_micro_usd": 1136,
+            "exposure_micro_usd": 1136
+          },
+          "plan": {
+            "calls": 20,
+            "settled_micro_usd": 1287,
+            "exposure_micro_usd": 1287
+          }
+        },
+        "openai/gpt-oss-120b": {
+          "build": {
+            "calls": 7,
+            "settled_micro_usd": 448,
+            "exposure_micro_usd": 448
+          },
+          "plan": {
+            "calls": 20,
+            "settled_micro_usd": 1393,
+            "exposure_micro_usd": 1393
+          }
+        },
+        "deepseek/deepseek-v4-flash": {
+          "build": {
+            "calls": 2,
+            "settled_micro_usd": 161,
+            "exposure_micro_usd": 161
+          },
+          "plan": {
+            "calls": 20,
+            "settled_micro_usd": 1189,
+            "exposure_micro_usd": 1189
+          }
+        },
+        "qwen/qwen3.5-9b": {
+          "build": {
+            "calls": 8,
+            "settled_micro_usd": 610,
+            "exposure_micro_usd": 610
+          },
+          "plan": {
+            "calls": 20,
+            "settled_micro_usd": 2123,
+            "exposure_micro_usd": 2123
+          }
+        }
+      }
+    },
+    "calculator-individual-keys": {
+      "result": "studies/webbench/calculator/key_programs/individual_keys/result.json",
+      "sha256": "01d0f30a19228957d0400915d6fa79652232d58ab8659f9e233a11a6a3dbe189",
+      "registration": "158891a58a70853e1c942cf9304d983f06ebb74cf8c219a878ad530834878638",
+      "registered_at": "2026-11-28T09:00:42.985489+00:00",
+      "public_sources": {
+        "studies/webbench/calculator/key_programs/individual_keys/run.py": "fa56f7b3e32e6f4c8fa6d4fc255368f44c32d95cf10da534b87db334764ca7fa",
+        "studies/webbench/calculator/key_programs/individual_keys/PROTOCOL.md": "81c093c932f62dc229d1a1fd49056531f8eec83a4d6c5b5675e78f339c1dfa93",
+        "studies/webbench/calculator/key_programs/run.py": "6e23056c7c84097a3fffee3949d5b456ee28f6ea2b5ddc08caf2c0a2d59ebda5"
+      },
+      "totals": {
+        "calls": 14,
+        "settled_usd": 0.00025,
+        "exposure_usd": 0.00025,
+        "unsettled_calls": 0,
+        "cap_usd": 0.7,
+        "stop_usd": 0.7,
+        "halted": 0
+      },
+      "model_phases": {
+        "qwen/qwen3.5-9b": {
+          "build": {
+            "calls": 6,
+            "settled_micro_usd": 121,
+            "exposure_micro_usd": 121
+          }
+        },
+        "google/gemma-3-12b-it": {
+          "build": {
+            "calls": 8,
+            "settled_micro_usd": 129,
+            "exposure_micro_usd": 129
+          }
+        }
+      }
+    },
+    "calculator-memory-recall": {
+      "result": "studies/webbench/calculator/memory_recall/result.json",
+      "sha256": "5edd085f355e0e4268a4fe508662eaa5f6e93c75518f9827927ebf6ba5418791",
+      "registration": "a3e697f6674e95220f806f512f1d3b260ad5789526d851ec7e6b111bb860a894",
+      "registered_at": "2026-11-28T09:18:32.508801+00:00",
+      "public_sources": {
+        "studies/webbench/calculator/memory_recall/run.py": "5530bfa9b381be9f478546c2fd93216a757bd13015185fdcf46076120326458f",
+        "studies/webbench/calculator/memory_recall/observe.py": "cb554ef10abb40435245ca64afb5671fc80062c96d6d24aabe95136833f04ddb",
+        "studies/webbench/calculator/memory_recall/PROTOCOL.md": "de33ccde7b8e4506b064b2d5afe88d0726224d3f3a84602ee2433aaad76d7752",
+        "studies/webbench/calculator/key_programs/run.py": "6e23056c7c84097a3fffee3949d5b456ee28f6ea2b5ddc08caf2c0a2d59ebda5",
+        "studies/webbench/calculator/key_programs/individual_keys/run.py": "fa56f7b3e32e6f4c8fa6d4fc255368f44c32d95cf10da534b87db334764ca7fa"
+      },
+      "totals": {
+        "calls": 24,
+        "settled_usd": 0.000388,
+        "exposure_usd": 0.000388,
+        "unsettled_calls": 0,
+        "cap_usd": 0.5,
+        "stop_usd": 0.5,
+        "halted": 0
+      },
+      "model_phases": {
+        "google/gemma-3-12b-it": {
+          "build": {
+            "calls": 24,
+            "settled_micro_usd": 388,
+            "exposure_micro_usd": 388
+          }
+        }
+      }
+    }
+  },
+  "added": {
+    "calls": 808,
+    "unsettled_calls": 6,
+    "settled_usd": 0.18114,
+    "exposure_usd": 0.365682
+  },
+  "campaign": {
+    "calls": 8717,
+    "unsettled_calls": 82,
+    "settled_usd": 7.902216,
+    "exposure_usd": 11.08561
+  }
+}

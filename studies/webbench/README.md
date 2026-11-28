@@ -19,12 +19,16 @@
 | 项目 | 研究阶段 |
 |---|---|
 | 表格 | [组件来源与同目标对照](table/library_sources/README.md) · [六个控制器的全配置枚举](table/controller_enumeration/README.md) · [将组件绑定到公开起始工程](table/starter_binding/PROTOCOL.md) · [保持既有接口的独立重建](table/compatible_rebuild/PROTOCOL.md) · [重建后端上的本地规划](table/local_planning/README.md) · [共享状态与组件职责](table/shared_state_contract/README.md) · [从公开需求设计可配置控制器](table/controller_build/README.md) · [按模式约束解码](table/schema_decoding/README.md) |
+| 表格建库复验 | [GPT-5 自查与入口修复的四组对照](table/author_modules/PROTOCOL.md) · [Self 自行划分模块](table/model_modules/PROTOCOL.md) · [结构化接口声明的接收](table/model_modules/structured_design/PROTOCOL.md) · [Self 按公开点击轨迹修复](table/model_modules/public_trace/PROTOCOL.md) · [原补丁数组的复验](table/model_modules/public_trace/array_reception/PROTOCOL.md) · [四个独立事件函数](table/event_hooks/PROTOCOL.md) · [真实 DOM 参数](table/event_hooks/dom_contract/PROTOCOL.md) · [同作者监听器子集](table/event_hooks/handler_selection/PROTOCOL.md) |
+| 计算器 | [起始工程与行为模块](calculator/behavior_modules/PROTOCOL.md) · [保留早期功能的扩展](calculator/behavior_modules/incremental/PROTOCOL.md) · [模型编写按键与实际可见配置](calculator/key_programs/PROTOCOL.md) · [逐键补交](calculator/key_programs/individual_keys/PROTOCOL.md) · [在非空显示上召回记忆](calculator/memory_recall/PROTOCOL.md) · [GPT-5 交付记录](calculator/behavior_modules/gpt5_delivery/PROTOCOL.md) |
 | SVG 图表 | [参考实现与模型建库](svg_chart/library_sources/PROTOCOL.md) · [公开数据与可见图形的交叉对照](svg_chart/fixture_audit/README.md) · [接口说明与起始工程](svg_chart/interface_documentation/PROTOCOL.md) · [调整接口及已有方案的恢复](svg_chart/interface_refinement/README.md) · [本地模型与精简接口](svg_chart/local_planning/README.md) · [保持既有接口的独立重建](svg_chart/compatible_rebuild/README.md) · [折线图绘图区的冲突需求](svg_chart/plot_geometry/README.md) |
 | 表达式编辑器 | [三种生成流程的同目标对照](expression_editor/library_sources/README.md) · [固定空方案](expression_editor/empty_plan/README.md) · [参考库输出格式示例](expression_editor/interface_examples/README.md) · [32k 准备窗口](expression_editor/preparation_window/PROTOCOL.md) · [后十项需求留出](expression_editor/held_out_requirements/README.md) · [准备笔记的补充准入](expression_editor/preparation_notes/README.md) |
 | 问卷 | [问卷组件来源比较](form/library_sources/PROTOCOL.md) · [仅用公开反馈修复](form/public_repair/PROTOCOL.md) |
 | 绘图 | [短距离拖动与最小线长](draw/pointer_transition/PROTOCOL.md) |
 | Flex 布局 | [卡片列数的冲突需求](flex/column_count/README.md) |
 | React 博客 | [官方参考页、起始页和空白页校准](react_blog/runtime_calibration/PROTOCOL.md) |
+
+计算器逐键补交和表格 Self 轨迹修复的完整入口见[复验说明](../../docs/reproducibility.md)。两个阶段将官方判决与父库关联分别封存，运行器会核对原页的配置或原实现哈希。
 
 冻结清单使用原始的仓库相对路径和文件哈希。复算既有阶段时使用其记录的模块入口。新目录和原路径的对应关系见[目录映射](layout.json)。
 

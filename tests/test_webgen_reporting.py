@@ -142,13 +142,22 @@ def test_published_sdk_cell_uses_new_layout_and_three_unmodified_controls():
 
 def test_table_preserves_registered_gpt5_source_when_first_repair_fails_admission():
     from studies.lookup import MATRIX, find_cell
+    from studies.paper_module_rebuilds import TABLE as COMBINED_RESULT
     from studies.study_io import ROOT, read
     from studies.webbench.table.menu_propagation.author_repair import report
 
     matrix=read(ROOT/MATRIX)
+    original_protocol = {
+        model: {key: study for key, study in entry.items() if key != "module_rebuilds"}
+        for model, entry in matrix.items()
+    }
     trials=report.reconstruct()
     assert set(trials)=={'b'}
     for tag,model in read(report.RESULT)['generators'].items():
-        cell=find_cell(matrix,'web-bench/table',model,'gpt5-library')
+        cell=find_cell(original_protocol,'web-bench/table',model,'gpt5-library')
         assert ROOT/cell['method_record']==report.ORIGINAL
         assert cell['denominator']==20 and cell['score']==len(trials['b']['planned'][tag]['original'])
+        revised = find_cell(matrix, 'web-bench/table', model, 'gpt5-library')
+        assert ROOT / revised['method_record'] == COMBINED_RESULT
+        prior_model, prior_protocol = cell['row_keys']
+        assert revised['targets'] == matrix[prior_model][prior_protocol]['targets']

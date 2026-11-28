@@ -4,6 +4,12 @@
 
 表格的编辑与矩形选区两个开关形成四种配置。GPT-5 表格原作者修订只看原实现和公开菜单操作，以两次独立请求修复入口事件。四种配置均须能打开、插行并在表外关闭菜单。计分复用五款模型已封存的逐题配置。[原作者修复协议](../studies/webbench/table/menu_propagation/author_repair/PROTOCOL.md)
 
+主表表格库合并了 GPT-5 按公开需求自查后写出的四个文件，以及它根据右键事件传播记录写出的入口修复。文件没有交叉，按登记顺序取首份通过公开检查的入口实现。七款模型各为 20 个目标重新选配置，同一选择分别在原库、只自查、只修入口和合并库上运行。表格 Self 的新模型自行划分模块并声明接口。接收器对对象或数组形式的接口声明保留完整内容，再请求模型写实现。若连续三份实现未通过菜单和选格准入，原作者可以根据真实点击轨迹，对自己的文件提交可唯一定位的局部替换。顶层编辑数组单列离线重放，每份答复只作用于它实际收到的源文件。仍未准入时，研究者的公共绑定把浏览器事件交给四个短函数。模型负责菜单 DOM、命令执行、菜单关闭和选区效果。旧代码也按相同选择重放。若处理函数调用仅存在于设计说明中的 API，原作者使用真实 DOM 节点独立修订同一函数。四项交互均成功却仍抛出异常的库，再按预先固定的顺序选择同作者四个新增处理函数的子集，和全装四函数、未额外接线的原库共用目标选择。[监听器选择与固定页](../studies/webbench/table/event_hooks/handler_selection/PROTOCOL.md)[真实参数的修订](../studies/webbench/table/event_hooks/dom_contract/PROTOCOL.md) · [事件接口](../studies/webbench/table/event_hooks/PROTOCOL.md)[四份 GPT-5 源码对照](../studies/webbench/table/author_modules/PROTOCOL.md) · [Self 建库与接收范围](../studies/webbench/table/model_modules/structured_design/PROTOCOL.md)
+
+计算器保留公开起始工程可用的数字与四则运算。每个 Self 模型自己实现科学键、记忆、外观及历史。通用绑定器负责接收按键、传递显示值和记忆值，具体运算由模型编写。修订只看公开操作，必须保留原先通过的检查并至少多过一项，按登记顺序最多重建三次。部署模型根据实际页面的按钮和操作结果选配置。正式评分分别交叉新旧源码和新旧选择，也重放固定页、无效按键和空宿主。Gemma 与 Qwen3.5 的按键清单混入了起始页按钮或重复列出运算。先从本模型的原始交付读取功能键，再逐键补交缺失运算，复用已封存的 20 份选择。另用已有数字的显示框检验召回。缺整组记忆键时由同模型分别写每键的显示表达式和记忆表达式，沿用其早晚按键顺序。[非空显示与独立数据](../studies/webbench/calculator/memory_recall/PROTOCOL.md)
+
+GPT-5 在此接口的请求未交付，旧原生接口的成绩单列。[建库与固定页](../studies/webbench/calculator/behavior_modules/PROTOCOL.md) · [按键与配置的交叉实验](../studies/webbench/calculator/key_programs/PROTOCOL.md)
+
 公开回放在同一个右键事件的表格阶段与文档阶段分别读取菜单可见性，另测单击后 Delete 的结果。Self 表格组件另行固定安装接口，按公开需求指定的文件拆分实现，并实际验证右键操作能增加一行。Flash 问卷将从零、人工库、GPT-5 库及两份原 Self 库的全部逐题请求分别复用，仅在五组同时关闭额外推理；保留原输出上限和评分文件。[四种配置的事件记录](../studies/webbench/table_interactions/public-actions.json) · [按职责生成组件](../studies/webbench/table/event_modules/focused.md) · [Flash 同解码协议](../studies/webbench/form/flash_self_build/visible_targets/PROTOCOL.md)
 
 文件管理器的模型库从其实际交付的完整 HTML 启动，只有能在浏览器中新增可观察行为的可选模块才开放给配置。计算器的官方起始页已有四则运算。人工库取上游计算器实现并划出五组可选键；Self 须实际完成 2+3=5、一次可选运算及关闭该组选项后的复查。文件管理器的从零回复按外层格式接收：先解 JSON 文件包，独立 HTML 整页另行接收。文件包字段按原文件规则验证。[原回复的离线复验](../studies/webbench/file_explorer/target_models/direct_reception/PROTOCOL.md)
@@ -134,7 +140,7 @@ Duo 的新协议让模型一次只写一个组件，在该功能原有的两条�
 
 WebApp1K-Duo 的 GPT-5 列来自作者发布的模型代码。排除十个目标组合后，以事先固定的哈希顺序选择其他组合的完整模块。组件可能附带第二项行为，也可能缺少所需功能。使用实际 GPT-5 来源并记录外部生成费用未披露。独立回调实验中，模型写状态钩子与视图，Direct 针对每对功能写完整页面，两个流程均可见构成它们的公开单功能材料。[OneKQ 数据快照](https://huggingface.co/datasets/onekq-ai/WebApp1K-Duo-React-Generations/tree/fbda49ea521d9ddd22d2425d01237e17e3d6831c) · [来源与接收规则](../studies/public_library_transfer/duo_donor_library/PROTOCOL.md) · [回调实验](../studies/public_library_transfer/duo_react_callbacks/PROTOCOL.md)
 
-文件管理器接收完整 HTML 入口，再实测模型编写的可选扩展。计算器保留官方起始页自带的基础算术，人工来源取上游参考实现，Self 的 HTML 和键组声明由同一个模型独立生成。两种来源分别测逐题选择、可选键全开和全部关闭；另存原始起始页。问卷的命名导入只在公共页面出现未定义标识符、同库存在唯一导出时添加。SVG 将新标签和新数组传给原渲染器，分别打开和关闭轴、图例和点，检查原有公开能力是否因修改退化。[文件管理器](../studies/webbench/file_explorer/document_library/PROTOCOL.md) · [计算器](../studies/webbench/calculator/key_groups/PROTOCOL.md) · [问卷](../studies/webbench/form/survey_workflow/module_links/PROTOCOL.md) · [SVG](../studies/webbench/typed_components/svg_public_geometry/decoration/PROTOCOL.md)
+文件管理器接收完整 HTML 入口，再实测模型编写的可选扩展。早期计算器实验保留官方起始页自带的基础算术，人工来源取上游参考实现，Self 的 HTML 和键组声明由同一个模型独立生成。两种来源分别测逐题选择、可选键全开和全部关闭；另存原始起始页。问卷的命名导入只在公共页面出现未定义标识符、同库存在唯一导出时添加。SVG 将新标签和新数组传给原渲染器，分别打开和关闭轴、图例和点，检查原有公开能力是否因修改退化。[文件管理器](../studies/webbench/file_explorer/document_library/PROTOCOL.md) · [计算器](../studies/webbench/calculator/key_groups/PROTOCOL.md) · [问卷](../studies/webbench/form/survey_workflow/module_links/PROTOCOL.md) · [SVG](../studies/webbench/typed_components/svg_public_geometry/decoration/PROTOCOL.md)
 
 在控制器已经封存时，还可单独改变部署决策。模型必须为要关闭的选项提交公开需求原文；编译器核对引用是否存在及是否含否定措辞。没有依据的改动保留默认，有效空列表与无法解析的输出分开统计。另写的一对相反需求直接检查同一条待办是否实际翻转。这两项和八个基准任务分别计数。[有依据的禁用决策](../studies/public_library_transfer/compact_todomvc/state_examples/EVIDENCE.md)
 

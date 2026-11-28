@@ -1,0 +1,169 @@
+{
+  "source": "studies/webbench/calculator/key_programs/result.json",
+  "source_sha256": "190618dcf4748f2e05773dcf06b292d922493ed8395dbe3a4927ba53315770cc",
+  "frozen_public_check_registration": "a3e697f6674e95220f806f512f1d3b260ad5789526d851ec7e6b111bb860a894",
+  "models": {
+    "qwen/qwen3.5-9b": [
+      {
+        "task": 15,
+        "passed": false,
+        "report_sha256": "f7b6112397299b4af598f3cfb879ac92579c81567fdb1d4e2431596e8b3e13c5",
+        "failures": [
+          {
+            "case": "1 M+ 2 + MR =",
+            "status": "failed",
+            "expected": "\"\"",
+            "received": "\"10\""
+          }
+        ]
+      },
+      {
+        "task": 16,
+        "passed": false,
+        "report_sha256": "ae188596750aef4547ab54870614627bd2d975b3c2b6d30065311da731bc788d",
+        "failures": [
+          {
+            "case": "1 M+ 2 M+ memory",
+            "status": "failed",
+            "expected": "\"3\"",
+            "received": "\"103\""
+          }
+        ]
+      },
+      {
+        "task": 18,
+        "passed": false,
+        "report_sha256": "765a2e72f4ffe3a0509b364368e221fe42d0bab2f87f428bcea8cc714f9121f7",
+        "failures": [
+          {
+            "case": "1 M- 2 + MR =",
+            "status": "failed",
+            "expected": "\"\"",
+            "received": "\"10\""
+          }
+        ]
+      },
+      {
+        "task": 19,
+        "passed": false,
+        "report_sha256": "2cb0fde397333de475586ada47d1e054c49ceedd6830fa1e1079a46afe3f6acc",
+        "failures": [
+          {
+            "case": "1 M- MC 2 + MR =",
+            "status": "failed",
+            "expected": "\"\"",
+            "received": "\"10\""
+          }
+        ]
+      }
+    ],
+    "openai/gpt-oss-120b": [
+      {
+        "task": 15,
+        "passed": false,
+        "report_sha256": "52a1e673e4c9103510d188456b89fdfbc55774bba34b29d2bb1bb57704e956d9",
+        "failures": [
+          {
+            "case": "1 M+ 2 + MR =",
+            "status": "failed",
+            "expected": "\"\"",
+            "received": "\"1\""
+          }
+        ]
+      },
+      {
+        "task": 16,
+        "passed": false,
+        "report_sha256": "5cd16c466c4ff95ee23b1ec01c3e72046585c7088b179c0fd6886ac15c6dfb4f",
+        "failures": [
+          {
+            "case": "1 M+ 2 M+ memory",
+            "status": "failed",
+            "expected": "\"1\"",
+            "received": "\"Memory: 1\""
+          }
+        ]
+      },
+      {
+        "task": 18,
+        "passed": false,
+        "report_sha256": "fe4a06e0f2b6538607e0ff76b8c87b9e4761e463d82e3c7c72371aea268313e9",
+        "failures": [
+          {
+            "case": "1 M- 2 + MR =",
+            "status": "failed",
+            "expected": "\"\"",
+            "received": "\"1\""
+          }
+        ]
+      },
+      {
+        "task": 19,
+        "passed": false,
+        "report_sha256": "faa19ce4f34cbf2e699f464d881b97bd161774a6aec130d632555d85be9f07a9",
+        "failures": [
+          {
+            "case": "1 M- MC 2 + MR =",
+            "status": "failed",
+            "expected": "\"\"",
+            "received": "\"1\""
+          }
+        ]
+      }
+    ],
+    "deepseek/deepseek-v4-flash": [
+      {
+        "task": 15,
+        "passed": false,
+        "report_sha256": "1bc1e9080d1b40db6f18a44bdf7c360693e7a769f4be671c733e96084e116717",
+        "failures": [
+          {
+            "case": "1 M+ 2 + MR =",
+            "status": "failed",
+            "expected": "\"\"",
+            "received": "\"1\""
+          }
+        ]
+      },
+      {
+        "task": 16,
+        "passed": false,
+        "report_sha256": "9a571eead0402b73f21d40a05fe7bf34bd0db1bed3d234aa0805ba0ed5beec12",
+        "failures": [
+          {
+            "case": "1 M+ 2 M+ memory",
+            "status": "failed",
+            "expected": "\"1\"",
+            "received": "\"Memory: 1\""
+          }
+        ]
+      },
+      {
+        "task": 18,
+        "passed": false,
+        "report_sha256": "f86427399b24a408a673e0e49e77f2a826a55e47f6f928c76e7c8739bf2a501d",
+        "failures": [
+          {
+            "case": "1 M- 2 + MR =",
+            "status": "failed",
+            "expected": "\"\"",
+            "received": "\"1\""
+          }
+        ]
+      },
+      {
+        "task": 19,
+        "passed": false,
+        "report_sha256": "48f007941d72c109bff61d70a70fd5f4686fe2dc88364e57ce838a371fdfde79",
+        "failures": [
+          {
+            "case": "1 M- MC 2 + MR =",
+            "status": "failed",
+            "expected": "\"\"",
+            "received": "\"1\""
+          }
+        ]
+      }
+    ]
+  }
+}

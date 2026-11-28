@@ -34,12 +34,20 @@ ASSEMBLERS = {
     "webgen_holdout": paper.validation,
     "state_examples": paper.validation,
     "target_extensions": paper.extensions,
+    "module_rebuilds": paper.rebuilds,
 }
 
 
 def find_cell(matrix, dataset, model, method):
     project = DATASETS[dataset]
     path, row = paper.table_record(matrix[model], project)
+    if path[0] == "module_rebuilds" and method in row["inherited_methods"]:
+        earlier = dict(matrix)
+        earlier[model] = {k: v for k, v in matrix[model].items() if k != "module_rebuilds"}
+        cell = find_cell(earlier, dataset, model, method)
+        if partial := row.get("partial_followups", {}).get(method):
+            cell["partial_followup_record"] = partial
+        return cell
     excluded = method in row.get("excluded_build_arms", ())
     if excluded:
         status = "build_failed"
@@ -80,12 +88,26 @@ def find_cell(matrix, dataset, model, method):
         cell["method_record"] = receipt
     if record_filter := row.get("record_filters", {}).get(method):
         cell["record_filter"] = record_filter
-    if path[0] == "target_extensions" and status == "measured":
+    if path[0] in ("target_extensions", "module_rebuilds") and status == "measured":
         cell["targets"] = row["targets"]
     if method == "self" and "configuration_source" in row:
         cell["configuration_record"] = row["configuration_source"]
     if method == "self" and "first_builds" in row:
         cell["build_attempts"] = row["first_builds"]
+    if method == "self" and "component_rebuilds" in row:
+        cell["component_rebuilds"] = row["component_rebuilds"]
+    if method in row.get("unavailable_reasons", {}):
+        cell["unavailable_reason"] = row["unavailable_reasons"][method]
+    if path[0] == "module_rebuilds" and status != "measured":
+        earlier = dict(matrix)
+        earlier[model] = {k: v for k, v in matrix[model].items() if k != "module_rebuilds"}
+        previous = find_cell(earlier, dataset, model, method)
+        if previous["status"] == "measured":
+            cell["previous_measurement"] = {
+                k: previous[k] for k in ("row_keys", "score", "denominator", "method_record") if k in previous
+            }
+    if method == "gpt5-library" and row.get("historical_gpt5_source"):
+        cell["historical_method_record"] = row["historical_gpt5_source"]
     if row.get("additional_targets"):
         cell["additional_targets_record"] = str(paper.components.EXTENSION.relative_to(ROOT))
     if row.get("source") and row["source"] != receipt:

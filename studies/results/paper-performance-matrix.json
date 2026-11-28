@@ -1961,6 +1961,214 @@
           "gpt5-library": "native plan; request one of the builder's two examples only after compiler rejection"
         }
       }
+    },
+    "module_rebuilds": {
+      "calculator": {
+        "n": 20,
+        "passed": {
+          "direct": 8,
+          "human": 16,
+          "self": 6
+        },
+        "excluded_build_arms": [],
+        "inherited_from": [
+          "target_extensions",
+          "calculator"
+        ],
+        "inherited_methods": [
+          "direct",
+          "human"
+        ],
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "source": "studies/webbench/calculator/behavior_modules/result.json",
+        "first_builds": [
+          {
+            "status": "valid",
+            "source": "studies/webbench/calculator/behavior_modules/result.json",
+            "attempt": 1
+          },
+          {
+            "status": "build_failed",
+            "source": "studies/webbench/calculator/behavior_modules/incremental/result.json",
+            "attempt": 1
+          },
+          {
+            "status": "build_failed",
+            "source": "studies/webbench/calculator/behavior_modules/incremental/result.json",
+            "attempt": 2
+          },
+          {
+            "status": "build_failed",
+            "source": "studies/webbench/calculator/behavior_modules/incremental/result.json",
+            "attempt": 3
+          }
+        ],
+        "component_rebuilds": {
+          "scientific": [
+            {
+              "source": "studies/webbench/calculator/key_programs/result.json",
+              "attempt": 1,
+              "adopted": false
+            },
+            {
+              "source": "studies/webbench/calculator/key_programs/result.json",
+              "attempt": 2,
+              "adopted": false
+            },
+            {
+              "source": "studies/webbench/calculator/key_programs/result.json",
+              "attempt": 3,
+              "adopted": false
+            },
+            {
+              "source": "studies/webbench/calculator/key_programs/individual_keys/result.json",
+              "attempt": 1,
+              "adopted": true
+            }
+          ],
+          "memory": [
+            {
+              "source": "studies/webbench/calculator/key_programs/result.json",
+              "attempt": 1,
+              "adopted": false
+            },
+            {
+              "source": "studies/webbench/calculator/key_programs/result.json",
+              "attempt": 2,
+              "adopted": false
+            },
+            {
+              "source": "studies/webbench/calculator/key_programs/result.json",
+              "attempt": 3,
+              "adopted": false
+            },
+            {
+              "source": "studies/webbench/calculator/key_programs/individual_keys/result.json",
+              "attempt": 1,
+              "adopted": false
+            },
+            {
+              "source": "studies/webbench/calculator/key_programs/individual_keys/result.json",
+              "attempt": 2,
+              "adopted": false
+            },
+            {
+              "source": "studies/webbench/calculator/key_programs/individual_keys/result.json",
+              "attempt": 3,
+              "adopted": false
+            },
+            {
+              "source": "studies/webbench/calculator/memory_recall/result.json",
+              "attempt": 1,
+              "adopted": false
+            },
+            {
+              "source": "studies/webbench/calculator/memory_recall/result.json",
+              "attempt": 2,
+              "adopted": false
+            },
+            {
+              "source": "studies/webbench/calculator/memory_recall/result.json",
+              "attempt": 3,
+              "adopted": false
+            }
+          ]
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/calculator/memory_recall/result.json",
+          "gpt5-library": "studies/webbench/calculator/behavior_modules/gpt5_delivery/result.json"
+        },
+        "record_filters": {
+          "self": {
+            "arm": "self"
+          },
+          "gpt5-library": {
+            "arm": "gpt5-library"
+          }
+        },
+        "protocols": {
+          "self": "Model-authored calculator modules installed on the public starter. Public checks select between the parent and additive rebuild; selected: parent. Choose among observed UI profiles; keep model-authored key transitions only if public checks improve. Replay the same target choices after accepting the author's extension-key lists or requesting one transition at a time. For a missing public memory workflow, rebuild the display and register expressions separately, preserving target choices.",
+          "gpt5-library": "GPT-5 build with the shared calculator module interface and the same target plans as Self."
+        },
+        "unavailable_reasons": {
+          "gpt5-library": "The provider rejected the GPT-5 calculator build (HTTP 403, model unavailable in region)."
+        },
+        "historical_gpt5_source": "studies/webbench/calculator/compiler_fallback/result.json"
+      },
+      "table": {
+        "n": 20,
+        "passed": {
+          "direct": 0,
+          "human": 1,
+          "self": 2,
+          "gpt5-library": 9
+        },
+        "excluded_build_arms": [],
+        "inherited_from": [
+          "source_diagnosis",
+          "table"
+        ],
+        "inherited_methods": [
+          "direct",
+          "human",
+          "self"
+        ],
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "source": "studies/webbench/table/author_modules/result.json",
+        "implementation_sources": {
+          "gpt5-library": "studies/webbench/table/author_modules/result.json"
+        },
+        "record_filters": {
+          "gpt5-library": {
+            "arm": "combined"
+          }
+        },
+        "protocols": {
+          "gpt5-library": "Non-overlapping GPT-5 self-review files and its own event-trace entry repair with fresh profile choices."
+        }
+      }
     }
   },
   "qwen/qwen3.5-9b": {
@@ -3909,6 +4117,188 @@
           "gpt5-library": "native plan; request one of the builder's two examples only after compiler rejection"
         }
       }
+    },
+    "module_rebuilds": {
+      "calculator": {
+        "n": 20,
+        "passed": {
+          "direct": 4,
+          "human": 20,
+          "self": 2
+        },
+        "excluded_build_arms": [],
+        "inherited_from": [
+          "target_extensions",
+          "calculator"
+        ],
+        "inherited_methods": [
+          "direct",
+          "human"
+        ],
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "source": "studies/webbench/calculator/behavior_modules/result.json",
+        "first_builds": [
+          {
+            "status": "valid",
+            "source": "studies/webbench/calculator/behavior_modules/result.json",
+            "attempt": 1
+          },
+          {
+            "status": "build_failed",
+            "source": "studies/webbench/calculator/behavior_modules/incremental/result.json",
+            "attempt": 1
+          },
+          {
+            "status": "build_failed",
+            "source": "studies/webbench/calculator/behavior_modules/incremental/result.json",
+            "attempt": 2
+          },
+          {
+            "status": "build_failed",
+            "source": "studies/webbench/calculator/behavior_modules/incremental/result.json",
+            "attempt": 3
+          }
+        ],
+        "component_rebuilds": {
+          "scientific": [
+            {
+              "source": "studies/webbench/calculator/key_programs/result.json",
+              "attempt": 1,
+              "adopted": false
+            },
+            {
+              "source": "studies/webbench/calculator/key_programs/result.json",
+              "attempt": 2,
+              "adopted": false
+            },
+            {
+              "source": "studies/webbench/calculator/key_programs/result.json",
+              "attempt": 3,
+              "adopted": false
+            },
+            {
+              "source": "studies/webbench/calculator/key_programs/individual_keys/result.json",
+              "attempt": 1,
+              "adopted": false
+            },
+            {
+              "source": "studies/webbench/calculator/key_programs/individual_keys/result.json",
+              "attempt": 2,
+              "adopted": false
+            },
+            {
+              "source": "studies/webbench/calculator/key_programs/individual_keys/result.json",
+              "attempt": 3,
+              "adopted": false
+            }
+          ],
+          "memory": [
+            {
+              "source": "studies/webbench/calculator/key_programs/result.json",
+              "attempt": 1,
+              "adopted": false
+            },
+            {
+              "source": "studies/webbench/calculator/key_programs/result.json",
+              "attempt": 2,
+              "adopted": true
+            }
+          ]
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/calculator/key_programs/individual_keys/result.json",
+          "gpt5-library": "studies/webbench/calculator/behavior_modules/gpt5_delivery/result.json"
+        },
+        "record_filters": {
+          "self": {
+            "arm": "self"
+          },
+          "gpt5-library": {
+            "arm": "gpt5-library"
+          }
+        },
+        "protocols": {
+          "self": "Model-authored calculator modules installed on the public starter. Public checks select between the parent and additive rebuild; selected: parent. Choose among observed UI profiles; keep model-authored key transitions only if public checks improve. Replay the same target choices after accepting the author's extension-key lists or requesting one transition at a time.",
+          "gpt5-library": "GPT-5 build with the shared calculator module interface and the same target plans as Self."
+        },
+        "unavailable_reasons": {
+          "gpt5-library": "The provider rejected the GPT-5 calculator build (HTTP 403, model unavailable in region)."
+        },
+        "historical_gpt5_source": "studies/webbench/calculator/compiler_fallback/result.json"
+      },
+      "table": {
+        "n": 20,
+        "passed": {
+          "direct": 0,
+          "human": 6,
+          "self": 3,
+          "gpt5-library": 8
+        },
+        "excluded_build_arms": [],
+        "inherited_from": [
+          "table_state_transitions"
+        ],
+        "inherited_methods": [
+          "direct",
+          "human",
+          "self"
+        ],
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "source": "studies/webbench/table/author_modules/result.json",
+        "implementation_sources": {
+          "gpt5-library": "studies/webbench/table/author_modules/result.json"
+        },
+        "record_filters": {
+          "gpt5-library": {
+            "arm": "combined"
+          }
+        },
+        "protocols": {
+          "gpt5-library": "Non-overlapping GPT-5 self-review files and its own event-trace entry repair with fresh profile choices."
+        }
+      }
     }
   },
   "mistralai/mistral-small-3.2-24b-instruct": {
@@ -5832,6 +6222,137 @@
           "self": "studies/webbench/typed_components/svg_public_geometry/attribute_contracts/result.json"
         }
       }
+    },
+    "module_rebuilds": {
+      "table": {
+        "n": 20,
+        "passed": {
+          "direct": 5,
+          "human": 20,
+          "gpt5-library": 8,
+          "self": 1
+        },
+        "excluded_build_arms": [],
+        "inherited_from": [
+          "extended_targets",
+          "table"
+        ],
+        "inherited_methods": [
+          "direct",
+          "human"
+        ],
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "source": "studies/webbench/table/author_modules/result.json",
+        "implementation_sources": {
+          "gpt5-library": "studies/webbench/table/author_modules/result.json",
+          "self": "studies/webbench/table/event_hooks/handler_selection/result.json"
+        },
+        "record_filters": {
+          "gpt5-library": {
+            "arm": "combined"
+          },
+          "self": {
+            "arm": "self"
+          }
+        },
+        "protocols": {
+          "gpt5-library": "Non-overlapping GPT-5 self-review files and its own event-trace entry repair with fresh profile choices.",
+          "self": "Model-designed modules, declared interfaces and a choice of how many ordered modules to install. The researcher dispatches browser events; the original builder writes the menu, commands, dismissal and selection handlers. Reuse original initial handlers; the author's repairs use actual DOM arguments with no application API. Select the first publicly error-free subset of the author's own event handlers."
+        },
+        "first_builds": [
+          {
+            "status": "build_failed",
+            "attempt": 1,
+            "source": "studies/webbench/table/model_modules/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 2,
+            "source": "studies/webbench/table/model_modules/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 3,
+            "source": "studies/webbench/table/model_modules/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 1,
+            "source": "studies/webbench/table/model_modules/structured_design/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 2,
+            "source": "studies/webbench/table/model_modules/structured_design/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 3,
+            "source": "studies/webbench/table/model_modules/structured_design/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 1,
+            "source": "studies/webbench/table/model_modules/public_trace/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 2,
+            "source": "studies/webbench/table/model_modules/public_trace/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 3,
+            "source": "studies/webbench/table/model_modules/public_trace/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 1,
+            "source": "studies/webbench/table/event_hooks/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 2,
+            "source": "studies/webbench/table/event_hooks/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 1,
+            "source": "studies/webbench/table/event_hooks/dom_contract/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 2,
+            "source": "studies/webbench/table/event_hooks/dom_contract/result.json"
+          },
+          {
+            "status": "valid",
+            "attempt": 1,
+            "source": "studies/webbench/table/event_hooks/handler_selection/result.json"
+          }
+        ]
+      }
     }
   },
   "qwen/qwen3-coder-30b-a3b-instruct": {
@@ -6773,6 +7294,137 @@
         "implementation_sources": {
           "gpt5-library": "studies/public_library_transfer/duo_donor_library/result.json"
         }
+      }
+    },
+    "module_rebuilds": {
+      "table": {
+        "n": 20,
+        "passed": {
+          "direct": 3,
+          "human": 10,
+          "gpt5-library": 9
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "inherited_from": [
+          "table_protocol_followup"
+        ],
+        "inherited_methods": [
+          "direct",
+          "human"
+        ],
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "source": "studies/webbench/table/author_modules/result.json",
+        "implementation_sources": {
+          "gpt5-library": "studies/webbench/table/author_modules/result.json",
+          "self": "studies/webbench/table/event_hooks/handler_selection/result.json"
+        },
+        "record_filters": {
+          "gpt5-library": {
+            "arm": "combined"
+          },
+          "self": {
+            "arm": "self"
+          }
+        },
+        "protocols": {
+          "gpt5-library": "Non-overlapping GPT-5 self-review files and its own event-trace entry repair with fresh profile choices.",
+          "self": "Model-designed modules, declared interfaces and a choice of how many ordered modules to install. The researcher dispatches browser events; the original builder writes the menu, commands, dismissal and selection handlers. Reuse original initial handlers; the author's repairs use actual DOM arguments with no application API. Select the first publicly error-free subset of the author's own event handlers."
+        },
+        "first_builds": [
+          {
+            "status": "build_failed",
+            "attempt": 1,
+            "source": "studies/webbench/table/model_modules/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 2,
+            "source": "studies/webbench/table/model_modules/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 3,
+            "source": "studies/webbench/table/model_modules/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 1,
+            "source": "studies/webbench/table/model_modules/structured_design/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 2,
+            "source": "studies/webbench/table/model_modules/structured_design/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 3,
+            "source": "studies/webbench/table/model_modules/structured_design/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 1,
+            "source": "studies/webbench/table/model_modules/public_trace/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 2,
+            "source": "studies/webbench/table/model_modules/public_trace/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 3,
+            "source": "studies/webbench/table/model_modules/public_trace/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 1,
+            "source": "studies/webbench/table/event_hooks/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 2,
+            "source": "studies/webbench/table/event_hooks/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 1,
+            "source": "studies/webbench/table/event_hooks/dom_contract/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 2,
+            "source": "studies/webbench/table/event_hooks/dom_contract/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 1,
+            "source": "studies/webbench/table/event_hooks/handler_selection/result.json"
+          }
+        ]
       }
     }
   },
@@ -8149,6 +8801,265 @@
         "protocols": {
           "gpt5-library": "native plan; request one of the builder's two examples only after compiler rejection"
         }
+      }
+    },
+    "module_rebuilds": {
+      "calculator": {
+        "n": 20,
+        "passed": {
+          "direct": 10,
+          "human": 20,
+          "self": 10
+        },
+        "excluded_build_arms": [],
+        "inherited_from": [
+          "target_extensions",
+          "calculator"
+        ],
+        "inherited_methods": [
+          "direct",
+          "human"
+        ],
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "source": "studies/webbench/calculator/behavior_modules/result.json",
+        "first_builds": [
+          {
+            "status": "valid",
+            "source": "studies/webbench/calculator/behavior_modules/result.json",
+            "attempt": 1
+          }
+        ],
+        "component_rebuilds": {
+          "scientific": [
+            {
+              "source": "studies/webbench/calculator/key_programs/result.json",
+              "attempt": 1,
+              "adopted": false
+            },
+            {
+              "source": "studies/webbench/calculator/key_programs/result.json",
+              "attempt": 2,
+              "adopted": false
+            },
+            {
+              "source": "studies/webbench/calculator/key_programs/result.json",
+              "attempt": 3,
+              "adopted": false
+            }
+          ],
+          "memory": [
+            {
+              "source": "studies/webbench/calculator/key_programs/result.json",
+              "attempt": 1,
+              "adopted": false
+            }
+          ]
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/calculator/key_programs/result.json",
+          "gpt5-library": "studies/webbench/calculator/behavior_modules/gpt5_delivery/result.json"
+        },
+        "record_filters": {
+          "self": {
+            "arm": "self"
+          },
+          "gpt5-library": {
+            "arm": "gpt5-library"
+          }
+        },
+        "protocols": {
+          "self": "Model-authored calculator modules installed on the public starter. Choose among observed UI profiles; keep model-authored key transitions only if public checks improve.",
+          "gpt5-library": "GPT-5 build with the shared calculator module interface and the same target plans as Self."
+        },
+        "unavailable_reasons": {
+          "gpt5-library": "The provider rejected the GPT-5 calculator build (HTTP 403, model unavailable in region)."
+        },
+        "historical_gpt5_source": "studies/webbench/calculator/compiler_fallback/result.json"
+      },
+      "table": {
+        "n": 20,
+        "passed": {
+          "direct": 7,
+          "human": 20,
+          "gpt5-library": 8
+        },
+        "excluded_build_arms": [
+          "self"
+        ],
+        "inherited_from": [
+          "table_protocol_followup"
+        ],
+        "inherited_methods": [
+          "direct",
+          "human"
+        ],
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "source": "studies/webbench/table/author_modules/result.json",
+        "implementation_sources": {
+          "gpt5-library": "studies/webbench/table/author_modules/result.json",
+          "self": "studies/webbench/table/event_hooks/dom_contract/result.json"
+        },
+        "record_filters": {
+          "gpt5-library": {
+            "arm": "combined"
+          },
+          "self": {
+            "arm": "self"
+          }
+        },
+        "protocols": {
+          "gpt5-library": "Non-overlapping GPT-5 self-review files and its own event-trace entry repair with fresh profile choices.",
+          "self": "Model-designed modules, declared interfaces and a choice of how many ordered modules to install. The researcher dispatches browser events; the original builder writes the menu, commands, dismissal and selection handlers. Reuse original initial handlers; the author's repairs use actual DOM arguments with no application API."
+        },
+        "first_builds": [
+          {
+            "status": "build_failed",
+            "attempt": 1,
+            "source": "studies/webbench/table/model_modules/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 2,
+            "source": "studies/webbench/table/model_modules/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 3,
+            "source": "studies/webbench/table/model_modules/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 1,
+            "source": "studies/webbench/table/model_modules/structured_design/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 2,
+            "source": "studies/webbench/table/model_modules/structured_design/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 3,
+            "source": "studies/webbench/table/model_modules/structured_design/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 1,
+            "source": "studies/webbench/table/model_modules/public_trace/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 2,
+            "source": "studies/webbench/table/model_modules/public_trace/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 3,
+            "source": "studies/webbench/table/model_modules/public_trace/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 1,
+            "source": "studies/webbench/table/model_modules/public_trace/array_reception/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 2,
+            "source": "studies/webbench/table/model_modules/public_trace/array_reception/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 3,
+            "source": "studies/webbench/table/model_modules/public_trace/array_reception/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 4,
+            "source": "studies/webbench/table/model_modules/public_trace/array_reception/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 5,
+            "source": "studies/webbench/table/model_modules/public_trace/array_reception/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 6,
+            "source": "studies/webbench/table/model_modules/public_trace/array_reception/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 7,
+            "source": "studies/webbench/table/model_modules/public_trace/array_reception/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 8,
+            "source": "studies/webbench/table/model_modules/public_trace/array_reception/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 1,
+            "source": "studies/webbench/table/event_hooks/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 2,
+            "source": "studies/webbench/table/event_hooks/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 1,
+            "source": "studies/webbench/table/event_hooks/dom_contract/result.json"
+          },
+          {
+            "status": "build_failed",
+            "attempt": 2,
+            "source": "studies/webbench/table/event_hooks/dom_contract/result.json"
+          }
+        ]
       }
     }
   },
@@ -9760,6 +10671,143 @@
           "gpt5-library": "native plan; request one of the builder's two examples only after compiler rejection"
         }
       }
+    },
+    "module_rebuilds": {
+      "calculator": {
+        "n": 20,
+        "passed": {
+          "direct": 10,
+          "human": 16,
+          "self": 11
+        },
+        "excluded_build_arms": [],
+        "inherited_from": [
+          "target_extensions",
+          "calculator"
+        ],
+        "inherited_methods": [
+          "direct",
+          "human"
+        ],
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "source": "studies/webbench/calculator/behavior_modules/result.json",
+        "first_builds": [
+          {
+            "status": "valid",
+            "source": "studies/webbench/calculator/behavior_modules/result.json",
+            "attempt": 1
+          }
+        ],
+        "component_rebuilds": {
+          "scientific": [
+            {
+              "source": "studies/webbench/calculator/key_programs/result.json",
+              "attempt": 1,
+              "adopted": false
+            }
+          ],
+          "memory": [
+            {
+              "source": "studies/webbench/calculator/key_programs/result.json",
+              "attempt": 1,
+              "adopted": false
+            }
+          ]
+        },
+        "implementation_sources": {
+          "self": "studies/webbench/calculator/key_programs/result.json",
+          "gpt5-library": "studies/webbench/calculator/behavior_modules/gpt5_delivery/result.json"
+        },
+        "record_filters": {
+          "self": {
+            "arm": "self"
+          },
+          "gpt5-library": {
+            "arm": "gpt5-library"
+          }
+        },
+        "protocols": {
+          "self": "Model-authored calculator modules installed on the public starter. Choose among observed UI profiles; keep model-authored key transitions only if public checks improve.",
+          "gpt5-library": "GPT-5 build with the shared calculator module interface and the same target plans as Self."
+        },
+        "unavailable_reasons": {
+          "gpt5-library": "The provider rejected the GPT-5 calculator build (HTTP 403, model unavailable in region)."
+        },
+        "historical_gpt5_source": "studies/webbench/calculator/compiler_fallback/result.json"
+      },
+      "table": {
+        "n": 20,
+        "passed": {
+          "direct": 1,
+          "human": 19,
+          "self": 4,
+          "gpt5-library": 9
+        },
+        "excluded_build_arms": [],
+        "inherited_from": [
+          "table_protocol_followup"
+        ],
+        "inherited_methods": [
+          "direct",
+          "human",
+          "self"
+        ],
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "source": "studies/webbench/table/author_modules/result.json",
+        "implementation_sources": {
+          "gpt5-library": "studies/webbench/table/author_modules/result.json"
+        },
+        "record_filters": {
+          "gpt5-library": {
+            "arm": "combined"
+          }
+        },
+        "protocols": {
+          "gpt5-library": "Non-overlapping GPT-5 self-review files and its own event-trace entry repair with fresh profile choices."
+        }
+      }
     }
   },
   "deepseek/deepseek-v4-pro-0813": {
@@ -10916,6 +11964,60 @@
       "excluded_build_arms": [],
       "implementation_sources": {
         "gpt5-library": "studies/webbench/table_interactions/result.json"
+      }
+    },
+    "module_rebuilds": {
+      "table": {
+        "n": 20,
+        "passed": {
+          "direct": 2,
+          "human": 20,
+          "self": 6,
+          "gpt5-library": 6
+        },
+        "excluded_build_arms": [],
+        "inherited_from": [
+          "table_protocol_followup"
+        ],
+        "inherited_methods": [
+          "direct",
+          "human",
+          "self"
+        ],
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "source": "studies/webbench/table/author_modules/result.json",
+        "implementation_sources": {
+          "gpt5-library": "studies/webbench/table/author_modules/result.json"
+        },
+        "record_filters": {
+          "gpt5-library": {
+            "arm": "combined"
+          }
+        },
+        "protocols": {
+          "gpt5-library": "Non-overlapping GPT-5 self-review files and its own event-trace entry repair with fresh profile choices."
+        }
       }
     }
   },

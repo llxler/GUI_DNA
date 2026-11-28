@@ -15,7 +15,7 @@ python -m studies.lookup web-bench/form "DeepSeek V4 Flash" Self      # 查看�
 
 最后一条查询返回 **11/20**。打开输出的 `matrix`，按 `row_keys` 依次进入模型和实验记录，在 `passed.self` 看分子，在 `n` 和 `targets` 看分母和目标。再打开 `method_record`。这次实验把首份自建库记作 `file-a`，其 20 行分别给出任务编号、是否通过和浏览器报告哈希。同目录的协议说明建库及解码条件，运行器给出实现。旧矩阵 `current.form` 留有历史计数 0/20。其两次建库均未交付源码，20 题都没有进入规划；当前表展示准入后的实测成绩。[主表 JSON](studies/results/paper-performance-matrix.json) · [本格逐题记录](studies/webbench/form/flash_self_build/visible_targets/result.json) · [协议](studies/webbench/form/flash_self_build/visible_targets/PROTOCOL.md) · [运行代码](studies/webbench/form/flash_self_build/visible_targets/run.py)
 
-计算器可以用 `python -m studies.lookup web-bench/calculator "Gemma 3 12B" GPT-5` 查原生配置及编译失败后改选示例的逐题记录。打开返回的 `method_record`，按 `record_filter` 筛选，再与 `targets` 中的目标编号对齐即可复算。把方法换成 `Self` 可查公开建库检查的结果。对于已建库失败的行，`build_attempts` 列出预先指定的首库及其后备流程。
+例如，`python -m studies.lookup web-bench/table "Gemma 3 12B" GPT-5` 可查 GPT-5 表格库的 9/20。打开 `method_record`，在该模型的 20 行 `arm=combined` 中逐项复算；同一文件还保留原库、自查版、仅修菜单版和各自的固定页。计算器的 `Self` 可查按键实现及实际配置。计算器新接口未收到 GPT-5 源码，查询 `GPT-5` 时，`method_record` 给出缺测原因，`historical_method_record` 给出旧接口的实测结果。[表格建库协议](studies/webbench/table/author_modules/PROTOCOL.md) · [计算器建库协议](studies/webbench/calculator/key_programs/PROTOCOL.md)
 
 | Table 1 | 查询用的数据集／项目名 | 实验代码入口 |
 | --- | --- | --- |
@@ -27,7 +27,7 @@ python -m studies.lookup web-bench/form "DeepSeek V4 Flash" Self      # 查看�
 模型名指负责当前目标的**生成模型**，支持上表命令列出的显示名和完整模型 ID。四种方法的 JSON 标识分别为 `direct`（从零写代码）、`human`（人工库＋GUI-DNA）、`gpt5-library`（冻结 GPT-5 库＋GUI-DNA）和 `self`（目标模型建库并配置）。固定示例和第二次独立建库可在对应研究记录中查阅。
 
 - `status=measured` 给出实测分子和分母，零分也在此列。A、B 统计通过当前任务文件的次数。C 统计浏览器完整完成的网站操作数。部分完成计零；遇到缺判，同一模型的四组共同移除该操作。
-- `build_failed` 对应论文空白格，`unavailable` 对应横线。两种状态都没有实测分数。每个项目的模型列表对应 Table 1 实际展示的行。
+- `build_failed` 对应论文空白格，`unavailable` 对应横线。两种状态都没有本协议的实测分数。有早期已测协议时，新建库记录的 `previous_measurement` 单列旧分母、分子与出处。每个项目的模型列表对应 Table 1 实际展示的行。
 - 方法有独立来源记录时，`method_record` 指向该文件；补传目标另列于 `additional_targets_record`。多轮合并的格子可从 `assembly_code` 查到具体合并规则和输入。各研究 JSON 保留各自的字段名。历史模型、其他项目和固定页对照按研究索引查找。[研究索引](studies/README.md) · [历次结果](docs/results.md)
 
 ## 代码结构
@@ -61,6 +61,7 @@ GUI_DNA/
 | --- | --- | --- |
 | 人工组件能提供多少可复用行为？ | 在同一批 20 项表格任务上，GPT-OSS-120B 从零生成通过 7 项，人工库组装通过 20 项。 | [组件与对照](docs/method.md) |
 | 低分出在实现还是选配置？ | Qwen3.5 使用同一份 GPT-5 图表库，长配置通过 1/20，改选已有示例通过 15/20，固定首例通过 17/20。它自己的待办库限选满足共同操作的配置后从 0/8 升至 5/8，固定首例也通过相同五题。 | [原配置、固定对照与复验](studies/results/library-source-diagnosis-20261126.json) |
+| GPT-5 原作者修订表格库后能否超过从零生成？ | 七款生成模型在各自相同的 20 个任务上，用合并修订的库通过 6–9 项，均高于同模型 Direct。固定一份页面通过 8 项。 | [四种源码共享选择的逐题记录](studies/webbench/table/author_modules/result.json) |
 | 换到未见网站，自建库还能提高得分吗？ | 同一批九个网站上，Qwen3.5 从零 27/59、自建 28/59。Flash 从零 37/59、人工库 41/59、自建 41/59。数字只计完整通过。 | [九站同题比较及浏览器复验](studies/results/webgen-site-completion-20261128.json) |
 
 ## 安装与核验

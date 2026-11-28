@@ -199,3 +199,10 @@ Duo 初批两模型与 Qwen 精简契约的另外两份库，分别用 `uv run p
 运行 `python -m studies.lookup web-bench/calculator` 可列出主表实际展示的计算器模型。GPT-5 来源分支在[逐题记录](../studies/webbench/calculator/compiler_fallback/result.json)中分别保留原生配置、最终页面和两个固定示例。四种方法比较同一行的共同任务。运行 `python -m studies.lookup todomvc "Ministral 3B" Self` 可找到逐题响应和评分记录。各阶段在生成前登记输入与第一库规则。保留原账本的本机可用 `uv run python -m studies.paper_target_extensions` 按研究、模型和建库或部署重新核对费用。
 
 文件管理器的从零结果可按 `python -m studies.lookup web-bench/dom1 "Gemma 3 12B" Direct` 查询。每个模型均保留原始响应摘要、解包前后文件摘要、交付格式和官方判决。对照原接收器与现接收器的结果请见[离线重放协议](../studies/webbench/file_explorer/target_models/direct_reception/PROTOCOL.md)。
+
+
+用 `python -m studies.lookup web-bench/table "DeepSeek V4 Flash" GPT-5` 可定位表格四组源码的同配置对照。计算器的 `python -m studies.lookup web-bench/calculator "DeepSeek V4 Flash" Self` 同时给出主表分母、任务号和可复算的逐页判决；在 Flash 的同一 JSON 中比较 `self`、`old-code-new-choice` 与 `new-code-old-choice` 即可区分改代码和改配置的作用。Gemma 和 Qwen3.5 还可用 `old-code-same-choice` 与逐键补交后的 `self` 核对同配置的实现变化。费用文件按阶段、模型和用途记录结算与未结敞口。本机保有账本时用 `uv run python -m studies.paper_module_rebuilds` 逐项核对。[计算器逐题记录](../studies/webbench/calculator/key_programs/result.json) · [表格逐题记录](../studies/webbench/table/author_modules/result.json) · [费用收据](../studies/results/library-rebuild-costs-20261128.json)
+
+计算器逐键补交和表格轨迹修复会各生成一份与父阶段的关联收据。原始评分文件保持冻结。本机保有封存候选时，用 `uv run python -m studies.rebuild_lineage calculator` 或 `table` 核对，同一选择的源码哈希或每次修复的输入哈希必须一致。两个初版运行器先封存逐题判决，随后尝试在同一个文件追加父库来源，冻结写入器会拒绝这次追加。下列完整入口把该指纹另存到 `lineage.json`，保留已封存评分。从头运行这两个阶段的完整入口是 `uv run python -m studies.browser_worker studies.rebuild_lineage calculator --execute`（表格将项目名改为 `table`）。
+
+运行 `uv run python -m studies.webbench.calculator.memory_recall.diagnose` 可按报告哈希核对已经封存的完整页在记忆任务上的失败断言。该命令只读取既有浏览器报告。[逐项核对](../studies/webbench/calculator/memory_recall/browser-errors.json)

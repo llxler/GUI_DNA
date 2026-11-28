@@ -10,7 +10,7 @@ from studies.webgen_bench.site_completion import report as completion
 from studies.public_library_transfer.self_refinement.suite_recovery import paper as recovery
 from studies.webbench.form.flash_self_build import paper as flash_form
 from studies import paper_component_followup as components, paper_library_capabilities as capabilities
-from studies import paper_target_extensions as extensions
+from studies import paper_target_extensions as extensions, paper_module_rebuilds as rebuilds
 from studies.webbench.table.event_modules import paper as table_protocols
 
 MISTRAL = "mistralai/mistral-small-3.2-24b-instruct"
@@ -186,6 +186,7 @@ def performance_matrix(data, replay, trials, today, batches=None):
         validation.attach(matrix)
         completion.attach(matrix)
         extensions.attach(matrix)
+        rebuilds.attach(matrix)
     return matrix
 
 
@@ -229,6 +230,7 @@ def table_record(model, project):
     if project == "webgen-heldout":
         return ("webgen_holdout",), model.get("webgen_holdout", {})
     ordered = (
+        ("module_rebuilds", project),
         ("target_extensions", project),
         ("state_examples", project),
         ("source_diagnosis", project),
@@ -270,7 +272,7 @@ def table_models(matrix, project):
         return [m for m in BACKBONES if any(current_group(matrix[m], p) for p in WEB_PROJECTS)]
     if project in ("dom1", "calculator"):
         return [m for m in BACKBONES if any(project in matrix[m].get(group, {})
-                for group in ("library_capabilities", "target_extensions"))]
+                for group in ("library_capabilities", "target_extensions", "module_rebuilds"))]
     if project == "todomvc":
         return components.TODO_ROSTER
     if project == "duo":
@@ -432,11 +434,16 @@ def render_matrix(matrix, followups=(), domain_rows=()):
         for row in domain_rows:
             lines.append(" & ".join([row["project"], *values(row, methods)]) + r" \\")
         lines += [r"\bottomrule\end{tabular*}\par\vspace{1pt}"]
+    calculator_note = ""
+    if any("calculator" in m.get("module_rebuilds", {}) for m in matrix.values()):
+        calculator_note = "GPT-5 did not deliver a library for the new calculator interface. "
+    elif any("calculator" in m.get("target_extensions", {}) for m in matrix.values()):
+        calculator_note = "Calculator GPT-5 requests an example only after compiler rejection. "
     lines += [
         r"\begin{minipage}{\textwidth}\footnotesize\raggedright "
         r"Direct writes code without a library. In Human, the target model configures human-written components. GPT-5 uses a frozen GPT-5 library. "
         r"Self uses the target model to build and configure its own library. "
-        + (r"Calculator GPT-5 requests an example only after compiler rejection. " if any("calculator" in m.get("target_extensions", {}) for m in matrix.values()) else "")
+        + calculator_note
         + r"Each Duo domain contributes five pairs. "
         + (r"D uses protocol-specific Direct. Variants reuse libraries. "
            r"Fixed replays an example, pair, defaults, or all renderers. Relaxed files, DOM tokens and SVG C/D share 20 recovered direct replies. Flash file checks include six retransmissions. " if followups else "")
