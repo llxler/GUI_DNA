@@ -10,7 +10,7 @@
 
 公开汇总位于 [results/](results)。Web-Bench 的通过数表示候选通过当前任务文件中的全部官方断言。比较时按项目、目标范围、建库者及部署模型读取同一组配对。完整二十项和五个里程碑的结果分别报告。[评分与数据边界](../docs/method.md)
 
-11 月 26 日的表格、文件管理器、问卷、TodoMVC 和 Duo 可从[同题结果与建库记录](results/library-capabilities-20261126.json)进入。逐轮代码与协议按项目保存；[当前任务](../docs/roadmap.md)列出仍缺的来源与实验。
+11 月 26 日的表格、文件管理器、问卷、TodoMVC 和 Duo 可从[同题结果与建库记录](results/library-capabilities-20261126.json)进入。逐轮代码与协议按项目保存；[当前任务](../todo.md)列出剩余的论文修改与备选实验。
 
 ```bash
 uv run python -m studies.public_library_transfer --check
@@ -21,7 +21,7 @@ uv run python -m studies.public_library_transfer --check
 | 查阅主题 | 入口 |
 | --- | --- |
 | 人工行为库的来源与使用 | [TodoMVC](todomvc_dna/README.md)、[Web-Bench 文件管理器](webbench_dna/README.md)、[WebApp1K-Duo](webapp1k_dna/README.md) |
-| 早期 AI 建库与无库比较 | [端到端比较协议](../docs/end_to_end_protocol.md)、[各建库者的配对汇总](results/end_to_end.json) |
+| 早期 AI 建库与无库比较 | [端到端比较协议](../docs/research/end_to_end_protocol.md)、[各建库者的配对汇总](results/end_to_end.json) |
 | 同一目标上的人工库、AI 库与无库对照 | [三组配对结果及来源](results/library-sources-20261121.json) |
 | 按原版本复验 | [复现说明](../docs/reproducibility.md)、[历史实验索引](REVIEW.md)、[退役研究说明](../docs/archive/full-history-retirement.md) |
 

@@ -438,6 +438,8 @@ def main():
         for name, text in generated.items():
             (PAPER / name).write_text(text)
     assert json.loads(matrix_path.read_text()) == matrix, "Stale published performance matrix"
+    from studies import result_index
+    result_index.sync(write=args.write)
     report = audit(data, generated)
     print(json.dumps({"all_passed": report["all_passed"], "tables": len(report["tables"])}))
 

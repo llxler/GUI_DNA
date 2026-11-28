@@ -1,6 +1,6 @@
 # 端到端公开基准比较设计
 
-此页保留 11 月 17 日的研究设计。11 月 18 日的实际运行分别以 [canvas 首批](../studies/matched_canvas/PROTOCOL.md)、[canvas 输出上限跟进](../studies/canvas_capacity/PROTOCOL.md)、[Claude 同模型复验](../studies/canvas_model_replication/PROTOCOL.md) 和 [flex 独立复验](../studies/matched_flex/PROTOCOL.md) 为准。两个流程各有一次准备调用，随后五个里程碑独立生成。每种条件都保留两次独立准备。
+此页保留 11 月 17 日的研究设计。11 月 18 日的实际运行分别以 [canvas 首批](../../studies/matched_canvas/PROTOCOL.md)、[canvas 输出上限跟进](../../studies/canvas_capacity/PROTOCOL.md)、[Claude 同模型复验](../../studies/canvas_model_replication/PROTOCOL.md) 和 [flex 独立复验](../../studies/matched_flex/PROTOCOL.md) 为准。两个流程各有一次准备调用，随后五个里程碑独立生成。每种条件都保留两次独立准备。
 
 ## 研究问题与比较方法
 
@@ -34,4 +34,4 @@ uv run python -m studies.end_to_end --check
 uv run python -m studies.paper_end_to_end
 ```
 
-主视图按项目、输出上限及重复保留真实配对和费用。结果见 [实验记录](results.md) 第 38 节，未覆盖的应用族及进一步重复见 [roadmap](roadmap.md)。
+主视图按项目、输出上限及重复保留真实配对和费用。结果见 [实验记录](../results.md) 第 38 节，未覆盖的应用族及进一步重复见 [当前待办](../../todo.md)。

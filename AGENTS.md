@@ -1,6 +1,6 @@
 # GUI-DNA：代理操作指南
 
-先读 [README](README.md)、[当前任务](docs/roadmap.md)；方法见 [docs/method.md](docs/method.md)，历史结果见 [docs/results.md](docs/results.md)。详细旧指令仅供查证：[归档](docs/archive/agent-instructions-20261117.md)。不要默认加载整份历史。
+先读 [README](README.md)、[当前任务](todo.md)；方法见 [docs/method.md](docs/method.md)，历史结果见 [docs/results.md](docs/results.md)。详细旧指令仅供查证：[归档](docs/archive/agent-instructions-20261117.md)。不要默认加载整份历史。
 
 ## 当前工作范围
 
@@ -38,7 +38,7 @@ uv run python scripts/check_openrouter_credits.py --required-usd 1
 
 ## 文档与交付
 
-- 文档用中文，代码注释/标识符和 `DNA_latex/` 论文用英文。结果唯一追加到 `docs/results.md`；已完成待办移出 roadmap，历史保存在结果与 Git。
+- 文档用中文，代码注释/标识符和 `DNA_latex/` 论文用英文。结果唯一追加到 `docs/results.md`；已完成待办移出根目录的 `todo.md`，历史保存在结果与 Git。
 - 修改实验结论时同步 README、方法说明、论文及本地 `presentation/`。按 [presentation/TODO.md](presentation/TODO.md) 更新 `DNA.md`、12 页 `slides.pptx` 和对应 `script.md`；不增加篇幅，备注与讲稿一致，追加一行更新记录。
 - `DNA_latex/`、`presentation/`、原始响应/账本/截图不入 Git，不强制添加。当前官方 ICML 2027 样式不改，正文不超过 8 页；引用与数字须有可核查来源。
 - 新论文表格只由 `studies.paper_end_to_end --write` 生成；本地编译入口 `artifacts/paper-build/build.sh`。生成后仍须检查 PDF、来源、负结果和待作者审核项。

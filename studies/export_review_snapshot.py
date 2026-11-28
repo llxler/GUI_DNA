@@ -14,11 +14,11 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ALLOWED_ROOTS = {'src', 'studies', 'test', 'tests', 'experiments', 'configs', 'scripts', 'data', 'docs'}
-ALLOWED_FILES = {'pyproject.toml', 'uv.lock', 'README.md', '实验结果.md', '代码逻辑.md', '.gitignore'}
+ALLOWED_ROOTS = {'src', 'studies', 'test', 'tests', 'experiments', 'configs', 'scripts', 'data', 'docs', 'paper-results'}
+ALLOWED_FILES = {'pyproject.toml', 'uv.lock', 'README.md', 'todo.md', '实验结果.md', '代码逻辑.md', '.gitignore'}
 EXTENSIONS = {'.py', '.js', '.cjs', '.ts', '.json', '.jsonl', '.html', '.css', '.md', '.txt', '.toml', '.lock', '.sh'}
 DOCUMENT_ALIASES = {'实验结果.md': 'docs/results.md', '代码逻辑.md': 'docs/method.md',
-                    'experiments/TODO.md': 'docs/roadmap.md'}
+                    'experiments/TODO.md': 'todo.md'}
 
 
 def is_document_alias(root, path):

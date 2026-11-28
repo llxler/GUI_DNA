@@ -1,95 +1,59 @@
 # GUI-DNA: Building and Reusing Behavior Libraries for GUI Generation
 
-GUI-DNA 将「用户操作如何改变应用状态」写进可复用的行为库，让模型根据需求选择配置。查询 `python -m studies.lookup webapp1k-duo "DeepSeek V4 Flash" Human` 可定位 Duo 的 7/10。此处 Human 使用人工维护的 React Final Form，Flash 填写业务绑定。同一行 Direct、GPT-5、Self 均通过 9/10。新抽的十个组合另行报告。[Duo 逐题来源与独立抽样](studies/public_library_transfer/duo_verified_features/README.md)
-
-例如，文件管理器中同一个「新建」按钮，要根据当前选中的是目录还是文件来决定插入位置。论文比较从零生成代码、组装人工组件，以及组装模型从公开需求建立的库。[方法说明](docs/method.md)
+GUI-DNA 让模型用配置组装可复用的界面行为。例如，文件管理器的「新建」操作需要根据当前选中的是文件还是目录决定插入位置。论文比较三类工作流：从零编写页面、组装人工提供的组件、组装模型根据公开需求建立的库。[方法与组件来源](docs/method.md)
 
 ## 按数据集、模型和方法查 Table 1
 
-在仓库根目录运行。查询只读取随 Git 发布的记录，使用 Python 3.13 标准库，无需 API key、浏览器或本地实验产物。
+点下表中的项目，找到**模型所在行**和**方法所在列**。点成绩可查看主表 JSON 的对应位置，展开表下的「来源记录」可查实验数据。
+
+| 分区 | 评测对象 | 项目成绩 |
+| --- | --- | --- |
+| **A · Web-Bench** | 一项当前任务的官方测试 | [表格编辑器](paper-results/A/table-editor.md) · [SVG 图表](paper-results/A/svg-charts.md) · [问卷](paper-results/A/question-form.md) · [文件管理器](paper-results/A/file-explorer.md) · [计算器](paper-results/A/calculator.md) |
+| **B · 功能组合** | 待办功能子集、业务功能对 | [TodoMVC](paper-results/B/todomvc.md) · [WebApp1K-Duo](paper-results/B/webapp1k-duo.md) |
+| **C · WebGen-Bench** | 九个网站上的操作 | [网站操作](paper-results/C/webgen-bench.md) |
+| **Other · 补充实验** | 独立复验、固定配置、建库费用和早期协议 | [按研究问题查找](paper-results/Other/README.md) |
+
+四列共用该模型、该项目的目标和分母。**Direct** 从零写代码。**Human** 用人工提供的组件。**GPT-5** 用 GPT-5 建好并冻结的库。**Self** 由该行的目标模型建库并选择配置。分数表示通过数 / 同题数；项目页将论文中的空白格标为「建库失败」，横线标为「无数据」。
+
+例如，要查 Qwen 自建库在表格编辑器上的表现，打开上面的「表格编辑器」，读 Qwen3.5-9B 或 Qwen3-Coder-30B 对应行的 Self 列。也可以在仓库根目录用 Python 3.13 查项目、模型和单格 JSON，无需 API key。
 
 ```bash
-python -m studies.lookup                                             # 列出数据集和项目
-python -m studies.lookup web-bench/form                              # 列出该项目在表中的模型
-python -m studies.lookup web-bench/form "DeepSeek V4 Flash"           # 列出方法名及其 JSON 标识
-python -m studies.lookup web-bench/form "DeepSeek V4 Flash" Self      # 查看一个格子的成绩和出处
+python -m studies.lookup
+python -m studies.lookup web-bench/table
+python -m studies.lookup web-bench/table "Qwen3.5-9B" Self
 ```
 
-最后一条查询返回 **11/20**。打开输出的 `matrix`，按 `row_keys` 依次进入模型和实验记录，在 `passed.self` 看分子，在 `n` 和 `targets` 看分母和目标。再打开 `method_record`。这次实验把首份自建库记作 `file-a`，其 20 行分别给出任务编号、是否通过和浏览器报告哈希。同目录的协议说明建库及解码条件，运行器给出实现。旧矩阵 `current.form` 留有历史计数 0/20。其两次建库均未交付源码，20 题都没有进入规划；当前表展示准入后的实测成绩。[主表 JSON](studies/results/paper-performance-matrix.json) · [本格逐题记录](studies/webbench/form/flash_self_build/visible_targets/result.json) · [协议](studies/webbench/form/flash_self_build/visible_targets/PROTOCOL.md) · [运行代码](studies/webbench/form/flash_self_build/visible_targets/run.py)
+单格输出给出主表文件、矩阵键、分母和可用的实验记录。多阶段结果还列出适用的补测文件或筛选条件。完整矩阵也可直接下载。[Table 1 JSON](studies/results/paper-performance-matrix.json)
 
-例如，`python -m studies.lookup web-bench/table "Gemma 3 12B" GPT-5` 可查 GPT-5 表格库的 9/20。打开 `method_record`，在该模型的 20 行 `arm=combined` 中逐项复算；同一文件还保留原库、自查版、仅修菜单版和各自的固定页。计算器的 `Self` 可查按键实现及实际配置。计算器的 `GPT-5` 查询指向四组按键模块的逐题部署；`fixed_configuration_score` 是同一库固定全开的分数，`historical_method_record` 指向早期 JSON 接口。[表格建库协议](studies/webbench/table/author_modules/PROTOCOL.md) · [计算器四种方法与 GPT-5 逐题记录](studies/webbench/calculator/gpt5_profiles/README.md)
+## 文档导航
 
-| Table 1 | 查询用的数据集／项目名 | 实验代码入口 |
-| --- | --- | --- |
-| A · Web-Bench 完整项目 | `web-bench/table`、`web-bench/svg-chart`、`web-bench/form`、`web-bench/dom1`（文件管理器）、`web-bench/calculator` | [Web-Bench 分项目索引](studies/webbench/README.md) |
-| B · TodoMVC 功能子集 | `todomvc` | [人工库](studies/todomvc_dna/README.md) · [小模型建库](studies/public_library_transfer/compact_todomvc/PROTOCOL.md) · [配置筛选](studies/public_library_transfer/source_diagnosis/visible_choices/core_profiles/PROTOCOL.md) · [逐开关配置](studies/public_library_transfer/compact_todomvc/edit_choices/PROTOCOL.md) |
-| B · WebApp1K-Duo 双功能组合 | `webapp1k-duo` | [公开功能与配对](studies/public_library_transfer/other_benchmarks/README.md) · [四种来源、逐题收据与十个新组合](studies/public_library_transfer/duo_verified_features/README.md) |
-| C · WebGen-Bench 网站操作 | `webgen-bench` | [九站与四种方法](studies/webgen_bench/site_completion/PROTOCOL.md) · [人工库的导航设置](studies/webgen_bench/site_completion/SDK_NAVIGATION.md) |
-
-模型名指负责当前目标的**生成模型**，支持上表命令列出的显示名和完整模型 ID。四种方法的 JSON 标识分别为 `direct`（从零写代码）、`human`（人工库＋GUI-DNA）、`gpt5-library`（冻结 GPT-5 库＋GUI-DNA）和 `self`（目标模型建库并配置）。固定示例和第二次独立建库可在对应研究记录中查阅。
-
-- `status=measured` 给出实测分子和分母，零分也在此列。A、B 统计通过当前任务文件的次数。C 统计浏览器完整完成的网站操作数。部分完成计零；遇到缺判，同一模型的四组共同移除该操作。
-- `build_failed` 对应论文空白格，`unavailable` 对应横线。两种状态都没有本协议的实测分数。有早期已测协议时，新建库记录的 `previous_measurement` 单列旧分母、分子与出处。每个项目的模型列表对应 Table 1 实际展示的行。
-- 方法有独立来源记录时，`method_record` 指向该文件；补传目标另列于 `additional_targets_record`。多轮合并的格子可从 `assembly_code` 查到具体合并规则和输入。各研究 JSON 保留各自的字段名。历史模型、其他项目和固定页对照按研究索引查找。[研究索引](studies/README.md) · [历次结果](docs/results.md)
+| 想了解什么 | 从这里开始 |
+| --- | --- |
+| GUI-DNA 怎样工作、人工库与 AI 库分别看到了什么 | [方法与指标](docs/method.md) · [逐项目建库设计](docs/research/library-preparation-design.md) |
+| 怎样安装环境、复算报告、运行浏览器测试 | [环境与复现命令](docs/reproducibility.md) |
+| 某次实验为什么这样设计、结果如何、花了多少 | [按日期的实验记录](docs/results.md) · [匹配需求与预算的实验设计](docs/research/end_to_end_protocol.md) |
+| 下一步要做什么、论文参考了哪些工作 | [投稿前待办](todo.md) · [相关研究笔记](docs/research/related-work-notes.md) |
+| 某个项目的运行器、协议或旧版本在哪里 | [研究代码索引](studies/README.md) · [归档文档](docs/archive/) |
 
 ## 代码结构
 
 ```text
-GUI_DNA/
-├── src/gui_dna/                   核心库、方案编译、页面渲染与评测
-├── studies/                       论文实验与结果
-│   ├── lookup.py                  按项目、生成模型和方法查询 Table 1
-│   ├── paper_performance.py       选择配对目标、生成主表
-│   ├── results/                   随仓库发布的 JSON 汇总与主表矩阵
-│   ├── webbench/                  Web-Bench 各项目的协议、运行器与逐题结果
-│   ├── public_library_transfer/   跨项目建库、TodoMVC、Duo、固定页与独立重复
-│   ├── webgen_bench/              网站生成、浏览器操作评分与行为库诊断
-│   ├── todomvc_dna/               TodoMVC 人工库研究
-│   ├── webapp1k_dna/              WebApp1K-Duo 早期研究
-│   └── webbench_dna/              早期 Web-Bench 文件管理器研究
-├── tests/                         pytest 工程回归测试
-├── experiments/                   早期冻结原型和历史运行器
-├── configs/                       原型实验配置
-├── data/dev/                      开发样例
-├── docs/                          方法、结果、复现说明与研究计划
-└── test -> studies/               旧导入和冻结清单使用的兼容链接
+paper-results/{A,B,C,Other}/           按论文分区浏览成绩和补充实验
+studies/
+  webbench/                     Web-Bench 各项目的运行器、协议与逐题记录
+  public_library_transfer/      TodoMVC、Duo 与跨项目建库实验
+  webgen_bench/                 网站生成、浏览器操作与判决
+  results/                      发布的 JSON 矩阵、汇总与核验记录
+  lookup.py                     按项目、模型、方法查询一格
+src/gui_dna/                    方案编译、页面渲染与评测
+tests/                          工程回归测试
+experiments/                    早期冻结原型及其运行器
+configs/                        原型配置
+data/dev/                       开发样例
+docs/                           方法、复现、结果记录与研究笔记
+todo.md                         当前待办
 ```
 
-新研究从 `studies/` 进入，运行工程测试从 `tests/` 进入。本地 `artifacts/` 保存生成页面、原始回执、截图和账本；Git 只收录其中少量公开摘要。论文源文件和展示在本地的 `DNA_latex/`、`presentation/` 维护。[目录与冻结路径](studies/README.md) · [复现范围](docs/reproducibility.md) · [研究计划](docs/roadmap.md)
+旧清单使用的 `test/` 指向 `studies/`。大体积响应、截图和账本保存在本地 `artifacts/`，论文与展示的本地目录分别为 `DNA_latex/` 和 `presentation/`。[目录与冻结路径](studies/README.md)
 
-## 结果示例
-
-| 问题 | 同协议观察 | 记录 |
-| --- | --- | --- |
-| 人工组件能提供多少可复用行为？ | 在同一批 20 项表格任务上，GPT-OSS-120B 从零生成通过 7 项，人工库组装通过 20 项。 | [组件与对照](docs/method.md) |
-| 低分出在实现还是选配置？ | Qwen3.5 使用同一份 GPT-5 图表库，长配置通过 1/20，改选已有示例通过 15/20，固定首例通过 17/20。它自己的待办库限选满足共同操作的配置后从 0/8 升至 5/8，固定首例也通过相同五题。 | [原配置、固定对照与复验](studies/results/library-source-diagnosis-20261126.json) |
-| GPT-5 原作者修订表格库后能否超过从零生成？ | 七款生成模型在各自相同的 20 个任务上，用合并修订的库通过 6–9 项，均高于同模型 Direct。固定一份页面通过 8 项。 | [四种源码共享选择的逐题记录](studies/webbench/table/author_modules/result.json) |
-| 换到未见网站，自建库还能提高得分吗？ | 同一批九个网站上，Qwen3.5 从零 27/59、自建 28/59。Flash 从零 37/59、人工库 41/59、自建 41/59。数字只计完整通过。 | [九站同题比较及浏览器复验](studies/results/webgen-site-completion-20261128.json) |
-
-## 安装与核验
-
-开发环境和工程测试使用 Python 3.13、uv 和 Chromium。在仓库根目录运行以下命令。
-
-```bash
-uv sync --extra dev
-uv run python -m studies.webgen_bench.report --portable
-uv run python -m studies.webgen_bench.component_contracts.report
-uv run python -m studies.webgen_bench.site_completion.report
-uv run python -m studies.public_library_transfer.source_diagnosis.report
-```
-
-以上报告命令从版本库中的记录复算结果。完整工程测试还读取固定版本的 Web-Bench 需求和公开测试文件。首次检出且尚无 `artifacts/web-bench/` 时，准备公开快照后运行以下命令。
-
-```bash
-git init -q artifacts/web-bench
-git -C artifacts/web-bench fetch --depth 1 https://github.com/bytedance/web-bench.git 7b31ca2b786eef120dd49ce63dd03d0c0006046d
-git -C artifacts/web-bench checkout --detach FETCH_HEAD
-uv run playwright install chromium
-uv run pytest -q
-```
-
-已有对应快照的工作区只需安装浏览器并运行测试。重放完整浏览器实验还需要对应上游数据、系统运行库和本地原始产物。[环境与各项复验入口](docs/reproducibility.md)
-
-## 来源
-
-GUI-DNA 的设计受到 Divide and Abstract 的分解与复用思路启发。Web-Bench 实验采用上游公开需求、起始工程与官方测试。[Divide and Abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/9f94298bac4668db4dc77ddb0a244301-Abstract-Conference.html) · [ByteDance Web-Bench](https://github.com/bytedance/web-bench) · [研究索引与数据来源](studies/README.md)
+GUI-DNA 的分解与复用思路受到 Divide and Abstract 启发。Web-Bench 的需求、起始工程与官方测试来自字节跳动发布的基准。[Divide and Abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/9f94298bac4668db4dc77ddb0a244301-Abstract-Conference.html) · [ByteDance Web-Bench](https://github.com/bytedance/web-bench)

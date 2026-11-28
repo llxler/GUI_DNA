@@ -2,6 +2,24 @@
 
 研究代码在 `studies/`，工程测试在 `tests/`。旧记录的 `test/...` 路径仍有效；当前分支已移除累计前缀评分入口；原始实验 JSON 和账本不重新解释。
 
+## 首次检出
+
+查阅主表只需 Python 3.13。在仓库根目录运行 `python -m studies.result_index` 可离线核对八个项目页与公开矩阵。[按项目浏览 Table 1](../README.md#按数据集模型和方法查-table-1)
+
+运行工程测试还需要 uv、Chromium 和指定版本的 Web-Bench。首次检出且没有 `artifacts/web-bench/` 时，先准备公开快照。
+
+```bash
+git init -q artifacts/web-bench
+git -C artifacts/web-bench fetch --depth 1 https://github.com/bytedance/web-bench.git 7b31ca2b786eef120dd49ce63dd03d0c0006046d
+git -C artifacts/web-bench checkout --detach FETCH_HEAD
+```
+
+```bash
+uv sync --extra dev
+uv run playwright install chromium
+uv run pytest -q
+```
+
 ## 公开目录与历史模块
 
 `python -m studies.layout check` 从公开源码核对迁移前的 170 份文件。仅在直接校验旧路径清单或执行冻结运行器时使用 `python -m studies.layout prepare`。按正式目录执行的语法是 `python -m studies.layout run <阶段目录> <模块> [参数]`；它使用当时记录的模块名和文件深度。核对完成后可用 `python -m studies.layout tidy` 收起兼容文件。旧版源码专用快照仍按各阶段的协议使用。[目录与归档](../studies/README.md)
@@ -166,11 +184,11 @@ artifacts/presentation-build/venv/bin/python artifacts/presentation-build/render
 - `test -> studies` 保持旧 Python 导入和哈希路径；`实验结果.md`、`代码逻辑.md`、`experiments/TODO.md` 指向正式 `docs/` 文件。克隆时须保留符号链接；无符号链接环境可使用匿名导出器的实文件副本。
 - 匿名导出需同时保留正式路径和旧 `test/...` 可执行副本，不能把路径变更当作改写冻结证据的理由。新清单登记原始与匿名化字节的区别。含已退役实验的旧导出选项已停用；新论文材料需另立范围明确的包。
 - 旧大包为 `anonymous-replay-20261116-final-2.zip`，12 个入口通过；该包的检验只对应当时登记的材料。旧包不覆盖、不自行上传。
-- 仓库保留上游许可证和来源说明。数据与匿名下载地址仍待作者审核，见 [roadmap](roadmap.md)。
+- 仓库保留上游许可证和来源说明。数据与匿名下载地址仍待作者审核，见 [投稿前待办](../todo.md)。
 
 2026-11-18 的当前报告包为 `current-report-20261118.zip`，使用 [导出与解包说明](../studies/current_bundle/README.md)。在本机另行解包后，正式、兼容两个入口重算一致，核对 80 个预定位置、147 条精简浏览器报告（127 份不同原件），两个项目共七次真实浏览器抽查与原判定一致。哈希与逐页结果见 [验收记录](../studies/results/current-report-validation-20261118.json)。
 
-TodoMVC 和 Duo 的离线绑定结果可从逐题 JSON 重建。运行 `uv run python -m studies.public_library_transfer.self_refinement.suite_comparisons` 核对两个套件的六个模型、每格目标与从零差集。逐个浏览器/Jest 收据的本机检查见 [TodoMVC](../studies/public_library_transfer/self_refinement/todomvc/source_binding/README.md) 和 [Duo](../studies/public_library_transfer/self_refinement/duo_composition/README.md)。人工库的来源、项目差异与建库模型的已知交付问题单列在[设计依据](library-preparation-design.md)。
+TodoMVC 和 Duo 的离线绑定结果可从逐题 JSON 重建。运行 `uv run python -m studies.public_library_transfer.self_refinement.suite_comparisons` 核对两个套件的六个模型、每格目标与从零差集。逐个浏览器/Jest 收据的本机检查见 [TodoMVC](../studies/public_library_transfer/self_refinement/todomvc/source_binding/README.md) 和 [Duo](../studies/public_library_transfer/self_refinement/duo_composition/README.md)。人工库的来源、项目差异与建库模型的已知交付问题单列在[设计依据](research/library-preparation-design.md)。
 
 Duo 初批两模型与 Qwen 精简契约的另外两份库，分别用 `uv run python -m studies.public_library_transfer.self_refinement.duo_components.report check` 和 `uv run python -m studies.public_library_transfer.self_refinement.duo_components.compact.report check`。Gemma 的两份控制器用 `uv run python -m studies.public_library_transfer.self_refinement.todomvc.verified_controller.run check`，分支语法修复用同目录 `switch_scope.run check`。这些核对从发布记录取数，不调用模型。
 

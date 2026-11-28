@@ -1997,7 +1997,7 @@ GPT-5同库代码使用128,782 completion tokens（58,112 reasoning），方案1
 
 三批建库已结算分别为 $0.774706、$1.959928、$0.338194；旧未知传输预留继续保留，原账本不重开。draw 每位生成模型分别计入两库构建费，摊到 10 个方案目标后，GPT-5 每目标回执 $0.061729 对无库 $0.245966；GPT-OSS 为 $0.034096 对 $0.000624。两行是独立费用情景，同一原实验只建了两库，不能把构建费再次跨行累加。原 draw 全阶段账单仍为 $3.285408，本轮整理新增 API 为 **$0**。
 
-下一阶段的同公开需求/总费用上限比较写在 [预备协议](end_to_end_protocol.md) 和 [待办](roadmap.md)。先选择一个独立公开项目、固定重复与五个里程碑、保留建库失败并计入预定分母；仍需新预算与正式冻结。本次没有新候选成绩，不能把重算称为已完成该匹配实验。
+下一阶段的同公开需求/总费用上限比较写在 [预备协议](research/end_to_end_protocol.md) 和 [待办](../todo.md)。先选择一个独立公开项目、固定重复与五个里程碑、保留建库失败并计入预定分母；仍需新预算与正式冻结。本次没有新候选成绩，不能把重算称为已完成该匹配实验。
 
 ### 35.3 目录和材料
 
@@ -2103,7 +2103,7 @@ GPT-5同库代码使用128,782 completion tokens（58,112 reasoning），方案1
 
 canvas 参考页屏蔽 k 后，三个种子的公开射击观察都从有效变为无效。flex 参考页屏蔽按住鼠标时的移动，两轮窄屏拖拽都失去缩放。对应官方文件 task-17、task-20 各自拒绝了修改后的页面；同项目 task-4 仍通过，原始参考页及注册空监听器的对照均通过两个文件。该诊断未修改官方测试或候选成绩。
 
-[报告视图](../studies/results/end_to_end.json)登记逐重复账本、目标配对、失败与来源哈希；[匹配设计](end_to_end_protocol.md)链接各项冻结协议。[表格行为](../studies/results/table-behavior-probe-20261118.json)、[键盘加速度](../studies/results/canvas-speed-probe-20261118.json)、[输入故障对照](../studies/results/input-controls-20261118.json)分别记录独立的浏览器观察。
+[报告视图](../studies/results/end_to_end.json)登记逐重复账本、目标配对、失败与来源哈希；[匹配设计](research/end_to_end_protocol.md)链接各项冻结协议。[表格行为](../studies/results/table-behavior-probe-20261118.json)、[键盘加速度](../studies/results/canvas-speed-probe-20261118.json)、[输入故障对照](../studies/results/input-controls-20261118.json)分别记录独立的浏览器观察。
 
 逐条查询 110 份响应的供应商结算元数据，均与原回执精确相符，合计 $14.33600750；账本按请求向上取整到微美元后为 $14.336034。[对账记录](../studies/results/matched-billing-20261118.json)
 

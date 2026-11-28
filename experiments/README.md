@@ -5,7 +5,7 @@
 - `scale_study/`：第三轮冻结机制实验，190/640 候选后人工暂停；仅只读审计，不随当前任务恢复付费调用。
 - `round2/`：第二轮分析和辅助脚本。
 - `plan_linker.py` / `replay_linked_plans.py`：历史连接器复验，路径与源码被旧 manifest 固定。
-- `TODO.md`：指向 [`docs/roadmap.md`](../docs/roadmap.md) 的兼容入口；新文档使用正式路径。
+- `TODO.md`：指向 [`todo.md`](../todo.md) 的兼容入口；新文档使用正式路径。
 
 ```bash
 uv run python -m experiments.audit_scale
