@@ -6,7 +6,7 @@
 | --- | --- |
 | [公开需求建库与迁移](public_library_transfer/README.md) | 独立建库、无库生成、逐题配置与固定首例的配对结果。涵盖 Web-Bench、TodoMVC、WebApp1K-Duo，以及已登记的补充实验。 |
 | [Web-Bench 项目研究](webbench/README.md) | 按项目查找组件来源、库接口、可表达行为、配置穷举、官方断言与控制页诊断。 |
-| [WebGen-Bench 网站功能](webgen_bench/README.md) | 开发六站 43 项、留出三站 21 项；可查各站页面、同题从零对照、评判与校准。 |
+| [WebGen-Bench 网站功能](webgen_bench/README.md) | 九个新网站、四种方法。主表按同题完整通过数计分；每个站点都可追溯到生成页面、判决和校准。 |
 
 公开汇总位于 [results/](results)。Web-Bench 的通过数表示候选通过当前任务文件中的全部官方断言。比较时按项目、目标范围、建库者及部署模型读取同一组配对。完整二十项和五个里程碑的结果分别报告。[评分与数据边界](../docs/method.md)
 

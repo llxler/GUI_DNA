@@ -1,0 +1,3082 @@
+{
+  "registration": "6c3ada642f2caa061633dcc1718b0b114d589feb512a3c563b5cd8535d3cc707",
+  "seal": "b907d8062837d06f24c6f189d4162708febca2d2d2e7bf1c6e02bb8d6a4d2dfc",
+  "direct_source": "691549ae0b882d9403ff38b84ec5956c801af3c5f5e465b69bf433d18f9ed207",
+  "libraries": {
+    "a": {
+      "retained": false,
+      "trace": [
+        {
+          "name": "cellClick",
+          "before": {
+            "active": null,
+            "selected": [],
+            "edit": null
+          },
+          "after": {
+            "active": [
+              2,
+              1
+            ],
+            "selected": [
+              [
+                2,
+                1
+              ]
+            ],
+            "edit": false
+          }
+        },
+        {
+          "name": "navigate",
+          "before": {
+            "active": [
+              2,
+              1
+            ],
+            "selected": [
+              [
+                2,
+                1
+              ]
+            ],
+            "edit": false
+          },
+          "key": "ArrowUp",
+          "above": [
+            1,
+            1
+          ],
+          "aboveEditable": false,
+          "aboveContentEditableAttribute": null,
+          "after": {
+            "active": [
+              1,
+              1
+            ],
+            "selected": [],
+            "edit": false
+          }
+        },
+        {
+          "name": "markSelection",
+          "before": {
+            "active": [
+              2,
+              1
+            ],
+            "selected": [
+              [
+                2,
+                1
+              ]
+            ],
+            "edit": false
+          },
+          "requested": [
+            [
+              1,
+              1
+            ]
+          ],
+          "after": {
+            "active": [
+              1,
+              1
+            ],
+            "selected": [],
+            "edit": false
+          }
+        }
+      ],
+      "baseline": {
+        "successive_edits": {
+          "passed": true,
+          "steps": [
+            {
+              "action": "click",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            },
+            {
+              "action": "Enter",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": [
+                  [
+                    2,
+                    1
+                  ]
+                ]
+              },
+              "observed": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": [
+                  [
+                    2,
+                    1
+                  ]
+                ]
+              },
+              "passed": true
+            },
+            {
+              "action": "Escape",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            },
+            {
+              "action": "click",
+              "expected": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            },
+            {
+              "action": "Enter",
+              "expected": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": [
+                  [
+                    1,
+                    2
+                  ]
+                ]
+              },
+              "observed": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": [
+                  [
+                    1,
+                    2
+                  ]
+                ]
+              },
+              "passed": true
+            },
+            {
+              "action": "Escape",
+              "expected": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            }
+          ]
+        },
+        "arrow_cycle": {
+          "passed": false,
+          "steps": [
+            {
+              "action": "click",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            },
+            {
+              "action": "ArrowUp",
+              "expected": {
+                "selected": [
+                  [
+                    1,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [],
+                "editing": []
+              },
+              "passed": false
+            },
+            {
+              "action": "ArrowLeft",
+              "expected": {
+                "selected": [
+                  [
+                    1,
+                    0
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [],
+                "editing": []
+              },
+              "passed": false
+            },
+            {
+              "action": "ArrowDown",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    0
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [],
+                "editing": []
+              },
+              "passed": false
+            },
+            {
+              "action": "ArrowRight",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [],
+                "editing": []
+              },
+              "passed": false
+            }
+          ]
+        }
+      },
+      "attempt": {
+        "successive_edits": {
+          "passed": true,
+          "steps": [
+            {
+              "action": "click",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            },
+            {
+              "action": "Enter",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": [
+                  [
+                    2,
+                    1
+                  ]
+                ]
+              },
+              "observed": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": [
+                  [
+                    2,
+                    1
+                  ]
+                ]
+              },
+              "passed": true
+            },
+            {
+              "action": "Escape",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            },
+            {
+              "action": "click",
+              "expected": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            },
+            {
+              "action": "Enter",
+              "expected": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": [
+                  [
+                    1,
+                    2
+                  ]
+                ]
+              },
+              "observed": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": [
+                  [
+                    1,
+                    2
+                  ]
+                ]
+              },
+              "passed": true
+            },
+            {
+              "action": "Escape",
+              "expected": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            }
+          ]
+        },
+        "arrow_cycle": {
+          "passed": false,
+          "steps": [
+            {
+              "action": "click",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            },
+            {
+              "action": "ArrowUp",
+              "expected": {
+                "selected": [
+                  [
+                    1,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [],
+                "editing": []
+              },
+              "passed": false
+            },
+            {
+              "action": "ArrowLeft",
+              "expected": {
+                "selected": [
+                  [
+                    1,
+                    0
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [],
+                "editing": []
+              },
+              "passed": false
+            },
+            {
+              "action": "ArrowDown",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    0
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [],
+                "editing": []
+              },
+              "passed": false
+            },
+            {
+              "action": "ArrowRight",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [],
+                "editing": []
+              },
+              "passed": false
+            }
+          ]
+        }
+      },
+      "source": "33d1e31395dcff9a22bc8b6979e54aaee3ed9ac6fec899d41a3286e054da7736",
+      "proposed_sha256": "50a2e7b86e6d227580a213383f8a73886a5a2771d7ba771f8e40b4824de5642d"
+    },
+    "b": {
+      "retained": false,
+      "trace": [
+        {
+          "name": "cellClick",
+          "before": {
+            "active": null,
+            "selected": [],
+            "edit": null
+          },
+          "after": {
+            "active": [
+              2,
+              1
+            ],
+            "selected": [
+              [
+                2,
+                1
+              ]
+            ],
+            "edit": false
+          }
+        },
+        {
+          "name": "navigate",
+          "before": {
+            "active": [
+              2,
+              1
+            ],
+            "selected": [
+              [
+                2,
+                1
+              ]
+            ],
+            "edit": false
+          },
+          "key": "ArrowUp",
+          "above": [
+            1,
+            1
+          ],
+          "aboveEditable": false,
+          "aboveContentEditableAttribute": null,
+          "error": "TypeError: currentRow.cells.indexOf is not a function",
+          "after": {
+            "active": [
+              2,
+              1
+            ],
+            "selected": [
+              [
+                2,
+                1
+              ]
+            ],
+            "edit": false
+          }
+        }
+      ],
+      "baseline": {
+        "successive_edits": {
+          "passed": true,
+          "steps": [
+            {
+              "action": "click",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            },
+            {
+              "action": "Enter",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": [
+                  [
+                    2,
+                    1
+                  ]
+                ]
+              },
+              "observed": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": [
+                  [
+                    2,
+                    1
+                  ]
+                ]
+              },
+              "passed": true
+            },
+            {
+              "action": "Escape",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            },
+            {
+              "action": "click",
+              "expected": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            },
+            {
+              "action": "Enter",
+              "expected": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": [
+                  [
+                    1,
+                    2
+                  ]
+                ]
+              },
+              "observed": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": [
+                  [
+                    1,
+                    2
+                  ]
+                ]
+              },
+              "passed": true
+            },
+            {
+              "action": "Escape",
+              "expected": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            }
+          ]
+        },
+        "arrow_cycle": {
+          "passed": false,
+          "steps": [
+            {
+              "action": "click",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            },
+            {
+              "action": "ArrowUp",
+              "expected": {
+                "selected": [
+                  [
+                    1,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": false
+            },
+            {
+              "action": "ArrowLeft",
+              "expected": {
+                "selected": [
+                  [
+                    1,
+                    0
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": false
+            },
+            {
+              "action": "ArrowDown",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    0
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": false
+            },
+            {
+              "action": "ArrowRight",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            }
+          ]
+        }
+      },
+      "attempt": {
+        "successive_edits": {
+          "passed": true,
+          "steps": [
+            {
+              "action": "click",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            },
+            {
+              "action": "Enter",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": [
+                  [
+                    2,
+                    1
+                  ]
+                ]
+              },
+              "observed": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": [
+                  [
+                    2,
+                    1
+                  ]
+                ]
+              },
+              "passed": true
+            },
+            {
+              "action": "Escape",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            },
+            {
+              "action": "click",
+              "expected": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            },
+            {
+              "action": "Enter",
+              "expected": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": [
+                  [
+                    1,
+                    2
+                  ]
+                ]
+              },
+              "observed": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": [
+                  [
+                    1,
+                    2
+                  ]
+                ]
+              },
+              "passed": true
+            },
+            {
+              "action": "Escape",
+              "expected": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            }
+          ]
+        },
+        "arrow_cycle": {
+          "passed": false,
+          "steps": [
+            {
+              "action": "click",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "passed": true
+            },
+            {
+              "action": "ArrowUp",
+              "expected": {
+                "selected": [
+                  [
+                    1,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [],
+                "editing": []
+              },
+              "passed": false
+            },
+            {
+              "action": "ArrowLeft",
+              "expected": {
+                "selected": [
+                  [
+                    1,
+                    0
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [],
+                "editing": []
+              },
+              "passed": false
+            },
+            {
+              "action": "ArrowDown",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    0
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [],
+                "editing": []
+              },
+              "passed": false
+            },
+            {
+              "action": "ArrowRight",
+              "expected": {
+                "selected": [
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "editing": []
+              },
+              "observed": {
+                "selected": [],
+                "editing": []
+              },
+              "passed": false
+            }
+          ]
+        }
+      },
+      "source": "96e9131a051c82f7f18795852be42942b416e235d74db068802a6641aa3d8948",
+      "proposed_sha256": "12f0def06bc2bca6c51044b5620794c0b2b4c3f445077edac75fb7aeceeba70c"
+    }
+  },
+  "heldout": {
+    "reference": {
+      "left_down_right": {
+        "passed": true,
+        "steps": [
+          {
+            "action": "click",
+            "expected": {
+              "selected": [
+                [
+                  1,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  1,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "passed": true
+          },
+          {
+            "action": "ArrowLeft",
+            "expected": {
+              "selected": [
+                [
+                  1,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  1,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "passed": true
+          },
+          {
+            "action": "ArrowDown",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "passed": true
+          },
+          {
+            "action": "ArrowRight",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "passed": true
+          }
+        ]
+      },
+      "tab_reverse_up": {
+        "passed": true,
+        "steps": [
+          {
+            "action": "click",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "passed": true
+          },
+          {
+            "action": "Tab",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "passed": true
+          },
+          {
+            "action": "Shift+Tab",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "passed": true
+          },
+          {
+            "action": "ArrowUp",
+            "expected": {
+              "selected": [
+                [
+                  1,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  1,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "passed": true
+          }
+        ]
+      }
+    },
+    "starter": {
+      "left_down_right": {
+        "passed": false,
+        "steps": [
+          {
+            "action": "click",
+            "expected": {
+              "selected": [
+                [
+                  1,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [],
+              "editing": []
+            },
+            "passed": false
+          },
+          {
+            "action": "ArrowLeft",
+            "expected": {
+              "selected": [
+                [
+                  1,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [],
+              "editing": []
+            },
+            "passed": false
+          },
+          {
+            "action": "ArrowDown",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [],
+              "editing": []
+            },
+            "passed": false
+          },
+          {
+            "action": "ArrowRight",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [],
+              "editing": []
+            },
+            "passed": false
+          }
+        ]
+      },
+      "tab_reverse_up": {
+        "passed": false,
+        "steps": [
+          {
+            "action": "click",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [],
+              "editing": []
+            },
+            "passed": false
+          },
+          {
+            "action": "Tab",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [],
+              "editing": []
+            },
+            "passed": false
+          },
+          {
+            "action": "Shift+Tab",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [],
+              "editing": []
+            },
+            "passed": false
+          },
+          {
+            "action": "ArrowUp",
+            "expected": {
+              "selected": [
+                [
+                  1,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [],
+              "editing": []
+            },
+            "passed": false
+          }
+        ]
+      }
+    },
+    "old-a": {
+      "left_down_right": {
+        "passed": false,
+        "steps": [
+          {
+            "action": "click",
+            "expected": {
+              "selected": [
+                [
+                  1,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  1,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "passed": true
+          },
+          {
+            "action": "ArrowLeft",
+            "expected": {
+              "selected": [
+                [
+                  1,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [],
+              "editing": []
+            },
+            "passed": false
+          },
+          {
+            "action": "ArrowDown",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [],
+              "editing": []
+            },
+            "passed": false
+          },
+          {
+            "action": "ArrowRight",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [],
+              "editing": []
+            },
+            "passed": false
+          }
+        ]
+      },
+      "tab_reverse_up": {
+        "passed": false,
+        "steps": [
+          {
+            "action": "click",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "passed": true
+          },
+          {
+            "action": "Tab",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [],
+              "editing": []
+            },
+            "passed": false
+          },
+          {
+            "action": "Shift+Tab",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [],
+              "editing": []
+            },
+            "passed": false
+          },
+          {
+            "action": "ArrowUp",
+            "expected": {
+              "selected": [
+                [
+                  1,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [],
+              "editing": []
+            },
+            "passed": false
+          }
+        ]
+      }
+    },
+    "accepted-a": {
+      "left_down_right": {
+        "passed": false,
+        "steps": [
+          {
+            "action": "click",
+            "expected": {
+              "selected": [
+                [
+                  1,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  1,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "passed": true
+          },
+          {
+            "action": "ArrowLeft",
+            "expected": {
+              "selected": [
+                [
+                  1,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [],
+              "editing": []
+            },
+            "passed": false
+          },
+          {
+            "action": "ArrowDown",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [],
+              "editing": []
+            },
+            "passed": false
+          },
+          {
+            "action": "ArrowRight",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [],
+              "editing": []
+            },
+            "passed": false
+          }
+        ]
+      },
+      "tab_reverse_up": {
+        "passed": false,
+        "steps": [
+          {
+            "action": "click",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "passed": true
+          },
+          {
+            "action": "Tab",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [],
+              "editing": []
+            },
+            "passed": false
+          },
+          {
+            "action": "Shift+Tab",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [],
+              "editing": []
+            },
+            "passed": false
+          },
+          {
+            "action": "ArrowUp",
+            "expected": {
+              "selected": [
+                [
+                  1,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [],
+              "editing": []
+            },
+            "passed": false
+          }
+        ]
+      }
+    },
+    "old-b": {
+      "left_down_right": {
+        "passed": false,
+        "steps": [
+          {
+            "action": "click",
+            "expected": {
+              "selected": [
+                [
+                  1,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  1,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "passed": true
+          },
+          {
+            "action": "ArrowLeft",
+            "expected": {
+              "selected": [
+                [
+                  1,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  1,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "passed": false
+          },
+          {
+            "action": "ArrowDown",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  1,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "passed": false
+          },
+          {
+            "action": "ArrowRight",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  1,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "passed": false
+          }
+        ]
+      },
+      "tab_reverse_up": {
+        "passed": false,
+        "steps": [
+          {
+            "action": "click",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "passed": true
+          },
+          {
+            "action": "Tab",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "passed": false
+          },
+          {
+            "action": "Shift+Tab",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "passed": true
+          },
+          {
+            "action": "ArrowUp",
+            "expected": {
+              "selected": [
+                [
+                  1,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "passed": false
+          }
+        ]
+      }
+    },
+    "accepted-b": {
+      "left_down_right": {
+        "passed": false,
+        "steps": [
+          {
+            "action": "click",
+            "expected": {
+              "selected": [
+                [
+                  1,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  1,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "passed": true
+          },
+          {
+            "action": "ArrowLeft",
+            "expected": {
+              "selected": [
+                [
+                  1,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  1,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "passed": false
+          },
+          {
+            "action": "ArrowDown",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  1,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "passed": false
+          },
+          {
+            "action": "ArrowRight",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  1,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "passed": false
+          }
+        ]
+      },
+      "tab_reverse_up": {
+        "passed": false,
+        "steps": [
+          {
+            "action": "click",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "passed": true
+          },
+          {
+            "action": "Tab",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "passed": false
+          },
+          {
+            "action": "Shift+Tab",
+            "expected": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "passed": true
+          },
+          {
+            "action": "ArrowUp",
+            "expected": {
+              "selected": [
+                [
+                  1,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "observed": {
+              "selected": [
+                [
+                  2,
+                  1
+                ]
+              ],
+              "editing": []
+            },
+            "passed": false
+          }
+        ]
+      }
+    }
+  },
+  "calibrated": {
+    "left_down_right": true,
+    "tab_reverse_up": true
+  },
+  "rows": [
+    {
+      "task": 1,
+      "arm": "self-a",
+      "status": "valid",
+      "report_sha256": "c8d08b2dcdac2e424280cd49d5fa47aebcd0eb3150b26128950c36943662c561",
+      "passed": true
+    },
+    {
+      "task": 1,
+      "arm": "fixed-a",
+      "status": "valid",
+      "report_sha256": "d1cc73f9051ba7ecb48855e78fb65e60362771189678e1f515f62e857b509b50",
+      "passed": true
+    },
+    {
+      "task": 2,
+      "arm": "self-a",
+      "status": "valid",
+      "report_sha256": "99610fdb1b540599edbef88fe92e2ab90fcf16a5f87c4da87bf262099568dd9b",
+      "passed": true
+    },
+    {
+      "task": 2,
+      "arm": "fixed-a",
+      "status": "valid",
+      "report_sha256": "70822358148c3338c9ad2439eedc3ea52479ac7ea9555bd16980aee915e75a8b",
+      "passed": true
+    },
+    {
+      "task": 3,
+      "arm": "self-a",
+      "status": "valid",
+      "report_sha256": "c9c26fbed79e7382d174627b70d29b2790e54e4793261240b85c9ed02cb99c12",
+      "passed": false
+    },
+    {
+      "task": 3,
+      "arm": "fixed-a",
+      "status": "valid",
+      "report_sha256": "7e7bbfa62498eb891d4d9667199ab15195c233f0d7b7dc89402068a07696df8b",
+      "passed": false
+    },
+    {
+      "task": 4,
+      "arm": "self-a",
+      "status": "valid",
+      "report_sha256": "d5def85a4aef656e81f313bedb29c2d6d4e85b91316e124a628942bfbadfbf15",
+      "passed": true
+    },
+    {
+      "task": 4,
+      "arm": "fixed-a",
+      "status": "valid",
+      "report_sha256": "b0bcba007aca5bcb67203f1b65e214395419ae0d9df26aa384320b064136564c",
+      "passed": true
+    },
+    {
+      "task": 5,
+      "arm": "self-a",
+      "status": "valid",
+      "report_sha256": "fa0472fe161f6aa403ac7286d597e2ad480188c54741f079f701d7868dac7573",
+      "passed": false
+    },
+    {
+      "task": 5,
+      "arm": "fixed-a",
+      "status": "valid",
+      "report_sha256": "fa0472fe161f6aa403ac7286d597e2ad480188c54741f079f701d7868dac7573",
+      "passed": false
+    },
+    {
+      "task": 6,
+      "arm": "self-a",
+      "status": "valid",
+      "report_sha256": "f23652f7924a4b4a07234db633861d84ccca3aee905c3db5bd3a1e0284c675bc",
+      "passed": false
+    },
+    {
+      "task": 6,
+      "arm": "fixed-a",
+      "status": "valid",
+      "report_sha256": "f23652f7924a4b4a07234db633861d84ccca3aee905c3db5bd3a1e0284c675bc",
+      "passed": false
+    },
+    {
+      "task": 7,
+      "arm": "self-a",
+      "status": "valid",
+      "report_sha256": "1f57926a4df638dee824c3dce28918d641fe9b153e87b89f80d30127f19c3084",
+      "passed": false
+    },
+    {
+      "task": 7,
+      "arm": "fixed-a",
+      "status": "valid",
+      "report_sha256": "1f57926a4df638dee824c3dce28918d641fe9b153e87b89f80d30127f19c3084",
+      "passed": false
+    },
+    {
+      "task": 8,
+      "arm": "self-a",
+      "status": "valid",
+      "report_sha256": "6d599b14e6787f6f452d9f113983b20a63a1b3adb2e186864af63960e790a9ff",
+      "passed": false
+    },
+    {
+      "task": 8,
+      "arm": "fixed-a",
+      "status": "valid",
+      "report_sha256": "6d599b14e6787f6f452d9f113983b20a63a1b3adb2e186864af63960e790a9ff",
+      "passed": false
+    },
+    {
+      "task": 9,
+      "arm": "self-a",
+      "status": "valid",
+      "report_sha256": "b845ee29ed64d3ab7bc871c8931a09becc47768e42ba9cb4f56d0523d53ed1de",
+      "passed": false
+    },
+    {
+      "task": 9,
+      "arm": "fixed-a",
+      "status": "valid",
+      "report_sha256": "b845ee29ed64d3ab7bc871c8931a09becc47768e42ba9cb4f56d0523d53ed1de",
+      "passed": false
+    },
+    {
+      "task": 10,
+      "arm": "self-a",
+      "status": "valid",
+      "report_sha256": "02623aab1766e83970a7880598ad65c892ada08d7a9b747a08623e75b574f22b",
+      "passed": false
+    },
+    {
+      "task": 10,
+      "arm": "fixed-a",
+      "status": "valid",
+      "report_sha256": "02623aab1766e83970a7880598ad65c892ada08d7a9b747a08623e75b574f22b",
+      "passed": false
+    },
+    {
+      "task": 11,
+      "arm": "self-a",
+      "status": "valid",
+      "report_sha256": "91c697e1e10cdb4a7eeaa817b7c0a55ccb0cc854b2b237d9a5b18f2e1d15413d",
+      "passed": false
+    },
+    {
+      "task": 11,
+      "arm": "fixed-a",
+      "status": "valid",
+      "report_sha256": "91c697e1e10cdb4a7eeaa817b7c0a55ccb0cc854b2b237d9a5b18f2e1d15413d",
+      "passed": false
+    },
+    {
+      "task": 12,
+      "arm": "self-a",
+      "status": "valid",
+      "report_sha256": "eeaae74c8a97358e5cc0950756db2319929214658945b36b38551f699c2f135f",
+      "passed": false
+    },
+    {
+      "task": 12,
+      "arm": "fixed-a",
+      "status": "valid",
+      "report_sha256": "eeaae74c8a97358e5cc0950756db2319929214658945b36b38551f699c2f135f",
+      "passed": false
+    },
+    {
+      "task": 13,
+      "arm": "self-a",
+      "status": "valid",
+      "report_sha256": "54648d8cc64c85822ec4ed15b8f860ed57c5d753aa81c0aefd5d7931a3df4816",
+      "passed": false
+    },
+    {
+      "task": 13,
+      "arm": "fixed-a",
+      "status": "valid",
+      "report_sha256": "54648d8cc64c85822ec4ed15b8f860ed57c5d753aa81c0aefd5d7931a3df4816",
+      "passed": false
+    },
+    {
+      "task": 14,
+      "arm": "self-a",
+      "status": "valid",
+      "report_sha256": "7df12ae4885e194567d598b5ccaaba435b77f3b4b306024e02321678703754d5",
+      "passed": false
+    },
+    {
+      "task": 14,
+      "arm": "fixed-a",
+      "status": "valid",
+      "report_sha256": "7df12ae4885e194567d598b5ccaaba435b77f3b4b306024e02321678703754d5",
+      "passed": false
+    },
+    {
+      "task": 15,
+      "arm": "self-a",
+      "status": "valid",
+      "report_sha256": "5a585cd5b5cd52e6b078030ee720b663ff5ced6da32cb26501874f7953fb10a7",
+      "passed": false
+    },
+    {
+      "task": 15,
+      "arm": "fixed-a",
+      "status": "valid",
+      "report_sha256": "5a585cd5b5cd52e6b078030ee720b663ff5ced6da32cb26501874f7953fb10a7",
+      "passed": false
+    },
+    {
+      "task": 16,
+      "arm": "self-a",
+      "status": "valid",
+      "report_sha256": "43032032673603eb5315480b0ec9fe1255c1aaadf147370c74c73db05147e62d",
+      "passed": false
+    },
+    {
+      "task": 16,
+      "arm": "fixed-a",
+      "status": "valid",
+      "report_sha256": "43032032673603eb5315480b0ec9fe1255c1aaadf147370c74c73db05147e62d",
+      "passed": false
+    },
+    {
+      "task": 17,
+      "arm": "self-a",
+      "status": "valid",
+      "report_sha256": "5a797afeb4ed75c89c7874a74c1382c41da10faa4963f3dae1bd1fb057ba1f22",
+      "passed": false
+    },
+    {
+      "task": 17,
+      "arm": "fixed-a",
+      "status": "valid",
+      "report_sha256": "5a797afeb4ed75c89c7874a74c1382c41da10faa4963f3dae1bd1fb057ba1f22",
+      "passed": false
+    },
+    {
+      "task": 18,
+      "arm": "self-a",
+      "status": "valid",
+      "report_sha256": "e9c8f05b59e71bde2b4876473d90a405f5c840ea989adec4556863e0736d00b7",
+      "passed": false
+    },
+    {
+      "task": 18,
+      "arm": "fixed-a",
+      "status": "valid",
+      "report_sha256": "e9c8f05b59e71bde2b4876473d90a405f5c840ea989adec4556863e0736d00b7",
+      "passed": false
+    },
+    {
+      "task": 19,
+      "arm": "self-a",
+      "status": "valid",
+      "report_sha256": "946c64bb6d32b6e1219f907f6cee341c4821105ed2a6279122cd296b5ac46fe9",
+      "passed": false
+    },
+    {
+      "task": 19,
+      "arm": "fixed-a",
+      "status": "valid",
+      "report_sha256": "946c64bb6d32b6e1219f907f6cee341c4821105ed2a6279122cd296b5ac46fe9",
+      "passed": false
+    },
+    {
+      "task": 20,
+      "arm": "self-a",
+      "status": "valid",
+      "report_sha256": "6036179dcce6c6aa3864304d1e4249f03a59a66d9022a00f0e0ac22c652f054e",
+      "passed": false
+    },
+    {
+      "task": 20,
+      "arm": "fixed-a",
+      "status": "valid",
+      "report_sha256": "6036179dcce6c6aa3864304d1e4249f03a59a66d9022a00f0e0ac22c652f054e",
+      "passed": false
+    },
+    {
+      "task": 1,
+      "arm": "self-b",
+      "status": "valid",
+      "report_sha256": "15b7b12325f84ee1bfbf10da118114b578b79acb13c2d2686be01de2d72ec79d",
+      "passed": true
+    },
+    {
+      "task": 1,
+      "arm": "fixed-b",
+      "status": "valid",
+      "report_sha256": "d4b149c334661b5a507b04d6613fb83076f9f49fe053cf61642fcb3d8ff20452",
+      "passed": true
+    },
+    {
+      "task": 2,
+      "arm": "self-b",
+      "status": "valid",
+      "report_sha256": "cbc397a96863c57e2187f44cb98b1046cbcf0527105513d343a9a0fe0fc2e4c0",
+      "passed": true
+    },
+    {
+      "task": 2,
+      "arm": "fixed-b",
+      "status": "valid",
+      "report_sha256": "88a657e415b5573cd98f180f089ac9220156fc48f4c04fcd1007962e2dc05e4c",
+      "passed": true
+    },
+    {
+      "task": 3,
+      "arm": "self-b",
+      "status": "valid",
+      "report_sha256": "09538449b7d0020776824d5201e71713e1a19e4d9eb1826e75b7728a2b3a5e93",
+      "passed": false
+    },
+    {
+      "task": 3,
+      "arm": "fixed-b",
+      "status": "valid",
+      "report_sha256": "460dde694efc0ac38e61a306a8593937f68b10ceb3edfb1aa3ac2a1ad4dad491",
+      "passed": false
+    },
+    {
+      "task": 4,
+      "arm": "self-b",
+      "status": "valid",
+      "report_sha256": "7ea235725d60ddc88efd1dc699a98e80e70f399901cd39e6d4a633b5e0587009",
+      "passed": true
+    },
+    {
+      "task": 4,
+      "arm": "fixed-b",
+      "status": "valid",
+      "report_sha256": "a99324e6245287b9ad5afa33771cff4e675b6a19e94918c96f85890cba7479fe",
+      "passed": true
+    },
+    {
+      "task": 5,
+      "arm": "self-b",
+      "status": "valid",
+      "report_sha256": "ac888450651fe7a1d9bd6629d708b3b3afcd116ef4682dc4ca08385275489746",
+      "passed": false
+    },
+    {
+      "task": 5,
+      "arm": "fixed-b",
+      "status": "valid",
+      "report_sha256": "ac888450651fe7a1d9bd6629d708b3b3afcd116ef4682dc4ca08385275489746",
+      "passed": false
+    },
+    {
+      "task": 6,
+      "arm": "self-b",
+      "status": "valid",
+      "report_sha256": "5a773c4c3606ff0f94b782d6e6863d51f885f20f16b36b00a66f25c7d8ba629e",
+      "passed": false
+    },
+    {
+      "task": 6,
+      "arm": "fixed-b",
+      "status": "valid",
+      "report_sha256": "5a773c4c3606ff0f94b782d6e6863d51f885f20f16b36b00a66f25c7d8ba629e",
+      "passed": false
+    },
+    {
+      "task": 7,
+      "arm": "self-b",
+      "status": "valid",
+      "report_sha256": "e26da96d8294db103a5b05a8fe7ed45910c3f5f3ce5fa040a8267c04564c783e",
+      "passed": false
+    },
+    {
+      "task": 7,
+      "arm": "fixed-b",
+      "status": "valid",
+      "report_sha256": "e26da96d8294db103a5b05a8fe7ed45910c3f5f3ce5fa040a8267c04564c783e",
+      "passed": false
+    },
+    {
+      "task": 8,
+      "arm": "self-b",
+      "status": "valid",
+      "report_sha256": "a181d9f46619dd4db901477fb46167a84b8b466153a448568391d91eb0a73bcf",
+      "passed": false
+    },
+    {
+      "task": 8,
+      "arm": "fixed-b",
+      "status": "valid",
+      "report_sha256": "a181d9f46619dd4db901477fb46167a84b8b466153a448568391d91eb0a73bcf",
+      "passed": false
+    },
+    {
+      "task": 9,
+      "arm": "self-b",
+      "status": "valid",
+      "report_sha256": "9b4c3476be2af016bd1803a4be3b378c3a665be275290b692048fe090efb55e2",
+      "passed": false
+    },
+    {
+      "task": 9,
+      "arm": "fixed-b",
+      "status": "valid",
+      "report_sha256": "9b4c3476be2af016bd1803a4be3b378c3a665be275290b692048fe090efb55e2",
+      "passed": false
+    },
+    {
+      "task": 10,
+      "arm": "self-b",
+      "status": "valid",
+      "report_sha256": "11f27659a2cb69ceed982d161f0a4cc6dda5a3fff3d9f9e2bfd379923124d61f",
+      "passed": false
+    },
+    {
+      "task": 10,
+      "arm": "fixed-b",
+      "status": "valid",
+      "report_sha256": "11f27659a2cb69ceed982d161f0a4cc6dda5a3fff3d9f9e2bfd379923124d61f",
+      "passed": false
+    },
+    {
+      "task": 11,
+      "arm": "self-b",
+      "status": "valid",
+      "report_sha256": "37436411107061d39f3af341d23cef1358cc32e4d4837abaa9cea52691c5bb2f",
+      "passed": false
+    },
+    {
+      "task": 11,
+      "arm": "fixed-b",
+      "status": "valid",
+      "report_sha256": "37436411107061d39f3af341d23cef1358cc32e4d4837abaa9cea52691c5bb2f",
+      "passed": false
+    },
+    {
+      "task": 12,
+      "arm": "self-b",
+      "status": "valid",
+      "report_sha256": "0a1308a948ac46993f7fe48700b160aecc16ae4498383861025f5c1f36b7e17d",
+      "passed": false
+    },
+    {
+      "task": 12,
+      "arm": "fixed-b",
+      "status": "valid",
+      "report_sha256": "0a1308a948ac46993f7fe48700b160aecc16ae4498383861025f5c1f36b7e17d",
+      "passed": false
+    },
+    {
+      "task": 13,
+      "arm": "self-b",
+      "status": "valid",
+      "report_sha256": "0073b1fabe1635898ec3438d549ffcee0decde582d3b7441a249ce9a4570c309",
+      "passed": false
+    },
+    {
+      "task": 13,
+      "arm": "fixed-b",
+      "status": "valid",
+      "report_sha256": "0073b1fabe1635898ec3438d549ffcee0decde582d3b7441a249ce9a4570c309",
+      "passed": false
+    },
+    {
+      "task": 14,
+      "arm": "self-b",
+      "status": "valid",
+      "report_sha256": "68c524f69d7ca9b5c8132137ee2f8a9f87a9e85206b0fd1374b2be08767f6ed0",
+      "passed": false
+    },
+    {
+      "task": 14,
+      "arm": "fixed-b",
+      "status": "valid",
+      "report_sha256": "68c524f69d7ca9b5c8132137ee2f8a9f87a9e85206b0fd1374b2be08767f6ed0",
+      "passed": false
+    },
+    {
+      "task": 15,
+      "arm": "self-b",
+      "status": "valid",
+      "report_sha256": "d7d63ec90355c0e7c3efab4cb6567c82444a48adf2fdf95d310c7191cf8b629e",
+      "passed": false
+    },
+    {
+      "task": 15,
+      "arm": "fixed-b",
+      "status": "valid",
+      "report_sha256": "d7d63ec90355c0e7c3efab4cb6567c82444a48adf2fdf95d310c7191cf8b629e",
+      "passed": false
+    },
+    {
+      "task": 16,
+      "arm": "self-b",
+      "status": "valid",
+      "report_sha256": "a4e3324d2472638ee27174a6352100f0fd69dc1c7412a8b5e5e388a8046a5d5c",
+      "passed": false
+    },
+    {
+      "task": 16,
+      "arm": "fixed-b",
+      "status": "valid",
+      "report_sha256": "a4e3324d2472638ee27174a6352100f0fd69dc1c7412a8b5e5e388a8046a5d5c",
+      "passed": false
+    },
+    {
+      "task": 17,
+      "arm": "self-b",
+      "status": "valid",
+      "report_sha256": "1293f2737cb33d8fe2c698feba535166abb475346a71ddd4bfa9b1a690b6c8d2",
+      "passed": false
+    },
+    {
+      "task": 17,
+      "arm": "fixed-b",
+      "status": "valid",
+      "report_sha256": "1293f2737cb33d8fe2c698feba535166abb475346a71ddd4bfa9b1a690b6c8d2",
+      "passed": false
+    },
+    {
+      "task": 18,
+      "arm": "self-b",
+      "status": "valid",
+      "report_sha256": "6dfea45c411dd5f01918428d4382cabb6f1003217b61ca7431ca24e18ebe642f",
+      "passed": false
+    },
+    {
+      "task": 18,
+      "arm": "fixed-b",
+      "status": "valid",
+      "report_sha256": "6dfea45c411dd5f01918428d4382cabb6f1003217b61ca7431ca24e18ebe642f",
+      "passed": false
+    },
+    {
+      "task": 19,
+      "arm": "self-b",
+      "status": "valid",
+      "report_sha256": "b7f8c4b02f248cd3ce2062f487a6946f904a8df0288970d7750049c6ed62e666",
+      "passed": false
+    },
+    {
+      "task": 19,
+      "arm": "fixed-b",
+      "status": "valid",
+      "report_sha256": "b7f8c4b02f248cd3ce2062f487a6946f904a8df0288970d7750049c6ed62e666",
+      "passed": false
+    },
+    {
+      "task": 20,
+      "arm": "self-b",
+      "status": "valid",
+      "report_sha256": "1ba628a94c72ece12dc0060f5035bacb0db8ae1b5bb862b8cb35633abb92747d",
+      "passed": false
+    },
+    {
+      "task": 20,
+      "arm": "fixed-b",
+      "status": "valid",
+      "report_sha256": "1ba628a94c72ece12dc0060f5035bacb0db8ae1b5bb862b8cb35633abb92747d",
+      "passed": false
+    },
+    {
+      "task": 1,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "c74b9ada4a2445159077f25632dee1f5f931f734c264f10a15682a544292d58c",
+      "passed": false
+    },
+    {
+      "task": 2,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "553bf4fc026518796b541cded4b263a9b11556abb14cc9c91d9e3a30505166e4",
+      "passed": false
+    },
+    {
+      "task": 3,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "437851a73dce35ce4bc35cad244af72b6095ec99717cb1e4e183e74027472753",
+      "passed": false
+    },
+    {
+      "task": 4,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "9a0d8a34ef34be1a58fe7c31b502ac7f39d92b20135f24aec5a199170212a9a2",
+      "passed": false
+    },
+    {
+      "task": 5,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "6452f2aa958b4057b25bd073649efa10f334a99ee2484774786dd5d3513f583a",
+      "passed": false
+    },
+    {
+      "task": 6,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "7eb5c114758b20811cd691470149c24a221dcee75a10ab7d1ce3c88bc4e4f0b2",
+      "passed": false
+    },
+    {
+      "task": 7,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "78d1bdf8d4117799d09e2be3a86febdc6c8247d4f4ea1095795a97815a4b612c",
+      "passed": false
+    },
+    {
+      "task": 8,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "a94f1cd50c384f1edf15a657a9cf332036f383495c6dc1b83bd10951b7e813cf",
+      "passed": false
+    },
+    {
+      "task": 9,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "5f7fd2cafd126977f0a7c6c7ca3a041658f7529dfd7db60ddb742144cb9ba4fd",
+      "passed": false
+    },
+    {
+      "task": 10,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "1d87f9086e633100971596859de2de7939111cc9a90ceda1c6ccee6285840a4d",
+      "passed": false
+    },
+    {
+      "task": 11,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "7013a163a8ec16b0bf40136d685081834baa2244bc086aadb41cef2a826e4b0b",
+      "passed": false
+    },
+    {
+      "task": 12,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "b284f7b83f0e9644b55d6fd5b21087409c12fa3ee66e3680fc6d0c3fae8cde91",
+      "passed": false
+    },
+    {
+      "task": 13,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "ecf9f78c529b14c845234db15464792745193099c95f0c96bae505f1d644c5ff",
+      "passed": false
+    },
+    {
+      "task": 14,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "f5f5577a44beef78439566fea4e9c8497feac421ff32f689816a245dfd94a357",
+      "passed": false
+    },
+    {
+      "task": 15,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "00c63f9767334bdf679138b59c2308e6ecf04d669fa07242da71d5348c62a88a",
+      "passed": false
+    },
+    {
+      "task": 16,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "58f11cd961ba3f40ed51f256e9c4209218a2636b9ccf3e337602c5390b228deb",
+      "passed": false
+    },
+    {
+      "task": 17,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "00b85a5f4da791cbed7f0bbdf8835e7e5474005443fe8b94dd5988e0b0a81c2b",
+      "passed": false
+    },
+    {
+      "task": 18,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "d3eb1b8abd5fe2bfaaa845160f2acad21e9b871023605663c393e8b119fcf582",
+      "passed": false
+    },
+    {
+      "task": 19,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "55edd4ae635c143cbbf5b01d4cf56d967fb4a5c9c0933a135c51100a7d512ab9",
+      "passed": false
+    },
+    {
+      "task": 20,
+      "arm": "starter",
+      "status": "valid",
+      "report_sha256": "5c4ce9c37776b283006757821c480d6dff4d239c01ed196e5fe788b7dcff2063",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 1,
+      "status": "valid",
+      "report_sha256": "5e747ef36c346ed46c50fe66e38ef37fb00ba477cd7a42fd9f3134efd80f0ccf",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 2,
+      "status": "valid",
+      "report_sha256": "705913e52ba8d60ce7d417b417a5a47f968e9bef4cd063c60bfe8004ffe7f70e",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 3,
+      "status": "valid",
+      "report_sha256": "e552d55557b934eba8c908708139e26ad542531360ef1516deb4827fa66ee2b4",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 4,
+      "status": "valid",
+      "report_sha256": "65a540fbdc649f56eac909557959ad442c5bb45f6f44ae431483fabbac78dccc",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 5,
+      "status": "valid",
+      "report_sha256": "d32d4a55b5511a5a0b4939a94641f98cc5234f4043bfddc6f6265759a193ca2f",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 6,
+      "status": "valid",
+      "report_sha256": "31e2f9a279c27a6b347dc18acd564e58b0a0515ab99d47411279f1eb7cedd418",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 7,
+      "status": "valid",
+      "report_sha256": "4b06d30926ad64256a38efdcd6290ef243623fe8ed119c458bdd4c510bd572ef",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 8,
+      "status": "valid",
+      "report_sha256": "e8a2d150b8a4632f71f62de7fd9fc19683386aaaf550aa5777111f20a628373d",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 9,
+      "status": "valid",
+      "report_sha256": "3d8897a516133db8b754e5665eb5156d567f27bc403a1513364a38ebcdb9717e",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 10,
+      "status": "valid",
+      "report_sha256": "41d65644957fa992d12af55879657532abb7c6b159f4593ed31ef4aabb02dcb1",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 11,
+      "status": "valid",
+      "report_sha256": "a529d5de6bff11bd2652e5de98d094df7617f6070b7d2c553afc9e9cca0381e3",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 12,
+      "status": "valid",
+      "report_sha256": "7d586b9f91a3e0fea564d1ea09f1213369e679baba29c3577572b27905e7f62f",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 13,
+      "status": "valid",
+      "report_sha256": "533aac3d780db4acf06d13199235404b0ac897bedc586278fac2bd3294a5ce6f",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 14,
+      "status": "valid",
+      "report_sha256": "b43be6c4f4eb96e556e066b74952d45b8fd11e64de4bd592dcb91c2bb713909a",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 15,
+      "status": "valid",
+      "report_sha256": "48d241643aecd9752dd320e747160cd506d5abe9e8361626166198b8e92fdc58",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 16,
+      "status": "valid",
+      "report_sha256": "b47e7225b3b4d0a8f4a54357e077e8e5dc845bee1f84e78676ae235a3a4f535e",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 17,
+      "status": "valid",
+      "report_sha256": "748c9a782e911b17ea9340206763762e5b0d7833a32a174093e123134f55f21d",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 18,
+      "status": "valid",
+      "report_sha256": "8d7de5ac49a5261ce72a1241875dea4df49c88144babc2b94573a2a5b446e302",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 19,
+      "status": "valid",
+      "report_sha256": "653d2c1bda243e6cfd3deb85dd172251d4ade8687863e475c638102a76c750b8",
+      "passed": false
+    },
+    {
+      "arm": "direct",
+      "task": 20,
+      "status": "valid",
+      "report_sha256": "c7829f31669e053a5e952cd6aaff9456ed276fc9ce0dd9492026f55409417c37",
+      "passed": false
+    }
+  ],
+  "cost": {
+    "calls": 2,
+    "settled_usd": 0.001027,
+    "exposure_usd": 0.001027,
+    "unsettled_calls": 0,
+    "cap_usd": 0.2,
+    "stop_usd": 0.2,
+    "halted": 0
+  }
+}

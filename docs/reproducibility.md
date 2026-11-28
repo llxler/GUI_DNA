@@ -10,7 +10,9 @@
 
 主研究保留每个生成请求、页面文件哈希、当前官方文件报告和建库者固定首例；原模型对照、两个其他基准、留出与交付敏感性均有独立登记。历史清单可用 `uv run python -m studies.public_library_transfer.history --check` 从旧冻结结果离线恢复。其余复验入口及本地原始产物位置见[研究说明](../studies/public_library_transfer/README.md)。
 
-## WebGen-Bench 六站与表格交互修复
+## WebGen-Bench 网站操作与表格交互修复
+
+主表 C 用 `python -m studies.webgen_bench.site_completion.report` 从 Git 中的判决复算。每个模型的四种方法共用站点和操作编号。查看单格用 `python -m studies.lookup webgen-bench "DeepSeek V4 Flash" Human`，返回完整通过数、分母、已启动的共同目标及判决文件。具备本机原始产物时，给复算命令加 `--ledgers` 核对费用，运行 `uv run --with duckdb python -m studies.webgen_bench.site_completion.sdk_audit` 可独立重放旧游戏页升级前后的数值。运行 `python -m studies.webgen_bench.site_completion.verify_pages` 可从同一份原配置重编三个渲染端；当前主表 Human 另使用 SDK 的原生纵向标签设置。[新网站与逐项数据](../studies/webgen_bench/site_completion/README.md)
 
 离线运行 `uv run python -m studies.webgen_bench.report --portable`，可从版本库中的逐项判决重算六站同题得分，并核对五种建库接口、每阶段原始成本和两个 Qwen 表格库的固定页对照。本机有原账本时，`uv run python -m studies.webgen_bench.report` 进一步核对模型、阶段及未决敞口。恢复六站数据、作者评估器及 amis SDK 使用 `uv run python -m studies.webgen_bench.fetch_sources`。[新基准目录](../studies/webgen_bench/README.md) · [Qwen 原库逐交互修复](../studies/webbench/table/selection_binding/interaction_repairs/PROTOCOL.md)
 
@@ -186,6 +188,8 @@ Duo 初批两模型与 Qwen 精简契约的另外两份库，分别用 `uv run p
 
 ### 核对 11 月 27 日的跨站与组件验证
 
-在仓库根目录运行 `uv run python -m studies.webgen_bench.component_contracts.report`，可从发布的逐项记录复算六站、三站、TodoMVC 两次建库及表格序列诊断。有原始账本的本地环境可加 `--ledgers` 复核各模型建库、选配置、写整页与评判支出。查询主表用 `uv run python -m studies.lookup webgen-bench/heldout "Gemma 3 12B" Self`；把数据集换成 `webgen-bench` 即查六站开发结果。两次查询给出各自的站点、分母和逐项回执。[阶段索引](../studies/webgen_bench/component_contracts/README.md)
+在仓库根目录运行 `uv run python -m studies.webgen_bench.component_contracts.report`，可从发布的逐项记录复算六站、三站、TodoMVC 两次建库及表格序列诊断。有原始账本的本地环境可加 `--ledgers` 复核各模型建库、选配置、写整页与评判支出。查询归档试验用 `uv run python -m studies.lookup webgen-bench/heldout "Gemma 3 12B" Self`；把数据集换成 `webgen-bench/development` 即查原六站开发结果。两次查询给出各自的站点、分母和逐项回执。[阶段索引](../studies/webgen_bench/component_contracts/README.md)
 
 本机保留原始生成及浏览器时运行 `uv run python -m studies.webgen_bench.heldout_transfer.incomplete_html.inspect`，可离线核对两站首答和重试的可见按钮、文本和内联 JavaScript 语法。表格新处理函数的回放记录同时给出与旧配置相同的逐题对照以及两段独立顺序的每步状态。[HTML 浏览器诊断](../studies/webgen_bench/heldout_transfer/incomplete_html/inspect.py) · [表格功能验证](../studies/webbench/table/action_sequences/selection_mode/validation.json)
+
+表格菜单可用 `python -m studies.webbench.table.menu_propagation.author_repair.report` 从 Git 中的两次建库和五个模型的逐题记录核对首份修复、固定页及每次得失。配对提示的两个种子与官方结果由 `python -m studies.webbench.table.menu_propagation.event_trace.verify` 核对。[修复范围与准入](../studies/webbench/table/menu_propagation/author_repair/PROTOCOL.md)

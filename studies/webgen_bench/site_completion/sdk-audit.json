@@ -1,0 +1,84 @@
+{
+  "site": "000011",
+  "model": "deepseek-flash",
+  "operation": 1,
+  "task": "On the base page, attempt to allocate resources (gold, iron, wood, wheat) to upgrade the city.",
+  "expected": "The resources should be deducted from the total, and an upgrade confirmation message should appear with visible changes to the city level or attributes.",
+  "candidates": "091576660937fded29efaad4b0e9c056aef0ea2e2fd818cd7235d3447b4c3414",
+  "sdk_distribution": "10d06925df872794edd2977c16e52a1b9f87e18491fe7513acb3d988a260d88a",
+  "sdk_public": {
+    "checks": {
+      "start": true,
+      "tabs": true,
+      "record": true,
+      "details": true,
+      "form": true
+    },
+    "errors": []
+  },
+  "generator_plan": "bd0b7549a04698b5a3bc198b64fcc1e641824f76e30427166f718c36267a959a",
+  "original_verdicts": {
+    "direct": "YES",
+    "human": "NO"
+  },
+  "form_submit_events": {
+    "submitSucc": {
+      "actions": [
+        {
+          "actionType": "toast",
+          "args": {
+            "msg": "Upgrade applied. Your city grows stronger."
+          }
+        }
+      ]
+    }
+  },
+  "native_replay": {
+    "direct": {
+      "before": {
+        "gold": 200,
+        "iron": 50,
+        "wood": 80,
+        "city_level": 1
+      },
+      "after": {
+        "gold": 84,
+        "iron": 14,
+        "wood": 56,
+        "city_level": 2
+      },
+      "action": "Upgrade the city",
+      "candidate": {
+        "status": "valid",
+        "file": "artifacts/webgen-sites-20261126pm/jobs/deepseek-flash/000011/direct/site/index.html",
+        "sha256": "ccb7e7e8b13dc0a5a30a77af646cb7e5cc56bd92f0fbfede80b604baed761cc3"
+      }
+    },
+    "human": {
+      "before": {
+        "Gold": 1250,
+        "Iron": 870,
+        "Wood": 1100,
+        "Wheat": 950
+      },
+      "after": {
+        "Gold": 1250,
+        "Iron": 870,
+        "Wood": 1100,
+        "Wheat": 950
+      },
+      "action": "Purchase the Marketplace upgrade",
+      "candidate": {
+        "status": "valid",
+        "file": "artifacts/webgen-native-plans-20261126pm/sites/deepseek-flash/000011/human/index.html",
+        "sha256": "aeb752abb50225436254dd8a52f1bd6986e32e2e1d5b25046193c628b6f6bc1e"
+      }
+    }
+  },
+  "paired_across_nine": {
+    "other_other": 12,
+    "other_yes": 5,
+    "yes_other": 26,
+    "yes_yes": 21
+  }
+}

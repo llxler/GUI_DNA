@@ -1,0 +1,72 @@
+{
+  "a": {
+    "final-outcome": {
+      "seed": 2026112805,
+      "provider": "Azure",
+      "cost_usd": 0.02009125,
+      "request_sha256": "1b238adf2bf94172b10356e63ef9cd8f38e92f2605f95703852b9750e3e9a71d",
+      "response_sha256": "f22a11b7a23321c3ec26549a1d1b3337266f51771d704e0fba81e1d12a0fc968",
+      "edit": {
+        "status": "delivered",
+        "before": "const table = document.querySelector('.table');",
+        "after": "const table = document.querySelector('.table'); if (!table) { document.addEventListener('DOMContentLoaded', main, { once: true }); return; }"
+      },
+      "admission": "build_failed",
+      "source": "137b1145a18d71c3972571403ad37ef3b79ac07e4274ab692228c20123a442d1"
+    },
+    "event-trace": {
+      "seed": 2026112805,
+      "provider": "Azure",
+      "cost_usd": 0.00830125,
+      "request_sha256": "3016413036802879c450e9653338428cda80fb63d7c3d244b57a8c35bb176f58",
+      "response_sha256": "cd516127f1a2f2f258a4aaa88d33ebcd0ce9807086a497cf693e7eeaf770e10a",
+      "edit": {
+        "status": "delivered",
+        "before": "e.preventDefault();",
+        "after": "e.preventDefault(); e.stopPropagation();"
+      },
+      "admission": "valid",
+      "source": "bcd51293fe360169217969e6c595bb976fe8b1cb0b9c5239783090dbfdeee989"
+    },
+    "added_observation": {
+      "role": "user",
+      "content": "One more public observation from the same body-cell right click. Menu visibility as the event propagates, in order: [{\"phase\": \"table\", \"visible\": true}, {\"phase\": \"document\", \"visible\": false}]. Return the same JSON edit."
+    },
+    "shared_request_sha256": "b5ef76ea41ce5f06414e7e90afdea6fcfac25f178937a3cdd29952d0e8e9d4f2"
+  },
+  "b": {
+    "final-outcome": {
+      "seed": 2026112806,
+      "provider": "Azure",
+      "cost_usd": 0.00726125,
+      "request_sha256": "2254feb7f65c0202862207febcfd75580330c1234a2152a7a97962db26445697",
+      "response_sha256": "15ae158968c3482ef8141ee38c7ac0b7af23270c08d96c99ba5a0c2b5da6fea9",
+      "edit": {
+        "status": "delivered",
+        "before": "const within = evt.target.closest('.menu');",
+        "after": "const within = evt.target.closest('.menu, .table');"
+      },
+      "admission": "valid",
+      "source": "137b1145a18d71c3972571403ad37ef3b79ac07e4274ab692228c20123a442d1"
+    },
+    "event-trace": {
+      "seed": 2026112806,
+      "provider": "Azure",
+      "cost_usd": 0.00833125,
+      "request_sha256": "210cc7f8af316bf0fa77c3182bce597aa2473faa4f0ae1c0995045f1ecfee3df",
+      "response_sha256": "ecfe9b3b158cc0c42f655796b69a0bc11faa8510005cef5221ddf16e5e374973",
+      "edit": {
+        "status": "delivered",
+        "before": "      const within = evt.target.closest('.menu');\n      if (!within) menu.hide();",
+        "after": "      const within = evt.target.closest('.menu, .table');\n      if (!within) menu.hide();"
+      },
+      "admission": "valid",
+      "source": "bcd51293fe360169217969e6c595bb976fe8b1cb0b9c5239783090dbfdeee989"
+    },
+    "added_observation": {
+      "role": "user",
+      "content": "One more public observation from the same body-cell right click. Menu visibility as the event propagates, in order: [{\"phase\": \"table\", \"visible\": true}, {\"phase\": \"document\", \"visible\": false}]. Return the same JSON edit."
+    },
+    "shared_request_sha256": "f856517caacfdd1ce573056e6e9656ec656f40f0fef04fbc778e3a4068e07250"
+  }
+}

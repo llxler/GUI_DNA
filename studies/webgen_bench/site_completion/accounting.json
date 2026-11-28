@@ -1,0 +1,331 @@
+{
+  "generation": {
+    "totals": {
+      "calls": 64,
+      "settled_usd": 0.322301,
+      "exposure_usd": 0.322301,
+      "unsettled_calls": 0,
+      "cap_usd": 3.5,
+      "stop_usd": 3.5,
+      "halted": 0
+    },
+    "models": [
+      {
+        "model": "deepseek/deepseek-v4-flash",
+        "phase": "direct",
+        "calls": 11,
+        "settled_usd": 0.024733,
+        "exposure_usd": 0.024733
+      },
+      {
+        "model": "deepseek/deepseek-v4-flash",
+        "phase": "plan",
+        "calls": 9,
+        "settled_usd": 0.00607,
+        "exposure_usd": 0.00607
+      },
+      {
+        "model": "google/gemma-3-12b-it",
+        "phase": "direct",
+        "calls": 9,
+        "settled_usd": 0.001977,
+        "exposure_usd": 0.001977
+      },
+      {
+        "model": "google/gemma-3-12b-it",
+        "phase": "plan",
+        "calls": 9,
+        "settled_usd": 0.002469,
+        "exposure_usd": 0.002469
+      },
+      {
+        "model": "openai/gpt-5",
+        "phase": "build",
+        "calls": 6,
+        "settled_usd": 0.277967,
+        "exposure_usd": 0.277967
+      },
+      {
+        "model": "qwen/qwen3.5-9b",
+        "phase": "direct",
+        "calls": 9,
+        "settled_usd": 0.006524,
+        "exposure_usd": 0.006524
+      },
+      {
+        "model": "qwen/qwen3.5-9b",
+        "phase": "plan",
+        "calls": 11,
+        "settled_usd": 0.002561,
+        "exposure_usd": 0.002561
+      }
+    ]
+  },
+  "judge": {
+    "totals": {
+      "calls": 4625,
+      "settled_usd": 2.935694,
+      "exposure_usd": 4.736886,
+      "unsettled_calls": 46,
+      "cap_usd": 10.0,
+      "stop_usd": 9.0,
+      "halted": 0
+    },
+    "models": [
+      {
+        "model": "qwen/qwen2.5-vl-32b-instruct",
+        "phase": "judge",
+        "calls": 1,
+        "settled_usd": 0.0,
+        "exposure_usd": 0.004702
+      },
+      {
+        "model": "qwen/qwen3-vl-30b-a3b-instruct",
+        "phase": "direct",
+        "calls": 1043,
+        "settled_usd": 0.62423,
+        "exposure_usd": 1.342826
+      },
+      {
+        "model": "qwen/qwen3-vl-30b-a3b-instruct",
+        "phase": "judge",
+        "calls": 3581,
+        "settled_usd": 2.311464,
+        "exposure_usd": 3.389358
+      }
+    ]
+  },
+  "optional_generation": {
+    "totals": {
+      "calls": 3,
+      "settled_usd": 0.000288,
+      "exposure_usd": 0.000288,
+      "unsettled_calls": 0,
+      "cap_usd": 0.7,
+      "stop_usd": 0.7,
+      "halted": 0
+    },
+    "models": [
+      {
+        "model": "deepseek/deepseek-v4-flash",
+        "phase": "plan",
+        "calls": 3,
+        "settled_usd": 0.000288,
+        "exposure_usd": 0.000288
+      }
+    ]
+  },
+  "optional_judge": {
+    "totals": {
+      "calls": 299,
+      "settled_usd": 0.210028,
+      "exposure_usd": 0.210028,
+      "unsettled_calls": 0,
+      "cap_usd": 4.3,
+      "stop_usd": 4.3,
+      "halted": 0
+    },
+    "models": [
+      {
+        "model": "qwen/qwen3-vl-30b-a3b-instruct",
+        "phase": "judge",
+        "calls": 299,
+        "settled_usd": 0.210028,
+        "exposure_usd": 0.210028
+      }
+    ]
+  },
+  "grounded_generation": {
+    "totals": {
+      "calls": 8,
+      "settled_usd": 0.003305,
+      "exposure_usd": 0.003305,
+      "unsettled_calls": 0,
+      "cap_usd": 0.35,
+      "stop_usd": 0.35,
+      "halted": 0
+    },
+    "models": [
+      {
+        "model": "deepseek/deepseek-v4-flash",
+        "phase": "plan",
+        "calls": 8,
+        "settled_usd": 0.003305,
+        "exposure_usd": 0.003305
+      }
+    ]
+  },
+  "grounded_judge": {
+    "totals": {
+      "calls": 0,
+      "settled_usd": 0.0,
+      "exposure_usd": 0.0,
+      "unsettled_calls": 0,
+      "cap_usd": 2.0,
+      "stop_usd": 2.0,
+      "halted": 0
+    },
+    "models": []
+  },
+  "program_judge": {
+    "totals": {
+      "calls": 315,
+      "settled_usd": 0.231196,
+      "exposure_usd": 0.231196,
+      "unsettled_calls": 0,
+      "cap_usd": 1.3,
+      "stop_usd": 1.3,
+      "halted": 0
+    },
+    "models": [
+      {
+        "model": "qwen/qwen3-vl-30b-a3b-instruct",
+        "phase": "judge",
+        "calls": 315,
+        "settled_usd": 0.231196,
+        "exposure_usd": 0.231196
+      }
+    ]
+  },
+  "independent_judge": {
+    "totals": {
+      "calls": 90,
+      "settled_usd": 0.963362,
+      "exposure_usd": 0.963362,
+      "unsettled_calls": 0,
+      "cap_usd": 1.0,
+      "stop_usd": 1.0,
+      "halted": 0
+    },
+    "models": [
+      {
+        "model": "openai/gpt-4o-mini",
+        "phase": "direct",
+        "calls": 30,
+        "settled_usd": 0.330066,
+        "exposure_usd": 0.330066
+      },
+      {
+        "model": "openai/gpt-4o-mini",
+        "phase": "judge",
+        "calls": 60,
+        "settled_usd": 0.633296,
+        "exposure_usd": 0.633296
+      }
+    ]
+  },
+  "tab_judge": {
+    "totals": {
+      "calls": 17,
+      "settled_usd": 0.013708,
+      "exposure_usd": 0.013708,
+      "unsettled_calls": 0,
+      "cap_usd": 0.4,
+      "stop_usd": 0.4,
+      "halted": 0
+    },
+    "models": [
+      {
+        "model": "qwen/qwen3-vl-30b-a3b-instruct",
+        "phase": "judge",
+        "calls": 17,
+        "settled_usd": 0.013708,
+        "exposure_usd": 0.013708
+      }
+    ]
+  },
+  "vertical_primary": {
+    "totals": {
+      "calls": 1206,
+      "settled_usd": 0.784435,
+      "exposure_usd": 1.982095,
+      "unsettled_calls": 30,
+      "cap_usd": 2.5,
+      "stop_usd": 2.5,
+      "halted": 0
+    },
+    "models": [
+      {
+        "model": "qwen/qwen3-vl-30b-a3b-instruct",
+        "phase": "judge",
+        "calls": 1206,
+        "settled_usd": 0.784435,
+        "exposure_usd": 1.982095
+      }
+    ]
+  },
+  "vertical_secondary": {
+    "totals": {
+      "calls": 82,
+      "settled_usd": 0.868893,
+      "exposure_usd": 0.868893,
+      "unsettled_calls": 0,
+      "cap_usd": 0.9,
+      "stop_usd": 0.9,
+      "halted": 0
+    },
+    "models": [
+      {
+        "model": "openai/gpt-4o-mini",
+        "phase": "judge",
+        "calls": 82,
+        "settled_usd": 0.868893,
+        "exposure_usd": 0.868893
+      }
+    ]
+  },
+  "rater_completion": {
+    "totals": {
+      "calls": 105,
+      "settled_usd": 1.106383,
+      "exposure_usd": 1.106383,
+      "unsettled_calls": 0,
+      "cap_usd": 4.5,
+      "stop_usd": 4.5,
+      "halted": 0
+    },
+    "models": [
+      {
+        "model": "openai/gpt-4o-mini",
+        "phase": "direct",
+        "calls": 67,
+        "settled_usd": 0.705213,
+        "exposure_usd": 0.705213
+      },
+      {
+        "model": "openai/gpt-4o-mini",
+        "phase": "judge",
+        "calls": 38,
+        "settled_usd": 0.40117,
+        "exposure_usd": 0.40117
+      }
+    ]
+  },
+  "missing_verdicts": {
+    "totals": {
+      "calls": 130,
+      "settled_usd": 0.090471,
+      "exposure_usd": 0.090471,
+      "unsettled_calls": 0,
+      "cap_usd": 4.5,
+      "stop_usd": 4.5,
+      "halted": 0
+    },
+    "models": [
+      {
+        "model": "qwen/qwen3-vl-30b-a3b-instruct",
+        "phase": "direct",
+        "calls": 37,
+        "settled_usd": 0.024343,
+        "exposure_usd": 0.024343
+      },
+      {
+        "model": "qwen/qwen3-vl-30b-a3b-instruct",
+        "phase": "judge",
+        "calls": 93,
+        "settled_usd": 0.066128,
+        "exposure_usd": 0.066128
+      }
+    ]
+  }
+}

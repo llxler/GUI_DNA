@@ -19,6 +19,7 @@ from studies import paper_library_capabilities as capabilities
 from studies.webgen_bench import report as functional
 from studies.public_library_transfer.source_diagnosis import report as sources
 from studies.webgen_bench.component_contracts import report as validation
+from studies.webgen_bench.site_completion import report as completion
 from studies.end_to_end import ROOT, OUTPUT, reconstruct, sha
 
 PAPER = ROOT / "DNA_latex"
@@ -375,7 +376,7 @@ def audit(data, generated):
                                                  "domain-construction-accounting-final-20261124.json")},
                                     **{str(p.relative_to(ROOT)): sha(p) for p in NOVEMBER_RESULTS.values()},
                                     **{str(p.relative_to(ROOT)): sha(p) for p in (*self_followups.SOURCES, *flash_form.SOURCES, *recovery.SOURCES)},
-                                    **{str(p.relative_to(ROOT)): sha(p) for p in (*validation.RECEIPTS, validation.RESULT, *sources.SOURCES, sources.OUTPUT, *functional.SOURCES, functional.RESULT, *capabilities.SOURCES, capabilities.SUMMARY, *component_trials.SOURCES, component_trials.EXTENSION, table_protocols.PROFILES, table_protocols.EVENTS, table_protocols.RECOVERED, table_protocols.FOCUSED, table_protocols.FLASH, table_protocols.FLASH_SCHEMA)},
+                                    **{str(p.relative_to(ROOT)): sha(p) for p in (*completion.RECEIPTS, completion.RESULT, *validation.RECEIPTS, validation.RESULT, *sources.SOURCES, sources.OUTPUT, *functional.SOURCES, functional.RESULT, *capabilities.SOURCES, capabilities.SUMMARY, *component_trials.SOURCES, component_trials.EXTENSION, table_protocols.PROFILES, table_protocols.EVENTS, table_protocols.RECOVERED, table_protocols.FOCUSED, table_protocols.FLASH, table_protocols.FLASH_SCHEMA)},
                                     **{str(p.relative_to(ROOT)): sha(p) for p in (*suite_comparisons.SOURCES, suite_comparisons.OUTPUT)},
                                     **{str(p.relative_to(ROOT)): sha(p) for p in (*domain_panel.SOURCES, *domain_panel.DIAGNOSTICS,
                                                                                 *prospective_panel.SOURCES, prospective_panel.OUTPUT,
@@ -423,6 +424,7 @@ def main():
             match = re.search(r"(\d+)/(\d+)", cells[arm])
             measured = [int(match[1]), int(match[2])] if match else None
             assert measured == expected, (row["model"], row["project"], arm, measured, expected)
+    assert completion.reconstruct() == json.loads(completion.RESULT.read_text())
     assert validation.reconstruct() == json.loads(validation.RESULT.read_text())
     for model, study in json.loads(validation.RESULT.read_text())["todomvc"].items():
         row = matrix[model]["state_examples"]["todomvc"]

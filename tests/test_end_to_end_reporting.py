@@ -197,7 +197,7 @@ def test_flash_question_form_reports_the_first_registered_library_in_the_primary
     assert visible["targets"] == original["targets"]
     assert visible["passed"] == {"direct": 10, "human": 20, "gpt5-library": 12, "self": 11}
     assert row.split(" & ")[-4:] == [
-        r"10/20$^{\dagger}$", r"\textbf{20/20}$^{\dagger}$", r"12/20$^{\dagger *}$", r"11/20$^{\dagger}$ \\",
+        r"10/20", r"\textbf{20/20}", r"12/20", r"11/20 \\",
     ]
 
 
@@ -217,6 +217,7 @@ def test_paper_omits_failed_builds_and_keeps_measured_zeros():
         model.pop("library_capabilities", None)
         model.pop("table_state_transitions", None)
         model.pop("state_examples", None)
+        model.pop("webgen_completion", None)
         model.pop("webgen_holdout", None)
         model.pop("source_diagnosis", None)
         model.pop("webgen_functional", None)
@@ -258,7 +259,12 @@ def test_updated_table_uses_common_targets_and_keeps_the_original_webgen_registr
         assert group['registered'] == 43 and group['n'] == len(set(group['targets']))
         assert all(0 <= v <= group['n'] for v in group['passed'].values())
         assert 'gpt5-library' not in group['passed']
-    assert 'alternate vision judge' in c and 'planned functional evaluation' not in c
+    assert 'website operations' in c and 'Six development' not in c and 'Three held-out' not in c
+    assert all(token not in tex for token in (r'\dagger',r'\ddagger',r'\textsuperscript','$^'))
+    for model in read(studies.PLANNED)['models']:
+        primary = matrix[model]['webgen_completion']
+        assert len(primary['sites']) == 9 and primary['n'] == len(primary['targets'])
+        assert all(type(v) is int and 0 <= v <= primary['n'] for v in primary['passed'].values())
     plan = read(studies.PLANNED)
     assert plan["measurements"] == [] and len({i for ids in plan["pilot_sites"].values() for i in ids}) == 6
 
@@ -369,7 +375,7 @@ def test_lookup_separates_weighted_scores_build_failure_and_unavailable():
     matrix = read(ROOT / MATRIX)
 
     def query(model, method):
-        return find_cell(matrix, "webgen-bench", model, method)
+        return find_cell(matrix, "webgen-bench/development", model, method)
 
     weighted = query("deepseek/deepseek-v4-flash", "direct")
     assert (weighted["score"], weighted["denominator"], weighted["unit"]) == (35.5, 43, "functional points")

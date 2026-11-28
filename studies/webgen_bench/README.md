@@ -1,5 +1,9 @@
 # WebGen-Bench 网站功能实验
 
+论文表 1 的 C 区采用 `site_completion/`。一次固定九个此前未用于建库或调试的网站，每个站的全部操作都进入同一批比较。只把判为 YES 的操作计入分子，完整的判决仍区分 YES、PARTIAL 和 NO。运行 `python -m studies.lookup webgen-bench "DeepSeek V4 Flash" Human` 可定位到具体候选、判决和站点。[代码与结果索引](site_completion/README.md) · [主表采用的 SDK 导航设置](site_completion/SDK_NAVIGATION.md) · [逐操作汇总](../results/webgen-site-completion-20261128.json)
+
+以下为保留的早期实验和方法演变记录。
+
 基准发布的测试集有 101 个网站、647 项功能检查。按预先登记的哈希规则，每个一级类别的前两站构成六站开发集，共 43 项操作。各类别的第三站构成三站留出集，共 21 项；两批分别评分。固定数据版本和六个站点 ID 见[抽样登记](protocol.json)。公开说明与评测项目分别交给生成器和判分器。[论文](https://proceedings.neurips.cc/paper_files/paper/2025/hash/6841eed8bb6a2ec49e49235c8115efee-Abstract-Datasets_and_Benchmarks_Track.html) · [发布数据](https://huggingface.co/datasets/luzimu/WebGen-Bench/tree/c061fe8326459846ac020ceb54d750c859cb059f) · [作者评测程序](https://github.com/mnluzimu/WebGen-Bench/tree/c89e0743438e458d617cebaf7a682e0e66e41049)
 
 ## 工作流与判分
@@ -10,6 +14,6 @@
 
 ## 离线复核
 
-当前 C 区用 `uv run python -m studies.webgen_bench.component_contracts.report` 复算；站点、模型与方法可由主 README 的查询命令定位。[当前阶段索引](component_contracts/README.md)
+当前 C 区用 `uv run python -m studies.webgen_bench.site_completion.report` 从随 Git 发布的判决复算。早期两批网站的结果仍可用 `uv run python -m studies.webgen_bench.component_contracts.report` 复算。[九站结果](site_completion/README.md) · [历史实验](component_contracts/README.md)
 
 核对首次六站实验及其费用合计，运行 `uv run python -m studies.webgen_bench.report --portable`。具备本地原始账本时，去除 `--portable` 可独立复算费用明细。恢复对照的上游材料使用 `uv run python -m studies.webgen_bench.fetch_sources`，它验证数据摘要、上游 Git 版本及 SDK 包的 SHA-512。运行判分需独立预算和模型服务。[结果汇总](../results/webgen-functional-20261126.json)

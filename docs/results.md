@@ -2696,3 +2696,30 @@ WebGen-Bench 开发集沿用原六站，三个类别各两站。留出集取同�
 按首次原始回复放宽完整 HTML 的接收条件。原判分批次仅余 $0.03003，未能发送图像；另登记 $0.50 上限复核全部 16 项。开发站原截断页有 9/9 项得到判决，合计 1.5 分；在这批共 43 项有结果的同题操作上，Direct 与 Self 分别是 13、28.5 分。留出站原截断页有 7/7 项得到判决，合计 1 分；在这批共 21 项有结果的同题操作上，Direct 与 Self 分别是 7.5、10.5 分。[逐操作判决](../studies/webgen_bench/heldout_transfer/incomplete_html/functional-confirmation.json) · [首次预算不足记录](../studies/webgen_bench/heldout_transfer/incomplete_html/judgments.json) · [路线与价格](../studies/webgen_bench/heldout_transfer/incomplete_html/transport.json)
 
 本轮账本共 3,133 笔计量请求，已结算 $2.446677，27 笔未结按全额预留后敞口 $5.913944。已结算中，网站建库和部署 $0.022460、网站评判 $2.406663、表格 $0.012987、TodoMVC $0.004567。网站自建库的本轮增量修改，Gemma 12B 与 Qwen 9B 各结算 $0.000611、$0.003206；Flash 原库复用。此前原库费用和未记录的人工工时在此小计之外。[按模型、阶段与用途的只读账本汇总](../studies/webgen_bench/component_contracts/accounting.json)
+
+<a id="webgen-site-completion"></a>
+## 57. 九个新网站的操作通过数与人工库诊断
+
+网站按原定哈希顺序从三类公开需求各取三个，全部未参与之前的实验。每个模型生成九份从零 HTML 和九份配置。相同配置分别交给 amis 6.13.0、GPT-5 新库和该模型已准入的自建库。首次评分中有 12 个展示位置缺判，逐项重放后全部取得判决。三个模型、四种方法因此都覆盖九站的全部 59 项官方操作。每个 YES 计一次，PARTIAL 和 NO 计零。[生成与评分协议](../studies/webgen_bench/site_completion/PROTOCOL.md) · [主表导航协议](../studies/webgen_bench/site_completion/SDK_NAVIGATION.md) · [逐题结果和费用](../studies/results/webgen-site-completion-20261128.json)
+
+| 模型 | 从零生成 | 人工库 | GPT-5 建库 | 模型自建库 |
+| --- | ---: | ---: | ---: | ---: |
+| Gemma 3 12B | 29/59 | 41/59 | 35/59 | 33/59 |
+| Qwen3.5-9B | 27/59 | 37/59 | 34/59 | 28/59 |
+| DeepSeek V4 Flash | 37/59 | 41/59 | 45/59 | 41/59 |
+
+逐站比较 Flash，从零在 1 站完成更多，人工库在 4 站完成更多，另有 4 站持平。各站操作数和成对通过项见结果 JSON。
+
+**为什么从零可能超过人工库。** 在原九站同样只数 YES 时，Flash 从零为 47/64，人工库为 26/64。其中 26 项只有从零完整通过，另有 5 项只有人工库完整通过。人工提供的是组件实现，站点行为由模型配置。重放旧游戏页的购买按钮，人工库计划只配置了成功提醒，金币一直为 1,250；从零页实际把金币从 200 扣到 84，城市从 1 级升到 2 级。另外一次失败有不同原因。同一人工库页面已渲染五条按金币降序的排名，排名标签在首屏之外。原视觉判官走了 15 步仍判 NO；按标签打开即能读取五条排名。[资源与等级的前后值](../studies/webgen_bench/site_completion/sdk-audit.json) · [排名页重放](../studies/webgen_bench/site_completion/navigation-audit.json)
+
+**统一修复导航。** 不改组件库、计划或数据，只使用 SDK 的原生纵向标签。新批次 27 页上，视觉判官首屏能标到的标签从 158/204 变为 204/204。13 页增加，14 页持平。旧游戏排名的水平重跑为 PARTIAL，纵向为 YES。在本次九站的原布局评分完成前决定用同一设置重测所有 Human 页，保留原判决。两种布局的正式完整通过数按交集分模型分别为 Gemma 31/58 → 40/58，Qwen 33/59 → 37/59，Flash 41/58 → 40/58。没有逐格取高。Flash 两种页面另由 GPT-4o mini 每站复评一项。主判与独立判官有 17/18 个共同判决，其中完整与未完整的二元判定有 12 个相同，三级判定有 9 个相同。所有取得成对四份判决的 8 站上，主判 Direct/Human 为 5/8 与 7/8，独立判官为 3/8 与 4/8。[全部入口的可见性](../studies/webgen_bench/site_completion/tab-layout.json) · [修正布局的逐题判决](../studies/webgen_bench/site_completion/vertical-primary.json) · [独立核对](../studies/webgen_bench/site_completion/independent-completion.json)
+
+**状态更新。** 先在三个预定新站让模型自选是否补状态逻辑，三份全部返回空扩展，启用与禁用两种页面逐字节相同。独立运行同一主判官分别通过 12/21、14/21。随后要求引用需求并描述状态，严格验收中三个新站和一个已见游戏页均未通过。把出处说明与程序执行分开后，从每站首份原回复得到可执行程序。三个新站的首次操作分别能切换开关、更新已选项数和将余票从 10 扣到 9；惰性对照都保持初值。已见游戏页面上点击升级能把金币从 100 扣到 50。相同新站正式操作中，原横向人工配置通过 16/21，新状态处理器通过 14/21，相同控件的惰性版本通过 12/21。这些程序重放均单独保存。[状态扩展与受控对照](../studies/webgen_bench/site_completion/state_updates/PROGRAM_REPLAY.md) · [转移前后值](../studies/webgen_bench/site_completion/state_updates/program-candidates.json)
+
+**Web-Bench 表格。** 对两份 Qwen 库记录每次键盘事件的实际选区。A 计算的上一格坐标正确，但状态投影忽略传入成员并读了单元格上不存在的行号，导致选区清空。B 在 DOM 的 HTMLCollection 上调用数组的 indexOf 报错。只换移动函数后两库仍未通过旧方向循环；随后同一模型改写选区投影，A 通过开发循环，B 未达到准入条件。两段封存的新顺序均由参考页通过且起始页失败；A 库 2/2，B 库 0/2。正式二十项中，从零为 0/20，A、B 逐题为 3/20、3/20，各自固定页为 3/20、3/20。[原始事件轨迹](../studies/webbench/table/keyboard_navigation/result.json) · [同配置正式测试](../studies/webbench/table/keyboard_navigation/projection-result.json)
+
+**GPT-5 自行修复表格库。** 让原建库模型读取源码和打开菜单、插行、关闭菜单的公开结果。首份修订推迟了初始化，菜单仍会在同一次右键中被关闭；第二份修订改了关闭条件，通过公开验收。在 Qwen3.5、Qwen3-Coder、GPT-OSS、DeepSeek Flash、DeepSeek Pro 原有的 100 份配置上，原库分别通过 3、1、3、2、3 项，第二份修订分别通过 8、7、8、8、8 项，各组分母均为 20。四种固定配置都过 8/20。两次请求共结算 $0.027354。主表按预先登记的首份修复规则保留原有效库。[协议](../studies/webbench/table/menu_propagation/author_repair/PROTOCOL.md) · [逐题结果](../studies/webbench/table/menu_propagation/author_repair/result.json)
+
+**给出事件传播轨迹。** 保持两次请求各自的种子、原代码、参数和服务提供方，仅补充一条浏览器观察：同一次右键在表格回调中打开菜单，在文档回调中又将其关闭。两份新修订均通过公开验收，在上述五款模型和四种固定配置上分别重现第二份修订的全部通过数。这组配对诊断独立于主表。[两种提示和四份改动](../studies/webbench/table/menu_propagation/event_trace/build-comparison.json) · [各题结果](../studies/webbench/table/menu_propagation/event_trace/result.json)
+
+本轮 6,952 笔请求，结算 $7.575185。76 笔未结按全额预留计后，本轮敞口 $10.574037。GPT-5 新库建库费 $0.277967，三份旧 Self 库的 27 个先前站点均可按原字节复现，本轮未再次收取其建库费。建库、共享配置、从零页面和评判分项见账本；SDK 开发人时未记录。[逐模型费用](../studies/webgen_bench/site_completion/accounting.json) · [页面指纹](../studies/webgen_bench/site_completion/page-lineage.json)

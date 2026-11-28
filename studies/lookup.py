@@ -15,6 +15,7 @@ DATASETS = {
     "todomvc": "todomvc",
     "webapp1k-duo": "duo",
     "webgen-bench": "webgen-bench",
+    "webgen-bench/development": "webgen-development",
     "webgen-bench/heldout": "webgen-heldout",
 }
 MODEL_NAMES = paper.BACKBONES | paper.components.LABELS
@@ -28,6 +29,7 @@ ASSEMBLERS = {
     "extended_targets": paper.components,
     "component_followup": paper.components,
     "self_recovery": paper.recovery,
+    "webgen_completion": paper.completion,
     "webgen_functional": paper.validation,
     "webgen_holdout": paper.validation,
     "state_examples": paper.validation,
@@ -51,18 +53,28 @@ def find_cell(matrix, dataset, model, method):
     }
     if status == "measured":
         cell.update(score=row["passed"][method], denominator=row["n"],
-                    unit="functional points" if project in ("webgen-bench","webgen-heldout") else "current-task passes")
+                    unit=row.get("measure", "current-task passes"))
 
     receipt = row.get("implementation_sources", {}).get(method)
     if path == ("form_visible_targets",):
         receipt = row.get("schema_source", row["source"]) if method == "gpt5-library" else row["source"]
-    if project in ("webgen-bench", "webgen-heldout"):
+    if project in ("webgen-bench", "webgen-development", "webgen-heldout"):
         cell["candidates"] = row["candidate_sources"][method]
         cell["sites"] = row["sites"]
         runnable = row["jointly_runnable"]
-        if method in runnable["points"]:
+        scores = runnable["passed"] if project == "webgen-bench" else runnable["points"]
+        if method in scores:
             cell["startup_failures"] = row["start_failures"][method]
-            cell["jointly_runnable"] = {"score": runnable["points"][method], "denominator": runnable["n"]}
+            cell["jointly_runnable"] = {"score": scores[method], "denominator": runnable["n"]}
+    if project in ("webgen-development", "webgen-heldout"):
+        cell["archived"] = True
+    if protocol := row.get("protocols", {}).get(method):
+        cell["protocol"] = protocol
+        if project == "webgen-bench" and method == "human":
+            cell["candidate_variant"] = "vertical"
+    if extra := row.get("supplemental_records", {}).get(method):
+        cell["supplemental_records"] = extra
+        cell["replayed_targets"] = row["replayed_targets"][method]
     if receipt:
         cell["method_record"] = receipt
     if row.get("additional_targets"):
@@ -71,7 +83,7 @@ def find_cell(matrix, dataset, model, method):
         cell["row_source"] = row["source"]
     if dataset.startswith("web-bench/"):
         guide = Path("studies/webbench/README.md")
-    elif project in ("webgen-bench", "webgen-heldout"):
+    elif project in ("webgen-bench", "webgen-development", "webgen-heldout"):
         guide = WEBGEN / "README.md"
     else:
         guide = TRANSFER / "README.md"
@@ -86,7 +98,7 @@ def main(argv=None):
     parser.add_argument("method", nargs="?", help="Direct, Human, GPT-5 or Self")
     args = parser.parse_args(argv)
     if not args.dataset:
-        print("\n".join(DATASETS))
+        print("\n".join(name for name in DATASETS if not name.startswith("webgen-bench/")))
         return
 
     matrix = read(ROOT / MATRIX)
