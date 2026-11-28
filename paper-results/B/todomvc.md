@@ -6,12 +6,12 @@
 
 | 目标生成模型 | Direct | Human | GPT-5 | Self |
 | --- | ---: | ---: | ---: | ---: |
-| Gemma 3 4B | [2/8](../../studies/results/paper-performance-matrix.json#L12822) | [2/8](../../studies/results/paper-performance-matrix.json#L12823) | [6/8](../../studies/results/paper-performance-matrix.json#L12824) | [3/8](../../studies/results/paper-performance-matrix.json#L12825) |
-| Llama 3.2 3B | [0/8](../../studies/results/paper-performance-matrix.json#L12890) | [1/8](../../studies/results/paper-performance-matrix.json#L12891) | [8/8](../../studies/results/paper-performance-matrix.json#L12892) | [1/8](../../studies/results/paper-performance-matrix.json#L12893) |
-| Ministral 3B | [2/8](../../studies/results/paper-performance-matrix.json#L13057) | [1/8](../../studies/results/paper-performance-matrix.json#L13058) | [7/8](../../studies/results/paper-performance-matrix.json#L13059) | [6/8](../../studies/results/paper-performance-matrix.json#L13060) |
+| Gemma 3 4B | [2/8](../../studies/results/paper-performance-matrix.json#L13196) | [2/8](../../studies/results/paper-performance-matrix.json#L13197) | [6/8](../../studies/results/paper-performance-matrix.json#L13198) | [3/8](../../studies/results/paper-performance-matrix.json#L13199) |
+| Llama 3.2 3B | [0/8](../../studies/results/paper-performance-matrix.json#L13264) | [1/8](../../studies/results/paper-performance-matrix.json#L13265) | [8/8](../../studies/results/paper-performance-matrix.json#L13266) | [1/8](../../studies/results/paper-performance-matrix.json#L13267) |
+| Ministral 3B | [2/8](../../studies/results/paper-performance-matrix.json#L13431) | [1/8](../../studies/results/paper-performance-matrix.json#L13432) | [7/8](../../studies/results/paper-performance-matrix.json#L13433) | [6/8](../../studies/results/paper-performance-matrix.json#L13434) |
 | Gemma 3 12B | [4/8](../../studies/results/paper-performance-matrix.json#L1202) | [8/8](../../studies/results/paper-performance-matrix.json#L1203) | [7/8](../../studies/results/paper-performance-matrix.json#L1205) | [5/8](../../studies/results/paper-performance-matrix.json#L1204) |
-| Qwen3.5-9B | [1/8](../../studies/results/paper-performance-matrix.json#L3709) | [8/8](../../studies/results/paper-performance-matrix.json#L3710) | [5/8](../../studies/results/paper-performance-matrix.json#L3711) | [5/8](../../studies/results/paper-performance-matrix.json#L3712) |
-| DeepSeek V4 Flash | [8/8](../../studies/results/paper-performance-matrix.json#L10670) | [4/8](../../studies/results/paper-performance-matrix.json#L10671) | [5/8](../../studies/results/paper-performance-matrix.json#L10672) | [8/8](../../studies/results/paper-performance-matrix.json#L10673) |
+| Qwen3.5-9B | [1/8](../../studies/results/paper-performance-matrix.json#L3762) | [8/8](../../studies/results/paper-performance-matrix.json#L3763) | [5/8](../../studies/results/paper-performance-matrix.json#L3764) | [5/8](../../studies/results/paper-performance-matrix.json#L3765) |
+| DeepSeek V4 Flash | [8/8](../../studies/results/paper-performance-matrix.json#L10936) | [4/8](../../studies/results/paper-performance-matrix.json#L10937) | [5/8](../../studies/results/paper-performance-matrix.json#L10938) | [8/8](../../studies/results/paper-performance-matrix.json#L10939) |
 
 点击成绩可定位到主表 JSON 的对应行。建库失败对应论文空白格，无数据对应横线。
 

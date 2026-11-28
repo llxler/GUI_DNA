@@ -7,11 +7,11 @@
 | 目标生成模型 | Direct | Human | GPT-5 | Self |
 | --- | ---: | ---: | ---: | ---: |
 | Gemma 3 12B | [1/5](../../studies/results/paper-performance-matrix.json#L2183) | [1/5](../../studies/results/paper-performance-matrix.json#L2184) | [4/5](../../studies/results/paper-performance-matrix.json#L2185) | [3/5](../../studies/results/paper-performance-matrix.json#L2186) |
-| Qwen3.5-9B | [2/5](../../studies/results/paper-performance-matrix.json#L4423) | [2/5](../../studies/results/paper-performance-matrix.json#L4424) | [4/5](../../studies/results/paper-performance-matrix.json#L4425) | [4/5](../../studies/results/paper-performance-matrix.json#L4426) |
-| Mistral Small 3.2 | [0/10](../../studies/results/paper-performance-matrix.json#L6592) | [8/10](../../studies/results/paper-performance-matrix.json#L6593) | [9/10](../../studies/results/paper-performance-matrix.json#L6594) | [8/10](../../studies/results/paper-performance-matrix.json#L6595) |
-| Qwen3-Coder-30B | [4/10](../../studies/results/paper-performance-matrix.json#L7726) | [4/10](../../studies/results/paper-performance-matrix.json#L7727) | [9/10](../../studies/results/paper-performance-matrix.json#L7728) | [8/10](../../studies/results/paper-performance-matrix.json#L7729) |
-| GPT-OSS-120B | [5/10](../../studies/results/paper-performance-matrix.json#L9422) | [8/10](../../studies/results/paper-performance-matrix.json#L9423) | [9/10](../../studies/results/paper-performance-matrix.json#L9424) | [9/10](../../studies/results/paper-performance-matrix.json#L9425) |
-| DeepSeek V4 Flash | [9/10](../../studies/results/paper-performance-matrix.json#L11284) | [7/10](../../studies/results/paper-performance-matrix.json#L11285) | [9/10](../../studies/results/paper-performance-matrix.json#L11286) | [9/10](../../studies/results/paper-performance-matrix.json#L11287) |
+| Qwen3.5-9B | [2/5](../../studies/results/paper-performance-matrix.json#L4476) | [2/5](../../studies/results/paper-performance-matrix.json#L4477) | [4/5](../../studies/results/paper-performance-matrix.json#L4478) | [4/5](../../studies/results/paper-performance-matrix.json#L4479) |
+| Mistral Small 3.2 | [0/10](../../studies/results/paper-performance-matrix.json#L6698) | [8/10](../../studies/results/paper-performance-matrix.json#L6699) | [9/10](../../studies/results/paper-performance-matrix.json#L6700) | [8/10](../../studies/results/paper-performance-matrix.json#L6701) |
+| Qwen3-Coder-30B | [4/10](../../studies/results/paper-performance-matrix.json#L7885) | [4/10](../../studies/results/paper-performance-matrix.json#L7886) | [9/10](../../studies/results/paper-performance-matrix.json#L7887) | [8/10](../../studies/results/paper-performance-matrix.json#L7888) |
+| GPT-OSS-120B | [5/10](../../studies/results/paper-performance-matrix.json#L9634) | [8/10](../../studies/results/paper-performance-matrix.json#L9635) | [9/10](../../studies/results/paper-performance-matrix.json#L9636) | [9/10](../../studies/results/paper-performance-matrix.json#L9637) |
+| DeepSeek V4 Flash | [9/10](../../studies/results/paper-performance-matrix.json#L11550) | [7/10](../../studies/results/paper-performance-matrix.json#L11551) | [9/10](../../studies/results/paper-performance-matrix.json#L11552) | [9/10](../../studies/results/paper-performance-matrix.json#L11553) |
 
 点击成绩可定位到主表 JSON 的对应行。建库失败对应论文空白格，无数据对应横线。
 

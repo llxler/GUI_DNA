@@ -6,13 +6,13 @@
 
 | 目标生成模型 | Direct | Human | GPT-5 | Self |
 | --- | ---: | ---: | ---: | ---: |
-| Gemma 3 12B | [0/20](../../studies/results/paper-performance-matrix.json#L1537) | [1/20](../../studies/results/paper-performance-matrix.json#L1538) | [9/20](../../studies/results/paper-performance-matrix.json#L2125) | [2/20](../../studies/results/paper-performance-matrix.json#L1540) |
-| Qwen3.5-9B | [0/20](../../studies/results/paper-performance-matrix.json#L3602) | [6/20](../../studies/results/paper-performance-matrix.json#L3603) | [8/20](../../studies/results/paper-performance-matrix.json#L4366) | [3/20](../../studies/results/paper-performance-matrix.json#L3605) |
-| Mistral Small 3.2 | [5/20](../../studies/results/paper-performance-matrix.json#L5969) | [20/20](../../studies/results/paper-performance-matrix.json#L5970) | [8/20](../../studies/results/paper-performance-matrix.json#L6452) | [1/20](../../studies/results/paper-performance-matrix.json#L6453) |
-| Qwen3-Coder-30B | [3/20](../../studies/results/paper-performance-matrix.json#L7483) | [10/20](../../studies/results/paper-performance-matrix.json#L7484) | [9/20](../../studies/results/paper-performance-matrix.json#L7586) | [建库失败](../../studies/results/paper-performance-matrix.json#L7588) |
-| GPT-OSS-120B | [7/20](../../studies/results/paper-performance-matrix.json#L8806) | [20/20](../../studies/results/paper-performance-matrix.json#L8807) | [8/20](../../studies/results/paper-performance-matrix.json#L9247) | [建库失败](../../studies/results/paper-performance-matrix.json#L9249) |
-| DeepSeek V4 Flash | [1/20](../../studies/results/paper-performance-matrix.json#L10299) | [19/20](../../studies/results/paper-performance-matrix.json#L10300) | [9/20](../../studies/results/paper-performance-matrix.json#L11222) | [4/20](../../studies/results/paper-performance-matrix.json#L10302) |
-| DeepSeek V4 Pro | [2/20](../../studies/results/paper-performance-matrix.json#L12474) | [20/20](../../studies/results/paper-performance-matrix.json#L12475) | [6/20](../../studies/results/paper-performance-matrix.json#L12548) | [6/20](../../studies/results/paper-performance-matrix.json#L12477) |
+| Gemma 3 12B | [0/20](../../studies/results/paper-performance-matrix.json#L1537) | [1/20](../../studies/results/paper-performance-matrix.json#L1538) | [9/20](../../studies/results/paper-performance-matrix.json#L2125) | [2/20](../../studies/results/paper-performance-matrix.json#L2311) |
+| Qwen3.5-9B | [0/20](../../studies/results/paper-performance-matrix.json#L3655) | [6/20](../../studies/results/paper-performance-matrix.json#L3656) | [8/20](../../studies/results/paper-performance-matrix.json#L4419) | [3/20](../../studies/results/paper-performance-matrix.json#L4604) |
+| Mistral Small 3.2 | [5/20](../../studies/results/paper-performance-matrix.json#L6075) | [20/20](../../studies/results/paper-performance-matrix.json#L6076) | [8/20](../../studies/results/paper-performance-matrix.json#L6558) | [5/20](../../studies/results/paper-performance-matrix.json#L6772) |
+| Qwen3-Coder-30B | [3/20](../../studies/results/paper-performance-matrix.json#L7642) | [10/20](../../studies/results/paper-performance-matrix.json#L7643) | [9/20](../../studies/results/paper-performance-matrix.json#L7745) | [4/20](../../studies/results/paper-performance-matrix.json#L7959) |
+| GPT-OSS-120B | [7/20](../../studies/results/paper-performance-matrix.json#L9018) | [20/20](../../studies/results/paper-performance-matrix.json#L9019) | [8/20](../../studies/results/paper-performance-matrix.json#L9459) | [13/20](../../studies/results/paper-performance-matrix.json#L9762) |
+| DeepSeek V4 Flash | [1/20](../../studies/results/paper-performance-matrix.json#L10565) | [19/20](../../studies/results/paper-performance-matrix.json#L10566) | [9/20](../../studies/results/paper-performance-matrix.json#L11488) | [9/20](../../studies/results/paper-performance-matrix.json#L11678) |
+| DeepSeek V4 Pro | [2/20](../../studies/results/paper-performance-matrix.json#L12794) | [20/20](../../studies/results/paper-performance-matrix.json#L12795) | [6/20](../../studies/results/paper-performance-matrix.json#L12868) | [9/20](../../studies/results/paper-performance-matrix.json#L12943) |
 
 点击成绩可定位到主表 JSON 的对应行。建库失败对应论文空白格，无数据对应横线。
 
@@ -21,13 +21,13 @@
 
 | 目标生成模型 | Direct | Human | GPT-5 | Self |
 | --- | --- | --- | --- | --- |
-| Gemma 3 12B | [该行汇总](../../studies/results/library-source-diagnosis-20261126.json) | [该行汇总](../../studies/results/library-source-diagnosis-20261126.json) | [实验记录](../../studies/webbench/table/author_modules/result.json) | [该行汇总](../../studies/results/library-source-diagnosis-20261126.json) |
-| Qwen3.5-9B | 见上表矩阵 | 见上表矩阵 | [实验记录](../../studies/webbench/table/author_modules/result.json) | [实验记录](../../studies/webbench/table/selection_binding/interaction_repairs/result.json) |
-| Mistral Small 3.2 | [补测](../../studies/webbench/transport_completion/extension-result.json) | [补测](../../studies/webbench/transport_completion/extension-result.json) | [实验记录](../../studies/webbench/table/author_modules/result.json) | [实验记录](../../studies/webbench/table/event_hooks/handler_selection/result.json) |
-| Qwen3-Coder-30B | [补测](../../studies/webbench/transport_completion/extension-result.json) | [补测](../../studies/webbench/transport_completion/extension-result.json) | [实验记录](../../studies/webbench/table/author_modules/result.json) | [实验记录](../../studies/webbench/table/event_hooks/handler_selection/result.json) |
-| GPT-OSS-120B | 见上表矩阵 | 见上表矩阵 | [实验记录](../../studies/webbench/table/author_modules/result.json) | [实验记录](../../studies/webbench/table/event_hooks/dom_contract/result.json) |
-| DeepSeek V4 Flash | 见上表矩阵 | 见上表矩阵 | [实验记录](../../studies/webbench/table/author_modules/result.json) | 见上表矩阵 |
-| DeepSeek V4 Pro | 见上表矩阵 | 见上表矩阵 | [实验记录](../../studies/webbench/table/author_modules/result.json) | 见上表矩阵 |
+| Gemma 3 12B | [该行汇总](../../studies/results/library-source-diagnosis-20261126.json) | [该行汇总](../../studies/results/library-source-diagnosis-20261126.json) | [实验记录](../../studies/webbench/table/author_modules/result.json) | [实验记录](../../studies/webbench/table/shared_selection/keyboard_transitions/result.json) |
+| Qwen3.5-9B | 见上表矩阵 | 见上表矩阵 | [实验记录](../../studies/webbench/table/author_modules/result.json) | [实验记录](../../studies/webbench/table/shared_selection/keyboard_transitions/result.json) |
+| Mistral Small 3.2 | [补测](../../studies/webbench/transport_completion/extension-result.json) | [补测](../../studies/webbench/transport_completion/extension-result.json) | [实验记录](../../studies/webbench/table/author_modules/result.json) | [实验记录](../../studies/webbench/table/shared_selection/keyboard_transitions/result.json) |
+| Qwen3-Coder-30B | [补测](../../studies/webbench/transport_completion/extension-result.json) | [补测](../../studies/webbench/transport_completion/extension-result.json) | [实验记录](../../studies/webbench/table/author_modules/result.json) | [实验记录](../../studies/webbench/table/shared_selection/keyboard_transitions/result.json) |
+| GPT-OSS-120B | 见上表矩阵 | 见上表矩阵 | [实验记录](../../studies/webbench/table/author_modules/result.json) | [实验记录](../../studies/webbench/table/shared_selection/keyboard_transitions/result.json) |
+| DeepSeek V4 Flash | 见上表矩阵 | 见上表矩阵 | [实验记录](../../studies/webbench/table/author_modules/result.json) | [实验记录](../../studies/webbench/table/shared_selection/keyboard_transitions/result.json) |
+| DeepSeek V4 Pro | 见上表矩阵 | 见上表矩阵 | [实验记录](../../studies/webbench/table/author_modules/result.json) | [实验记录](../../studies/webbench/table/shared_selection/keyboard_transitions/result.json) |
 
 </details>
 

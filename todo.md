@@ -1,6 +1,6 @@
 # 投稿前待办
 
-Calculator 的四个 GPT-5 格已补齐，下一步集中打磨论文。[计算器补测与固定页对照](docs/results.md#calculator-gpt5-profiles)
+Calculator 的 GPT-5 补测与 Table editor 的 Self 复测已归档。论文修改优先核对逐题配置和固定页的收益。[计算器](docs/results.md#calculator-gpt5-profiles) · [表格编辑器](docs/results.md#table-self-shared-selection)
 
 各项目已完成的实验、失败原因和费用统一查[结果记录](docs/results.md)，逐格查[主表与来源](README.md#按数据集模型和方法查-table-1)。
 

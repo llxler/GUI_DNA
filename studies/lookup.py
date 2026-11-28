@@ -22,6 +22,7 @@ MODEL_NAMES = paper.BACKBONES | paper.components.LABELS
 # Some rows combine multiple registered runs. Point readers to the actual join
 # instead of attributing every method to the latest run.
 ASSEMBLERS = {
+    paper.table_selection.FIELD: paper.table_selection,
     "duo_feature_bindings": paper.duo_features,
     "calculator_profiles": paper.calc_profiles,
     "source_diagnosis": paper.sources,
@@ -43,7 +44,7 @@ ASSEMBLERS = {
 def find_cell(matrix, dataset, model, method):
     project = DATASETS[dataset]
     path, row = paper.table_record(matrix[model], project)
-    if path[0] in ("module_rebuilds", "calculator_profiles") and method in row["inherited_methods"]:
+    if path[0] in ("module_rebuilds", "calculator_profiles", paper.table_selection.FIELD) and method in row["inherited_methods"]:
         earlier = dict(matrix)
         earlier[model] = {k: v for k, v in matrix[model].items() if k != path[0]}
         cell = find_cell(earlier, dataset, model, method)
@@ -90,8 +91,15 @@ def find_cell(matrix, dataset, model, method):
         cell["method_record"] = receipt
     if record_filter := row.get("record_filters", {}).get(method):
         cell["record_filter"] = record_filter
-    if path[0] in ("target_extensions", "module_rebuilds", "duo_feature_bindings", "calculator_profiles") and status == "measured":
+    if path[0] in ("target_extensions", "module_rebuilds", "duo_feature_bindings", "calculator_profiles", paper.table_selection.FIELD) and status == "measured":
         cell["targets"] = row["targets"]
+    if path[0] == paper.table_selection.FIELD:
+        cell["first_stage_record"] = row["first_stage_record"]
+        if "previous_same_configuration_score" in row:
+            cell["previous_same_configuration_score"] = row["previous_same_configuration_score"]
+        cell["verification_record"] = row["verification_record"]
+        if "fixed_score" in row:
+            cell["fixed_configuration_score"] = row["fixed_score"]
     if path[0] == "calculator_profiles":
         cell["earlier_delivery_record"] = row["earlier_delivery_record"]
         cell["verification_record"] = row["verification_record"]
@@ -112,7 +120,7 @@ def find_cell(matrix, dataset, model, method):
         cell["component_rebuilds"] = row["component_rebuilds"]
     if method in row.get("unavailable_reasons", {}):
         cell["unavailable_reason"] = row["unavailable_reasons"][method]
-    if path[0] == "module_rebuilds" and status != "measured":
+    if path[0] in ("module_rebuilds", paper.table_selection.FIELD) and status != "measured":
         earlier = dict(matrix)
         earlier[model] = {k: v for k, v in matrix[model].items() if k != path[0]}
         previous = find_cell(earlier, dataset, model, method)

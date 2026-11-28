@@ -6,7 +6,11 @@ WebApp1K-Duo 按题名给出的两个功能组装。Human 使用第三方人工�
 
 表格的编辑与矩形选区两个开关形成四种配置。GPT-5 表格原作者修订只看原实现和公开菜单操作，以两次独立请求修复入口事件。四种配置均须能打开、插行并在表外关闭菜单。计分复用五款模型已封存的逐题配置。[原作者修复协议](../studies/webbench/table/menu_propagation/author_repair/PROTOCOL.md)
 
-主表表格库合并了 GPT-5 按公开需求自查后写出的四个文件，以及它根据右键事件传播记录写出的入口修复。文件没有交叉，按登记顺序取首份通过公开检查的入口实现。七款模型各为 20 个目标重新选配置，同一选择分别在原库、只自查、只修入口和合并库上运行。表格 Self 的新模型自行划分模块并声明接口。接收器对对象或数组形式的接口声明保留完整内容，再请求模型写实现。若连续三份实现未通过菜单和选格准入，原作者可以根据真实点击轨迹，对自己的文件提交可唯一定位的局部替换。顶层编辑数组单列离线重放，每份答复只作用于它实际收到的源文件。仍未准入时，研究者的公共绑定把浏览器事件交给四个短函数。模型负责菜单 DOM、命令执行、菜单关闭和选区效果。旧代码也按相同选择重放。若处理函数调用仅存在于设计说明中的 API，原作者使用真实 DOM 节点独立修订同一函数。四项交互均成功却仍抛出异常的库，再按预先固定的顺序选择同作者四个新增处理函数的子集，和全装四函数、未额外接线的原库共用目标选择。[监听器选择与固定页](../studies/webbench/table/event_hooks/handler_selection/PROTOCOL.md)[真实参数的修订](../studies/webbench/table/event_hooks/dom_contract/PROTOCOL.md) · [事件接口](../studies/webbench/table/event_hooks/PROTOCOL.md)[四份 GPT-5 源码对照](../studies/webbench/table/author_modules/PROTOCOL.md) · [Self 建库与接收范围](../studies/webbench/table/model_modules/structured_design/PROTOCOL.md)
+主表表格库合并了 GPT-5 按公开需求自查后写出的四个文件，以及它根据右键事件传播记录写出的入口修复。文件没有交叉，按登记顺序取首份通过公开检查的入口实现。七款模型各为 20 个目标重新选配置，同一选择分别在原库、只自查、只修入口和合并库上运行。[四份 GPT-5 源码对照](../studies/webbench/table/author_modules/PROTOCOL.md)
+
+**表格编辑器的 Self** 七款目标模型分别实现并配置自己的库。研究者规定共享选区字段、菜单命令签名和模块边界。原模型编写插行等命令。菜单回退时研究者提供显示和转发。先在浏览器检查打开菜单、实际插行、表外关闭和点击选格，四项都通过且无运行时异常才准入。键盘修订把移动、范围、清除和编辑拆成短函数。模型返回坐标等状态变化，宿主把变化写到实际单元格。新实现必须保留已通过的公开动作且新增至少一项通过才替换旧版。最后用同一批配置对照最后一次修订前后的实现，再与新库固定全开、空宿主分别比较。每款模型均使用原来的 20 个目标。[逐模型成绩与费用](results.md#table-self-shared-selection) · [五阶段协议与对照](../studies/webbench/table/shared_selection/README.md)
+
+早先的 Self 研究尝试由模型自行定义接口，对未准入库按点击轨迹修复，或枚举同作者处理函数的子集。原始答复、固定页和同配置对照仍可独立复核。[接口设计](../studies/webbench/table/model_modules/structured_design/PROTOCOL.md) · [事件接口](../studies/webbench/table/event_hooks/PROTOCOL.md) · [真实参数的修订](../studies/webbench/table/event_hooks/dom_contract/PROTOCOL.md) · [监听器选择](../studies/webbench/table/event_hooks/handler_selection/PROTOCOL.md)
 
 计算器保留公开起始工程可用的数字与四则运算。每个 Self 模型自己实现科学键、记忆、外观及历史。通用绑定器负责接收按键、传递显示值和记忆值，具体运算由模型编写。修订只看公开操作，必须保留原先通过的检查并至少多过一项，按登记顺序最多重建三次。部署模型根据实际页面的按钮和操作结果选配置。正式评分分别交叉新旧源码和新旧选择，也重放固定页、无效按键和空宿主。Gemma 与 Qwen3.5 的按键清单混入了起始页按钮或重复列出运算。先从本模型的原始交付读取功能键，再逐键补交缺失运算，复用已封存的 20 份选择。另用已有数字的显示框检验召回。缺整组记忆键时由同模型分别写每键的显示表达式和记忆表达式，沿用其早晚按键顺序。[非空显示与独立数据](../studies/webbench/calculator/memory_recall/PROTOCOL.md)
 

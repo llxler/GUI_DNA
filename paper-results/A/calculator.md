@@ -7,9 +7,9 @@
 | 目标生成模型 | Direct | Human | GPT-5 | Self |
 | --- | ---: | ---: | ---: | ---: |
 | Gemma 3 12B | [8/20](../../studies/results/paper-performance-matrix.json#L1925) | [16/20](../../studies/results/paper-performance-matrix.json#L1926) | [7/20](../../studies/results/paper-performance-matrix.json#L2257) | [6/20](../../studies/results/paper-performance-matrix.json#L1971) |
-| Qwen3.5-9B | [4/20](../../studies/results/paper-performance-matrix.json#L4187) | [20/20](../../studies/results/paper-performance-matrix.json#L4188) | [11/20](../../studies/results/paper-performance-matrix.json#L4497) | [2/20](../../studies/results/paper-performance-matrix.json#L4237) |
-| GPT-OSS-120B | [10/20](../../studies/results/paper-performance-matrix.json#L9109) | [20/20](../../studies/results/paper-performance-matrix.json#L9110) | [11/20](../../studies/results/paper-performance-matrix.json#L9496) | [10/20](../../studies/results/paper-performance-matrix.json#L9154) |
-| DeepSeek V4 Flash | [10/20](../../studies/results/paper-performance-matrix.json#L11093) | [16/20](../../studies/results/paper-performance-matrix.json#L11094) | [10/20](../../studies/results/paper-performance-matrix.json#L11358) | [11/20](../../studies/results/paper-performance-matrix.json#L11138) |
+| Qwen3.5-9B | [4/20](../../studies/results/paper-performance-matrix.json#L4240) | [20/20](../../studies/results/paper-performance-matrix.json#L4241) | [11/20](../../studies/results/paper-performance-matrix.json#L4550) | [2/20](../../studies/results/paper-performance-matrix.json#L4290) |
+| GPT-OSS-120B | [10/20](../../studies/results/paper-performance-matrix.json#L9321) | [20/20](../../studies/results/paper-performance-matrix.json#L9322) | [11/20](../../studies/results/paper-performance-matrix.json#L9708) | [10/20](../../studies/results/paper-performance-matrix.json#L9366) |
+| DeepSeek V4 Flash | [10/20](../../studies/results/paper-performance-matrix.json#L11359) | [16/20](../../studies/results/paper-performance-matrix.json#L11360) | [10/20](../../studies/results/paper-performance-matrix.json#L11624) | [11/20](../../studies/results/paper-performance-matrix.json#L11404) |
 
 点击成绩可定位到主表 JSON 的对应行。建库失败对应论文空白格，无数据对应横线。
 

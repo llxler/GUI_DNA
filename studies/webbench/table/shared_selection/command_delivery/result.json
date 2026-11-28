@@ -1,0 +1,5986 @@
+{
+  "registration": "108864a6e78e7bc51ce8a6c09fbbd882087c00ef7dec8078f829b3e01bfe24dd",
+  "seal": "d712418becb92b065ba5d58459a8f4585138f5e96d78a76d4b9ba94db6f4732e",
+  "sources": {
+    "studies/webbench/table/shared_selection/command_delivery/run.py": "e7cdaa446d72f6e1e4b54155add9642497e0b89bedb1b4ccb88bc9a034e9b927",
+    "studies/webbench/table/shared_selection/command_delivery/PROTOCOL.md": "6b5fecbc10f12315b063236c8becc1c6fca3748febfb6f64edce24866658821d",
+    "studies/webbench/table/shared_selection/event_routing/run.py": "937dc49f6474248bcd3a053794b039ff7ad1c9e5c6d971ba99c9d8b255446c7d",
+    "studies/webbench/table/shared_selection/run.py": "2323ca125d0141ce3615062a9028ecedbdf31b87673f85688da6841bd4814465",
+    "artifacts/table-self-actions-20261128pm/seal.json": "ef13ee3d24605484f3b203a13f37c5a5776f0a58f1f9fe6da969ae2f6619dd9b",
+    "artifacts/table-self-routing-20261128pm/registration.json": "165fa7173e11a394fc010b43508b676882c8871f577cc17981ce99a93b299718",
+    "studies/webbench/table/shared_selection/event_routing/keys.js": "8a16359bd48f064f7ffcfc5b8100e7d37209ed7927207b1eade402b4087e4a0a",
+    "studies/webbench/table/shared_selection/event_routing/menu.js": "65b1dd44c41b657cc3f536ca93733949cfb6a748ba1f135581cee18b5326bfab"
+  },
+  "targets": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "models": {
+    "qwen/qwen3-coder-30b-a3b-instruct": [
+      {
+        "task": 1,
+        "arm": "self",
+        "count": 2,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c94456440b12e03fa8b73b3349304549f575dd8e89d2298344e1b791dce4de28",
+        "files_digest": "755f6403a433e6b75f609cdd4ad47576bec81c6cffbf8e1d1f453ba8b96538b8"
+      },
+      {
+        "task": 1,
+        "arm": "fixed-self",
+        "count": 6,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "a3bd1151fcbc8e438a7c9c84bc93a474bdb9617eb6ea58f794ea75d9f4aae4a8",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 1,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "67b973c979576e6e2029b677b078153329111b1fe2750ebba8c1db438d6dfce1",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 1,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "2bd9ebb7aeb0d45ba1bb8f596af47a5cacd52f73e64191e706f158dd40f8049c",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 2,
+        "arm": "self",
+        "count": 2,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "5694331e6e1d989eff3b3c5511be4d543b5693892dfe3690ffba4c35f3286734",
+        "files_digest": "755f6403a433e6b75f609cdd4ad47576bec81c6cffbf8e1d1f453ba8b96538b8"
+      },
+      {
+        "task": 2,
+        "arm": "fixed-self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8df68701196b1b235029fe501edb9ec186b1d220c523bd0bb5672d7373490f92",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 2,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "a5c4f0508164072f5b924f972b4bd9c00b8641bab6d33b8b6cb760413e91dc6e",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 2,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "96ff13b071ef900f3764c51e9efb4b2b87dca22fea07083aaedcbd7191f366ab",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 3,
+        "arm": "self",
+        "count": 2,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "14005d11d22cff2fbd37ed49ec733d384b3f1e9bbf2a0a4eb2f8ea4cc189c606",
+        "files_digest": "755f6403a433e6b75f609cdd4ad47576bec81c6cffbf8e1d1f453ba8b96538b8"
+      },
+      {
+        "task": 3,
+        "arm": "fixed-self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "52f0731c92e63eb0af011512c6568ec1ec999921cbc68ff6fea10ab99fac5e11",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 3,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "91e04ae3ee1b636216f65461a22bd09080ca9604b7e31ca8b7beff6d235dc74d",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 3,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "26b0d326b86d33ce89c7c3a7df2ef253aa0751beea8b4477041241e7d48595c0",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 4,
+        "arm": "self",
+        "count": 2,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "d80d30e120ed9d8ecadd3c63828a62d16a2c69f1e8aae16e09c6a313e07febe6",
+        "files_digest": "755f6403a433e6b75f609cdd4ad47576bec81c6cffbf8e1d1f453ba8b96538b8"
+      },
+      {
+        "task": 4,
+        "arm": "fixed-self",
+        "count": 6,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "0d62458b8fe6089a35fd64ea688df802293ffc602ed2a2b974b2e777b073314e",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 4,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "88a8967d708bac665a33bdc7b3a28798c958c773957f70698a4042a40a2f2a6a",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 4,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "3a52c0e9355bbd42cf1531e926b3c226423dc5a265a1a43305619fdc945faa5c",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 5,
+        "arm": "self",
+        "count": 3,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "441a582c5222e56e22c0f5dba06fd3502bb0bed3649c2a1aec1d75387cfb43ae",
+        "files_digest": "f0f61671e215cd77818d6475e99fc5b5212c513956cf5cadea450eb9737eea21"
+      },
+      {
+        "task": 5,
+        "arm": "fixed-self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "0b5463805462344de6ca4b5f51f5ad778efa2242433a0954551876db6503bbcf",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 5,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8dce7d319210d6111dfaaa7ca20a0f227bad8d4cb631334017d7dac412ea4a45",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 5,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "335a7ce2eea91769b688368cf31d5172227174aa1393d9ed7cca7eb06f0a9989",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 6,
+        "arm": "self",
+        "count": 3,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8e015be816c965ad89151c0d302f07c2fbcf3ae8a83e10791bba58b0dce908d2",
+        "files_digest": "f0f61671e215cd77818d6475e99fc5b5212c513956cf5cadea450eb9737eea21"
+      },
+      {
+        "task": 6,
+        "arm": "fixed-self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "9cc86d97f6b329a887a6cced796e352fb1fa57458454875bd7cd2e0aab5fbdfa",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 6,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "cba0e586e4a2ce6c2ae5842f5897727c1aaf543c2e05b2d04ffb9dc410148d43",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 6,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e21ff52a539cfdf3778657f4d165882bfd2062b8815d69eb58aa50666e89d642",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 7,
+        "arm": "self",
+        "count": 4,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "04016e79dc50ccf99f657b328cf498c90c7bb4654f3b4fb667621f8392bd8a14",
+        "files_digest": "95692bd0f25173d37058c653303b8ad2d2bc1ec64fdaeeabe6bebfc5dd6f27e2"
+      },
+      {
+        "task": 7,
+        "arm": "fixed-self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8dd87ee19b7bd902426bd37bbf4ae79a4f69469d83404ffa5306b82f179689b8",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 7,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "622343ad7df3696d914172a5e4c792c7cf1f5da251e6b28175d5f1a83f36da6c",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 7,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "47ffa4e2dbb5dacc2bbfef4f5c81e8c2bc820b3fdd26e39e2a823315ec5d07cb",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 8,
+        "arm": "self",
+        "count": 5,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "2f255e055cb7014cc2a38e8c97c1915aa761160a42dc1720078337e3df96909f",
+        "files_digest": "dbd50246b6807689c0cebac8da613e653d9e67964c7126680a35a4919a63ba27"
+      },
+      {
+        "task": 8,
+        "arm": "fixed-self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "43b91bcfac2d768326ea2342f51f282c12ff8d1fe11c8261e7dc5b9e1c89caca",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 8,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "69fc6e13d3840d37ef7d64254a8993cb028030beeec617453a1c4691a6e13b2d",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 8,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "644b337602fffab88e8bfa111bb33695996f725fb2366a9b55433fa97954a1bb",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 9,
+        "arm": "self",
+        "count": 5,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "7c2e7660d43b71a6b748d41ff8e24806c8a9eec7dc695b22c70b3e9443f0055e",
+        "files_digest": "dbd50246b6807689c0cebac8da613e653d9e67964c7126680a35a4919a63ba27"
+      },
+      {
+        "task": 9,
+        "arm": "fixed-self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "d85d8ab8ee2b473e515a63c33ed825415f37fd69da6da490e0af62b34afce1f3",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 9,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b7380d9ac4dd9a733b4a4d381914fcaf29081c42881401ea17d9c8999a894645",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 9,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "6602ba0bc4f73e1b94472a1945cb02007d3710c2e0dfc25d38d8512431cc1ee9",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 10,
+        "arm": "self",
+        "count": 4,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "3a2e06b81ba5782c1a3071c13d808155bcab7e8a8632d7d3405cba866fb9614a",
+        "files_digest": "95692bd0f25173d37058c653303b8ad2d2bc1ec64fdaeeabe6bebfc5dd6f27e2"
+      },
+      {
+        "task": 10,
+        "arm": "fixed-self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "d8253dead089eca1f9bcaf762035ca25410934851091605a28ec998f7e22656c",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 10,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "68cca49c02ecff90ac3a3c5d2fc357c773f1b2ca52ba756197b0f80954d80355",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 10,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e4f85a10b956342b4945b06b513cce220afc764c4e175ac56e628048098f8d07",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 11,
+        "arm": "self",
+        "count": 4,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "9279eb7ff49fab296304df3dbd3b7502a19b4cc980abfaba94c30849c8b0dd5c",
+        "files_digest": "95692bd0f25173d37058c653303b8ad2d2bc1ec64fdaeeabe6bebfc5dd6f27e2"
+      },
+      {
+        "task": 11,
+        "arm": "fixed-self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "799cea7fbd3dee413397f9a7e4c396fae1d27a0445ab2cd4edc92023fcb7aa32",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 11,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "40b038f8cb4669f285edc8cb47bdc4d24e4c1af9b890dacea962da4f7e5c9bb3",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 11,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "ae0f1709beceaf75325aac5e63ac1370e39174ce4126663bc9237c142c98e578",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 12,
+        "arm": "self",
+        "count": 4,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "b3792d94516f724df6272d6bb90c6ab859c3e85a4df00808222a3280c1e2f792",
+        "files_digest": "95692bd0f25173d37058c653303b8ad2d2bc1ec64fdaeeabe6bebfc5dd6f27e2"
+      },
+      {
+        "task": 12,
+        "arm": "fixed-self",
+        "count": 6,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "98e7b575a2fc06ee30ed5eb6dfaa91ec3e02cb6cf8d3ae51fe4e41773f72a24b",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 12,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8ec7addd53ef3d5e9401e53704c6d6cfc048566752ba6e4b9dae39ba9920577b",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 12,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "664dcb4e6e7e32f07c7dc4492de11d0a63a1dd965e1ccce841d16ce5b4af9347",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 13,
+        "arm": "self",
+        "count": 5,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8f597fb8ecd64cebcb1884078b7f09f671c26da09c4ee14775fedf2df56d84e7",
+        "files_digest": "dbd50246b6807689c0cebac8da613e653d9e67964c7126680a35a4919a63ba27"
+      },
+      {
+        "task": 13,
+        "arm": "fixed-self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "d0b0be0352761ec04fac01f3f20cc7eb42724983bcb0a99a4bc7fa7ff5a831ff",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 13,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "0b6655553b4d3bdace8810b0fc537de58912781d2cce7a5dc617cdb0d62730ec",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 13,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "6d9345648b83d45a09f6fb53c29dfdc6cca7045778357f0dee89731b9a4bcb22",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 14,
+        "arm": "self",
+        "count": 5,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "5e9cfe58929c36e16628d3b01fdc7e52692d832088fdc16c0d97de1004c2f264",
+        "files_digest": "dbd50246b6807689c0cebac8da613e653d9e67964c7126680a35a4919a63ba27"
+      },
+      {
+        "task": 14,
+        "arm": "fixed-self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "87f2d60cd7f9e158119f03ba308f281f88b8ee19f6f2e326c93568a9a8e5b262",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 14,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e303d3829bf086d322fe39a081ce6e190144c73b8657aac048d92d680aacec05",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 14,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "5cd240d568e16e26a8fa128e6c267ba7a712c7fa50403c968e90a0a87cbb9cca",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 15,
+        "arm": "self",
+        "count": 5,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b0f38761799a36f21fdd7ded063e0859af6f8ab83af74a963a40f4eefb33b914",
+        "files_digest": "dbd50246b6807689c0cebac8da613e653d9e67964c7126680a35a4919a63ba27"
+      },
+      {
+        "task": 15,
+        "arm": "fixed-self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "0d7bd6f9ae2e918448a55148a4620558923adbee86e046cf99e89c3d3a19b30a",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 15,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8c5c378ee614e1baa35b8005bf248e54c0da40cc778a5300bf63adf66d8ad8a1",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 15,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "7070c849394f82cfd12fb5034b03bd2a72676c7d8da72ce34ad11da9d02ef7e1",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 16,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "3435b91fad9a339b1b37509ba8e7a1fdc367229e85b9856de5a29bb76911920e",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 16,
+        "arm": "fixed-self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "3435b91fad9a339b1b37509ba8e7a1fdc367229e85b9856de5a29bb76911920e",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 16,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "5f0a882a490a1de0815de90d927032c37832fca1b81e86c37fdcb9aa7b9cb9b0",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 16,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "c5f51a552336866f3ce0b4ee67e10e5e3d16e767229c43442dc97c1903ac6272",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 17,
+        "arm": "self",
+        "count": 5,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "694d9ec9b4c9c4150888c69265eaa6f11993ae2b4cf46a25ba8c747379de3ed6",
+        "files_digest": "dbd50246b6807689c0cebac8da613e653d9e67964c7126680a35a4919a63ba27"
+      },
+      {
+        "task": 17,
+        "arm": "fixed-self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b0b664780bda8fab46cb47b172dc0808a014e8446db5ee5eded60a6fe3a9544f",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 17,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e57908e5669e4ad89a5731a32caa17c0ad4a978adc166ade2990dfb39c4fef22",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 17,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "81f7afb1ae292d7aca010308088963ec630921a1582d101016a2b885423ad5c0",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 18,
+        "arm": "self",
+        "count": 5,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "994a32e9311956e8d741f824ddf423f5147ab91a2456decb6c4795ad47584c86",
+        "files_digest": "dbd50246b6807689c0cebac8da613e653d9e67964c7126680a35a4919a63ba27"
+      },
+      {
+        "task": 18,
+        "arm": "fixed-self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "1d2fb99cbe71b37bd82aa711492a38ca8264ac7fd894016bbee579a97060a5bb",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 18,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8837d6e9d76f07ecdeaac77bf96706f1677ff5839ddd956765e50d2d66985bb6",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 18,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "da9fdc67262a4261e2ad5410e71769c1e3bb23824857bdbb4977a1af1660107b",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 19,
+        "arm": "self",
+        "count": 5,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b829357d6ba0bfbb1b869bff7e3ec1c95528031a83dbbc1b75f1377a1e6f1ff8",
+        "files_digest": "dbd50246b6807689c0cebac8da613e653d9e67964c7126680a35a4919a63ba27"
+      },
+      {
+        "task": 19,
+        "arm": "fixed-self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e531cffda4a6899ae2b05542c1dad2676f2e1ee911aafb91d7c4c60f19036cb3",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 19,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "63b4c0c25589dd736c9143756105f641c8de26e5e09e6b32e69157f237bd8880",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 19,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "f9bff034c6f3d420ee202be255a844d3eac0ceea32aff13c830cdadd292c7e3e",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 20,
+        "arm": "self",
+        "count": 5,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "62f4ec8794d1c7135c24f247a217b834f91b07872081168e25b10cac09afde4e",
+        "files_digest": "dbd50246b6807689c0cebac8da613e653d9e67964c7126680a35a4919a63ba27"
+      },
+      {
+        "task": 20,
+        "arm": "fixed-self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "ed53403c92b2996f36e6ee3568c04cfaf3144d48bd1db2f9cbffcbd464ddff5c",
+        "files_digest": "d38af7012ff6966547bac147a7f28d13c222985781c5705bf9acd32d17e702fe"
+      },
+      {
+        "task": 20,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e67f9ff4d82208ac80fb85cdaf108a0e6a650c974b8201b9ee029e399675be48",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 20,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "68192cab093659099b270067e1ff89c0d0c00fa13cc7c11bdecd98f4e510cd21",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      }
+    ],
+    "openai/gpt-oss-120b": [
+      {
+        "task": 1,
+        "arm": "self",
+        "count": 2,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "ef9282bd6ac71b6a2327f9f05c8b1615cd088aba4ca0111bf639aa56876a8f3c",
+        "files_digest": "b061706870d85498db63890d21faa0ebcca317d79a03adf1e804c24830b62333"
+      },
+      {
+        "task": 1,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "73dc7314fe0946470000b1d9e7155e4eef17edac09d90f74a7f56ba4d3e1fdc3",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 1,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "67b973c979576e6e2029b677b078153329111b1fe2750ebba8c1db438d6dfce1",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 2,
+        "arm": "self",
+        "count": 2,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "594fb493f36f4516a8f4b3998674e835efe3cc8af623f8d9cd402746ce85b86d",
+        "files_digest": "b061706870d85498db63890d21faa0ebcca317d79a03adf1e804c24830b62333"
+      },
+      {
+        "task": 2,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "8c8fcd3add7354776cc6ab0b78e71d39c1aeac75d7c3184374146d95c75fef14",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 2,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "a5c4f0508164072f5b924f972b4bd9c00b8641bab6d33b8b6cb760413e91dc6e",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 3,
+        "arm": "self",
+        "count": 2,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "d04e534f23bf6d0607f91a27535586e17543c1c400f7a8a000c34cf54ba26b3d",
+        "files_digest": "b061706870d85498db63890d21faa0ebcca317d79a03adf1e804c24830b62333"
+      },
+      {
+        "task": 3,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "4ef27c9b16ff200164ddac95028e38bc0cf7c84da31dd8e45e095a1ee3aa4061",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 3,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "91e04ae3ee1b636216f65461a22bd09080ca9604b7e31ca8b7beff6d235dc74d",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 4,
+        "arm": "self",
+        "count": 2,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "49d1fe245fa61a815842a9ed02ab3791010f3ef6ff703daa62ee2365f030a0ec",
+        "files_digest": "b061706870d85498db63890d21faa0ebcca317d79a03adf1e804c24830b62333"
+      },
+      {
+        "task": 4,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "5d66d75530ace6a2888145a59699d20847fa727b7e21ccfc46170a02098242f0",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 4,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "88a8967d708bac665a33bdc7b3a28798c958c773957f70698a4042a40a2f2a6a",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 5,
+        "arm": "self",
+        "count": 3,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "fdf7f890b8883f4baa0fe295c6cd6a96cb90e567a722d17b8cea2925bc5543f2",
+        "files_digest": "41ebc3d17ed1580546de31405a54cd29baa0a5634ad2eb0047b1fcb1993e3e0c"
+      },
+      {
+        "task": 5,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "cbae805ab8a5793a4ee8874e4e90adacb796f606678634c526fae05ad954145d",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 5,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8dce7d319210d6111dfaaa7ca20a0f227bad8d4cb631334017d7dac412ea4a45",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 6,
+        "arm": "self",
+        "count": 3,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "99d1e2e14ba298d6fcf221367ac2419c7e04211b0bd3eff87d26ad9489564f07",
+        "files_digest": "41ebc3d17ed1580546de31405a54cd29baa0a5634ad2eb0047b1fcb1993e3e0c"
+      },
+      {
+        "task": 6,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "076016b55ea5609e080899d571442cadcb60ed275703cfe00e0c032ea9a4d2f9",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 6,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "cba0e586e4a2ce6c2ae5842f5897727c1aaf543c2e05b2d04ffb9dc410148d43",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 7,
+        "arm": "self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "0b962d871367f3ba402e886d12b6eb01ba0ada429cdc2a3e8e97881d5851af4d",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 7,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "0b962d871367f3ba402e886d12b6eb01ba0ada429cdc2a3e8e97881d5851af4d",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 7,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "622343ad7df3696d914172a5e4c792c7cf1f5da251e6b28175d5f1a83f36da6c",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 8,
+        "arm": "self",
+        "count": 4,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "1bbf3b0823fe85a2120f879f42d95fa637522e27fe598ec1012701a41e473740",
+        "files_digest": "ded0788b6be9b81b131fc7a10ee7774a62a1cd161a6c49cba72151a1e003c620"
+      },
+      {
+        "task": 8,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "75245aeb2d97df2838c26b41f5b34e0934fb99a132160b5cf6e6d5688c87d9a9",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 8,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "69fc6e13d3840d37ef7d64254a8993cb028030beeec617453a1c4691a6e13b2d",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 9,
+        "arm": "self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "67647da45572770998ccf278e8c794df667b4e86f5ef5aecb2ae25da04c5698f",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 9,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "67647da45572770998ccf278e8c794df667b4e86f5ef5aecb2ae25da04c5698f",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 9,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b7380d9ac4dd9a733b4a4d381914fcaf29081c42881401ea17d9c8999a894645",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 10,
+        "arm": "self",
+        "count": 4,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "8552b3c79032eb9a2ad357f96e605beb4f4f4cb8c450ad8afde6bf323421b95e",
+        "files_digest": "ded0788b6be9b81b131fc7a10ee7774a62a1cd161a6c49cba72151a1e003c620"
+      },
+      {
+        "task": 10,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "e1e45c7f700e777e9ae5241c604455fd0ea9d88f215bdec271d6b34ce6be1ce7",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 10,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "68cca49c02ecff90ac3a3c5d2fc357c773f1b2ca52ba756197b0f80954d80355",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 11,
+        "arm": "self",
+        "count": 4,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "658badbb738a8417b82f514bab442f8a72093d50f81acdb6dca9cc43c835cec3",
+        "files_digest": "ded0788b6be9b81b131fc7a10ee7774a62a1cd161a6c49cba72151a1e003c620"
+      },
+      {
+        "task": 11,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "7a112c02f3fcaa19a4a944101d876ee37e50dc3e301e79d8f8cd9e979f2baddd",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 11,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "40b038f8cb4669f285edc8cb47bdc4d24e4c1af9b890dacea962da4f7e5c9bb3",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 12,
+        "arm": "self",
+        "count": 4,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "2cb5561e7044861fd3afd6db0f9786404955bf6d4aa5052c7607de084d54b246",
+        "files_digest": "ded0788b6be9b81b131fc7a10ee7774a62a1cd161a6c49cba72151a1e003c620"
+      },
+      {
+        "task": 12,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "76f2c960fa27bc9263666103a12c910d2a05ebc91b314a88d4cbf4116513b456",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 12,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8ec7addd53ef3d5e9401e53704c6d6cfc048566752ba6e4b9dae39ba9920577b",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 13,
+        "arm": "self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "cfaa31e129627c8f228d9af623f9bd0ebae5660842c5ff3e0cbefe58a4d12a77",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 13,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "cfaa31e129627c8f228d9af623f9bd0ebae5660842c5ff3e0cbefe58a4d12a77",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 13,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "0b6655553b4d3bdace8810b0fc537de58912781d2cce7a5dc617cdb0d62730ec",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 14,
+        "arm": "self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "d90128ee099515a92ed9620e43e6828f28f0e715c8457d9f6e6064762bae0108",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 14,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "d90128ee099515a92ed9620e43e6828f28f0e715c8457d9f6e6064762bae0108",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 14,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e303d3829bf086d322fe39a081ce6e190144c73b8657aac048d92d680aacec05",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 15,
+        "arm": "self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c98e9a02c567a3b9c72f6d31b52811e5f0be0af6f2bcfcbea0177be9b4e76822",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 15,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c98e9a02c567a3b9c72f6d31b52811e5f0be0af6f2bcfcbea0177be9b4e76822",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 15,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8c5c378ee614e1baa35b8005bf248e54c0da40cc778a5300bf63adf66d8ad8a1",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 16,
+        "arm": "self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "2f4c8b4f0f304b38a4ca1ab97b6850cbd42630ec4f93914f9200abc3df890f84",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 16,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "2f4c8b4f0f304b38a4ca1ab97b6850cbd42630ec4f93914f9200abc3df890f84",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 16,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "5f0a882a490a1de0815de90d927032c37832fca1b81e86c37fdcb9aa7b9cb9b0",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 17,
+        "arm": "self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "4d8adfbf387622f347e7f55d5f94e244b99e6bdd257b3e4c664c2ae06bbef39b",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 17,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "4d8adfbf387622f347e7f55d5f94e244b99e6bdd257b3e4c664c2ae06bbef39b",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 17,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e57908e5669e4ad89a5731a32caa17c0ad4a978adc166ade2990dfb39c4fef22",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 18,
+        "arm": "self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "7e4c9c2f936eaed8a9a5b70ff1252abc018f2aff34e6a7e08c301c6d02d32e1d",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 18,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "7e4c9c2f936eaed8a9a5b70ff1252abc018f2aff34e6a7e08c301c6d02d32e1d",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 18,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8837d6e9d76f07ecdeaac77bf96706f1677ff5839ddd956765e50d2d66985bb6",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 19,
+        "arm": "self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "a05916fa1beb1e268435ce77f91471498c04f6ed8defa567e66d821611811429",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 19,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "a05916fa1beb1e268435ce77f91471498c04f6ed8defa567e66d821611811429",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 19,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "63b4c0c25589dd736c9143756105f641c8de26e5e09e6b32e69157f237bd8880",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 20,
+        "arm": "self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "77012f35561c30cbbe3120a9a292c554f170dc3425da592e5539ca50f1463ef3",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 20,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "77012f35561c30cbbe3120a9a292c554f170dc3425da592e5539ca50f1463ef3",
+        "files_digest": "12fd220bfccb231ce5105a29e03ba8380fe76543a962bb7694eeb15572a3ba1e"
+      },
+      {
+        "task": 20,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e67f9ff4d82208ac80fb85cdaf108a0e6a650c974b8201b9ee029e399675be48",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      }
+    ],
+    "mistralai/mistral-small-3.2-24b-instruct": [
+      {
+        "task": 1,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 1,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 1,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "67b973c979576e6e2029b677b078153329111b1fe2750ebba8c1db438d6dfce1",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 1,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c329c04c2769b1c6d6545e92176af9de2a5870686d3e4732e882048d48e53852",
+        "files_digest": "4b19f77ac22f2eee1d447bcd5f4985d0ca437b367cedbdb31d8f450cd186629b"
+      },
+      {
+        "task": 2,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 2,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 2,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "a5c4f0508164072f5b924f972b4bd9c00b8641bab6d33b8b6cb760413e91dc6e",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 2,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "64fbbd26cb109db07046c88774e43edaa4c866187f8e4d562fe7fe73e75a00e8",
+        "files_digest": "4b19f77ac22f2eee1d447bcd5f4985d0ca437b367cedbdb31d8f450cd186629b"
+      },
+      {
+        "task": 3,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 3,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 3,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "91e04ae3ee1b636216f65461a22bd09080ca9604b7e31ca8b7beff6d235dc74d",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 3,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "66ee15dbe351d2950bcd95901aa66ef4791afd1de8b21a6d8c32c923854b4b14",
+        "files_digest": "4b19f77ac22f2eee1d447bcd5f4985d0ca437b367cedbdb31d8f450cd186629b"
+      },
+      {
+        "task": 4,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 4,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 4,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "88a8967d708bac665a33bdc7b3a28798c958c773957f70698a4042a40a2f2a6a",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 4,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "bb991d9eb0a231da3607142d9fdc3c5f046400253db3a38dfdfb2d49077993d4",
+        "files_digest": "4b19f77ac22f2eee1d447bcd5f4985d0ca437b367cedbdb31d8f450cd186629b"
+      },
+      {
+        "task": 5,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 5,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 5,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8dce7d319210d6111dfaaa7ca20a0f227bad8d4cb631334017d7dac412ea4a45",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 5,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "d2046dedee61ddf202cda09ecc76f94368f846efe28228cbe76b1384976e68bf",
+        "files_digest": "4b19f77ac22f2eee1d447bcd5f4985d0ca437b367cedbdb31d8f450cd186629b"
+      },
+      {
+        "task": 6,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 6,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 6,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "cba0e586e4a2ce6c2ae5842f5897727c1aaf543c2e05b2d04ffb9dc410148d43",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 6,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "77082fce88d0f931824d5ed785ab4f1f5392fcc758949b66518a290bb14a5107",
+        "files_digest": "4b19f77ac22f2eee1d447bcd5f4985d0ca437b367cedbdb31d8f450cd186629b"
+      },
+      {
+        "task": 7,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 7,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 7,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "622343ad7df3696d914172a5e4c792c7cf1f5da251e6b28175d5f1a83f36da6c",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 7,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e74035925b134cf1a9a69f803abac0a0376438e20984134c3df757e2518f7646",
+        "files_digest": "4b19f77ac22f2eee1d447bcd5f4985d0ca437b367cedbdb31d8f450cd186629b"
+      },
+      {
+        "task": 8,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 8,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 8,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "69fc6e13d3840d37ef7d64254a8993cb028030beeec617453a1c4691a6e13b2d",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 8,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "15a9d5edd46cab1af6c5b76e59604318ec64dafcf21cec209d70f4304ff0934e",
+        "files_digest": "4b19f77ac22f2eee1d447bcd5f4985d0ca437b367cedbdb31d8f450cd186629b"
+      },
+      {
+        "task": 9,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 9,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 9,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b7380d9ac4dd9a733b4a4d381914fcaf29081c42881401ea17d9c8999a894645",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 9,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "ed822b2d65574f05aae97deba9e91ed94e61e3768ac0964a22ee5a4072796b35",
+        "files_digest": "4b19f77ac22f2eee1d447bcd5f4985d0ca437b367cedbdb31d8f450cd186629b"
+      },
+      {
+        "task": 10,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 10,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 10,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "68cca49c02ecff90ac3a3c5d2fc357c773f1b2ca52ba756197b0f80954d80355",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 10,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "6051231192d60c58842fa73805b0e557cf41fb6366ba4d81f61d026b8934e5cb",
+        "files_digest": "4b19f77ac22f2eee1d447bcd5f4985d0ca437b367cedbdb31d8f450cd186629b"
+      },
+      {
+        "task": 11,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 11,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 11,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "40b038f8cb4669f285edc8cb47bdc4d24e4c1af9b890dacea962da4f7e5c9bb3",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 11,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "4c3e20e146086656a1a4a9dd8ba524abe7409392f73f0d792eee678aef252bb7",
+        "files_digest": "4b19f77ac22f2eee1d447bcd5f4985d0ca437b367cedbdb31d8f450cd186629b"
+      },
+      {
+        "task": 12,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 12,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 12,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8ec7addd53ef3d5e9401e53704c6d6cfc048566752ba6e4b9dae39ba9920577b",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 12,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "0d0e2139d4f94eb314134db0669f1c16cc24e5bc36947731a3e679b5b7acaeca",
+        "files_digest": "4b19f77ac22f2eee1d447bcd5f4985d0ca437b367cedbdb31d8f450cd186629b"
+      },
+      {
+        "task": 13,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 13,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 13,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "0b6655553b4d3bdace8810b0fc537de58912781d2cce7a5dc617cdb0d62730ec",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 13,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "67a45017eee14c74be4630020193171d902796afbc75926619a479961d018f03",
+        "files_digest": "4b19f77ac22f2eee1d447bcd5f4985d0ca437b367cedbdb31d8f450cd186629b"
+      },
+      {
+        "task": 14,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 14,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 14,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e303d3829bf086d322fe39a081ce6e190144c73b8657aac048d92d680aacec05",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 14,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "40abbb7fd7ff01e9d08d9ea0ba759148086ff89acfdc77b2902b6a6ac52c1880",
+        "files_digest": "4b19f77ac22f2eee1d447bcd5f4985d0ca437b367cedbdb31d8f450cd186629b"
+      },
+      {
+        "task": 15,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 15,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 15,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8c5c378ee614e1baa35b8005bf248e54c0da40cc778a5300bf63adf66d8ad8a1",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 15,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "987d03854d2941df9e6fa1e692911fe535a4d5f98419350cb91af808779e679b",
+        "files_digest": "4b19f77ac22f2eee1d447bcd5f4985d0ca437b367cedbdb31d8f450cd186629b"
+      },
+      {
+        "task": 16,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 16,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 16,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "5f0a882a490a1de0815de90d927032c37832fca1b81e86c37fdcb9aa7b9cb9b0",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 16,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "0a5d4759610fb843cf87a8883f32522f081520cf44055a075734708afd1a1a8e",
+        "files_digest": "4b19f77ac22f2eee1d447bcd5f4985d0ca437b367cedbdb31d8f450cd186629b"
+      },
+      {
+        "task": 17,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 17,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 17,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e57908e5669e4ad89a5731a32caa17c0ad4a978adc166ade2990dfb39c4fef22",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 17,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "7fdb3845f9541eac03dcd8916b06880a5570e456ec2495cc723ab21bb85d3ab0",
+        "files_digest": "4b19f77ac22f2eee1d447bcd5f4985d0ca437b367cedbdb31d8f450cd186629b"
+      },
+      {
+        "task": 18,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 18,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 18,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8837d6e9d76f07ecdeaac77bf96706f1677ff5839ddd956765e50d2d66985bb6",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 18,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "d9b0191931c1a5b20c1f6204e753a595671ab754d78becfee79030dce72cdba3",
+        "files_digest": "4b19f77ac22f2eee1d447bcd5f4985d0ca437b367cedbdb31d8f450cd186629b"
+      },
+      {
+        "task": 19,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 19,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 19,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "63b4c0c25589dd736c9143756105f641c8de26e5e09e6b32e69157f237bd8880",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 19,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "577b6138656b284d4497539d3d854b7227ab7bcf8cdf04ed45c3a685acd52144",
+        "files_digest": "4b19f77ac22f2eee1d447bcd5f4985d0ca437b367cedbdb31d8f450cd186629b"
+      },
+      {
+        "task": 20,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 20,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 20,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e67f9ff4d82208ac80fb85cdaf108a0e6a650c974b8201b9ee029e399675be48",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 20,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "01d2d6a85dae43d3c844a01e5025eaa2c3793e5dc20cac489880117e4ec18bf6",
+        "files_digest": "4b19f77ac22f2eee1d447bcd5f4985d0ca437b367cedbdb31d8f450cd186629b"
+      }
+    ],
+    "google/gemma-3-12b-it": [
+      {
+        "task": 1,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 1,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 1,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "67b973c979576e6e2029b677b078153329111b1fe2750ebba8c1db438d6dfce1",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 1,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "2bd9ebb7aeb0d45ba1bb8f596af47a5cacd52f73e64191e706f158dd40f8049c",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 2,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 2,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 2,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "a5c4f0508164072f5b924f972b4bd9c00b8641bab6d33b8b6cb760413e91dc6e",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 2,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "96ff13b071ef900f3764c51e9efb4b2b87dca22fea07083aaedcbd7191f366ab",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 3,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 3,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 3,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "91e04ae3ee1b636216f65461a22bd09080ca9604b7e31ca8b7beff6d235dc74d",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 3,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "26b0d326b86d33ce89c7c3a7df2ef253aa0751beea8b4477041241e7d48595c0",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 4,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 4,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 4,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "88a8967d708bac665a33bdc7b3a28798c958c773957f70698a4042a40a2f2a6a",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 4,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "3a52c0e9355bbd42cf1531e926b3c226423dc5a265a1a43305619fdc945faa5c",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 5,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 5,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 5,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8dce7d319210d6111dfaaa7ca20a0f227bad8d4cb631334017d7dac412ea4a45",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 5,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "335a7ce2eea91769b688368cf31d5172227174aa1393d9ed7cca7eb06f0a9989",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 6,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 6,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 6,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "cba0e586e4a2ce6c2ae5842f5897727c1aaf543c2e05b2d04ffb9dc410148d43",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 6,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e21ff52a539cfdf3778657f4d165882bfd2062b8815d69eb58aa50666e89d642",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 7,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 7,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 7,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "622343ad7df3696d914172a5e4c792c7cf1f5da251e6b28175d5f1a83f36da6c",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 7,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "47ffa4e2dbb5dacc2bbfef4f5c81e8c2bc820b3fdd26e39e2a823315ec5d07cb",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 8,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 8,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 8,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "69fc6e13d3840d37ef7d64254a8993cb028030beeec617453a1c4691a6e13b2d",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 8,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "644b337602fffab88e8bfa111bb33695996f725fb2366a9b55433fa97954a1bb",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 9,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 9,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 9,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b7380d9ac4dd9a733b4a4d381914fcaf29081c42881401ea17d9c8999a894645",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 9,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "6602ba0bc4f73e1b94472a1945cb02007d3710c2e0dfc25d38d8512431cc1ee9",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 10,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 10,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 10,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "68cca49c02ecff90ac3a3c5d2fc357c773f1b2ca52ba756197b0f80954d80355",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 10,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e4f85a10b956342b4945b06b513cce220afc764c4e175ac56e628048098f8d07",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 11,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 11,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 11,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "40b038f8cb4669f285edc8cb47bdc4d24e4c1af9b890dacea962da4f7e5c9bb3",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 11,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "ae0f1709beceaf75325aac5e63ac1370e39174ce4126663bc9237c142c98e578",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 12,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 12,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 12,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8ec7addd53ef3d5e9401e53704c6d6cfc048566752ba6e4b9dae39ba9920577b",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 12,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "664dcb4e6e7e32f07c7dc4492de11d0a63a1dd965e1ccce841d16ce5b4af9347",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 13,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 13,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 13,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "0b6655553b4d3bdace8810b0fc537de58912781d2cce7a5dc617cdb0d62730ec",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 13,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "6d9345648b83d45a09f6fb53c29dfdc6cca7045778357f0dee89731b9a4bcb22",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 14,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 14,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 14,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e303d3829bf086d322fe39a081ce6e190144c73b8657aac048d92d680aacec05",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 14,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "5cd240d568e16e26a8fa128e6c267ba7a712c7fa50403c968e90a0a87cbb9cca",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 15,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 15,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 15,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8c5c378ee614e1baa35b8005bf248e54c0da40cc778a5300bf63adf66d8ad8a1",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 15,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "7070c849394f82cfd12fb5034b03bd2a72676c7d8da72ce34ad11da9d02ef7e1",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 16,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 16,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 16,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "5f0a882a490a1de0815de90d927032c37832fca1b81e86c37fdcb9aa7b9cb9b0",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 16,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "c5f51a552336866f3ce0b4ee67e10e5e3d16e767229c43442dc97c1903ac6272",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 17,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 17,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 17,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e57908e5669e4ad89a5731a32caa17c0ad4a978adc166ade2990dfb39c4fef22",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 17,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "81f7afb1ae292d7aca010308088963ec630921a1582d101016a2b885423ad5c0",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 18,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 18,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 18,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8837d6e9d76f07ecdeaac77bf96706f1677ff5839ddd956765e50d2d66985bb6",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 18,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "da9fdc67262a4261e2ad5410e71769c1e3bb23824857bdbb4977a1af1660107b",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 19,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 19,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 19,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "63b4c0c25589dd736c9143756105f641c8de26e5e09e6b32e69157f237bd8880",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 19,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "f9bff034c6f3d420ee202be255a844d3eac0ceea32aff13c830cdadd292c7e3e",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 20,
+        "arm": "self",
+        "count": null,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 20,
+        "arm": "fixed-self",
+        "count": 2,
+        "status": "build_failed",
+        "passed": null,
+        "report_sha256": null
+      },
+      {
+        "task": 20,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e67f9ff4d82208ac80fb85cdaf108a0e6a650c974b8201b9ee029e399675be48",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 20,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "68192cab093659099b270067e1ff89c0d0c00fa13cc7c11bdecd98f4e510cd21",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      }
+    ],
+    "qwen/qwen3.5-9b": [
+      {
+        "task": 1,
+        "arm": "self",
+        "count": 2,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "80bc2eed07172eb5f142ac5c8cafae42d62b6e2bcfdf409aed90bab5c7e97c45",
+        "files_digest": "1573dda9b52ae31608e24f546f372a985c389d301f3b32fedbc17add39dfd2c5"
+      },
+      {
+        "task": 1,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "f2e1bb77457296baff9d0bdd1344029cdd401a2f90e239a7b6132bda6e785907",
+        "files_digest": "203a4e023d2d9211b2fa7dcf0090b55b250dce45b9c16eccb66aecc2556a7045"
+      },
+      {
+        "task": 1,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "67b973c979576e6e2029b677b078153329111b1fe2750ebba8c1db438d6dfce1",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 1,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "2bd9ebb7aeb0d45ba1bb8f596af47a5cacd52f73e64191e706f158dd40f8049c",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 2,
+        "arm": "self",
+        "count": 2,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8ee66f7f5f06b894fb9a8e911d0344d811fb953afc8281eb1c2bcb40942cece9",
+        "files_digest": "1573dda9b52ae31608e24f546f372a985c389d301f3b32fedbc17add39dfd2c5"
+      },
+      {
+        "task": 2,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "cc93195a2cfaf795eb4a1a1a225d43d9e154f5a9c666e84a4640d177a7448706",
+        "files_digest": "203a4e023d2d9211b2fa7dcf0090b55b250dce45b9c16eccb66aecc2556a7045"
+      },
+      {
+        "task": 2,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "a5c4f0508164072f5b924f972b4bd9c00b8641bab6d33b8b6cb760413e91dc6e",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 2,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "96ff13b071ef900f3764c51e9efb4b2b87dca22fea07083aaedcbd7191f366ab",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 3,
+        "arm": "self",
+        "count": 2,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "a188afe40fa38a10818f7df4a34043ac362a35cc67b48dca1ec784f374eb35a4",
+        "files_digest": "1573dda9b52ae31608e24f546f372a985c389d301f3b32fedbc17add39dfd2c5"
+      },
+      {
+        "task": 3,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "5a69c0bbd4e654b4fb365966af912dcdf47f1534f0f8cad3cb306f1a0a6adf88",
+        "files_digest": "203a4e023d2d9211b2fa7dcf0090b55b250dce45b9c16eccb66aecc2556a7045"
+      },
+      {
+        "task": 3,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "91e04ae3ee1b636216f65461a22bd09080ca9604b7e31ca8b7beff6d235dc74d",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 3,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "26b0d326b86d33ce89c7c3a7df2ef253aa0751beea8b4477041241e7d48595c0",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 4,
+        "arm": "self",
+        "count": 2,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "1559808553b74126e359dcd0bf5b070d4826866d477f062cb9bce816be4d658e",
+        "files_digest": "1573dda9b52ae31608e24f546f372a985c389d301f3b32fedbc17add39dfd2c5"
+      },
+      {
+        "task": 4,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "fb51b3845e009f02945a707ea8fd72206554547e6f9bd5e4877ff58619a41082",
+        "files_digest": "203a4e023d2d9211b2fa7dcf0090b55b250dce45b9c16eccb66aecc2556a7045"
+      },
+      {
+        "task": 4,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "88a8967d708bac665a33bdc7b3a28798c958c773957f70698a4042a40a2f2a6a",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 4,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "3a52c0e9355bbd42cf1531e926b3c226423dc5a265a1a43305619fdc945faa5c",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 5,
+        "arm": "self",
+        "count": 3,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "fc39a72a54759881401517a04ded9a7fcae8e8860001b1bca160843b1cbed65b",
+        "files_digest": "1ab9e46378e54a95d6b3d920e0ab5c7f846165d86dd403d988c9236544a7b4fb"
+      },
+      {
+        "task": 5,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "6aa62e3911b3321849ce80b1c5d8a1375a912b8829b289f93c52317d0777cfb2",
+        "files_digest": "203a4e023d2d9211b2fa7dcf0090b55b250dce45b9c16eccb66aecc2556a7045"
+      },
+      {
+        "task": 5,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8dce7d319210d6111dfaaa7ca20a0f227bad8d4cb631334017d7dac412ea4a45",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 5,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "335a7ce2eea91769b688368cf31d5172227174aa1393d9ed7cca7eb06f0a9989",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 6,
+        "arm": "self",
+        "count": 3,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "044d42715ee412afe4acf776dad8b667b714099e58614f88b94d42b7a0ef6d5c",
+        "files_digest": "1ab9e46378e54a95d6b3d920e0ab5c7f846165d86dd403d988c9236544a7b4fb"
+      },
+      {
+        "task": 6,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "5ea4614bb01428fce8c65f39116ae5810da7e7102755f2e7ad89ab98b56bee18",
+        "files_digest": "203a4e023d2d9211b2fa7dcf0090b55b250dce45b9c16eccb66aecc2556a7045"
+      },
+      {
+        "task": 6,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "cba0e586e4a2ce6c2ae5842f5897727c1aaf543c2e05b2d04ffb9dc410148d43",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 6,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e21ff52a539cfdf3778657f4d165882bfd2062b8815d69eb58aa50666e89d642",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 7,
+        "arm": "self",
+        "count": 3,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "061c3116ed1d944bc7726434fe517a8447e8a91e24c8d0cf51436ce71e7003d6",
+        "files_digest": "1ab9e46378e54a95d6b3d920e0ab5c7f846165d86dd403d988c9236544a7b4fb"
+      },
+      {
+        "task": 7,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "9d9b2d093208e10ec5d0544bf3e390eb34c471266a588f28f57529c6c5e3cdfd",
+        "files_digest": "203a4e023d2d9211b2fa7dcf0090b55b250dce45b9c16eccb66aecc2556a7045"
+      },
+      {
+        "task": 7,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "622343ad7df3696d914172a5e4c792c7cf1f5da251e6b28175d5f1a83f36da6c",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 7,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "47ffa4e2dbb5dacc2bbfef4f5c81e8c2bc820b3fdd26e39e2a823315ec5d07cb",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 8,
+        "arm": "self",
+        "count": 3,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "1a502144d1db3c65e1a3f176ff79a69b92373047d2840094a6481a1b8355fe86",
+        "files_digest": "1ab9e46378e54a95d6b3d920e0ab5c7f846165d86dd403d988c9236544a7b4fb"
+      },
+      {
+        "task": 8,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "325ab00518973169e45eb1647255b3a9b201477fbd19edf94808282f5ea9a781",
+        "files_digest": "203a4e023d2d9211b2fa7dcf0090b55b250dce45b9c16eccb66aecc2556a7045"
+      },
+      {
+        "task": 8,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "69fc6e13d3840d37ef7d64254a8993cb028030beeec617453a1c4691a6e13b2d",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 8,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "644b337602fffab88e8bfa111bb33695996f725fb2366a9b55433fa97954a1bb",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 9,
+        "arm": "self",
+        "count": 3,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "01343c0f4fbb5885daa017944e9ecee10daea81fd851f33f4248e072666d4e82",
+        "files_digest": "1ab9e46378e54a95d6b3d920e0ab5c7f846165d86dd403d988c9236544a7b4fb"
+      },
+      {
+        "task": 9,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "d465520d0f0b3ae2b5c946946cbed289f3ca91f84813e2b86af9757e37eabb61",
+        "files_digest": "203a4e023d2d9211b2fa7dcf0090b55b250dce45b9c16eccb66aecc2556a7045"
+      },
+      {
+        "task": 9,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b7380d9ac4dd9a733b4a4d381914fcaf29081c42881401ea17d9c8999a894645",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 9,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "6602ba0bc4f73e1b94472a1945cb02007d3710c2e0dfc25d38d8512431cc1ee9",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 10,
+        "arm": "self",
+        "count": 4,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "f54be15a4452243eb6433f6c29b26cb4bec32fa8aef6681a6dc601324244a923",
+        "files_digest": "51e3be7d4b4f4003ac07fcdaeeb1ce56a9f9db3941ead5483051787477ba7743"
+      },
+      {
+        "task": 10,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "10e59c4c20fc9eb59a597a1087c4feb58f7ec4fc2ba1dee4261ca57546ebb8f3",
+        "files_digest": "203a4e023d2d9211b2fa7dcf0090b55b250dce45b9c16eccb66aecc2556a7045"
+      },
+      {
+        "task": 10,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "68cca49c02ecff90ac3a3c5d2fc357c773f1b2ca52ba756197b0f80954d80355",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 10,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e4f85a10b956342b4945b06b513cce220afc764c4e175ac56e628048098f8d07",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 11,
+        "arm": "self",
+        "count": 4,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "44532de4a0790ca363e00ea8214303cc8151fa7f8085a25c6e87005bd7b1d79d",
+        "files_digest": "51e3be7d4b4f4003ac07fcdaeeb1ce56a9f9db3941ead5483051787477ba7743"
+      },
+      {
+        "task": 11,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "bb55c7c530902576e4a25bf5e157ed7dd5d6027f80f86bdd449db1459d500325",
+        "files_digest": "203a4e023d2d9211b2fa7dcf0090b55b250dce45b9c16eccb66aecc2556a7045"
+      },
+      {
+        "task": 11,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "40b038f8cb4669f285edc8cb47bdc4d24e4c1af9b890dacea962da4f7e5c9bb3",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 11,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "ae0f1709beceaf75325aac5e63ac1370e39174ce4126663bc9237c142c98e578",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 12,
+        "arm": "self",
+        "count": 4,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "76a1cdcda24874c018915b1125639f7bdaf6f6e6f2551873c92fcafc8141f29e",
+        "files_digest": "51e3be7d4b4f4003ac07fcdaeeb1ce56a9f9db3941ead5483051787477ba7743"
+      },
+      {
+        "task": 12,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "edf62aa944f53c4872d1de1febb51136dbed137a7a4e2edb26131359cb07067e",
+        "files_digest": "203a4e023d2d9211b2fa7dcf0090b55b250dce45b9c16eccb66aecc2556a7045"
+      },
+      {
+        "task": 12,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8ec7addd53ef3d5e9401e53704c6d6cfc048566752ba6e4b9dae39ba9920577b",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 12,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "664dcb4e6e7e32f07c7dc4492de11d0a63a1dd965e1ccce841d16ce5b4af9347",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 13,
+        "arm": "self",
+        "count": 5,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "0fd933a65ecbd5d33222f1b543b150a0e97e9e3b2f3f9ce4aa9db3d45fbf430f",
+        "files_digest": "53ccc7151d4212435033ebb0c23b86c85b257a6a135db62a1303d1f97fc050d1"
+      },
+      {
+        "task": 13,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "4430d654fc409a813e05dfe2853079a702c8c5c3e314679f4b218848a541cd7f",
+        "files_digest": "203a4e023d2d9211b2fa7dcf0090b55b250dce45b9c16eccb66aecc2556a7045"
+      },
+      {
+        "task": 13,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "0b6655553b4d3bdace8810b0fc537de58912781d2cce7a5dc617cdb0d62730ec",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 13,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "6d9345648b83d45a09f6fb53c29dfdc6cca7045778357f0dee89731b9a4bcb22",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 14,
+        "arm": "self",
+        "count": 5,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "49b57d3f51257bc708ee871b22463ff829dc46fb16bb9a9454fb7866da16e1df",
+        "files_digest": "53ccc7151d4212435033ebb0c23b86c85b257a6a135db62a1303d1f97fc050d1"
+      },
+      {
+        "task": 14,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "a49aa41a888d3512a1314ae4840de159e703a544912d235af0b6abf083b182f8",
+        "files_digest": "203a4e023d2d9211b2fa7dcf0090b55b250dce45b9c16eccb66aecc2556a7045"
+      },
+      {
+        "task": 14,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e303d3829bf086d322fe39a081ce6e190144c73b8657aac048d92d680aacec05",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 14,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "5cd240d568e16e26a8fa128e6c267ba7a712c7fa50403c968e90a0a87cbb9cca",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 15,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "a7382542092d5e1b46a34203202ca0f5e08177a347891b4d706eec89f1177f3c",
+        "files_digest": "f86d970edddf88e539606aa5aa7a0017d063530563bd68241e9450acc3804487"
+      },
+      {
+        "task": 15,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "5aed6f0975a506059b76521cd653971bf2a30bd567fabc6c5978378601c15735",
+        "files_digest": "203a4e023d2d9211b2fa7dcf0090b55b250dce45b9c16eccb66aecc2556a7045"
+      },
+      {
+        "task": 15,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8c5c378ee614e1baa35b8005bf248e54c0da40cc778a5300bf63adf66d8ad8a1",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 15,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "7070c849394f82cfd12fb5034b03bd2a72676c7d8da72ce34ad11da9d02ef7e1",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 16,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "d0b9718c7582cbc6b8c5ee5f97c149d3a814ccc216cc69239621b72d142993a9",
+        "files_digest": "f86d970edddf88e539606aa5aa7a0017d063530563bd68241e9450acc3804487"
+      },
+      {
+        "task": 16,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "c0720a3af28de8bc4c811f1f249fc53373af26b9ed7c91957c6b782a5a111027",
+        "files_digest": "203a4e023d2d9211b2fa7dcf0090b55b250dce45b9c16eccb66aecc2556a7045"
+      },
+      {
+        "task": 16,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "5f0a882a490a1de0815de90d927032c37832fca1b81e86c37fdcb9aa7b9cb9b0",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 16,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "c5f51a552336866f3ce0b4ee67e10e5e3d16e767229c43442dc97c1903ac6272",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 17,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "2bcefd94c55a98e679b6e550ba7b78752aae454a353406c61bf26d2c30fdb8d5",
+        "files_digest": "f86d970edddf88e539606aa5aa7a0017d063530563bd68241e9450acc3804487"
+      },
+      {
+        "task": 17,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "eb3c3fbd154c88a4eb360a001b7b51e75a0389735c454234002440850c90d360",
+        "files_digest": "203a4e023d2d9211b2fa7dcf0090b55b250dce45b9c16eccb66aecc2556a7045"
+      },
+      {
+        "task": 17,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e57908e5669e4ad89a5731a32caa17c0ad4a978adc166ade2990dfb39c4fef22",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 17,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "81f7afb1ae292d7aca010308088963ec630921a1582d101016a2b885423ad5c0",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 18,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "d8a260c317e0ca0cae6d397f231f84e4dfb5509f41f2c13e322bb175c546809a",
+        "files_digest": "f86d970edddf88e539606aa5aa7a0017d063530563bd68241e9450acc3804487"
+      },
+      {
+        "task": 18,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "933357956edfce20b144b53e9b9640f808149aed6e45c94a870d0abf7aecb087",
+        "files_digest": "203a4e023d2d9211b2fa7dcf0090b55b250dce45b9c16eccb66aecc2556a7045"
+      },
+      {
+        "task": 18,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8837d6e9d76f07ecdeaac77bf96706f1677ff5839ddd956765e50d2d66985bb6",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 18,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "da9fdc67262a4261e2ad5410e71769c1e3bb23824857bdbb4977a1af1660107b",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 19,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "473144c97e0786c53c25e207daef413bbec7d7ec68bebca31e4a84c30e21b769",
+        "files_digest": "f86d970edddf88e539606aa5aa7a0017d063530563bd68241e9450acc3804487"
+      },
+      {
+        "task": 19,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "ff2dc9420d1a9130dae781bc8e1070fec2c2c2a4aefbffd8bc2927ae547ffc7b",
+        "files_digest": "203a4e023d2d9211b2fa7dcf0090b55b250dce45b9c16eccb66aecc2556a7045"
+      },
+      {
+        "task": 19,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "63b4c0c25589dd736c9143756105f641c8de26e5e09e6b32e69157f237bd8880",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 19,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "f9bff034c6f3d420ee202be255a844d3eac0ceea32aff13c830cdadd292c7e3e",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      },
+      {
+        "task": 20,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "00678f4c149169dffaba601f6d639d737d835dd449d921e103ba4385164172e8",
+        "files_digest": "f86d970edddf88e539606aa5aa7a0017d063530563bd68241e9450acc3804487"
+      },
+      {
+        "task": 20,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "9eb6ebc8b68be189b3d6876492c535c613cf089959505d510ac2d66ce9bec012",
+        "files_digest": "203a4e023d2d9211b2fa7dcf0090b55b250dce45b9c16eccb66aecc2556a7045"
+      },
+      {
+        "task": 20,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e67f9ff4d82208ac80fb85cdaf108a0e6a650c974b8201b9ee029e399675be48",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 20,
+        "arm": "menu-shell",
+        "count": 1,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "68192cab093659099b270067e1ff89c0d0c00fa13cc7c11bdecd98f4e510cd21",
+        "files_digest": "0d3469ae1aabdc8949e6ec83d183f88d3e18d05fa67c8e1b34c7fb43e6afb253"
+      }
+    ],
+    "deepseek/deepseek-v4-flash": [
+      {
+        "task": 1,
+        "arm": "self",
+        "count": 5,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "0327d96d71c2c1aabd760c987119c287f15ca7b358007821a2ed32ebecb7737d",
+        "files_digest": "7cb63482c7ec8a9a1f8ab3ca78775ac0a37efc9ceefb4b4048067640038b9519"
+      },
+      {
+        "task": 1,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "556ec09394b359197ed79ecc996d5dbdf5e9fc8f3e6beafcc572f2e650ba9f2f",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 1,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "67b973c979576e6e2029b677b078153329111b1fe2750ebba8c1db438d6dfce1",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 2,
+        "arm": "self",
+        "count": 2,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "61aff0fcc836dac426309abeb8b1c1099ce878d0ca4fa5572a194176b2de2551",
+        "files_digest": "2bf88e3ccbe4b427f9b460df8cc1fb6cbde0e9c5eca3675cbb30d34ec0db050f"
+      },
+      {
+        "task": 2,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "d94120669e6ea4aea7088b7ec411f81991c61421b774fdc97ebbd7ba72eaa7d0",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 2,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "a5c4f0508164072f5b924f972b4bd9c00b8641bab6d33b8b6cb760413e91dc6e",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 3,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "4f93b0702e6e8f2dfae9eef0d1188589cf9a9e2185a432e19b537a6a023f9dea",
+        "files_digest": "dd53366d3750af4f65f6440067f4756a07da72502d9151ebf36cf6b51627d5b1"
+      },
+      {
+        "task": 3,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "aed65ce4c1025a3e3da0d2ff900c0d32401bc581187de929a5b975640f2bb610",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 3,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "91e04ae3ee1b636216f65461a22bd09080ca9604b7e31ca8b7beff6d235dc74d",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 4,
+        "arm": "self",
+        "count": 2,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "f020edbbfe0cad9d203be22b3974727e06269baef5161493bf2497b904f9b846",
+        "files_digest": "2bf88e3ccbe4b427f9b460df8cc1fb6cbde0e9c5eca3675cbb30d34ec0db050f"
+      },
+      {
+        "task": 4,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "70dc5117d3e5a5357f96f5e86f7bd2578bfb77d95fddd623e3a933782fa5bc27",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 4,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "88a8967d708bac665a33bdc7b3a28798c958c773957f70698a4042a40a2f2a6a",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 5,
+        "arm": "self",
+        "count": 5,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "61fd62d1e68c82864462522de8936470452646f7aa44500c8373ed93e1bf9136",
+        "files_digest": "7cb63482c7ec8a9a1f8ab3ca78775ac0a37efc9ceefb4b4048067640038b9519"
+      },
+      {
+        "task": 5,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "0af98ebb03b00b9c9b9929de4eb1aaeb096c1cd2d4c00388f33b80d91f971af4",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 5,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8dce7d319210d6111dfaaa7ca20a0f227bad8d4cb631334017d7dac412ea4a45",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 6,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "3d5c899c5e33fe4e610c311044a7cadb79ea6955dcf69301daf9c6464e420621",
+        "files_digest": "dd53366d3750af4f65f6440067f4756a07da72502d9151ebf36cf6b51627d5b1"
+      },
+      {
+        "task": 6,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "338c3cdefe8e6c00d7996cf0e41bdf127aa4b110ccaa50ef15ad002a7ed1ae34",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 6,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "cba0e586e4a2ce6c2ae5842f5897727c1aaf543c2e05b2d04ffb9dc410148d43",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 7,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "f8813680f306d0aea9cf43f2fb9a73a26ed41055ca4e9b4ad097b831757cdf52",
+        "files_digest": "dd53366d3750af4f65f6440067f4756a07da72502d9151ebf36cf6b51627d5b1"
+      },
+      {
+        "task": 7,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "66a1b95eba02cb8fd9d81e1fbe6224025b0b7743acae0823ed4cc4b1740aa803",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 7,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "622343ad7df3696d914172a5e4c792c7cf1f5da251e6b28175d5f1a83f36da6c",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 8,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "b72676862fadb701da5e7682ccddd1240a0da7f126495d3a90ed72950644cf3d",
+        "files_digest": "dd53366d3750af4f65f6440067f4756a07da72502d9151ebf36cf6b51627d5b1"
+      },
+      {
+        "task": 8,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "7bdc2fabe4e580d1797a690b2a3213c205199b6e5402bb583b31eb1956421258",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 8,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "69fc6e13d3840d37ef7d64254a8993cb028030beeec617453a1c4691a6e13b2d",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 9,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "f933396cb2e600ef43668ba4f89b0b155e86318659241665c8e5bb78342fc952",
+        "files_digest": "dd53366d3750af4f65f6440067f4756a07da72502d9151ebf36cf6b51627d5b1"
+      },
+      {
+        "task": 9,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "3b0155de8a5982715341c9a4e08225411368867164424332c8e8ebeda00b437b",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 9,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b7380d9ac4dd9a733b4a4d381914fcaf29081c42881401ea17d9c8999a894645",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 10,
+        "arm": "self",
+        "count": 4,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "eb497eadfeffb7d5bddaa07c7850c7ab27a09d5a4ca927ec847268bf4149ff7b",
+        "files_digest": "ba3a34e5d020fe8f7077254f222a501d4acc3371e5f2a5f1519fbc8912e63292"
+      },
+      {
+        "task": 10,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "3584e18a83215a3adab77446d993487661402052350c29a779aea5b5a821637c",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 10,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "68cca49c02ecff90ac3a3c5d2fc357c773f1b2ca52ba756197b0f80954d80355",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 11,
+        "arm": "self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "84b4ccd21da5b007aa67a82754020b3b8f506ab5445be7478f37bbfbb3daf897",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 11,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "84b4ccd21da5b007aa67a82754020b3b8f506ab5445be7478f37bbfbb3daf897",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 11,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "40b038f8cb4669f285edc8cb47bdc4d24e4c1af9b890dacea962da4f7e5c9bb3",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 12,
+        "arm": "self",
+        "count": 5,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "9cab55664e958e3b05f316a84d31adb8495d6bc586c266b70d2d65902b449868",
+        "files_digest": "7cb63482c7ec8a9a1f8ab3ca78775ac0a37efc9ceefb4b4048067640038b9519"
+      },
+      {
+        "task": 12,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "2cf7ffe67cbcab21ed0926c09efe8e387ee5a1bf7c427e13975e357198508959",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 12,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8ec7addd53ef3d5e9401e53704c6d6cfc048566752ba6e4b9dae39ba9920577b",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 13,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "f4a1db9b95a254a0c1a9403449717911370fe318ce2b89bf3ce7a8079279c07f",
+        "files_digest": "dd53366d3750af4f65f6440067f4756a07da72502d9151ebf36cf6b51627d5b1"
+      },
+      {
+        "task": 13,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "ada4ed7dc15a908f4cac637044411a91dafd00e5086a1c4c2245d0d2bd2012f1",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 13,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "0b6655553b4d3bdace8810b0fc537de58912781d2cce7a5dc617cdb0d62730ec",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 14,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "6f5fe1fdcdc8a0ad71c7185f6e8a84428d8f49333b72f7c8c85a9a715ec9a209",
+        "files_digest": "dd53366d3750af4f65f6440067f4756a07da72502d9151ebf36cf6b51627d5b1"
+      },
+      {
+        "task": 14,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "1ae199e566098753d5cbd58b01563cc577fcfed29991093d48ffd5c7438d6180",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 14,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e303d3829bf086d322fe39a081ce6e190144c73b8657aac048d92d680aacec05",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 15,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "fc511289e2c473f0215ede36f9c006b0ec9a24fd92332502324230ea9c91682c",
+        "files_digest": "dd53366d3750af4f65f6440067f4756a07da72502d9151ebf36cf6b51627d5b1"
+      },
+      {
+        "task": 15,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "a4408d4b72a07ac7dcd0688204a861329508fb0f8d8a25e449e409960f9bf838",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 15,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8c5c378ee614e1baa35b8005bf248e54c0da40cc778a5300bf63adf66d8ad8a1",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 16,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "c48ffb9e1c2db469497486a923fb2a0078c8caaf5520c7555b6a62e9dbca37fb",
+        "files_digest": "dd53366d3750af4f65f6440067f4756a07da72502d9151ebf36cf6b51627d5b1"
+      },
+      {
+        "task": 16,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "6cf04a2bdf15daaabfa5f95fb5c959ff16cd24be33704c71b08eb3979563583f",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 16,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "5f0a882a490a1de0815de90d927032c37832fca1b81e86c37fdcb9aa7b9cb9b0",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 17,
+        "arm": "self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "f2bcef74f84d47fb9bf3d28c99b0fd68403006dcb82653075a59af86c2ae2144",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 17,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "f2bcef74f84d47fb9bf3d28c99b0fd68403006dcb82653075a59af86c2ae2144",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 17,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e57908e5669e4ad89a5731a32caa17c0ad4a978adc166ade2990dfb39c4fef22",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 18,
+        "arm": "self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "c662e992933acf0edcb5a76b3941dcb093ce614421dd18e90aa5aca0a9fdf49a",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 18,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "c662e992933acf0edcb5a76b3941dcb093ce614421dd18e90aa5aca0a9fdf49a",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 18,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8837d6e9d76f07ecdeaac77bf96706f1677ff5839ddd956765e50d2d66985bb6",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 19,
+        "arm": "self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "1daf6c1e6c63adfc322ed9de096ef94008c802c5ae386cf4388544e5c35758a1",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 19,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "1daf6c1e6c63adfc322ed9de096ef94008c802c5ae386cf4388544e5c35758a1",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 19,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "63b4c0c25589dd736c9143756105f641c8de26e5e09e6b32e69157f237bd8880",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 20,
+        "arm": "self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "fdc3b9fa94edd15227277d9a095d308de791757a486fd528d456bb0153dfcd13",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 20,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "fdc3b9fa94edd15227277d9a095d308de791757a486fd528d456bb0153dfcd13",
+        "files_digest": "cc0de6ddd1c1380db0b419def002179e6842608d13cdb678b77015b210ccfca9"
+      },
+      {
+        "task": 20,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e67f9ff4d82208ac80fb85cdaf108a0e6a650c974b8201b9ee029e399675be48",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      }
+    ],
+    "deepseek/deepseek-v4-pro-0813": [
+      {
+        "task": 1,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "c5ebef0aecca27652d80ac28b8c9f4e860343789bac4f44f8c9a4f9f49942dc1",
+        "files_digest": "fc524cfb075b679b3bc25dd28474345914652d25d268d71c2816dde9826d5807"
+      },
+      {
+        "task": 1,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "9911ff152d7a8a9ed0f67d98f9787c2ecc63e44711e7fb5b81925bf646dfaa1d",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 1,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "67b973c979576e6e2029b677b078153329111b1fe2750ebba8c1db438d6dfce1",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 2,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "6b4b9d719a4262f70fef230242c5ea1bbb5276a638382e42b00770f9e8f81b36",
+        "files_digest": "fc524cfb075b679b3bc25dd28474345914652d25d268d71c2816dde9826d5807"
+      },
+      {
+        "task": 2,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "f136b68a232efaa472793b88b12641ba2ee6c2d524ef55718303af9384f55c01",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 2,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "a5c4f0508164072f5b924f972b4bd9c00b8641bab6d33b8b6cb760413e91dc6e",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 3,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "3f2a047baf39d599d777ec83615aaf29222599c26497b048fb7ad3a67e0cc198",
+        "files_digest": "fc524cfb075b679b3bc25dd28474345914652d25d268d71c2816dde9826d5807"
+      },
+      {
+        "task": 3,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "f9fd3fa4cb928dbda961ec17af18b94ef4b515ffbc1865f13620a87f3c55bec5",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 3,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "91e04ae3ee1b636216f65461a22bd09080ca9604b7e31ca8b7beff6d235dc74d",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 4,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "8ed1c4624619a7675f146bbd8bbc1dca40c30c3c31548ac272265b404ad5a129",
+        "files_digest": "fc524cfb075b679b3bc25dd28474345914652d25d268d71c2816dde9826d5807"
+      },
+      {
+        "task": 4,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "bd2ad97de454c23f9c659650bbdb8121cde68feece4c9441d2d7e0af58160d14",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 4,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "88a8967d708bac665a33bdc7b3a28798c958c773957f70698a4042a40a2f2a6a",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 5,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "b479b8d075d72d5d6e7fadcc850a50f8d85d486ec5cc41db0de512020eb6db0f",
+        "files_digest": "fc524cfb075b679b3bc25dd28474345914652d25d268d71c2816dde9826d5807"
+      },
+      {
+        "task": 5,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "5a4846f85516de5d1cca89a7452d57fc9f3d8151b14b4eff019fbbb30f3b7ea5",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 5,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8dce7d319210d6111dfaaa7ca20a0f227bad8d4cb631334017d7dac412ea4a45",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 6,
+        "arm": "self",
+        "count": 3,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "e850cc8b455bb7837a8ad7f61415e9c80df2d0f7d90e6c06171c40b657b0a5a5",
+        "files_digest": "32e5953c0970e4f1e467015730b7dd3330ddf31a8b98a1f4cc975d5ae72bfc1a"
+      },
+      {
+        "task": 6,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "7d7553c04626ab009f9147cee9990c8e487adac1aad2c7dd34b6ccc0b8a3e06d",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 6,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "cba0e586e4a2ce6c2ae5842f5897727c1aaf543c2e05b2d04ffb9dc410148d43",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 7,
+        "arm": "self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "867f4339e083e06d81f4f23738af0e49f95cc35e70286f98cddab8d87c4c4d32",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 7,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "867f4339e083e06d81f4f23738af0e49f95cc35e70286f98cddab8d87c4c4d32",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 7,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "622343ad7df3696d914172a5e4c792c7cf1f5da251e6b28175d5f1a83f36da6c",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 8,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "46354dbfd556f05fda29251c50c37b16eaccd9c0f36292ce8f3ee18416ec3287",
+        "files_digest": "fc524cfb075b679b3bc25dd28474345914652d25d268d71c2816dde9826d5807"
+      },
+      {
+        "task": 8,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "2a56e91a2d729c86bc6fa9a003cbd85d60c3b120b7b7a2bd4ea67315537b62ba",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 8,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "69fc6e13d3840d37ef7d64254a8993cb028030beeec617453a1c4691a6e13b2d",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 9,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "7657e82bbe82d89899b07bf3de7cf66d6a1fd87563d3b44b9676eb84d4d79d8e",
+        "files_digest": "fc524cfb075b679b3bc25dd28474345914652d25d268d71c2816dde9826d5807"
+      },
+      {
+        "task": 9,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "03c3674c626aa0ff49a55e7eb043763a3962b685d9608c0e9ee3493fdaa2e598",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 9,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "b7380d9ac4dd9a733b4a4d381914fcaf29081c42881401ea17d9c8999a894645",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 10,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "69c09359d241593e5aa298897c31ca2844dab61c981c20d33b19eba0e89ae538",
+        "files_digest": "fc524cfb075b679b3bc25dd28474345914652d25d268d71c2816dde9826d5807"
+      },
+      {
+        "task": 10,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "3e2d1b09a5375445f33d3551f8c451f67c697b8c4bdefa05fde7c194ebf2d36a",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 10,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "68cca49c02ecff90ac3a3c5d2fc357c773f1b2ca52ba756197b0f80954d80355",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 11,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "5c06f8731a78860ad4a681721f8b32ebe459a0c21b8e90cd77f0a0b3d993a5d6",
+        "files_digest": "fc524cfb075b679b3bc25dd28474345914652d25d268d71c2816dde9826d5807"
+      },
+      {
+        "task": 11,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "9862f42c301aa8b4e850fffe5b7605e833577ba25e45ee11d665f3d1bf00a20d",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 11,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "40b038f8cb4669f285edc8cb47bdc4d24e4c1af9b890dacea962da4f7e5c9bb3",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 12,
+        "arm": "self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "c9e2b650ceaa732d75a40f55870b57fe67453829b7fb9cef2c719806529026e6",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 12,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "c9e2b650ceaa732d75a40f55870b57fe67453829b7fb9cef2c719806529026e6",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 12,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8ec7addd53ef3d5e9401e53704c6d6cfc048566752ba6e4b9dae39ba9920577b",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 13,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "9f22f1acdb65f36a6ec3206491186d7f5992c344508e6e7fb227c01afa4292cd",
+        "files_digest": "fc524cfb075b679b3bc25dd28474345914652d25d268d71c2816dde9826d5807"
+      },
+      {
+        "task": 13,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "55ffaedac90dd6f11b4bdf0c8ccfbda1f9f8597eb0457acdd05193a966128a22",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 13,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "0b6655553b4d3bdace8810b0fc537de58912781d2cce7a5dc617cdb0d62730ec",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 14,
+        "arm": "self",
+        "count": 5,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "dc68da59db61693654aeb4065a7e130443f818eebd5ea9469341a827aa471e64",
+        "files_digest": "c859f73785608306f5b25ed9daa6025d09f4bf6820416e4fd9847523844a091b"
+      },
+      {
+        "task": 14,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e546f00e9ae695bc21940a912f39a24446e08596bc112ba6bdc18e99d0db6e3d",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 14,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e303d3829bf086d322fe39a081ce6e190144c73b8657aac048d92d680aacec05",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 15,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "1cda7eca58ad39841aba29adafd471fdbcf68fa9b5436bddb53c37d95a018cfc",
+        "files_digest": "fc524cfb075b679b3bc25dd28474345914652d25d268d71c2816dde9826d5807"
+      },
+      {
+        "task": 15,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "6eb6a28c57d9a6f2868ef4bad6f49816784b3c073d10a386fa515d1320b10d0f",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 15,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8c5c378ee614e1baa35b8005bf248e54c0da40cc778a5300bf63adf66d8ad8a1",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 16,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "d0bde255f1d84ea72c30bb6c941bc18254354a5e744dd717fb6138309378133d",
+        "files_digest": "fc524cfb075b679b3bc25dd28474345914652d25d268d71c2816dde9826d5807"
+      },
+      {
+        "task": 16,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": true,
+        "report_sha256": "800abaafa1b02157a8a91d20b88057ff858dd9ec7dc90fedad5170ab073be9a0",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 16,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "5f0a882a490a1de0815de90d927032c37832fca1b81e86c37fdcb9aa7b9cb9b0",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 17,
+        "arm": "self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "99df9e21b9c316771c7d426a43caa15c8afb21746e148ed34dcfaee336d0604d",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 17,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "99df9e21b9c316771c7d426a43caa15c8afb21746e148ed34dcfaee336d0604d",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 17,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e57908e5669e4ad89a5731a32caa17c0ad4a978adc166ade2990dfb39c4fef22",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 18,
+        "arm": "self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "fe446a5846209803f9d4795e563ea4a130112b1468fcdb1f15cb82e5861dbcbe",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 18,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "fe446a5846209803f9d4795e563ea4a130112b1468fcdb1f15cb82e5861dbcbe",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 18,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "8837d6e9d76f07ecdeaac77bf96706f1677ff5839ddd956765e50d2d66985bb6",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 19,
+        "arm": "self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "2d8dbf7a3f403706a6ccc5cd518964aac4c696dcad948bcbbe4277846df3976c",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 19,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "2d8dbf7a3f403706a6ccc5cd518964aac4c696dcad948bcbbe4277846df3976c",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 19,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "63b4c0c25589dd736c9143756105f641c8de26e5e09e6b32e69157f237bd8880",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      },
+      {
+        "task": 20,
+        "arm": "self",
+        "count": 6,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "2a7464ca90b36d3b8d607a9a564cabbb78c68f3a255f3a7b356dabe72e9b0441",
+        "files_digest": "fc524cfb075b679b3bc25dd28474345914652d25d268d71c2816dde9826d5807"
+      },
+      {
+        "task": 20,
+        "arm": "fixed-self",
+        "count": 7,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "04cefbbc121f3ffb77d55bd7b2d6296744e3cba1c19216e23001ebe7e50c6a63",
+        "files_digest": "51eeec226600bfe5b58e831462fa343310506f94697001ded3fe8ae4eb6e8634"
+      },
+      {
+        "task": 20,
+        "arm": "binding-only",
+        "count": 0,
+        "status": "valid",
+        "passed": false,
+        "report_sha256": "e67f9ff4d82208ac80fb85cdaf108a0e6a650c974b8201b9ee029e399675be48",
+        "files_digest": "feb1dc400bcd71d46105d4d942607e0eb456836b1197d1278dd8902cf38f14fe"
+      }
+    ]
+  },
+  "libraries": {
+    "qwen": {
+      "status": "valid",
+      "changed": true,
+      "profiles": [
+        {
+          "count": 2,
+          "modules": [
+            "table",
+            "menu"
+          ],
+          "checks": [
+            "click",
+            "insert",
+            "menu",
+            "outside"
+          ]
+        },
+        {
+          "count": 3,
+          "modules": [
+            "table",
+            "menu",
+            "key"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside"
+          ]
+        },
+        {
+          "count": 4,
+          "modules": [
+            "table",
+            "menu",
+            "key",
+            "mouse"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside"
+          ]
+        },
+        {
+          "count": 5,
+          "modules": [
+            "table",
+            "menu",
+            "key",
+            "mouse",
+            "clipboard"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside"
+          ]
+        },
+        {
+          "count": 6,
+          "modules": [
+            "table",
+            "menu",
+            "key",
+            "mouse",
+            "clipboard",
+            "drag"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside"
+          ]
+        }
+      ],
+      "history": [
+        {
+          "step": "core",
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": false
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "compact-move",
+          "retained": false,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": false
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "compact-select",
+          "retained": true,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "compact-edit",
+          "retained": false,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "mouse",
+          "retained": true,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "clipboard",
+          "retained": true,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "layout",
+          "retained": false,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [
+              "Cannot read properties of undefined (reading 'rows')",
+              "Cannot read properties of undefined (reading 'rows')"
+            ],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "drag",
+          "retained": true,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        }
+      ],
+      "parent_status": "build_failed",
+      "parent_library": "02601f44256b7f443858ccffbad6351e5b1b7281072b4b069b184b29ec467863"
+    },
+    "oss": {
+      "status": "valid",
+      "changed": false,
+      "profiles": [
+        {
+          "count": 2,
+          "modules": [
+            "table",
+            "menu"
+          ],
+          "checks": [
+            "click",
+            "insert",
+            "menu",
+            "outside"
+          ]
+        },
+        {
+          "count": 3,
+          "modules": [
+            "table",
+            "menu",
+            "key"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside",
+            "reverse",
+            "right",
+            "tab"
+          ]
+        },
+        {
+          "count": 4,
+          "modules": [
+            "table",
+            "menu",
+            "key",
+            "mouse"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside",
+            "reverse",
+            "right",
+            "tab"
+          ]
+        },
+        {
+          "count": 5,
+          "modules": [
+            "table",
+            "menu",
+            "key",
+            "mouse",
+            "clipboard"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside",
+            "reverse",
+            "right",
+            "tab"
+          ]
+        },
+        {
+          "count": 6,
+          "modules": [
+            "table",
+            "menu",
+            "key",
+            "mouse",
+            "clipboard",
+            "layout"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside",
+            "reverse",
+            "right",
+            "tab"
+          ]
+        },
+        {
+          "count": 7,
+          "modules": [
+            "table",
+            "menu",
+            "key",
+            "mouse",
+            "clipboard",
+            "layout",
+            "drag"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside",
+            "reverse",
+            "right",
+            "tab"
+          ]
+        }
+      ],
+      "history": [
+        {
+          "step": "bind-e-and-event",
+          "revision": 1,
+          "retained": false,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": true,
+              "tab": true,
+              "reverse": true,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "bind-e-and-event",
+          "revision": 2,
+          "retained": false,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": true,
+              "tab": true,
+              "reverse": true,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "compact-move",
+          "retained": false,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": true,
+              "tab": true,
+              "reverse": true,
+              "edit": false,
+              "clear": false
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "compact-select",
+          "retained": false,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": true,
+              "tab": true,
+              "reverse": true,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "compact-edit",
+          "retained": false,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": true,
+              "tab": true,
+              "reverse": true,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        }
+      ],
+      "parent_status": "valid",
+      "parent_library": "9626af073ac89bb36ca8df0e7a5dc460ba2b86ad04e292df6c8ca4abdea9f84c"
+    },
+    "mistral": {
+      "status": "build_failed",
+      "changed": false,
+      "profiles": [],
+      "history": [
+        {
+          "step": "core",
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": false,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": false
+            },
+            "errors": [
+              "cell.parentElement.insertRow is not a function"
+            ],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "core-repair",
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": false,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": false
+            },
+            "errors": [
+              "api.endEditing is not a function",
+              "api.endEditing is not a function"
+            ],
+            "final_selection": []
+          }
+        }
+      ],
+      "parent_status": "build_failed",
+      "parent_library": "2640d7d68deb8e500db417cccadf2b5afc9b013750b58ebea09ae8a62bc87a9f"
+    },
+    "gemma": {
+      "status": "build_failed",
+      "changed": false,
+      "profiles": [],
+      "history": [
+        {
+          "step": "core",
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": false,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": false
+            },
+            "errors": [
+              "Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node."
+            ],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "core-repair",
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": false,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": false
+            },
+            "errors": [
+              "Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node."
+            ],
+            "final_selection": [
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        }
+      ],
+      "parent_status": "build_failed",
+      "parent_library": "4985701bbfee8af5785258a62f661436efe7bd2391be3fc909d8cfc5f94fc5fa"
+    },
+    "qwen9": {
+      "status": "valid",
+      "changed": true,
+      "profiles": [
+        {
+          "count": 2,
+          "modules": [
+            "table",
+            "menu"
+          ],
+          "checks": [
+            "click",
+            "insert",
+            "menu",
+            "outside"
+          ]
+        },
+        {
+          "count": 3,
+          "modules": [
+            "table",
+            "menu",
+            "key"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside"
+          ]
+        },
+        {
+          "count": 4,
+          "modules": [
+            "table",
+            "menu",
+            "key",
+            "mouse"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside"
+          ]
+        },
+        {
+          "count": 5,
+          "modules": [
+            "table",
+            "menu",
+            "key",
+            "mouse",
+            "clipboard"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside"
+          ]
+        },
+        {
+          "count": 6,
+          "modules": [
+            "table",
+            "menu",
+            "key",
+            "mouse",
+            "clipboard",
+            "layout"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside"
+          ]
+        },
+        {
+          "count": 7,
+          "modules": [
+            "table",
+            "menu",
+            "key",
+            "mouse",
+            "clipboard",
+            "layout",
+            "drag"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside"
+          ]
+        }
+      ],
+      "history": [
+        {
+          "step": "core",
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": false
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "compact-move",
+          "retained": false,
+          "error": "[stdin]:139\n};}\n   \n\nSyntaxError: Unexpected end of input\n    at checkSyntax (node:internal/main/check_syntax:72:5)\n    at node:internal/main/check_syntax:45:5\n    at Socket.<anonymous> (node:internal/process/execution:205:5)\n    at Socket.emit (node:events:521:24)\n    at endRead"
+        },
+        {
+          "step": "compact-select",
+          "retained": true,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "compact-edit",
+          "retained": false,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "mouse",
+          "retained": true,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "clipboard",
+          "retained": true,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "layout",
+          "retained": true,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "drag",
+          "retained": true,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        }
+      ],
+      "parent_status": "build_failed",
+      "parent_library": "9ddfd59b1c8591c846d21dcc009c5e3b20d8911cb0803fb699b8d5b21e3a5c14"
+    },
+    "deepseek-flash": {
+      "status": "valid",
+      "changed": true,
+      "profiles": [
+        {
+          "count": 2,
+          "modules": [
+            "table",
+            "menu"
+          ],
+          "checks": [
+            "click",
+            "insert",
+            "menu",
+            "outside"
+          ]
+        },
+        {
+          "count": 3,
+          "modules": [
+            "table",
+            "menu",
+            "key"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside",
+            "reverse",
+            "right",
+            "tab"
+          ]
+        },
+        {
+          "count": 4,
+          "modules": [
+            "table",
+            "menu",
+            "key",
+            "mouse"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside",
+            "reverse",
+            "right",
+            "tab"
+          ]
+        },
+        {
+          "count": 5,
+          "modules": [
+            "table",
+            "menu",
+            "key",
+            "mouse",
+            "clipboard"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside",
+            "reverse",
+            "right",
+            "tab"
+          ]
+        },
+        {
+          "count": 6,
+          "modules": [
+            "table",
+            "menu",
+            "key",
+            "mouse",
+            "clipboard",
+            "layout"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside",
+            "reverse",
+            "right",
+            "tab"
+          ]
+        },
+        {
+          "count": 7,
+          "modules": [
+            "table",
+            "menu",
+            "key",
+            "mouse",
+            "clipboard",
+            "layout",
+            "drag"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside",
+            "reverse",
+            "right",
+            "tab"
+          ]
+        }
+      ],
+      "history": [
+        {
+          "step": "bind-e-and-event",
+          "revision": 1,
+          "retained": false,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [
+              "moveCell is not defined",
+              "nextCell is not defined",
+              "prevCell is not defined"
+            ],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "bind-e-and-event",
+          "revision": 2,
+          "retained": false,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [
+              "moveCell is not defined",
+              "moveCell is not defined",
+              "moveCell is not defined"
+            ],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "compact-move",
+          "retained": true,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": true,
+              "tab": true,
+              "reverse": true,
+              "edit": false,
+              "clear": false
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "compact-select",
+          "retained": true,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": true,
+              "tab": true,
+              "reverse": true,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "compact-edit",
+          "retained": false,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": true,
+              "tab": true,
+              "reverse": true,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        }
+      ],
+      "parent_status": "valid",
+      "parent_library": "69ffb5a7166b281f9fb891fbad5b418fa5ac6c8ff82d9d78db0d4a878153f768"
+    },
+    "deepseek-pro": {
+      "status": "valid",
+      "changed": true,
+      "profiles": [
+        {
+          "count": 2,
+          "modules": [
+            "table",
+            "menu"
+          ],
+          "checks": [
+            "click",
+            "insert",
+            "menu",
+            "outside"
+          ]
+        },
+        {
+          "count": 3,
+          "modules": [
+            "table",
+            "menu",
+            "key"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside",
+            "reverse",
+            "right",
+            "tab"
+          ]
+        },
+        {
+          "count": 4,
+          "modules": [
+            "table",
+            "menu",
+            "key",
+            "mouse"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside",
+            "reverse",
+            "right",
+            "tab"
+          ]
+        },
+        {
+          "count": 5,
+          "modules": [
+            "table",
+            "menu",
+            "key",
+            "mouse",
+            "clipboard"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside",
+            "reverse",
+            "right",
+            "tab"
+          ]
+        },
+        {
+          "count": 6,
+          "modules": [
+            "table",
+            "menu",
+            "key",
+            "mouse",
+            "clipboard",
+            "layout"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside",
+            "reverse",
+            "right",
+            "tab"
+          ]
+        },
+        {
+          "count": 7,
+          "modules": [
+            "table",
+            "menu",
+            "key",
+            "mouse",
+            "clipboard",
+            "layout",
+            "drag"
+          ],
+          "checks": [
+            "clear",
+            "click",
+            "insert",
+            "menu",
+            "outside",
+            "reverse",
+            "right",
+            "tab"
+          ]
+        }
+      ],
+      "history": [
+        {
+          "step": "bind-e-and-event",
+          "revision": 1,
+          "retained": false,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": false,
+              "tab": false,
+              "reverse": false,
+              "edit": false,
+              "clear": false
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "bind-e-and-event",
+          "revision": 2,
+          "retained": true,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": true,
+              "tab": true,
+              "reverse": true,
+              "edit": false,
+              "clear": false
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "compact-select",
+          "retained": true,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": true,
+              "tab": true,
+              "reverse": true,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "step": "compact-edit",
+          "retained": false,
+          "public": {
+            "checks": {
+              "menu": true,
+              "insert": true,
+              "outside": true,
+              "click": true,
+              "right": true,
+              "tab": true,
+              "reverse": true,
+              "edit": false,
+              "clear": true
+            },
+            "errors": [],
+            "final_selection": [
+              [
+                1,
+                2
+              ]
+            ]
+          }
+        }
+      ],
+      "parent_status": "valid",
+      "parent_library": "22e1cad635e4f820f1233a8518fb6fe2b6c07dc2e28b3e73ba25e854de509044"
+    }
+  },
+  "generators": {
+    "qwen": "qwen/qwen3-coder-30b-a3b-instruct",
+    "oss": "openai/gpt-oss-120b",
+    "mistral": "mistralai/mistral-small-3.2-24b-instruct",
+    "gemma": "google/gemma-3-12b-it",
+    "qwen9": "qwen/qwen3.5-9b",
+    "deepseek-flash": "deepseek/deepseek-v4-flash",
+    "deepseek-pro": "deepseek/deepseek-v4-pro-0813"
+  },
+  "empty": {
+    "checks": {
+      "menu": false,
+      "insert": false,
+      "outside": false,
+      "click": false,
+      "right": false,
+      "tab": false,
+      "reverse": false,
+      "edit": false,
+      "clear": false
+    },
+    "errors": [],
+    "final_selection": []
+  },
+  "cost": {
+    "calls": 135,
+    "settled_usd": 0.019284,
+    "exposure_usd": 0.019284,
+    "unsettled_calls": 0,
+    "cap_usd": 2.0,
+    "stop_usd": 2.0,
+    "halted": 0
+  },
+  "by_model_phase": {
+    "google/gemma-3-12b-it": {
+      "build": {
+        "calls": 7,
+        "settled_micro_usd": 151,
+        "exposure_micro_usd": 151
+      }
+    },
+    "mistralai/mistral-small-3.2-24b-instruct": {
+      "build": {
+        "calls": 7,
+        "settled_micro_usd": 175,
+        "exposure_micro_usd": 175
+      }
+    },
+    "qwen/qwen3.5-9b": {
+      "build": {
+        "calls": 21,
+        "settled_micro_usd": 3575,
+        "exposure_micro_usd": 3575
+      },
+      "plan": {
+        "calls": 20,
+        "settled_micro_usd": 2236,
+        "exposure_micro_usd": 2236
+      }
+    },
+    "qwen/qwen3-coder-30b-a3b-instruct": {
+      "build": {
+        "calls": 8,
+        "settled_micro_usd": 1841,
+        "exposure_micro_usd": 1841
+      },
+      "plan": {
+        "calls": 24,
+        "settled_micro_usd": 2544,
+        "exposure_micro_usd": 2544
+      }
+    },
+    "deepseek/deepseek-v4-pro-0813": {
+      "build": {
+        "calls": 2,
+        "settled_micro_usd": 3899,
+        "exposure_micro_usd": 3899
+      },
+      "plan": {
+        "calls": 20,
+        "settled_micro_usd": 3567,
+        "exposure_micro_usd": 3567
+      }
+    },
+    "openai/gpt-oss-120b": {
+      "build": {
+        "calls": 3,
+        "settled_micro_usd": 483,
+        "exposure_micro_usd": 483
+      }
+    },
+    "deepseek/deepseek-v4-flash": {
+      "build": {
+        "calls": 3,
+        "settled_micro_usd": 113,
+        "exposure_micro_usd": 113
+      },
+      "plan": {
+        "calls": 20,
+        "settled_micro_usd": 700,
+        "exposure_micro_usd": 700
+      }
+    }
+  }
+}

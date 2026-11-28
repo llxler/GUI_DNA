@@ -23,7 +23,7 @@ python -m studies.lookup web-bench/table
 python -m studies.lookup web-bench/table "Qwen3.5-9B" Self
 ```
 
-单格输出给出主表文件、矩阵键、分母和可用的实验记录。多阶段结果还列出适用的补测文件或筛选条件。完整矩阵也可直接下载。[Table 1 JSON](studies/results/paper-performance-matrix.json)
+单格输出给出主表文件、矩阵键、分母和可用的实验记录。多阶段结果还列出适用的补测文件或筛选条件。完整矩阵也可直接下载。[Table 1 JSON](studies/results/paper-performance-matrix.json) 表格编辑器中，改用共享选区接口后，Qwen3-Coder 和 GPT-OSS 的自建库分别通过 4/20 和 13/20，两者此前建库均未通过验收。[复测与固定页对照](docs/results.md#table-self-shared-selection)
 
 ## 文档导航
 

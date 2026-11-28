@@ -20,6 +20,10 @@ uv run playwright install chromium
 uv run pytest -q
 ```
 
+## Table editor 自建库
+
+运行 `python -m studies.webbench.table.shared_selection.report` 可用随仓库发布的逐题记录重算各阶段。具备本地原始产物时，运行 `uv run python -m studies.webbench.table.shared_selection.verify` 核对实际生成模型、源码文件、逐题选择、原始浏览器判决及费用。输入、适用对象和阶段顺序见[研究索引](../studies/webbench/table/shared_selection/README.md)。
+
 ## 公开目录与历史模块
 
 `python -m studies.layout check` 从公开源码核对迁移前的 170 份文件。仅在直接校验旧路径清单或执行冻结运行器时使用 `python -m studies.layout prepare`。按正式目录执行的语法是 `python -m studies.layout run <阶段目录> <模块> [参数]`；它使用当时记录的模块名和文件深度。核对完成后可用 `python -m studies.layout tidy` 收起兼容文件。旧版源码专用快照仍按各阶段的协议使用。[目录与归档](../studies/README.md)

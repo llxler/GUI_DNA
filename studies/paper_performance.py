@@ -14,6 +14,7 @@ from studies import paper_target_extensions as extensions, paper_module_rebuilds
 from studies.webbench.calculator.gpt5_profiles import report as calc_profiles
 from studies.public_library_transfer.duo_verified_features import report as duo_features
 from studies.webbench.table.event_modules import paper as table_protocols
+from studies.webbench.table.shared_selection import report as table_selection
 
 MISTRAL = "mistralai/mistral-small-3.2-24b-instruct"
 OSS = "openai/gpt-oss-120b"
@@ -191,6 +192,7 @@ def performance_matrix(data, replay, trials, today, batches=None):
         rebuilds.attach(matrix)
         duo_features.attach(matrix)
         calc_profiles.attach(matrix)
+        table_selection.attach(matrix)
     return matrix
 
 
@@ -234,6 +236,7 @@ def table_record(model, project):
     if project == "webgen-heldout":
         return ("webgen_holdout",), model.get("webgen_holdout", {})
     ordered = (
+        (table_selection.FIELD,) if project == "table" else (),
         ("duo_feature_bindings",) if project == "duo" else (),
         ("calculator_profiles",) if project == "calculator" else (),
         ("module_rebuilds", project),

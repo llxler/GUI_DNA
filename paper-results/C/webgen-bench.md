@@ -7,8 +7,8 @@
 | 目标生成模型 | Direct | Human | GPT-5 | Self |
 | --- | ---: | ---: | ---: | ---: |
 | Gemma 3 12B | [29/59](../../studies/results/paper-performance-matrix.json#L1720) | [41/59](../../studies/results/paper-performance-matrix.json#L1721) | [35/59](../../studies/results/paper-performance-matrix.json#L1722) | [33/59](../../studies/results/paper-performance-matrix.json#L1723) |
-| Qwen3.5-9B | [27/59](../../studies/results/paper-performance-matrix.json#L3973) | [37/59](../../studies/results/paper-performance-matrix.json#L3974) | [34/59](../../studies/results/paper-performance-matrix.json#L3975) | [28/59](../../studies/results/paper-performance-matrix.json#L3976) |
-| DeepSeek V4 Flash | [37/59](../../studies/results/paper-performance-matrix.json#L10897) | [41/59](../../studies/results/paper-performance-matrix.json#L10898) | [45/59](../../studies/results/paper-performance-matrix.json#L10899) | [41/59](../../studies/results/paper-performance-matrix.json#L10900) |
+| Qwen3.5-9B | [27/59](../../studies/results/paper-performance-matrix.json#L4026) | [37/59](../../studies/results/paper-performance-matrix.json#L4027) | [34/59](../../studies/results/paper-performance-matrix.json#L4028) | [28/59](../../studies/results/paper-performance-matrix.json#L4029) |
+| DeepSeek V4 Flash | [37/59](../../studies/results/paper-performance-matrix.json#L11163) | [41/59](../../studies/results/paper-performance-matrix.json#L11164) | [45/59](../../studies/results/paper-performance-matrix.json#L11165) | [41/59](../../studies/results/paper-performance-matrix.json#L11166) |
 
 点击成绩可定位到主表 JSON 的对应行。建库失败对应论文空白格，无数据对应横线。
 

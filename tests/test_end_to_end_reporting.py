@@ -217,6 +217,7 @@ def test_paper_omits_failed_builds_and_keeps_measured_zeros():
         model.pop("library_capabilities", None)
         model.pop("table_state_transitions", None)
         model.pop("state_examples", None)
+        model.pop("table_shared_selection", None)
         model.pop("module_rebuilds", None)
         model.pop("calculator_profiles", None)
         model.pop("duo_feature_bindings", None)
@@ -494,7 +495,7 @@ def test_module_rebuild_scores_and_missing_delivery_are_traceable_to_receipts():
 
     matrix = read(ROOT / MATRIX)
     # Audit the original 403 receipt independently of the subsequent GPT-5 delivery.
-    matrix = {m: {k: v for k, v in row.items() if k != "calculator_profiles"} for m, row in matrix.items()}
+    matrix = {m: {k: v for k, v in row.items() if k not in ("calculator_profiles", "table_shared_selection")} for m, row in matrix.items()}
     earlier = {
         model: {k: v for k, v in row.items() if k not in ("module_rebuilds", "calculator_profiles")}
         for model, row in matrix.items()
