@@ -10,6 +10,7 @@ from studies.webgen_bench.site_completion import report as completion
 from studies.public_library_transfer.self_refinement.suite_recovery import paper as recovery
 from studies.webbench.form.flash_self_build import paper as flash_form
 from studies import paper_component_followup as components, paper_library_capabilities as capabilities
+from studies import paper_target_extensions as extensions
 from studies.webbench.table.event_modules import paper as table_protocols
 
 MISTRAL = "mistralai/mistral-small-3.2-24b-instruct"
@@ -184,6 +185,7 @@ def performance_matrix(data, replay, trials, today, batches=None):
         sources.attach(matrix)
         validation.attach(matrix)
         completion.attach(matrix)
+        extensions.attach(matrix)
     return matrix
 
 
@@ -227,6 +229,7 @@ def table_record(model, project):
     if project == "webgen-heldout":
         return ("webgen_holdout",), model.get("webgen_holdout", {})
     ordered = (
+        ("target_extensions", project),
         ("state_examples", project),
         ("source_diagnosis", project),
         ("table_state_transitions",) if project == "table" else (),
@@ -266,7 +269,8 @@ def table_models(matrix, project):
     if project in WEB_PROJECTS:
         return [m for m in BACKBONES if any(current_group(matrix[m], p) for p in WEB_PROJECTS)]
     if project in ("dom1", "calculator"):
-        return (components.QWEN9, components.FLASH) if "dom1" in matrix[components.FLASH].get("library_capabilities", {}) else ()
+        return [m for m in BACKBONES if any(project in matrix[m].get(group, {})
+                for group in ("library_capabilities", "target_extensions"))]
     if project == "todomvc":
         return components.TODO_ROSTER
     if project == "duo":
@@ -336,7 +340,8 @@ def additional_web_projects(matrix):
         " & ".join(["Target generator", *METHODS.values(), *METHODS.values()]) + r" \\",
         r"\midrule",
     ]
-    for model in table_models(matrix, "dom1"):
+    models = set(table_models(matrix, "dom1")) | set(table_models(matrix, "calculator"))
+    for model in (m for m in BACKBONES if m in models):
         fields = [BACKBONES[model]]
         for project in ("dom1", "calculator"):
             fields.extend(project_cells(matrix[model], project))
@@ -386,7 +391,7 @@ def render_matrix(matrix, followups=(), domain_rows=()):
         r"\setlength{\aboverulesep}{0.8pt}\setlength{\belowrulesep}{1.25pt}",
     ]
     lines += comparison_panel("A. Web-Bench projects", WEB_PROJECTS, matrix)
-    if "dom1" in matrix[components.FLASH].get("library_capabilities", {}):
+    if table_models(matrix, "dom1") or table_models(matrix, "calculator"):
         lines += additional_web_projects(matrix)
     lines.append(r"\vspace{3pt}")
     lines += feature_panel(matrix) if updated else comparison_panel("B. Feature subsets and pairs", FEATURE_SUITES, matrix)
@@ -431,6 +436,7 @@ def render_matrix(matrix, followups=(), domain_rows=()):
         r"\begin{minipage}{\textwidth}\footnotesize\raggedright "
         r"Direct writes code without a library. In Human, the target model configures human-written components. GPT-5 uses a frozen GPT-5 library. "
         r"Self uses the target model to build and configure its own library. "
+        + (r"Calculator GPT-5 requests an example only after compiler rejection. " if any("calculator" in m.get("target_extensions", {}) for m in matrix.values()) else "")
         + r"Each Duo domain contributes five pairs. "
         + (r"D uses protocol-specific Direct. Variants reuse libraries. "
            r"Fixed replays an example, pair, defaults, or all renderers. Relaxed files, DOM tokens and SVG C/D share 20 recovered direct replies. Flash file checks include six retransmissions. " if followups else "")

@@ -193,3 +193,9 @@ Duo 初批两模型与 Qwen 精简契约的另外两份库，分别用 `uv run p
 本机保留原始生成及浏览器时运行 `uv run python -m studies.webgen_bench.heldout_transfer.incomplete_html.inspect`，可离线核对两站首答和重试的可见按钮、文本和内联 JavaScript 语法。表格新处理函数的回放记录同时给出与旧配置相同的逐题对照以及两段独立顺序的每步状态。[HTML 浏览器诊断](../studies/webgen_bench/heldout_transfer/incomplete_html/inspect.py) · [表格功能验证](../studies/webbench/table/action_sequences/selection_mode/validation.json)
 
 表格菜单可用 `python -m studies.webbench.table.menu_propagation.author_repair.report` 从 Git 中的两次建库和五个模型的逐题记录核对首份修复、固定页及每次得失。配对提示的两个种子与官方结果由 `python -m studies.webbench.table.menu_propagation.event_trace.verify` 核对。[修复范围与准入](../studies/webbench/table/menu_propagation/author_repair/PROTOCOL.md)
+
+### 核对 11 月 28 日的新增模型与配置实验
+
+运行 `python -m studies.lookup web-bench/calculator` 可列出主表实际展示的计算器模型。GPT-5 来源分支在[逐题记录](../studies/webbench/calculator/compiler_fallback/result.json)中分别保留原生配置、最终页面和两个固定示例。四种方法比较同一行的共同任务。运行 `python -m studies.lookup todomvc "Ministral 3B" Self` 可找到逐题响应和评分记录。各阶段在生成前登记输入与第一库规则。保留原账本的本机可用 `uv run python -m studies.paper_target_extensions` 按研究、模型和建库或部署重新核对费用。
+
+文件管理器的从零结果可按 `python -m studies.lookup web-bench/dom1 "Gemma 3 12B" Direct` 查询。每个模型均保留原始响应摘要、解包前后文件摘要、交付格式和官方判决。对照原接收器与现接收器的结果请见[离线重放协议](../studies/webbench/file_explorer/target_models/direct_reception/PROTOCOL.md)。

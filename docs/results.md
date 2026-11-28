@@ -2723,3 +2723,59 @@ WebGen-Bench 开发集沿用原六站，三个类别各两站。留出集取同�
 **给出事件传播轨迹。** 保持两次请求各自的种子、原代码、参数和服务提供方，仅补充一条浏览器观察：同一次右键在表格回调中打开菜单，在文档回调中又将其关闭。两份新修订均通过公开验收，在上述五款模型和四种固定配置上分别重现第二份修订的全部通过数。这组配对诊断独立于主表。[两种提示和四份改动](../studies/webbench/table/menu_propagation/event_trace/build-comparison.json) · [各题结果](../studies/webbench/table/menu_propagation/event_trace/result.json)
 
 本轮 6,952 笔请求，结算 $7.575185。76 笔未结按全额预留计后，本轮敞口 $10.574037。GPT-5 新库建库费 $0.277967，三份旧 Self 库的 27 个先前站点均可按原字节复现，本轮未再次收取其建库费。建库、共享配置、从零页面和评判分项见账本；SDK 开发人时未记录。[逐模型费用](../studies/webgen_bench/site_completion/accounting.json) · [页面指纹](../studies/webgen_bench/site_completion/page-lineage.json)
+
+<a id="front-table-extensions"></a>
+
+## 58. 同一批完整项目上的新增模型与低分原因
+
+文件管理器和计算器各新增 Gemma 3 12B、GPT-OSS-120B。Direct 逐题从公开起始工程独立写代码，Human 分别配置从上游参考实现拆出的 44 个函数和五组计算器按键。GPT-5 由原建库者提供程序，行内模型选择配置。Self 由行内模型建库并部署。两项目分别登记二十个当前任务，只在同一行比较实际共用的目标。文件管理器 Direct 已用原回复核对接收格式。
+
+| 项目 | 生成模型 | 从零 | 人工库 | GPT-5 库 | 自建首库 |
+|---|---|---:|---:|---:|---:|
+| 文件管理器 | Gemma 3 12B | 3/20 | 13/20 | 9/20 | 1/20 |
+| 文件管理器 | GPT-OSS-120B | 6/20 | 17/20 | 10/20 | 6/20 |
+| 计算器 | Gemma 3 12B | 8/20 | 16/20 | 10/20 | 建库未过 |
+| 计算器 | GPT-OSS-120B | 10/20 | 20/20 | 10/20 | 8/20 |
+
+[文件管理器逐任务与公开检查](../studies/webbench/file_explorer/target_models/result.json) · [计算器原始四组及独立重复](../studies/webbench/calculator/target_models/result.json) · [只选 GPT-5 示例](../studies/webbench/calculator/example_selection/result.json) · [按编译结果补问](../studies/webbench/calculator/compiler_fallback/result.json)
+
+**计算器为什么会出现 0/20。** Gemma 原来给冻结 GPT-5 库的 20 份配置全部无法编译。十四份把输入的 `public_project` 字段写进了输出对象，另三份复制了更多输入字段，三份 JSON 没有完整交付。固定首例已经能过 10/20。四模型统一从建库者原有的两个示例中选编号后，源码、编译器与三个对照均保持原样。
+
+| 生成模型 | 原 JSON | 只选示例 | 固定首例 | 固定第二例 | 本轮原生配置 | 编译拒绝数 | 补问后 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Gemma 3 12B | 0/20 | 10/20 | 10/20 | 5/20 | 0/20 | 20 | 10/20 |
+| Qwen3.5-9B | 10/20 | 5/20 | 10/20 | 5/20 | 10/20 | 0 | 10/20 |
+| GPT-OSS-120B | 10/20 | 8/20 | 10/20 | 5/20 | 10/20 | 0 | 10/20 |
+| DeepSeek V4 Flash | 10/20 | 6/20 | 10/20 | 5/20 | 10/20 | 0 | 10/20 |
+
+单选示例能救回 Gemma，却让其余三款模型少过 2 至 5 题。随后用新种子统一登记部署流程。编译成功就保留原页，只有编译器拒绝才问示例编号。模型在作决定时看不到官方分数。表中后两次评分使用同一批新原生回复。另在此前没有参与设计的 Mistral Small 3.2 上，原生配置为 10/20，触发补问 0 次，最终为 10/20。这个附加复验只评 GPT-5 库部署。
+
+五款模型的最终页面通过了与固定首例完全相同的十项。只有 Gemma 的二十次原生提交触发了补问；其余八十份原生配置全部可编译，保留原页。每模型的配置与官方报告逐题同源校验。此结果支持修复交付格式，尚未显示在该计算器上逐题配置能超出固定页。
+
+**文件管理器的从零基线重新核对了全部 80 个原回复。** 原完整页接收器在 JSON 字符串内找到 HTML 标记，误把最外层包装和转义引号也交给了浏览器。Gemma、GPT-OSS 的首题因此都找不到需求明确要求的工具栏。另有五份旧 Qwen 回复受影响。复验先按约定解包，独立完整 HTML 仍沿用原规则。本次直接读取各模型已交付的文件内容，全程没有新增 API 请求。
+
+| 生成模型 | 原接收 | 正确解包后 | 形成合法页面数 |
+|---|---:|---:|---:|
+| Gemma 3 12B | 0/20 | 3/20 | 9/20 |
+| Qwen3.5-9B | 3/20 | 3/20 | 15/20 |
+| GPT-OSS-120B | 0/20 | 6/20 | 19/20 |
+| DeepSeek V4 Flash | 7/20 | 7/20 | 20/20 |
+
+无法按 JSON 语法解包的交付作为该题失败。计算器独立要求整页 HTML，已核查四模型从零页的实际格式。[80 个从零回复的独立接收与官方判决](../studies/webbench/file_explorer/target_models/direct_reception/result.json)
+
+文件管理器的首库通过了哪些组件验收，也可以与正式任务分开读。Gemma 首库接入导入导出与内容生成两个模块；GPT-OSS 首库接入调整尺寸、筛选、快捷键和自动保存四个模块。七个公开交互中，Gemma 首库只完成嵌套。GPT-OSS 首库能插入、嵌套、选中并重新打开，删除、重命名和导入导出往返仍失败。两组均已交付可运行的库；可加载性和交互覆盖分别计数。
+
+| 文件管理器 | 首库逐题 | 首库固定全开 | 只加载首库核心 | 仅逐题通过的任务 | 仅固定通过的任务 |
+|---|---:|---:|---:|---|---|
+| Gemma 3 12B | 1/20 | 1/20 | 0/20 | 无 | 无 |
+| GPT-OSS-120B | 6/20 | 5/20 | 4/20 | 13 | 无 |
+
+Gemma 的自建首个完整页把数字 3、6、9 分别标成减、乘、除，无法用可见按钮算出 2+3。两份官方起始页扩展都没有新增通过公开检查的科学键。另一次仅允许模型改写标签和参数的开发诊断也未恢复加法。预先指定的首库留空。同一完整页协议的第二库独立通过准入并过 3/20，没有当作首库。GPT-OSS 自建首库的固定全开页为 8/20。[起始页扩展](../studies/webbench/calculator/starter_transfer/result.json) · [原标签的受限修复](../studies/webbench/calculator/keypad_labels/result.json)
+
+**TodoMVC 的决策与建库。** 原先两款小模型的首库各过 3/8。增加范围、开关名与引文三个 JSON 字段后，Gemma 的八个正式方案全都无效，Ministral 仍过 3/8。改成每个开关只答“允许”或“禁止”，同一决策用于两份库，Gemma 为 3/8、Ministral 为 6/8，各自与原全开页过完全相同的任务。六条已有独立措辞，两个模型各过 4/6、5/6。三条先登记的新措辞，两者均为 3/3，固定全开为 2/3。新增探针未计入八题分母。[范围和引文](../studies/public_library_transfer/compact_todomvc/edit_scope/result.json) · [逐开关和真实刷新](../studies/public_library_transfer/compact_todomvc/edit_choices/result.json)
+
+冻结上述配置后，只改视图统计，Ministral 第二库通过 3/3 个新状态，正式八题仍过六项。路由只需更新筛选条件，原首库却向遍历中的数组追加事项，第二库把筛选后的事项存回了原列表。原模型修复后，两库均通过 3/3 个新序列和真实浏览器前进、后退检查。首库仍过 6/8，第二库达 8/8，两份各自的固定全开页也分别过 6/8、8/8。第二库交叉复算，旧路由搭配任一视图都过 6/8，新路由搭配任一视图都过 8/8。首库剩下两题失败在当前筛选链接的选中状态。Gemma 首库仍为 3/8。[视图检查](../studies/public_library_transfer/compact_todomvc/filtered_view/result.json) · [路由与逐题判断](../studies/public_library_transfer/compact_todomvc/route_preservation/result.json) · [同一份库内的交叉复算](../studies/public_library_transfer/compact_todomvc/route_preservation/interaction/result.json)
+
+**表格导航的边界。** 第二份 Qwen3.5 库改正 HTMLCollection 的索引后不再抛出该异常，但普通单元格仍不能选中。相同种子下附原函数与只给公开接口，两组各两份回复均未通过开发导航。让模型只写行列转移，研究者绑定器读取 DOM 坐标并显示模型的结果。初版接收器把 Markdown 围栏送入 JS 解析，两条原回复均被误拒。去除外层围栏后不再调用模型，两份函数均能通过公开准入和新箭头序列。各自总计 1/3 个新序列，固定不移动 0/3，参考页 3/3；反向 Tab 在两个生成函数中均先进入普通 Tab 分支。两份函数的逐题和固定页均为 3/20。该绑定实验单列。[直接修导航](../studies/webbench/table/keyboard_contract/result.json) · [是否提供旧源码](../studies/webbench/table/navigation_context/result.json) · [原接收记录](../studies/webbench/table/coordinate_navigation/result.json) · [同回复复验](../studies/webbench/table/coordinate_navigation/documented_reception/result.json)
+
+本次新增 957 笔请求，全部结算，共 $0.145891。连同 §57，同轮已结算 $7.721076；计入此前 76 笔未结预留后，最高支出为 $10.719928，低于 $20 上限。冻结 GPT-5 库的原建库费分别是文件管理器 $0.206237、计算器 $0.3426745，本次复用没有再支付建库费。人工组件的原始准备工时未记录。[分模型、建库和部署账本摘要](../studies/results/target-extension-costs-20261128.json)

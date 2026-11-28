@@ -217,6 +217,7 @@ def test_paper_omits_failed_builds_and_keeps_measured_zeros():
         model.pop("library_capabilities", None)
         model.pop("table_state_transitions", None)
         model.pop("state_examples", None)
+        model.pop("target_extensions", None)
         model.pop("webgen_completion", None)
         model.pop("webgen_holdout", None)
         model.pop("source_diagnosis", None)
@@ -388,3 +389,93 @@ def test_lookup_separates_weighted_scores_build_failure_and_unavailable():
         assert cell["status"] == "measured" and cell["method_record"].endswith("edit-judgments.json")
     missing = query(model, "gpt5-library")
     assert missing["status"] == "unavailable" and "score" not in missing
+
+
+def test_new_full_project_rows_and_todo_method_records_match_the_registered_sources():
+    from studies import paper_performance as paper, paper_target_extensions as ext
+    from studies.lookup import MATRIX, find_cell
+    from studies.study_io import ROOT, read
+
+    matrix = read(ROOT / MATRIX)
+    for project in ("dom1", "calculator"):
+        assert set(ext.WEB_MODELS.values()).issubset(paper.table_models(matrix, project))
+        for model in ext.WEB_MODELS.values():
+            record = matrix[model]["target_extensions"][project]
+            for arm in paper.METHODS:
+                info = find_cell(matrix, f"web-bench/{project}", model, arm)
+                if arm in record["passed"]:
+                    assert (info["score"], info["denominator"]) == (record["passed"][arm], len(record["targets"]))
+                    assert info["targets"] == record["targets"]
+                    rows = read(ROOT / info["method_record"])["models"][model]
+                    matches = [r for r in rows if r["task"] in info["targets"]
+                               and all(r[k] == v for k, v in info["record_filter"].items())]
+                    assert len(matches) == info["denominator"]
+                    assert sum(r["passed"] is True for r in matches) == info["score"]
+                elif arm in record["excluded_build_arms"]:
+                    assert info["status"] == "build_failed"
+                    assert "score" not in info
+
+    # The successful second complete-document library must not replace Gemma's failed first build.
+    gemma = ext.WEB_MODELS["gemma"]
+    assert read(ext.CALC)["libraries"]["gemma"]["b"]["status"] == "valid"
+    rejected = find_cell(matrix, "web-bench/calculator", gemma, "self")
+    assert rejected["status"] == "build_failed" and "denominator" not in rejected
+    assert [r["status"] for r in rejected["build_attempts"]] == ["build_failed", "build_failed"]
+
+    model = "mistralai/ministral-3b-2512"
+    choice = find_cell(matrix, "todomvc", model, "self")
+    assert choice["configuration_record"] == ext.relative(ext.CHOICES)
+    assert choice["record_filter"] == {"arm": "a"}
+    rows = read(ROOT / choice["method_record"])["models"][model]["rows"]
+    planned = {r["task"] for r in rows if r["arm"] == "a" and r["passed"]}
+    fixed = {r["task"] for r in rows if r["arm"] == "fixed-a" and r["passed"]}
+    assert planned == fixed and len(planned) == choice["score"] == 6 and choice["denominator"] == 8
+
+
+def test_example_choice_requires_the_selected_fixed_pages_report():
+    import pytest
+    from studies.paper_target_extensions import example_outcomes
+
+    fixed = dict(arm="fixed-1", status="valid", task=2, passed=True, report_sha256="a" * 64)
+    selected = dict(fixed, arm="selected", choice=1)
+    assert example_outcomes([fixed, selected]) == {2: True}
+    with pytest.raises(ValueError, match="same|share"):
+        example_outcomes([fixed, dict(selected, report_sha256="b" * 64)])
+
+
+def test_calculator_compiler_fallback_cannot_rescue_a_valid_but_incorrect_page():
+    import pytest
+    from studies.paper_target_extensions import compiler_outcomes
+
+    native = dict(task=1, arm="native", status="valid", passed=False,
+                  files_digest="0" * 64, report_sha256="a" * 64)
+    final = dict(native, arm="final", choice=None, triggered=False)
+    fixed = dict(native, arm="fixed-0", passed=True,
+                 files_digest="1" * 64, report_sha256="b" * 64)
+    fixed2 = dict(fixed, arm="fixed-1")
+    assert compiler_outcomes([native, final, fixed, fixed2]) == {1: False}
+    substituted = dict(fixed, arm="final", choice=0, triggered=True)
+    with pytest.raises(ValueError, match="compiler rejection"):
+        compiler_outcomes([native, substituted, fixed, fixed2])
+    invalid = dict(native, status="invalid", files_digest=None, report_sha256=None)
+    assert compiler_outcomes([invalid, substituted, fixed, fixed2]) == {1: True}
+    missing = dict(invalid, status="missing", passed=None)
+    with pytest.raises(ValueError, match="compiler rejection"):
+        compiler_outcomes([missing, substituted, fixed, fixed2])
+
+
+def test_file_baseline_publishes_all_four_decodings_including_malformed_deliveries():
+    from studies import paper_target_extensions as ext
+    from studies.lookup import MATRIX, find_cell
+    from studies.study_io import ROOT, read
+
+    matrix, corrected = read(ROOT / MATRIX), read(ext.DIRECT)
+    assert corrected["paid_calls"] == 0
+    assert set(corrected["models"]) == {*ext.WEB_MODELS.values(), ext.components.QWEN9, ext.components.FLASH}
+    for model, rows in corrected["models"].items():
+        info = find_cell(matrix, "web-bench/dom1", model, "direct")
+        assert info["method_record"] == ext.relative(ext.DIRECT)
+        assert sorted(r["task"] for r in rows) == info["targets"] == list(range(1, 21))
+        assert all(len(r["response"]) == 64 for r in rows)
+        assert all(r["passed"] is False for r in rows if r["format"] == "invalid")
+        assert sum(r["passed"] is True for r in rows) == info["score"]

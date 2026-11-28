@@ -33,6 +33,7 @@ ASSEMBLERS = {
     "webgen_functional": paper.validation,
     "webgen_holdout": paper.validation,
     "state_examples": paper.validation,
+    "target_extensions": paper.extensions,
 }
 
 
@@ -77,6 +78,14 @@ def find_cell(matrix, dataset, model, method):
         cell["replayed_targets"] = row["replayed_targets"][method]
     if receipt:
         cell["method_record"] = receipt
+    if record_filter := row.get("record_filters", {}).get(method):
+        cell["record_filter"] = record_filter
+    if path[0] == "target_extensions" and status == "measured":
+        cell["targets"] = row["targets"]
+    if method == "self" and "configuration_source" in row:
+        cell["configuration_record"] = row["configuration_source"]
+    if method == "self" and "first_builds" in row:
+        cell["build_attempts"] = row["first_builds"]
     if row.get("additional_targets"):
         cell["additional_targets_record"] = str(paper.components.EXTENSION.relative_to(ROOT))
     if row.get("source") and row["source"] != receipt:

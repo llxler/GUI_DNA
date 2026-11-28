@@ -15,10 +15,12 @@ python -m studies.lookup web-bench/form "DeepSeek V4 Flash" Self      # 查看�
 
 最后一条查询返回 **11/20**。打开输出的 `matrix`，按 `row_keys` 依次进入模型和实验记录，在 `passed.self` 看分子，在 `n` 和 `targets` 看分母和目标。再打开 `method_record`。这次实验把首份自建库记作 `file-a`，其 20 行分别给出任务编号、是否通过和浏览器报告哈希。同目录的协议说明建库及解码条件，运行器给出实现。旧矩阵 `current.form` 留有历史计数 0/20。其两次建库均未交付源码，20 题都没有进入规划；当前表展示准入后的实测成绩。[主表 JSON](studies/results/paper-performance-matrix.json) · [本格逐题记录](studies/webbench/form/flash_self_build/visible_targets/result.json) · [协议](studies/webbench/form/flash_self_build/visible_targets/PROTOCOL.md) · [运行代码](studies/webbench/form/flash_self_build/visible_targets/run.py)
 
+计算器可以用 `python -m studies.lookup web-bench/calculator "Gemma 3 12B" GPT-5` 查原生配置及编译失败后改选示例的逐题记录。打开返回的 `method_record`，按 `record_filter` 筛选，再与 `targets` 中的目标编号对齐即可复算。把方法换成 `Self` 可查公开建库检查的结果。对于已建库失败的行，`build_attempts` 列出预先指定的首库及其后备流程。
+
 | Table 1 | 查询用的数据集／项目名 | 实验代码入口 |
 | --- | --- | --- |
 | A · Web-Bench 完整项目 | `web-bench/table`、`web-bench/svg-chart`、`web-bench/form`、`web-bench/dom1`（文件管理器）、`web-bench/calculator` | [Web-Bench 分项目索引](studies/webbench/README.md) |
-| B · TodoMVC 功能子集 | `todomvc` | [人工库](studies/todomvc_dna/README.md) · [小模型建库](studies/public_library_transfer/compact_todomvc/PROTOCOL.md) · [配置筛选](studies/public_library_transfer/source_diagnosis/visible_choices/core_profiles/PROTOCOL.md) |
+| B · TodoMVC 功能子集 | `todomvc` | [人工库](studies/todomvc_dna/README.md) · [小模型建库](studies/public_library_transfer/compact_todomvc/PROTOCOL.md) · [配置筛选](studies/public_library_transfer/source_diagnosis/visible_choices/core_profiles/PROTOCOL.md) · [逐开关配置](studies/public_library_transfer/compact_todomvc/edit_choices/PROTOCOL.md) |
 | B · WebApp1K-Duo 双功能组合 | `webapp1k-duo` | [公开功能与配对](studies/public_library_transfer/other_benchmarks/README.md) · [GPT-5 组件来源](studies/public_library_transfer/duo_donor_library/PROTOCOL.md) · [Self 回调与视图](studies/public_library_transfer/duo_react_callbacks/PROTOCOL.md) |
 | C · WebGen-Bench 网站操作 | `webgen-bench` | [九站与四种方法](studies/webgen_bench/site_completion/PROTOCOL.md) · [人工库的导航设置](studies/webgen_bench/site_completion/SDK_NAVIGATION.md) |
 

@@ -6,7 +6,9 @@
 
 公开回放在同一个右键事件的表格阶段与文档阶段分别读取菜单可见性，另测单击后 Delete 的结果。Self 表格组件另行固定安装接口，按公开需求指定的文件拆分实现，并实际验证右键操作能增加一行。Flash 问卷将从零、人工库、GPT-5 库及两份原 Self 库的全部逐题请求分别复用，仅在五组同时关闭额外推理；保留原输出上限和评分文件。[四种配置的事件记录](../studies/webbench/table_interactions/public-actions.json) · [按职责生成组件](../studies/webbench/table/event_modules/focused.md) · [Flash 同解码协议](../studies/webbench/form/flash_self_build/visible_targets/PROTOCOL.md)
 
-文件管理器的模型库从其实际交付的完整 HTML 启动，只有能在浏览器中新增可观察行为的可选模块才开放给配置。计算器的官方起始页已有四则运算。人工库取上游计算器实现并划出五组可选键；Self 须实际完成 2+3=5、一次可选运算及关闭该组选项后的复查。两项目的从零组均从当前需求和起始工程独立生成；首库、第二份独立库、固定页及起始页分别登记。[文件管理器协议](../studies/webbench/file_explorer/document_library/PROTOCOL.md) · [计算器协议](../studies/webbench/calculator/key_groups/PROTOCOL.md)
+文件管理器的模型库从其实际交付的完整 HTML 启动，只有能在浏览器中新增可观察行为的可选模块才开放给配置。计算器的官方起始页已有四则运算。人工库取上游计算器实现并划出五组可选键；Self 须实际完成 2+3=5、一次可选运算及关闭该组选项后的复查。文件管理器的从零回复按外层格式接收：先解 JSON 文件包，独立 HTML 整页另行接收。文件包字段按原文件规则验证。[原回复的离线复验](../studies/webbench/file_explorer/target_models/direct_reception/PROTOCOL.md)
+
+两项目的从零组均从当前需求和起始工程独立生成；首库、第二份独立库、固定页及起始页分别登记。[文件管理器协议](../studies/webbench/file_explorer/document_library/PROTOCOL.md) · [计算器协议](../studies/webbench/calculator/key_groups/PROTOCOL.md)
 
 论文把交互行为抽象为可组装的库。人工库在 TodoMVC 上通过 128/128（无库 116/128），在参考实现拆库的 dom1 协议下通过 126/140（无库 52/140）。AI 建库实验另按协议比较，用来检验只提供公开需求时能否得到可用的抽象。
 
@@ -20,7 +22,7 @@
 
 十项目复测统一提供上游公开起始工程、资产与完整需求。建库模型自行确定一至六个语义控件、默认值和首例；装配器支持布尔值和有限枚举。仅对建库输出格式及默认/首例的公开加载错误允许一次修复。逐题规划在建库者声明的合法值中选择，直接生成仅接收同一当前需求前缀、起始工程和公共资产。两套订阅库均有独立会话和独立固定首例。目标生成模型相同的两套库共享同一份从零响应。WebApp1K-Duo 和 TodoMVC 使用各自的组件或任务协议；编辑器另有只用前半段需求建库的留出条件。费用、无响应和同一项目内重复分别报告。[十项目协议](../studies/public_library_transfer/PROTOCOL.md) · [其他基准协议](../studies/public_library_transfer/other_benchmarks/PROTOCOL.md) · [原实验模型及公开材料](../studies/results/public-library-transfer-history-20261123.json)
 
-论文总表以目标生成模型为行，每个项目统一用 Direct（从零代码）、Human（人工组件库）、GPT-5（冻结 GPT-5 库）、Self（同模型自建并部署）四列。Web-Bench 的表格、SVG、问卷、文件管理器和计算器各登记 20 个当前任务。前三个项目覆盖七款目标模型，后两个项目补测 Qwen3.5 和 Flash。TodoMVC 与 Duo 使用各自的功能目标。未评测的方法标横线。Flash 的问卷 Self 主格采用登记顺序中的第一份库。本地复验记录给出第二份独立库及两份库各自的固定首例。各行只比较这些方法共同取得观察的目标；建库失败的成绩格留空。已通过建库准入的库，若目标方案不合法或官方任务未通过，则该目标判失败。缺失响应单独标记。Duo 只建成部分领域时，从零和 Self 在同一批已建成领域的目标上比较。表格和 SVG 共登记 12 个模型，问卷随后纳入全部 7 条可用路线。附录的早期供库实验沿用原协议，文件管理器基线逐步编辑前一页。供库、部署和从零的费用逐模型记账，固定首例另行重放。[同任务实验协议](../studies/webbench/backbone_matrix/PROTOCOL.md) · [总表逐格依据](../studies/results/paper-performance-matrix.json)
+论文总表以目标生成模型为行，每个项目统一用 Direct（从零代码）、Human（人工组件库）、GPT-5（冻结 GPT-5 库）、Self（同模型自建并部署）四列。Web-Bench 的表格、SVG、问卷、文件管理器和计算器各登记 20 个当前任务。前三个项目覆盖七款目标模型，后两个项目覆盖 Gemma 3 12B、Qwen3.5、GPT-OSS 和 Flash。TodoMVC 与 Duo 使用各自的功能目标。未评测的方法标横线。Flash 的问卷 Self 主格采用登记顺序中的第一份库。本地复验记录给出第二份独立库及两份库各自的固定首例。各行只比较这些方法共同取得观察的目标；建库失败的成绩格留空。已通过建库准入的库，若目标方案不合法或官方任务未通过，则该目标判失败。缺失响应单独标记。Duo 只建成部分领域时，从零和 Self 在同一批已建成领域的目标上比较。表格和 SVG 共登记 12 个模型，问卷随后纳入全部 7 条可用路线。附录的早期供库实验沿用原协议，文件管理器基线逐步编辑前一页。供库、部署和从零的费用逐模型记账，固定首例另行重放。[同任务实验协议](../studies/webbench/backbone_matrix/PROTOCOL.md) · [总表逐格依据](../studies/results/paper-performance-matrix.json)
 
 当前 WebGen-Bench 按原哈希顺序在每类取第 4 至第 6 个网站，共九站。锁定的数据文件只有站点编号、需求、类别、应用类型和操作期望五个字段。Human 的代码来自百度 amis 组件库，具体站点的行为由模型配置。每个模型只读当前站点的公开需求，分别交付从零页面和一份配置。人工 SDK、GPT-5 库以及目标模型自建库读取完全相同的配置。提示要求把操作对应到控件和可见结果；写整页与写配置使用相同模型、解码和输出上限。封存后，每个网站的每项操作在新的浏览器会话中执行。部分完成和未完成均不计通过，缺判从各方法的共同分母剔除。人工端对全部页统一使用 SDK 原生纵向标签，在原视口内把所有入口暴露给视觉判官。原横向模板的判决单独保存。C 区的完整通过由替代视觉判官判定，A、B 使用可执行测试。[方案与运行器](../studies/webgen_bench/site_completion/PROTOCOL.md) · [统一修订的导航模板](../studies/webgen_bench/site_completion/SDK_NAVIGATION.md)
 
@@ -37,6 +39,10 @@
 对不合外层格式却包含完整实现的交付，还可以从同一冻结回复恢复源码。TodoMVC 接受完整控制器，绑定它实际声明的布尔键；从零调用使用同一源码提取规则。Duo 只抽取完整 React 模块，先建项目内索引，再按目标公开给出的两个功能名装配。两种部署都使用确定性程序。复验记录的 Bind 表示离线部署。主表的 Self 表示模型自己建库、自己选配置。Duo 的 Direct* 另允许只修正默认导出声明。两个项目按各自共同目标比较。[协议与直接对照](../studies/results/library-domain-replay-20261124.json)
 
 本地小模型另测研究者给定的领域接口。计算器提供共享状态、按键注册表和有限运算语法；TodoMVC 提供事件函数签名、路由和持久化时机。每种接口均用两个独立库及同一组新从零代码。计算器同时比较两种固定顺序，以及不含模型代码的标准数学绑定；TodoMVC 同时比较可选事件组全开和全关。按函数建库与逐题从零的调用次数分别记录。[计算器协议](../studies/public_library_transfer/self_refinement/local_domain/typed_keys/PROTOCOL.md) · [TodoMVC 协议](../studies/public_library_transfer/self_refinement/todomvc/event_modules/PROTOCOL.md)
+
+TodoMVC 的小模型配置按开关询问当前是否允许执行动作。相同模型、需求和开关只询问一次，两份独立控制器共用这次回答。此后保持开关答案，分别修复根据全部事项计算页脚的视图函数，以及在切换筛选时保留事项的路由函数。八个官方子集用原浏览器判定，另外九条短需求单独检查能否进入编辑，以及在刷新后能否保留事项并退出临时编辑状态。首次回答格式不合法时只允许澄清一次，仍无法解析就计部署失败。[逐开关协议](../studies/public_library_transfer/compact_todomvc/edit_choices/PROTOCOL.md)
+
+计算器的 GPT-5 建库者原本给出了两个合法示例。表中四款模型先交付原生配置。编译器拒绝时，模型再从两个原示例中选一个编号。可编译的页面直接进入官方测试，传输缺失单列。两个固定示例在全部二十题上评分；只选编号的独立实验也逐模型报告。Mistral 另用同一流程测试部署。人工库及 Self 使用各自的接口。[按编译结果补问](../studies/webbench/calculator/compiler_fallback/PROTOCOL.md) · [只选编号的对照](../studies/webbench/calculator/example_selection/PROTOCOL.md)
 
 ## 1. 同一需求下的三种生成方式
 

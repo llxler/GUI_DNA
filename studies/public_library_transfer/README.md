@@ -1,5 +1,7 @@
 # 十个 Web-Bench 项目的 AI 建库迁移实验
 
+TodoMVC 的两款小模型沿用同一批八题，分别检查开关选择、筛选视图以及浏览器后退。逐题配置和固定全开页按每份库分别记录。[开关决策](compact_todomvc/edit_choices/PROTOCOL.md) · [保留事项的路由函数](compact_todomvc/route_preservation/PROTOCOL.md)
+
 11 月 24 日的独立复测在八个 TodoMVC 子集和十个 WebApp1K-Duo 组合上比较六个目标模型。每个模型自行建立、部署自己的库，并和同一模型对同一题的从零代码与固定首例分别配对。[实验协议](backbone_suites/PROTOCOL.md) · [逐题数据](../results/backbone-suites-20261124.json)
 
 本研究使用同一公开输入合同在十个项目上建库，各项目分别保留 20 个当前任务。每个建库重复配有逐题组装和固定首例，另按部署模型保留一个共用无库组。重复之间分别报告。运行器要求本地留存上游快照、浏览器依赖、原始包和生成清单。

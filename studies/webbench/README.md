@@ -1,5 +1,7 @@
 # Web-Bench 分项目研究
 
+文件管理器与计算器的新模型研究均保留全部 20 项当前任务、四种方法和两次独立 Self 建库。计算器记录原生配置、只选示例和仅在编译失败时补问的逐题差异，第五款模型另做部署复验。[文件管理器](file_explorer/target_models/PROTOCOL.md) · [无库文件包接收复验](file_explorer/target_models/direct_reception/PROTOCOL.md) · [计算器](calculator/target_models/PROTOCOL.md) · [两示例配置](calculator/example_selection/PROTOCOL.md) · [编译失败后选示例](calculator/compiler_fallback/PROTOCOL.md)
+
 11 月 28 日的表格实验让 [GPT-5 自行修复右键菜单](table/menu_propagation/author_repair/PROTOCOL.md)，用五个模型之前保存的相同配置验证改动。Qwen 自建库的[实际按键轨迹](table/keyboard_navigation/PROTOCOL.md)和[选区写回复验](table/keyboard_navigation/PROJECTION.md)另有两份独立建库的记录。
 
 11 月 27 日的表格复验分别检验[两次从零建库后的连续操作](table/action_sequences/PROTOCOL.md)和[同一配置下修改选择与编辑函数](table/action_sequences/selection_mode/PROTOCOL.md)。

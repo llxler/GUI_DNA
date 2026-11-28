@@ -6,9 +6,10 @@
 
 **将库来源和部署失败分开。** 表中 GPT-5 指建库者，行名是负责选配置的目标模型。Flash 问卷的最初两次请求都没交付源码；按文件验收的首库过 8/20，同解码复测为 11/20。冻结 GPT-5 代码后，Qwen3.5 图表从 1/20 到 15/20，固定示例是 17/20。Qwen 的同一份自建待办库有 32 种合法配置，仅 4 种满足所有任务共有的新增、去空、保存和恢复。逐题选择这四种配置由 0/8 恢复至 5/8，固定首例也为 5/8。后续先查未编译份数、枚举或抽查固定页覆盖，再决定改接口还是改函数。[全部低于 Self 的原格子及原因](../studies/results/library-source-diagnosis-20261126.json)
 
+- [ ] **从 Gemma 计算器的缺键修建库。** 首个整页和起始工程扩展均未通过公开验收。下一次先要求模型从自己的按键声明生成完整键盘，在互动前逐项核对可见标签、处理参数、重复与漏键，再盲测四则与模式切换。使用未参与调试的模型验证后，按首库规则登记新批次。已有四模型的 GPT-5 原生方案、仅编译失败时补问与两种固定页见[本轮结果](results.md#front-table-extensions)。
 - [ ] **先让 Self 的跨视图状态变化可验收。** 建库时要求同一条公开动作给出状态变化前值和后值，再切换视图读回。检查真实改变的样例、保持原值的惰性按钮，以及所有一级标签能否进入评判视口。优先从当前低分格检查这三个条件，确认缺的是实现、计划还是入口以后，只改对应部分。下一轮在未见站点封存原库、改后库和同题 Direct，同时报告失分，保留缺判交集。[完整通过数与逐项判决](../studies/webgen_bench/site_completion/README.md)
-- [ ] **表格继续定位第二份库的键盘导航。** 使用已有按键轨迹核对 HTMLCollection 的索引和选区集合写回。下一次只修第一个实际断点，复验原配置和固定页，并把已见的方向序列与新顺序分开。正式任务按两个独立建库种子分别报告。[键盘事件](../studies/webbench/table/keyboard_navigation/PROTOCOL.md) · [选区写回](../studies/webbench/table/keyboard_navigation/PROJECTION.md)
-- [ ] **待办配置先区分被禁止的动作。** Gemma 4B 和 Ministral 3B 的状态函数修复后首库各过 3/8；Ministral 全开能过 6/8。要求引用需求仍会把“不要保存编辑状态”误当成“禁止编辑”。在新写的需求上先固定允许编辑、禁止编辑、仅禁止保存编辑状态三种对照，再冻结选择器。Qwen3.5 图表和文件管理器仍按图形几何、条目身份进行独立复验。[状态函数](../studies/public_library_transfer/compact_todomvc/state_examples/PROTOCOL.md) · [配置与公开依据](../studies/public_library_transfer/compact_todomvc/state_examples/EVIDENCE.md)
+- [ ] **表格补查反向 Tab。** 第二份 Qwen 库改为仅计算目标行列后，两次均能完成新的双向箭头序列。两个实现都会先进入普通 Tab 分支，反向 Tab 到不了上一格。下一次在不同的表格尺寸上先验证同一位置的正向与反向 Tab，再测试同行和跨行两端，并保留固定不移动的对照。[真实行列接口与函数回复](../studies/webbench/table/coordinate_navigation/documented_reception/PROTOCOL.md)
+- [ ] **待办核对首库在空筛选下的页脚。** 路由修复后，Ministral 两份自建库在八题上分别过 6、8 项，主表保留第一份。首库剩余两题均在当前筛选链接的选中状态出错。下一次用没有可见事项但仍有已保存事项的公开页面，分别检查页脚、选中链接和返回后的事项身份。Gemma 首库的五项失分另行定位。[冻结开关](../studies/public_library_transfer/compact_todomvc/edit_choices/PROTOCOL.md) · [路由与视图交叉复算](../studies/public_library_transfer/compact_todomvc/route_preservation/interaction/PROTOCOL.md)
 - [ ] **补 Duo 的人工来源和缺失功能。** 作者发布的 GPT-5 跨组合源码覆盖 11/15 项单功能。十个被测组合均已从来源排除；按名称组装过 4/10，固定复用过 2/10。继续寻找可追溯的人工实现及四项尚无异组合来源的功能。
 - [ ] **复核 WebGen-Bench 原判官。** 本轮已拿到 GPT-5 建库代码并通过五项公开检查。作者指定的 32B 评判器仍返回 404。该型号可用后，在相同页面复查正负校准和同题判决，保留与当前视觉判官的差异。[九站实验](../studies/webgen_bench/site_completion/PROTOCOL.md)
 
@@ -20,7 +21,7 @@
 - [ ] **修复缺少可用组件的域。** 独立回调与视图协议已完成。Qwen3.5 在 Duo 的任务管理域两次均没有组件通过公开单功能；按实际视图入参接线和整模块修复后，博客仍为 0/5、1/5。下一步聚焦请求发出、响应状态及成功提示之间的第一个断点，保留同协议从零组。[接线实测](../studies/public_library_transfer/duo_react_callbacks/prop_contract/result.json) Llama 已补完全部分槽选择。小模型 TodoMVC 后续优先研究固定全开与逐题选择互有得失的目标，并记录增加的选择次数。
 - [ ] **验证强建库者的迁移。** 计算器已有 0.5B 领域辅助诊断，固定按键顺序可复现两份库的成绩，单用数学绑定器已过 6/20。独立强模型建库须保留这一对照。 表格的两份 GPT-6 Astra 库用同一 Qwen 原生配置，各通过 13/20，同时固定首例也各通过 13/20。文件管理器已经用 Qwen3.5 和 Flash 在 20 个共同目标上验证两份库，Qwen 逐题分别 15/20、12/20，固定页分别 15/20、11/20。文件管理器和计算器均已加入同目标对照。后续用未参与调试的项目检验强库相对固定页新增哪些通过题。[强库复测](../studies/public_library_transfer/strong_builder/native/result.json)
 - [ ] **补当前缺测的常用模型。** 11 月 26 日重传原任务的 Gemini 2.5 Flash、GPT-5 mini、Haiku 4.5 和 Sonnet 4.5 均再次返回 403；同日 GPT-5 的真实表格建库请求也返回 403。[四个模型的回执](../studies/webbench/backbone_matrix/route_completion/result.json) 当相应型号的服务可用时，另登记表格和 SVG 的完整 20 项。Qwen3-Coder-30B 原表格人工库有 13/20 个请求无返回，本轮在独立账本补传，原七个共同目标的结果单独保存。历史 TodoMVC、文件管理器数据在各自协议下单列。
-- [ ] **扩展完整项目。** 表格、SVG、问卷已按七个可用模型完成本批；文件管理器及计算器已扩展至 Qwen3.5 与 Flash。后续按 BOM、表达式编辑器的顺序，先固定公开起始工程、人工组件来源、绑定与费用。用至少一个本轮模型完成全部方法和全部当前目标，再扩展模型。Duo 如增加人工组，先登记合法来源与组件边界。
+- [ ] **扩展完整项目。** 文件管理器和计算器已登记 Gemma、Qwen3.5、GPT-OSS、Flash 四款模型。下一项目先做 BOM，追溯人工组件和绑定来源，在同一生成模型上登记全部当前目标与四种方法。随后按同一条件补表达式编辑器。[计算器四模型与额外部署复验协议](../studies/webbench/calculator/compiler_fallback/PROTOCOL.md)
 
 - [ ] 在已有问卷、表格等零分诊断之外，继续复查全部历史 AI 库来源。SVG 已补三个模型的公开几何与绘制后修饰检查。GPT-OSS 的逐题结果从 4/20 到 7/20；Mistral 的公开检查从 52 到 58，官方结果从 5/19 降到 3/19。下一步冻结新图形、输入数据和标签的检查，在独立项目中验证公开通过数能否预测实际行为。Qwen3-Coder 的两次新 SVG 库均为 6/20，真实从零为 5/20，固定全开也是 6/20。[SVG 前瞻确认](../studies/public_library_transfer/self_refinement/svg_renderers/confirmation/result.json)
 
@@ -36,13 +37,13 @@
 
 分母来自 ByteDance 论文附录 A 表 5–7。已把冻结快照逐目录对齐，50 个正式项目各有 20 个当前任务文件，共 1,000 个项目－目标位置。ChartBuilder 对应目录 `chart`；额外目录 `demo`、`project-template`、`pull-loading` 不在论文 50 项清单中。TodoMVC 单列。重复生成、不同建库者、校准和空白页都不增加目标覆盖数。[官方项目清单](https://arxiv.org/html/2505.07473v1#A1) · [冻结快照](https://github.com/bytedance/web-bench/tree/7b31ca2b786eef120dd49ce63dd03d0c0006046d/projects)
 
-原协议中，人工组件覆盖 **5/50 个项目、89/1,000 个目标**，AI 库为 **9/50 个项目、135/1,000 个目标**。本轮两套独立订阅库各在十个项目的全部二十个当前目标上交付了方案，AI 库已有输出的并集增至 **10/50 个项目、200/1,000 个目标**。以下按目标去重，覆盖表示取得输出。[本轮覆盖及预算](../studies/results/public-library-transfer-overview-20261123.json) [逐项目目标与计数依据](../studies/results/webbench-coverage-20261123.json)
+原协议中，人工组件覆盖 **5/50 个项目、89/1,000 个目标**，AI 库为 **9/50 个项目、135/1,000 个目标**。11 月 23 日两套独立订阅库各在十个项目的全部二十个当前目标上交付了方案，AI 库已有输出的并集增至 **10/50 个项目、200/1,000 个目标**。下表保留 11 月 23 日按目标去重的快照。此后计算器已在全部 20 项补齐人工库，BOM 仍缺人工来源。[本轮覆盖及预算](../studies/results/public-library-transfer-overview-20261123.json) [逐项目目标与计数依据](../studies/results/webbench-coverage-20261123.json)
 
 | 项目 | 人工库目标数 | AI 库目标数 | 待补工作 |
 |---|---:|---:|---|
 | dom1、form | 各 20 | 各 20 | 保留需求与生成合同不同的历史比较 |
 | table、svg-chart | 各 20 | 各 20 | 复验文档与固定配置的影响能否跨模型重现 |
-| calculator、bom | 各 0 | 各 20 | 追溯人工组件与绑定来源 |
+| calculator、bom | 各 0 | 各 20 | 计算器人工库后来已补齐，BOM 仍待追溯 |
 | draw、canvas、flex | 各 0 | 各 20 | 补人工库，原里程碑另列 |
 | expression-editor | 9 | 20 | 补人工库未观测的 11 项，分别复查准备窗口 |
 | 其余 40 个正式项目 | 0 | 0 | 见下表其余目录，先校准再生成 |
